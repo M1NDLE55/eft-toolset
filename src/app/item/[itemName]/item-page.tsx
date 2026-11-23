@@ -38,6 +38,9 @@ export async function itemMetadata({ params }: ItemPageProps, gameMode: GameMode
   // A near-duplicate (a weapon's default preset, a numbered copy of a name) names the page to show
   // instead; an ammo pack isn't indexed. Without the index in time, the page is its own canonical.
   const [quests, indexing] = await Promise.all([loadQuestList(gameMode), canonical ? loadItemIndexing(canonical) : undefined]);
+  // The canonical URL and robots tag are cached with the page: without the index, fail the render
+  // rather than let a near-duplicate name itself as canonical for hours.
+  if (canonical && indexing === undefined) throw new ItemTemporarilyUnavailableError();
   const description = itemPageDescription(item, quests?.gameMode === gameMode ? questsUsingItem(quests.list, item.id) : null);
   const images = item.gridImageLink ? [{ url: item.gridImageLink }] : [{ url: "/item-scanner-og.png", width: 1200, height: 630 }];
   const url = indexing?.kind === "canonical" ? `/item/${indexing.slug}` : canonical ? `/item/${canonical}` : undefined;

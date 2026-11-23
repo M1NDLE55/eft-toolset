@@ -49,7 +49,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     // The PVE copies are reached only through the rewrites below; their own URLs go to the real page.
-    return [{ source: `${PVE_ROUTE_PREFIX}/:path*`, destination: "/:path*", permanent: true }];
+    return [
+      { source: PVE_ROUTE_PREFIX, destination: "/", permanent: true },
+      { source: `${PVE_ROUTE_PREFIX}/:path+`, destination: "/:path+", permanent: true },
+    ];
   },
   async rewrites() {
     // A visitor in PVE mode gets the PVE copy of a page that renders mode-dependent data, so both

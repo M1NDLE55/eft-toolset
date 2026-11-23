@@ -11,8 +11,8 @@ const LISTS = {
 };
 
 vi.mock("@/app/lib/api/tarkov-server", () => ({
-  waitForOperationSlot: async () => undefined,
-  releaseOperationSlot: () => undefined,
+  waitForRenderSlot: async () => undefined,
+  releaseRenderSlot: () => undefined,
   runTarkovRead: (work: () => Promise<unknown>) => work(),
   itemsPublishedAt: async (gameMode: "regular" | "pve") => (gameMode === "pve" ? "2026-11-19T08:30:00.000Z" : "2026-11-19T08:20:22.000Z"),
   getItemPageIndex: async () => ({

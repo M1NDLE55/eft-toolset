@@ -2,7 +2,7 @@ import { unstable_rethrow } from "next/navigation";
 import { cache } from "react";
 import { customDecodeURI } from "@/app/lib/URIEncoding";
 import { isItemSlug } from "@/app/lib/item-links";
-import { executeTarkovOperation, getItemPageIndex, releaseOperationSlot, waitForOperationSlot } from "@/app/lib/api/tarkov-server";
+import { executeTarkovOperation, getItemPageIndex, releaseRenderSlot, waitForRenderSlot } from "@/app/lib/api/tarkov-server";
 import type { ItemIndexing } from "@/app/lib/seo/item-index";
 import { RENDER_TIMEOUT_MS } from "@/app/lib/api/server-render";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
@@ -26,7 +26,7 @@ export const loadItem = cache(async (segment: string, gameMode: GameMode): Promi
   if ("name" in reference && !reference.name) return null;
   const signal = AbortSignal.timeout(RENDER_TIMEOUT_MS);
   try {
-    await waitForOperationSlot(signal);
+    await waitForRenderSlot(signal);
   } catch {
     console.warn("Item page rendered without its item: the server is busy.");
     return undefined;
@@ -38,7 +38,7 @@ export const loadItem = cache(async (segment: string, gameMode: GameMode): Promi
     console.warn("Item page rendered without its item:", error instanceof Error ? error.message : error);
     return undefined;
   } finally {
-    releaseOperationSlot();
+    releaseRenderSlot();
   }
 });
 

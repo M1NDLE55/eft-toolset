@@ -74,7 +74,8 @@ nonce: the security headers, CSP included, come from `next.config.ts`
 | `/quests`, `/quests/<slug>`, `/keys`, `/raid-planner/map/<map>`, `/sitemap.xml` | 24 hours |
 
 A render waits up to 15 seconds for its data (`src/app/lib/api/server-render.ts`), queueing
-for an operation slot rather than giving up. When a page's main data still can't be read, the
+for an operation slot rather than giving up. Renders hold at most 12 of the 16 slots, so
+`/api/tarkov` and MCP calls, which answer busy rather than wait, always have some left. When a page's main data still can't be read, the
 render throws: a background render keeps the previous copy, and a first render answers with a
 500 that isn't cached, so crawlers retry later rather than indexing an empty page. Pages are
 never marked `noindex` for a temporary failure.

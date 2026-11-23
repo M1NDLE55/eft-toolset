@@ -250,7 +250,7 @@ export function QuestsPage({ initial, search }: { initial: QuestsInitial | null;
           {hydrated && list && ` · ${progress.completed.length} done`}
         </span>
       </div>
-      {query.stale && list && (
+      {query.stale && list && query.list !== initial?.list && (
         <p role="status" className="border border-amber-700/60 bg-amber-950/30 px-3 py-2 text-xs text-amber-200">
           Showing saved quest data while fresh data loads.
         </p>

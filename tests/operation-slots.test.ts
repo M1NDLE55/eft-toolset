@@ -1,33 +1,48 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
-import { releaseOperationSlot, tryAcquireOperationSlot, waitForOperationSlot } from "@/app/lib/api/tarkov-server";
+import { releaseOperationSlot, releaseRenderSlot, tryAcquireOperationSlot, waitForRenderSlot } from "@/app/lib/api/tarkov-server";
+
+const open = () => new AbortController().signal;
 
 describe("operation slots", () => {
-  it("queues page renders for a slot, hands a released slot straight to them, and lets them give up", async () => {
+  it("caps page renders below the total, so API requests always find a slot", async () => {
+    const renders: Promise<void>[] = [];
+    let granted = 0;
+    for (let index = 0; index < 20; index += 1) renders.push(waitForRenderSlot(open()).then(() => void (granted += 1)));
+    await Promise.resolve();
+    await Promise.resolve();
+    expect(granted).toBe(12);
+    // Renders hold 12 of 16: the rest go to API and MCP calls.
+    const api = [tryAcquireOperationSlot(), tryAcquireOperationSlot(), tryAcquireOperationSlot(), tryAcquireOperationSlot()];
+    expect(api).toEqual([true, true, true, true]);
+    expect(tryAcquireOperationSlot()).toBe(false);
+    // A finished API call doesn't go to a queued render: renders are still at their cap.
+    releaseOperationSlot();
+    await Promise.resolve();
+    expect(granted).toBe(12);
+    expect(tryAcquireOperationSlot()).toBe(true);
+    // A finished render hands its slot to the next queued one.
+    releaseRenderSlot();
+    await Promise.resolve();
+    await Promise.resolve();
+    expect(granted).toBe(13);
+
+    for (let index = 0; index < 4; index += 1) releaseOperationSlot();
+    for (let index = 0; index < 20; index += 1) releaseRenderSlot();
+    await Promise.all(renders);
+    expect(granted).toBe(20);
+    for (let index = 0; index < 20; index += 1) releaseRenderSlot();
+  });
+
+  it("lets a queued render give up", async () => {
     const held: number[] = [];
     while (tryAcquireOperationSlot()) held.push(1);
-    expect(held.length).toBeGreaterThan(0);
-
-    const order: string[] = [];
-    const first = waitForOperationSlot(new AbortController().signal).then(() => order.push("first"));
     const gaveUp = new AbortController();
-    const second = waitForOperationSlot(gaveUp.signal).then(
-      () => order.push("second"),
-      () => order.push("second gave up")
-    );
-    const third = waitForOperationSlot(new AbortController().signal).then(() => order.push("third"));
+    const waiting = waitForRenderSlot(gaveUp.signal);
     gaveUp.abort();
-    await second;
-
-    releaseOperationSlot();
-    await first;
-    // The slot went to the waiting render, so an API request still finds every slot taken.
-    expect(tryAcquireOperationSlot()).toBe(false);
-    releaseOperationSlot();
-    await third;
-    expect(order).toEqual(["second gave up", "first", "third"]);
-
-    for (let index = 0; index < held.length; index += 1) releaseOperationSlot();
+    await expect(waiting).rejects.toBeDefined();
+    for (const _ of held) releaseOperationSlot();
+    // Nothing was handed to the aborted render.
     expect(tryAcquireOperationSlot()).toBe(true);
     releaseOperationSlot();
   });

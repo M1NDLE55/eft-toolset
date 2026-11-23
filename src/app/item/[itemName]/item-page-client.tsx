@@ -34,7 +34,9 @@ export function ItemPageClient({
   const { gameMode, hydrated } = useGameMode();
   const serverItem = initial && !query.item && (!hydrated || initial.gameMode === gameMode) ? initial.item : null;
   const item = query.item ?? serverItem;
-  const { error, refresh, stale } = query;
+  const { error, refresh } = query;
+  // The server's copy refreshing after a cached page loads isn't saved data: no notice for it.
+  const stale = query.stale && query.item !== initial?.item;
   const loading = query.loading && !item;
   const itemName = reference.name ?? reference.slug;
   const [now] = useState(() => Date.now());

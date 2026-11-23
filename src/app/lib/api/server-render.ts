@@ -1,5 +1,5 @@
 import { unstable_rethrow } from "next/navigation";
-import { runTarkovRead, waitForOperationSlot, releaseOperationSlot } from "./tarkov-server";
+import { runTarkovRead, waitForRenderSlot, releaseRenderSlot } from "./tarkov-server";
 
 /**
  * Content pages are rendered once and cached for everyone, crawlers included, mostly in the
@@ -25,7 +25,7 @@ export class RenderDataUnavailableError extends Error {
 export async function readForRender<T>(label: string, work: () => Promise<T>): Promise<T | undefined> {
   const signal = AbortSignal.timeout(RENDER_TIMEOUT_MS);
   try {
-    await waitForOperationSlot(signal);
+    await waitForRenderSlot(signal);
   } catch {
     console.warn(`${label} rendered without its data: the server is busy.`);
     return undefined;
@@ -37,7 +37,7 @@ export async function readForRender<T>(label: string, work: () => Promise<T>): P
     console.warn(`${label} rendered without its data:`, error instanceof Error ? error.message : error);
     return undefined;
   } finally {
-    releaseOperationSlot();
+    releaseRenderSlot();
   }
 }
 

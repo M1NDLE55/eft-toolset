@@ -561,32 +561,51 @@ export function tryAcquireOperationSlot() {
   return true;
 }
 
-// Page renders queue for a slot instead of giving up: a cached page waits for its data.
-const slotWaiters: Array<() => void> = [];
+export function releaseOperationSlot() {
+  activeOperations = Math.max(0, activeOperations - 1);
+  grantRenderSlots();
+}
 
-export function waitForOperationSlot(signal: AbortSignal): Promise<void> {
-  if (tryAcquireOperationSlot()) return Promise.resolve();
+// Page renders queue for a slot instead of giving up: a cached page waits for its data. They hold
+// at most RENDER_SLOTS at once, so /api/tarkov and MCP, which take a slot or answer busy, always
+// have some left.
+const RENDER_SLOTS = 12;
+let activeRenders = 0;
+const renderWaiters: Array<() => boolean> = [];
+
+function tryAcquireRenderSlot() {
+  if (activeRenders >= RENDER_SLOTS || !tryAcquireOperationSlot()) return false;
+  activeRenders += 1;
+  return true;
+}
+
+function grantRenderSlots() {
+  while (renderWaiters.length > 0 && tryAcquireRenderSlot()) renderWaiters.shift()!();
+}
+
+/** Waits for a render slot; release it with `releaseRenderSlot`. Rejects when the signal aborts first. */
+export function waitForRenderSlot(signal: AbortSignal): Promise<void> {
+  if (tryAcquireRenderSlot()) return Promise.resolve();
   return new Promise((resolve, reject) => {
     const grant = () => {
       signal.removeEventListener("abort", abort);
       resolve();
+      return true;
     };
     const abort = () => {
-      const index = slotWaiters.indexOf(grant);
-      if (index >= 0) slotWaiters.splice(index, 1);
+      const index = renderWaiters.indexOf(grant);
+      if (index >= 0) renderWaiters.splice(index, 1);
       reject(signal.reason);
     };
     if (signal.aborted) return abort();
     signal.addEventListener("abort", abort, { once: true });
-    slotWaiters.push(grant);
+    renderWaiters.push(grant);
   });
 }
 
-export function releaseOperationSlot() {
-  // Hand the slot straight to a waiting render, if there is one.
-  const next = slotWaiters.shift();
-  if (next) next();
-  else activeOperations = Math.max(0, activeOperations - 1);
+export function releaseRenderSlot() {
+  activeRenders = Math.max(0, activeRenders - 1);
+  releaseOperationSlot();
 }
 
 const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
