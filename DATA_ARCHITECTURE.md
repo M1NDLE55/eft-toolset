@@ -38,19 +38,22 @@ server-side, cached in-process, and never forwarded wholesale to a browser.
 | `map.details` | `gameMode`, normalized map key | One joined map projection |
 | `market.board` | `gameMode` | Top 48-hour flea movers and best sell value per slot |
 | `quest.list` | `gameMode` | Every quest with its requirements and item needs, and the items and maps they name |
+| `price.feed` | `gameMode` | Every item's prices, for instances to read prices from (see [Price feed](#price-feed)) |
 
 Operation names live in `src/app/lib/api/operations.ts`. The route rejects unknown
 operations, undeclared variables, invalid game modes, oversized batches, request bodies
 over 64 KiB, slow bodies, and URLs over 2 KiB. It does not accept an upstream URL,
 resource name, field selection, or arbitrary query.
 
-`item.catalog`, `item.detail`, `gun.list`, `gun.preset`, `map.details`, `market.board`, and `quest.list` are also served
+`item.catalog`, `item.detail`, `gun.list`, `gun.preset`, `map.details`, `market.board`, `quest.list`, and `price.feed` are also served
 over GET. The variables must be canonical JSON (sorted keys, no extra query parameters),
 so each logical request has exactly one URL. Successful GETs are sent with
 `Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=<n>`, where the
 stale window is capped so shared caches never serve data past the six-hour stale ceiling.
 Responses built from a failed upstream refresh get a 30-second shared cache, and errors
 are `no-store`. Configure the CDN to key on the full query string.
+
+`price.feed` has its own, shorter cache (see [Price feed](#price-feed)).
 
 The catalog is sent as `[id, name, shortName, image, normalizedName]` tuples, where an
 empty image means the standard `{id}-grid-image.webp` asset.
@@ -280,6 +283,15 @@ to the canonical site in production and to the request's origin in development. 
 call logs one JSON line (`event: "mcp_tool_call"`) with a request id, the tool, game mode,
 outcome, duration, whether the data was stale, and whether the result came from the cache. Unexpected failures return the request
 id as a reference.
+
+Results with item prices also carry `priceSource`: `kind` is `live` (from a copy whose refresh
+didn't fail, at most 5 minutes old, the length of tarkov.dev's update cycle), `cached` (older, or
+its refresh failed) or `snapshot` (the copy bundled with the deployment), with `ageSeconds` since
+tarkov.dev confirmed the prices. Like `dataAsOf` and `dataNotice` it is described once in the server
+instructions rather than in each tool's published output schema. `get_data_status` also lists the
+price feed per game mode (on or off, its age, state, and any retry wait); with the feed on, the
+`items` dataset shows as due, since it is no longer refreshed for prices. See
+[Data paths by tool](#data-paths-by-tool) for what each tool reads.
 
 `get_wiki_page` is the one tool that doesn't read tarkov.dev. It reads a snapshot of the
 community Escape from Tarkov Wiki in `data/wiki`, built from the XML dump of current pages that
@@ -573,7 +585,7 @@ The adapter asks for brotli (Node's `fetch` asks only for gzip unless told), so 
 downloads about 1.8 MB (1.9 MB gzipped), not 17 MB. Parsing it
 takes about 100 ms and holds about 40 MB of heap per game mode.
 
-**Freshness targets.** Prices (`items`) about 5 minutes; tasks and maps about 30 minutes; trader,
+**Freshness targets.** Prices about 2 minutes behind tarkov.dev with the [price feed](#price-feed) (5 minutes from `items` without it); tasks and maps about 30 minutes; trader,
 barter, craft and hideout data and the English names 2 hours; the catalog itself (names, ids,
 slots, stats) changes only with game patches. A copy older than its target is refreshed on its
 next use, and served meanwhile up to the revalidate age in `RESOURCE_POLICIES`.
@@ -611,7 +623,17 @@ and identifiable:
   `no-store`). A copy's age and source are recorded when a read takes it, so a refresh landing
   later in the read doesn't make its data look newer.
 
-Worst case for one instance, with every dataset in use in both game modes: items 24, maps
+With the price feed on, items requests no longer grow with instances: only a CDN refill of the feed
+reads the items file, at most once a minute per game mode. A refill lands on whichever instance the
+CDN picks; that instance revalidates its copy, a 304 unless tarkov.dev has published since it last
+looked. Per game mode, at 1, 100 and 10,000 MCP calls a minute (taking 1, 3 and 40 instances), that
+is at most 60 items requests an hour (with one instance about 12 downloads and the rest 304s; with
+many, most refills find an older copy, so up to 60 downloads), against about 12, 36 and 480
+downloads before. How many distinct items are asked for makes no difference. Each instance gets the
+feed from the CDN at most 60 times an hour (150–200 KB each), a game patch costs one items download
+per instance, and while the feed is failing the numbers below apply.
+
+Without the feed, the worst case for one instance, with every dataset in use in both game modes: items 24, maps
 and tasks 8, `items_en` 1 request an hour, 33 an hour; maps, tasks and `items_en` are mostly
 304s. The shared datasets add about 8 an hour per region, however many instances run. A new
 instance revalidates the deployment snapshot instead of downloading it: datasets unchanged since
@@ -625,7 +647,8 @@ While tarkov.dev is down, at most 3 requests per dataset per backoff interval.
 dataset in both game modes (four at a time, each tried up to 3 times, all within two minutes)
 and writes each as brotli-compressed JSON to `data/tarkov/<mode>/`,
 with `data/tarkov/manifest.json` recording when each was fetched and its `ETag` and
-`Last-Modified` (about 4 MB in all; `data/tarkov` isn't committed). `next.config.ts` traces it
+`Last-Modified` (about 4 MB in all; `data/tarkov` isn't committed). It then writes each mode's
+[item index](#item-index) from those copies. `next.config.ts` traces it
 into every function. A failure never fails the build: a dataset that can't be fetched keeps the
 copy already on disk, if any, or is left out, and the app waits for tarkov.dev for it as before.
 Pages prerendered during the build read the fresh snapshot, so the build itself barely asks
@@ -639,10 +662,109 @@ answers at once, from the snapshot or after a 304, and when tarkov.dev is unreac
 answers, from the snapshot, saying how old it is. The snapshot ages with the deployment: every
 deploy refreshes it, ISR renders don't.
 
+### Item index
+
+Search, item name matching, the category and caliber filters (`getItemCatalog`, `getItemFacets`), and
+the `item.catalog` operation read a compact index instead of the items file, so `search_items`, the
+name matching every item tool starts with, and the website's search never load the 17 MB file.
+`scripts/item-index.mjs` derives it from `items` and `items_en`: each item's id, name, short name,
+image, slug, types, handbook and item categories, and caliber, with the category trees and the
+types and calibers stored once. It reproduces the projections they replaced exactly
+(`tests/item-name-index.test.ts` checks every item against the old code on real data).
+
+The snapshot build writes it as `data/tarkov/<mode>/item-index.json.br` (about 0.78 MB of JSON,
+147 KB compressed, per mode), recording the `items` and `items_en` copies it came from;
+`node scripts/build-tarkov-snapshot.mjs --index-only` rebuilds only the indexes from the copies on
+disk. An instance reads it once per game mode (about 40 ms and 4.5 MB of heap, against about 210 ms
+and 30 MB for parsing `items` and `items_en`). When the instance holds a newer `items` or
+`items_en` copy than the index was built from (after a game patch, say), it derives the index from
+those copies instead, once per pair of copies, with the same module. Without a bundled index (local
+runs, tests, a failed snapshot) it is derived from the items file, loaded as before.
+
+Names change only with game patches, so the index is a static input: like the static part of the
+items file below, its age never makes a result stale or dated, and catalog responses keep their
+usual CDN cache however old the deployment is.
+
+### Price feed
+
+tarkov.dev's items file mixes data that changes with game patches (names, stats, slots: most of its
+17 MB) with prices, which its jobs rebuild every 5 minutes, so its ETag changes every few minutes.
+Before, every instance downloaded the whole file (1.8 MB compressed) whenever its 5-minute freshness
+ran out, however few prices it needed. Now the two parts travel apart:
+
+- **Prices** come from the `price.feed` operation: every item's `lastLowPrice`, `avg24hPrice`,
+  `low24hPrice`, `high24hPrice`, `lastOfferCount`, `changeLast48hPercent`, `updated`, and its trader
+  buy and sell offers (`src/app/lib/api/price-feed.ts`). It is about 0.72 MB of JSON and 150–200 KB
+  compressed per mode, a ninth of the items file. Its origin builds it from the items file, with a
+  60-second freshness for this read alone (an ETag revalidation, a 304 unless tarkov.dev has
+  changed it), waiting up to 5 seconds for it before serving its copy marked stale. Responses carry
+  when the origin last confirmed the copy, its source, whether it was stale, and its ETag, and are
+  cached at the CDN with `public, max-age=0, s-maxage=60, stale-while-revalidate=60` (30 seconds for
+  a stale copy; never past the six-hour ceiling).
+- **Static data** comes from the items copy the instance already has, the deployment snapshot or a
+  newer copy, which is not refreshed for its prices. `loadItems` lays the feed's prices over it,
+  once per pair of copies (about 10 ms and 3 MB), so every projection (MCP tools, pages,
+  `/api/tarkov`, the gun builder's part lookup) gets the feed's prices unchanged.
+
+Each instance keeps its own copy of the feed per game mode, fetched from the site's own public origin
+through the CDN: fresh for 60 seconds, served while it refreshes for up to 2 minutes, and after that
+read with the caller's usual wait (MCP tools 2.5 s, then the copy marked stale). Callers share one
+refresh in flight. A failed fetch isn't retried for 10 seconds, doubling to 10 minutes with jitter,
+or for as long as a `Retry-After` asks (up to an hour); meanwhile reads use the items file at once.
+Responses are validated (format version, sizes, every field) and capped at 8 MiB, with a 10-second
+timeout and the usual User-Agent. The origin is `SITE_ORIGIN` in production and the deployment's own
+URL on previews, sending `x-vercel-protection-bypass` when Vercel provides
+`VERCEL_AUTOMATION_BYPASS_SECRET`. Locally the feed is off unless `PRICE_FEED_ORIGIN` names an origin
+(ignored on Vercel), and it is off during `next build`; off, everything works as it did before the feed.
+
+Fallbacks, in order: the instance's copy of the feed; a refresh through the CDN; then, while the feed
+is failing (or a preview's protection refuses it), the items file read exactly as before (the copy in
+memory, a revalidation with json.tarkov.dev, or the deployment snapshot), with the feed's last prices
+laid over it if they are newer. On a cold instance whose first feed fetch is slow, the snapshot's own
+prices are used, marked stale. A read never fails while any copy exists.
+
+The feed lists every item tarkov.dev has, so items the static copy lacks mean a game patch: the
+instance then loads the items file once, in the background, and the item index follows it.
+
+How far prices lag tarkov.dev's file: the origin's copy up to 60 s, the CDN up to 120 s with
+stale-while-revalidate, an instance's copy up to 120 s; under steady traffic at most about 3 minutes
+and typically about 90 seconds, against up to 35 minutes before (5 minutes fresh, then served while
+refreshing for up to 30). `dataAsOf` is the origin's confirmation time, so it includes every hop.
+
+**Why not tarkov.dev's GraphQL API.** Fetching only the requested items' prices with
+`items(ids: …)` from `api.tarkov.dev/graphql` would be smaller still per lookup, but on 23 Nov 2026
+it answered every request (POST and GET, both modes) with HTTP 422 "GraphQL server unavailable. Try
+again later.", its data had stopped updating on 16 Nov, and tarkov.dev's API page now documents
+only the JSON API. There is no per-item current-price JSON endpoint (`/{mode}/prices/{id}` is the
+price history). One feed carries every price, so the number of distinct items asked for doesn't
+change the upstream cost, and a CDN cache shared by every instance does what a per-item cache would.
+
+**Why the CDN and not a shared server cache.** Vercel's Runtime Cache (used for the small datasets
+under Cache ownership) caps items at 2 MB and bills writes per 8 KB: one feed per mode per change
+would be about 160 units a write, far beyond the Hobby allowance. The CDN caches the GET for free
+within the plan's edge requests, and keys on the URL like every other public read.
+
+### Data paths by tool
+
+| Tool or page | Item index | Price feed | Static items copy | Bulk datasets |
+| --- | --- | --- | --- | --- |
+| `search_items`, item name matching, `item.catalog` | yes | | | |
+| `get_item`, `item.detail` | yes | yes | yes | tasks, barters, crafts, hideout, traders |
+| `get_item_prices`, `item.group`, keys pages | yes | yes | yes | tasks, hideout, traders |
+| Gun builder tools, `optimize_build`, best and Gunsmith builds | | yes | yes | tasks, traders, barters (when asked) |
+| `get_map_details`, raid plans, map pages | | | | maps |
+| Quests | | yes (item prices) | yes | tasks, maps |
+| Market board, item prices page, ammo | | yes | yes | traders, tasks |
+| `get_data_status`, `get_wiki_page`, `lookup_term` | | | | |
+
+Only the feed's origin, behind the CDN, downloads the items file on a timer; everything else reads
+the copy it has for static data. "Bulk datasets" are the other tarkov.dev files, unchanged.
+
 ## Cache ownership
 
-- The server resource cache amortizes large upstream downloads and JSON parsing. Each
-  resource is fresh for its policy's time, then revalidated in the background without
+- The server resource cache amortizes large upstream downloads and JSON parsing. With the price
+  feed on, the items copy is read only for its static data and isn't refreshed on a timer (see
+  [Price feed](#price-feed)). Each other resource is fresh for its policy's time, then revalidated in the background without
   blocking requests (items for up to 30 minutes, maps and tasks 2 hours, the rest 4 hours),
   and served stale (flagged with `X-EFT-Data-Stale`) when a refresh fails. It starts from the
   deployment snapshot (see above).
@@ -658,6 +780,8 @@ deploy refreshes it, ISR renders don't.
   off outside Vercel.
 - Projections and indexes are memoized on the identity of their source resources, so they
   are rebuilt only when upstream data changes.
+- The CDN shares one copy of the price feed among every instance, refreshed at most once a
+  minute per game mode.
 - `src/instrumentation.ts` warms the item catalog for both game modes at boot. Set
   `WARM_TARKOV_CACHE=0` to disable.
 - The client query layer deduplicates concurrent requests and controls stale/max ages.
