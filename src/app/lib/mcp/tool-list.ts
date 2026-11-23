@@ -62,7 +62,7 @@ export function publishedOutputSchema(schema: z.ZodObject): JsonSchema {
   return published;
 }
 
-const SHARED_RESULT_FIELDS = ["dataAsOf", "dataNotice"];
+const SHARED_RESULT_FIELDS = ["dataAsOf", "dataNotice", "priceSource"];
 
 function topLevel(node: unknown, depth: number): unknown {
   if (Array.isArray(node)) return node.map((entry) => topLevel(entry, depth));

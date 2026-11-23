@@ -5,6 +5,7 @@ import {
   TarkovUpstreamError,
   type DataSnapshot,
   type DataSource,
+  type PriceSourceInfo,
 } from "@/app/lib/api/tarkov-server";
 import { InputError } from "@/app/lib/input-error";
 import type { GameMode } from "@/components/game-mode/mode";
@@ -68,6 +69,7 @@ export async function runTool(
   let staleSource: DataSource = "tarkov.dev";
   let cached = false;
   let dataAgeMs: number | null = null;
+  let prices: PriceSourceInfo | null = null;
   const snapshots: DataSnapshot[] = [];
   const read: Read = (work) =>
     runTarkovRead(work, {
@@ -80,6 +82,9 @@ export async function runTool(
       },
       onDataAge: (ageMs) => {
         dataAgeMs = Math.max(dataAgeMs ?? 0, ageMs);
+      },
+      onPriceSource: (info) => {
+        if (!prices || info.ageMs > prices.ageMs) prices = info;
       },
       onSnapshot: (snapshot) => {
         snapshots.push(snapshot);
@@ -96,6 +101,7 @@ export async function runTool(
     const payload: Record<string, unknown> = { ...result };
     if (dataAgeMs !== null) payload.dataAsOf = new Date(Date.now() - dataAgeMs).toISOString();
     if (stale) payload.dataNotice = staleNotice(dataAgeMs, staleSource);
+    if (prices) payload.priceSource = priceSource(prices);
     if (call.cacheKey && !stale) storeToolResult(call.cacheKey, payload, snapshots.flat());
     return toolResult(payload);
   } catch (error) {
@@ -147,6 +153,15 @@ export async function runTool(
 
 function toolResult(payload: Record<string, unknown>): CallToolResult {
   return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
+}
+
+/** Prices newer than this, from a copy whose refresh didn't fail, count as live: tarkov.dev rebuilds them every 5 minutes. */
+const LIVE_PRICE_AGE_MS = 5 * 60_000;
+
+/** Where a result's prices came from: live, a cached copy, or the copy bundled with the server, and how old they are. */
+function priceSource({ source, ageMs, stale }: PriceSourceInfo) {
+  const kind = source === "snapshot" ? "snapshot" : !stale && ageMs <= LIVE_PRICE_AGE_MS ? "live" : "cached";
+  return { kind, ageSeconds: Math.round(ageMs / 1000) };
 }
 
 function staleNotice(dataAgeMs: number | null, source: DataSource) {

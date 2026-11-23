@@ -6,16 +6,22 @@
 // If-None-Match, so datasets that haven't changed since the build cost a 304. See
 // DATA_ARCHITECTURE.md ("Deployment snapshot").
 //
-//   node scripts/build-tarkov-snapshot.mjs            fetch and write data/tarkov
-//   node scripts/build-tarkov-snapshot.mjs --out dir  write elsewhere
+// It also writes each mode's compact item index (scripts/item-index.mjs), built from the items and
+// items_en copies in the snapshot, so item search and name matching never parse the items file.
+//
+//   node scripts/build-tarkov-snapshot.mjs              fetch and write data/tarkov
+//   node scripts/build-tarkov-snapshot.mjs --out dir    write elsewhere
+//   node scripts/build-tarkov-snapshot.mjs --index-only rebuild only the item indexes, from the copies on disk
 //
 // It never fails the build: a dataset that can't be fetched keeps the copy already on disk, if any,
-// and is otherwise left out (the app then waits for tarkov.dev for it, as before).
+// and is otherwise left out (the app then waits for tarkov.dev for it, as before). An index that
+// can't be built keeps the previous one, if any (the app then derives one from the items file).
 
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
-import { brotliCompressSync, constants } from "node:zlib";
+import { brotliCompressSync, brotliDecompressSync, constants } from "node:zlib";
+import { buildItemIndex } from "./item-index.mjs";
 
 export const MODES = ["regular", "pve"];
 export const RESOURCES = [
@@ -33,6 +39,7 @@ export const RESOURCES = [
   "maps_en",
 ];
 export const MANIFEST_VERSION = 1;
+export const ITEM_INDEX = "item-index";
 
 // TARKOV_UPSTREAM_URL is for local builds against a stand-in (scripts/mcp-load.mjs), as in the app.
 const UPSTREAM = ((!process.env.VERCEL && process.env.TARKOV_UPSTREAM_URL) || "https://json.tarkov.dev").replace(/\/+$/, "");
@@ -70,6 +77,11 @@ async function fetchResource(mode, resource, deadline) {
   throw lastError ?? new Error("out of time");
 }
 
+async function writeAtomic(file, contents) {
+  await writeFile(`${file}.tmp`, contents);
+  await rename(`${file}.tmp`, file);
+}
+
 async function readManifest(out) {
   try {
     const manifest = JSON.parse(await readFile(join(out, "manifest.json"), "utf8"));
@@ -100,9 +112,7 @@ export async function buildSnapshot(out, log = console) {
         params: { [constants.BROTLI_PARAM_QUALITY]: 9, [constants.BROTLI_PARAM_SIZE_HINT]: raw.length },
       });
       await mkdir(join(out, mode), { recursive: true });
-      const file = join(out, mode, `${resource}.json.br`);
-      await writeFile(`${file}.tmp`, compressed);
-      await rename(`${file}.tmp`, file);
+      await writeAtomic(join(out, mode, `${resource}.json.br`), compressed);
       resources[key] = { fetchedAt, etag, lastModified, bytes: raw.length, compressedBytes: compressed.length };
     } catch (error) {
       failed += 1;
@@ -117,22 +127,82 @@ export async function buildSnapshot(out, log = console) {
       while (queue.length) await run(queue.shift());
     })
   );
-  const sorted = Object.fromEntries(Object.entries(resources).sort(([a], [b]) => a.localeCompare(b)));
-  const manifest = { version: MANIFEST_VERSION, builtAt: Date.now(), resources: sorted };
-  await mkdir(out, { recursive: true });
-  await writeFile(join(out, "manifest.json.tmp"), `${JSON.stringify(manifest, null, 2)}\n`);
-  await rename(join(out, "manifest.json.tmp"), join(out, "manifest.json"));
+  await buildItemIndexes(out, resources, previous, log);
+  const manifest = await writeManifest(out, resources, Date.now());
   const total = Object.values(resources).reduce((sum, entry) => sum + entry.compressedBytes, 0);
+  const indexes = MODES.filter((mode) => resources[`${mode}/${ITEM_INDEX}`]).length;
   log.info(
-    `tarkov snapshot: ${Object.keys(resources).length}/${jobs.length} datasets, ${(total / 1e6).toFixed(2)} MB compressed${failed ? `, ${failed} not fetched` : ""}`
+    `tarkov snapshot: ${Object.keys(resources).length - indexes}/${jobs.length} datasets and ${indexes}/${MODES.length} item indexes, ${(total / 1e6).toFixed(2)} MB compressed${failed ? `, ${failed} not fetched` : ""}`
   );
+  return manifest;
+}
+
+/**
+ * Rebuilds only the item indexes from the snapshot already in `out`, without fetching anything.
+ * @param {string} out
+ * @param {Pick<Console, "info" | "warn">} [log]
+ */
+export async function rebuildItemIndexes(out, log = console) {
+  const previous = await readManifest(out);
+  if (!previous) {
+    log.warn(`tarkov snapshot: no manifest in ${out}, so no item index`);
+    return null;
+  }
+  const resources = { ...previous.resources };
+  await buildItemIndexes(out, resources, previous, log);
+  // The datasets are the same as before, so the snapshot keeps its build time.
+  return writeManifest(out, resources, previous.builtAt);
+}
+
+/** Writes each mode's item index from its items and items_en copies in `out`, and records it in `resources`. */
+async function buildItemIndexes(out, resources, previous, log) {
+  for (const mode of MODES) {
+    const key = `${mode}/${ITEM_INDEX}`;
+    delete resources[key];
+    try {
+      const items = resources[`${mode}/items`];
+      const translations = resources[`${mode}/items_en`];
+      if (!items || !translations) throw new Error("no items copy");
+      const read = async (resource) =>
+        JSON.parse(brotliDecompressSync(await readFile(join(out, mode, `${resource}.json.br`))).toString("utf8")).data;
+      const source = {
+        items: { fetchedAt: items.fetchedAt, etag: items.etag },
+        items_en: { fetchedAt: translations.fetchedAt, etag: translations.etag },
+      };
+      const index = buildItemIndex(await read("items"), await read("items_en"));
+      const raw = Buffer.from(JSON.stringify({ ...index, source }));
+      const compressed = brotliCompressSync(raw, {
+        params: { [constants.BROTLI_PARAM_QUALITY]: 11, [constants.BROTLI_PARAM_SIZE_HINT]: raw.length },
+      });
+      await writeAtomic(join(out, mode, `${ITEM_INDEX}.json.br`), compressed);
+      resources[key] = {
+        // The older of its two sources, as a read of both would report.
+        fetchedAt: Math.min(items.fetchedAt, translations.fetchedAt),
+        bytes: raw.length,
+        compressedBytes: compressed.length,
+        ...source,
+      };
+    } catch (error) {
+      const kept = previous?.resources?.[key];
+      if (kept) resources[key] = kept;
+      log.warn(`tarkov snapshot: ${key} ${kept ? "kept the previous copy" : "left out"} (${error?.message ?? error})`);
+    }
+  }
+}
+
+async function writeManifest(out, resources, builtAt) {
+  const sorted = Object.fromEntries(Object.entries(resources).sort(([a], [b]) => a.localeCompare(b)));
+  const manifest = { version: MANIFEST_VERSION, builtAt, resources: sorted };
+  await mkdir(out, { recursive: true });
+  await writeAtomic(join(out, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
   return manifest;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const index = process.argv.indexOf("--out");
   const out = index > 0 ? process.argv[index + 1] : join(process.cwd(), "data", "tarkov");
-  await buildSnapshot(out).catch((error) => {
+  const build = process.argv.includes("--index-only") ? rebuildItemIndexes : buildSnapshot;
+  await build(out).catch((error) => {
     console.warn(`tarkov snapshot: skipped (${error?.message ?? error})`);
   });
 }

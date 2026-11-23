@@ -18,10 +18,12 @@ const warnings = list(text).optional();
 
 /**
  * Every result that read tarkov.dev data carries dataAsOf, when the oldest of that data was last
- * confirmed, and a dataNotice when it was stale (the server instructions explain both).
+ * confirmed, and a dataNotice when it was stale; results with item prices also carry priceSource
+ * (the server instructions explain all three).
  */
+const resultPriceSource = object({ kind: z.enum(["live", "cached", "snapshot"]), ageSeconds: num });
 function result<Shape extends z.ZodRawShape>(shape: Shape) {
-  return object({ ...shape, dataAsOf: text.optional(), dataNotice: text.optional() });
+  return object({ ...shape, dataAsOf: text.optional(), dataNotice: text.optional(), priceSource: resultPriceSource.optional() });
 }
 
 const sale = object({
@@ -555,4 +557,17 @@ export const getDataStatusOutput = result({
       retryAfterSeconds: maybeNum,
     })
   ),
+  /** The shared price-only feed each instance reads prices from; "off" where it isn't used (then prices come from items). */
+  priceFeed: list(
+    object({
+      gameMode,
+      enabled: bool,
+      loaded: bool,
+      asOf: maybeText,
+      ageSeconds: maybeNum,
+      state: z.enum(["off", "fresh", "refreshing", "due", "failing", "not loaded"]),
+      lastError: maybeText,
+      retryAfterSeconds: maybeNum,
+    })
+  ).optional(),
 });

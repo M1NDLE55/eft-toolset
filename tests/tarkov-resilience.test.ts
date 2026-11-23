@@ -302,9 +302,15 @@ describe("the snapshot build script", () => {
     const { buildSnapshot } = await import("../scripts/build-tarkov-snapshot.mjs");
     const quiet = { info: () => undefined, warn: () => undefined };
     const manifest = await buildSnapshot(out, quiet);
-    expect(Object.keys(manifest.resources)).toHaveLength(2 * RESOURCES.length - 1);
+    // Every dataset but the failed one, and an item index per mode.
+    expect(Object.keys(manifest.resources)).toHaveLength(2 * RESOURCES.length - 1 + 2);
     expect(manifest.resources["pve/maps"]).toBeUndefined();
     expect(manifest.resources["regular/items"]).toMatchObject({ etag: '"items"', fetchedAt: expect.any(Number) });
+    expect(manifest.resources["regular/item-index"]).toMatchObject({
+      fetchedAt: manifest.resources["regular/items"].fetchedAt,
+      items: { etag: '"items"' },
+      items_en: { etag: '"items_en"' },
+    });
 
     setTarkovSnapshotDirForTests(out);
     await expect(readSnapshot("regular", "items")).resolves.toMatchObject({ value: fixtures.items });
