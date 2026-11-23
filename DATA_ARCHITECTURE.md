@@ -260,7 +260,8 @@ Limits:
   `UPSTASH_REDIS_REST_TOKEN` are set (`src/app/lib/api/rate-limit-store.ts`): one atomic Lua
   token bucket per payer, under a hashed key, so IPs and user ids never reach Redis. Each
   request costs one Redis command, and a tool call two. Without Upstash, or when it can't be
-  reached within a second, each instance counts in memory as before.
+  reached within a second, each instance counts in memory as before; after a failure it counts in
+  memory for 15 seconds without asking Upstash, so a burst doesn't wait out the timeout on every call.
 - A tool call takes a slot from the shared operation pool, and at most 6 run at once per
   instance. Handshakes and lists don't wait for slots.
 - Bodies may be up to 1 MiB, and at most 16 are read at once, apart from the website's 32
