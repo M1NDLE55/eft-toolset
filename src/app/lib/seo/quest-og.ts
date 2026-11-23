@@ -1,4 +1,5 @@
 import { mapLabels, questName } from "@/app/lib/quests/display";
+import { platform } from "@/app/lib/server/platform";
 import { moneyLabel } from "@/app/lib/quests/shopping-list";
 import type { QuestDetail, QuestItemNeed } from "@/app/lib/quests/types";
 import { plural } from "./format";
@@ -29,6 +30,9 @@ export interface QuestOgItem {
   count: number | null;
   foundInRaid: boolean;
 }
+
+/** The share image's alt text, on the quest page's og:image and twitter:image. */
+export const QUEST_OG_ALT = "Escape from Tarkov quest: trader, maps, level and the keys or items it needs, on EFT Toolset";
 
 export const MAX_OG_ITEMS = 4;
 const MAX_NAME = 72;
@@ -190,25 +194,19 @@ const pending = new Map<string, Promise<string | null>>();
 export interface IconLoader {
   fetcher?: typeof fetch;
   /** WebP to PNG; null when it can't. */
-  toPng?: (webp: Buffer) => Promise<Buffer | null>;
+  toPng?: (webp: Uint8Array) => Promise<Uint8Array | null>;
   cache?: LruCache<IconEntry>;
 }
 
-let sharpModule: Promise<typeof import("sharp").default | null> | undefined;
-
 /**
- * Converts with sharp, a dependency with native binaries: it's loaded only when needed, and if it
- * can't be loaded on a platform the icon falls back to tarkov.dev's JPEG copy.
+ * Converts with the platform's image service (Cloudflare Images in the Worker), scaled to fit
+ * 160×160 and never enlarged. Without one, the icon falls back to tarkov.dev's JPEG copy.
  */
-export async function webpToPng(webp: Buffer) {
-  sharpModule ??= import("sharp").then(
-    (module) => module.default,
-    () => null
-  );
-  const sharp = await sharpModule;
-  if (!sharp) return null;
+export async function webpToPng(webp: Uint8Array) {
+  const convert = platform().convertImage;
+  if (!convert) return null;
   try {
-    return await sharp(webp).resize(160, 160, { fit: "inside", withoutEnlargement: true }).png().toBuffer();
+    return await convert(webp, { width: 160, height: 160, format: "image/png" });
   } catch {
     return null;
   }
@@ -217,7 +215,12 @@ export async function webpToPng(webp: Buffer) {
 async function fetchImage(url: string, fetcher: typeof fetch) {
   try {
     // No redirects: only assets.tarkov.dev is fetched, and a redirect could lead anywhere.
-    const response = await fetcher(url, { signal: AbortSignal.timeout(ICON_TIMEOUT_MS), redirect: "error", next: { revalidate: ICON_REVALIDATE_SECONDS } });
+    const response = await fetcher(url, {
+      signal: AbortSignal.timeout(ICON_TIMEOUT_MS),
+      redirect: "error",
+      // Kept in the data centre's cache, so each icon is fetched from tarkov.dev rarely.
+      cf: { cacheTtl: ICON_REVALIDATE_SECONDS, cacheEverything: true },
+    } as RequestInit);
     if (!response.ok) return null;
     const type = response.headers.get("content-type")?.split(";")[0].trim().toLowerCase() ?? "";
     const length = Number(response.headers.get("content-length"));
@@ -225,7 +228,7 @@ async function fetchImage(url: string, fetcher: typeof fetch) {
       await response.body?.cancel();
       return null;
     }
-    const bytes = Buffer.from(await response.arrayBuffer());
+    const bytes = new Uint8Array(await response.arrayBuffer());
     return bytes.length > 0 && bytes.length <= MAX_ICON_BYTES ? { type, bytes } : null;
   } catch {
     // Timed out or offline: the image renders without this icon.
@@ -233,9 +236,15 @@ async function fetchImage(url: string, fetcher: typeof fetch) {
   }
 }
 
-const dataUri = (type: string, bytes: Buffer) => `data:${type};base64,${bytes.toString("base64")}`;
+function base64(bytes: Uint8Array) {
+  let binary = "";
+  for (let index = 0; index < bytes.length; index += 0x8000) binary += String.fromCharCode(...bytes.subarray(index, index + 0x8000));
+  return btoa(binary);
+}
 
-async function fetchIcon(src: string, fetcher: typeof fetch, toPng: (webp: Buffer) => Promise<Buffer | null>) {
+const dataUri = (type: string, bytes: Uint8Array) => `data:${type};base64,${base64(bytes)}`;
+
+async function fetchIcon(src: string, fetcher: typeof fetch, toPng: (webp: Uint8Array) => Promise<Uint8Array | null>) {
   const image = await fetchImage(src, fetcher);
   if (image && ICON_TYPES.has(image.type)) return dataUri(image.type, image.bytes);
   if (image?.type === "image/webp") {
@@ -249,7 +258,7 @@ async function fetchIcon(src: string, fetcher: typeof fetch, toPng: (webp: Buffe
 
 /**
  * A tarkov.dev icon as a data URI the share image can draw, or null when it can't be had in time;
- * never throws. Icons are kept in memory and fetched through Next's data cache, so each is fetched rarely.
+ * never throws. Icons are kept in memory and in the data centre's cache, so each is fetched rarely.
  */
 export async function loadOgIcon(url: string | null, { fetcher = fetch, toPng = webpToPng, cache = iconCache }: IconLoader = {}) {
   const src = ogIconUrl(url);

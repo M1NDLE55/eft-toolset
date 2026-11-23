@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/app/lib/navigation/image";
+import Link from "@/app/lib/navigation/link";
 import { AlertTriangle, ArrowUpRight, Plus, X } from "lucide-react";
 import type { GunItem } from "@/app/lib/types/gunBuilder";
 import type { PositionedNode } from "@/app/lib/builds/tree-layout";

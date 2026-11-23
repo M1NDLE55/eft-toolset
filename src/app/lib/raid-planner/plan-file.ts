@@ -101,7 +101,7 @@ export function downloadPlanFile(plans: RaidPlan[]) {
   link.href = url;
   link.download = planFileName(plans, now);
   link.rel = "noopener";
-  document.body.append(link);
+  document.body.appendChild(link);
   link.click();
   link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);

@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/app/lib/navigation/image";
+import Link from "@/app/lib/navigation/link";
 import { useState } from "react";
 import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
 import { itemHref } from "@/app/lib/item-links";

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import type { McpServer } from "@modelcontextprotocol/server";
 import { tarkovDataStatus } from "@/app/lib/api/tarkov-server";
 import { priceFeedStatus } from "@/app/lib/api/price-feed";
 import { snapshotBuiltAt } from "@/app/lib/api/tarkov-snapshot";

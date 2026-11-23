@@ -1,6 +1,5 @@
 import { z } from "zod";
-import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { ListToolsRequestSchema, type Tool, type ToolAnnotations } from "@modelcontextprotocol/sdk/types.js";
+import type { ListToolsResult, McpServer, Tool, ToolAnnotations } from "@modelcontextprotocol/server";
 
 /** What tools/list publishes for one tool; the zod schemas still validate every call. */
 export interface ListedTool {
@@ -141,6 +140,6 @@ function publish(tool: ListedTool): Tool {
 export function serveCompactToolList(server: McpServer, securitySchemes?: readonly object[]) {
   const tools = (listings.get(server) ?? [])
     .map(publish)
-    .map((tool) => (securitySchemes ? { ...tool, securitySchemes, _meta: { ...tool._meta, securitySchemes } } : tool));
-  server.server.setRequestHandler(ListToolsRequestSchema, () => ({ tools }));
+    .map((tool) => (securitySchemes ? { ...tool, securitySchemes, _meta: { ...tool._meta, securitySchemes } } : tool)) as unknown as ListToolsResult["tools"];
+  server.server.setRequestHandler("tools/list", () => ({ tools }));
 }

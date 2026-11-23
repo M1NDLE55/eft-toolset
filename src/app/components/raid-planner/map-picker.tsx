@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { ChevronRight, Layers } from "lucide-react";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
 import type { MapConfig } from "@/app/lib/raid-planner/types";

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import type { McpServer } from "@modelcontextprotocol/server";
 import { TarkovUpstreamError } from "@/app/lib/api/tarkov-server";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
 import { getFloorStack } from "@/app/lib/raid-planner/floors";

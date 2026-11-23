@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/app/lib/navigation/image";
 import { ArrowRight, Equal, Minus, Plus, Repeat2 } from "lucide-react";
 import type { DiffStatus, SlotDiffRow } from "@/app/lib/builds/compare";
 import type { ItemLookup } from "@/app/lib/builds/stats";

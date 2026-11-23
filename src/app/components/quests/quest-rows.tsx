@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import type { QuestStatus } from "@/app/lib/quests/availability";
 import { levelLabel, mapLabels, questName, sameNameHints } from "@/app/lib/quests/display";
 import { questGraph } from "@/app/lib/quests/graph";

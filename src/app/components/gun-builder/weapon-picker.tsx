@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/app/lib/navigation/image";
 import { useRef, useState, type ReactNode } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, LoaderCircle, Search } from "lucide-react";
 import { useGameMode } from "@/components/game-mode/context";
 import type { GunListItem } from "@/app/lib/types/gunBuilder";

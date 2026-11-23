@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/app/lib/navigation/image";
+import Link from "@/app/lib/navigation/link";
 import type { QuestGraph } from "@/app/lib/quests/graph";
 import { questName } from "@/app/lib/quests/display";
 import type { ShoppingList, ShoppingRow } from "@/app/lib/quests/shopping-list";

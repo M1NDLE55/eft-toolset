@@ -1,5 +1,4 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
+import { readDataText } from "@/app/lib/server/platform";
 import { InputError } from "@/app/lib/input-error";
 import { WIKI_ORIGIN, wikiPageUrl } from "./wiki-url";
 import type { WikiSection } from "./wikitext";
@@ -72,15 +71,16 @@ const MAX_CACHED_PAGES = 100;
 const SEARCH_LIMIT = 8;
 const INVALID_TITLE = /[<>[\]{}|#\u0000-\u001F\u007F]/;
 
-let directory = join(process.cwd(), "data", "wiki");
+/** A directory to read instead of the bundled snapshot (data/wiki); tests point it at fixtures. */
+let directory: string | null = null;
 let index: Promise<LoadedIndex> | null = null;
 let leftOut: Promise<{ title: string; kind: string; key: string }[]> | null = null;
 let itemIds: Promise<Record<string, string>> | null = null;
 let imageCredits: Promise<WikiImageCredits> | null = null;
 const pages = new Map<string, Promise<WikiPageRecord>>();
 
-/** Points the reader at another snapshot directory; for tests. */
-export function setWikiSnapshotDirectory(path: string) {
+/** Points the reader at another snapshot directory, or back at the bundled one with null; for tests. */
+export function setWikiSnapshotDirectory(path: string | null) {
   directory = path;
   index = null;
   leftOut = null;
@@ -89,9 +89,29 @@ export function setWikiSnapshotDirectory(path: string) {
   pages.clear();
 }
 
+/** A snapshot file that isn't there; `code` matches Node's, so callers can tell it from a bad file. */
+class MissingSnapshotFileError extends Error {
+  readonly code = "ENOENT";
+  constructor(path: string) {
+    super(`The wiki snapshot has no ${path}.`);
+  }
+}
+
+async function readText(path: string): Promise<string | null> {
+  if (directory === null) return readDataText(`wiki/${path}`);
+  const [{ readFile }, { join }] = await Promise.all([import("node:fs/promises"), import("node:path")]);
+  try {
+    return await readFile(join(directory, path), "utf8");
+  } catch {
+    return null;
+  }
+}
+
 async function readJson<T>(path: string): Promise<T> {
-  // next.config.mjs traces data/wiki into the function, so the build needn't follow this path.
-  return JSON.parse(await readFile(/*turbopackIgnore: true*/ join(/*turbopackIgnore: true*/ directory, path), "utf8")) as T;
+  // The Worker reads the snapshot from its static assets (see src/app/lib/server/platform.ts).
+  const text = await readText(path);
+  if (text === null) throw new MissingSnapshotFileError(path);
+  return JSON.parse(text) as T;
 }
 
 function loadIndex() {

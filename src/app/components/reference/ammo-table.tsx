@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import type { Caliber } from "@/app/lib/seo/ammo";
 import { Rubles } from "@/app/lib/currency";
 

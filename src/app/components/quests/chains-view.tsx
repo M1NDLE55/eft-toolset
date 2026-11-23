@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import type { QuestState, QuestStatus } from "@/app/lib/quests/availability";
 import { CHAIN_NODE, layoutChain, type ChainEdgeKind, type ChainLayout } from "@/app/lib/quests/chain-layout";
 import { questName, sameNameHints } from "@/app/lib/quests/display";

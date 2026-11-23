@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import Link from "@/app/lib/navigation/link";
+import { useRouter } from "@/app/lib/navigation/hooks";
 import { ArrowLeft, Plus } from "lucide-react";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { createPlan } from "@/app/lib/raid-planner/store";

@@ -1,22 +1,15 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 
 # testing
 /coverage
-/src/app/temp
 /docs/
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
+# builds
+/dist/
+/.wrangler/
 
 # tarkov.dev snapshot, written by scripts/build-tarkov-snapshot.mjs during the build
 /data/tarkov/
@@ -27,16 +20,12 @@
 
 # debug
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
-# local env files
+# local env files (wrangler reads .dev.vars for local secrets)
 .env*
 !.env.example
-
-# vercel
-.vercel
+.dev.vars*
+!.dev.vars.example
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts

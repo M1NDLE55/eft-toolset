@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import Image from "@/app/lib/navigation/image";
+import Link from "@/app/lib/navigation/link";
+import { useRouter } from "@/app/lib/navigation/hooks";
 import { Settings } from "lucide-react";
 import { ItemSearch } from "@/app/components/global/search/item-search";
 import { itemHref } from "@/app/lib/item-links";

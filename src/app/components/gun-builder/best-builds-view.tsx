@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/app/lib/navigation/image";
+import Link from "@/app/lib/navigation/link";
 import type { BestBuild, BestBuildKind, WeaponBestBuilds } from "@/app/lib/builds/best-builds";
 import { MODE_LABEL, useServerModeSync } from "@/components/game-mode/use-server-mode-sync";
 import { Rubles } from "@/app/lib/currency";

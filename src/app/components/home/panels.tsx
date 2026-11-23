@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/app/lib/navigation/image";
+import Link from "@/app/lib/navigation/link";
 import { useMemo, useState, type ReactNode } from "react";
 import { ChevronRight, Crosshair, Layers, ListChecks, Map as MapIcon, ScanSearch } from "lucide-react";
 import { appLinks } from "@/app/lib/links";

@@ -668,3 +668,8 @@
 .item-grid > [data-drop="bottom"]::after {
   bottom: 4px;
 }
+
+/* Inter, self-hosted (@fontsource-variable/inter, imported by the root route). */
+html {
+  font-family: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}

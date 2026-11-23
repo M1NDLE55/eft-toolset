@@ -1,8 +1,8 @@
 "use client";
 
 import { createContext, useContext, useMemo, type ReactNode } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/app/lib/navigation/image";
+import Link from "@/app/lib/navigation/link";
 import { Check } from "lucide-react";
 import type { GameMode } from "@/components/game-mode/mode";
 import { MODE_LABEL } from "@/components/game-mode/mode";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { ChevronRight } from "lucide-react";
 import { ITEM_HUB_NAME } from "@/app/lib/seo/site-copy";
 

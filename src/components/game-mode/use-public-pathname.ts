@@ -2,7 +2,7 @@
 
 // The one place usePathname is allowed (see eslint.config.mjs).
 // eslint-disable-next-line no-restricted-imports
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/app/lib/navigation/hooks";
 import { publicPathname } from "@/app/lib/game-mode-routes";
 
 /**

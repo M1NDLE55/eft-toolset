@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { Badge, heading } from "@/app/components/quests/quest-bits";
 import { levelLabel } from "@/app/lib/quests/display";
 import type { ItemQuestAnyOf, ItemQuestKey, ItemQuestNeed, ItemQuests } from "@/app/lib/quests/item-quests";

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/app/lib/navigation/image";
 import type { PriceHighlight, PriceHighlights } from "@/app/lib/api/tarkov-server";
 import type { GameMode } from "@/components/game-mode/mode";
 import { MODE_LABEL, useServerModeSync } from "@/components/game-mode/use-server-mode-sync";

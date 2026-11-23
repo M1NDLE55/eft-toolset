@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import type { McpServer } from "@modelcontextprotocol/server";
 import { getGroupItems, getItemDetail, getItemFacets, getItemUses, type ItemFacets } from "@/app/lib/api/tarkov-server";
 import type { CatalogItem } from "@/app/lib/cache/types";
 import { listCatalog, searchCatalog, suggestNames } from "@/app/lib/search/filter-catalog";

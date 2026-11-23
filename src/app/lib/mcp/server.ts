@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { McpServer } from "@modelcontextprotocol/server";
 import { MCP_TOOL_GROUPS } from "./catalog";
 import type { ToolContext } from "./context";
 import { registerItemTools } from "./items";
@@ -69,11 +69,11 @@ function registerPrompts(server: McpServer) {
     {
       title: "Plan a raid",
       description: "Plan a route on a map and get a share link to open it in the raid planner.",
-      argsSchema: {
+      argsSchema: z.object({
         map: z.string().describe("Map name, for example Customs."),
         goal: z.string().optional().describe("What the raid is for, such as a quest, loot, or a boss."),
         gameMode: gameModeArg,
-      },
+      }),
     },
     ({ map, goal, gameMode }) => ({
       messages: [
@@ -93,12 +93,12 @@ function registerPrompts(server: McpServer) {
     {
       title: "Build a weapon",
       description: "Build a weapon for a goal and budget and get a share link to open it in the gun builder.",
-      argsSchema: {
+      argsSchema: z.object({
         weapon: z.string().describe("Weapon name, for example M4A1."),
         goal: z.string().optional().describe("ergonomics, recoil, or cost."),
         budgetRUB: z.string().optional().describe("Maximum cost in roubles."),
         gameMode: gameModeArg,
-      },
+      }),
     },
     ({ weapon, goal, budgetRUB, gameMode }) => ({
       messages: [
@@ -118,10 +118,10 @@ function registerPrompts(server: McpServer) {
     {
       title: "Price my loot",
       description: "Price a list of items and say where to sell each one.",
-      argsSchema: {
+      argsSchema: z.object({
         items: z.string().describe("Items, one per line or comma-separated, optionally with counts."),
         gameMode: gameModeArg,
-      },
+      }),
     },
     ({ items, gameMode }) => ({
       messages: [

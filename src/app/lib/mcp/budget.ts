@@ -1,5 +1,5 @@
 import { CLIENT_LIMIT, consumeGlobalBudget, type BucketLimit, type RequestBudget } from "@/app/lib/api/rate-limit";
-import { sharedRateLimitStore } from "@/app/lib/api/rate-limit-store";
+import { sharedRateLimitStore, USER_KEY_PREFIX } from "@/app/lib/api/rate-limit-store";
 
 /**
  * Anonymous payers exist only when sign-in is off, which is only allowed outside production.
@@ -28,7 +28,7 @@ function positiveNumber(name: string, fallback: number) {
 }
 
 function payerKey(payer: Payer) {
-  if (payer.kind === "user") return `mcp:user:${payer.subject}`;
+  if (payer.kind === "user") return `${USER_KEY_PREFIX}${payer.subject}`;
   return payer.ip === null ? null : `mcp:ip:${payer.ip}`;
 }
 

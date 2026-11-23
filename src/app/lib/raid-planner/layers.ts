@@ -403,7 +403,8 @@ function exitIcon(name: string, color: string) {
   const text = document.createElement("span");
   text.className = "rp-extract-name";
   text.textContent = name;
-  chip.append(icon, text);
+  chip.appendChild(icon);
+  chip.appendChild(text);
   return L.divIcon({ className: "rp-extract-wrap", html: chip, iconSize: [0, 0] });
 }
 
@@ -636,9 +637,9 @@ function softEdgeFilter(map: L.Map): string {
     filter.setAttribute(name, value);
   }
   const blur = document.createElementNS(SVG_NS, "feGaussianBlur");
-  filter.append(blur);
-  svg.append(filter);
-  container.append(svg);
+  filter.appendChild(blur);
+  svg.appendChild(filter);
+  container.appendChild(svg);
   updateSoftEdge(map);
   return id;
 }
@@ -686,12 +687,13 @@ function buildLocks(context: DetailContext): LayerEntry {
       const keyLink = document.createElement("a");
       keyLink.href = itemHref({ name: lock.keyName, normalizedName: lock.keyNormalizedName });
       keyLink.textContent = lock.keyName;
-      keyLine.append(keyLink);
-      popup.append(heading, keyLine);
+      keyLine.appendChild(keyLink);
+      popup.appendChild(heading);
+      popup.appendChild(keyLine);
       if (lock.needsPower) {
         const power = document.createElement("p");
         power.textContent = "Requires power";
-        popup.append(power);
+        popup.appendChild(power);
       }
       marker.bindPopup(popup, { closeButton: false });
     }

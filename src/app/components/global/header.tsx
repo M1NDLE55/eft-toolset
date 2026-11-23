@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from "@/app/lib/navigation/link";
+import Image from "@/app/lib/navigation/image";
 import { useSyncExternalStore } from "react";
 import { Menu, Settings, UserRound } from "lucide-react";
 import { navLinks } from "@/app/lib/links";

@@ -1,14 +1,11 @@
-import type { McpServer, ToolCallback } from "@modelcontextprotocol/sdk/server/mcp.js";
-import type { ShapeOutput, ZodRawShapeCompat } from "@modelcontextprotocol/sdk/server/zod-compat.js";
-import type { RequestHandlerExtra } from "@modelcontextprotocol/sdk/shared/protocol.js";
-import type { ServerNotification, ServerRequest, ToolAnnotations } from "@modelcontextprotocol/sdk/types.js";
+import type { McpServer, ToolAnnotations } from "@modelcontextprotocol/server";
 import { z } from "zod";
 import { toolInfo, type McpToolName } from "./catalog";
 import { runTool, type GameMode, type Read, type ToolContext } from "./context";
 import { toolResultKey } from "./result-cache";
 import { listTool } from "./tool-list";
 
-export type DefineTool = <Args extends ZodRawShapeCompat, Out extends z.ZodObject>(
+export type DefineTool = <Args extends z.ZodRawShape, Out extends z.ZodObject>(
   name: McpToolName,
   config: {
     inputSchema: Args;
@@ -17,7 +14,7 @@ export type DefineTool = <Args extends ZodRawShapeCompat, Out extends z.ZodObjec
     /** Reuse results on this instance while the data they were built from is unchanged. */
     cacheResults?: boolean;
   },
-  body: (args: ShapeOutput<Args>, call: { read: Read }) => Promise<z.input<Out>>
+  body: (args: z.output<z.ZodObject<Args>>, call: { read: Read }) => Promise<z.input<Out>>
 ) => void;
 
 /**
@@ -28,10 +25,8 @@ export type DefineTool = <Args extends ZodRawShapeCompat, Out extends z.ZodObjec
  */
 export function toolDefiner(server: McpServer, context: ToolContext): DefineTool {
   return (name, config, body) => {
-    const handler = (
-      args: ShapeOutput<typeof config.inputSchema>,
-      _extra: RequestHandlerExtra<ServerRequest, ServerNotification>
-    ) =>
+    const inputSchema = z.object(config.inputSchema);
+    const handler = (args: z.output<typeof inputSchema>) =>
       runTool(
         context,
         {
@@ -45,15 +40,15 @@ export function toolDefiner(server: McpServer, context: ToolContext): DefineTool
     const annotations = { readOnlyHint: true, idempotentHint: true, openWorldHint: true, ...config.annotations };
     server.registerTool(
       name,
-      { ...info, inputSchema: config.inputSchema, outputSchema: config.outputSchema, annotations },
-      // The SDK's callback type is conditional on the shape, which TypeScript can't resolve
-      // for a generic shape; the handler above has the type it resolves to.
-      handler as ToolCallback<typeof config.inputSchema>
+      { ...info, inputSchema, outputSchema: config.outputSchema, annotations },
+      // The SDK types a tool's result from its output schema, which TypeScript can't resolve for a
+      // generic schema; runTool's result is checked against the schema at runtime, by the SDK.
+      handler as never
     );
     listTool(server, {
       name,
       ...info,
-      inputSchema: z.object(config.inputSchema as z.ZodRawShape),
+      inputSchema,
       outputSchema: config.outputSchema,
       annotations,
     });

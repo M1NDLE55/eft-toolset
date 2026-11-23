@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/app/lib/seo/metadata";
+import Link from "@/app/lib/navigation/link";
 import { AmmoTable } from "@/app/components/reference/ammo-table";
 import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
 import { ServerModeNote } from "@/components/game-mode/server-mode-note";
 import type { GameMode } from "@/components/game-mode/mode";
-import { AMMO_HUB_DESCRIPTION, AMMO_HUB_TITLE, bestByCaliber } from "@/app/lib/seo/ammo";
-import { loadCalibers } from "./load";
+import { AMMO_HUB_DESCRIPTION, AMMO_HUB_TITLE, bestByCaliber, type Caliber } from "@/app/lib/seo/ammo";
 import { FaqSection } from "@/app/components/seo/faq-section";
 
 export const ammoHubMetadata: Metadata = {
@@ -20,21 +19,15 @@ export const ammoHubMetadata: Metadata = {
   },
 };
 
-class AmmoUnavailableError extends Error {
-  constructor() {
-    super("Ammo data is temporarily unavailable.");
-    this.name = "AmmoUnavailableError";
-  }
-}
-
 const COMMON = ["545x39", "556x45NATO", "762x39", "762x51", "762x54R", "9x19PARA", "12g"];
 
-/** The ammo chart for one game mode: /ammo renders PVP, and its PVE copy PVE. */
-export async function AmmoHub({ gameMode }: { gameMode: GameMode }) {
-  const loaded = await loadCalibers(gameMode);
-  // Fail the render rather than cache an empty chart.
-  if (!loaded) throw new AmmoUnavailableError();
-  const { calibers } = loaded;
+export interface AmmoHubData {
+  gameMode: GameMode;
+  calibers: Caliber[];
+}
+
+/** The ammo chart, rendered for the visitor's game mode. */
+export function AmmoHub({ data: { gameMode, calibers } }: { data: AmmoHubData }) {
   const best = bestByCaliber(calibers, COMMON);
   const faq = [
     ...(best.length

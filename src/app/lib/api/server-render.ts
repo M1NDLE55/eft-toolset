@@ -1,4 +1,3 @@
-import { unstable_rethrow } from "next/navigation";
 import { runTarkovRead, waitForRenderSlot, releaseRenderSlot } from "./tarkov-server";
 
 /**
@@ -33,7 +32,6 @@ export async function readForRender<T>(label: string, work: () => Promise<T>): P
   try {
     return await runTarkovRead(work, { signal });
   } catch (error) {
-    unstable_rethrow(error);
     console.warn(`${label} rendered without its data:`, error instanceof Error ? error.message : error);
     return undefined;
   } finally {

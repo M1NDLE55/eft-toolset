@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/app/lib/seo/metadata";
+import Link from "@/app/lib/navigation/link";
 import { RecentItems } from "@/app/components/item/scouted-items";
 import { PriceHighlightTables } from "@/app/components/item/price-highlights";
 import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
-import { getPriceHighlights } from "@/app/lib/api/tarkov-server";
-import { requireForRender } from "@/app/lib/api/server-render";
+import type { PriceHighlights } from "@/app/lib/api/tarkov-server";
 import type { GameMode } from "@/components/game-mode/mode";
 import { ITEM_HUB_DESCRIPTION, ITEM_HUB_NAME, ITEM_HUB_TITLE } from "@/app/lib/seo/site-copy";
 import { FaqSection } from "@/app/components/seo/faq-section";
@@ -43,9 +42,13 @@ const FAQ = [
   },
 ];
 
-/** The price hub for one game mode: /item renders PVP, and its PVE copy PVE. */
-export async function ItemHub({ gameMode }: { gameMode: GameMode }) {
-  const highlights = await requireForRender("Item prices page", () => getPriceHighlights(gameMode));
+export interface ItemHubData {
+  gameMode: GameMode;
+  highlights: PriceHighlights;
+}
+
+/** The price hub, rendered for the visitor's game mode. */
+export function ItemHub({ data: { gameMode, highlights } }: { data: ItemHubData }) {
   return (
     <>
       <JsonLd

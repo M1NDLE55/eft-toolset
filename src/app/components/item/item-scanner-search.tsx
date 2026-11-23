@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/app/lib/navigation/hooks";
 import { usePublicPathname } from "@/components/game-mode/use-public-pathname";
 import { ItemSearch } from "@/app/components/global/search/item-search";
 import { itemHref } from "@/app/lib/item-links";

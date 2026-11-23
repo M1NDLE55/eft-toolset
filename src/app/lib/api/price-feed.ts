@@ -1,12 +1,13 @@
 import type { GameMode } from "@/components/game-mode/context";
-import { SITE_ORIGIN } from "@/app/lib/site";
+import { platform } from "@/app/lib/server/platform";
 import { canonicalJson, TARKOV_OPERATIONS } from "./operations";
 import { USER_AGENT } from "./user-agent";
 
 // The price feed: the part of tarkov.dev's items file that changes every few minutes (flea and trader
-// prices), served by our own CDN-cached `price.feed` GET. Instances refresh prices from it, a small
-// download from our origin, instead of each downloading the whole items file from json.tarkov.dev;
-// only the origin behind the CDN reads that file. See DATA_ARCHITECTURE.md ("Price feed").
+// prices). In the Worker, the cron builds it once a minute per game mode and publishes it to KV
+// (publishPriceFeed); isolates refresh prices from there, a small read, instead of each downloading
+// the whole items file from json.tarkov.dev. Locally, PRICE_FEED_ORIGIN can name an origin serving
+// the `price.feed` GET instead. See DATA_ARCHITECTURE.md ("Price feed").
 
 /** Bumped when the wire format changes; a copy in another format is refused, and reads use the items file. */
 export const PRICE_FEED_FORMAT = 1;
@@ -226,17 +227,20 @@ export const NO_PRICES: ItemPrices = Object.freeze({
   buyFromTrader: [],
 });
 
+/** Stands for the shared store (KV) as the feed's origin. */
+export const SHARED_STORE_FEED_ORIGIN = "shared-store:";
+
+/** The shared store's key for one mode's published feed: the `price.feed` response body. */
+export function priceFeedStoreKey(gameMode: GameMode) {
+  return `price-feed:${PRICE_FEED_FORMAT}:${gameMode}`;
+}
+
 /**
- * Where instances get the feed: the production site in production, the deployment's own URL on a
- * preview (deployment protection may refuse it; reads then use the items file), and PRICE_FEED_ORIGIN
- * locally (ignored on Vercel). Off during the build, which has a fresh snapshot, and anywhere else.
+ * Where instances get the feed: the shared store (KV) in the Worker, where the cron publishes it, or
+ * PRICE_FEED_ORIGIN locally. Off anywhere else; reads then use the items file.
  */
 export function priceFeedOrigin(): string | null {
-  if (process.env.NEXT_PHASE === "phase-production-build") return null;
-  if (process.env.VERCEL) {
-    if (process.env.VERCEL_ENV === "production") return SITE_ORIGIN;
-    return process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null;
-  }
+  if (platform().sharedStore) return SHARED_STORE_FEED_ORIGIN;
   const local = process.env.PRICE_FEED_ORIGIN?.trim();
   if (!local) return null;
   try {
@@ -371,7 +375,45 @@ function retryDelay(failures: number, error: unknown) {
   return Math.max(jittered, Math.min(requested, RETRY_AFTER_MAX_MS));
 }
 
+/** Publishes the feed body (`{"data": …}`, as `price.feed` answers) for the instances to read. */
+export async function publishPriceFeed(gameMode: GameMode, body: string) {
+  const store = platform().sharedStore;
+  if (!store) return;
+  // Kept well past a minute, so an outage of the cron leaves the last prices for isolates to mark stale.
+  await store.put(priceFeedStoreKey(gameMode), body, { expirationTtl: 24 * 60 * 60 });
+}
+
+/** The published feed's wire form, when it is there and valid; for the cron to revalidate from. */
+export async function readPublishedFeedWire(gameMode: GameMode): Promise<PriceFeedWire | null> {
+  const store = platform().sharedStore;
+  const body = store ? await store.get(priceFeedStoreKey(gameMode)).catch(() => null) : null;
+  if (body === null) return null;
+  try {
+    const wire = (JSON.parse(body) as { data?: unknown }).data;
+    return parsePriceFeed(wire, gameMode) ? (wire as PriceFeedWire) : null;
+  } catch {
+    return null;
+  }
+}
+
+async function readPublishedFeed(gameMode: GameMode): Promise<PriceFeed> {
+  const store = platform().sharedStore;
+  const body = store ? await store.get(priceFeedStoreKey(gameMode)) : null;
+  if (body === null) throw new PriceFeedError("The price feed hasn't been published yet.");
+  if (body.length > FEED_MAX_BYTES) throw new PriceFeedError("The price feed is oversized.");
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(body);
+  } catch {
+    throw new PriceFeedError("The price feed is invalid JSON.");
+  }
+  const feed = parsePriceFeed(isRecord(parsed) ? parsed.data : undefined, gameMode);
+  if (!feed) throw new PriceFeedError("The price feed has data in an unexpected shape.");
+  return feed;
+}
+
 async function fetchPriceFeed(origin: string, gameMode: GameMode): Promise<PriceFeed> {
+  if (origin === SHARED_STORE_FEED_ORIGIN) return readPublishedFeed(gameMode);
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), FEED_TIMEOUT_MS);
   const headers: Record<string, string> = {
@@ -379,12 +421,8 @@ async function fetchPriceFeed(origin: string, gameMode: GameMode): Promise<Price
     "Accept-Encoding": "br, gzip",
     "User-Agent": USER_AGENT,
   };
-  // Lets a preview deployment's own instances past its protection, when the project has a bypass secret.
-  // Only on Vercel, where the origin is the deployment itself.
-  const bypass = process.env.VERCEL ? process.env.VERCEL_AUTOMATION_BYPASS_SECRET : undefined;
-  if (bypass && origin !== SITE_ORIGIN) headers["x-vercel-protection-bypass"] = bypass;
   try {
-    // The feed URL never redirects; following one could hand the bypass secret to another host.
+    // The feed URL never redirects.
     const response = await fetch(priceFeedUrl(origin, gameMode), {
       headers,
       signal: controller.signal,

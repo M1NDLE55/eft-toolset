@@ -99,6 +99,11 @@ export function deriveItemIndex(
   return index;
 }
 
+/** Forgets one mode's derived index, which holds on to the items copy it came from (the memory guard). */
+export function forgetDerivedItemIndex(gameMode: string) {
+  state.derived.delete(gameMode);
+}
+
 /** Forgets the bundled and derived indexes. For tests, with clearTarkovResourceCache. */
 export function clearItemIndexCache() {
   state.bundled.clear();
