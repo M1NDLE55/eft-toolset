@@ -5,7 +5,8 @@ import { POST } from "@/app/api/mcp/route";
 // Every client loads tools/list into its context before the user says anything, so its size
 // is a cost every conversation pays. Raise these only for a new tool or a field a caller
 // can't do without, and look for something to trim first.
-const TOOL_LIST_BUDGET_BYTES = 42_000;
+// 43 KB with get_data_status (under 1 KB); the shared dataAsOf and dataNotice fields are left out of each tool.
+const TOOL_LIST_BUDGET_BYTES = 43_000;
 const TOOL_BUDGET_BYTES = 4_500;
 
 async function listTools() {

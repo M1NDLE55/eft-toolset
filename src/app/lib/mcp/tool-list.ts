@@ -55,8 +55,14 @@ function stripLimits(node: unknown): unknown {
 export function publishedOutputSchema(schema: z.ZodObject): JsonSchema {
   const json = z.toJSONSchema(schema, { target: "draft-7", io: "output" }) as JsonSchema;
   delete json.$schema;
-  return topLevel(json, 0) as JsonSchema;
+  const published = topLevel(json, 0) as JsonSchema;
+  // Every data result's optional freshness fields: the server instructions describe them once.
+  const properties = published.properties as JsonSchema | undefined;
+  for (const field of SHARED_RESULT_FIELDS) delete properties?.[field];
+  return published;
 }
+
+const SHARED_RESULT_FIELDS = ["dataAsOf", "dataNotice"];
 
 function topLevel(node: unknown, depth: number): unknown {
   if (Array.isArray(node)) return node.map((entry) => topLevel(entry, depth));

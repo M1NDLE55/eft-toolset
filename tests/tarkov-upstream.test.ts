@@ -118,19 +118,20 @@ describe("tarkov.dev requests", () => {
     expect(requestsFor("items_en")).toHaveLength(1);
   });
 
-  it("back off after a failure instead of retrying on every call, then try again", async () => {
+  it("back off after a failed refresh instead of retrying on every call, then try again", async () => {
     vi.useFakeTimers({ toFake: ["Date"] });
     await catalog();
     vi.setSystemTime(Date.now() + 31 * 60_000);
     failure = new Response("down", { status: 503 });
     await Promise.all(Array.from({ length: 20 }, () => catalog()));
     for (let call = 0; call < 20; call += 1) await catalog();
-    expect(requestsFor("items")).toHaveLength(2);
+    // One refresh for the whole burst: the first request and two quick retries.
+    expect(requestsFor("items")).toHaveLength(4);
 
     vi.setSystemTime(Date.now() + 40_000);
     failure = null;
     await catalog();
-    expect(requestsFor("items")).toHaveLength(3);
+    expect(requestsFor("items")).toHaveLength(5);
   });
 
   it("wait as long as a 429's Retry-After asks", async () => {

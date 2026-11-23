@@ -59,12 +59,12 @@ describe("Tarkov JSON adapter", () => {
   });
 
   it("serves a bounded stale copy when an upstream refresh fails and reports it", async () => {
-    vi.useFakeTimers();
+    vi.useFakeTimers({ toFake: ["Date"] });
     try {
       const initial = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, {
         gameMode: "regular",
       });
-      vi.advanceTimersByTime(31 * 60_000);
+      vi.setSystemTime(Date.now() + 31 * 60_000);
       vi.mocked(globalThis.fetch).mockRejectedValue(new Error("offline"));
       const onStale = vi.fn();
       const secondOnStale = vi.fn();
@@ -88,10 +88,10 @@ describe("Tarkov JSON adapter", () => {
   });
 
   it("revalidates in the background without making callers wait", async () => {
-    vi.useFakeTimers();
+    vi.useFakeTimers({ toFake: ["Date"] });
     try {
       const initial = await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
-      vi.advanceTimersByTime(10 * 60_000);
+      vi.setSystemTime(Date.now() + 10 * 60_000);
       let release: (() => void) | undefined;
       vi.mocked(globalThis.fetch).mockImplementation(
         () => new Promise((resolve) => {
@@ -111,10 +111,10 @@ describe("Tarkov JSON adapter", () => {
   });
 
   it("refuses to serve data older than the stale limit when upstream is down", async () => {
-    vi.useFakeTimers();
+    vi.useFakeTimers({ toFake: ["Date"] });
     try {
       await executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" });
-      vi.advanceTimersByTime(7 * 60 * 60_000);
+      vi.setSystemTime(Date.now() + 7 * 60 * 60_000);
       vi.mocked(globalThis.fetch).mockRejectedValue(new Error("offline"));
       await expect(
         executeTarkovOperation(TARKOV_OPERATIONS.itemCatalog, { gameMode: "regular" })

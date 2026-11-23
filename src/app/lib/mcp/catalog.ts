@@ -182,6 +182,19 @@ export const MCP_TOOL_GROUPS = [
       },
     ],
   },
+  {
+    tool: "Server status",
+    href: "/mcp",
+    tools: [
+      {
+        name: "get_data_status",
+        title: "Data status",
+        summary: "How fresh this server's tarkov.dev data is, and whether tarkov.dev can be reached.",
+        description:
+          "How fresh this server's copy of each tarkov.dev dataset is, its freshness target, and whether refreshing it is failing (with retryAfterSeconds). Makes no requests: check it before a scheduled run or after an upstream_unavailable error.",
+      },
+    ],
+  },
 ] as const satisfies readonly McpToolGroup[];
 
 export type McpToolName = (typeof MCP_TOOL_GROUPS)[number]["tools"][number]["name"];

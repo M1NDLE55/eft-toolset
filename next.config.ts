@@ -11,7 +11,10 @@ const nextConfig: NextConfig = {
   agentRules: false,
   reactCompiler: true,
   // get_wiki_page, item pages, quest pages and item.detail (what a key opens) read the wiki snapshot from disk, a page at a time. See DATA_ARCHITECTURE.md.
+  // Every route that reads tarkov.dev data starts from, and falls back to, the snapshot written at build
+  // time by scripts/build-tarkov-snapshot.mjs (about 4 MB). See DATA_ARCHITECTURE.md.
   outputFileTracingIncludes: {
+    "/**": ["./data/tarkov/**/*"],
     "/api/mcp": ["./data/wiki/**/*"],
     "/api/tarkov": ["./data/wiki/item-ids.json", "./data/wiki/pages/**/*", "./data/wiki/items/**/*"],
     "/item/*": ["./data/wiki/index.json", "./data/wiki/item-ids.json", "./data/wiki/pages/**/*", "./data/wiki/items/**/*"],

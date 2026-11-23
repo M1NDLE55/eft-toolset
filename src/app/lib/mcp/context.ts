@@ -1,5 +1,5 @@
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
-import { runTarkovRead, TarkovUpstreamError, type DataSnapshot } from "@/app/lib/api/tarkov-server";
+import { runTarkovRead, TarkovUpstreamError, type DataSnapshot, type DataSource } from "@/app/lib/api/tarkov-server";
 import { InputError } from "@/app/lib/input-error";
 import type { GameMode } from "@/components/game-mode/mode";
 import { readToolResult, storeToolResult } from "./result-cache";
@@ -24,15 +24,29 @@ export type Read = <T>(work: () => Promise<T>) => Promise<T>;
 type ToolOutcome = "ok" | "input_error" | "upstream_error" | "timeout" | "crash";
 
 const ERROR_MESSAGES: Record<Exclude<ToolOutcome, "ok" | "input_error">, string> = {
-  upstream_error: "Tarkov.dev data is temporarily unavailable. Try again in a few seconds.",
+  upstream_error: "Tarkov.dev data is temporarily unavailable and this server has no copy of it yet.",
   timeout: "The request took too long and was stopped. Try a narrower request.",
   crash: "The tool failed unexpectedly.",
 };
 
+/** The error codes in a failed result's structuredContent.error, for clients that branch on them. */
+const ERROR_CODES: Record<Exclude<ToolOutcome, "ok">, string> = {
+  input_error: "invalid_input",
+  upstream_error: "upstream_unavailable",
+  timeout: "timeout",
+  crash: "internal_error",
+};
+
+/** Retry hint when the adapter gives none. */
+const DEFAULT_RETRY_AFTER_SECONDS = 5;
+
 /**
  * Runs a tool body and turns what it returns into a tool result: JSON text plus the same
- * object as structured content, with a dataNotice when the data was stale. Errors become
- * tool errors the model can act on. Logs one structured line per call.
+ * object as structured content, with dataAsOf (when the tarkov.dev data it used was last
+ * confirmed) and a dataNotice when that data was stale. Tool reads accept any copy the server
+ * has when tarkov.dev can't be reached, and say how old it is, rather than failing. Errors become
+ * tool errors the model can act on, with structuredContent.error saying whether and when to
+ * retry. Logs one structured line per call.
  */
 export async function runTool(
   context: ToolContext,
@@ -41,14 +55,17 @@ export async function runTool(
 ): Promise<CallToolResult> {
   const startedAt = performance.now();
   let stale = false;
+  let staleSource: DataSource = "tarkov.dev";
   let cached = false;
   let dataAgeMs: number | null = null;
   const snapshots: DataSnapshot[] = [];
   const read: Read = (work) =>
     runTarkovRead(work, {
       signal: context.signal,
-      onStale: () => {
+      maxStaleMs: Number.POSITIVE_INFINITY,
+      onStale: ({ source }) => {
         stale = true;
+        if (source === "deployment") staleSource = source;
       },
       onDataAge: (ageMs) => {
         dataAgeMs = Math.max(dataAgeMs ?? 0, ageMs);
@@ -65,19 +82,39 @@ export async function runTool(
       return toolResult(hit);
     }
     const result = await body(read);
-    const payload: Record<string, unknown> = stale ? { ...result, dataNotice: staleNotice(dataAgeMs) } : { ...result };
+    const payload: Record<string, unknown> = { ...result };
+    if (dataAgeMs !== null) payload.dataAsOf = new Date(Date.now() - dataAgeMs).toISOString();
+    if (stale) payload.dataNotice = staleNotice(dataAgeMs, staleSource);
     if (call.cacheKey && !stale) storeToolResult(call.cacheKey, payload, snapshots.flat());
     return toolResult(payload);
   } catch (error) {
     outcome = classifyError(error, context);
     if (outcome === "crash") console.error(`MCP ${call.tool} failed (request ${context.requestId})`, error);
+    const retryAfterSeconds =
+      outcome === "upstream_error"
+        ? Math.max(1, Math.ceil(((error as TarkovUpstreamError).retryAfterMs ?? DEFAULT_RETRY_AFTER_SECONDS * 1000) / 1000))
+        : null;
     const message =
       outcome === "input_error"
         ? (error as Error).message
         : outcome === "crash"
           ? `${ERROR_MESSAGES.crash} Reference: ${context.requestId}.`
-          : ERROR_MESSAGES[outcome];
-    return { isError: true, content: [{ type: "text", text: message }] };
+          : outcome === "upstream_error"
+            ? `${ERROR_MESSAGES.upstream_error} Try again in ${retryAfterSeconds} seconds.`
+            : ERROR_MESSAGES[outcome];
+    return {
+      isError: true,
+      content: [{ type: "text", text: message }],
+      structuredContent: {
+        error: {
+          code: ERROR_CODES[outcome],
+          message,
+          // Input errors need a different request; a crash is a bug, so the same call would fail again.
+          retryable: outcome === "upstream_error" || outcome === "timeout",
+          ...(retryAfterSeconds !== null ? { retryAfterSeconds } : {}),
+        },
+      },
+    };
   } finally {
     console.info(
       JSON.stringify({
@@ -89,6 +126,7 @@ export async function runTool(
         outcome,
         durationMs: Math.round(performance.now() - startedAt),
         stale,
+        dataAgeSeconds: dataAgeMs === null ? null : Math.round(dataAgeMs / 1000),
         cached,
       })
     );
@@ -99,13 +137,20 @@ function toolResult(payload: Record<string, unknown>): CallToolResult {
   return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
 }
 
-function staleNotice(dataAgeMs: number | null) {
+function staleNotice(dataAgeMs: number | null, source: DataSource) {
   const minutes = dataAgeMs === null ? null : Math.max(1, Math.round(dataAgeMs / 60_000));
   const age =
     minutes === null
       ? ""
-      : ` from about ${minutes < 90 ? `${minutes} minute${minutes === 1 ? "" : "s"}` : `${Math.round(minutes / 60)} hours`} ago`;
-  return `tarkov.dev is unavailable, so this uses cached data${age}. Prices may have changed.`;
+      : ` from about ${
+          minutes < 90
+            ? `${minutes} minute${minutes === 1 ? "" : "s"}`
+            : minutes < 48 * 60
+              ? `${Math.round(minutes / 60)} hours`
+              : `${Math.round(minutes / (24 * 60))} days`
+        } ago`;
+  const copy = source === "deployment" ? "the copy bundled with this server" : "cached data";
+  return `tarkov.dev is unavailable, so this uses ${copy}${age}. Prices may have changed.`;
 }
 
 function classifyError(error: unknown, context: ToolContext): Exclude<ToolOutcome, "ok"> {
