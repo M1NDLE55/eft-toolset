@@ -556,6 +556,13 @@ export class TarkovUpstreamError extends Error {
     super(message);
     this.name = "TarkovUpstreamError";
   }
+
+  // This module is bundled into several server chunks that share one resource cache through
+  // globalThis, so a refresh started by one chunk (the boot-time warm-up, say) rejects with another
+  // copy of this class. Recognise every copy by name, so instanceof works wherever the error lands.
+  static [Symbol.hasInstance](value: unknown) {
+    return value instanceof Error && value.name === "TarkovUpstreamError";
+  }
 }
 
 export class TarkovRequestError extends Error {
@@ -2368,18 +2375,21 @@ async function writeShared(key: string, refreshed: Refreshed, policy: ResourcePo
   await cache.set(`${key}:meta`, meta, Math.ceil(policy.revalidateMs / 1000));
 }
 
-let activeUpstreamRequests = 0;
-const upstreamQueue: Array<() => void> = [];
+// Shared like the resource cache, so the limit holds per instance, not per bundled copy of this module.
+const UPSTREAM_SLOTS_KEY = "__eftTarkovUpstreamSlots:1";
+const upstreamSlots = ((globalThis as typeof globalThis & {
+  [UPSTREAM_SLOTS_KEY]?: { active: number; queue: Array<() => void> };
+})[UPSTREAM_SLOTS_KEY] ??= { active: 0, queue: [] });
 
 async function withUpstreamSlot<T>(work: () => Promise<T>): Promise<T> {
-  if (activeUpstreamRequests < MAX_UPSTREAM_REQUESTS) activeUpstreamRequests += 1;
-  else await new Promise<void>((resolve) => upstreamQueue.push(resolve));
+  if (upstreamSlots.active < MAX_UPSTREAM_REQUESTS) upstreamSlots.active += 1;
+  else await new Promise<void>((resolve) => upstreamSlots.queue.push(resolve));
   try {
     return await work();
   } finally {
-    const next = upstreamQueue.shift();
+    const next = upstreamSlots.queue.shift();
     if (next) next();
-    else activeUpstreamRequests -= 1;
+    else upstreamSlots.active -= 1;
   }
 }
 
@@ -2434,7 +2444,12 @@ async function fetchResource(
 ): Promise<Fetched> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), UPSTREAM_TIMEOUT_MS);
-  const headers: Record<string, string> = { Accept: "application/json", "User-Agent": USER_AGENT };
+  // Node's fetch asks for gzip and deflate unless told otherwise; it decodes brotli all the same.
+  const headers: Record<string, string> = {
+    Accept: "application/json",
+    "Accept-Encoding": "br, gzip",
+    "User-Agent": USER_AGENT,
+  };
   if (validators?.etag) headers["If-None-Match"] = validators.etag;
   if (validators?.lastModified) headers["If-Modified-Since"] = validators.lastModified;
   const conditional = "If-None-Match" in headers || "If-Modified-Since" in headers;

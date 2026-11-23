@@ -9,6 +9,7 @@ import {
   executeTarkovOperation,
   settleTarkovRefreshes,
   tarkovDataStatus,
+  TarkovUpstreamError,
   type TarkovReadOptions,
 } from "@/app/lib/api/tarkov-server";
 import { readSnapshot, setTarkovSnapshotDirForTests } from "@/app/lib/api/tarkov-snapshot";
@@ -142,6 +143,22 @@ describe("a cold instance with tarkov.dev down", () => {
     const error = await catalog().catch((caught: unknown) => caught);
     expect(requestsFor("items")).toHaveLength(1);
     expect((error as { retryAfterMs?: number }).retryAfterMs).toBeGreaterThan(100_000);
+  });
+});
+
+describe("upstream errors", () => {
+  it("are recognised from any bundled copy of the adapter, so they aren't reported as crashes", () => {
+    // What another server chunk's copy of the class throws: same name, different constructor.
+    class TarkovUpstreamErrorFromAnotherChunk extends Error {
+      name = "TarkovUpstreamError";
+    }
+    expect(new TarkovUpstreamErrorFromAnotherChunk("timed out")).toBeInstanceOf(TarkovUpstreamError);
+    expect(new Error("timed out")).not.toBeInstanceOf(TarkovUpstreamError);
+  });
+
+  it("come from requests that ask for brotli", async () => {
+    await catalog();
+    expect(requestsFor("items")[0].headers["Accept-Encoding"]).toBe("br, gzip");
   });
 });
 

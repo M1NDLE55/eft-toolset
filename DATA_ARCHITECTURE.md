@@ -566,7 +566,8 @@ size):
 | `items_en` | 1.7 MB | 0.49 MB | 0.35 MB | with game patches |
 | the other eight | 0.77 MB | 0.13 MB | 0.12 MB | barters and traders daily, the rest with patches |
 
-Node's `fetch` asks for brotli, so loading `items` downloads about 1.8 MB, not 17 MB. Parsing it
+The adapter asks for brotli (Node's `fetch` asks only for gzip unless told), so loading `items`
+downloads about 1.8 MB (1.9 MB gzipped), not 17 MB. Parsing it
 takes about 100 ms and holds about 40 MB of heap per game mode.
 
 **Freshness targets.** Prices (`items`) about 5 minutes; tasks and maps about 30 minutes; trader,

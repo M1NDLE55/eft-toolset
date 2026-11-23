@@ -45,7 +45,7 @@ async function fetchResource(mode, resource) {
   for (let attempt = 1; attempt <= ATTEMPTS; attempt++) {
     try {
       const response = await fetch(`${UPSTREAM}/${mode}/${resource}`, {
-        headers: { Accept: "application/json", "User-Agent": USER_AGENT },
+        headers: { Accept: "application/json", "Accept-Encoding": "br, gzip", "User-Agent": USER_AGENT },
         signal: AbortSignal.timeout(TIMEOUT_MS),
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
