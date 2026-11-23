@@ -1,6 +1,7 @@
 import { z } from "zod";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { tarkovDataStatus } from "@/app/lib/api/tarkov-server";
+import { priceFeedStatus } from "@/app/lib/api/price-feed";
 import { snapshotBuiltAt } from "@/app/lib/api/tarkov-snapshot";
 import type { ToolContext } from "./context";
 import { toolDefiner } from "./define-tool";
@@ -19,13 +20,23 @@ export function registerStatusTools(server: McpServer, context: ToolContext) {
       },
     },
     async ({ gameMode }) => {
-      const datasets = tarkovDataStatus(gameMode ? [gameMode] : undefined);
+      const modes = gameMode ? [gameMode] : undefined;
+      const datasets = tarkovDataStatus(modes);
+      const feeds = priceFeedStatus(modes);
+      const feedOn = feeds.some((feed) => feed.enabled);
       const builtAt = await snapshotBuiltAt();
+      const failing = datasets.some((dataset) => dataset.state === "failing") || feeds.some((feed) => feed.state === "failing");
       return {
-        status: datasets.some((dataset) => dataset.state === "failing") ? ("degraded" as const) : ("ok" as const),
+        status: failing ? ("degraded" as const) : ("ok" as const),
         deploymentSnapshotAsOf: builtAt === null ? null : new Date(builtAt).toISOString(),
-        freshnessTargets: { prices: "5 minutes", tasksAndMaps: "30 minutes", catalog: "2 hours (changes with game patches)" },
+        freshnessTargets: {
+          prices: feedOn ? "about 2 minutes behind tarkov.dev, which updates every 5 minutes" : "5 minutes",
+          tasksAndMaps: "30 minutes",
+          catalog: "2 hours (changes with game patches)",
+        },
+        // With the price feed on, items is only read for what changes with patches, so it isn't refreshed on a timer.
         datasets: datasets.map((dataset) => ({ ...dataset })),
+        priceFeed: feeds.map((feed) => ({ ...feed })),
       };
     }
   );

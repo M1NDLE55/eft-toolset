@@ -66,6 +66,26 @@ import type {
 import { orderQuests, orderTraders } from "@/app/lib/quests/order";
 import { TARKOV_OPERATIONS, type TarkovOperation } from "./operations";
 import { regionalCache } from "./shared-cache";
+import {
+  clearItemIndexCache,
+  deriveItemIndex,
+  loadItemIndex,
+  type ExpandedItemIndex,
+  type ItemCopies,
+} from "./item-index";
+import {
+  clearPriceFeedCache,
+  isCurrentPriceFeed,
+  latestPriceFeed,
+  NO_PRICES,
+  PRICE_FEED_FORMAT,
+  priceFeedOrigin,
+  priceFeedRefreshes,
+  projectPriceRows,
+  readPriceFeed,
+  type PriceFeed,
+  type PriceFeedWire,
+} from "./price-feed";
 import { readSnapshot } from "./tarkov-snapshot";
 import { USER_AGENT } from "./user-agent";
 import { AsyncLocalStorage } from "node:async_hooks";
@@ -97,6 +117,8 @@ const UNSETTLED_WAIT_MS = 1.5 * UPSTREAM_RETRY_DELAYS_MS.reduce((sum, delay) => 
 export const MCP_STALE_WAIT_MS = 2_500;
 /** The oldest copy a read accepts when tarkov.dev can't be reached, unless the read asks otherwise. */
 export const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
+/** How long the price feed's origin waits for its items refresh before serving the copy it has, marked stale. */
+export const PRICE_FEED_ORIGIN_WAIT_MS = 5_000;
 const MINUTE_MS = 60_000;
 const HOUR_MS = 60 * MINUTE_MS;
 // Runtime Cache items are capped at 2 MB.
@@ -593,7 +615,19 @@ interface UsedCopy {
   source: DataSource;
   /** Its refresh had failed, or didn't arrive within the read's wait. */
   stale: boolean;
+  /**
+   * Only its static data (names, stats, slots) was used, with prices from a newer copy, so its age
+   * and freshness don't count for the read.
+   */
+  staticOnly?: boolean;
 }
+
+/** A read's use of the price feed is noted under `<gameMode>/prices`. */
+const PRICES_SUFFIX = "/prices";
+/** Marks a snapshot entry for a copy whose static data alone the read used. */
+const STATIC_SUFFIX = "#static";
+/** Stands in for the feed's cache entry in a read's notes; price-feed.ts keeps the feed's state. */
+const FEED_ENTRY: ResourceCacheEntry = { fetchedAt: 0 };
 
 const operationContext = new AsyncLocalStorage<{
   resources: Set<ResourceCacheEntry>;
@@ -673,6 +707,7 @@ const OPERATION_VARIABLES: Record<TarkovOperation, readonly string[]> = {
   [TARKOV_OPERATIONS.mapDetails]: ["gameMode", "mapKey"],
   [TARKOV_OPERATIONS.marketBoard]: ["gameMode"],
   [TARKOV_OPERATIONS.questList]: ["gameMode"],
+  [TARKOV_OPERATIONS.priceFeed]: ["gameMode"],
 };
 
 export interface TarkovReadOptions {
@@ -692,7 +727,17 @@ export interface TarkovReadOptions {
   /** Called when the result was built from a copy whose refresh failed or didn't finish in time. */
   onStale?: (info: { source: DataSource }) => void;
   onDataAge?: (ageMs: number) => void;
+  /** Called when the read used item prices: where the oldest it used came from, its age, and whether it was stale. */
+  onPriceSource?: (info: PriceSourceInfo) => void;
   onSnapshot?: (snapshot: DataSnapshot) => void;
+}
+
+export interface PriceSourceInfo {
+  /** Our price feed, tarkov.dev's items file loaded by this instance, or the copy bundled with the deployment. */
+  source: "feed" | "items-file" | "snapshot";
+  /** Since the prices were last confirmed with tarkov.dev. */
+  ageMs: number;
+  stale: boolean;
 }
 
 export type DataSnapshot = ReadonlyArray<readonly [key: string, entry: object, value: unknown]>;
@@ -703,6 +748,16 @@ export function canReuseSnapshot(snapshot: DataSnapshot) {
   const now = Date.now();
   const due: [string, ResourceCacheEntry][] = [];
   for (const [key, entry, value] of snapshot) {
+    if (key.endsWith(PRICES_SUFFIX)) {
+      if (!isCurrentPriceFeed(key.slice(0, -PRICES_SUFFIX.length) as GameMode, value)) return false;
+      continue;
+    }
+    if (key.endsWith(STATIC_SUFFIX)) {
+      const base = key.slice(0, -STATIC_SUFFIX.length);
+      const current = derivedCopies.get(base) ?? resourceCache.get(base);
+      if (current !== entry || current.value !== value) return false;
+      continue;
+    }
     const current = resourceCache.get(key);
     if (current !== entry || current.value !== value || current.failedAt !== undefined) return false;
     const policy = RESOURCE_POLICIES[resourceOf(key)];
@@ -738,14 +793,28 @@ export async function runTarkovRead<T>(
       throw error instanceof TarkovUpstreamError ? withLongestWait(error, context.resources, context.maxStaleMs) : error;
     });
     // From the copies the read used, not the entries now: a refresh may have landed since.
-    const used = Array.from(context.used.values());
-    const stale = used.filter((copy) => copy.stale || copy.entry.failedAt !== undefined);
+    const used = Array.from(context.used.values()).filter((copy) => !copy.staticOnly);
+    const isStale = (copy: UsedCopy) => copy.stale || copy.entry.failedAt !== undefined;
+    const stale = used.filter(isStale);
     if (stale.length > 0) {
       options.onStale?.({ source: stale.some((copy) => copy.source === "deployment") ? "deployment" : "tarkov.dev" });
     }
     const oldest = Math.min(...used.map((copy) => copy.fetchedAt));
     if (Number.isFinite(oldest)) options.onDataAge?.(Math.max(0, Date.now() - oldest));
-    options.onSnapshot?.(Array.from(context.used, ([key, { entry, value }]) => [key, entry, value] as const));
+    const prices = Array.from(context.used)
+      .filter(([key, copy]) => key.endsWith(PRICES_SUFFIX) || (key.endsWith("/items") && !copy.staticOnly))
+      .sort(([, a], [, b]) => a.fetchedAt - b.fetchedAt)[0];
+    if (prices) {
+      const [key, copy] = prices;
+      options.onPriceSource?.({
+        source: copy.source === "deployment" ? "snapshot" : key.endsWith(PRICES_SUFFIX) ? "feed" : "items-file",
+        ageMs: Math.max(0, Date.now() - copy.fetchedAt),
+        stale: isStale(copy),
+      });
+    }
+    options.onSnapshot?.(
+      Array.from(context.used, ([key, { entry, value, staticOnly }]) => [staticOnly ? key + STATIC_SUFFIX : key, entry, value] as const)
+    );
     return data;
   });
 }
@@ -805,6 +874,8 @@ export async function executeTarkovOperation(
         return getMarketBoard(gameMode);
       case TARKOV_OPERATIONS.questList:
         return getQuestList(gameMode);
+      case TARKOV_OPERATIONS.priceFeed:
+        return getPriceFeed(gameMode);
     }
   }, options);
 }
@@ -839,10 +910,7 @@ function memo<T>(key: string, inputs: readonly unknown[], compute: () => T): T {
 }
 
 export async function getItemCatalog(gameMode: GameMode): Promise<CatalogEntry[]> {
-  const context = await loadItems(gameMode);
-  return memo(`${gameMode}/catalog`, [context], () =>
-    projectItemCatalog(context.items, context.translations)
-  );
+  return (await itemIndex(gameMode)).catalog;
 }
 
 export interface ItemFacet {
@@ -864,43 +932,33 @@ export interface ItemFacets {
 
 /** Types, categories, and calibers per item id, for filtering item lists. */
 export async function getItemFacets(gameMode: GameMode): Promise<ItemFacets> {
+  return (await itemIndex(gameMode)).facets;
+}
+
+/**
+ * The item index (src/app/lib/api/item-index.ts): bundled with the deployment, or derived from a newer
+ * items copy in hand, so search and name matching don't load the items file. Without a bundled index
+ * (local runs, tests, a failed snapshot), it's derived from the items file loaded as for any read.
+ */
+async function itemIndex(gameMode: GameMode): Promise<ExpandedItemIndex> {
+  const found = await loadItemIndex(gameMode, peekItemCopies(gameMode));
+  if (found) return recordDerivedUse(`${gameMode}/item-index`, found.index, found.fetchedAt, found.source);
   const [itemsEnvelope, translationsEnvelope] = await Promise.all([
     loadResource<ItemsData>(gameMode, "items"),
     loadResource<TranslationDictionary>(gameMode, "items_en"),
   ]);
-  return memo(`${gameMode}/facets`, [itemsEnvelope, translationsEnvelope], () => {
-    const translations = translationsEnvelope.data;
-    const trees = [itemsEnvelope.data.handbookCategories ?? {}, itemsEnvelope.data.itemCategories ?? {}];
-    const labels = (tree: Dictionary<RawCategory>, id: string) => {
-      const keys: string[] = [];
-      const seen = new Set<string>();
-      for (let current: string | null | undefined = id; current && !seen.has(current); current = tree[current]?.parent) {
-        seen.add(current);
-        const category = tree[current];
-        if (!category) break;
-        const name = translate(category.name, translations).toLocaleLowerCase();
-        if (name) keys.push(name);
-        if (category.normalizedName) keys.push(category.normalizedName);
-      }
-      return keys;
-    };
-    const byId = new Map<string, ItemFacet>();
-    for (const item of Object.values(itemsEnvelope.data.items ?? {})) {
-      if (!item.id) continue;
-      const categories = new Set([
-        ...(item.handbookCategories ?? []).flatMap((id) => labels(trees[0], id)),
-        ...(item.categories ?? []).flatMap((id) => labels(trees[1], id)),
-      ]);
-      byId.set(item.id, {
-        types: item.types ?? [],
-        categories: [...categories],
-        caliber: item.properties?.caliber ?? null,
-      });
-    }
-    const names = (tree: Dictionary<RawCategory>) =>
-      Array.from(new Set(Object.values(tree).map((category) => translate(category.name, translations)))).filter(Boolean);
-    return { byId, categoryNames: names(trees[0]), itemCategoryNames: names(trees[1]) };
-  });
+  return deriveItemIndex(gameMode, itemsEnvelope, translationsEnvelope);
+}
+
+/** The items and items_en copies this instance holds, without loading or refreshing anything; null unless it has both. */
+export function peekItemCopies(gameMode: GameMode): ItemCopies | null {
+  const items = resourceCache.get(`${gameMode}/items`);
+  const translations = resourceCache.get(`${gameMode}/items_en`);
+  if (!items?.value || !translations?.value) return null;
+  return {
+    items: { value: items.value, fetchedAt: items.fetchedAt, etag: items.etag },
+    translations: { value: translations.value, fetchedAt: translations.fetchedAt, etag: translations.etag },
+  };
 }
 
 export async function getGroupItems(gameMode: GameMode, names: string[]): Promise<CachedItem[]> {
@@ -1396,7 +1454,7 @@ export async function getMapDetails(gameMode: GameMode, mapKey: string): Promise
 
 async function loadItems(gameMode: GameMode): Promise<ItemsContext> {
   const [itemsEnvelope, translationsEnvelope] = await Promise.all([
-    loadResource<ItemsData>(gameMode, "items"),
+    loadPricedItems(gameMode),
     loadResource<TranslationDictionary>(gameMode, "items_en"),
   ]);
   return memo(`${gameMode}/items-context`, [itemsEnvelope, translationsEnvelope], () => {
@@ -1431,6 +1489,98 @@ async function loadItems(gameMode: GameMode): Promise<ItemsContext> {
       categoryNames,
     };
   });
+}
+
+/**
+ * The items data with the newest prices this instance can get. With the price feed on, the static
+ * data (names, stats, slots) comes from the items copy in hand, the deployment's snapshot or a newer
+ * one, without refreshing it, and the prices from the feed; the read's data age is the prices'. While
+ * the feed is failing, or without it, this is the items file loaded like any other dataset, with the
+ * feed's prices laid over it if they are newer.
+ */
+async function loadPricedItems(gameMode: GameMode): Promise<UpstreamEnvelope<ItemsData>> {
+  const context = operationContext.getStore();
+  const read = await readPriceFeed(gameMode, context?.staleWaitMs ?? Number.POSITIVE_INFINITY);
+  if (!read) return loadResource<ItemsData>(gameMode, "items");
+  const key = `${gameMode}/items`;
+  const entry = await peekResource(gameMode, "items");
+  const feed = read.feed;
+  const maxStaleMs = context?.maxStaleMs ?? RESOURCE_MAX_STALE_MS;
+  if (read.failing && feed && entry.value && Date.now() - entry.fetchedAt >= maxStaleMs && Date.now() - feed.fetchedAt < maxStaleMs) {
+    // While the feed worked the static copy wasn't refreshed, so it can be older than this read accepts
+    // though the feed's last prices aren't. Use those, marked stale, rather than wait on (or fail for
+    // want of) a full download; the items file is fetched in the background meanwhile.
+    void refreshResource(gameMode, "items", entry).catch(() => undefined);
+    recordUse(key, entry, { value: entry.value, fetchedAt: entry.fetchedAt, source: entry.source ?? "tarkov.dev", stale: false, staticOnly: true });
+    recordPriceFeedUse(gameMode, feed, true);
+    return withFeedPrices(gameMode, entry.value as UpstreamEnvelope<ItemsData>, feed);
+  }
+  if (read.failing || !entry.value) {
+    const envelope = await loadResource<ItemsData>(gameMode, "items");
+    const used = context?.used.get(key);
+    if (!feed || feed.fetchedAt <= (used?.fetchedAt ?? entry.fetchedAt)) return envelope;
+    if (used) used.staticOnly = true;
+    recordPriceFeedUse(gameMode, feed, read.stale);
+    return withFeedPrices(gameMode, envelope, feed);
+  }
+  const copy = { value: entry.value, fetchedAt: entry.fetchedAt, source: entry.source ?? "tarkov.dev" };
+  if (!feed || entry.fetchedAt >= feed.fetchedAt) {
+    // The copy in hand is as new as the feed (just reloaded for a patch, say), or the feed hasn't
+    // arrived yet: its own prices are the newest there are.
+    const stale = !feed && Date.now() - entry.fetchedAt >= RESOURCE_POLICIES.items.freshMs;
+    return recordUse(key, entry, { ...copy, stale }) as UpstreamEnvelope<ItemsData>;
+  }
+  recordUse(key, entry, { ...copy, stale: false, staticOnly: true });
+  recordPriceFeedUse(gameMode, feed, read.stale);
+  loadItemsForPatch(gameMode, entry, feed);
+  return withFeedPrices(gameMode, entry.value as UpstreamEnvelope<ItemsData>, feed);
+}
+
+/** The items copy's static data alone, from the copy in hand when the price feed is on, without refreshing it. */
+async function loadStaticItems(gameMode: GameMode): Promise<UpstreamEnvelope<ItemsData>> {
+  if (!priceFeedOrigin()) return loadResource<ItemsData>(gameMode, "items");
+  const entry = await peekResource(gameMode, "items");
+  if (!entry.value) return loadResource<ItemsData>(gameMode, "items");
+  const copy = { value: entry.value, fetchedAt: entry.fetchedAt, source: entry.source ?? "tarkov.dev", stale: false };
+  return recordUse(`${gameMode}/items`, entry, { ...copy, staticOnly: true }) as UpstreamEnvelope<ItemsData>;
+}
+
+function recordPriceFeedUse(gameMode: GameMode, feed: PriceFeed, stale: boolean) {
+  recordUse(`${gameMode}${PRICES_SUFFIX}`, FEED_ENTRY, {
+    value: feed as unknown as UpstreamEnvelope<unknown>,
+    fetchedAt: feed.fetchedAt,
+    source: feed.source,
+    stale: stale || feed.stale,
+  });
+}
+
+/** The items copy with the feed's prices in place of its own; items the feed doesn't list have none. */
+function withFeedPrices(gameMode: GameMode, envelope: UpstreamEnvelope<ItemsData>, feed: PriceFeed): UpstreamEnvelope<ItemsData> {
+  return memo(`${gameMode}/priced-items`, [envelope, feed], () => {
+    const items: Dictionary<RawItem> = {};
+    for (const [key, item] of Object.entries(envelope.data.items ?? {})) {
+      items[key] = { ...item, ...((item.id && feed.prices.get(item.id)) || NO_PRICES) };
+    }
+    return { data: { ...envelope.data, items } };
+  });
+}
+
+const checkedForPatch = new WeakSet<PriceFeed>();
+
+/**
+ * The feed lists every item tarkov.dev has. Items the copy in hand lacks mean a game patch, so the
+ * items file is loaded once, in the background, to bring the static data (and the item index) up to date.
+ */
+function loadItemsForPatch(gameMode: GameMode, entry: ResourceCacheEntry, feed: PriceFeed) {
+  if (checkedForPatch.has(feed)) return;
+  checkedForPatch.add(feed);
+  const items = (entry.value as UpstreamEnvelope<ItemsData>).data.items ?? {};
+  for (const id of feed.prices.keys()) {
+    if (Object.hasOwn(items, id)) continue;
+    console.info(`The ${gameMode} price feed lists items this copy lacks; loading the items file.`);
+    void refreshResource(gameMode, "items", entry).catch(() => undefined);
+    return;
+  }
 }
 
 async function loadTasks(gameMode: GameMode): Promise<TasksContext> {
@@ -2055,7 +2205,7 @@ export async function getQuestDetail(gameMode: GameMode, slug: string): Promise<
 /** tarkov.dev item categories by id, with their English names and slugs. */
 export async function getItemCategories(gameMode: GameMode): Promise<ReadonlyMap<string, { name: string; normalizedName: string }>> {
   const [itemsEnvelope, translationsEnvelope] = await Promise.all([
-    loadResource<ItemsData>(gameMode, "items"),
+    loadStaticItems(gameMode),
     loadResource<TranslationDictionary>(gameMode, "items_en"),
   ]);
   return memo(`${gameMode}/item-categories`, [itemsEnvelope, translationsEnvelope], () =>
@@ -2117,21 +2267,27 @@ async function loadHideout(gameMode: GameMode): Promise<HideoutContext> {
   });
 }
 
-async function loadResource<T>(
-  gameMode: GameMode,
-  resource: Resource
-): Promise<UpstreamEnvelope<T>> {
+/** The dataset's entry with the copy this instance holds (starting from the snapshot), without refreshing it. */
+async function peekResource(gameMode: GameMode, resource: Resource): Promise<ResourceCacheEntry> {
   const cacheKey = `${gameMode}/${resource}`;
   let entry = resourceCache.get(cacheKey);
   if (!entry) {
     entry = { fetchedAt: 0 };
     resourceCache.set(cacheKey, entry);
   }
-  const context = operationContext.getStore();
-  context?.resources.add(entry);
+  operationContext.getStore()?.resources.add(entry);
   if (!entry.value) await seedFromSnapshot(gameMode, resource, entry);
+  return entry;
+}
 
-  const policy = RESOURCE_POLICIES[resource];
+async function loadResource<T>(
+  gameMode: GameMode,
+  resource: Resource,
+  policy: ResourcePolicy = RESOURCE_POLICIES[resource]
+): Promise<UpstreamEnvelope<T>> {
+  const cacheKey = `${gameMode}/${resource}`;
+  const entry = await peekResource(gameMode, resource);
+  const context = operationContext.getStore();
   const age = Date.now() - entry.fetchedAt;
   if (entry.value && age < policy.freshMs) return recordUse(cacheKey, entry) as UpstreamEnvelope<T>;
   if (entry.value && age < policy.revalidateMs) {
@@ -2199,7 +2355,7 @@ function seedFromSnapshot(gameMode: GameMode, resource: Resource, entry: Resourc
 function recordUse(
   key: string,
   entry: ResourceCacheEntry,
-  copy: { value: UpstreamEnvelope<unknown>; fetchedAt: number; source: DataSource; stale: boolean } = {
+  copy: { value: UpstreamEnvelope<unknown>; fetchedAt: number; source: DataSource; stale: boolean; staticOnly?: boolean } = {
     value: entry.value!,
     fetchedAt: entry.fetchedAt,
     source: entry.source ?? "tarkov.dev",
@@ -2215,8 +2371,31 @@ function recordUse(
     fetchedAt: older.fetchedAt,
     source: older.source,
     stale: copy.stale || (seen?.stale ?? false),
+    // Any use of its prices makes its age count.
+    staticOnly: (copy.staticOnly ?? false) && (seen ? seen.staticOnly === true : true),
   });
   return copy.value;
+}
+
+// Entries for data derived outside the resource cache (the item index), so reads note them like datasets.
+const DERIVED_KEY = "__eftTarkovDerived:1";
+const sharedDerived = globalThis as typeof globalThis & { [DERIVED_KEY]?: Map<string, ResourceCacheEntry> };
+sharedDerived[DERIVED_KEY] ??= new Map();
+const derivedCopies = sharedDerived[DERIVED_KEY];
+
+/**
+ * Notes a read's use of derived data for result reuse. Like a static copy of the items file, it
+ * counts neither towards the read's data age nor its staleness: the item index changes only with
+ * game patches, so the deployment's copy of it is still right however old the deployment is.
+ */
+function recordDerivedUse<T extends object>(key: string, value: T, fetchedAt: number, source: DataSource): T {
+  let entry = derivedCopies.get(key);
+  if (!entry) derivedCopies.set(key, (entry = { fetchedAt }));
+  entry.value = value as unknown as UpstreamEnvelope<unknown>;
+  entry.fetchedAt = fetchedAt;
+  entry.source = source;
+  recordUse(key, entry, { value: entry.value, fetchedAt, source, stale: false, staticOnly: true });
+  return value;
 }
 
 /**
@@ -3072,31 +3251,6 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value);
 }
 
-export function projectItemCatalog(
-  items: RawItem[],
-  translations: TranslationDictionary
-): CatalogEntry[] {
-  return items.flatMap((item): CatalogEntry[] => {
-    if (!item.id) return [];
-    const name = translate(item.name, translations);
-    if (!name) return [];
-    return [[
-      item.id,
-      name,
-      translateNullable(item.shortName, translations),
-      catalogImage(item.id, item.gridImageLink),
-      item.normalizedName ?? null,
-    ]];
-  });
-}
-
-function catalogImage(id: string, link: string | null | undefined): string | null {
-  const safe = safeAssetUrl(link);
-  if (!safe) return null;
-  const path = new URL(safe).pathname.slice(1);
-  return path === `${id}-grid-image.webp` ? "" : path;
-}
-
 function projectCachedItem(
   item: RawItem,
   name: string,
@@ -3883,15 +4037,21 @@ function readStringList(value: unknown, name: string, maxItems: number) {
 /** Waits until no refresh is running, including ones started while waiting. For tests. */
 export async function settleTarkovRefreshes() {
   for (;;) {
-    const running = [...resourceCache.values()].flatMap((entry) => (entry.inFlight ? [entry.inFlight] : []));
+    const running = [
+      ...[...resourceCache.values()].flatMap((entry) => (entry.inFlight ? [entry.inFlight] : [])),
+      ...priceFeedRefreshes(),
+    ];
     if (running.length === 0) return;
     await Promise.allSettled(running);
   }
 }
 
 export function clearTarkovResourceCache() {
+  clearPriceFeedCache();
   resourceCache.clear();
   memoCache.clear();
+  derivedCopies.clear();
+  clearItemIndexCache();
 }
 
 export async function listItemSlugs(gameMode: GameMode = "regular") {
@@ -3938,13 +4098,47 @@ export async function getItemPageIndex(gameMode: GameMode = "regular"): Promise<
       })
     );
   });
-  return { pages, publishedAt: isoTime(resourceCache.get(`${gameMode}/items`)?.lastModified) };
+  return { pages, publishedAt: pricesPublishedAt(gameMode) };
 }
 
 /** When tarkov.dev last published the mode's items data, as an ISO time; null when unknown. Loads no translations or index. */
 export async function itemsPublishedAt(gameMode: GameMode) {
-  await loadResource(gameMode, "items");
-  return isoTime(resourceCache.get(`${gameMode}/items`)?.lastModified);
+  await loadPricedItems(gameMode);
+  return pricesPublishedAt(gameMode);
+}
+
+/** When tarkov.dev published the items data behind the newest prices this instance holds: the feed's, or the items copy's. */
+function pricesPublishedAt(gameMode: GameMode) {
+  const entry = resourceCache.get(`${gameMode}/items`);
+  const feed = latestPriceFeed(gameMode);
+  return isoTime(feed && feed.fetchedAt > (entry?.fetchedAt ?? 0) ? feed.lastModified : entry?.lastModified);
+}
+
+// The origin reads the items file with this freshness for the feed, waiting for a due refresh rather
+// than serving the copy meanwhile, so prices reach instances a minute or two after tarkov.dev's.
+const PRICE_FEED_ITEMS_POLICY: ResourcePolicy = { ...RESOURCE_POLICIES.items, freshMs: MINUTE_MS, revalidateMs: MINUTE_MS };
+
+/**
+ * The price feed (the price.feed operation): every item's prices from the items file, with when this
+ * instance last confirmed that file with tarkov.dev. Reads the file itself, never the feed.
+ */
+async function getPriceFeed(gameMode: GameMode): Promise<PriceFeedWire> {
+  const key = `${gameMode}/items`;
+  const envelope = await loadResource<ItemsData>(gameMode, "items", PRICE_FEED_ITEMS_POLICY);
+  const entry = resourceCache.get(key)!;
+  const copy = operationContext.getStore()?.used.get(key);
+  const current = entry.value === envelope;
+  const rows = memo(`${gameMode}/price-rows`, [envelope], () => projectPriceRows(Object.values(envelope.data.items ?? {})));
+  return {
+    format: PRICE_FEED_FORMAT,
+    gameMode,
+    fetchedAt: copy?.fetchedAt ?? entry.fetchedAt,
+    source: copy?.source ?? entry.source ?? "tarkov.dev",
+    stale: (copy?.stale ?? false) || entry.failedAt !== undefined,
+    etag: (current && entry.etag) || null,
+    lastModified: (current && entry.lastModified) || null,
+    ...rows,
+  };
 }
 
 /** An ISO time from tarkov.dev's ISO times or an HTTP date; null for anything else. */

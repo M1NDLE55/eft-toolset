@@ -4,11 +4,13 @@ import {
   MAX_GET_VARIABLES_LENGTH,
   canonicalJson,
   isTarkovOperation,
+  TARKOV_OPERATIONS,
   type TarkovOperation,
 } from "@/app/lib/api/operations";
-import { publicCacheControl } from "@/app/lib/api/cache-control";
+import { priceFeedCacheControl, publicCacheControl } from "@/app/lib/api/cache-control";
 import {
   executeTarkovOperation,
+  PRICE_FEED_ORIGIN_WAIT_MS,
   releaseOperationSlot,
   tryAcquireOperationSlot,
   TarkovRequestError,
@@ -104,6 +106,10 @@ export async function POST(request: Request) {
   if (!isTarkovOperation(operation)) {
     return errorResponse("Unknown query operation.", "INVALID_OPERATION", 400);
   }
+  // The feed is for instances through the CDN; a POST would skip the cache and make the origin build it.
+  if (operation === TARKOV_OPERATIONS.priceFeed) {
+    return errorResponse("price.feed is served over GET only.", "INVALID_OPERATION", 400);
+  }
 
   return withSlot(() => execute(request, operation, variables, false));
 }
@@ -130,11 +136,14 @@ async function execute(
   try {
     let stale = false;
     let dataAgeMs = 0;
+    const priceFeed = operation === TARKOV_OPERATIONS.priceFeed;
     request.signal.throwIfAborted();
     const data = await executeTarkovOperation(operation, variables, {
       signal: request.signal,
       // Any copy beats an error; past the stale limit publicCacheControl sends it no-store.
       maxStaleMs: Number.POSITIVE_INFINITY,
+      // Instances waiting on the feed give up after a few seconds, so a slow tarkov.dev gets the copy, marked stale.
+      ...(priceFeed ? { staleWaitMs: PRICE_FEED_ORIGIN_WAIT_MS } : {}),
       onStale: () => {
         stale = true;
       },
@@ -147,7 +156,11 @@ async function execute(
       { data },
       {
         headers: {
-          "Cache-Control": cacheable ? publicCacheControl(stale, dataAgeMs) : "private, no-store",
+          "Cache-Control": !cacheable
+            ? "private, no-store"
+            : priceFeed
+              ? priceFeedCacheControl(stale, dataAgeMs)
+              : publicCacheControl(stale, dataAgeMs),
           "X-Content-Type-Options": "nosniff",
           ...(stale ? { "X-EFT-Data-Stale": "true" } : {}),
         },
