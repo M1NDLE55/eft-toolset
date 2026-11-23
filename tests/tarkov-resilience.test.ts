@@ -212,6 +212,11 @@ describe("refreshes", () => {
     expect(waited).toBeLessThan(MCP_STALE_WAIT_MS + 2_500);
     expect(onStale).toHaveBeenCalledWith({ source: "tarkov.dev" });
     expect(tarkovDataStatus(["regular"]).find((status) => status.dataset === "items")!.state).toBe("refreshing");
+
+    // The refresh is known to be slow now, so the next caller takes the copy without waiting again.
+    const next = performance.now();
+    await catalog({ staleWaitMs: MCP_STALE_WAIT_MS });
+    expect(performance.now() - next).toBeLessThan(200);
   });
 
   it("let page renders wait out a slow refresh, so they don't cache an older copy", async () => {

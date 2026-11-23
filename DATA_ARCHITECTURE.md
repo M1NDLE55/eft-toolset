@@ -603,7 +603,7 @@ and identifiable:
 - A caller whose copy is due waits for the refresh and takes the copy if it fails; while
   tarkov.dev is failing it doesn't wait at all. MCP tools wait at most 2.5 seconds
   (`staleWaitMs`), then take the copy and say it is stale, so tool calls stay fast when
-  tarkov.dev is slow. Page renders wait out the refresh, so a slow tarkov.dev doesn't make them
+  tarkov.dev is slow; once one has given up on a refresh, the next don't wait for it at all. Page renders wait out the refresh, so a slow tarkov.dev doesn't make them
   cache an older copy. A read takes copies up to six hours old by default
   (`RESOURCE_MAX_STALE_MS`); page renders keep that limit (a render that can't get data that new
   fails, and a background render keeps the previous page), while MCP tools and `/api/tarkov`

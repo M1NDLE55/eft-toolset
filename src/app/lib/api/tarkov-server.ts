@@ -471,6 +471,8 @@ interface ResourceCacheEntry {
   inFlight?: Promise<UpstreamEnvelope<unknown>>;
   /** Reading the deployment's snapshot: started once per entry. */
   seed?: Promise<void>;
+  /** A caller gave up waiting for the refresh in flight, so later ones don't wait for it either. */
+  slowRefresh?: boolean;
   failedAt?: number;
   failures?: number;
   retryAt?: number;
@@ -2150,9 +2152,11 @@ async function loadResource<T>(
     return recordUse(cacheKey, entry) as UpstreamEnvelope<T>;
   }
   refresh.catch(() => undefined);
-  const waitMs = failing ? 0 : (context?.staleWaitMs ?? Number.POSITIVE_INFINITY);
+  const staleWaitMs = context?.staleWaitMs ?? Number.POSITIVE_INFINITY;
+  const waitMs = failing || (entry.slowRefresh && Number.isFinite(staleWaitMs)) ? 0 : staleWaitMs;
   const fresh = waitMs > 0 && (await settledWithin(refresh, waitMs));
   if (fresh) return recordUse(cacheKey, entry) as UpstreamEnvelope<T>;
+  if (waitMs > 0 && entry.inFlight === refresh) entry.slowRefresh = true;
   return recordUse(cacheKey, entry, { ...fallback, stale: true }) as UpstreamEnvelope<T>;
 }
 
@@ -2256,6 +2260,7 @@ function refreshResource(gameMode: GameMode, resource: Resource, entry: Resource
     })
     .finally(() => {
       entry.inFlight = undefined;
+      entry.slowRefresh = undefined;
     });
   entry.inFlight = inFlight;
   return inFlight;
