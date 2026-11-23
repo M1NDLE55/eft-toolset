@@ -1,8 +1,8 @@
 {
   "title": "Textile - Part 2",
   "url": "https://escapefromtarkov.fandom.com/wiki/Textile_-_Part_2",
-  "revisionId": 365873,
-  "lastEdited": "2026-10-27T23:58:13Z",
+  "revisionId": 368169,
+  "lastEdited": "2026-11-18T18:01:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,8 +12,7 @@
   ],
   "infobox": {
     "given by": "Ragman",
-    "previous": "Textile - Part 1",
-    "reqkappa": "No"
+    "previous": "Textile - Part 1"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "Pest Control",
   "url": "https://escapefromtarkov.fandom.com/wiki/Pest_Control",
-  "revisionId": 366584,
-  "lastEdited": "2026-10-31T04:37:07Z",
+  "revisionId": 368306,
+  "lastEdited": "2026-11-20T20:09:53Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,10 +11,10 @@
     "Pest control"
   ],
   "infobox": {
-    "location": "Reserve",
     "given by": "Jaeger",
+    "location": "Reserve",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "2"
   },
   "sections": [
     {

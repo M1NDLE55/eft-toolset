@@ -1,8 +1,8 @@
 {
   "title": "Melee",
   "url": "https://escapefromtarkov.fandom.com/wiki/Melee",
-  "revisionId": 312822,
-  "lastEdited": "2025-04-30T16:44:29Z",
+  "revisionId": 368120,
+  "lastEdited": "2026-11-16T21:15:27Z",
   "kind": "skill",
   "categories": [
     "Combat skills"
@@ -35,7 +35,7 @@
     {
       "heading": "How to raise",
       "level": 2,
-      "text": "- Landing hits on enemies with Melee weapons\n- Completing the quest Escort\n- Completing the quest Consolation Prize"
+      "text": "- Landing hits on enemies with Melee weapons\n- Completing the quest Consolation Prize"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "title": "IBX Gigachad cryptographic processor",
   "url": "https://escapefromtarkov.fandom.com/wiki/IBX_Gigachad_cryptographic_processor",
-  "revisionId": 348354,
-  "lastEdited": "2026-07-29T14:46:07Z",
+  "revisionId": 367989,
+  "lastEdited": "2026-11-14T21:10:28Z",
   "kind": "item",
   "categories": [
     "Electronics"
@@ -25,7 +25,7 @@
     {
       "heading": "Icebreaker",
       "level": 3,
-      "text": "- In the central control station room on level 0\n\n- Inside C-1 compartment on level 7\n\n- Inside the lower automation room on level -3\n\n- Inside the room with the bulletin board in the engine room on level -2\n\n- Inside the bridge on level 9\n\n- Inside the conference room on level 5\n\n- Inside the west canteen bedroom on level 3"
+      "text": "- Inside the lower automation room on level -3\n\n- Inside the room with the bulletin board in the engine room on level -2\n\n- In the central control station room on level 0\n\n- Inside the west canteen bedroom on level 3\n\n- Inside the conference room on level 5\n\n- Inside C-1 compartment on level 7\n\n- Inside the bridge on level 9"
     }
   ]
 }

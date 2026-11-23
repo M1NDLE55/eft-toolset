@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Cold Blooded",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Cold_Blooded",
-  "revisionId": 365927,
-  "lastEdited": "2026-10-27T23:59:10Z",
+  "revisionId": 368277,
+  "lastEdited": "2026-11-20T19:30:19Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,8 +13,7 @@
   "infobox": {
     "given by": "Jaeger",
     "previous": "The Huntsman Path - Controller",
-    "leads to": "The Survivalist Path - Eagle-Owl",
-    "reqkappa": "No"
+    "leads to": "The Survivalist Path - Eagle-Owl"
   },
   "sections": [
     {

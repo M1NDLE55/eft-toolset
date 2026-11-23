@@ -1,8 +1,8 @@
 {
   "title": "Make Amends - Buyout",
   "url": "https://escapefromtarkov.fandom.com/wiki/Make_Amends_-_Buyout",
-  "revisionId": 365605,
-  "lastEdited": "2026-10-27T23:53:32Z",
+  "revisionId": 368395,
+  "lastEdited": "2026-11-20T22:23:27Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,8 @@
   "redirects": [],
   "infobox": {
     "given by": "Mechanic",
-    "leads to": "Make Amends - Equipment",
-    "reqkappa": "No"
+    "previous": "See requirements",
+    "leads to": "Make Amends - Equipment"
   },
   "sections": [
     {

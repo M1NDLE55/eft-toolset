@@ -1,18 +1,17 @@
 {
   "title": "A Fuel Matter",
   "url": "https://escapefromtarkov.fandom.com/wiki/A_Fuel_Matter",
-  "revisionId": 365171,
-  "lastEdited": "2026-10-27T23:46:10Z",
+  "revisionId": 368176,
+  "lastEdited": "2026-11-18T18:05:29Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Reserve",
     "given by": "Ragman",
-    "LL requirement": "3",
-    "reqkappa": "Yes"
+    "location": "Reserve",
+    "LL requirement": "3"
   },
   "sections": [
     {

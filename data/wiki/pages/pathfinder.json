@@ -1,18 +1,17 @@
 {
   "title": "Pathfinder",
   "url": "https://escapefromtarkov.fandom.com/wiki/Pathfinder",
-  "revisionId": 365690,
-  "lastEdited": "2026-10-27T23:54:58Z",
+  "revisionId": 368157,
+  "lastEdited": "2026-11-18T17:45:23Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Interchange",
     "given by": "Ragman",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "location": "Interchange",
+    "LL requirement": "1"
   },
   "sections": [
     {
@@ -38,28 +37,35 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "Visit the 3 extract Interchange. Visiting all locations in a single raid isn't required."
+      "text": "In this quest you have to locate and visit the Interchange extractions \"Railway Exfil\", \"Emercom Checkpoint\" and \"Power Station V-Ex\"."
     }
   ],
   "images": [
     {
+      "file": "InterchangeMapByre3mr.jpg",
+      "hashPath": "2/27",
+      "caption": "Map of the location",
+      "section": "Guide",
+      "subsection": null
+    },
+    {
       "file": "InterchangeNorthWestExit.png",
       "hashPath": "7/7d",
-      "caption": "Railway Exfil",
+      "caption": "Railway Exfil extraction",
       "section": "Guide",
       "subsection": null
     },
     {
       "file": "InterchangeSouthEastExit.png",
       "hashPath": "9/9d",
-      "caption": "Emercom Checkpoint",
+      "caption": "Emercom Checkpoint extraction",
       "section": "Guide",
       "subsection": null
     },
     {
       "file": "InterchangePowerPlantExit.png",
       "hashPath": "1/17",
-      "caption": "Power Station V-Ex",
+      "caption": "Power Station V-Ex extraction",
       "section": "Guide",
       "subsection": null
     }

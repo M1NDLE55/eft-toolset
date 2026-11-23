@@ -1,8 +1,8 @@
 {
   "title": "Collector",
   "url": "https://escapefromtarkov.fandom.com/wiki/Collector",
-  "revisionId": 366620,
-  "lastEdited": "2026-10-31T05:42:02Z",
+  "revisionId": 368418,
+  "lastEdited": "2026-11-20T23:32:02Z",
   "kind": "quest",
   "categories": [
     "Quests",
@@ -13,6 +13,7 @@
   ],
   "infobox": {
     "given by": "Fence",
+    "PMC level": "40",
     "previous": "See requirements"
   },
   "sections": [
@@ -29,7 +30,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Reach Loyalty Level 4 with Prapor, Therapist, Skier, Peacekeeper, Mechanic, Ragman and Jaeger\n- Scav karma of at least +3\n- Must be level 40 to start this quest.\n- Complete the quests:\n  - Chemical - Part 3\n  - Sew it Good - Part 2\n  - Shooter Born in Heaven\n  - The Tarkov Shooter - Part 4"
+      "text": "- Reach Loyalty Level 4 with Prapor, Therapist, Skier, Peacekeeper, Mechanic, Ragman and Jaeger.\n- Scav karma of at least +3\n- Complete the quests:\n  - Chemical - Part 3\n  - Sew it Good - Part 2\n  - Shooter Born in Heaven\n  - The Tarkov Shooter - Part 4"
     },
     {
       "heading": "Objectives",

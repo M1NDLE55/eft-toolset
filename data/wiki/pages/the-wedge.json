@@ -1,8 +1,8 @@
 {
   "title": "The Wedge",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Wedge",
-  "revisionId": 363431,
-  "lastEdited": "2026-10-06T19:03:28Z",
+  "revisionId": 367916,
+  "lastEdited": "2026-11-12T21:09:40Z",
   "kind": "character",
   "categories": [
     "Bosses"
@@ -24,7 +24,7 @@
     {
       "heading": "Notes",
       "level": 2,
-      "text": "- The number of followers The Wedge has on Icebreaker depends on the number of players in the raid:\n  - 3 with 1 player\n  - 4 with 2 players\n  - 6 with 3 players\n- The Wedge and and his 3-6 followers have different health values than PMCs and Scavs.\n\nThe Wedge:\n| Stats |\n| Head: 70; Thorax: 170; Stomach: 140; Arms: 120 each; Legs: 130 each; Total: 880 |\n\nFollower:\n| Stats |\n| Head: 70; Thorax: 170; Stomach: 140; Arms: 120 each; Legs: 130 each; Total: 880 |\n\n- Instead of the typical 4 single slot pockets, he has 5 double slot pockets, bringing their total space to 10 slots."
+      "text": "- The number of followers The Wedge has on Icebreaker depends on the number of players in the raid:\n  - 3 with 1 player\n  - 4 with 2 players\n  - 6 with 3 players\n- The Wedge and and his 3-6 followers have different health values than PMCs and Scavs.\n\nThe Wedge:\n| Stats |\n| Head: 60; Thorax: 150; Stomach: 120; Arms: 100 each; Legs: 110 each; Total: 750 |\n\nFollower:\n| Stats |\n| Head: 60; Thorax: 150; Stomach: 120; Arms: 100 each; Legs: 110 each; Total: 750 |\n\n- Instead of the typical 4 single slot pockets, he has 5 double slot pockets, bringing their total space to 10 slots."
     },
     {
       "heading": "Quests",

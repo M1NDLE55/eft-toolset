@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 12",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_12",
-  "revisionId": 364415,
-  "lastEdited": "2026-10-13T19:29:12Z",
+  "revisionId": 368038,
+  "lastEdited": "2026-11-14T22:29:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,8 +14,7 @@
   "infobox": {
     "given by": "Mechanic",
     "previous": "Gunsmith Master - Part 11",
-    "leads to": "Gunsmith Master - Part 13",
-    "reqkappa": "No"
+    "leads to": "Gunsmith Master - Part 13"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "What's in the Bag?",
   "url": "https://escapefromtarkov.fandom.com/wiki/What's_in_the_Bag%3F",
-  "revisionId": 366028,
-  "lastEdited": "2026-10-28T00:01:00Z",
+  "revisionId": 368352,
+  "lastEdited": "2026-11-20T21:01:02Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -28,7 +28,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- Must be playing in the Seasonal mode.\n- Unlocks 1-2 hours after completion of Key to Understanding"
+      "text": "- Must be playing in the Seasonal mode."
     },
     {
       "heading": "Objectives",

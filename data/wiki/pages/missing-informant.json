@@ -1,8 +1,8 @@
 {
   "title": "Missing Informant",
   "url": "https://escapefromtarkov.fandom.com/wiki/Missing_Informant",
-  "revisionId": 365625,
-  "lastEdited": "2026-10-27T23:53:51Z",
+  "revisionId": 368364,
+  "lastEdited": "2026-11-20T21:13:07Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"The informant set up a meeting near the car dealership, at a hidden spot? So why the hell are you still here? If he gets busted while you're still here, look for a hidden hideout, a spare key for it must be somewhere in there too. Find everything he's dug up. Don't let me down.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10 hours after completion of Information Source"
     },
     {
       "heading": "Objectives",

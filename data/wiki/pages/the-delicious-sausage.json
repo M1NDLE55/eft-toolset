@@ -1,18 +1,18 @@
 {
   "title": "The Delicious Sausage",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Delicious_Sausage",
-  "revisionId": 366599,
-  "lastEdited": "2026-10-31T05:00:11Z",
+  "revisionId": 368322,
+  "lastEdited": "2026-11-20T20:37:12Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Jaeger",
+    "location": "Streets of Tarkov",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "2"
   },
   "sections": [
     {

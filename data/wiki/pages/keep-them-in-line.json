@@ -1,0 +1,48 @@
+{
+  "title": "Keep Them in Line",
+  "url": "https://escapefromtarkov.fandom.com/wiki/Keep_Them_in_Line",
+  "revisionId": 368441,
+  "lastEdited": "2026-11-22T07:51:45Z",
+  "kind": "quest",
+  "categories": [
+    "Quests"
+  ],
+  "redirects": [],
+  "infobox": {
+    "given by": "Mechanic",
+    "location": "Customs, Lighthouse, Shoreline, Woods",
+    "previous": "Saving the Mole"
+  },
+  "sections": [
+    {
+      "heading": "Introduction",
+      "level": 1,
+      "text": "Keep Them in Line is a Quest in Escape from Tarkov."
+    },
+    {
+      "heading": "Dialogue",
+      "level": 2,
+      "text": "\"Hello, mercenary. I've received a contract that needs handling. I think you can guess who's behind it. Have you had any recent dealings with the Rogues' leaders? It seems they've had some sort of falling-out with Black Division operatives, or perhaps they've decided to turn against the Lighthouse altogether… They've been spotted wearing Black Division gear taken as trophies. Retaliation was only a matter of time. I've now been \"asked\" to find a suitable contractor and put an end to this. You were the first person who came to mind. If you don't think you can handle it, tell me now. This contract could cost me a couple of my deals with Lightkeeper. I'd rather not see all the groundwork I've put in go to waste because I hired an unreliable mercenary.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- Must be playing in the Seasonal mode."
+    },
+    {
+      "heading": "Objectives",
+      "level": 2,
+      "text": "- Locate and neutralize Knight (In one raid)\n- Locate and neutralize Big Pipe (In one raid)\n- Locate and neutralize Birdeye (In one raid)\n- Survive and extract from the location (In one raid)"
+    },
+    {
+      "heading": "Rewards",
+      "level": 2,
+      "text": "- +65,000 EXP\n- 1× Weapon case\n- 5× TerraGroup Labs access keycard\n- 1× Briefcase with documents\n- 2× Black Division gear crate\n\"Thank you for taking on this contract. I had a few backup candidates in mind for the job, but their chances of handling it properly were nowhere near as good as yours.\""
+    },
+    {
+      "heading": "Guide",
+      "level": 2,
+      "text": "All objectives have to be completed in a single raid, dying or extracting early fails the quest."
+    }
+  ]
+}

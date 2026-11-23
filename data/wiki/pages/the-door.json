@@ -1,18 +1,18 @@
 {
   "title": "The Door",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Door",
-  "revisionId": 365886,
-  "lastEdited": "2026-10-27T23:58:28Z",
+  "revisionId": 368066,
+  "lastEdited": "2026-11-14T22:52:27Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Mechanic",
+    "location": "Streets of Tarkov",
     "LL requirement": "3",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {

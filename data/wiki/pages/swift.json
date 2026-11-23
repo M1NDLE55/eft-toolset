@@ -1,18 +1,18 @@
 {
   "title": "Swift",
   "url": "https://escapefromtarkov.fandom.com/wiki/Swift",
-  "revisionId": 366965,
-  "lastEdited": "2026-11-01T17:31:21Z",
+  "revisionId": 368467,
+  "lastEdited": "2026-11-22T17:09:05Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Jaeger",
+    "location": "Woods",
     "LL requirement": "1",
-    "reqkappa": "No"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -28,7 +28,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 10 PMCs without using any armor or helmets on Woods"
+      "text": "- Eliminate any 10 targets without wearing any armor or helmets on Woods"
     },
     {
       "heading": "Rewards",
@@ -38,7 +38,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "This quest takes place on Woods. You are required to kill 10 PMCs without wearing any armor vest, armored chest rig, armored headwear or armored face cover. Armored eyewear is allowed.\n\nBug: The ANA Tactical Alpha chest rig (MultiCam) is currently considered armored for this quest even when it's not.\n\nIf you want to protect yourself during this quest you can choose to still wear armor, but unequip it before killing a PMC."
+      "text": "This quest takes place on Woods. You are required to kill any 10 targets without wearing any armor vest, armored chest rig, armored headwear or armored face cover. Armored eyewear is allowed.\n\nBug: The ANA Tactical Alpha chest rig (MultiCam) is currently considered armored for this quest even when it's not.\n\nIf you want to protect yourself during this quest, you can choose to still wear armor, but unequip it before killing a PMC."
     }
   ]
 }

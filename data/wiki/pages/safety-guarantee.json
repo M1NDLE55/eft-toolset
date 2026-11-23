@@ -1,8 +1,8 @@
 {
   "title": "Safety Guarantee",
   "url": "https://escapefromtarkov.fandom.com/wiki/Safety_Guarantee",
-  "revisionId": 367432,
-  "lastEdited": "2026-11-03T14:02:06Z",
+  "revisionId": 368404,
+  "lastEdited": "2026-11-20T23:04:06Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Skier",
+    "PMC level": "50",
     "LL requirement": "4",
     "leads to": "A Life Lesson"
   },
@@ -27,7 +28,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- This quest is only obtainable by BEAR PMCs.\n- Must be level 50 to start this quest."
+      "text": "- This quest is only obtainable by BEAR PMCs."
     },
     {
       "heading": "Objectives",
@@ -43,6 +44,11 @@
       "heading": "Guide",
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid |\n| BNTI Zhuk body armor (EMR) | 15 | Handover item | No |\n| Vulkan-5 LShZ-5 bulletproof helmet (Black) | 12 | Handover item | No |\n| Maska-1SCh face shield (Killa Edition) | 3 | Handover item | No |"
+    },
+    {
+      "heading": "See also",
+      "level": 2,
+      "text": "- Profitable Venture - The USEC counterpart quest"
     }
   ]
 }

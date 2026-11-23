@@ -1,8 +1,8 @@
 {
   "title": "Is This a Reference?",
   "url": "https://escapefromtarkov.fandom.com/wiki/Is_This_a_Reference%3F",
-  "revisionId": 366065,
-  "lastEdited": "2026-10-28T00:54:56Z",
+  "revisionId": 368390,
+  "lastEdited": "2026-11-20T22:16:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,6 +11,7 @@
   "infobox": {
     "given by": "Fence",
     "location": "Customs, Factory, Ground Zero, Lighthouse, Reserve, Shoreline, Streets of Tarkov, Woods",
+    "previous": "See requirements",
     "leads to": "Can't Drink Away Skill"
   },
   "sections": [

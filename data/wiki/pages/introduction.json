@@ -1,19 +1,17 @@
 {
   "title": "Introduction",
   "url": "https://escapefromtarkov.fandom.com/wiki/Introduction",
-  "revisionId": 365563,
-  "lastEdited": "2026-10-27T23:52:49Z",
+  "revisionId": 367996,
+  "lastEdited": "2026-11-14T21:16:53Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Mechanic",
-    "LL requirement": "1",
-    "LL quests": "0",
-    "reqkappa": "Yes"
+    "location": "Woods",
+    "LL requirement": "1"
   },
   "sections": [
     {

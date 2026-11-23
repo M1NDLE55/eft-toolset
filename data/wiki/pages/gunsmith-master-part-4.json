@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 4",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_4",
-  "revisionId": 364396,
-  "lastEdited": "2026-10-13T18:57:37Z",
+  "revisionId": 368029,
+  "lastEdited": "2026-11-14T22:24:21Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,8 +14,7 @@
   "infobox": {
     "given by": "Mechanic",
     "previous": "Gunsmith Master - Part 3",
-    "leads to": "Gunsmith Master - Part 5",
-    "reqkappa": "Yes"
+    "leads to": "Gunsmith Master - Part 5"
   },
   "sections": [
     {

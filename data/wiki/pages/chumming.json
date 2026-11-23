@@ -1,8 +1,8 @@
 {
   "title": "Chumming",
   "url": "https://escapefromtarkov.fandom.com/wiki/Chumming",
-  "revisionId": 367736,
-  "lastEdited": "2026-11-09T00:37:16Z",
+  "revisionId": 368431,
+  "lastEdited": "2026-11-21T20:24:09Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Skier",
-    "location": "Customs, Interchange, Woods",
+    "location": "Customs, Woods",
     "LL requirement": "2"
   },
   "sections": [

@@ -1,18 +1,18 @@
 {
   "title": "The Huntsman Path - Outcasts",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Outcasts",
-  "revisionId": 366597,
-  "lastEdited": "2026-10-31T04:55:01Z",
+  "revisionId": 368311,
+  "lastEdited": "2026-11-20T20:15:29Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse, Icebreaker",
     "given by": "Jaeger",
+    "location": "Lighthouse, Icebreaker",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "4"
   },
   "sections": [
     {
@@ -28,7 +28,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 10 Rogues on Lighthouse"
+      "text": "- Eliminate 10 Rogues"
     },
     {
       "heading": "Rewards",

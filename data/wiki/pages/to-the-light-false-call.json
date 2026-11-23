@@ -1,8 +1,8 @@
 {
   "title": "To the Light - False Call",
   "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_False_Call",
-  "revisionId": 365990,
-  "lastEdited": "2026-10-28T00:00:19Z",
+  "revisionId": 368373,
+  "lastEdited": "2026-11-20T21:35:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Lightkeeper contacted me again. And for this task, he specifically requested the same person who handled the previous job. Meaning you. Our little trick worked, but that doesn't make the whole situation any clearer. I can only assume that, for some reason, Lightkeeper wants to keep all these jobs secret even from his own people. Could he be looking for a mole among them? Either way, this is our only chance to establish a working relationship, so all we can do is carry out the tasks and avoid asking unnecessary questions. Now, the instructions. Lightkeeper wants you to go to the intersection in the Customs area, discreetly install a camera in the little shop, and then send an RSP signal at the road crossing toward the coast. And yes, the entire area around it needs to be cleared of any potential observers beforehand. Once you've sent the signal, get out of there. Whoever comes to the rendezvous point mustn't see you.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10-30 minutes after completion of To the Light - Trust but Verify"
     },
     {
       "heading": "Objectives",

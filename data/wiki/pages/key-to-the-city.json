@@ -1,18 +1,17 @@
 {
   "title": "Key to the City",
   "url": "https://escapefromtarkov.fandom.com/wiki/Key_to_the_City",
-  "revisionId": 365577,
-  "lastEdited": "2026-10-27T23:53:03Z",
+  "revisionId": 368259,
+  "lastEdited": "2026-11-20T17:05:47Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Ragman",
-    "previous": "Proper Comeback",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "previous": "Proper Comeback"
   },
   "sections": [
     {

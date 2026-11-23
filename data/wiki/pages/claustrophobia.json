@@ -1,18 +1,18 @@
 {
   "title": "Claustrophobia",
   "url": "https://escapefromtarkov.fandom.com/wiki/Claustrophobia",
-  "revisionId": 367735,
-  "lastEdited": "2026-11-09T00:37:11Z",
+  "revisionId": 368343,
+  "lastEdited": "2026-11-20T20:51:03Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory",
     "given by": "Jaeger",
+    "location": "Factory",
     "LL requirement": "2",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {

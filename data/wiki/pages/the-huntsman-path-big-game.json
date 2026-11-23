@@ -1,18 +1,17 @@
 {
   "title": "The Huntsman Path - Big Game",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Big_Game",
-  "revisionId": 367749,
-  "lastEdited": "2026-11-09T00:46:35Z",
+  "revisionId": 368315,
+  "lastEdited": "2026-11-20T20:18:47Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Jaeger",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "LL requirement": "2"
   },
   "sections": [
     {

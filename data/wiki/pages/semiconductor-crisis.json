@@ -1,8 +1,8 @@
 {
   "title": "Semiconductor Crisis",
   "url": "https://escapefromtarkov.fandom.com/wiki/Semiconductor_Crisis",
-  "revisionId": 365789,
-  "lastEdited": "2026-10-27T23:56:40Z",
+  "revisionId": 368044,
+  "lastEdited": "2026-11-14T22:33:46Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,7 +11,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {
@@ -37,7 +37,7 @@
     {
       "heading": "Guide",
       "level": 2,
-      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Graphics card | 1 | Handover item | Yes | Can be crafted in the Hideout (Intelligence Center lv. 3). |\n| CPU fan | 8 | Handover item | Yes | |\n\n- CPU fans can be found inside of electronics stores, but are most commonly found inside of PC blocks.\n\n- Graphics cards can be found:\n  - In PC blocks\n  - In Sport bags\n  - Inside Buried barrel cache\n  - Inside Ground cache"
+      "text": "| Item name | Amount | Requirement | Find in raid | Notes |\n| Graphics card | 1 | Handover item | Yes | Can be crafted in the Hideout (Intelligence Center lv. 3). |\n| CPU fan | 8 | Handover item | Yes | |\n\n- CPU fans can be found inside of electronics stores, but are most commonly found inside of PC blocks.\n- Graphics cards can be found:\n  - In PC blocks\n  - In Sport bags\n  - Inside Buried barrel cache\n  - Inside Ground cache"
     },
     {
       "heading": "Customs",
@@ -62,7 +62,7 @@
     {
       "heading": "Woods",
       "level": 3,
-      "text": "- Marked circle\n- As spawn next to dead scav at Dead Man`s Place camp\n- On floor of buildings in Village"
+      "text": "- Marked circle\n- As spawn next to the dead Scav at Dead Man's Place camp\n- On floor of buildings in the village"
     },
     {
       "heading": "Reserve",

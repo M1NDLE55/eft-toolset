@@ -1,18 +1,17 @@
 {
   "title": "Slaughterhouse",
   "url": "https://escapefromtarkov.fandom.com/wiki/Slaughterhouse",
-  "revisionId": 367871,
-  "lastEdited": "2026-11-12T01:15:12Z",
+  "revisionId": 368335,
+  "lastEdited": "2026-11-20T20:45:09Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Daytime Factory, Streets of Tarkov, Lighthouse, Woods, Shoreline, Interchange, Customs, Reserve, Ground Zero",
     "given by": "Jaeger",
-    "LL requirement": "4",
-    "reqkappa": "No"
+    "location": "Customs, Daytime Factory, Ground Zero, Interchange, Lighthouse, Reserve, Shoreline, Streets of Tarkov, Woods",
+    "LL requirement": "4"
   },
   "sections": [
     {
@@ -33,7 +32,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +65,000 EXP\n- +2 Shotguns skill levels\n- +4 Melee skill levels\n- Jaeger Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n  - 490,000 Roubles with Intelligence Center level 3\n- Unlocks barter for HK G28 7.62x51 marksman rifle at Jaeger LL4\n\"Why the hell did you not clean yourself up before showing up in here? Here, take your reward and off you go. Jesus Christ, what's with the kids these days. Take your showers!\""
+      "text": "- +65,000 EXP\n- +2 Shotguns skill levels\n- +4 Melee skill levels\n- Jaeger Rep +1.5\n- 400,000 Roubles\n  - 420,000 Roubles with Intelligence Center Level 1\n  - 460,000 Roubles with Intelligence Center Level 2\n- Unlocks barter for HK G28 7.62x51 marksman rifle at Jaeger LL4\n\"Why the hell did you not clean yourself up before showing up in here? Here, take your reward and off you go. Jesus Christ, what's with the kids these days. Take your showers!\""
     },
     {
       "heading": "Guide",

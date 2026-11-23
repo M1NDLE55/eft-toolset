@@ -1,8 +1,8 @@
 {
   "title": "The Choice",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Choice",
-  "revisionId": 366058,
-  "lastEdited": "2026-10-28T00:47:41Z",
+  "revisionId": 368403,
+  "lastEdited": "2026-11-20T23:03:37Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Fence",
+    "PMC level": "50",
     "previous": "The Punisher - Part 6"
   },
   "sections": [
@@ -22,11 +23,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Greetings, mercenary. As I see, you are not wasting your time and have achieved a lot on your way. Sometimes in life, you know, we have to lose something to achieve something bigger in the end? Not everyone is ready for this. Many aren't willing to take risks in their entire life, they are afraid, they don't believe in themselves. What about you, are you ready for this yourself? Are you ready to sacrifice something of value to achieve a bigger goal?\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 50 to start this quest."
     },
     {
       "heading": "Objectives",

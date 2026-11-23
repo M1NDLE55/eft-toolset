@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith Master - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_Master_-_Part_1",
-  "revisionId": 364389,
-  "lastEdited": "2026-10-13T18:45:55Z",
+  "revisionId": 368386,
+  "lastEdited": "2026-11-20T21:57:19Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -14,8 +14,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "4",
-    "leads to": "Gunsmith Master - Part 2",
-    "reqkappa": "Yes"
+    "leads to": "Gunsmith Master - Part 2"
   },
   "sections": [
     {
@@ -27,11 +26,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello. A new order came in for an imported HK 416A5 rifle, the black variant. I spent some time thinking about who to assign it to, and realized you're the only one who can handle it right now. From now on, I'll be giving you more challenging jobs. The client wants the rifle built using tan or FDE-colored components: a SureFire SOCOM556-RC2 suppressor, Magpul RVG foregrip, EOTech EXPS3-0 holographic sight, Magpul MOE pistol grip, Magpul UBR GEN2 stock, an LA-5B/PEQ tactical device, and a magazine with a capacity of at least 30 rounds. It needs at least 50 ergonomics, no more than 310 total recoil, and must weigh under 4 kilograms. Just like something you'd see in the hands of some SOF guys, right? One more thing: try to find a rifle that hasn't been beaten to hell. Its durability must be at least 80%.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 27 to start this quest."
     },
     {
       "heading": "Objectives",

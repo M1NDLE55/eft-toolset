@@ -1,8 +1,8 @@
 {
   "title": "Mystery Ranch 2 Day Assault Pack (Black)",
   "url": "https://escapefromtarkov.fandom.com/wiki/Mystery_Ranch_2_Day_Assault_Pack_(Black)",
-  "revisionId": 357245,
-  "lastEdited": "2026-08-31T18:53:01Z",
+  "revisionId": 367932,
+  "lastEdited": "2026-11-12T22:31:18Z",
   "kind": "item",
   "categories": [
     "Backpacks"
@@ -13,7 +13,8 @@
     "slot": "Backpack",
     "weight": "1.485 kg",
     "grid": "5x6",
-    "penalties": "-4% movement speed, -2% turn speed, -6% Ergonomics",
+    "trader": "Ragman LL3, after unlocking it in Season 1: KORD BREACH",
+    "penalties": "-3% movement speed, -1% turn speed, -4% Ergonomics",
     "slots": "5x6 grid (30 slots)",
     "node": "68947ab5a733b1602007e2fe",
     "ID": "item_equipment_backpack_bd_mystery_ranch_2day"

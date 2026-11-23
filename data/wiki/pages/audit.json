@@ -1,18 +1,17 @@
 {
   "title": "Audit",
   "url": "https://escapefromtarkov.fandom.com/wiki/Audit",
-  "revisionId": 365224,
-  "lastEdited": "2026-10-27T23:47:04Z",
+  "revisionId": 368179,
+  "lastEdited": "2026-11-18T18:07:14Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Ragman",
-    "LL requirement": "2",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "LL requirement": "2"
   },
   "sections": [
     {

@@ -1,18 +1,17 @@
 {
   "title": "Make ULTRA Great Again",
   "url": "https://escapefromtarkov.fandom.com/wiki/Make_ULTRA_Great_Again",
-  "revisionId": 367707,
-  "lastEdited": "2026-11-08T23:55:37Z",
+  "revisionId": 368155,
+  "lastEdited": "2026-11-18T17:44:33Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Interchange",
     "given by": "Ragman",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "location": "Interchange",
+    "LL requirement": "1"
   },
   "sections": [
     {

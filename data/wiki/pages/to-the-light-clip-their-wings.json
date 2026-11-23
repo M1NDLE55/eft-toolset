@@ -1,8 +1,8 @@
 {
   "title": "To the Light - Clip Their Wings",
   "url": "https://escapefromtarkov.fandom.com/wiki/To_the_Light_-_Clip_Their_Wings",
-  "revisionId": 365987,
-  "lastEdited": "2026-10-28T00:00:16Z",
+  "revisionId": 368372,
+  "lastEdited": "2026-11-20T21:35:10Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"It's nice when you hypotheses are confirmed in practice! Half an hour after you sent the signal, UNTAR soldiers showed up at the rendezvous point. They quickly realized the call was a fake, but Lightkeeper had already learned everything he wanted to know. With this new task, everything falls into place. Something among Lightkeeper's people or his allies has been secretly working with Peacekeeper, and not Lightkeeper is ready to act. We need to plant several signal jammers. The only catch is the Lightkeeper wants everything done quickly, in a single run. Otherwise the effect will be too weak, and we wont get any more jobs from the lighthouse. Start at the weather station in the cliffs at the nature reserve. Install the second jammer in the guard shack at the sawmill. From there, head toward Customs and leave the jammer on the second floor of the construction site by the road, then make your way to the coast. The last jammer goes in the archives of the health resort's administrative building. As soon as you're done, come back to me. We can't keep Lightkeeper waiting.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10-15 minutes after completion of To the Light - False Call"
     },
     {
       "heading": "Objectives",

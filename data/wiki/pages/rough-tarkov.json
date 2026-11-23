@@ -1,18 +1,17 @@
 {
   "title": "Rough Tarkov",
   "url": "https://escapefromtarkov.fandom.com/wiki/Rough_Tarkov",
-  "revisionId": 366613,
-  "lastEdited": "2026-10-31T05:30:13Z",
+  "revisionId": 368340,
+  "lastEdited": "2026-11-20T20:49:38Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods, Ground Zero",
     "given by": "Jaeger",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "location": "Ground Zero, Woods",
+    "LL requirement": "1"
   },
   "sections": [
     {

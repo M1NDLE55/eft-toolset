@@ -1,8 +1,8 @@
 {
   "title": "Woods",
   "url": "https://escapefromtarkov.fandom.com/wiki/Woods",
-  "revisionId": 363988,
-  "lastEdited": "2026-10-12T13:50:59Z",
+  "revisionId": 367948,
+  "lastEdited": "2026-11-13T13:26:00Z",
   "kind": "location",
   "categories": [
     "Locations"
@@ -45,7 +45,7 @@
     {
       "heading": "Bosses",
       "level": 2,
-      "text": "Seasonal change: Black Division can occasionally roam through the map. They do not have a fixed spawn location and have to be expected everywhere.\n| Name | Location | Notable equipment | Followers |\n| Shturman | At the sawmill | Shturman's stash key; Red Rebel ice pick | 2-4 heavily armed and armored guards |\n| Partisan | Has to be expected everywhere | Partisan's bag; AK skeletonized stock (Customized); Red Rebel ice pick | None |\n| Knight | At the antenna in the northwest (Scav Bunker extraction). | Death Knight mask; Crye Precision CPC plate carrier (Goons Edition) | Big Pipe, Birdeye |\n| Big Pipe | At the antenna in the northwest (Scav Bunker extraction). | Milkor M32A1 MSGL 40mm grenade launcher; Big Pipe's smoking pipe; Big Pipe's bandana; S&S Precision PlateFrame plate carrier (Goons Edition) | Knight, Birdeye |\n| Birdeye | At the antenna in the northwest (Scav Bunker extraction). | Mystery Ranch NICE COMM 3 BVS frame system (Coyote); LBT-1961A Load Bearing Chest Rig (Goons Edition) | Knight, Big Pipe |"
+      "text": "Seasonal change: Black Division operatives roam through the map. They do not have a fixed spawn location and have to be expected everywhere.\n| Name | Location | Notable equipment | Followers |\n| Shturman | At the sawmill | Shturman's stash key; Red Rebel ice pick | 2-4 heavily armed and armored guards |\n| Partisan | Has to be expected everywhere | Partisan's bag; AK skeletonized stock (Customized); Red Rebel ice pick | None |\n| Knight | At the antenna in the northwest (Scav Bunker extraction). | Death Knight mask; Crye Precision CPC plate carrier (Goons Edition) | Big Pipe, Birdeye |\n| Big Pipe | At the antenna in the northwest (Scav Bunker extraction). | Milkor M32A1 MSGL 40mm grenade launcher; Big Pipe's smoking pipe; Big Pipe's bandana; S&S Precision PlateFrame plate carrier (Goons Edition) | Knight, Birdeye |\n| Birdeye | At the antenna in the northwest (Scav Bunker extraction). | Mystery Ranch NICE COMM 3 BVS frame system (Coyote); LBT-1961A Load Bearing Chest Rig (Goons Edition) | Knight, Big Pipe |"
     },
     {
       "heading": "Extractions",

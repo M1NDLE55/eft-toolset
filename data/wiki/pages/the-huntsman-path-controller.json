@@ -1,19 +1,18 @@
 {
   "title": "The Huntsman Path - Controller",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Huntsman_Path_-_Controller",
-  "revisionId": 365898,
-  "lastEdited": "2026-10-27T23:58:41Z",
+  "revisionId": 368276,
+  "lastEdited": "2026-11-20T19:30:01Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Any",
     "given by": "Jaeger",
     "LL requirement": "3",
     "previous": "The Survivalist Path - Tough Guy",
-    "reqkappa": "Yes"
+    "leads to": "The Survivalist Path - Cold Blooded"
   },
   "sections": [
     {

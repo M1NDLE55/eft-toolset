@@ -1,18 +1,18 @@
 {
   "title": "Small Things, Big Help",
   "url": "https://escapefromtarkov.fandom.com/wiki/Small_Things%2C_Big_Help",
-  "revisionId": 366134,
-  "lastEdited": "2026-10-28T22:36:12Z",
+  "revisionId": 368159,
+  "lastEdited": "2026-11-18T17:46:32Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Woods",
     "given by": "Ragman",
+    "location": "Woods",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "2"
   },
   "sections": [
     {

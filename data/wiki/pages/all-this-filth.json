@@ -1,8 +1,8 @@
 {
   "title": "All This Filth...",
   "url": "https://escapefromtarkov.fandom.com/wiki/All_This_Filth...",
-  "revisionId": 365206,
-  "lastEdited": "2026-10-27T23:46:46Z",
+  "revisionId": 368318,
+  "lastEdited": "2026-11-20T20:32:22Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,7 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Jaeger",
-    "location": "Interchange, Ground Zero, Woods, Customs",
+    "location": "Customs, Ground Zero, Interchange, Woods",
     "LL requirement": "1"
   },
   "sections": [

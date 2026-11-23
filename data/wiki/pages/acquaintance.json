@@ -1,8 +1,8 @@
 {
   "title": "Acquaintance",
   "url": "https://escapefromtarkov.fandom.com/wiki/Acquaintance",
-  "revisionId": 366117,
-  "lastEdited": "2026-10-28T22:06:13Z",
+  "revisionId": 368270,
+  "lastEdited": "2026-11-20T19:18:08Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,8 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Jaeger",
-    "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL requirement": "1"
   },
   "sections": [
     {

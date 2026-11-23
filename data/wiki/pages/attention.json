@@ -1,8 +1,8 @@
 {
   "title": "Attention",
   "url": "https://escapefromtarkov.fandom.com/wiki/Attention",
-  "revisionId": 362581,
-  "lastEdited": "2026-09-29T19:42:14Z",
+  "revisionId": 368117,
+  "lastEdited": "2026-11-16T21:07:55Z",
   "kind": "skill",
   "categories": [
     "Mental skills"
@@ -35,7 +35,7 @@
     {
       "heading": "How to raise",
       "level": 2,
-      "text": "- Picking up loose loot\n- Uncovering loot in Loot containers (0.08 skill points per item)\n- Completing the quest Profitable Venture\n- Completing the quest Safety Guarantee\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention"
+      "text": "- Picking up loose loot\n- Uncovering loot in Loot containers (0.08 skill points per item)\n- Completing the quest Get a Foothold\n- Completing the quest Profit Retention\n- Completing the quest Profitable Venture\n- Completing the quest Safety Guarantee\n- Completing the quest Silent Caliber\n- Completing the quest Connections Up North"
     }
   ]
 }

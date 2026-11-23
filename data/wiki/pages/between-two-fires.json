@@ -1,8 +1,8 @@
 {
   "title": "Between Two Fires",
   "url": "https://escapefromtarkov.fandom.com/wiki/Between_Two_Fires",
-  "revisionId": 366057,
-  "lastEdited": "2026-10-28T00:46:06Z",
+  "revisionId": 368366,
+  "lastEdited": "2026-11-20T21:23:04Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -12,6 +12,7 @@
     "given by": "Fence",
     "location": "Customs",
     "previous": "Against the Conscience - Part 2",
+    "leads to": "Decisions, Decisions, Surprise Gift",
     "related": "Decisions, Decisions, Surprise Gift"
   },
   "sections": [

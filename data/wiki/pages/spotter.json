@@ -1,8 +1,8 @@
 {
   "title": "Spotter",
   "url": "https://escapefromtarkov.fandom.com/wiki/Spotter",
-  "revisionId": 365836,
-  "lastEdited": "2026-10-27T23:57:31Z",
+  "revisionId": 368359,
+  "lastEdited": "2026-11-20T21:12:42Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"The situation takes an interesting turn. The data you delivered to me suggests that these moles were involved in the attack on the government convoy in the city, at the intersection of Nikitskaya Street and Primorsky Avenue, which means that from time to time they inhabit those parts. Your job is to scout the area, prepare and equip some good positions to monitor the area. Nothing more than that for now. I already have a marksman for the job. You will need a silencer for .338 from AI and a Trijicon thermal imager.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10 hours after completion of Following the Bread Crumbs"
     },
     {
       "heading": "Objectives",

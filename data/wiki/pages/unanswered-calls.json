@@ -1,8 +1,8 @@
 {
   "title": "Unanswered Calls",
   "url": "https://escapefromtarkov.fandom.com/wiki/Unanswered_Calls",
-  "revisionId": 366004,
-  "lastEdited": "2026-10-28T00:00:34Z",
+  "revisionId": 367882,
+  "lastEdited": "2026-11-12T18:34:08Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -38,7 +38,7 @@
     {
       "heading": "Rewards",
       "level": 2,
-      "text": "- +11,000 EXP\n- 180,000 Roubles\n  - 189,000 Roubles with Intelligence Center Level 1\n  - 207,000 Roubles with Intelligence Center Level 2\n- 2× Grizzly medical kit\n- 2× CMS surgical kit\n\"You left the letter in the right place, correct? No one has contacted me yet... But that is no longer your concern. Here is your reward.\""
+      "text": "- +11,000 EXP\n- 180,000 Roubles\n  - 189,000 Roubles with Intelligence Center Level 1\n  - 207,000 Roubles with Intelligence Center Level 2\n- 2× Grizzly medical kit\n- 3× CMS surgical kit\n\"You left the letter in the right place, correct? No one has contacted me yet... But that is no longer your concern. Here is your reward.\""
     },
     {
       "heading": "Initial Equipment",

@@ -1,18 +1,17 @@
 {
   "title": "Broadcast - Part 5",
   "url": "https://escapefromtarkov.fandom.com/wiki/Broadcast_-_Part_5",
-  "revisionId": 367739,
-  "lastEdited": "2026-11-09T00:38:04Z",
+  "revisionId": 368327,
+  "lastEdited": "2026-11-20T20:39:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Streets of Tarkov",
     "given by": "Jaeger",
-    "previous": "Broadcast - Part 4",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov",
+    "previous": "Broadcast - Part 4"
   },
   "sections": [
     {

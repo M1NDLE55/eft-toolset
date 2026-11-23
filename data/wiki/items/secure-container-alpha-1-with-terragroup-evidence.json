@@ -1,8 +1,8 @@
 {
   "title": "Secure container Alpha-1 with TerraGroup evidence",
   "url": "https://escapefromtarkov.fandom.com/wiki/Secure_container_Alpha-1_with_TerraGroup_evidence",
-  "revisionId": 339582,
-  "lastEdited": "2026-04-02T15:42:50Z",
+  "revisionId": 368454,
+  "lastEdited": "2026-11-22T15:04:48Z",
   "kind": "item",
   "categories": [
     "Quest Items"
@@ -19,7 +19,7 @@
     {
       "heading": "Notes",
       "level": 2,
-      "text": "If a player dies while having this item in their in-raid quest inventory, it is returned back to them via in-game mail."
+      "text": "- If a player dies while having this item in their in-raid quest inventory, it is returned back to them via in-game mail.\n- Required for the Terminal transit on Shoreline when doing the Savior ending.\n- Required for the \"Zubr Boat\" extraction on Terminal when doing the Savior ending."
     },
     {
       "heading": "Usage",
@@ -29,12 +29,12 @@
     {
       "heading": "Location",
       "level": 2,
-      "text": "On the desk under the window in the armory inside the armory building on Terminal. Note: Only spawns if the player brought it into the raid."
+      "text": "Initially obtained in The Ticket, after handing over 8 Major TerraGroup evidence to Mr. Kerman for the Savior ending."
     },
     {
-      "heading": "Trivia",
-      "level": 2,
-      "text": "- This Secure container Alpha is the same container that appears in Battlestate Games The Raid movie."
+      "heading": "Terminal",
+      "level": 3,
+      "text": "On the desk under the window in the armory inside the armory building."
     }
   ]
 }

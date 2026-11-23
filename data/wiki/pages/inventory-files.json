@@ -1,18 +1,18 @@
 {
   "title": "Inventory Files",
   "url": "https://escapefromtarkov.fandom.com/wiki/Inventory_Files",
-  "revisionId": 365565,
-  "lastEdited": "2026-10-27T23:52:51Z",
+  "revisionId": 368185,
+  "lastEdited": "2026-11-18T20:39:17Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Interchange",
     "given by": "Ragman",
+    "location": "Interchange",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "1"
   },
   "sections": [
     {
@@ -24,6 +24,11 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Oh, hey, partner! I was just thinking: it’d be damn useful to have some intel on the shipments at Ultra. What was delivered, where it went, and in what quantities. You probably won't find stuff like that for the small stores, and honestly, that's not the kind of catch worth putting in all this effort for. I'm aiming bigger. Search Goshan, OLI, and IDEA for the records. They’re probably somewhere in the offices. Find them and bring them back.\""
+    },
+    {
+      "heading": "Requirements",
+      "level": 2,
+      "text": "- This quest is only obtainable by BEAR PMCs."
     },
     {
       "heading": "Objectives",
@@ -54,6 +59,11 @@
       "heading": "OLI Manifest",
       "level": 3,
       "text": "Turn right after entering Oli via the main entrance. Go to the back of the store and look for a cube-shaped desk. The desk is marked by a sign over it, the manifest will be laying on the desk."
+    },
+    {
+      "heading": "See also",
+      "level": 2,
+      "text": "A Big Loss - The USEC counterpart quest"
     }
   ],
   "images": [

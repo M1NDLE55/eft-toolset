@@ -1,8 +1,8 @@
 {
   "title": "Provocation",
   "url": "https://escapefromtarkov.fandom.com/wiki/Provocation",
-  "revisionId": 365735,
-  "lastEdited": "2026-10-27T23:55:45Z",
+  "revisionId": 368360,
+  "lastEdited": "2026-11-20T21:12:47Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -25,11 +25,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Time is of the essence. My cleaner crew found evidence of Glukhar's connection to the arms development that took place under the aegis of TerraGroup. The next task for you is to provoke Glukhar's contacts into doing something foolish. They probably don't know yet that Glukhar is no longer available. Go to Ultra, TerraGroup has had a staging post there since the early days. Make a mess of it, make a show of it. Use the trophy you took from the bull's body. And for the particularly savvy, leave something humiliating in place to say hello, so to speak. The mutts must know their place.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 10 hours after completion of Payback"
     },
     {
       "heading": "Objectives",

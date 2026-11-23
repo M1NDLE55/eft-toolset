@@ -1,8 +1,8 @@
 {
   "title": "The Survivalist Path - Tough Guy",
   "url": "https://escapefromtarkov.fandom.com/wiki/The_Survivalist_Path_-_Tough_Guy",
-  "revisionId": 365932,
-  "lastEdited": "2026-10-27T23:59:15Z",
+  "revisionId": 368275,
+  "lastEdited": "2026-11-20T19:27:30Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -11,11 +11,10 @@
     "The survivalist path - Tough guy"
   ],
   "infobox": {
-    "location": "Woods",
     "given by": "Jaeger",
+    "location": "Woods",
     "previous": "The Survivalist Path - Wounded Beast",
-    "leads to": "The Huntsman Path - Controller",
-    "reqkappa": "Yes"
+    "leads to": "The Huntsman Path - Controller"
   },
   "sections": [
     {

@@ -1,8 +1,8 @@
 {
   "title": "Route Deviation",
   "url": "https://escapefromtarkov.fandom.com/wiki/Route_Deviation",
-  "revisionId": 367428,
-  "lastEdited": "2026-11-03T13:46:04Z",
+  "revisionId": 368378,
+  "lastEdited": "2026-11-20T21:40:11Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -24,11 +24,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Yeah-yeah, your previous job was about the BTR driver. So what? It makes no difference to you. We made a deal, but the kid's still looking for ways around it. If I didn't know how to manage lads like him, I wouldn't have gotten on top myself. You need good intel to manage them so you can nail them in time. There are no issues in Priozersk, but in the city he often deviates from my routes. I need to know where the BTR goes and why. Mark all his stops with strobe markers, after that my lads will handle it.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Unlocks 6 hours after completion of The Higher They Fly"
     },
     {
       "heading": "Objectives",

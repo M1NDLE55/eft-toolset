@@ -1,18 +1,18 @@
 {
   "title": "Work Smarter",
   "url": "https://escapefromtarkov.fandom.com/wiki/Work_Smarter",
-  "revisionId": 366618,
-  "lastEdited": "2026-10-31T05:39:20Z",
+  "revisionId": 368345,
+  "lastEdited": "2026-11-20T20:52:33Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Customs",
     "given by": "Jaeger",
+    "location": "Customs",
     "LL requirement": "1",
-    "reqkappa": "Yes"
+    "LL quests": "3"
   },
   "sections": [
     {

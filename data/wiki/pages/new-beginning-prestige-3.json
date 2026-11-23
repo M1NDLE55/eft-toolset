@@ -1,8 +1,8 @@
 {
   "title": "New Beginning (Prestige 3)",
   "url": "https://escapefromtarkov.fandom.com/wiki/New_Beginning_(Prestige_3)",
-  "revisionId": 365638,
-  "lastEdited": "2026-10-27T23:54:04Z",
+  "revisionId": 368414,
+  "lastEdited": "2026-11-20T23:23:33Z",
   "kind": "quest",
   "categories": [
     "Quests",
@@ -10,10 +10,11 @@
   ],
   "redirects": [],
   "infobox": {
-    "location": "The Lab, Streets of Tarkov",
     "given by": "Ragman",
-    "related2": "New Beginning (Prestige 4)",
-    "reqkappa": "No"
+    "location": "Streets of Tarkov, The Lab",
+    "PMC level": "PvP: 35, PvE: 30",
+    "previous": "New Beginning (Prestige 2)",
+    "leads to": "New Beginning (Prestige 4)"
   },
   "sections": [
     {
@@ -25,11 +26,6 @@
       "heading": "Dialogue",
       "level": 2,
       "text": "\"Hello my brother! So how's it hanging? Not bored yet? Alright alright, just messing with you. I already figured you know how this one goes. You really can't fall off the influential guys' list, dude. At the very least, it's gonna plummet my rep. It's not gonna look good for me if my candidate falls off the list on the third task, so don't get too comfortable. So, like I said last time, something big's cooking. And you and I need to keep our fingers on the pulse. Here's a list of what we need to bring this time. Yeah, it's longer this time. Anyway, you're a smart guy, you'll figure it out.\""
-    },
-    {
-      "heading": "Requirements",
-      "level": 2,
-      "text": "- Must be level 35 to start this quest (30 in the PvE mode).\n- Must have Prestige level 2"
     },
     {
       "heading": "Objectives",

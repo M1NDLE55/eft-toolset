@@ -1,8 +1,8 @@
 {
   "title": "Heavy Vests",
   "url": "https://escapefromtarkov.fandom.com/wiki/Heavy_Vests",
-  "revisionId": 362567,
-  "lastEdited": "2026-09-29T19:29:07Z",
+  "revisionId": 368235,
+  "lastEdited": "2026-11-19T22:06:19Z",
   "kind": "skill",
   "categories": [
     "Practical skills"
@@ -35,7 +35,7 @@
     {
       "heading": "Enhancement types",
       "level": 3,
-      "text": "| Skill level | Amount | Type |\n| 3-8 | 3% | Reduces incoming damage (common) |\n| 9-14 | 4% |\n| 15-20 | 5% |\n| 21-26 | 6% |\n| 27-31 | 7% |\n| 32-37 | 8% |\n| 38-42 | 9% |\n| 43-47 | 10% |\n| 48-50 | 11% |\n| 51 | 11%; 20% | Reduces incoming damage (common); Reduces incoming damage (rare) |"
+      "text": "| Skill level | Amount | Type |\n| 3-8 | 3% | Reduces incoming damage (common) |\n| 9-14 | 4% |\n| 15-20 | 5% |\n| 21-26 | 6% |\n| 27-31 | 7% |\n| 32-37 | 8% |\n| 38-42 | 9% |\n| 43-47 | 10% |\n| 48-50 | 11% |\n| 51 | 11%; 20% | Reduces incoming damage (common); Reduces incoming damage (common) |"
     },
     {
       "heading": "Effects",

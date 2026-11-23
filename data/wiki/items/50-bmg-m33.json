@@ -1,8 +1,8 @@
 {
   "title": ".50 BMG M33",
   "url": "https://escapefromtarkov.fandom.com/wiki/.50_BMG_M33",
-  "revisionId": 331608,
-  "lastEdited": "2026-01-07T12:24:45Z",
+  "revisionId": 368154,
+  "lastEdited": "2026-11-18T04:53:35Z",
   "kind": "ammo",
   "categories": [
     ".50 BMG ammunition",
@@ -31,6 +31,11 @@
       "heading": "Notes",
       "level": 2,
       "text": "- Cannot be listed for sale on the flea market."
+    },
+    {
+      "heading": "Trivia",
+      "level": 2,
+      "text": "- This is the standard .50 Ball cartridge. It has a 647-grain [41.92 gram] Full Metal Jacketed lead-core bullet with a brass case. It was first adopted in 1951 to replace the .50 M2 Ball cartridge."
     }
   ]
 }

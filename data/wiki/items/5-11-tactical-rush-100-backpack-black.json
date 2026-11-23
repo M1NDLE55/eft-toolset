@@ -1,8 +1,8 @@
 {
   "title": "5.11 Tactical RUSH 100 backpack (Black)",
   "url": "https://escapefromtarkov.fandom.com/wiki/5.11_Tactical_RUSH_100_backpack_(Black)",
-  "revisionId": 355729,
-  "lastEdited": "2026-08-23T19:34:47Z",
+  "revisionId": 368238,
+  "lastEdited": "2026-11-19T22:11:45Z",
   "kind": "item",
   "categories": [
     "Backpacks"
@@ -22,7 +22,7 @@
     {
       "heading": "Notes",
       "level": 2,
-      "text": "- Cannot be listed for sale on the flea market."
+      "text": "- Cannot be listed for sale on the flea market.\n- Cannot pick up Magazine Case with this backpack equipped."
     }
   ]
 }

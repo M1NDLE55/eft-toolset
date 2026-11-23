@@ -1,8 +1,8 @@
 {
   "title": "Profitable Venture",
   "url": "https://escapefromtarkov.fandom.com/wiki/Profitable_Venture",
-  "revisionId": 367431,
-  "lastEdited": "2026-11-03T13:58:43Z",
+  "revisionId": 368408,
+  "lastEdited": "2026-11-20T23:04:18Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -10,6 +10,7 @@
   "redirects": [],
   "infobox": {
     "given by": "Skier",
+    "PMC level": "50",
     "LL requirement": "4",
     "leads to": "Never Too Late To Learn"
   },
@@ -27,7 +28,7 @@
     {
       "heading": "Requirements",
       "level": 2,
-      "text": "- This quest is only obtainable by USEC PMCs.\n- Must be level 50 to start this quest."
+      "text": "- This quest is only obtainable by USEC PMCs."
     },
     {
       "heading": "Objectives",
@@ -43,6 +44,11 @@
       "heading": "Guide",
       "level": 2,
       "text": "| Item name | Amount | Requirement | Find in Raid |\n| Trijicon REAP-IR thermal scope | 15 | Handover item | No |"
+    },
+    {
+      "heading": "See also",
+      "level": 2,
+      "text": "- Safety Guarantee - The BEAR counterpart quest"
     }
   ]
 }

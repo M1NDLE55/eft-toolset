@@ -1,18 +1,18 @@
 {
   "title": "Akimbo",
   "url": "https://escapefromtarkov.fandom.com/wiki/Akimbo",
-  "revisionId": 365198,
-  "lastEdited": "2026-10-27T23:46:37Z",
+  "revisionId": 368267,
+  "lastEdited": "2026-11-20T17:14:25Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Lighthouse",
     "given by": "Ragman",
+    "location": "Lighthouse",
     "LL requirement": "3",
-    "reqkappa": "No"
+    "LL quests": "4"
   },
   "sections": [
     {

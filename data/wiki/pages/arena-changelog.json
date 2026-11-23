@@ -1,8 +1,8 @@
 {
   "title": "Arena Changelog",
   "url": "https://escapefromtarkov.fandom.com/wiki/Arena_Changelog",
-  "revisionId": 367848,
-  "lastEdited": "2026-11-11T16:06:54Z",
+  "revisionId": 367944,
+  "lastEdited": "2026-11-13T13:16:21Z",
   "kind": "game",
   "categories": [
     "Escape from Tarkov: Arena"
@@ -14,6 +14,11 @@
       "heading": "Introduction",
       "level": 1,
       "text": "For the main game, see Changelog.\n\nThis page contains a collection of official patch notes for Escape from Tarkov: Arena.\n\nIt entered the Closed Beta state on December 17, 2023 and the current game version is ."
+    },
+    {
+      "heading": "0.6.2.0.48767 (13 November 2026)",
+      "level": 2,
+      "text": "- Technical update"
     },
     {
       "heading": "0.6.2.0.48720 (11 November 2026)",

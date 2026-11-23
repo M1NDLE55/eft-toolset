@@ -1,18 +1,17 @@
 {
   "title": "Every Hunter Knows This",
   "url": "https://escapefromtarkov.fandom.com/wiki/Every_Hunter_Knows_This",
-  "revisionId": 365398,
-  "lastEdited": "2026-10-27T23:50:02Z",
+  "revisionId": 368339,
+  "lastEdited": "2026-11-20T20:48:55Z",
   "kind": "quest",
   "categories": [
     "Quests"
   ],
   "redirects": [],
   "infobox": {
-    "location": "Factory, Customs",
     "given by": "Jaeger",
-    "previous": "Rough Tarkov",
-    "reqkappa": "Yes"
+    "location": "Customs, Factory",
+    "LL requirement": "2"
   },
   "sections": [
     {

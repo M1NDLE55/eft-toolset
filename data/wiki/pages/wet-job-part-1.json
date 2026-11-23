@@ -1,8 +1,8 @@
 {
   "title": "Wet Job - Part 1",
   "url": "https://escapefromtarkov.fandom.com/wiki/Wet_Job_-_Part_1",
-  "revisionId": 367458,
-  "lastEdited": "2026-11-03T14:34:38Z",
+  "revisionId": 368391,
+  "lastEdited": "2026-11-20T22:20:21Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -30,7 +30,7 @@
     {
       "heading": "Objectives",
       "level": 2,
-      "text": "- Eliminate 10 Scavs whith a M4A1, M16 ,ADAR or TX-15 on Shoreline"
+      "text": "- Eliminate 10 Scavs with an M4A1, M16, ADAR, or TX-15 on Shoreline"
     },
     {
       "heading": "Rewards",

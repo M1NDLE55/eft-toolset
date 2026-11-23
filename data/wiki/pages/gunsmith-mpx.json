@@ -1,8 +1,8 @@
 {
   "title": "Gunsmith - MPX",
   "url": "https://escapefromtarkov.fandom.com/wiki/Gunsmith_-_MPX",
-  "revisionId": 364874,
-  "lastEdited": "2026-10-23T20:42:02Z",
+  "revisionId": 368022,
+  "lastEdited": "2026-11-14T22:18:30Z",
   "kind": "quest",
   "categories": [
     "Quests"
@@ -13,7 +13,7 @@
   "infobox": {
     "given by": "Mechanic",
     "LL requirement": "3",
-    "reqkappa": "Yes"
+    "LL quests": "5"
   },
   "sections": [
     {
