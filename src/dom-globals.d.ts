@@ -7,6 +7,5 @@ interface Element {
 }
 
 interface Body {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- the DOM's own signature
   json<T = any>(): Promise<T>;
 }

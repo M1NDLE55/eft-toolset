@@ -3,7 +3,7 @@ import { HSTS_HOST_PATTERN, HSTS_VALUE, securityHeaders } from "./headers";
 const HSTS_HOST = new RegExp(`^${HSTS_HOST_PATTERN}$`, "i");
 
 /**
- * The headers every response gets, as the old next.config.ts set them: nosniff and the referrer
+ * The headers every response gets, as the site has always sent them: nosniff and the referrer
  * policy everywhere; on pages (not /api/), the security headers and, on the production domain, HSTS.
  * Headers a route set itself win.
  */

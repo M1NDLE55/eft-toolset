@@ -131,7 +131,7 @@ const sections: { heading: string; content: ReactNode }[] = [
     heading: "Software and fonts",
     content: (
       <p>
-        Built with <External href="https://nextjs.org/">Next.js</External> and{" "}
+        Built with <External href="https://tanstack.com/start">TanStack Start</External> and{" "}
         <External href="https://react.dev/">React</External> (MIT), <External href="https://leafletjs.com/">Leaflet</External>{" "}
         (BSD-2-Clause), <External href="https://www.radix-ui.com/">Radix UI</External> (MIT), and{" "}
         <External href="https://lucide.dev/">Lucide</External> icons (ISC), set in{" "}

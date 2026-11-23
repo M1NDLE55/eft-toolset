@@ -68,7 +68,7 @@ export const ROOT_METADATA: Metadata = {
   },
 };
 
-/** An absolute URL on the canonical site; the site's root resolves without a trailing slash, as Next wrote it. */
+/** An absolute URL on the canonical site; the site's root resolves without a trailing slash, as the site has always written it. */
 export function absoluteUrl(url: string): string {
   const resolved = new URL(url, SITE_ORIGIN).href;
   return resolved === `${SITE_ORIGIN}/` ? SITE_ORIGIN : resolved;
@@ -94,7 +94,7 @@ function templateOf(title: Title): string | null {
 }
 
 /**
- * The title as Next resolved it: each title takes the template of the nearest ancestor segment that
+ * The title as the site's pages have always resolved it: each title takes the template of the nearest ancestor segment that
  * set a title, and a page shares its parent's template with its own segment's layout.
  */
 function resolveTitle({ layouts = [], own, page }: MetadataSources): string {

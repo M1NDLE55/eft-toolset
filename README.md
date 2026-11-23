@@ -44,11 +44,11 @@ The app uses tarkov.dev's JSON API through a server-side adapter that accepts on
 
 The MCP endpoint reuses the same adapter and the app's own gun-builder and raid-planner logic, so assistants and the app always agree.
 
-Built with Next.js 16 (App Router), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, the MCP TypeScript SDK, and Vitest.
+Built with [TanStack Start](https://tanstack.com/start) on [Cloudflare Workers](https://developers.cloudflare.com/workers/), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, Cloudflare's Agents SDK and the MCP TypeScript SDK, and Vitest. Pages are cached at the edge, per-user state lives in Durable Objects, and a cron keeps the shared tarkov.dev data in KV fresh. [`DEPLOYMENT.md`](DEPLOYMENT.md) covers the Cloudflare setup.
 
 ## Development
 
-Requires Node.js 20.9 or newer.
+Requires Node.js 22 or newer.
 
 ```bash
 git clone https://github.com/M1NDLE55/eft-toolset.git
@@ -59,31 +59,32 @@ npm run dev
 
 | Command | What it does |
 | --- | --- |
-| `npm run dev` | Start the development server on http://localhost:3000 |
-| `npm run build` | Create a production build |
-| `npm start` | Serve the production build |
+| `npm run dev` | Start the development server on http://localhost:3000, running the Worker in workerd with local bindings |
+| `npm run build` | Fetch the tarkov.dev snapshot, then build the client, the Worker and the prerendered pages into `dist/` |
+| `npx wrangler dev --config dist/server/wrangler.json` | Serve the production build locally (crons run with `curl "http://localhost:8787/cdn-cgi/local/scheduled?cron=*+*+*+*+*"`) |
 | `npm run lint` | Run ESLint, including the React Compiler rules |
+| `npm run typecheck` | Generate the Worker's binding types and type-check everything |
 | `npm test` | Run the Vitest suite |
+| `node scripts/parity.mjs --baseline <origin> --candidate <origin> --token <token>` | Compare two deployments' pages and MCP tools (see the script's header) |
+| `node scripts/mcp-client-check.mjs --url <mcp url> --token <token>` | Connect real MCP clients (SDK v1 and v2), list tools and call them |
 | `node scripts/generate-maps-config.mjs` | Regenerate the raid planner's map configuration from tarkov.dev after a game update |
 | `node scripts/build-glossary.mjs` | Resolve the glossary's landmark positions and item ids against live data after editing `src/app/lib/glossary/terms.json` |
 | `node scripts/build-wiki-snapshot.mjs` | Rebuild `data/wiki` from the wiki's published XML dump (`--check` only reports whether a newer dump is out; `--file` uses a downloaded one) |
 
-### Environment variables
+### Settings
 
-All are optional; [`.env.example`](.env.example) lists them.
+All are optional locally. Put them in `.dev.vars` (see [`.dev.vars.example`](.dev.vars.example)); production sets them in `wrangler.jsonc` and as secrets (see [`DEPLOYMENT.md`](DEPLOYMENT.md)).
 
 | Variable | Purpose |
 | --- | --- |
 | `CLOUDFLARE_WEB_ANALYTICS_TOKEN` | Enables Cloudflare Web Analytics |
-| `CLIENT_IP_HEADER` | The header your proxy sets with the real client IP, used for per-client API rate limiting. On Vercel, `X-Real-IP` is used automatically. Elsewhere, without it, only the global rate limit applies. |
-| `WARM_TARKOV_CACHE` | Set to `0` to skip preloading tarkov.dev data when the server starts |
 | `MCP_AUTHKIT_DOMAIN` | The WorkOS AuthKit domain that MCP users sign in with. Required in production: without it the MCP endpoint stays closed there. In development, leaving it empty serves the endpoint without sign-in. See [MCP sign-in](DATA_ARCHITECTURE.md#mcp-sign-in). |
 | `WORKOS_API_KEY`, `WORKOS_CLIENT_ID`, `WORKOS_COOKIE_PASSWORD` | Website sign-in on the Settings page, where people manage or delete the account their AI assistants use. Use the same WorkOS environment as `MCP_AUTHKIT_DOMAIN`. The cookie password encrypts the session cookie and must be at least 32 characters. Without all three, the Settings page says accounts aren't set up. See [Website accounts](DATA_ARCHITECTURE.md#website-accounts). |
+| `APP_ORIGIN` | Where sign-in returns to on a deployment that isn't www.eft-toolset.com (a `workers.dev` test deploy, say) |
 | `MCP_RESOURCE_URL` | The MCP endpoint's public URL that access tokens must be issued for. Defaults to `https://www.eft-toolset.com/api/mcp`. |
-| `MCP_USER_RATE_BURST`, `MCP_USER_RATE_PER_SECOND` | Each user's MCP budget (default 160 tokens, refilling 3 per second) |
-| `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` | Keeps MCP rate limits in Upstash Redis, shared by every instance (`KV_REST_API_URL` and `KV_REST_API_TOKEN` also work). Without them each instance counts in memory. |
+| `MCP_USER_RATE_BURST`, `MCP_USER_RATE_PER_SECOND` | Each user's MCP budget (default 160 tokens, refilling 3 per second), kept in their Durable Object |
+| `TARKOV_UPSTREAM_URL` | A stand-in for json.tarkov.dev, for local load and parity tests (`scripts/mcp-load.mjs --serve-only`) |
 
-## Credits
 
 EFT Toolset is built on other people's work. The site's [`/credits`](https://www.eft-toolset.com/credits) page lists the same sources and how we use them.
 
@@ -93,7 +94,7 @@ EFT Toolset is built on other people's work. The site's [`/credits`](https://www
 - **[Escape from Tarkov Wiki](https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki)** on Fandom, written by its contributors and licensed [CC BY-NC-SA](https://www.fandom.com/licensing). `get_wiki_page` adapts pages to plain text and the glossary's meanings are mostly written from wiki pages; every wiki result carries a credit line to keep with the text, and every glossary entry links its source. The tool reads a snapshot built from the wiki's published XML dump (the dump's date and checksum are in [`data/wiki/manifest.json`](data/wiki/manifest.json); currently 2026-11-12) and makes no requests to the wiki. Quest pages show the wiki's map and location pictures, loaded by the visitor's browser from the wiki's image host, each credited with its uploader (from the wiki's API, recorded in [`data/wiki/image-credits.json`](data/wiki/image-credits.json)), the wiki, and the licence.
 - **Other glossary sources**: a few entries cite [Tarkov Forge](https://tarkovforge.com/), Reddit threads, or [Game Rant](https://gamerant.com/).
 - **[Battlestate Games](https://www.battlestategames.com/)**: Escape from Tarkov, its names, images, and game data belong to Battlestate Games. This is an unofficial fan project.
-- **Software and fonts**: [Next.js](https://nextjs.org/) and [React](https://react.dev/) (MIT), [Leaflet](https://leafletjs.com/) (BSD-2-Clause), [Radix UI](https://www.radix-ui.com/) (MIT), [Lucide](https://lucide.dev/) icons (ISC), and the [Inter](https://rsms.me/inter/) font (SIL Open Font License).
+- **Software and fonts**: [TanStack Start](https://tanstack.com/start) and [React](https://react.dev/) (MIT), [Leaflet](https://leafletjs.com/) (BSD-2-Clause), [Radix UI](https://www.radix-ui.com/) (MIT), [Lucide](https://lucide.dev/) icons (ISC), and the [Inter](https://rsms.me/inter/) font (SIL Open Font License).
 
 ## License
 

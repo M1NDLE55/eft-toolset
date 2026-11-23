@@ -4198,9 +4198,6 @@ function isoTime(value: string | null | undefined) {
   return Number.isFinite(time) ? new Date(time).toISOString() : null;
 }
 
-export async function warmTarkovCache(gameModes: GameMode[] = ["regular", "pve"]) {
-  await Promise.allSettled(gameModes.map((gameMode) => getItemCatalog(gameMode)));
-}
 
 /**
  * The cron's half of the price feed (see src/server.ts): asks tarkov.dev for the mode's items file

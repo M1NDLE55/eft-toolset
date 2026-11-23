@@ -18,9 +18,9 @@
   },
   "kv_namespaces": [
     {
-      // Shared tarkov.dev copies and the price feed, written by the cron and by isolates.
-      "binding": "TARKOV_DATA",
-      "id": "00000000000000000000000000000000"
+      // Shared tarkov.dev copies and the price feed, written by the cron and by isolates. Wrangler
+      // creates the namespace on the first deploy and records it in the account.
+      "binding": "TARKOV_DATA"
     }
   ],
   "durable_objects": {
@@ -49,7 +49,16 @@
     // Every minute: the price feed; the other datasets refresh when their freshness runs out.
     "crons": ["* * * * *"]
   },
+  // Settings that aren't secret. Prerendered pages are built with them too, so set them here rather
+  // than in the dashboard. Secrets (WORKOS_API_KEY, WORKOS_COOKIE_PASSWORD) are set with
+  // `wrangler secret put`; see DEPLOYMENT.md.
   "vars": {
-    "MCP_RESOURCE_URL": "https://www.eft-toolset.com/api/mcp"
+    "MCP_RESOURCE_URL": "https://www.eft-toolset.com/api/mcp",
+    // The WorkOS AuthKit domain (such as your-app.authkit.app). Empty keeps /api/mcp closed (503).
+    "MCP_AUTHKIT_DOMAIN": "",
+    // The WorkOS client id; with the two secrets, it turns on website accounts.
+    "WORKOS_CLIENT_ID": "",
+    // Cloudflare Web Analytics site token; empty leaves the beacon out.
+    "CLOUDFLARE_WEB_ANALYTICS_TOKEN": ""
   }
 }

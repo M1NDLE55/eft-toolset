@@ -8,8 +8,8 @@
     "lint": "eslint .",
     "test": "vitest run",
     "preview": "vite preview",
-    "typecheck": "wrangler types && tsc --noEmit",
-    "cf-typegen": "wrangler types"
+    "typecheck": "wrangler types --strict-vars false && tsc --noEmit",
+    "cf-typegen": "wrangler types --strict-vars false"
   },
   "dependencies": {
     "@cf-wasm/og": "^0.5.0",

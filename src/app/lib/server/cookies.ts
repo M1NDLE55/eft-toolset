@@ -21,7 +21,7 @@ export interface CookieOptions {
   sameSite?: "lax" | "strict" | "none";
 }
 
-/** Adds a Set-Cookie header, written as Next wrote them (Path, Max-Age with an Expires date, flags). */
+/** Adds a Set-Cookie header (Path, Expires and Max-Age, then the flags), as the site has always set them. */
 export function setCookie(headers: Headers, name: string, value: string, options: CookieOptions = {}) {
   const parts = [`${name}=${encodeURIComponent(value)}`];
   if (options.path) parts.push(`Path=${options.path}`);
