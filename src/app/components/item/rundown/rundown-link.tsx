@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePublicPathname } from "@/components/game-mode/use-public-pathname";
 import { createContext, useContext, useState, type ComponentProps, type ReactNode } from "react";
 import { isItemSlug, itemHref } from "@/app/lib/item-links";
 import type { QuestIdentity } from "@/app/lib/item-needs";
@@ -18,7 +18,7 @@ const QuestContext = createContext<QuestIdentity | null>(null);
 /** Shows one item rundown at a time, for the item links inside it. */
 export function ItemRundownProvider({ children }: { children: ReactNode }) {
   const [target, setTarget] = useState<RundownTarget | null>(null);
-  const pathname = usePathname();
+  const pathname = usePublicPathname();
   const [shownOn, setShownOn] = useState(pathname);
   // Leaving the page closes it.
   if (shownOn !== pathname) {
@@ -51,7 +51,7 @@ type ItemRundownLinkProps = Omit<ComponentProps<typeof Link>, "href"> & {
 export function ItemRundownLink({ item, onClick, children, ...props }: ItemRundownLinkProps) {
   const open = useContext(OpenContext);
   const quest = useContext(QuestContext);
-  const pathname = usePathname();
+  const pathname = usePublicPathname();
   const href = itemHref(item);
   return (
     <Link
