@@ -6,7 +6,7 @@ import { ItemHeader } from "@/app/components/item/item-header";
 import { CARD_DEFINITIONS } from "@/app/components/item/cards";
 import type { ComposedItem } from "@/app/lib/cache/types";
 
-vi.mock("next/image", () => ({ default: () => null }));
+vi.mock("@/app/lib/navigation/image", () => ({ default: () => null }));
 
 const rifle: ComposedItem = {
   id: "rifle",

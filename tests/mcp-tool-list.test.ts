@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { expect, it } from "vitest";
-import { POST } from "@/app/api/mcp/route";
+import { mcpPost as POST } from "./mcp-post";
 
 // Every client loads tools/list into its context before the user says anything, so its size
 // is a cost every conversation pays. Raise these only for a new tool or a field a caller

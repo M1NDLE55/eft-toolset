@@ -10,11 +10,11 @@ import { placeCard } from "@/app/components/item/rundown/placement";
 const navigations: string[] = [];
 const apiFetch = vi.fn();
 
-vi.mock("next/image", () => ({ default: () => null }));
+vi.mock("@/app/lib/navigation/image", () => ({ default: () => null }));
 let pathname = "/quests/background-check";
-vi.mock("next/navigation", () => ({ usePathname: () => pathname }));
-// A stand-in for next/link: it runs the link's click handler and, unless that prevents it, "navigates".
-vi.mock("next/link", () => ({
+vi.mock("@/app/lib/navigation/hooks", () => ({ usePathname: () => pathname }));
+// A stand-in for the app's Link: it runs the link's click handler and, unless that prevents it, "navigates".
+vi.mock("@/app/lib/navigation/link", () => ({
   default: ({ href, onClick, prefetch: _prefetch, children, ...props }: ComponentProps<"a"> & { prefetch?: boolean }) => (
     <a
       {...props}

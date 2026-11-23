@@ -1,9 +1,10 @@
 // @vitest-environment node
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { DELETE, GET, OPTIONS, POST } from "@/app/api/mcp/route";
+import { mcpMethodNotAllowed as GET, mcpMethodNotAllowed as DELETE, mcpPreflight as OPTIONS } from "@/app/lib/mcp/http";
+import { mcpPost as POST } from "./mcp-post";
 import { consumeRequestBudget, resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import { clearTarkovResourceCache } from "@/app/lib/api/tarkov-server";
-import { DEFAULT_MCP_LIMITS, handleMcpPost } from "@/app/lib/mcp/http";
+import { DEFAULT_MCP_LIMITS } from "@/app/lib/mcp/http";
 import { MCP_TOOL_NAMES } from "@/app/lib/mcp/catalog";
 import { parseSharedBuildInput } from "@/app/lib/builds/share-import";
 import { decodePlanSharePayload } from "@/app/lib/raid-planner/share";
@@ -1285,7 +1286,7 @@ describe("MCP endpoint", () => {
   });
 
   it("keeps slow uploads from holding the website's body reads, and skips reading for clients over budget", async () => {
-    const { POST: tarkovPost } = await import("@/app/api/tarkov/route");
+    const { POST: tarkovPost } = await import("@/app/lib/api/tarkov-route");
     const slowBody = (streams: ReadableStreamDefaultController<Uint8Array>[]) =>
       ({
         body: new ReadableStream<Uint8Array>({ start: (controller) => void streams.push(controller) }),
@@ -1349,7 +1350,7 @@ describe("MCP endpoint", () => {
     vi.mocked(globalThis.fetch).mockImplementation(hangUntilAborted);
     const limits = { ...DEFAULT_MCP_LIMITS, toolDeadlineMs: 100 };
     const callSearch = (id: number) =>
-      handleMcpPost(
+      POST(
         mcpRequest({ jsonrpc: "2.0", id, method: "tools/call", params: { name: "search_items", arguments: { query: "a" } } }),
         limits
       );
@@ -1357,7 +1358,7 @@ describe("MCP endpoint", () => {
     const overflow = await callSearch(99);
     expect(overflow.status).toBe(429);
     expect(overflow.headers.get("retry-after")).toBe("1");
-    const listed = await handleMcpPost(mcpRequest({ jsonrpc: "2.0", id: 100, method: "tools/list" }), limits);
+    const listed = await POST(mcpRequest({ jsonrpc: "2.0", id: 100, method: "tools/list" }), limits);
     expect(listed.status).toBe(200);
 
     for (const [index, pending] of running.entries()) {

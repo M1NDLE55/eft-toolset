@@ -2,19 +2,21 @@
 import { rm } from "node:fs/promises";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { rebuildItemIndexes } from "../scripts/build-tarkov-snapshot.mjs";
-import { POST as mcpPost } from "@/app/api/mcp/route";
-import { GET, POST } from "@/app/api/tarkov/route";
+import { mcpPost } from "./mcp-post";
+import { GET, POST } from "@/app/lib/api/tarkov-route";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import {
   parsePriceFeed,
   PRICE_FEED_FORMAT,
   priceFeedOrigin,
+  priceFeedStoreKey,
   priceFeedUrl,
+  SHARED_STORE_FEED_ORIGIN,
   projectPriceRows,
   type PricedItem,
 } from "@/app/lib/api/price-feed";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
-import { SITE_ORIGIN } from "@/app/lib/site";
+import { setPlatform, type SharedStore } from "@/app/lib/server/platform";
 import {
   canReuseSnapshot,
   clearTarkovResourceCache,
@@ -101,13 +103,23 @@ async function read<T>(work: () => Promise<T>, options: TarkovReadOptions = {}) 
 }
 
 const rifle = () => getGroupItems("regular", ["Test Rifle"]).then(([item]) => item);
+
+/** KV as the Worker uses it, in memory. */
+function memoryStore(): SharedStore {
+  const values = new Map<string, string>();
+  return {
+    get: async (key) => values.get(key) ?? null,
+    put: async (key, value) => {
+      values.set(key, value);
+    },
+  };
+}
 const later = (ms: number) => vi.setSystemTime(Date.now() + ms);
 
 beforeEach(() => {
   clearTarkovResourceCache();
   resetRequestBudgets();
   vi.stubEnv("PRICE_FEED_ORIGIN", FEED_ORIGIN);
-  vi.stubEnv("VERCEL", "");
   vi.spyOn(console, "warn").mockImplementation(() => undefined);
   vi.spyOn(console, "info").mockImplementation(() => undefined);
   vi.spyOn(Math, "random").mockReturnValue(0.5);
@@ -138,6 +150,7 @@ beforeEach(() => {
 });
 
 afterEach(async () => {
+  setPlatform();
   for (const fail of hanging) fail();
   vi.useRealTimers();
   await settleTarkovRefreshes();
@@ -336,13 +349,10 @@ describe("when the feed fails", () => {
     expect(fromSnapshot.ageMs).toBeGreaterThanOrEqual(26 * HOUR);
   });
 
-  it("fall back to the items file on a preview whose protection refuses the feed", async () => {
-    vi.stubEnv("VERCEL", "1");
-    vi.stubEnv("VERCEL_ENV", "preview");
-    vi.stubEnv("VERCEL_URL", "preview.test");
+  it("fall back to the items file when the feed refuses the request", async () => {
     feedResponse = () => new Response("unauthorized", { status: 401 });
     const result = await read(rifle);
-    expect(feedRequests().map((url) => url.origin)).toEqual(["https://preview.test"]);
+    expect(feedRequests().map((url) => url.origin)).toEqual([FEED_ORIGIN]);
     expect(result.data.sellFor.at(-1)?.priceRUB).toBe(50_000);
     expect(result.price).toMatchObject({ source: "items-file" });
   });
@@ -505,19 +515,32 @@ describe("parsePriceFeed", () => {
 });
 
 describe("priceFeedOrigin", () => {
-  it("is the site in production, the deployment on a preview, PRICE_FEED_ORIGIN locally, and off otherwise", () => {
+  it("is the shared store in the Worker, PRICE_FEED_ORIGIN locally, and off otherwise", () => {
     expect(priceFeedOrigin()).toBe(FEED_ORIGIN);
     vi.stubEnv("PRICE_FEED_ORIGIN", "");
     expect(priceFeedOrigin()).toBeNull();
-    vi.stubEnv("PRICE_FEED_ORIGIN", "http://localhost:3000/");
-    vi.stubEnv("VERCEL", "1");
-    vi.stubEnv("VERCEL_ENV", "production");
-    expect(priceFeedOrigin()).toBe(SITE_ORIGIN);
-    vi.stubEnv("VERCEL_ENV", "preview");
-    vi.stubEnv("VERCEL_URL", "eft-toolset-abc.vercel.app");
-    expect(priceFeedOrigin()).toBe("https://eft-toolset-abc.vercel.app");
-    vi.stubEnv("NEXT_PHASE", "phase-production-build");
+    vi.stubEnv("PRICE_FEED_ORIGIN", "not a url");
     expect(priceFeedOrigin()).toBeNull();
+    setPlatform({ sharedStore: memoryStore() });
+    expect(priceFeedOrigin()).toBe(SHARED_STORE_FEED_ORIGIN);
+  });
+
+  it("reads the feed the cron publishes to the shared store, without a request", async () => {
+    await oldSnapshot();
+    const store = memoryStore();
+    setPlatform({ sharedStore: store });
+    await store.put(priceFeedStoreKey("regular"), JSON.stringify({ data: feedWire(feedFixtures.items) }));
+    const result = await read(rifle);
+    expect(feedRequests()).toHaveLength(0);
+    expect(result.price).toMatchObject({ source: "feed" });
+  });
+
+  it("uses the items file while nothing is published yet", async () => {
+    setPlatform({ sharedStore: memoryStore() });
+    const result = await read(rifle);
+    expect(feedRequests()).toHaveLength(0);
+    expect(result.data.sellFor.at(-1)?.priceRUB).toBe(50_000);
+    expect(result.price).toMatchObject({ source: "items-file" });
   });
 
   it("leaves reads exactly as before when off", async () => {

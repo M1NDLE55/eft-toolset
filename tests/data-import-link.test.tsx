@@ -1,7 +1,7 @@
 import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import Page from "@/app/data/page";
+import { DataPage as Page } from "@/app/data/data-page";
 import { encodeSharePayload } from "@/app/lib/share-codec";
 import { BACKUP_FORMAT, BACKUP_IMPORT_PARAM, BACKUP_VERSION, STORE_KEYS } from "@/app/lib/storage/store-keys";
 

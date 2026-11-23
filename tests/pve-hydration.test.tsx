@@ -4,15 +4,14 @@ import { renderToString } from "react-dom/server";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { publicPathname } from "@/app/lib/game-mode-routes";
 
-// What next/navigation's usePathname returns: on Vercel, a PVE copy is rendered at its own path,
-// while the browser hydrates it at the public URL.
+// What the router's usePathname returns while the server renders and while the browser hydrates.
 let pathname = "/";
-vi.mock("next/navigation", () => ({
+vi.mock("@/app/lib/navigation/hooks", () => ({
   usePathname: () => pathname,
   useRouter: () => ({ push: () => undefined, prefetch: () => undefined, replace: () => undefined, refresh: () => undefined }),
 }));
-vi.mock("next/image", () => ({ default: () => null }));
-vi.mock("next/link", () => ({
+vi.mock("@/app/lib/navigation/image", () => ({ default: () => null }));
+vi.mock("@/app/lib/navigation/link", () => ({
   default: ({ href, prefetch: _prefetch, children, ...props }: ComponentProps<"a"> & { prefetch?: boolean }) => (
     <a {...props} href={String(href)}>
       {children}
@@ -61,8 +60,8 @@ afterEach(() => {
   document.body.innerHTML = "";
 });
 
-describe("PVE copies", () => {
-  it("strip the PVE prefix from paths, and only that", () => {
+describe("PVE pages", () => {
+  it("strip the old PVE prefix from paths, and only that", () => {
     expect(publicPathname("/pve/item/hand-drill")).toBe("/item/hand-drill");
     expect(publicPathname("/pve")).toBe("/");
     expect(publicPathname("/item/hand-drill")).toBe("/item/hand-drill");
@@ -70,17 +69,19 @@ describe("PVE copies", () => {
     expect(publicPathname("/pvelike")).toBe("/pvelike");
   });
 
-  it("hydrate the header without a mismatch when rendered at /pve/… and shown at the public URL", async () => {
-    for (const [server, client] of [
-      ["/pve/item/hand-drill", "/item/hand-drill"],
-      ["/pve/quests/debut", "/quests/debut"],
-      ["/pve/gun-builder/best/m4a1", "/gun-builder/best/m4a1"],
-    ]) {
-      const { html, problems } = await hydrateAcross(server, client);
-      expect(problems, server).toEqual([]);
-      // The section the page is in is marked current on the server too.
-      expect(html).toMatch(/<a aria-current="page"[^>]*href="\/(item|quests|gun-builder)"/);
-      document.body.innerHTML = "";
+  it("hydrate the header without a mismatch in a browser whose saved mode is PVE", async () => {
+    // The server renders a PVE visitor's page from the cookie; the header reads the saved mode only once hydrated.
+    localStorage.setItem("eft-toolset:settings:game-mode", JSON.stringify({ version: 1, data: "pve" }));
+    try {
+      for (const path of ["/item/hand-drill", "/quests/debut", "/gun-builder/best/m4a1"]) {
+        const { html, problems } = await hydrateAcross(path, path);
+        expect(problems, path).toEqual([]);
+        // The section the page is in is marked current on the server too.
+        expect(html).toMatch(/<a aria-current="page"[^>]*href="\/(item|quests|gun-builder)"/);
+        document.body.innerHTML = "";
+      }
+    } finally {
+      localStorage.clear();
     }
   });
 });

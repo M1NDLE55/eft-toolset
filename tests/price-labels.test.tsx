@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { SlotPicker, type PickerTarget } from "@/app/components/gun-builder/slot-picker";
 import type { BuildItemData, PickItemData, PriceSources } from "@/app/lib/types/gunBuilder";
 
-vi.mock("next/image", () => ({ default: () => null }));
+vi.mock("@/app/lib/navigation/image", () => ({ default: () => null }));
 
 const suppressor: PickItemData = {
   id: "hexagon",

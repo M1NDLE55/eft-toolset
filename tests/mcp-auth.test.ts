@@ -4,10 +4,12 @@ import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vite
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { UnauthorizedError, type OAuthClientProvider } from "@modelcontextprotocol/sdk/client/auth.js";
-import { POST, OPTIONS } from "@/app/api/mcp/route";
-import { GET as metadataGet } from "@/app/.well-known/oauth-protected-resource/[[...path]]/route";
+import { mcpPreflight as OPTIONS } from "@/app/lib/mcp/http";
+import { mcpPost as POST } from "./mcp-post";
+import { protectedResourceGet as metadataGet } from "@/app/lib/mcp/protected-resource";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
-import { memoryRateLimitStore, sharedRateLimitStore, upstashRateLimitStore } from "@/app/lib/api/rate-limit-store";
+import { memoryRateLimitStore, sharedRateLimitStore } from "@/app/lib/api/rate-limit-store";
+import { setPlatform } from "@/app/lib/server/platform";
 import { mcpAuthConfig, verifyAccessToken } from "@/app/lib/mcp/auth";
 
 const ISSUER = "https://eft-test.authkit.app";
@@ -361,59 +363,30 @@ describe("MCP endpoint with sign-in off", () => {
 describe("rate limit stores", () => {
   const limit = { burst: 10, refillPerSecond: 1 };
 
-  it("uses Upstash when its REST settings are set, including the names Vercel sets", () => {
-    vi.stubEnv("UPSTASH_REDIS_REST_URL", "https://example.upstash.io");
-    vi.stubEnv("UPSTASH_REDIS_REST_TOKEN", "secret");
-    expect(sharedRateLimitStore().kind).toBe("upstash");
-    vi.stubEnv("UPSTASH_REDIS_REST_URL", "");
-    vi.stubEnv("UPSTASH_REDIS_REST_TOKEN", "");
-    vi.stubEnv("KV_REST_API_URL", "https://example.upstash.io");
-    vi.stubEnv("KV_REST_API_TOKEN", "secret");
-    expect(sharedRateLimitStore().kind).toBe("upstash");
+  afterEach(() => setPlatform());
+
+  it("keeps a signed-in user's budget in their UserDO and counts other keys in memory", async () => {
+    const charges: unknown[][] = [];
+    setPlatform({
+      chargeUserBudget: async (...args) => {
+        charges.push(args);
+        return { allowed: true, retryAfterSeconds: 0 };
+      },
+    });
+    const store = sharedRateLimitStore();
+    expect(store.kind).toBe("durable");
+    expect(await store.consume("mcp:user:user_123", limit, 3, 0.25)).toEqual({ allowed: true, retryAfterSeconds: 0 });
+    expect(charges).toEqual([["user_123", limit, 3, 0.25]]);
+    expect((await store.consume("mcp:ip:203.0.113.7", limit, 1)).allowed).toBe(true);
+    expect(charges).toHaveLength(1);
   });
 
-  it("runs one atomic script per charge, under a key that doesn't reveal the client", async () => {
-    const fetchMock = vi.mocked(globalThis.fetch);
-    fetchMock.mockResolvedValueOnce(Response.json({ result: [1, "9.75"] }));
-    fetchMock.mockResolvedValueOnce(Response.json({ result: [0, "0.5"] }));
-    const store = upstashRateLimitStore("https://example.upstash.io", "secret");
-    expect(await store.consume("mcp:ip:203.0.113.7", limit, 0.25)).toEqual({ allowed: true, retryAfterSeconds: 0 });
-    expect(await store.consume("mcp:ip:203.0.113.7", limit, 3, 0.25)).toEqual({ allowed: false, retryAfterSeconds: 3 });
-
-    const [url, init] = fetchMock.mock.calls[1];
-    expect(url).toBe("https://example.upstash.io");
-    expect(new Headers(init?.headers).get("authorization")).toBe("Bearer secret");
-    const command = JSON.parse(String(init?.body)) as string[];
-    expect(command[0]).toBe("EVAL");
-    expect(command.slice(2, 3)).toEqual(["1"]);
-    expect(command[3]).toMatch(/^eft:rl:[\w-]{43}$/);
-    expect(command.join(" ")).not.toContain("203.0.113.7");
-    expect(command.slice(4)).toEqual(["10", "1", expect.stringMatching(/^\d+$/), "3", "0.25"]);
-  });
-
-  it("counts in memory when Upstash fails, so requests are still served", async () => {
+  it("counts in memory when the user's object can't be reached, so requests are still served", async () => {
     vi.spyOn(console, "warn").mockImplementation(() => undefined);
-    vi.mocked(globalThis.fetch).mockResolvedValue(Response.json({ error: "WRONGPASS" }, { status: 401 }));
-    const store = upstashRateLimitStore("https://example.upstash.io", "wrong");
-    for (let i = 0; i < 10; i += 1) expect((await store.consume("key", limit, 1)).allowed).toBe(true);
-    expect((await store.consume("key", limit, 1)).allowed).toBe(false);
-    expect(console.warn).toHaveBeenCalledTimes(1);
-  });
-
-  it("stops asking a failing Upstash for a while, so bursts don't each wait out its timeout", async () => {
-    vi.spyOn(console, "warn").mockImplementation(() => undefined);
-    vi.useFakeTimers({ toFake: ["Date"] });
-    try {
-      vi.mocked(globalThis.fetch).mockRejectedValue(new Error("timed out"));
-      const store = upstashRateLimitStore("https://example.upstash.io", "secret");
-      for (let i = 0; i < 5; i += 1) expect((await store.consume("key", limit, 1)).allowed).toBe(true);
-      expect(globalThis.fetch).toHaveBeenCalledTimes(1);
-      vi.setSystemTime(Date.now() + 16_000);
-      await store.consume("key", limit, 1);
-      expect(globalThis.fetch).toHaveBeenCalledTimes(2);
-    } finally {
-      vi.useRealTimers();
-    }
+    setPlatform({ chargeUserBudget: async () => Promise.reject(new Error("unreachable")) });
+    const store = sharedRateLimitStore();
+    for (let i = 0; i < 10; i += 1) expect((await store.consume("mcp:user:fallback", limit, 1)).allowed).toBe(true);
+    expect((await store.consume("mcp:user:fallback", limit, 1)).allowed).toBe(false);
   });
 
   it("gives back what a request paid earlier when it is turned away", async () => {

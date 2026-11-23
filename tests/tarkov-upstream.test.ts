@@ -33,6 +33,7 @@ function requestsFor(resource: string) {
 function memoryCache() {
   const store = new Map<string, unknown>();
   const cache: SharedCache = {
+    maxChars: 12_000_000,
     async get(key) {
       return store.has(key) ? structuredClone(store.get(key)) : null;
     },
@@ -176,12 +177,14 @@ describe("tarkov.dev requests", () => {
 });
 
 describe("the regional cache", () => {
-  it("lets another instance reuse small datasets without asking tarkov.dev", async () => {
+  it("lets another instance reuse every dataset but the items file without asking tarkov.dev", async () => {
     const { cache, store } = memoryCache();
     setRegionalCacheForTests(cache);
     await detail();
     expect(requestsFor("crafts")).toHaveLength(1);
-    expect([...store.keys()].some((key) => key.includes("/items"))).toBe(false);
+    // The items file stays per isolate (its prices come from the price feed); its names are shared.
+    expect([...store.keys()].some((key) => key.includes("/items:"))).toBe(false);
+    expect([...store.keys()].some((key) => key.includes("/items_en:body:"))).toBe(true);
     expect([...store.keys()].some((key) => key.includes("/crafts:body:"))).toBe(true);
 
     clearTarkovResourceCache();

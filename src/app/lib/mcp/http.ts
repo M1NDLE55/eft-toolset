@@ -189,15 +189,18 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   };
   try {
     // The body was read and checked above; the handler gets it parsed, with the request's headers.
-    const forwarded = new Request(request.url, { method: "POST", headers: request.headers, signal: request.signal });
+    // Its DNS-rebinding guard reads Host for localhost URLs, which a request built in code may lack.
+    const headers = new Headers(request.headers);
+    if (!headers.has("host")) headers.set("host", new URL(request.url).host);
+    const forwarded = new Request(request.url, { method: "POST", headers, signal: request.signal });
     const response = await mcpHandler.fetch(forwarded, { authInfo, parsedBody: message });
-    const headers = new Headers(response.headers);
-    for (const [key, value] of Object.entries({ ...BASE_HEADERS, ...cors })) headers.set(key, value);
+    const responseHeaders = new Headers(response.headers);
+    for (const [key, value] of Object.entries({ ...BASE_HEADERS, ...cors })) responseHeaders.set(key, value);
     // Streamed (SSE) answers finish after this returns: the tool slot is held until the body ends.
     const body = response.body && isToolCall ? releaseWhenDone(response.body, release) : response.body;
     if (!body) release();
     if (response.status >= 500) console.error(`MCP request ${requestId} failed with ${response.status}`);
-    return new Response(body, { status: response.status, headers });
+    return new Response(body, { status: response.status, headers: responseHeaders });
   } catch (error) {
     release();
     console.error(`MCP request ${requestId} failed`, error);

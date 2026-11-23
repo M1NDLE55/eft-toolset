@@ -1,11 +1,7 @@
 // @vitest-environment node
 import { exportJWK, generateKeyPair, SignJWT, type CryptoKey, type JWK } from "jose";
-import { NextRequest } from "next/server";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
-import { GET as signIn } from "@/app/auth/sign-in/route";
-import { GET as callback } from "@/app/auth/callback/route";
-import { DELETE as deleteAccount, GET as getAccount } from "@/app/api/account/route";
-import { POST as signOut } from "@/app/api/account/sign-out/route";
+import { authCallback as callback, deleteAccount, getAccount, signIn, signOut } from "@/app/lib/account/routes";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import { SESSION_COOKIE, SIGNED_IN_COOKIE, STATE_COOKIE } from "@/app/lib/account/cookies";
 
@@ -77,18 +73,45 @@ function request(path: string, init: { method?: string; cookies?: Record<string,
   const cookie = Object.entries(init.cookies ?? {})
     .map(([name, value]) => `${name}=${value}`)
     .join("; ");
-  return new NextRequest(`http://localhost:3000${path}`, {
+  return new Request(`http://localhost:3000${path}`, {
     method: init.method ?? "GET",
     headers: { ...(cookie ? { cookie } : {}), ...init.headers },
   });
 }
 
+interface SetCookie {
+  value: string;
+  path?: string;
+  httpOnly?: boolean;
+  sameSite?: string;
+  maxAge?: number;
+}
+
+/** The response's Set-Cookie headers by name, read as a browser would. */
+function setCookies(response: Response) {
+  const parsed = new Map<string, SetCookie>();
+  for (const header of response.headers.getSetCookie()) {
+    const [pair, ...attributes] = header.split(";").map((part) => part.trim());
+    const index = pair.indexOf("=");
+    const cookie: SetCookie = { value: decodeURIComponent(pair.slice(index + 1)) };
+    for (const attribute of attributes) {
+      const [key, value] = attribute.split("=");
+      if (/^path$/i.test(key)) cookie.path = value;
+      if (/^httponly$/i.test(key)) cookie.httpOnly = true;
+      if (/^samesite$/i.test(key)) cookie.sameSite = value.toLowerCase();
+      if (/^max-age$/i.test(key)) cookie.maxAge = Number(value);
+    }
+    parsed.set(pair.slice(0, index), cookie);
+  }
+  return { get: (name: string) => parsed.get(name) };
+}
+
 /** Signs in through the routes and returns the session cookie value. */
 async function signedInSession() {
-  const started = signIn(request("/auth/sign-in"));
-  const state = started.cookies.get(STATE_COOKIE)!.value;
+  const started = await signIn(request("/auth/sign-in"));
+  const state = setCookies(started).get(STATE_COOKIE)!.value;
   const finished = await callback(request(`/auth/callback?code=code_01&state=${state}`, { cookies: { [STATE_COOKIE]: state } }));
-  return finished.cookies.get(SESSION_COOKIE)!.value;
+  return setCookies(finished).get(SESSION_COOKIE)!.value;
 }
 
 beforeEach(() => {
@@ -110,7 +133,7 @@ afterEach(() => {
 describe("accounts off", () => {
   it("reports accounts as off and sends sign-in back to settings", async () => {
     expect(await (await getAccount(request("/api/account"))).json()).toEqual({ configured: false, user: null });
-    const response = signIn(request("/auth/sign-in"));
+    const response = await signIn(request("/auth/sign-in"));
     expect(response.status).toBe(303);
     expect(response.headers.get("location")).toBe("http://localhost:3000/settings#account");
   });
@@ -125,8 +148,8 @@ describe("accounts off", () => {
 describe("accounts on", () => {
   beforeEach(enableAccounts);
 
-  it("starts AuthKit sign-in with a state cookie scoped to the callback", () => {
-    const response = signIn(request("/auth/sign-in?screen=sign-up"));
+  it("starts AuthKit sign-in with a state cookie scoped to the callback", async () => {
+    const response = await signIn(request("/auth/sign-in?screen=sign-up"));
     expect(response.status).toBe(303);
     const location = new URL(response.headers.get("location")!);
     expect(location.origin + location.pathname).toBe(`${API}/user_management/authorize`);
@@ -134,43 +157,43 @@ describe("accounts on", () => {
     expect(location.searchParams.get("client_id")).toBe(CLIENT_ID);
     expect(location.searchParams.get("redirect_uri")).toBe("http://localhost:3000/auth/callback");
     expect(location.searchParams.get("screen_hint")).toBe("sign-up");
-    const state = response.cookies.get(STATE_COOKIE)!;
+    const state = setCookies(response).get(STATE_COOKIE)!;
     expect(location.searchParams.get("state")).toBe(state.value);
     expect(state).toMatchObject({ httpOnly: true, path: "/auth/callback", sameSite: "lax" });
   });
 
-  it("returns production sign-ins to the canonical site and previews to their own host", () => {
-    const redirectUri = (url: string) =>
-      new URL(signIn(new NextRequest(url)).headers.get("location")!).searchParams.get("redirect_uri");
+  it("returns production sign-ins to the canonical site, or to APP_ORIGIN when a deployment sets it", async () => {
+    const redirectUri = async (url: string) =>
+      new URL((await signIn(new Request(url))).headers.get("location")!).searchParams.get("redirect_uri");
     vi.stubEnv("NODE_ENV", "production");
-    vi.stubEnv("VERCEL_ENV", "production");
-    expect(redirectUri("https://eft-toolset.vercel.app/auth/sign-in")).toBe("https://www.eft-toolset.com/auth/callback");
-    vi.stubEnv("VERCEL_ENV", "preview");
-    expect(redirectUri("https://eft-toolset-git-feat-x.vercel.app/auth/sign-in")).toBe(
-      "https://eft-toolset-git-feat-x.vercel.app/auth/callback"
+    expect(await redirectUri("https://eft-toolset.example.workers.dev/auth/sign-in")).toBe("https://www.eft-toolset.com/auth/callback");
+    vi.stubEnv("APP_ORIGIN", "https://eft-toolset.example.workers.dev");
+    expect(await redirectUri("https://eft-toolset.example.workers.dev/auth/sign-in")).toBe(
+      "https://eft-toolset.example.workers.dev/auth/callback"
     );
-    vi.stubEnv("VERCEL_ENV", "");
-    expect(redirectUri("https://example.test/auth/sign-in")).toBe("https://www.eft-toolset.com/auth/callback");
+    vi.stubEnv("APP_ORIGIN", "");
+    vi.stubEnv("NODE_ENV", "development");
+    expect(await redirectUri("http://localhost:5173/auth/sign-in")).toBe("http://localhost:5173/auth/callback");
   });
 
   it("refuses a callback whose state doesn't match the cookie", async () => {
     for (const cookies of [{}, { [STATE_COOKIE]: "other" }] as Record<string, string>[]) {
       const response = await callback(request("/auth/callback?code=code_01&state=mine", { cookies }));
       expect(response.headers.get("location")).toBe("http://localhost:3000/settings?account=error#account");
-      expect(response.cookies.get(SESSION_COOKIE)).toBeUndefined();
+      expect(setCookies(response).get(SESSION_COOKIE)).toBeUndefined();
     }
     expect(workosCalls.filter((call) => call.url.endsWith("/authenticate"))).toHaveLength(0);
   });
 
   it("signs in: seals the session in an httpOnly cookie, sets the readable hint, and shows the account", async () => {
-    const started = signIn(request("/auth/sign-in"));
-    const state = started.cookies.get(STATE_COOKIE)!.value;
+    const started = await signIn(request("/auth/sign-in"));
+    const state = setCookies(started).get(STATE_COOKIE)!.value;
     const finished = await callback(request(`/auth/callback?code=code_01&state=${state}`, { cookies: { [STATE_COOKIE]: state } }));
     expect(finished.headers.get("location")).toBe("http://localhost:3000/settings?account=signed-in#account");
-    const session = finished.cookies.get(SESSION_COOKIE)!;
+    const session = setCookies(finished).get(SESSION_COOKIE)!;
     expect(session).toMatchObject({ httpOnly: true, sameSite: "lax", path: "/" });
     expect(session.value).not.toContain("refresh_01");
-    const hint = finished.cookies.get(SIGNED_IN_COOKIE)!;
+    const hint = setCookies(finished).get(SIGNED_IN_COOKIE)!;
     expect(hint.value).toBe("1");
     expect(hint.httpOnly).not.toBe(true);
     expect(workosCalls.find((call) => call.url.endsWith("/authenticate"))?.body).toMatchObject({
@@ -194,15 +217,15 @@ describe("accounts on", () => {
     const account = await getAccount(request("/api/account", { cookies: { [SESSION_COOKIE]: session } }));
     expect((await account.json()).user.email).toBe("player@example.com");
     expect(workosCalls.some((call) => (call.body as { grant_type?: string } | null)?.grant_type === "refresh_token")).toBe(true);
-    const rewritten = account.cookies.get(SESSION_COOKIE)!.value;
+    const rewritten = setCookies(account).get(SESSION_COOKIE)!.value;
     expect(rewritten).not.toBe(session);
   });
 
   it("clears the cookies when the session cookie can't be read", async () => {
     const account = await getAccount(request("/api/account", { cookies: { [SESSION_COOKIE]: "tampered", [SIGNED_IN_COOKIE]: "1" } }));
     expect(await account.json()).toEqual({ configured: true, user: null });
-    expect(account.cookies.get(SESSION_COOKIE)?.value).toBe("");
-    expect(account.cookies.get(SIGNED_IN_COOKIE)?.value).toBe("");
+    expect(setCookies(account).get(SESSION_COOKIE)?.value).toBe("");
+    expect(setCookies(account).get(SIGNED_IN_COOKIE)?.value).toBe("");
   });
 
   it("signs out with AuthKit's logout URL and clears the cookies", async () => {
@@ -215,7 +238,7 @@ describe("accounts on", () => {
     expect(logout.origin + logout.pathname).toBe(`${API}/user_management/sessions/logout`);
     expect(logout.searchParams.get("session_id")).toBe("session_01");
     expect(logout.searchParams.get("return_to")).toBe("http://localhost:3000/settings#account");
-    expect(response.cookies.get(SESSION_COOKIE)?.value).toBe("");
+    expect(setCookies(response).get(SESSION_COOKIE)?.value).toBe("");
   });
 
   it("deletes the signed-in user, but only for requests from this site", async () => {
@@ -231,7 +254,7 @@ describe("accounts on", () => {
     );
     expect(await deleted.json()).toEqual({ deleted: true });
     expect(workosCalls.filter((call) => call.method === "DELETE").map((call) => call.url)).toEqual([`${API}/user_management/users/user_01`]);
-    expect(deleted.cookies.get(SESSION_COOKIE)?.value).toBe("");
+    expect(setCookies(deleted).get(SESSION_COOKIE)?.value).toBe("");
   });
 
   it("refuses to delete without a session", async () => {
