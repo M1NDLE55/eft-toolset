@@ -133,6 +133,8 @@ async function execute(
     request.signal.throwIfAborted();
     const data = await executeTarkovOperation(operation, variables, {
       signal: request.signal,
+      // Any copy beats an error; past the stale limit publicCacheControl sends it no-store.
+      maxStaleMs: Number.POSITIVE_INFINITY,
       onStale: () => {
         stale = true;
       },
@@ -160,7 +162,7 @@ async function execute(
         "Tarkov.dev data is temporarily unavailable.",
         "UPSTREAM_UNAVAILABLE",
         502,
-        { "Retry-After": "3" }
+        { "Retry-After": String(Math.max(1, Math.ceil((error.retryAfterMs ?? 3_000) / 1000))) }
       );
     }
     if (request.signal.aborted) {

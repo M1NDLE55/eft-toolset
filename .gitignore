@@ -18,6 +18,9 @@
 # production
 /build
 
+# tarkov.dev snapshot, written by scripts/build-tarkov-snapshot.mjs during the build
+/data/tarkov/
+
 # misc
 .DS_Store
 *.pem

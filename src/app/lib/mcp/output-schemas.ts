@@ -16,9 +16,12 @@ const list = <T extends z.ZodType>(entry: T) => z.array(entry);
 const gameMode = z.enum(["regular", "pve"]);
 const warnings = list(text).optional();
 
-/** Every result can carry a dataNotice when it was built from cached data (the server instructions explain it). */
+/**
+ * Every result that read tarkov.dev data carries dataAsOf, when the oldest of that data was last
+ * confirmed, and a dataNotice when it was stale (the server instructions explain both).
+ */
 function result<Shape extends z.ZodRawShape>(shape: Shape) {
-  return object({ ...shape, dataNotice: text.optional() });
+  return object({ ...shape, dataAsOf: text.optional(), dataNotice: text.optional() });
 }
 
 const sale = object({
@@ -530,4 +533,26 @@ export const lookupTermOutput = object({
   total: num.optional(),
   entries: list(glossaryEntry).optional(),
   nextOffset: maybeNum.optional(),
+});
+
+export const getDataStatusOutput = result({
+  // "degraded" while refreshing any dataset is failing; stale copies are still served then.
+  status: z.enum(["ok", "degraded"]),
+  /** When the copy bundled with this server was fetched: the fallback of last resort. */
+  deploymentSnapshotAsOf: maybeText,
+  freshnessTargets: object({ prices: text, tasksAndMaps: text, catalog: text }),
+  datasets: list(
+    object({
+      gameMode,
+      dataset: text,
+      loaded: bool,
+      source: z.enum(["tarkov.dev", "deployment"]).nullable(),
+      asOf: maybeText,
+      ageSeconds: maybeNum,
+      refreshAfterSeconds: num,
+      state: z.enum(["fresh", "refreshing", "due", "failing", "not loaded"]),
+      lastError: maybeText,
+      retryAfterSeconds: maybeNum,
+    })
+  ),
 });

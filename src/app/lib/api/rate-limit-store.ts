@@ -3,6 +3,9 @@ import { createHash } from "node:crypto";
 const MAX_MEMORY_ENTRIES = 10_000;
 const UPSTASH_TIMEOUT_MS = 1_000;
 const UPSTASH_WARNING_INTERVAL_MS = 60_000;
+// After a failure, count in memory for a while instead of making every request wait out Upstash's
+// timeout again (a tool call checks the budget twice).
+const UPSTASH_COOLDOWN_MS = 15_000;
 
 export interface BucketLimit {
   burst: number;
@@ -104,10 +107,12 @@ return {allowed, tostring(tokens)}
 /** Keys are hashed so IPs and user ids never reach Redis. */
 export function upstashRateLimitStore(restUrl: string, token: string, fallback: RateLimitStore = memoryRateLimitStore): RateLimitStore {
   let lastWarning = -Infinity;
+  let skipUntil = -Infinity;
   return {
     kind: "upstash",
     async consume(key, limit, cost, refundOnDenial = 0) {
       const now = Date.now();
+      if (now < skipUntil) return fallback.consume(key, limit, cost, refundOnDenial);
       try {
         const response = await fetch(restUrl, {
           method: "POST",
@@ -134,6 +139,7 @@ export function upstashRateLimitStore(restUrl: string, token: string, fallback: 
         if (allowed === 1) return { allowed: true, retryAfterSeconds: 0 };
         return { allowed: false, retryAfterSeconds: retryAfter(Number(tokens), limit, cost + refundOnDenial) };
       } catch (error) {
+        skipUntil = Date.now() + UPSTASH_COOLDOWN_MS;
         if (now - lastWarning >= UPSTASH_WARNING_INTERVAL_MS) {
           lastWarning = now;
           console.warn("Upstash rate limiting failed, so this instance is counting in memory.", String(error));

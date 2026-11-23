@@ -400,6 +400,22 @@ describe("rate limit stores", () => {
     expect(console.warn).toHaveBeenCalledTimes(1);
   });
 
+  it("stops asking a failing Upstash for a while, so bursts don't each wait out its timeout", async () => {
+    vi.spyOn(console, "warn").mockImplementation(() => undefined);
+    vi.useFakeTimers({ toFake: ["Date"] });
+    try {
+      vi.mocked(globalThis.fetch).mockRejectedValue(new Error("timed out"));
+      const store = upstashRateLimitStore("https://example.upstash.io", "secret");
+      for (let i = 0; i < 5; i += 1) expect((await store.consume("key", limit, 1)).allowed).toBe(true);
+      expect(globalThis.fetch).toHaveBeenCalledTimes(1);
+      vi.setSystemTime(Date.now() + 16_000);
+      await store.consume("key", limit, 1);
+      expect(globalThis.fetch).toHaveBeenCalledTimes(2);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it("gives back what a request paid earlier when it is turned away", async () => {
     const tight = { burst: 1, refillPerSecond: 0.001 };
     expect((await memoryRateLimitStore.consume("refund", tight, 0.25)).allowed).toBe(true);
