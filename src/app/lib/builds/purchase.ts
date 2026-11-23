@@ -10,6 +10,23 @@ export interface PresetParts {
   placements: ReadonlySet<string>;
   /** Slot paths (pathKey) of preset items that have parts attached. */
   branches: ReadonlySet<string>;
+  /**
+   * The same placements and branches as a tree of slot paths, so the optimiser can follow a
+   * path slot by slot instead of building its key string for every part it tries.
+   */
+  paths: PresetPath;
+}
+
+/** One slot path of a preset: the weapon itself (the root), or a slot below it. */
+export interface PresetPath {
+  /** pathKey of this path. */
+  key: string;
+  /** Items the preset installs here (placements at this path). */
+  items: ReadonlySet<string>;
+  /** The preset item here has parts attached (this path is in branches). */
+  branch: boolean;
+  /** Paths one slot further down, by slot id. */
+  children: ReadonlyMap<string, PresetPath>;
 }
 
 export interface PurchaseContext {
@@ -42,15 +59,25 @@ export function presetParts(
   }
   const placements = new Set<string>();
   const branches = new Set<string>();
-  const place = (node: BuildNode, path: string[]) => {
+  type Building = { key: string; items: Set<string>; branch: boolean; children: Map<string, Building> };
+  const paths: Building = { key: "", items: new Set(), branch: false, children: new Map() };
+  const place = (node: BuildNode, path: string[], at: Building) => {
     for (const [slotId, child] of Object.entries(node.slots)) {
+      const childPath = [...path, slotId];
       branches.add(pathKey(path));
-      placements.add(placementKey([...path, slotId], child.itemId));
-      place(child, [...path, slotId]);
+      at.branch = true;
+      placements.add(placementKey(childPath, child.itemId));
+      let below = at.children.get(slotId);
+      if (!below) {
+        below = { key: pathKey(childPath), items: new Set(), branch: false, children: new Map() };
+        at.children.set(slotId, below);
+      }
+      below.items.add(child.itemId);
+      place(child, childPath, below);
     }
   };
-  place(reconstructPresetTree(weaponId, contents, lookup), []);
-  return { counts, placements, branches };
+  place(reconstructPresetTree(weaponId, contents, lookup), [], paths);
+  return { counts, placements, branches, paths };
 }
 
 /** The cheapest allowed way to buy the weapon bare, and as its default preset. */
