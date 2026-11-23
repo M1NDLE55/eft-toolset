@@ -6,6 +6,11 @@
   "compatibility_date": "2026-11-17",
   "compatibility_flags": ["nodejs_compat"],
   "observability": { "enabled": true },
+  // The site's custom domain. The apex (eft-toolset.com) is a separate redirect Worker in
+  // workers/apex-redirect, because static assets are served before this Worker runs.
+  "routes": [{ "pattern": "www.eft-toolset.com", "custom_domain": true }],
+  "workers_dev": true,
+  "preview_urls": false,
   "limits": {
     // CPU time allowed per invocation (requests and cron runs), a guard against runaway work. It
     // matches the MCP tool deadline (DEFAULT_MCP_LIMITS.toolDeadlineMs): CPU time never exceeds
