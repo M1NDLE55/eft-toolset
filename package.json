@@ -7,6 +7,7 @@
     "build": "node scripts/build-tarkov-snapshot.mjs && vite build",
     "lint": "eslint .",
     "test": "vitest run",
+    "bench:optimizer": "OPTIMIZER_BENCH=1 vitest run tests/optimizer-benchmark.test.ts",
     "preview": "vite preview",
     "typecheck": "wrangler types --strict-vars false && tsc --noEmit",
     "cf-typegen": "wrangler types --strict-vars false"
