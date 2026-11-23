@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { useRef, useState, type DragEvent } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/app/lib/navigation/hooks";
 import { Copy, Download, FileUp, Map as MapIcon, Plus, Trash2 } from "lucide-react";
 import type { MapConfig, RaidPlan } from "@/app/lib/raid-planner/types";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";

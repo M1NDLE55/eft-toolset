@@ -1,4 +1,5 @@
-const VERSION = "v3";
+// Bumped when the cached files change shape: v4 is the first TanStack Start build (hashed files in /assets/).
+const VERSION = "v4";
 const STATIC_CACHE = `eft-static-${VERSION}`;
 const PAGE_CACHE = `eft-pages-${VERSION}`;
 const DATA_CACHE = `eft-data-${VERSION}`;
@@ -27,7 +28,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (url.pathname.startsWith("/_next/static/")) {
+  if (url.pathname.startsWith("/assets/")) {
     event.respondWith(cacheFirst(request));
   } else if (url.pathname === "/api/tarkov") {
     event.respondWith(networkFirst(request, DATA_CACHE));

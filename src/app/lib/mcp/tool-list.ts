@@ -1,8 +1,7 @@
 import { z } from "zod";
-import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { ListToolsRequestSchema, type Tool, type ToolAnnotations } from "@modelcontextprotocol/sdk/types.js";
+import type { CallToolResult, ListToolsResult, McpServer, Tool, ToolAnnotations } from "@modelcontextprotocol/server";
 
-/** What tools/list publishes for one tool; the zod schemas still validate every call. */
+/** What tools/list publishes for one tool, and what tools/call runs; the zod schemas validate every call. */
 export interface ListedTool {
   name: string;
   title: string;
@@ -10,6 +9,8 @@ export interface ListedTool {
   inputSchema: z.ZodObject;
   outputSchema: z.ZodObject;
   annotations: ToolAnnotations;
+  /** Runs the tool with validated arguments; never throws (runTool turns failures into tool errors). */
+  run: (args: Record<string, unknown>) => Promise<CallToolResult>;
 }
 
 type JsonSchema = { [key: string]: unknown };
@@ -133,14 +134,57 @@ function publish(tool: ListedTool): Tool {
   return entry;
 }
 
+/** "Invalid input: expected string, received number at item": one line per problem, as clients have always seen them. */
+function describeIssues(error: z.ZodError) {
+  return error.issues
+    .map((issue) => {
+      if (!issue.path.length) return issue.message;
+      const path = issue.path.reduce<string>(
+        (at, segment, index) => (index === 0 ? String(segment) : typeof segment === "number" ? `${at}[${segment}]` : `${at}.${String(segment)}`),
+        ""
+      );
+      return `${issue.message} at ${path}`;
+    })
+    .join("\n");
+}
+
+/** A failed call, as a tool error the model can read. The code prefix is the one these results have always carried. */
+function toolError(message: string): CallToolResult {
+  return { content: [{ type: "text", text: `MCP error -32602: ${message}` }], isError: true };
+}
+
 /**
- * Answers tools/list with the compact schemas above instead of the SDK's full conversion.
- * Call it after registering every tool: the SDK installs its own handler on the first
- * registration, and this replaces it.
+ * Answers tools/call. An unknown tool and arguments that don't fit its schema come back as tool
+ * errors (isError) naming the problem, as they always have, rather than as protocol errors; a
+ * successful result is checked against the tool's output schema.
+ */
+function serveToolCalls(server: McpServer, tools: ReadonlyMap<string, ListedTool>) {
+  server.server.setRequestHandler("tools/call", async (request) => {
+    const { name, arguments: args } = request.params;
+    const tool = tools.get(name);
+    if (!tool) return toolError(`Tool ${name} not found`);
+    const input = await tool.inputSchema.safeParseAsync(args ?? {});
+    if (!input.success) return toolError(`Input validation error: Invalid arguments for tool ${name}: ${describeIssues(input.error)}`);
+    const result = await tool.run(input.data);
+    if (!result.isError) {
+      if (result.structuredContent === undefined) return toolError(`Output validation error: Tool ${name} has an output schema but no structured content was provided`);
+      const output = await tool.outputSchema.safeParseAsync(result.structuredContent);
+      if (!output.success) return toolError(`Output validation error: Invalid structured content for tool ${name}: ${describeIssues(output.error)}`);
+    }
+    // Every output schema has an object root, so no advertised schema needs passing for wrapping.
+    return server.server.projectCallToolResult(result, undefined);
+  });
+}
+
+/**
+ * Answers tools/list with the compact schemas above instead of the SDK's full conversion, and
+ * tools/call with serveToolCalls. Call it after registering every tool: the SDK installs its own
+ * handlers on the first registration, and these replace them.
  */
 export function serveCompactToolList(server: McpServer, securitySchemes?: readonly object[]) {
+  serveToolCalls(server, new Map((listings.get(server) ?? []).map((tool) => [tool.name, tool])));
   const tools = (listings.get(server) ?? [])
     .map(publish)
-    .map((tool) => (securitySchemes ? { ...tool, securitySchemes, _meta: { ...tool._meta, securitySchemes } } : tool));
-  server.server.setRequestHandler(ListToolsRequestSchema, () => ({ tools }));
+    .map((tool) => (securitySchemes ? { ...tool, securitySchemes, _meta: { ...tool._meta, securitySchemes } } : tool)) as unknown as ListToolsResult["tools"];
+  server.server.setRequestHandler("tools/list", () => ({ tools }));
 }

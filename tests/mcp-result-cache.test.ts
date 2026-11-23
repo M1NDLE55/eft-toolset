@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
-import { POST } from "@/app/api/mcp/route";
+import { mcpPost as POST } from "./mcp-post";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import { clearTarkovResourceCache } from "@/app/lib/api/tarkov-server";
 import { clearToolResults } from "@/app/lib/mcp/result-cache";

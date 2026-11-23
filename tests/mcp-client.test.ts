@@ -3,7 +3,7 @@ import { beforeAll, beforeEach, expect, it, vi } from "vitest";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { AjvJsonSchemaValidator } from "@modelcontextprotocol/sdk/validation/ajv";
-import { POST } from "@/app/api/mcp/route";
+import { mcpPost as POST } from "./mcp-post";
 import { clearTarkovResourceCache } from "@/app/lib/api/tarkov-server";
 import { MCP_TOOL_NAMES } from "@/app/lib/mcp/catalog";
 import { setWikiSnapshotDirectory } from "@/app/lib/wiki/snapshot";

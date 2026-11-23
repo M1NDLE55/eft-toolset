@@ -1,8 +1,41 @@
 import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
+import globals from "globals";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import tseslint from "typescript-eslint";
 
+// The rules the site has always been linted with (React, the hooks and React Compiler rules, and
+// the accessibility checks), without the Next.js plugin.
 export default defineConfig([
-  ...nextVitals,
+  {
+    files: ["**/*.{js,jsx,mjs,ts,tsx,mts}"],
+    plugins: { react, "react-hooks": reactHooks, "jsx-a11y": jsxA11y },
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: { sourceType: "module", ecmaFeatures: { jsx: true } },
+      globals: { ...globals.browser, ...globals.node },
+    },
+    settings: { react: { version: "detect" } },
+    rules: {
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      "react/no-unknown-property": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "react/jsx-no-target-blank": "off",
+      "jsx-a11y/alt-text": ["warn", { elements: ["img"], img: ["Image"] }],
+      "jsx-a11y/aria-props": "warn",
+      "jsx-a11y/aria-proptypes": "warn",
+      "jsx-a11y/aria-unsupported-elements": "warn",
+      "jsx-a11y/role-has-required-aria-props": "warn",
+      "jsx-a11y/role-supports-aria-props": "warn",
+    },
+  },
+  {
+    files: ["**/*.{ts,tsx,mts}"],
+    plugins: { "@typescript-eslint": tseslint.plugin },
+  },
   {
     rules: {
       "no-restricted-imports": [
@@ -10,22 +43,14 @@ export default defineConfig([
         {
           paths: [
             {
-              name: "next/navigation",
+              name: "@/app/lib/navigation/hooks",
               importNames: ["usePathname"],
-              message:
-                "Use usePublicPathname from @/components/game-mode/use-public-pathname: PVE copies render at /pve/… on the server, so the raw path breaks hydration.",
-            },
-          ],
-          patterns: [
-            {
-              group: ["next/dist/client/components/navigation*"],
-              importNames: ["usePathname"],
-              message: "Use usePublicPathname from @/components/game-mode/use-public-pathname.",
+              message: "Use usePublicPathname from @/components/game-mode/use-public-pathname, which drops the old /pve prefix.",
             },
           ],
         },
       ],
     },
   },
-  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
+  globalIgnores(["dist/**", ".wrangler/**", "src/routeTree.gen.ts", "worker-configuration.d.ts", "data/**"]),
 ]);

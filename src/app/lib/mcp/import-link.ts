@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import type { McpServer } from "@modelcontextprotocol/server";
 import type { GunBuild } from "@/app/lib/types/gunBuilder";
 import type { RaidPlan } from "@/app/lib/raid-planner/types";
 import { createId } from "@/app/lib/id";

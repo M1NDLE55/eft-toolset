@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { GET, POST } from "@/app/api/tarkov/route";
+import { GET, POST } from "@/app/lib/api/tarkov-route";
+import { setPlatform } from "@/app/lib/server/platform";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 
 beforeEach(() => {
@@ -98,10 +99,12 @@ describe("slow uploads", () => {
   });
 });
 
-describe("client identity on Vercel", () => {
-  it("ignores spoofed forwarding headers and uses Vercel's client IP", async () => {
+describe("client identity in the Worker", () => {
+  afterEach(() => setPlatform());
+
+  it("ignores spoofed forwarding headers and uses Cloudflare's client IP", async () => {
     vi.stubEnv("CLIENT_IP_HEADER", "");
-    vi.stubEnv("VERCEL", "1");
+    setPlatform({ trustedClientIpHeader: "cf-connecting-ip", limitClientIp: async () => true });
     vi.spyOn(Date, "now").mockReturnValue(1_950_000_000_000);
     try {
       const responses = [];
@@ -112,8 +115,9 @@ describe("client identity on Vercel", () => {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                "X-Real-IP": "198.51.100.99",
-                "CF-Connecting-IP": `203.0.113.${index % 250}`,
+                "CF-Connecting-IP": "198.51.100.99",
+                "X-Forwarded-For": `203.0.113.${index % 250}`,
+                "X-Real-IP": `203.0.113.${index % 250}`,
               },
               body: JSON.stringify({ operation: "arbitrary.query", variables: {} }),
             })
@@ -124,6 +128,27 @@ describe("client identity on Vercel", () => {
     } finally {
       vi.unstubAllEnvs();
     }
+  });
+
+  it("refuses a client over the rate-limit binding's limit, keyed by its IP", async () => {
+    const keys: string[] = [];
+    setPlatform({
+      trustedClientIpHeader: "cf-connecting-ip",
+      limitClientIp: async (pool, ip) => {
+        keys.push(`${pool}:${ip}`);
+        return false;
+      },
+    });
+    const response = await POST(
+      new Request("http://localhost/api/tarkov", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "CF-Connecting-IP": "198.51.100.42" },
+        body: JSON.stringify({ operation: "item.catalog", variables: { gameMode: "regular" } }),
+      })
+    );
+    expect(response.status).toBe(429);
+    expect(response.headers.get("retry-after")).toBe("60");
+    expect(keys).toEqual(["web:198.51.100.42"]);
   });
 });
 

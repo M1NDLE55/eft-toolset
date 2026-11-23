@@ -5,6 +5,7 @@ import {
   type BucketLimit,
   type RequestBudget,
 } from "./rate-limit-store";
+import { platform } from "@/app/lib/server/platform";
 
 export type { BucketLimit, RequestBudget };
 
@@ -39,13 +40,13 @@ export function consumeGlobalBudget(pool: BudgetPool, cost: number, refundOnDeni
 let warnedUntrustedClientIp = false;
 
 /**
- * The client's IP from the header the deployment trusts: CLIENT_IP_HEADER, or X-Real-IP on
- * Vercel. Without one, any forwarding header could be forged, so clients can't be told
- * apart (null) and only the pool's global limit applies.
+ * The client's IP from the header the deployment trusts: CLIENT_IP_HEADER, or CF-Connecting-IP in
+ * the Worker, which Cloudflare sets itself. Without one, any forwarding header could be forged, so
+ * clients can't be told apart (null) and only the pool's global limit applies.
  */
 export function clientIp(request: Request) {
   const trustedHeader =
-    process.env.CLIENT_IP_HEADER?.trim().toLowerCase() || (process.env.VERCEL ? "x-real-ip" : undefined);
+    process.env.CLIENT_IP_HEADER?.trim().toLowerCase() || platform().trustedClientIpHeader;
   if (!trustedHeader) {
     if (!warnedUntrustedClientIp && process.env.NODE_ENV === "production") {
       warnedUntrustedClientIp = true;
@@ -63,5 +64,20 @@ export function resetRequestBudgets() {
   for (const pool of Object.keys(globalBuckets) as BudgetPool[]) {
     globalBuckets[pool].tokens = GLOBAL_LIMITS[pool].burst;
     globalBuckets[pool].updatedAt = Date.now();
+  }
+}
+
+/**
+ * The website's limit for one client across every isolate (the Workers rate-limit binding), checked
+ * beside the per-isolate buckets above. Null when the request is within it.
+ */
+export async function crossIsolateLimit(request: Request, pool: BudgetPool): Promise<RequestBudget | null> {
+  const ip = clientIp(request);
+  const limit = platform().limitClientIp;
+  if (ip === null || !limit) return null;
+  try {
+    return (await limit(pool, ip)) ? null : { allowed: false, retryAfterSeconds: 60 };
+  } catch {
+    return null;
   }
 }

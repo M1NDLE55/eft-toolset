@@ -1,5 +1,6 @@
-import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
-import { clientIp } from "@/app/lib/api/rate-limit";
+import type { AuthInfo } from "@modelcontextprotocol/server";
+import { createMcpHandler } from "agents/mcp/server";
+import { clientIp, crossIsolateLimit } from "@/app/lib/api/rate-limit";
 import {
   RequestBodyBusyError,
   RequestBodyTooLargeError,
@@ -20,6 +21,7 @@ import {
 } from "./auth";
 import type { RequestBudget } from "@/app/lib/api/rate-limit";
 import { chargeMcpBudget, type Payer } from "./budget";
+import type { ToolContext } from "./context";
 import { createEftMcpServer } from "./server";
 
 export interface McpHttpLimits {
@@ -28,8 +30,8 @@ export interface McpHttpLimits {
   /** Tools stop at this deadline and return an error result the model can act on. */
   toolDeadlineMs: number;
   /**
-   * Tool calls running at once on this server instance, which leaves most of its operation
-   * pool for the website. Rate limits, not this cap, bound the service as a whole.
+   * Tool calls running at once in this isolate, which leaves most of its operation pool for the
+   * website. Rate limits, not this cap, bound the service as a whole.
    */
   maxConcurrentToolCalls: number;
 }
@@ -72,6 +74,55 @@ interface JsonRpcMessage {
   method?: unknown;
   id?: unknown;
   params?: { name?: unknown; _meta?: unknown };
+}
+
+export const MCP_ROUTE = "/api/mcp";
+
+/** What each request's server is built with; carried to the factory in the request's AuthInfo. */
+interface EftAuthExtra extends Record<string, unknown> {
+  toolContext: ToolContext;
+  securitySchemes?: readonly object[];
+}
+
+/**
+ * Cloudflare's stateless MCP handler (Agents SDK, MCP SDK v2): a fresh server for every request,
+ * serving 2026-07-28 clients and 2025-era Streamable HTTP clients from this one route. Origins are
+ * checked here before it runs (see corsHeaders), so its own Origin check is handed to us, and its
+ * CORS headers are replaced with ours.
+ */
+const mcpHandler = createMcpHandler(
+  ({ authInfo }) => {
+    const extra = authInfo?.extra as EftAuthExtra | undefined;
+    if (!extra) throw new Error("MCP request reached the server without its context.");
+    return createEftMcpServer(extra.toolContext, { securitySchemes: extra.securitySchemes });
+  },
+  {
+    route: MCP_ROUTE,
+    legacy: "stateless",
+    responseMode: "json",
+    allowedOriginHostnames: "*",
+    corsOptions: false,
+    onerror: (error) => console.error("MCP handler error", error),
+  }
+);
+
+/** Every request to /api/mcp. */
+export async function handleMcpRequest(request: Request, limits: McpHttpLimits = DEFAULT_MCP_LIMITS): Promise<Response> {
+  // The old Vercel firewall rule: at most 600 requests a minute per client IP, before anything else.
+  const ipLimited = await crossIsolateLimit(request, "mcp");
+  if (ipLimited) {
+    return jsonRpcError(corsHeaders(request, mcpAuthConfig()) ?? {}, 429, -32000, "Too many requests.", {
+      "Retry-After": String(ipLimited.retryAfterSeconds),
+    });
+  }
+  switch (request.method) {
+    case "POST":
+      return handleMcpPost(request, limits);
+    case "OPTIONS":
+      return mcpPreflight(request);
+    default:
+      return mcpMethodNotAllowed(request);
+  }
 }
 
 export async function handleMcpPost(request: Request, limits: McpHttpLimits = DEFAULT_MCP_LIMITS) {
@@ -118,33 +169,68 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
   if (isToolCall && !acquireSlot(limits)) return busy(cors);
 
   const requestId = crypto.randomUUID().slice(0, 8);
-  const server = createEftMcpServer(
-    {
-      origin: linkOrigin(request),
-      signal: AbortSignal.any([request.signal, AbortSignal.timeout(limits.toolDeadlineMs)]),
-      requestId,
-      userId: payer.kind === "user" ? payer.subject : undefined,
-    },
-    { securitySchemes: auth ? OAUTH_SECURITY_SCHEMES : undefined }
-  );
+  const toolContext: ToolContext = {
+    origin: linkOrigin(request),
+    signal: AbortSignal.any([request.signal, AbortSignal.timeout(limits.toolDeadlineMs)]),
+    requestId,
+    userId: payer.kind === "user" ? payer.subject : undefined,
+  };
+  const authInfo: AuthInfo = {
+    token: "",
+    clientId: "eft-toolset",
+    scopes: [],
+    extra: { toolContext, securitySchemes: auth ? OAUTH_SECURITY_SCHEMES : undefined } satisfies EftAuthExtra,
+  };
+  let released = !isToolCall;
+  const release = () => {
+    if (released) return;
+    released = true;
+    releaseSlot();
+  };
   try {
-    const transport = new WebStandardStreamableHTTPServerTransport({
-      sessionIdGenerator: undefined,
-      enableJsonResponse: true,
-    });
-    await server.connect(transport);
-    const response = await transport.handleRequest(request, { parsedBody: message });
-    const headers = new Headers(response.headers);
-    for (const [key, value] of Object.entries({ ...BASE_HEADERS, ...cors })) headers.set(key, value);
-    return new Response(response.body, { status: response.status, headers });
+    // The body was read and checked above; the handler gets it parsed, with the request's headers.
+    // Its DNS-rebinding guard reads Host for localhost URLs, which a request built in code may lack.
+    const headers = new Headers(request.headers);
+    if (!headers.has("host")) headers.set("host", new URL(request.url).host);
+    const forwarded = new Request(request.url, { method: "POST", headers, signal: request.signal });
+    const response = await mcpHandler.fetch(forwarded, { authInfo, parsedBody: message });
+    const responseHeaders = new Headers(response.headers);
+    for (const [key, value] of Object.entries({ ...BASE_HEADERS, ...cors })) responseHeaders.set(key, value);
+    // Streamed (SSE) answers finish after this returns: the tool slot is held until the body ends.
+    const body = response.body && isToolCall ? releaseWhenDone(response.body, release) : response.body;
+    if (!body) release();
+    if (response.status >= 500) console.error(`MCP request ${requestId} failed with ${response.status}`);
+    return new Response(body, { status: response.status, headers: responseHeaders });
   } catch (error) {
+    release();
     console.error(`MCP request ${requestId} failed`, error);
     const id = typeof message.id === "string" || typeof message.id === "number" ? message.id : null;
     return jsonRpcError(cors, 500, -32603, `Internal error. Reference: ${requestId}.`, {}, id);
-  } finally {
-    if (isToolCall) releaseSlot();
-    void server.close().catch(() => undefined);
   }
+}
+
+function releaseWhenDone(body: ReadableStream<Uint8Array>, release: () => void) {
+  const reader = body.getReader();
+  return new ReadableStream<Uint8Array>({
+    async pull(controller) {
+      try {
+        const { done, value } = await reader.read();
+        if (done) {
+          release();
+          controller.close();
+        } else {
+          controller.enqueue(value);
+        }
+      } catch (error) {
+        release();
+        controller.error(error);
+      }
+    },
+    async cancel(reason) {
+      release();
+      await reader.cancel(reason).catch(() => undefined);
+    },
+  });
 }
 
 /** ChatGPT tool calls get a tool result with mcp/www_authenticate; everyone else gets the spec 401. */

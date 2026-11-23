@@ -1,10 +1,11 @@
-// Imported by next.config.ts, so it uses relative imports only.
-import { CLOUDFLARE_BEACON_HOST, CLOUDFLARE_INSIGHTS_HOST } from "../analytics/cloudflare";
+// Imported by vite.config.ts (through static-headers.ts), so it uses relative imports only.
+import { CLOUDFLARE_BEACON_HOST, CLOUDFLARE_INSIGHTS_HOST } from "../analytics/cloudflare.ts";
 
 /**
- * One policy for every page, set by next.config.ts rather than per request. Content pages are
- * cached and served to everyone, so they can't carry a per-request nonce, and Next's inline RSC
- * scripts differ on every page, so they can't be hashed: inline scripts are allowed. Inline event
+ * One policy for every page, set by the Worker (apply.ts) and the static assets' _headers file
+ * rather than per request. Content pages are cached and served to everyone, so they can't carry a
+ * per-request nonce, and the router's inline hydration scripts differ on every page, so they can't
+ * be hashed: inline scripts are allowed. Inline event
  * handlers stay blocked (script-src-attr), and scripts load only from this site and Cloudflare's
  * beacon host.
  */

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { usePublicPathname } from "@/components/game-mode/use-public-pathname";
 import { createContext, useContext, useState, type ComponentProps, type ReactNode } from "react";
 import { isItemSlug, itemHref } from "@/app/lib/item-links";

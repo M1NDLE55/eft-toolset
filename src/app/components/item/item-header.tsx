@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/app/lib/navigation/image";
 import { ExternalLink } from "lucide-react";
 import Share from "./share";
 import type { ComposedItem } from "@/app/lib/cache/types";

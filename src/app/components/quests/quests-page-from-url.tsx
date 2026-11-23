@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense, useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams } from "@/app/lib/navigation/hooks";
 import { QuestsPage, type QuestsInitial } from "./quests-page";
 
 const NO_SEARCH: Record<string, string | string[]> = {};

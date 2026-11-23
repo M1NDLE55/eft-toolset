@@ -1,0 +1,73 @@
+// Cloudflare Workers configuration. See DEPLOYMENT.md for what each binding needs in the account.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "eft-toolset",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-11-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  // The site's custom domain. The apex (eft-toolset.com) is a separate redirect Worker in
+  // workers/apex-redirect, because static assets are served before this Worker runs.
+  "routes": [{ "pattern": "www.eft-toolset.com", "custom_domain": true }],
+  "workers_dev": true,
+  "preview_urls": false,
+  "limits": {
+    // CPU time allowed per invocation (requests and cron runs), a guard against runaway work. It
+    // matches the MCP tool deadline (DEFAULT_MCP_LIMITS.toolDeadlineMs): CPU time never exceeds
+    // wall time, so a legitimate call stops at the app's own deadlines (the optimiser's 20 s, the
+    // tool's 40 s) with a clear error before this limit cuts it off, and only work that ignores
+    // them reaches it. Keep it at or above toolDeadlineMs if that changes. Maximum 300000.
+    "cpu_ms": 40000
+  },
+  "assets": {
+    "binding": "ASSETS",
+    // The data snapshot (/_data/*) is read by the Worker through the ASSETS binding; the Worker
+    // answers public requests for it with 404.
+    "run_worker_first": ["/_data/*"]
+  },
+  "kv_namespaces": [
+    {
+      // Shared tarkov.dev copies and the price feed, written by the cron and by isolates.
+      "binding": "TARKOV_DATA",
+      "id": "483768ea683c4c3cbb451c2cc0e778ea"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "USER", "class_name": "UserDO" },
+      { "name": "PLAN", "class_name": "PlanDO" }
+    ]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["UserDO", "PlanDO"] }],
+  "ratelimits": [
+    {
+      // 600 requests a minute per client IP on /api/mcp (the Vercel firewall rule).
+      "name": "MCP_IP_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 600, "period": 60 }
+    },
+    {
+      // Website API and account routes, per client IP, beside each isolate's own buckets.
+      "name": "WEB_IP_LIMITER",
+      "namespace_id": "1002",
+      "simple": { "limit": 600, "period": 60 }
+    }
+  ],
+  "images": { "binding": "IMAGES" },
+  "triggers": {
+    // Every minute: the price feed; the other datasets refresh when their freshness runs out.
+    "crons": ["* * * * *"]
+  },
+  // Settings that aren't secret. Prerendered pages are built with them too, so set them here rather
+  // than in the dashboard. Secrets (WORKOS_API_KEY, WORKOS_COOKIE_PASSWORD) are set with
+  // `wrangler secret put`; see DEPLOYMENT.md.
+  "vars": {
+    "MCP_RESOURCE_URL": "https://www.eft-toolset.com/api/mcp",
+    // The WorkOS AuthKit domain (https:// is added). Empty keeps /api/mcp closed (503).
+    "MCP_AUTHKIT_DOMAIN": "courteous-dinosaur-02.authkit.app",
+    // The WorkOS client id; with the two secrets, it turns on website accounts.
+    "WORKOS_CLIENT_ID": "client_01M7D57AE083YF2F71D6KD2N98",
+    // Cloudflare Web Analytics site token; empty leaves the beacon out.
+    "CLOUDFLARE_WEB_ANALYTICS_TOKEN": "43623679c51e4bc49533b715bee9b1a7"
+  }
+}

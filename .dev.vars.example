@@ -1,0 +1,25 @@
+# Local settings for `npm run dev` and `wrangler dev`: copy to .dev.vars (never commit it).
+# Production sets the same names: the non-secret ones in wrangler.jsonc ("vars"), the secrets with
+# `wrangler secret put`. See DEPLOYMENT.md.
+
+# MCP sign-in. Empty in development serves /api/mcp without sign-in, charging each IP's budget.
+MCP_AUTHKIT_DOMAIN=
+# The MCP URL access tokens are issued for (default https://www.eft-toolset.com/api/mcp).
+MCP_RESOURCE_URL=
+
+# Website accounts: all three, from the same WorkOS environment as MCP_AUTHKIT_DOMAIN. The cookie
+# password is 32+ characters.
+WORKOS_API_KEY=
+WORKOS_CLIENT_ID=
+WORKOS_COOKIE_PASSWORD=
+# Where sign-in returns to, for a deployment on another host than www.eft-toolset.com.
+APP_ORIGIN=
+
+# Each signed-in user's MCP budget (default 160 tokens, refilling 3 a second).
+MCP_USER_RATE_BURST=
+MCP_USER_RATE_PER_SECOND=
+
+CLOUDFLARE_WEB_ANALYTICS_TOKEN=
+
+# A stand-in for json.tarkov.dev (scripts/mcp-load.mjs --serve-only); never set in production.
+TARKOV_UPSTREAM_URL=

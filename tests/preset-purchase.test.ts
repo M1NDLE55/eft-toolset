@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { BuildItemData, BuildNode, ModSlotDef, PriceSources, TraderOffer } from "@/app/lib/types/gunBuilder";
 import { optimizeBuild, type OptimizeOptions } from "@/app/lib/builds/optimizer";
-import { planPurchase, presetParts } from "@/app/lib/builds/purchase";
+import { pathKey, placementKey, planPurchase, presetParts, type PresetPath } from "@/app/lib/builds/purchase";
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";
 import { computeStats } from "@/app/lib/builds/stats";
 
@@ -264,6 +264,31 @@ describe("optimising a weapon sold as its default preset", () => {
     const list = buildShoppingList(twice, data, TRADERS, true, { preset: owned });
     expect(list.totalRUB).toBe(55_000);
     expect(list.rows[1]).toMatchObject({ itemId: "factory-stock", count: 1, withWeapon: 1 });
+  });
+
+  it("describes the same placements and branches in its path tree as in its key sets", () => {
+    const data = new Map(
+      [
+        weapon([], { slots: [slot("mount-a", ["mount"]), slot("mount-b", ["mount"]), slot("muzzle", ["brake"])] }),
+        item("mount", { slots: [slot("sight", ["scope"])] }),
+        item("scope"),
+        item("brake"),
+      ].map((entry) => [entry.id, entry])
+    );
+    const owned = presetParts("gun", { baseItemId: "gun", itemIds: ["gun", "mount", "scope", "brake"] }, data)!;
+    const placements = new Set<string>();
+    const branches = new Set<string>();
+    const walk = (at: PresetPath, path: string[]) => {
+      expect(at.key).toBe(pathKey(path));
+      if (at.branch) branches.add(at.key);
+      for (const itemId of at.items) placements.add(placementKey(path, itemId));
+      for (const [slotId, child] of at.children) walk(child, [...path, slotId]);
+    };
+    walk(owned.paths, []);
+    expect(placements).toEqual(owned.placements);
+    expect(branches).toEqual(owned.branches);
+    expect(placements.size).toBeGreaterThan(1);
+    expect(branches).toContain("mount-a");
   });
 
   it("makes a preset part free only at its own place when its parent is installed twice", async () => {

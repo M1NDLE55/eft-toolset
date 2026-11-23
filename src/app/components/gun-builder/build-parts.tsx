@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { ExternalLink } from "lucide-react";
 import type { DescribedBuild } from "@/app/lib/builds/best-builds";
 import { Rubles } from "@/app/lib/currency";

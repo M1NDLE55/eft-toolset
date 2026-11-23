@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/app/lib/navigation/image";
 import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 import { AlertTriangle, LoaderCircle, Search, X } from "lucide-react";
 import { useCatalog } from "@/app/lib/cache/hooks";

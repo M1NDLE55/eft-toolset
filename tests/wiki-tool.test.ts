@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
-import { POST } from "@/app/api/mcp/route";
+import { mcpPost as POST } from "./mcp-post";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import { MAX_WIKI_CONTENT_CHARS } from "@/app/lib/mcp/wiki";
 import { setWikiSnapshotDirectory } from "@/app/lib/wiki/snapshot";

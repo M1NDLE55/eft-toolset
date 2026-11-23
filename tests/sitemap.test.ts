@@ -57,7 +57,7 @@ describe("quest sitemap entries", () => {
 
 describe("sitemap", () => {
   it("has every indexable route, the quest URLs from both modes and a stable lastModified for quests", async () => {
-    const { default: sitemap } = await import("@/app/sitemap");
+    const { default: sitemap } = await import("@/app/lib/seo/sitemap");
     const entries = await sitemap();
     const urls = entries.map((entry) => entry.url.replace("https://www.eft-toolset.com", ""));
     expect(new Set(urls).size).toBe(urls.length);
@@ -111,7 +111,7 @@ describe("sitemap", () => {
 
 describe("robots.txt", () => {
   it("lets search and answer bots in, keeps training crawlers and SEO tools out, and names the sitemap", async () => {
-    const { default: robots } = await import("@/app/robots");
+    const { default: robots } = await import("@/app/lib/seo/robots");
     const { rules, sitemap } = robots();
     const groups = Array.isArray(rules) ? rules : [rules];
     const groupFor = (agent: string) => groups.find((group) => [group.userAgent].flat().includes(agent));

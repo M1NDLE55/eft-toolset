@@ -1,7 +1,6 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { promisify } from "node:util";
 import { brotliDecompress } from "node:zlib";
+import { readDataText, platform } from "@/app/lib/server/platform";
 
 // The tarkov.dev copy bundled with the deployment by scripts/build-tarkov-snapshot.mjs. The adapter
 // starts from it on a fresh instance and falls back to it when tarkov.dev can't be reached.
@@ -11,6 +10,8 @@ const MANIFEST_VERSION = 1;
 
 export interface SnapshotCopy {
   value: unknown;
+  /** Its size as JSON characters. */
+  chars: number;
   /** When the build fetched it from tarkov.dev. */
   fetchedAt: number;
   etag?: string;
@@ -29,7 +30,8 @@ interface Manifest {
 }
 
 // Tests opt in with setTarkovSnapshotDirForTests, so a local build's snapshot never leaks into them.
-let directory: string | null = process.env.VITEST ? null : join(process.cwd(), "data", "tarkov");
+// "bundled" reads data/tarkov through the platform (static assets in the Worker).
+let directory: string | null = process.env.VITEST ? null : "bundled";
 let manifest: Promise<Manifest | null> | undefined;
 let warned = false;
 
@@ -42,9 +44,9 @@ function readManifest(): Promise<Manifest | null> {
   manifest ??= (async () => {
     if (!directory) return null;
     try {
-      const parsed = JSON.parse(
-        await readFile(/*turbopackIgnore: true*/ join(/*turbopackIgnore: true*/ directory, "manifest.json"), "utf8")
-      ) as unknown;
+      const text = await readSnapshotText(directory, "manifest.json");
+      if (text === null) return null;
+      const parsed = JSON.parse(text) as unknown;
       return isManifest(parsed) ? parsed : null;
     } catch {
       return null;
@@ -64,11 +66,11 @@ export async function readSnapshot(gameMode: string, resource: string): Promise<
   const entry = (await readManifest())?.resources[`${gameMode}/${resource}`];
   if (!dir || !entry) return null;
   try {
-    const compressed = await readFile(
-      /*turbopackIgnore: true*/ join(/*turbopackIgnore: true*/ dir, gameMode, `${resource}.json.br`)
-    );
-    const value = JSON.parse((await decompress(compressed)).toString("utf8")) as unknown;
-    return { value, fetchedAt: entry.fetchedAt, etag: entry.etag, lastModified: entry.lastModified };
+    const compressed = await readSnapshotBytes(dir, `${gameMode}/${resource}.json.br`);
+    if (!compressed) throw new Error(`${gameMode}/${resource}.json.br is missing.`);
+    const text = (await decompress(compressed)).toString("utf8");
+    const value = JSON.parse(text) as unknown;
+    return { value, chars: text.length, fetchedAt: entry.fetchedAt, etag: entry.etag, lastModified: entry.lastModified };
   } catch (error) {
     if (!warned) {
       warned = true;
@@ -76,6 +78,22 @@ export async function readSnapshot(gameMode: string, resource: string): Promise<
     }
     return null;
   }
+}
+
+async function readSnapshotBytes(dir: string, path: string): Promise<Uint8Array | null> {
+  if (dir === "bundled") return platform().readDataFile(`tarkov/${path}`);
+  const [{ readFile }, { join }] = await Promise.all([import("node:fs/promises"), import("node:path")]);
+  try {
+    return new Uint8Array(await readFile(join(dir, path)));
+  } catch {
+    return null;
+  }
+}
+
+async function readSnapshotText(dir: string, path: string): Promise<string | null> {
+  if (dir === "bundled") return readDataText(`tarkov/${path}`);
+  const bytes = await readSnapshotBytes(dir, path);
+  return bytes ? new TextDecoder().decode(bytes) : null;
 }
 
 function isManifest(value: unknown): value is Manifest {

@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/app/lib/navigation/image";
 import { useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, Download, Link2, LoaderCircle } from "lucide-react";
 import type { DecodedSharedBuild } from "@/app/lib/builds/share";
 import { parseSharedBuildInput } from "@/app/lib/builds/share-import";

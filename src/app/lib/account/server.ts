@@ -1,6 +1,6 @@
 import { WorkOS, type User } from "@workos-inc/node";
-import type { NextResponse } from "next/server";
-import { consumeRequestBudget } from "@/app/lib/api/rate-limit";
+import { consumeRequestBudget, crossIsolateLimit } from "@/app/lib/api/rate-limit";
+import { setCookie } from "@/app/lib/server/cookies";
 import { SITE_ORIGIN } from "@/app/lib/site";
 import { SESSION_COOKIE, SIGNED_IN_COOKIE } from "./cookies";
 
@@ -42,16 +42,15 @@ export function workosClient(config: AccountConfig) {
 }
 
 /**
- * Where sign-in sends users back to. The production deployment uses the canonical site, so
- * request headers never choose where users land. Preview deployments each have their own
- * hostname (Vercel only routes a request there when its host is that deployment's), and
- * development runs on localhost, so both use the request's own origin. Outside Vercel, a
- * production build uses the canonical site.
+ * Where sign-in sends users back to. A production build uses the canonical site, so request
+ * headers never choose where users land. Development runs on localhost and uses the request's
+ * own origin. A deployment on another hostname (a preview, or the workers.dev URL before
+ * cutover) sets APP_ORIGIN to its own origin, which must also be a WorkOS redirect URI.
  */
 export function appOrigin(request: Request) {
-  const vercelEnv = process.env.VERCEL_ENV?.trim();
-  const canonical = vercelEnv ? vercelEnv === "production" : process.env.NODE_ENV === "production";
-  return canonical ? SITE_ORIGIN : new URL(request.url).origin;
+  const configured = process.env.APP_ORIGIN?.trim();
+  if (configured) return new URL(configured).origin;
+  return process.env.NODE_ENV === "production" ? SITE_ORIGIN : new URL(request.url).origin;
 }
 
 export function callbackUrl(request: Request) {
@@ -104,16 +103,16 @@ export async function readSession(sessionData: string | undefined, config: Accou
 }
 
 /** Writes the session and its hint, or clears both when sealedSession is null. */
-export function setSessionCookies(response: NextResponse, sealedSession: string | null) {
+export function setSessionCookies(response: Response, sealedSession: string | null) {
   const secure = process.env.NODE_ENV === "production";
   const base = { path: "/", sameSite: "lax" as const, secure };
   if (sealedSession === null) {
-    response.cookies.set(SESSION_COOKIE, "", { ...base, httpOnly: true, maxAge: 0 });
-    response.cookies.set(SIGNED_IN_COOKIE, "", { ...base, maxAge: 0 });
+    setCookie(response.headers, SESSION_COOKIE, "", { ...base, httpOnly: true, maxAge: 0 });
+    setCookie(response.headers, SIGNED_IN_COOKIE, "", { ...base, maxAge: 0 });
     return response;
   }
-  response.cookies.set(SESSION_COOKIE, sealedSession, { ...base, httpOnly: true, maxAge: SESSION_MAX_AGE_SECONDS });
-  response.cookies.set(SIGNED_IN_COOKIE, "1", { ...base, maxAge: SESSION_MAX_AGE_SECONDS });
+  setCookie(response.headers, SESSION_COOKIE, sealedSession, { ...base, httpOnly: true, maxAge: SESSION_MAX_AGE_SECONDS });
+  setCookie(response.headers, SIGNED_IN_COOKIE, "1", { ...base, maxAge: SESSION_MAX_AGE_SECONDS });
   return response;
 }
 
@@ -129,7 +128,7 @@ export function isSameOriginRequest(request: Request) {
 }
 
 /** Account routes share the website's per-client budget, which keeps WorkOS calls bounded. */
-export function accountRateLimited(request: Request) {
-  const budget = consumeRequestBudget(request);
+export async function accountRateLimited(request: Request) {
+  const budget = (await crossIsolateLimit(request, "web")) ?? consumeRequestBudget(request);
   return budget.allowed ? null : budget.retryAfterSeconds;
 }

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { ChevronDown } from "lucide-react";
 import type { MapConfig } from "@/app/lib/raid-planner/types";
-import type { MapDetails, MapExtract } from "@/app/lib/types/raidPlanner";
+import type { MapExtract } from "@/app/lib/types/raidPlanner";
 import { isItemSlug } from "@/app/lib/item-links";
-import { formatChance, isNamedBoss, mapIntro, type MapGuide as Guide } from "@/app/lib/seo/map";
+import { formatChance, isNamedBoss, mapIntro, type MapGuide as Guide, type MapGuideFacts } from "@/app/lib/seo/map";
 import type { FaqEntry } from "@/app/lib/seo/item";
 import { formatRoubles, plural } from "@/app/lib/seo/format";
 import { FaqSection } from "@/app/components/seo/faq-section";
@@ -65,7 +65,7 @@ export function MapGuide({
   faq,
 }: {
   config: MapConfig;
-  details: MapDetails;
+  details: MapGuideFacts;
   guide: Guide;
   faq: FaqEntry[];
 }) {

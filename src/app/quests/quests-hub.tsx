@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from "@/app/lib/seo/metadata";
+import Link from "@/app/lib/navigation/link";
 import { QuestsPageFromUrl } from "@/app/components/quests/quests-page-from-url";
 import { FaqSection } from "@/app/components/seo/faq-section";
 import { JsonLd, breadcrumbList, faqPage } from "@/app/components/seo/json-ld";
 import type { GameMode } from "@/components/game-mode/mode";
 import { QUEST_HUB_DESCRIPTION, QUEST_HUB_NAME, QUEST_HUB_TITLE, questHubFaq } from "@/app/lib/seo/quests";
-import { loadQuestList } from "./load";
+import type { QuestList } from "@/app/lib/quests/types";
 
 export const questsHubMetadata: Metadata = {
   title: QUEST_HUB_TITLE,
@@ -20,18 +20,8 @@ export const questsHubMetadata: Metadata = {
   twitter: { card: "summary_large_image", title: `${QUEST_HUB_TITLE} | EFT Toolset`, description: QUEST_HUB_DESCRIPTION },
 };
 
-class QuestsUnavailableError extends Error {
-  constructor() {
-    super("Quest data is temporarily unavailable.");
-    this.name = "QuestsUnavailableError";
-  }
-}
-
-/** The quest hub for one game mode: /quests renders PVP, and its PVE copy PVE. */
-export async function QuestsHub({ gameMode }: { gameMode: GameMode }) {
-  const loaded = await loadQuestList(gameMode);
-  // Fail the render rather than cache an empty list.
-  if (!loaded) throw new QuestsUnavailableError();
+/** The quest hub, rendered with the visitor's game mode's quest list. */
+export function QuestsHub({ loaded }: { loaded: { gameMode: GameMode; list: QuestList; renderedAt: number } }) {
   const faq = questHubFaq(loaded.list);
   return (
     <div className="flex w-full max-w-5xl flex-col gap-8">

@@ -7,7 +7,7 @@ import { brotliCompressSync, constants } from "node:zlib";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { buildItemIndex } from "../scripts/item-index.mjs";
 import { rebuildItemIndexes } from "../scripts/build-tarkov-snapshot.mjs";
-import { POST } from "@/app/api/mcp/route";
+import { mcpPost as POST } from "./mcp-post";
 import { expandItemIndex } from "@/app/lib/api/item-index";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import {

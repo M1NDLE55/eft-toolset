@@ -1,21 +1,8 @@
-import { createHash } from "node:crypto";
+import { platform, type BucketLimit, type RequestBudget } from "@/app/lib/server/platform";
+
+export type { BucketLimit, RequestBudget };
 
 const MAX_MEMORY_ENTRIES = 10_000;
-const UPSTASH_TIMEOUT_MS = 1_000;
-const UPSTASH_WARNING_INTERVAL_MS = 60_000;
-// After a failure, count in memory for a while instead of making every request wait out Upstash's
-// timeout again (a tool call checks the budget twice).
-const UPSTASH_COOLDOWN_MS = 15_000;
-
-export interface BucketLimit {
-  burst: number;
-  refillPerSecond: number;
-}
-
-export interface RequestBudget {
-  allowed: boolean;
-  retryAfterSeconds: number;
-}
 
 interface TokenBucket {
   tokens: number;
@@ -24,7 +11,7 @@ interface TokenBucket {
 
 /** Negative costs refund; refundOnDenial atomically refunds an earlier charge on denial. Never throws. */
 export interface RateLimitStore {
-  readonly kind: "memory" | "upstash";
+  readonly kind: "memory" | "durable";
   consume(key: string, limit: BucketLimit, cost: number, refundOnDenial?: number): Promise<RequestBudget>;
 }
 
@@ -105,59 +92,30 @@ return {allowed, tostring(tokens)}
 `;
 
 /** Keys are hashed so IPs and user ids never reach Redis. */
-export function upstashRateLimitStore(restUrl: string, token: string, fallback: RateLimitStore = memoryRateLimitStore): RateLimitStore {
-  let lastWarning = -Infinity;
-  let skipUntil = -Infinity;
+
+/**
+ * Where MCP payers' budgets are kept: in the Worker, a signed-in user's bucket lives in their UserDO
+ * (exact: a Durable Object runs one request at a time), so every isolate sees the same budget. Other
+ * keys, and everything outside the Worker, are counted in this isolate's memory.
+ */
+export function sharedRateLimitStore(): RateLimitStore {
+  const charge = platform().chargeUserBudget;
+  if (!charge) return memoryRateLimitStore;
   return {
-    kind: "upstash",
-    async consume(key, limit, cost, refundOnDenial = 0) {
-      const now = Date.now();
-      if (now < skipUntil) return fallback.consume(key, limit, cost, refundOnDenial);
+    kind: "durable",
+    async consume(key, limit, cost, refundOnDenial) {
+      const userId = key.startsWith(USER_KEY_PREFIX) ? key.slice(USER_KEY_PREFIX.length) : null;
+      if (userId === null) return memoryRateLimitStore.consume(key, limit, cost, refundOnDenial);
       try {
-        const response = await fetch(restUrl, {
-          method: "POST",
-          headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-          body: JSON.stringify([
-            "EVAL",
-            TOKEN_BUCKET_SCRIPT,
-            "1",
-            `eft:rl:${createHash("sha256").update(key).digest("base64url")}`,
-            String(limit.burst),
-            String(limit.refillPerSecond),
-            String(now),
-            String(cost),
-            String(refundOnDenial),
-          ]),
-          signal: AbortSignal.timeout(UPSTASH_TIMEOUT_MS),
-          cache: "no-store",
-        });
-        const body = (await response.json()) as { result?: unknown; error?: unknown };
-        if (!response.ok || !Array.isArray(body.result)) {
-          throw new Error(typeof body.error === "string" ? body.error : `HTTP ${response.status}`);
-        }
-        const [allowed, tokens] = body.result;
-        if (allowed === 1) return { allowed: true, retryAfterSeconds: 0 };
-        return { allowed: false, retryAfterSeconds: retryAfter(Number(tokens), limit, cost + refundOnDenial) };
+        return await charge(userId, limit, cost, refundOnDenial ?? 0);
       } catch (error) {
-        skipUntil = Date.now() + UPSTASH_COOLDOWN_MS;
-        if (now - lastWarning >= UPSTASH_WARNING_INTERVAL_MS) {
-          lastWarning = now;
-          console.warn("Upstash rate limiting failed, so this instance is counting in memory.", String(error));
-        }
-        return fallback.consume(key, limit, cost, refundOnDenial);
+        // The user's Durable Object couldn't be reached: count in memory rather than fail the request.
+        console.warn("MCP budget fell back to memory:", error instanceof Error ? error.message : error);
+        return memoryRateLimitStore.consume(key, limit, cost, refundOnDenial);
       }
     },
   };
 }
 
-let shared: { url: string; token: string; store: RateLimitStore } | undefined;
-
-// KV_REST_API_* are the names Vercel may set.
-export function sharedRateLimitStore(): RateLimitStore {
-  const env = process.env;
-  const url = (env.UPSTASH_REDIS_REST_URL || env.KV_REST_API_URL)?.trim();
-  const token = (env.UPSTASH_REDIS_REST_TOKEN || env.KV_REST_API_TOKEN)?.trim();
-  if (!url || !token) return memoryRateLimitStore;
-  if (shared?.url !== url || shared.token !== token) shared = { url, token, store: upstashRateLimitStore(url, token) };
-  return shared.store;
-}
+/** The key prefix MCP budgets use for signed-in users (see src/app/lib/mcp/budget.ts). */
+export const USER_KEY_PREFIX = "mcp:user:";

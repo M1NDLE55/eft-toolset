@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/app/lib/navigation/image";
+import Link from "@/app/lib/navigation/link";
 import { useRef, useState } from "react";
 import { AlertTriangle, ArrowDown, ArrowUp, ArrowUpRight, Check, Crosshair, LoaderCircle, Search, X } from "lucide-react";
 import type { AmmoItemData, PriceSources } from "@/app/lib/types/gunBuilder";

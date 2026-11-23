@@ -93,7 +93,14 @@ function list(names: string[]) {
   return `${names.slice(0, -1).join(", ")} and ${names.at(-1)}`;
 }
 
-export function mapIntro(mapName: string, details: MapDetails, guide: MapGuide) {
+/** The map facts the guide and its FAQ quote, apart from what buildMapGuide collects. */
+export type MapGuideFacts = Pick<MapDetails, "players" | "raidDuration" | "transits">;
+
+export function mapGuideFacts(details: MapDetails): MapGuideFacts {
+  return { players: details.players, raidDuration: details.raidDuration, transits: details.transits };
+}
+
+export function mapIntro(mapName: string, details: MapGuideFacts, guide: MapGuide) {
   const facts = [
     details.players ? `${details.players} players` : null,
     details.raidDuration ? `${details.raidDuration}-minute raids` : null,
@@ -126,7 +133,7 @@ export function mapDescription(mapName: string, details: MapDetails | undefined,
   );
 }
 
-export function mapFaq(mapName: string, details: MapDetails, guide: MapGuide): FaqEntry[] {
+export function mapFaq(mapName: string, details: MapGuideFacts, guide: MapGuide): FaqEntry[] {
   const entries: FaqEntry[] = [];
   const pmc = [...guide.extracts.pmc, ...guide.extracts.shared].map((extract) => extract.name);
   const scav = [...guide.extracts.scav, ...guide.extracts.shared].map((extract) => extract.name);

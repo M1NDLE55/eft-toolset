@@ -99,7 +99,7 @@ function EnlargedImage({ image, alt }: { image: QuestWikiImage; alt: string }) {
   const load = useRetryingLoad();
   if (load.failed) return <WikiLinkInstead image={image} className="min-h-40 w-full max-w-md" />;
   return (
-    // eslint-disable-next-line @next/next/no-img-element -- loaded by the visitor's browser from the wiki, never through our server
+    // A plain img: loaded by the visitor's browser from the wiki, never through our server.
     <img
       key={load.attempt}
       src={wikiImageUrl(image)}
@@ -129,7 +129,7 @@ function WikiFigure({ image }: { image: QuestWikiImage }) {
               aria-label={`Enlarge image: ${title}`}
               className="group relative flex aspect-[4/3] w-full cursor-zoom-in items-center justify-center overflow-hidden border border-[#1f1f1f] bg-[#0c0c0c] focus-visible:outline-2 focus-visible:outline-[#c8b384]"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element -- loaded by the visitor's browser from the wiki, never through our server */}
+              {/* A plain img: loaded by the visitor's browser from the wiki, never through our server. */}
               <img
                 key={load.attempt}
                 src={wikiThumbUrl(image, WIKI_THUMB_WIDTHS[0])}

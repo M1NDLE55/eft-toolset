@@ -54,8 +54,14 @@ export async function getMapKeys(gameMode: GameMode, mapKey: string): Promise<Ma
   return { key: config.key, name: config.name, keys };
 }
 
+export interface KeyCount {
+  key: string;
+  name: string;
+  keys: number;
+}
+
 /** How many keys each map has, for the keys hub. */
-export async function getKeyCounts(gameMode: GameMode) {
+export async function getKeyCounts(gameMode: GameMode): Promise<KeyCount[]> {
   const counts = await Promise.all(
     mapConfigs.map(async (config) => {
       const details = await getMapDetails(gameMode, config.key);

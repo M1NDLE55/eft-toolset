@@ -69,6 +69,7 @@ import { regionalCache } from "./shared-cache";
 import {
   clearItemIndexCache,
   deriveItemIndex,
+  forgetDerivedItemIndex,
   loadItemIndex,
   type ExpandedItemIndex,
   type ItemCopies,
@@ -82,6 +83,8 @@ import {
   priceFeedOrigin,
   priceFeedRefreshes,
   projectPriceRows,
+  publishPriceFeed,
+  readPublishedFeedWire,
   readPriceFeed,
   type PriceFeed,
   type PriceFeedWire,
@@ -90,8 +93,8 @@ import { readSnapshot } from "./tarkov-snapshot";
 import { USER_AGENT } from "./user-agent";
 import { AsyncLocalStorage } from "node:async_hooks";
 
-// TARKOV_UPSTREAM_URL points a local build at a stand-in upstream (scripts/mcp-load.mjs); never on Vercel.
-const UPSTREAM_BASE_URL = (!process.env.VERCEL && process.env.TARKOV_UPSTREAM_URL?.replace(/\/+$/, "")) || "https://json.tarkov.dev";
+// TARKOV_UPSTREAM_URL points a local build at a stand-in upstream (scripts/mcp-load.mjs); production never sets it.
+const UPSTREAM_BASE_URL = process.env.TARKOV_UPSTREAM_URL?.replace(/\/+$/, "") || "https://json.tarkov.dev";
 // tarkov.dev answers in well under a second; a request still going after this won't help.
 const UPSTREAM_TIMEOUT_MS = 12_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
@@ -121,11 +124,9 @@ export const RESOURCE_MAX_STALE_MS = 6 * 60 * 60_000;
 export const PRICE_FEED_ORIGIN_WAIT_MS = 5_000;
 const MINUTE_MS = 60_000;
 const HOUR_MS = 60 * MINUTE_MS;
-// Runtime Cache items are capped at 2 MB.
-const SHARED_MAX_CHARS = 1_000_000;
 const SHARED_KEY_VERSION = 1;
-// A 304 renews the shared record, not the body.
-const SHARED_BODY_TTL_SECONDS = 24 * 60 * 60;
+// A 304 renews the shared record, not the body; a body that expires is fetched and written again.
+const SHARED_BODY_TTL_SECONDS = 7 * 24 * 60 * 60;
 const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
 const MAX_STRING_LENGTH = 10_000;
@@ -158,13 +159,14 @@ interface ResourcePolicy {
 }
 
 const RESOURCE_POLICIES: Record<Resource, ResourcePolicy> = {
-  // Prices change every 5 to 10 minutes. 17 MB.
+  // Prices change every 5 to 10 minutes. 17 MB. Instances read prices from the price feed and the
+  // rest from the deployment snapshot, so the items file stays per isolate.
   items: { freshMs: 5 * MINUTE_MS, revalidateMs: 30 * MINUTE_MS, shared: false },
-  // 9 MB and 2 MB.
-  maps: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: false },
-  tasks: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: false },
-  // 1.7 MB: too close to the shared limit.
-  items_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: false },
+  // 9 MB and 2 MB: within KV's value limit, so isolates share the copy the cron keeps fresh.
+  maps: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: true },
+  tasks: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: true },
+  // 1.7 MB.
+  items_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
   // Under 300 KB each; barters change every two hours, the rest with patches.
   barters: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
   crafts: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
@@ -499,6 +501,8 @@ interface ResourceCacheEntry {
   failures?: number;
   retryAt?: number;
   lastError?: string;
+  /** The copy's size as JSON characters, for the memory guard. */
+  sizeChars?: number;
 }
 
 export type DataSource = "tarkov.dev" | "deployment";
@@ -508,6 +512,8 @@ interface Refreshed {
   etag?: string;
   lastModified?: string;
   checkedAt: number;
+  /** The copy's size as JSON characters, when known. */
+  chars?: number;
 }
 
 interface SharedMeta {
@@ -2276,8 +2282,50 @@ async function peekResource(gameMode: GameMode, resource: Resource): Promise<Res
     resourceCache.set(cacheKey, entry);
   }
   operationContext.getStore()?.resources.add(entry);
-  if (!entry.value) await seedFromSnapshot(gameMode, resource, entry);
+  if (!entry.value) {
+    makeRoomFor(gameMode, resource);
+    await seedFromSnapshot(gameMode, resource, entry);
+  }
   return entry;
+}
+
+/*
+ * The memory guard. A Worker isolate has 128 MB; one game mode's large datasets (items, maps,
+ * tasks, item names) parse to about 65 MB, so an isolate can't hold both modes'. Before a large
+ * dataset is loaded, if what's resident plus it would pass the budget, the other mode's copies and
+ * everything derived from them are dropped; they are read again (from the shared cache or the
+ * deployment snapshot) when next asked for. Reads already running keep the copies they hold.
+ */
+const LARGE_RESOURCES: Partial<Record<Resource, number>> = {
+  items: 17_400_000,
+  maps: 9_100_000,
+  tasks: 2_200_000,
+  items_en: 1_700_000,
+};
+const RESIDENT_BUDGET_CHARS = 32_000_000;
+
+function makeRoomFor(gameMode: GameMode, resource: Resource) {
+  const typical = LARGE_RESOURCES[resource];
+  if (typical === undefined) return;
+  let resident = typical;
+  const others = new Set<string>();
+  for (const [key, entry] of resourceCache) {
+    const [mode, name] = key.split("/") as [string, Resource];
+    const size = LARGE_RESOURCES[name];
+    if (!entry.value || size === undefined) continue;
+    resident += entry.sizeChars ?? size;
+    if (mode !== gameMode) others.add(mode);
+  }
+  if (resident <= RESIDENT_BUDGET_CHARS) return;
+  for (const mode of others) evictGameMode(mode);
+}
+
+function evictGameMode(gameMode: string) {
+  const prefix = `${gameMode}/`;
+  for (const key of [...resourceCache.keys()]) if (key.startsWith(prefix)) resourceCache.delete(key);
+  for (const key of [...memoCache.keys()]) if (key.startsWith(prefix)) memoCache.delete(key);
+  forgetDerivedItemIndex(gameMode);
+  console.info(JSON.stringify({ event: "tarkov_data_evicted", gameMode }));
 }
 
 async function loadResource<T>(
@@ -2345,6 +2393,7 @@ function seedFromSnapshot(gameMode: GameMode, resource: Resource, entry: Resourc
       entry.fetchedAt = copy.fetchedAt;
       entry.etag = copy.etag;
       entry.lastModified = copy.lastModified;
+      entry.sizeChars = copy.chars;
       entry.source = "deployment";
     })
     .catch(() => undefined);
@@ -2417,6 +2466,7 @@ function refreshResource(gameMode: GameMode, resource: Resource, entry: Resource
       entry.etag = result.etag;
       entry.lastModified = result.lastModified;
       entry.fetchedAt = result.checkedAt;
+      if (result.chars !== undefined) entry.sizeChars = result.chars;
       entry.failedAt = undefined;
       entry.failures = 0;
       entry.retryAt = undefined;
@@ -2558,8 +2608,8 @@ async function loadCurrent(
     if (policy.shared) await writeShared(sharedKey, refreshed, policy, false);
     return refreshed;
   }
-  const refreshed = { value: fetched.value, etag: fetched.etag, lastModified: fetched.lastModified, checkedAt };
-  if (policy.shared && fetched.chars <= SHARED_MAX_CHARS) {
+  const refreshed = { value: fetched.value, etag: fetched.etag, lastModified: fetched.lastModified, checkedAt, chars: fetched.chars };
+  if (policy.shared && fetched.chars <= regionalCache().maxChars) {
     await writeShared(sharedKey, refreshed, policy, true);
   }
   return refreshed;
@@ -4148,6 +4198,59 @@ function isoTime(value: string | null | undefined) {
   return Number.isFinite(time) ? new Date(time).toISOString() : null;
 }
 
-export async function warmTarkovCache(gameModes: GameMode[] = ["regular", "pve"]) {
-  await Promise.allSettled(gameModes.map((gameMode) => getItemCatalog(gameMode)));
+
+/**
+ * The cron's half of the price feed (see src/server.ts): asks tarkov.dev for the mode's items file
+ * with the validators of the last published feed. A new file is projected to price rows and
+ * published; an unchanged one republishes the same rows with the time it was confirmed. The items
+ * file is read and dropped, never kept in this isolate's cache.
+ */
+export async function publishPriceFeedFromUpstream(gameMode: GameMode): Promise<"published" | "confirmed"> {
+  const previous = await readPublishedFeedWire(gameMode);
+  const validators = previous ? { etag: previous.etag ?? undefined, lastModified: previous.lastModified ?? undefined } : undefined;
+  const fetched = await fetchWithRetries(gameMode, "items", UPSTREAM_ATTEMPTS, validators?.etag || validators?.lastModified ? validators : undefined);
+  const header = { format: PRICE_FEED_FORMAT, gameMode, fetchedAt: Date.now(), source: "tarkov.dev" as const, stale: false };
+  if (fetched.notModified) {
+    await publishPriceFeed(gameMode, JSON.stringify({ data: { ...previous!, ...header } }));
+    return "confirmed";
+  }
+  const envelope = fetched.value as UpstreamEnvelope<ItemsData>;
+  const wire: PriceFeedWire = {
+    ...header,
+    etag: fetched.etag ?? null,
+    lastModified: fetched.lastModified ?? null,
+    ...projectPriceRows(Object.values(envelope.data.items ?? {})),
+  };
+  await publishPriceFeed(gameMode, JSON.stringify({ data: wire }));
+  return "published";
+}
+
+/** Datasets kept in the shared cache, which the cron keeps fresh for every isolate. */
+export const SHARED_RESOURCES = (Object.keys(RESOURCE_POLICIES) as Resource[]).filter((resource) => RESOURCE_POLICIES[resource].shared);
+
+/**
+ * The cron's half of the shared cache: when the shared copy of a dataset is older than its freshness,
+ * revalidates it with tarkov.dev using the shared copy's validators. A 304 only renews the record;
+ * a new copy is validated and written. Never touches this isolate's resource cache.
+ */
+export async function refreshSharedDataset(gameMode: GameMode, resource: Resource): Promise<"fresh" | "confirmed" | "updated"> {
+  const policy = RESOURCE_POLICIES[resource];
+  const key = `tarkov:${SHARED_KEY_VERSION}:${gameMode}/${resource}`;
+  const cache = regionalCache();
+  const meta = readSharedMeta(await cache.get(`${key}:meta`));
+  const now = Date.now();
+  if (meta && now - meta.checkedAt < policy.freshMs) return "fresh";
+  const fetched = await fetchWithRetries(gameMode, resource, UPSTREAM_ATTEMPTS, meta ?? undefined);
+  const checkedAt = Date.now();
+  if (fetched.notModified) {
+    await writeShared(key, { value: { data: null }, etag: meta!.etag, lastModified: meta!.lastModified, checkedAt }, policy, false);
+    return "confirmed";
+  }
+  await writeShared(
+    key,
+    { value: fetched.value, etag: fetched.etag, lastModified: fetched.lastModified, checkedAt },
+    policy,
+    fetched.chars <= cache.maxChars
+  );
+  return "updated";
 }

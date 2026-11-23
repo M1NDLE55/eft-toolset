@@ -1,6 +1,6 @@
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { cloudflareBeaconAttribute } from "@/app/lib/analytics/cloudflare";
 
@@ -20,7 +20,7 @@ describe("Cloudflare Web Analytics beacon", () => {
   });
 
   it("renders the deferred beacon", () => {
-    process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN = "0123456789abcdef0123";
+    vi.stubEnv("CLOUDFLARE_WEB_ANALYTICS_TOKEN", "0123456789abcdef0123");
     try {
       const html = renderToStaticMarkup(createElement(CloudflareAnalytics));
       expect(html).toContain('src="https://static.cloudflareinsights.com/beacon.min.js"');
@@ -30,18 +30,16 @@ describe("Cloudflare Web Analytics beacon", () => {
         'data-cf-beacon="{&quot;token&quot;:&quot;0123456789abcdef0123&quot;,&quot;spa&quot;:true}"'
       );
     } finally {
-      delete process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN;
+      vi.unstubAllEnvs();
     }
   });
 
   it("renders no script unless the server token is configured", () => {
-    const previous = process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN;
-    delete process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN;
+    vi.stubEnv("CLOUDFLARE_WEB_ANALYTICS_TOKEN", undefined);
     try {
       expect(renderToStaticMarkup(createElement(CloudflareAnalytics))).toBe("");
     } finally {
-      if (previous === undefined) delete process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN;
-      else process.env.CLOUDFLARE_WEB_ANALYTICS_TOKEN = previous;
+      vi.unstubAllEnvs();
     }
   });
 });

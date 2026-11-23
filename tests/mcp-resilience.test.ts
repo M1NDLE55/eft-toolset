@@ -3,7 +3,7 @@ import { rm } from "node:fs/promises";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
-import { POST } from "@/app/api/mcp/route";
+import { mcpPost as POST } from "./mcp-post";
 import { createEftMcpServer } from "@/app/lib/mcp/server";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import { clearTarkovResourceCache, settleTarkovRefreshes } from "@/app/lib/api/tarkov-server";

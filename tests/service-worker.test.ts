@@ -38,7 +38,7 @@ describe("service worker", () => {
   it("still handles its own static files", () => {
     const { fetch } = loadWorker();
     const respondWith = vi.fn((response: unknown) => void Promise.resolve(response).catch(() => undefined));
-    fetch({ request: new Request("https://eft-toolset.test/_next/static/chunk.js"), respondWith });
+    fetch({ request: new Request("https://eft-toolset.test/assets/chunk-a1b2c3.js"), respondWith });
     expect(respondWith).toHaveBeenCalledOnce();
   });
 });

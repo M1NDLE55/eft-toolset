@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import type { QuestDetail, QuestSummary } from "@/app/lib/quests/types";
-import { jpegVariant, loadOgIcon, LruCache, ogIconUrl, questOgContent, titleSize, truncate, type IconEntry } from "@/app/lib/seo/quest-og";
+import { jpegVariant, loadOgIcon, LruCache, ogIconUrl, questOgContent, titleSize, truncate, webpToPng, type IconEntry } from "@/app/lib/seo/quest-og";
+import { setPlatform } from "@/app/lib/server/platform";
 
 const ROUBLES = "5449016a4bdc2d6f028b456f";
 const icon = (id: string) => `https://assets.tarkov.dev/${id}-grid-image.webp`;
@@ -170,7 +171,21 @@ describe("quest share image icons", () => {
     expect(second).toBe(first);
     expect(await loadOgIcon(icon("a"), { fetcher, toPng, cache })).toBe(first);
     expect(fetcher).toHaveBeenCalledTimes(1);
-    expect(fetcher).toHaveBeenCalledWith(icon("a"), expect.objectContaining({ next: { revalidate: expect.any(Number) } }));
+    expect(fetcher).toHaveBeenCalledWith(icon("a"), expect.objectContaining({ cf: { cacheTtl: expect.any(Number), cacheEverything: true } }));
+  });
+
+  it("converts with the platform's image service (Cloudflare Images), scaled to fit 160×160", async () => {
+    const convert = vi.fn(async () => new Uint8Array([7, 7]));
+    setPlatform({ convertImage: convert });
+    try {
+      expect(await webpToPng(new Uint8Array([1]))).toEqual(new Uint8Array([7, 7]));
+      expect(convert).toHaveBeenCalledWith(new Uint8Array([1]), { width: 160, height: 160, format: "image/png" });
+      setPlatform({ convertImage: async () => Promise.reject(new Error("over quota")) });
+      expect(await webpToPng(new Uint8Array([1]))).toBeNull();
+    } finally {
+      setPlatform();
+    }
+    expect(await webpToPng(new Uint8Array([1]))).toBeNull();
   });
 
   it("falls back to tarkov.dev's JPEG without a converter, and to no icon at all", async () => {

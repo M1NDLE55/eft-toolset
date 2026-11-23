@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/app/lib/navigation/hooks";
 import { useGameMode } from "./context";
 import { MODE_LABEL, type GameMode } from "./mode";
 

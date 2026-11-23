@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import type { McpServer } from "@modelcontextprotocol/server";
 import { getPreset } from "@/app/lib/api/tarkov-server";
 import type { BuildNode } from "@/app/lib/types/gunBuilder";
 import { filterCatalog } from "@/app/lib/search/filter-catalog";

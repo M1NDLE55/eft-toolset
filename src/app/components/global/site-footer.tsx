@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { appLinks, guideLinks } from "@/app/lib/links";
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
 

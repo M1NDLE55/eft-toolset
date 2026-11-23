@@ -10,7 +10,7 @@ application. It reads tarkov.dev's JSON API: JSON responses to GET requests at
 React feature
   -> QueryDefinition (dedupe, TTL, IndexedDB persistence)
   -> apiFetch(operation, variables)
-  -> GET /api/tarkov?op=…&v=<canonical JSON>   (single public reads, CDN-cacheable)
+  -> GET /api/tarkov?op=…&v=<canonical JSON>   (single public reads, cached at the edge)
      POST /api/tarkov                          (batch reads)
   -> validated operation allowlist
   -> cached json.tarkov.dev resources
@@ -50,7 +50,7 @@ so each logical request has exactly one URL. Successful GETs are sent with
 `Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=<n>`, where the
 stale window is capped so shared caches never serve data past the six-hour stale ceiling.
 Responses built from a failed upstream refresh get a 30-second shared cache, and errors
-are `no-store`. Configure the CDN to key on the full query string.
+are `no-store`. The Worker's edge cache keys on the full query string (see Page caching).
 
 `price.feed` has its own, shorter cache (see [Price feed](#price-feed)).
 
@@ -60,20 +60,32 @@ empty image means the standard `{id}-grid-image.webp` asset.
 ## Page caching
 
 Content pages (items, quests, ammo, keys, best and Gunsmith builds, the hubs, raid-planner
-maps and the sitemap) are rendered once and cached at the CDN with incremental static
-regeneration: each page exports `revalidate` and `dynamic = "force-static"`, and a stale copy is
-served while it renders again in the background. Hubs and map pages are built with the site;
-pages with a parameter render on their first visit (`generateStaticParams` returns nothing).
-Nothing in the render reads the request, so there is no middleware and no per-request CSP
-nonce: the security headers, CSP included, come from `next.config.ts`
-(`src/app/lib/security/headers.ts`).
+maps and the sitemap) are rendered by the Worker and cached at the edge, replacing the old site's
+incremental static regeneration (`src/app/lib/server/page-cache.ts`). Each route declares how long
+its page stays fresh with an `X-EFT-Edge-TTL` header (`src/app/lib/server/edge-cache.ts`), and its
+server function sets the same on its own response for client-side navigations. The Worker keeps
+such GET responses in the data centre's Cache API, keyed by the deployment, the visitor's
+`eft-game-mode` cookie and the full URL. Within its time a copy is served as it is; for a week after,
+it is served while a fresh copy renders in the background (`waitUntil`), and a failed re-render
+keeps the old copy. Visitors get the `Cache-Control` the old site sent (`s-maxage=<n>,
+stale-while-revalidate=…`). Responses other than 200, and any that set a cookie, are never stored.
+The dev server always renders afresh.
 
-| Pages | Revalidate |
+Pages whose HTML depends only on the code (`/`, `/credits`, the policy, `/mcp`, `/settings`, `/data`,
+`/gun-builder`, `/gun-builder/compare`, `/item-groups`, `/raid-planner`; see
+`src/app/lib/seo/prerendered-pages.ts`) are prerendered at build time and served as static assets
+without running the Worker. Their security headers, like every static file's, come from the
+`_headers` file the build writes (`src/app/lib/security/static-headers.ts`); the Worker sets the same
+headers on everything it renders (`src/app/lib/security/apply.ts`). Nothing in a render reads the
+request apart from the game mode cookie, so there is no per-request CSP nonce.
+
+| Pages | Edge TTL |
 | --- | --- |
 | `/item`, `/flea-market/pve`, `/ammo`, `/ammo/<calibre>`, `/keys/<map>` (prices are the content) | 5 minutes |
 | `/item/<slug>` (prices also refresh in the browser) | 6 hours |
 | `/gun-builder/best`, `/gun-builder/best/<weapon>`, `/gun-builder/gunsmith`, `/gun-builder/gunsmith/<task>` | 6 hours |
 | `/quests`, `/quests/<slug>`, `/keys`, `/raid-planner/map/<map>`, `/sitemap.xml` | 24 hours |
+| Pages about one saved build, plan or group (a shell the browser fills from its own storage) | until the next deployment |
 
 A render waits up to 15 seconds for its data (`src/app/lib/api/server-render.ts`), queueing
 for an operation slot rather than giving up. Renders hold at most 12 of the 16 slots, so
@@ -82,14 +94,13 @@ render throws: a background render keeps the previous copy, and a first render a
 500 that isn't cached, so crawlers retry later rather than indexing an empty page. Pages are
 never marked `noindex` for a temporary failure.
 
-Pages whose data depends on the game mode have a PVE copy under `/pve/...`
-(`src/app/lib/game-mode-routes.ts`). `next.config.ts` rewrites to it for visitors whose
-`eft-game-mode` cookie, which the client keeps in sync with its stored setting, says PVE. The
-rewrite runs in Vercel's routing, so both modes are cached separately and the PVP copy, which
-crawlers get, doesn't depend on it. `/pve/...` URLs redirect to the real page. When a visitor
-switches mode, `useServerModeSync` refreshes the route, which the rewrite now sends to the
-other copy.
-
+Pages whose data depends on the game mode read it from the `eft-game-mode` cookie, which the client
+keeps in step with its stored setting (`src/app/lib/server/request-mode.ts`). Each route's server
+function loads the page's data for that mode, on the server for the first render and through a
+server-function request on a client navigation, so both modes are cached apart and crawlers, which
+have no cookie, get PVP. When a visitor switches mode, `useServerModeSync` reloads the route's data
+(`router.invalidate()`), which the server reads for the new cookie. The old `/pve/...` URLs, which
+were internal copies of these pages, redirect to the page (308).
 ## Item pages
 
 Item pages live at `/item/<normalizedName>` and are rendered on the server with the
@@ -106,7 +117,7 @@ The cached page is rendered with Standard, and the visitor's own view applies wh
 hydrates. Besides prices and uses, `item.detail` returns the item's description, weight,
 category, flea statistics, and the barters and crafts that give it. For keys it also returns
 the maps with a keys page whose locks they open, with a lock count for each, and what they
-open, from the wiki snapshot's infobox (so `/api/tarkov` traces the snapshot's item pages).
+open, from the wiki snapshot's infobox (so `/api/tarkov` reads the snapshot's item pages).
 
 The Full view adds the item's wiki page, read on the server from the snapshot below by
 tarkov.dev id (`src/app/lib/wiki/item-wiki.ts`), and passed to the page with the item. It
@@ -243,11 +254,22 @@ when their data can't be read (see Page caching).
 ## MCP endpoint
 
 `/api/mcp` is a read-only [Model Context Protocol](https://modelcontextprotocol.io) server for
-signed-in users (see [MCP sign-in](#mcp-sign-in)), using the Streamable HTTP transport in stateless mode. The route is a thin wrapper
-around `handleMcpPost` in `src/app/lib/mcp/http.ts`. Each POST carries one JSON-RPC message
-and builds a fresh server, so no session state lives between requests and any instance can
-serve any request. Responses are JSON; GET and DELETE return 405, and JSON-RPC batches,
-which MCP dropped in 2025-06-18, return 400.
+signed-in users (see [MCP sign-in](#mcp-sign-in)). It runs on Cloudflare's stateless MCP handler
+(`createMcpHandler` from the Agents SDK, `agents/mcp/server`) with the MCP TypeScript SDK v2
+(`@modelcontextprotocol/server`), wrapped by `handleMcpRequest` in `src/app/lib/mcp/http.ts`, which
+does sign-in, origin checks, budgets and body limits first. Each POST carries one JSON-RPC message
+and gets a fresh server, so no session state lives between requests and any isolate can serve any
+request; per-user state lives in the user's Durable Object (see [Durable Objects](#durable-objects)).
+The same endpoint serves clients on the 2026-07-28 revision (answered as JSON) and 2025-era
+Streamable HTTP clients (answered as a one-event SSE stream, as the Agents SDK's compatibility
+lane does). GET and DELETE return 405, and JSON-RPC batches, which MCP dropped in 2025-06-18,
+return 400.
+
+`tools/list` and `tools/call` are answered by the app (`src/app/lib/mcp/tool-list.ts`) rather than
+the SDK's defaults: the list publishes compact schemas, and a call to an unknown tool or with
+arguments that don't fit its schema comes back as a tool error naming the problem
+(`MCP error -32602: Input validation error: …`), as it always has. A successful result is checked
+against the tool's output schema.
 
 Limits:
 
@@ -258,12 +280,15 @@ Limits:
   and `optimize_build` 3; everything else costs 0.25. That base cost is charged before the
   body is read, and a tool call pays the rest once the body is parsed, or gets the base cost
   back in the same step if it can't.
-- Payer budgets live in Upstash Redis when `UPSTASH_REDIS_REST_URL` and
-  `UPSTASH_REDIS_REST_TOKEN` are set (`src/app/lib/api/rate-limit-store.ts`): one atomic Lua
-  token bucket per payer, under a hashed key, so IPs and user ids never reach Redis. Each
-  request costs one Redis command, and a tool call two. Without Upstash, or when it can't be
-  reached within a second, each instance counts in memory as before; after a failure it counts in
-  memory for 15 seconds without asking Upstash, so a burst doesn't wait out the timeout on every call.
+- A signed-in user's budget is a token bucket in their UserDO (`src/app/lib/durable/user-store.ts`):
+  a Durable Object serves one request at a time, so the count is exact across every isolate. Each
+  request costs one call to it, and a tool call two. If the object can't be reached, the isolate
+  counts in memory for that request (`src/app/lib/api/rate-limit-store.ts`). Anonymous payers (only
+  in development) are counted in memory.
+- Before any of that, each client IP may make 600 requests a minute to `/api/mcp` (the old Vercel
+  firewall rule), through the Workers rate-limit binding `MCP_IP_LIMITER`, keyed on
+  `CF-Connecting-IP`; over it, the answer is 429 with `Retry-After: 60`. The binding counts per
+  Cloudflare location and is approximate.
 - A tool call takes a slot from the shared operation pool, and at most 6 run at once per
   instance. Handshakes and lists don't wait for slots.
 - Bodies may be up to 1 MiB, and at most 16 are read at once, apart from the website's 32
@@ -314,8 +339,8 @@ describe removed content, so those are left out; `data/wiki/left-out.json` names
 for one points the model to `search_items`, `get_item`, `get_weapon`, or `get_ammo_options`
 instead. `data/wiki/index.json` lists every kept page and redirect (with the section a redirect
 points at); it is read once per instance, and pages are read one file at a time as they are
-asked for, so a cold start loads about 150 KB. `next.config.mjs` traces `data/wiki` into the
-MCP function, the item pages, and the quest pages.
+asked for, so a cold start loads about 150 KB. The build copies `data/wiki` into the static assets under `/_data/wiki`, which the Worker reads
+through its `ASSETS` binding and never serves publicly (`src/app/lib/server/platform.ts`).
 
 Item, weapon, and ammo pages are also written, apart, to `data/wiki/items/` for the item page,
 without the sections that repeat tarkov.dev (description, trading, crafting, hideout, quests,
@@ -389,7 +414,7 @@ from the same dump. `readQuestWiki` joins each image with its credit, leaves out
 `missing`, and credits "EFT Wiki contributors" when there is no uploader. Under each group of
 images the quest page shows "Images: <file name> by <uploader>; …, Escape from Tarkov Wiki, CC
 BY-NC-SA" (and the enlarged view, the one image's line), linking each file page and the licence (`src/app/lib/wiki/wiki-images.ts` builds the URL and the
-text). `next.config.mjs` traces `image-credits.json` into the quest pages.
+text). `image-credits.json` ships with the rest of the snapshot.
 
 `lookup_term` reads no service at all. It answers from a curated glossary of player jargon
 (`src/app/lib/glossary/terms.json`): map callouts, item and ammo nicknames, bosses, traders,
@@ -547,9 +572,9 @@ website's per-client rate limit. Next to the session, a readable `eft_signed_in=
 which holds nothing secret, lets the header show a signed-in account icon on static pages
 without a request; the account API clears it whenever it finds no session.
 
-Sign-in returns to the canonical site on the production deployment (`VERCEL_ENV=production`,
-or a production build outside Vercel) and to the request's own origin on preview
-deployments and in development, so each preview hostname completes its own sign-in.
+Sign-in returns to the canonical site in a production build and to the request's own origin in
+development. A deployment on another hostname (the `workers.dev` URL before cutover, say) sets
+`APP_ORIGIN` to its own origin, which must also be a redirect URI in WorkOS.
 
 In WorkOS, the environment needs `<site>/auth/callback` as a redirect URI (and
 `http://localhost:3000/auth/callback` for development, plus a wildcard for preview hostnames
@@ -622,19 +647,18 @@ and identifiable:
   `no-store`). A copy's age and source are recorded when a read takes it, so a refresh landing
   later in the read doesn't make its data look newer.
 
-With the price feed on, items requests no longer grow with instances: only a CDN refill of the feed
-reads the items file, at most once a minute per game mode. A refill lands on whichever instance the
-CDN picks; that instance revalidates its copy, a 304 unless tarkov.dev has published since it last
-looked. Per game mode, at 1, 100 and 10,000 MCP calls a minute (taking 1, 3 and 40 instances), that
-is at most 60 items requests an hour (with one instance about 12 downloads and the rest 304s; with
-many, most refills find an older copy, so up to 60 downloads), against about 12, 36 and 480
-downloads before. How many distinct items are asked for makes no difference. Each instance gets the
-feed from the CDN at most 60 times an hour (150–200 KB each), a game patch costs one items download
-per instance, and while the feed is failing the numbers below apply.
+With the price feed, items requests don't grow with isolates or traffic: only the cron reads the
+items file for prices, once a minute per game mode, with the validators of the feed it last
+published, so tarkov.dev answers 304 until it publishes new prices (about 12 downloads an hour per
+mode, the rest 304s). How many distinct items are asked for makes no difference. Each isolate reads
+the feed from KV at most once a minute per mode, a game patch costs one items download per isolate
+that needs the static data, and while the feed is failing the numbers below apply.
 
-Without the feed, the worst case for one instance, with every dataset in use in both game modes: items 24, maps
+Without the feed, the worst case for one isolate, with every dataset in use in both game modes: items 24, maps
 and tasks 8, `items_en` 1 request an hour, 33 an hour; maps, tasks and `items_en` are mostly
-304s. The shared datasets add about 8 an hour per region, however many instances run. A new
+304s. With the cron keeping the shared copies in KV fresh, isolates seldom ask for anything but the
+items file: the cron's checks are about 8 requests an hour per mode in all, mostly 304s, however
+many isolates run. A new
 instance revalidates the deployment snapshot instead of downloading it: datasets unchanged since
 the build cost a 304, and only the ones that changed (in practice `items`, and `maps` or `tasks`
 on some days) are downloaded, in the background when the caller already has the snapshot's copy.
@@ -642,13 +666,13 @@ While tarkov.dev is down, at most 3 requests per dataset per backoff interval.
 
 ### Deployment snapshot
 
-`npm run build` runs `scripts/build-tarkov-snapshot.mjs` before `next build`. It fetches every
+`npm run build` runs `scripts/build-tarkov-snapshot.mjs` before `vite build`. It fetches every
 dataset in both game modes (four at a time, each tried up to 3 times, all within two minutes)
 and writes each as brotli-compressed JSON to `data/tarkov/<mode>/`,
 with `data/tarkov/manifest.json` recording when each was fetched and its `ETag` and
 `Last-Modified` (about 4 MB in all; `data/tarkov` isn't committed). It then writes each mode's
-[item index](#item-index) from those copies. `next.config.ts` traces it
-into every function. A failure never fails the build: a dataset that can't be fetched keeps the
+[item index](#item-index) from those copies. The build copies the snapshot into the static assets
+under `/_data/tarkov`, which the Worker reads through its `ASSETS` binding. A failure never fails the build: a dataset that can't be fetched keeps the
 copy already on disk, if any, or is left out, and the app waits for tarkov.dev for it as before.
 Pages prerendered during the build read the fresh snapshot, so the build itself barely asks
 tarkov.dev for anything.
@@ -659,7 +683,7 @@ On an instance, a dataset with no copy in memory starts from the snapshot's copy
 as it is; otherwise it is revalidated with its `ETag` like any other copy. So a cold instance
 answers at once, from the snapshot or after a 304, and when tarkov.dev is unreachable it still
 answers, from the snapshot, saying how old it is. The snapshot ages with the deployment: every
-deploy refreshes it, ISR renders don't.
+deploy refreshes it; edge re-renders don't.
 
 ### Item index
 
@@ -682,69 +706,50 @@ runs, tests, a failed snapshot) it is derived from the items file, loaded as bef
 
 Names change only with game patches, so the index is a static input: like the static part of the
 items file below, its age never makes a result stale or dated, and catalog responses keep their
-usual CDN cache however old the deployment is.
+usual edge cache however old the deployment is.
 
 ### Price feed
 
 tarkov.dev's items file mixes data that changes with game patches (names, stats, slots: most of its
 17 MB) with prices, which its jobs rebuild every 5 minutes, so its ETag changes every few minutes.
-Before, every instance downloaded the whole file (1.8 MB compressed) whenever its 5-minute freshness
-ran out, however few prices it needed. Now the two parts travel apart:
+Isolates don't download it for prices. The two parts travel apart:
 
-- **Prices** come from the `price.feed` operation: every item's `lastLowPrice`, `avg24hPrice`,
-  `low24hPrice`, `high24hPrice`, `lastOfferCount`, `changeLast48hPercent`, `updated`, and its trader
-  buy and sell offers (`src/app/lib/api/price-feed.ts`). It is about 0.72 MB of JSON and 150–200 KB
-  compressed per mode, a ninth of the items file. Its origin builds it from the items file, with a
-  60-second freshness for this read alone (an ETag revalidation, a 304 unless tarkov.dev has
-  changed it), waiting up to 5 seconds for it before serving its copy marked stale. Responses carry
-  when the origin last confirmed the copy, its source, whether it was stale, and its ETag, and are
-  cached at the CDN with `public, max-age=0, s-maxage=60, stale-while-revalidate=60` (30 seconds for
-  a stale copy; never past the six-hour ceiling).
-- **Static data** comes from the items copy the instance already has, the deployment snapshot or a
+- **Prices** come from the price feed: every item's `lastLowPrice`, `avg24hPrice`, `low24hPrice`,
+  `high24hPrice`, `lastOfferCount`, `changeLast48hPercent`, `updated`, and its trader buy and sell
+  offers (`src/app/lib/api/price-feed.ts`), about 0.72 MB of JSON per mode. The cron publishes it to
+  KV once a minute per game mode (`publishPriceFeedFromUpstream` in `tarkov-server.ts`): it asks
+  tarkov.dev for the items file with the validators of the feed it last published; a 304 republishes
+  the same rows with the new confirmation time, and a new file is projected to rows and published.
+  The cron reads the file and drops it; it never keeps it in its isolate's cache.
+- **Static data** comes from the items copy the isolate already has, the deployment snapshot or a
   newer copy, which is not refreshed for its prices. `loadItems` lays the feed's prices over it,
   once per pair of copies (about 10 ms and 3 MB), so every projection (MCP tools, pages,
   `/api/tarkov`, the gun builder's part lookup) gets the feed's prices unchanged.
 
-Each instance keeps its own copy of the feed per game mode, fetched from the site's own public origin
-through the CDN: fresh for 60 seconds, served while it refreshes for up to 2 minutes, and after that
-read with the caller's usual wait (MCP tools 2.5 s, then the copy marked stale). Callers share one
-refresh in flight. A failed fetch isn't retried for 10 seconds, doubling to 10 minutes with jitter,
-or for as long as a `Retry-After` asks (up to an hour); meanwhile reads use the items file at once.
-Responses are validated (format version, sizes, every field) and capped at 8 MiB, with a 10-second
-timeout and the usual User-Agent. The origin is `SITE_ORIGIN` in production and the deployment's own
-URL on previews, sending `x-vercel-protection-bypass` when Vercel provides
-`VERCEL_AUTOMATION_BYPASS_SECRET`. Locally the feed is off unless `PRICE_FEED_ORIGIN` names an origin
-(ignored on Vercel), and it is off during `next build`; off, everything works as it did before the feed.
+Each isolate keeps its own copy of the feed per game mode, read from KV: fresh for 60 seconds, served
+while it refreshes for up to 2 minutes, and after that read with the caller's usual wait (MCP tools
+2.5 s, then the copy marked stale). Callers share one refresh in flight. A failed read (including a
+feed not published yet) isn't retried for 10 seconds, doubling to 10 minutes with jitter; meanwhile
+reads use the items file at once. The feed is validated (format version, sizes, every field). Locally,
+without KV, the feed is off unless `PRICE_FEED_ORIGIN` names an origin serving the `price.feed` GET.
 
-Fallbacks, in order: the instance's copy of the feed; a refresh through the CDN; then, while the feed
-is failing (or a preview's protection refuses it), the items file read exactly as before (the copy in
-memory, a revalidation with json.tarkov.dev, or the deployment snapshot), with the feed's last prices
-laid over it if they are newer. Because the static copy isn't refreshed while the feed works, it can
-be older than a page render's six-hour limit when the feed starts failing; while the feed's last
-prices are within it, a read uses them, marked stale, and the items file is fetched in the
-background. On a cold instance whose first feed fetch is slow, the snapshot's own prices are used,
-marked stale. A read never fails while any copy exists. A refresh that brings the same items file
-(the same ETag) keeps the instance's copy and only notes when it was confirmed, so projections and
-cached tool results built from it stay valid until tarkov.dev publishes new prices. `price.feed` is
-served over GET only, and the feed is fetched without following redirects.
+Fallbacks, in order: the isolate's copy of the feed; a fresh read from KV; then, while the feed is
+failing, the items file read exactly as before (the copy in memory, a revalidation with
+json.tarkov.dev, or the deployment snapshot), with the feed's last prices laid over it if they are
+newer. A read never fails while any copy exists. A feed that brings the same items file (the same
+ETag) keeps the isolate's copy and only notes when it was confirmed, so projections and cached tool
+results built from it stay valid until tarkov.dev publishes new prices. `price.feed` is still served
+over GET by `/api/tarkov`, for local use.
 
 The feed lists every item tarkov.dev has, so items the static copy lacks mean a game patch: the
-instance then loads the items file once, in the background, and the item index follows it.
+isolate then loads the items file once, in the background, and the item index follows it.
 
-How far prices lag tarkov.dev's file: the origin's copy up to 60 s, the CDN up to 120 s with
-stale-while-revalidate, an instance's copy up to 120 s; under steady traffic at most about 3 minutes
-and typically about 90 seconds, against up to 35 minutes before (5 minutes fresh, then served while
-refreshing for up to 30). `dataAsOf` is the origin's confirmation time, so it includes every hop.
+How far prices lag tarkov.dev's file: the cron's check up to 60 s, an isolate's copy up to 120 s; at
+most about 3 minutes. `dataAsOf` is the cron's confirmation time, so it includes every hop.
 
 **Why one feed for every item.** tarkov.dev only offers whole JSON files: there is no per-item
-current-price endpoint (`/{mode}/prices/{id}` is the price history). One feed carries every price, so the number of distinct items asked for doesn't
-change the upstream cost, and a CDN cache shared by every instance does what a per-item cache would.
-
-**Why the CDN and not a shared server cache.** Vercel's Runtime Cache (used for the small datasets
-under Cache ownership) caps items at 2 MB and bills writes per 8 KB: one feed per mode per change
-would be about 160 units a write, far beyond the Hobby allowance. The CDN caches the GET for free
-within the plan's edge requests, and keys on the URL like every other public read.
-
+current-price endpoint (`/{mode}/prices/{id}` is the price history). One feed carries every price, so
+the number of distinct items asked for doesn't change the upstream cost.
 ### Data paths by tool
 
 | Tool or page | Item index | Price feed | Static items copy | Bulk datasets |
@@ -758,51 +763,107 @@ within the plan's edge requests, and keys on the URL like every other public rea
 | Market board, item prices page, ammo | | yes | yes | traders, tasks |
 | `get_data_status`, `get_wiki_page`, `lookup_term` | | | | |
 
-Only the feed's origin, behind the CDN, downloads the items file on a timer; everything else reads
+Only the cron downloads the items file on a timer; everything else reads
 the copy it has for static data. "Bulk datasets" are the other tarkov.dev files, unchanged.
 
 ## Cache ownership
 
-- The server resource cache amortizes large upstream downloads and JSON parsing. With the price
-  feed on, the items copy is read only for its static data and isn't refreshed on a timer (see
+- The resource cache in each isolate amortizes large upstream downloads and JSON parsing. With the
+  price feed on, the items copy is read only for its static data and isn't refreshed on a timer (see
   [Price feed](#price-feed)). Each other resource is fresh for its policy's time, then revalidated in the background without
   blocking requests (items for up to 30 minutes, maps and tasks 2 hours, the rest 4 hours),
   and served stale (flagged with `X-EFT-Data-Stale`) when a refresh fails. It starts from the
   deployment snapshot (see above).
-- Small datasets that rarely change (barters, crafts, hideout, traders, and the task, map,
-  hideout, and trader translations) are also kept in Vercel's Runtime Cache
-  (`src/app/lib/api/shared-cache.ts`), which every instance in a region shares. A body is
-  written only when it changes, under its version, and a small record says when an instance
-  last checked it with tarkov.dev; another instance reuses the shared copy while that check
-  is within the dataset's freshness. Items (17 MB), maps (9 MB), tasks (2 MB), and item
-  names (1.7 MB) stay per instance: they exceed or approach Runtime Cache's 2 MB item limit,
-  and the Hobby plan's write allowance (200K 8 KB units a month) is shared by the whole
-  team. The shared cache is best effort: failures and timeouts read as misses, and it is
-  off outside Vercel.
+- Every dataset but the items file is also kept in Workers KV (`src/app/lib/api/shared-cache.ts`),
+  which every isolate shares: maps (9 MB), tasks (2 MB), item names (1.7 MB) and the small ones. A body
+  is written only when it changes, under its version, and a small record says when tarkov.dev last
+  confirmed it; an isolate reuses the shared copy while that check is within the dataset's
+  freshness. The cron keeps these records fresh (`refreshSharedDataset`), revalidating with the
+  shared copy's validators, so isolates rarely ask tarkov.dev themselves. The shared cache is best
+  effort: failures and slow reads read as misses, and it is off outside the Worker.
+- **Memory guard.** A Worker isolate has 128 MB. One game mode's large datasets (items, maps, tasks,
+  item names) parse to about 65 MB, so an isolate can't hold both modes'. Before a large dataset is
+  loaded, if what's resident plus it would pass the budget (32 million characters of JSON), the other
+  mode's copies and everything derived from them are dropped (`makeRoomFor` in `tarkov-server.ts`)
+  and read again (from KV or the snapshot) when next asked for. Each eviction logs
+  `{"event":"tarkov_data_evicted"}`.
 - Projections and indexes are memoized on the identity of their source resources, so they
   are rebuilt only when upstream data changes.
-- The CDN shares one copy of the price feed among every instance, refreshed at most once a
-  minute per game mode.
-- `src/instrumentation.ts` warms the item catalog for both game modes at boot. Set
-  `WARM_TARKOV_CACHE=0` to disable.
+- KV holds one copy of each mode's price feed, written by the cron once a minute.
+- The edge cache holds rendered pages, server-function reads and public `/api/tarkov` GETs (see
+  [Page caching](#page-caching)).
 - The client query layer deduplicates concurrent requests and controls stale/max ages.
 - IndexedDB holds validated query projections for fast reloads and offline-tolerant stale
   data. Query schema-version bumps invalidate incompatible projections.
 - Gun-builder entries keep their existing per-ID TTL envelopes so opening one slot does
   not refetch an entire build tree.
-
 ## Rate limiting
 
-The route keeps an in-process token bucket per client and a global bucket, and server-
-rendered pages share the API's concurrency cap. (The MCP endpoint's own budgets, which can
-live in Redis, are described under [MCP endpoint](#mcp-endpoint).) On Vercel the client is identified by
-`X-Real-IP`, which Vercel sets itself. Elsewhere set `CLIENT_IP_HEADER` to the single header
-your proxy sets authoritatively and block direct origin access. Without it, forwarding
-headers could be forged to dodge the per-client limit, so clients aren't told apart and only
-the global bucket applies (and production logs a warning once).
+The route keeps an in-isolate token bucket per client and a global bucket, and server-rendered
+pages share the API's concurrency cap. (The MCP endpoint's own budgets are described under
+[MCP endpoint](#mcp-endpoint).) Clients are identified by `CF-Connecting-IP`, which Cloudflare sets
+itself (`CLIENT_IP_HEADER` overrides it). Because Cloudflare runs many isolates, the website's routes
+(`/api/tarkov` and the account routes) are also limited per client IP across every isolate by the
+Workers rate-limit binding `WEB_IP_LIMITER` (600 requests a minute), checked first.
 
-Successful public GETs are cached by Vercel's edge network, which honours `s-maxage` and
-`stale-while-revalidate` and keys on the full URL including the query string.
+Successful public GETs are cached at the edge by the Worker (see [Page caching](#page-caching)),
+which honours `s-maxage` and `stale-while-revalidate` and keys on the full URL including the query
+string.
+
+## Durable Objects
+
+Per-user and per-plan state lives in SQLite-backed Durable Objects (`src/app/lib/durable/`), named
+by the WorkOS user id (the MCP token's `sub`, the website session's user) and the plan id, so state
+survives reconnects and is the same for every MCP client and the website. No user-facing feature
+uses them yet apart from the MCP budget; the schema, migrations and access helpers are in place.
+
+- **UserDO**: profile, saved builds and item groups, the index of raid plans the user owns or that
+  are shared with them, plan-creation history, and the MCP budget (`user-store.ts`).
+- **PlanDO**: one raid plan's content, its members and their roles (owner, editor, viewer), and live
+  connections through hibernatable WebSockets, accepted for members but not yet acted on
+  (`plan-store.ts`, `plan-do.ts`).
+- `access.ts` keeps a plan and its members' indexes in step (create, update, share, unshare, hand
+  over, delete), checking limits before anything is written.
+
+Each store runs its migrations (`migrate` in `sql.ts`, versioned in a `schema_meta` table) inside
+`blockConcurrencyWhile`, so no request sees a half-migrated schema. The stores are plain classes
+over the SQL API, tested against Node's SQLite (`tests/durable-stores.test.ts`).
+
+Limits, exact because each object serves one request at a time (`limits.ts`):
+
+| Limit | Value |
+| --- | --- |
+| Raid plans owned | 100 |
+| Raid plans shared with you | 100 |
+| Saved builds | 200 |
+| Saved item groups | 50 |
+| New raid plans | 20 an hour |
+| One raid plan | 256 KB as JSON, with the planner's own caps: 500 route points, 500 notes (titles up to 120 and bodies up to 2,000 characters), 500 drawings and 20,000 drawing points |
+| One saved build or item group | 64 KB as JSON |
+| People on one plan | 50 |
+
+Handing a plan over may take the new owner past their limit: it is allowed, and they can't create
+plans until they are back under it. Every limit has a message saying what to do
+(`LIMIT_MESSAGES`), and Durable Object methods return refusals as values (`outcome.ts`), since errors
+lose their class over RPC.
+
+## Platform
+
+The site is a TanStack Start app on one Cloudflare Worker (`src/server.ts`, `wrangler.jsonc`):
+
+- **Static assets** (`ASSETS`): the client build, the prerendered pages, the data snapshot under
+  `/_data` (refused to the public through `run_worker_first`), and `_headers`.
+- **KV** (`TARKOV_DATA`): shared tarkov.dev copies and the price feed.
+- **Durable Objects** (`USER`, `PLAN`): see above.
+- **Rate limiting** (`MCP_IP_LIMITER`, `WEB_IP_LIMITER`): 600 requests a minute per IP each.
+- **Images** (`IMAGES`): converts tarkov.dev's WebP icons to PNG for the quest share images, which
+  are drawn with `@cf-wasm/og` (Satori and resvg). Without it, the icon's JPEG copy is used.
+- **Cron** (every minute, `src/app/lib/api/scheduled.ts`): the price feed and the shared datasets.
+
+Server code reaches these through `platform()` (`src/app/lib/server/platform.ts`), which the
+Worker installs at startup; tests and scripts get disk-backed defaults. `npm run dev` runs the
+Worker in workerd with local bindings and serves `data/` itself; `wrangler dev` serves the
+production build. See DEPLOYMENT.md for what the Cloudflare account needs.
 
 ## Adding a query
 

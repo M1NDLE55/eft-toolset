@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useEffectEvent, useMemo, useState } from "react";
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { ArrowLeft, Pencil } from "lucide-react";
 import type { MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
 import { PLAN_COLORS } from "@/app/lib/raid-planner/types";

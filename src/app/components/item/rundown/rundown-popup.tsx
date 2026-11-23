@@ -1,7 +1,7 @@
 "use client";
 
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import Link from "next/link";
+import Link from "@/app/lib/navigation/link";
 import { useLayoutEffect, useState, useSyncExternalStore, type CSSProperties, type MouseEvent } from "react";
 import { X } from "lucide-react";
 import type { ItemReference } from "@/app/lib/cache/fetcher";
