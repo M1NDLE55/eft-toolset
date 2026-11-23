@@ -2,7 +2,7 @@ import type { Metadata } from "@/app/lib/seo/metadata";
 import Image from "@/app/lib/navigation/image";
 import Link from "@/app/lib/navigation/link";
 import { JsonLd, breadcrumbList } from "@/app/components/seo/json-ld";
-import { WEAPON_CLASSES } from "@/app/lib/builds/best-builds";
+import { WEAPON_CLASSES } from "@/app/lib/builds/weapon-classes";
 import { BEST_BUILDS_HUB_DESCRIPTION, BEST_BUILDS_HUB_NAME, BEST_BUILDS_HUB_TITLE } from "@/app/lib/seo/builds";
 import { SITE_ORIGIN } from "@/app/lib/site";
 import type { BestBuildWeapon } from "@/app/lib/builds/best-builds";

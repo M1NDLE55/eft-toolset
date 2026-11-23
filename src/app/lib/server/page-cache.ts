@@ -78,23 +78,27 @@ function forClient(response: Response, lifetime: Lifetime, status: "HIT" | "STAL
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
+const ORIGINAL_CACHE_CONTROL_HEADER = "X-EFT-Original-Cache-Control";
+
 async function store(cache: Cache, key: Request, response: Response, lifetime: Lifetime) {
   const headers = new Headers(response.headers);
   headers.set(RENDERED_AT_HEADER, String(Date.now()));
   headers.set(STALE_HEADER, String(lifetime.stale));
-  // The Cache API drops the entry once it can't be served even stale.
+  // The Cache API keys its own expiry on Cache-Control: it drops the entry once it can't be served
+  // even stale. What the response said is kept apart and restored when it is served.
+  headers.set(ORIGINAL_CACHE_CONTROL_HEADER, response.headers.get("Cache-Control") ?? "");
   headers.set("Cache-Control", `public, max-age=${lifetime.ttl + lifetime.stale}`);
-  if (!lifetime.page) headers.set("X-EFT-Original-Cache-Control", response.headers.get("Cache-Control") ?? "");
   await cache.put(key, new Response(response.body, { status: response.status, headers }));
 }
 
-/** A stored entry's headers as the origin sent them. */
+/** A stored entry with the headers the origin sent, none of the cache's own. */
 function restore(cached: Response) {
-  const original = cached.headers.get("X-EFT-Original-Cache-Control");
-  if (original === null) return cached;
   const headers = new Headers(cached.headers);
-  headers.set("Cache-Control", original);
-  headers.delete("X-EFT-Original-Cache-Control");
+  const original = headers.get(ORIGINAL_CACHE_CONTROL_HEADER);
+  if (original) headers.set("Cache-Control", original);
+  else headers.delete("Cache-Control");
+  headers.delete(ORIGINAL_CACHE_CONTROL_HEADER);
+  headers.delete("CF-Cache-Status");
   return new Response(cached.body, { status: cached.status, headers });
 }
 
@@ -113,9 +117,10 @@ export async function servePage(
   const key = cacheKey(request);
   const cached = await cache.match(key);
   if (cached) {
+    const renderedAt = Number(cached.headers.get(RENDERED_AT_HEADER));
     const origin = restore(cached);
     const lifetime = storedLifetime(origin);
-    const age = (Date.now() - Number(cached.headers.get(RENDERED_AT_HEADER))) / 1000;
+    const age = (Date.now() - renderedAt) / 1000;
     if (age < lifetime.ttl) return forClient(origin, lifetime, "HIT");
     if (age < lifetime.ttl + lifetime.stale) {
       if (!revalidating.has(key.url)) {

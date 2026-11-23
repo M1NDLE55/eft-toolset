@@ -1,4 +1,4 @@
-import { cp, readFile, stat } from "node:fs/promises";
+import { cp, readFile, stat, writeFile } from "node:fs/promises";
 import { extname, join, normalize, resolve } from "node:path";
 import { fileURLToPath, URL } from "node:url";
 import { cloudflare } from "@cloudflare/vite-plugin";
@@ -7,8 +7,9 @@ import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { defineConfig, type Plugin } from "vite";
-import { DATA_ASSET_PREFIX } from "./src/app/lib/server/data-asset-prefix";
-import { PRERENDERED_PAGES } from "./src/app/lib/seo/prerendered-pages";
+import { DATA_ASSET_PREFIX } from "./src/app/lib/server/data-asset-prefix.ts";
+import { PRERENDERED_PAGES } from "./src/app/lib/seo/prerendered-pages.ts";
+import { staticAssetHeaders } from "./src/app/lib/security/static-headers.ts";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
 const dataDir = resolve(root, "data");
@@ -52,6 +53,20 @@ function dataSnapshotAssets(): Plugin {
   };
 }
 
+/**
+ * Static assets (prerendered pages, scripts, images) are served without running the Worker, so
+ * their headers come from the assets' _headers file: the same security headers the Worker sets.
+ */
+function staticHeaders(): Plugin {
+  return {
+    name: "eft:static-headers",
+    applyToEnvironment: (environment) => environment.name === "client",
+    async writeBundle(options) {
+      if (options.dir) await writeFile(join(options.dir, "_headers"), staticAssetHeaders());
+    },
+  };
+}
+
 /** Names this build, so the edge page cache never mixes two deployments' pages. */
 const BUILD_ID = process.env.EFT_BUILD_ID ?? `${Date.now().toString(36)}`;
 
@@ -65,6 +80,7 @@ export default defineConfig({
   server: { port: 3000 },
   plugins: [
     dataSnapshotAssets(),
+    staticHeaders(),
     cloudflare({ viteEnvironment: { name: "ssr" } }),
     tailwindcss(),
     tanstackStart({

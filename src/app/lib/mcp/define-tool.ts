@@ -21,7 +21,8 @@ export type DefineTool = <Args extends z.ZodRawShape, Out extends z.ZodObject>(
  * Returns a function that registers a catalogued tool: its title and description come from
  * the catalog, it is read-only and idempotent unless its annotations say otherwise, and its
  * body runs through runTool. TypeScript checks the body's result against the tool's output
- * schema, and the SDK checks it again at runtime.
+ * schema, and tools/call (tool-list.ts) checks it again at runtime. Registering with the SDK too
+ * keeps its capabilities and bookkeeping; tool-list.ts answers tools/list and tools/call.
  */
 export function toolDefiner(server: McpServer, context: ToolContext): DefineTool {
   return (name, config, body) => {
@@ -42,7 +43,7 @@ export function toolDefiner(server: McpServer, context: ToolContext): DefineTool
       name,
       { ...info, inputSchema, outputSchema: config.outputSchema, annotations },
       // The SDK types a tool's result from its output schema, which TypeScript can't resolve for a
-      // generic schema; runTool's result is checked against the schema at runtime, by the SDK.
+      // generic schema. tools/call goes through tool-list.ts, which checks results at runtime.
       handler as never
     );
     listTool(server, {
@@ -51,6 +52,7 @@ export function toolDefiner(server: McpServer, context: ToolContext): DefineTool
       inputSchema,
       outputSchema: config.outputSchema,
       annotations,
+      run: (args) => handler(args as z.output<typeof inputSchema>),
     });
   };
 }

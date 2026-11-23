@@ -1,4 +1,5 @@
 import { getGunList, getGunPartLookup, getItemFacets, getPreset } from "@/app/lib/api/tarkov-server";
+import { WEAPON_CLASSES, type WeaponClass } from "./weapon-classes";
 import type { GameMode } from "@/components/game-mode/mode";
 import type { BuildNode, PriceSources } from "@/app/lib/types/gunBuilder";
 import type { PriceSource } from "./price";
@@ -11,7 +12,7 @@ import { buildShoppingList } from "./shopping";
 import { slotLabel, type PartLookup } from "./resolve";
 import { sightRole } from "./sights";
 import { encodeBuildSharePayload, slugifyBuildName } from "./share";
-import { formatCaliber } from "@/app/lib/mcp/build-projection";
+import { formatCaliber } from "./caliber";
 import { isItemSlug } from "@/app/lib/item-links";
 
 /** Traders and the flea market: what most players buy from. */
@@ -20,18 +21,7 @@ export const BEST_BUILD_PRICES: PriceSources = { traders: true, flea: true };
 export type BestBuildKind = "preset" | Exclude<OptimizeGoal, "cost">;
 
 /** Weapon classes in the order the hub lists them, matched against tarkov.dev's item categories. */
-export const WEAPON_CLASSES = [
-  { name: "Assault rifles", categories: ["assault rifle"] },
-  { name: "Assault carbines", categories: ["assault carbine"] },
-  { name: "Submachine guns", categories: ["smg"] },
-  { name: "Marksman rifles", categories: ["marksman rifle"] },
-  { name: "Bolt-action rifles", categories: ["sniper rifle"] },
-  { name: "Machine guns", categories: ["machinegun"] },
-  { name: "Shotguns", categories: ["shotgun"] },
-  { name: "Pistols", categories: ["handgun", "revolver"] },
-] as const;
-
-export type WeaponClass = (typeof WEAPON_CLASSES)[number]["name"];
+export { WEAPON_CLASSES, type WeaponClass };
 
 export interface BestBuildWeapon {
   id: string;

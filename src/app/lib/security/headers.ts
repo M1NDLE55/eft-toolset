@@ -1,5 +1,5 @@
-// Imported by next.config.ts, so it uses relative imports only.
-import { CLOUDFLARE_BEACON_HOST, CLOUDFLARE_INSIGHTS_HOST } from "../analytics/cloudflare";
+// Imported by vite.config.ts (through static-headers.ts), so it uses relative imports only.
+import { CLOUDFLARE_BEACON_HOST, CLOUDFLARE_INSIGHTS_HOST } from "../analytics/cloudflare.ts";
 
 /**
  * One policy for every page, set by next.config.ts rather than per request. Content pages are

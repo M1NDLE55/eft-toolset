@@ -110,13 +110,39 @@ function resolveTitle({ layouts = [], own, page }: MetadataSources): string {
   return title;
 }
 
+/**
+ * Fills the Twitter card from Open Graph where the page left it out (title, description, images,
+ * and a card type to suit), then gives both the page's own title and description where they have
+ * none: the rules the site's metadata was written against.
+ */
+function inheritSocial(metadata: Metadata, title: string): Metadata {
+  const og = metadata.openGraph ? { ...metadata.openGraph } : null;
+  let twitter = metadata.twitter ? { ...metadata.twitter } : null;
+  if (og) {
+    const fill: Twitter = {};
+    if (!twitter?.title) fill.title = og.title || title;
+    if (!twitter?.description) fill.description = og.description || metadata.description || undefined;
+    if (!twitter?.images) fill.images = og.images;
+    if (Object.keys(fill).length) {
+      twitter = twitter ? { ...twitter, ...fill } : { ...fill, card: fill.images?.length ? "summary_large_image" : "summary" };
+    }
+  }
+  for (const target of [og, twitter]) {
+    if (!target) continue;
+    if (!target.title) target.title = title;
+    if (!target.description && metadata.description) target.description = metadata.description;
+  }
+  return { ...metadata, openGraph: og, twitter };
+}
+
 /** Head tags for a page. Fields replace those of the layers before them (layouts, then the page). */
 export function pageHead(sources: MetadataSources = {}): HeadTags {
-  const metadata: Metadata = Object.assign({}, ROOT_METADATA, ...[...(sources.layouts ?? []), sources.own, sources.page].filter(Boolean));
+  const title = resolveTitle(sources);
+  const metadata = inheritSocial(Object.assign({}, ROOT_METADATA, ...[...(sources.layouts ?? []), sources.own, sources.page].filter(Boolean)), title);
   const meta: HeadTags["meta"] = [];
   const links: HeadTags["links"] = [];
 
-  meta.push({ title: resolveTitle(sources) });
+  meta.push({ title });
   if (metadata.description) meta.push({ name: "description", content: metadata.description });
   if (metadata.applicationName) meta.push({ name: "application-name", content: metadata.applicationName });
   links.push({ rel: "manifest", href: "/manifest.webmanifest" });

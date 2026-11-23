@@ -1,5 +1,5 @@
 import type { AmmoItemData } from "@/app/lib/types/gunBuilder";
-import { caliberId, formatCaliber } from "@/app/lib/mcp/build-projection";
+import { caliberId, formatCaliber } from "@/app/lib/builds/caliber";
 import { isItemSlug } from "@/app/lib/item-links";
 import type { FaqEntry } from "./item";
 import { formatRoubles } from "./format";
