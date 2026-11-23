@@ -69,7 +69,8 @@ import { regionalCache } from "./shared-cache";
 import { USER_AGENT } from "./user-agent";
 import { AsyncLocalStorage } from "node:async_hooks";
 
-const UPSTREAM_BASE_URL = "https://json.tarkov.dev";
+// TARKOV_UPSTREAM_URL points a local build at a stand-in upstream (scripts/mcp-load.mjs); never on Vercel.
+const UPSTREAM_BASE_URL = (!process.env.VERCEL && process.env.TARKOV_UPSTREAM_URL?.replace(/\/+$/, "")) || "https://json.tarkov.dev";
 const UPSTREAM_TIMEOUT_MS = 20_000;
 const UPSTREAM_MAX_BYTES = 32 * 1024 * 1024;
 const MAX_UPSTREAM_REQUESTS = 4;
