@@ -16,10 +16,15 @@ www.eft-toolset.com from Vercel. DATA_ARCHITECTURE.md ("Platform") describes wha
   account's spending limits. Limits apply only when deployed, not in `wrangler dev`.
 - **Workers KV**: one namespace for the binding `TARKOV_DATA`, created with
   `wrangler kv namespace create TARKOV_DATA`; its id is in `wrangler.jsonc`.
-- **Durable Objects**: `USER` (class `UserDO`) and `PLAN` (class `PlanDO`), SQLite-backed, created by
-  the `v1` migration in `wrangler.jsonc` on the first deploy. Nothing to set up by hand.
+- **Durable Objects**: `USER` (class `UserDO`) and `PLAN` (class `PlanDO`), created by the `v1`
+  migration, and `LINK` (class `LinkDO`) and `MODERATION` (class `ModerationDO`), created by the `v2`
+  migration; all SQLite-backed, from `wrangler.jsonc` on deploy. UserDO and PlanDO also migrate their
+  own SQL schemas to version 2 on first use (their version 1 tables were never written, apart from
+  the MCP budget rows, which are kept). Nothing to set up by hand.
 - **Rate limiting**: the bindings `MCP_IP_LIMITER` (namespace `1001`) and `WEB_IP_LIMITER`
-  (namespace `1002`), 600 requests a minute each. They need no setup beyond the config.
+  (namespace `1002`), 600 requests a minute each, and for sharing `SHARE_IP_LIMITER` (`1003`, 120 a
+  minute), `INVITE_IP_LIMITER` (`1004`), `SOCKET_IP_LIMITER` (`1005`) and `LINK_IP_LIMITER` (`1006`),
+  30 a minute each. They need no setup beyond the config.
 - **Images**: the binding `IMAGES`, used to convert item icons for quest share images. It is billed
   per unique transformation; each icon is converted once per isolate and kept, so usage stays small.
   Check under Images in the dashboard that the account can use the Images binding. If a conversion
@@ -47,6 +52,9 @@ Secrets, set with `wrangler secret put <name>` (never in the config):
 | --- | --- |
 | `WORKOS_API_KEY` | The WorkOS API key, as set on Vercel today |
 | `WORKOS_COOKIE_PASSWORD` | A 32+ character cookie password. The Worker's is new, not Vercel's, so everyone signed in on the website signs in again once after the cutover |
+| `LINK_KEYS` | Signs share and invite link codes: `1:<random string of 32+ characters>`. To rotate, append `,2:<new secret>` and keep the old one while its links should work. Without it, making links answers 503 |
+| `ADMIN_TOKEN` | Optional: 32+ characters, the bearer token for `/admin/reports` (the report queue). Without it the admin routes are off |
+| `REPORT_WEBHOOK_URL` | Optional: a URL that gets a short alert (no content, no reporter) for each new report |
 
 `MCP_USER_RATE_BURST` and `MCP_USER_RATE_PER_SECOND` are optional (`vars`). Upstash, `CLIENT_IP_HEADER`,
 `WARM_TARKOV_CACHE` and the Vercel variables are no longer used.
