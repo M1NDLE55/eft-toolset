@@ -9,6 +9,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { NameDialog } from "@/components/name-dialog";
 import { customEncodeURI } from "@/app/lib/URIEncoding";
 import { createGroup, useGroups } from "@/app/lib/item-groups/store";
+import { useAccountView } from "@/app/lib/account-sync/account-session";
 import { MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
 import { useCatalog } from "@/app/lib/cache/hooks";
 import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
@@ -16,6 +17,7 @@ import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/accoun
 export function ItemGroupsPage() {
   const router = useRouter();
   const groups = useGroups();
+  const account = useAccountView();
   const hydrated = useHydrated();
   const { itemsByName } = useCatalog();
 
@@ -24,7 +26,7 @@ export function ItemGroupsPage() {
       <div className="flex items-end justify-between gap-4">
         <div>
           <h1 className="text-2xl font-black uppercase tracking-widest text-[#e6d9b8]">Item groups</h1>
-          <p className="mt-1 text-sm text-[#888]">Watchlists with live prices, saved in this browser.</p>
+          <p className="mt-1 text-sm text-[#888]">Watchlists with live prices, saved {account ? "to your account" : "in this browser"}.</p>
         </div>
         <NameDialog
           trigger={

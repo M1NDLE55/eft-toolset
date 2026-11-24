@@ -179,6 +179,8 @@ describe("closing", () => {
     const editor = (await connect(planId, { actor: "user_editor" })).socket!;
     await removeMember(durable.env, "user_owner", planId, "user_viewer");
     expect(viewer.closed?.code).toBe(4003);
+    // A last message says why, so clients act at once even if the close event lags behind.
+    expect(viewer.last("closing")).toMatchObject({ code: 4003 });
     await setMemberRole(durable.env, "user_owner", planId, "user_editor", "viewer");
     expect(editor.closed?.code).toBe(4009);
 

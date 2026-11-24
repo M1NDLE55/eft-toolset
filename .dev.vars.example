@@ -23,3 +23,8 @@ CLOUDFLARE_WEB_ANALYTICS_TOKEN=
 
 # A stand-in for json.tarkov.dev (scripts/mcp-load.mjs --serve-only); never set in production.
 TARKOV_UPSTREAM_URL=
+
+# Development only: DEV_AUTH=1 turns on /auth/dev-sign-in?user=<name> and "Bearer dev:<name>" for
+# MCP, so several local test users can share plans without WorkOS. Works under `npm run dev`, and
+# under `wrangler dev` only for a bundle built with EFT_LOCAL_E2E=1. Never in production builds.
+DEV_AUTH=

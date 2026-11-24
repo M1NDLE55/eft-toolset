@@ -10,10 +10,14 @@ import {
   MAX_BACKUP_BYTES,
   applyRestore,
   countOf,
+  createAccountBackup,
   createBackup,
   parseBackup,
+  restoreToAccount,
   type RestorePlan,
 } from "@/app/lib/storage/backup";
+import { activeLibrary, useAccountView } from "@/app/lib/account-sync/account-session";
+import { STORE_KEYS } from "@/app/lib/storage/store-keys";
 import { decodeSharePayload } from "@/app/lib/share-codec";
 import { BACKUP_IMPORT_PARAM } from "@/app/lib/storage/store-keys";
 import { cn } from "@/lib/utils";
@@ -40,7 +44,18 @@ function clearImportHash() {
 function StoreCount({ index }: { index: number }) {
   const { label, definition } = BACKUP_STORES[index];
   const value = useStore(definition);
-  const count = countOf(value);
+  const account = useAccountView();
+  // Signed in, builds, groups and plans are the account's (§12.1).
+  const accountCount = account
+    ? definition.key === STORE_KEYS.gunBuilds
+      ? account.builds.length
+      : definition.key === STORE_KEYS.itemGroups
+        ? account.itemGroups.length
+        : definition.key === STORE_KEYS.raidPlans
+          ? account.cachedPlans.length
+          : null
+    : null;
+  const count = accountCount ?? countOf(value);
   return (
     <li className="flex items-center justify-between gap-3 px-3 py-2 text-sm">
       <span className="text-[#ccc]">{label}</span>
@@ -88,7 +103,16 @@ export function DataPage() {
     };
   }, [importPayload]);
 
-  const exportAll = () => {
+  const account = useAccountView();
+
+  const exportAll = async () => {
+    const library = activeLibrary();
+    if (library) {
+      const { skippedPlans, ...backup } = await createAccountBackup(library);
+      download(JSON.stringify(backup, null, 2), `eft-toolset-backup-${backup.exportedAt.slice(0, 10)}.json`);
+      setMessage({ tone: "ok", text: skippedPlans > 0 ? `Backup downloaded. ${skippedPlans} shared plan${skippedPlans === 1 ? " isn't" : "s aren't"} included: their owners don't allow copies, or they aren't on this device yet.` : "Backup downloaded." });
+      return;
+    }
     const backup = createBackup();
     download(JSON.stringify(backup, null, 2), `eft-toolset-backup-${backup.exportedAt.slice(0, 10)}.json`);
     setMessage({ tone: "ok", text: "Backup downloaded." });
@@ -108,8 +132,29 @@ export function DataPage() {
     }
   };
 
-  const restore = (mode: "merge" | "replace") => {
+  const restore = async (mode: "merge" | "replace") => {
     if (!plan) return;
+    const library = activeLibrary();
+    if (library) {
+      try {
+        const report = await restoreToAccount(plan, library, mode);
+        setPlan(null);
+        if (importPayload) clearImportHash();
+        setMessage({
+          tone: report.failed.length ? "error" : "ok",
+          text: [
+            `Added ${report.created} item${report.created === 1 ? "" : "s"} to your account.`,
+            report.duplicates ? `${report.duplicates} were already there.` : "",
+            report.failed.length ? `Didn't fit: ${report.failed.slice(0, 5).join("; ")}${report.failed.length > 5 ? `, and ${report.failed.length - 5} more` : ""}.` : "",
+          ]
+            .filter(Boolean)
+            .join(" "),
+        });
+      } catch (reason) {
+        setMessage({ tone: "error", text: reason instanceof Error ? reason.message : "Could not restore this backup." });
+      }
+      return;
+    }
     try {
       applyRestore(plan, mode);
       setPlan(null);
@@ -126,13 +171,15 @@ export function DataPage() {
         <div>
           <h1 className="text-2xl font-black uppercase tracking-widest text-[#e6d9b8]">Your data</h1>
           <p className="mt-1 text-sm text-[#888]">
-            Everything you create is stored only in this browser. Back it up to a file to move it to another device or keep it safe.
+            {account
+              ? "Your builds, item groups and plans are in your account; settings are in this browser. Back them up to a file to keep a copy."
+              : "Everything you create is stored only in this browser. Back it up to a file to move it to another device or keep it safe."}
           </p>
         </div>
 
         <section aria-labelledby="saved" className="flex flex-col gap-2">
           <h2 id="saved" className="text-xs font-bold uppercase tracking-widest text-[#9a8866]">
-            Saved in this browser
+            {account ? "Your data" : "Saved in this browser"}
           </h2>
           <ul className="divide-y divide-[#1a1a1a] border border-[#1a1a1a] bg-[#0c0c0c]">
             {hydrated
@@ -144,7 +191,7 @@ export function DataPage() {
         </section>
 
         <div className="flex flex-wrap gap-2">
-          <Button onClick={exportAll} disabled={!hydrated}>
+          <Button onClick={() => void exportAll()} disabled={!hydrated}>
             <Download /> Download backup
           </Button>
           <Button variant="outline" asChild>
@@ -186,16 +233,18 @@ export function DataPage() {
               <p className="text-xs text-amber-200">Skipped because they failed validation: {plan.rejected.join(", ")}.</p>
             )}
             <p className="text-xs text-[#999]">
-              Merge adds groups, builds, plans, and recent items you don&apos;t already have and keeps your settings. Replace overwrites everything listed above.
+              {account
+                ? "Groups, builds and plans are added to your account (exact copies of what you have are skipped, and its limits apply). Merge keeps your settings; Replace overwrites the settings listed above."
+                : "Merge adds groups, builds, plans, and recent items you don't already have and keeps your settings. Replace overwrites everything listed above."}
             </p>
             <div className="flex flex-wrap gap-2">
-              <Button onClick={() => restore("merge")}>Merge</Button>
+              <Button onClick={() => void restore("merge")}>Merge</Button>
               <ConfirmDialog
                 trigger={<Button variant="outline" className="text-red-300 hover:text-red-200">Replace</Button>}
                 title="Replace your data?"
                 description="The listed data in this browser will be overwritten by the backup. This cannot be undone."
                 confirmLabel="Replace"
-                onConfirm={() => restore("replace")}
+                onConfirm={() => void restore("replace")}
               />
               <Button
                 variant="ghost"

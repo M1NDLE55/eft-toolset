@@ -257,7 +257,7 @@ export class PlanSession {
       if (event.code === 4009) this.freshSnapshot = true;
       if (event.code === 4003 || event.code === 4004 || event.code === 4001) {
         clearInterval(ping);
-        void this.loseAccess(event.code === 4004 ? "The plan was deleted." : "You no longer have access to this plan.");
+        if (this.confirmed || this.cached?.state) void this.loseAccess(event.code === 4004 ? "The plan was deleted." : "You no longer have access to this plan.");
       } else if (event.code === 4010) {
         clearInterval(ping);
       }
@@ -326,6 +326,22 @@ export class PlanSession {
       case "notice":
         this.notice(message.message);
         return;
+      case "closing":
+        this.onEnded(message.code);
+        return;
+    }
+  }
+
+  /** The server ended this session: lost access, or a role change that needs a fresh snapshot. */
+  private onEnded(code: number) {
+    if (code === 4009) {
+      this.freshSnapshot = true;
+      this.socket?.reconnect();
+      return;
+    }
+    if (code === 4003 || code === 4004 || code === 4001) {
+      this.socket?.close(1000);
+      void this.loseAccess(code === 4004 ? "The plan was deleted." : "You no longer have access to this plan.");
     }
   }
 

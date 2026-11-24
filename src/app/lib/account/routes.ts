@@ -264,7 +264,7 @@ export async function devSignIn(request: Request) {
   if (state !== null && !url.searchParams.has("user")) {
     const page = `<!doctype html><meta charset="utf-8"><title>Development sign-in</title>
 <form method="get" action="/auth/callback"><input type="hidden" name="state" value="${state.replace(/[^A-Za-z0-9-]/g, "")}">
-<label>Test user <input name="dev_user" pattern="[a-z0-9-]{1,32}" required autofocus></label> <button>Sign in</button></form>`;
+<label>Test user <input name="dev_user" pattern="[a-z0-9\\-]{1,32}" required autofocus></label> <button>Sign in</button></form>`;
     return new Response(page, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
   }
   const name = url.searchParams.get("user") ?? "";

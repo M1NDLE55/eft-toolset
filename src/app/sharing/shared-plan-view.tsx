@@ -66,7 +66,9 @@ class AnonymousViewer {
     });
     socket.addEventListener("close", (event) => {
       this.live = false;
-      if (event.code === 4010 || event.code === 4004) {
+      if (this.ended) {
+        // Already ended by the server's closing message.
+      } else if (event.code === 4010 || event.code === 4004) {
         this.ended = event.code === 4004 ? "This plan was deleted." : "This link no longer works.";
         socket.close();
       } else if ((this.failures += 1) >= 3) {
@@ -78,7 +80,13 @@ class AnonymousViewer {
     socket.addEventListener("message", (event) => {
       if (event.data === "pong") return;
       const message = JSON.parse(String(event.data)) as ServerMessage;
-      if (message.type === "snapshot") {
+      if (message.type === "closing") {
+        if (message.code === 4010 || message.code === 4004) {
+          this.ended = message.code === 4004 ? "This plan was deleted." : "This link no longer works.";
+          socket.close();
+          this.stopPolling();
+        }
+      } else if (message.type === "snapshot") {
         this.doc = message.doc;
         this.rev = message.rev;
         this.watching = message.anonymous;

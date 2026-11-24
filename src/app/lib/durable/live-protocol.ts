@@ -56,7 +56,9 @@ export type ServerMessage =
   | { type: "presence"; presence: Presence[]; anonymous: number; online?: number }
   | { type: "members"; members: PublicMember[] }
   | { type: "settings"; allowCopy: boolean; name: string }
-  | { type: "notice"; kind: "ownership" | "role"; message: string };
+  | { type: "notice"; kind: "ownership" | "role"; message: string }
+  /** Sent just before the server closes the socket, with the close code (§11.3). */
+  | { type: "closing"; code: number; reason: string };
 
 /** Close codes (§11.3). */
 export const CLOSE = {

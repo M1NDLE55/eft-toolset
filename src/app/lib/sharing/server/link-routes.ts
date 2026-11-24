@@ -6,8 +6,8 @@ import { newRecordId } from "@/app/lib/sharing/ids";
 import type { BuildValue, GroupValue } from "@/app/lib/sharing/types";
 import type { PlanContent } from "@/app/lib/sharing/plan-content";
 import { appOrigin } from "@/app/lib/account/server";
-import { bindings, errorResponse, fail, json, limitIp, NOINDEX, readJson, requireSameOrigin, route, unwrapOutcome } from "./http";
-import { linkKeys } from "./secrets";
+import { bindings, errorResponse, fail, json, limitIp, NOINDEX, readJson, requireSameOrigin, route, RouteError, unwrapOutcome } from "./http";
+import { linkKeys, sharingConfigured } from "./secrets";
 import { callerSession, requireUser, withSession } from "./session";
 
 /**
@@ -81,6 +81,9 @@ export function postLink(request: Request) {
 
 /** Creates a link for the caller; shared by the HTTP route and the share_link MCP tool. */
 export async function createLink(env: DurableBindings, userId: string, body: CreateLinkBody, request: Request) {
+  if (!sharingConfigured()) {
+    throw new RouteError(json({ error: { code: "unavailable", message: "Links aren't set up on this server yet." } }, 503), "Links aren't set up on this server yet.");
+  }
   const type = body.target?.type;
   const id = body.target?.id;
   if ((type !== "build" && type !== "item_group" && type !== "plan") || typeof id !== "string") fail("invalid", "target needs a type (build, item_group or plan) and an id.");

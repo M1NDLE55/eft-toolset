@@ -10,13 +10,14 @@ import { fail } from "./http";
  * Development only: with DEV_AUTH=1 in .dev.vars, `/auth/dev-sign-in?user=<name>` sets a plain
  * cookie naming a test user, so two browsers (and an MCP client, with `Bearer dev:<name>`) can be
  * different users locally without WorkOS. `import.meta.env.DEV` is false in production builds, so
- * the bundler drops this path from the deployed Worker entirely.
+ * the bundler drops this path from the deployed Worker entirely, unless the bundle was built with
+ * EFT_LOCAL_E2E=1 for a local `wrangler dev` run.
  */
 export const DEV_USER_COOKIE = "eft_dev_user";
 const DEV_USER_PATTERN = /^[a-z0-9-]{1,32}$/;
 
 export function devAuthEnabled() {
-  return import.meta.env.DEV && process.env.DEV_AUTH === "1";
+  return (import.meta.env.DEV || import.meta.env.EFT_LOCAL_E2E === true) && process.env.DEV_AUTH === "1";
 }
 
 export function devUserId(name: string | undefined | null): string | null {

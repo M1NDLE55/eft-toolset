@@ -203,7 +203,7 @@ export function SettingsPage() {
 
         <Section
           id="data"
-          description="Groups, builds, plans and these settings are saved only in this browser, not in your account. Back them up to move them to another device."
+          description="Back up your groups, builds, plans and these settings to a file, or restore them. Signed in, groups, builds and plans are in your account; settings stay in this browser."
         >
           <Link href="/data" className={cn(linkClass, "self-start")}>
             Back up or restore

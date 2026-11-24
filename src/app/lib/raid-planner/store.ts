@@ -137,3 +137,14 @@ export async function startPlan(name: string, mapKey: string, enabledLayers: rea
   const content = { name: normalizeName(name, "Untitled raid"), mapKey, enabledLayers: [...new Set(enabledLayers)].slice(0, MAX_LAYERS), route: [], drawings: [], notes: [] };
   return `/raid-planner/p/${await createAccountPlanLocally(library, content)}`;
 }
+
+/**
+ * Saves a copy of a shared plan (a legacy #p= link, or "Save to this browser"): to the account when
+ * signed in (subject to its caps, checked when it saves), otherwise to this browser. Returns its page.
+ */
+export async function savePlanCopy(plan: Omit<RaidPlan, "id" | "createdAt" | "updatedAt">): Promise<string> {
+  const library = activeLibrary();
+  if (!library) return `/raid-planner/${importPlan(plan).id}`;
+  const content = { name: normalizeName(plan.name, "Shared plan"), mapKey: plan.mapKey, enabledLayers: [...new Set(plan.enabledLayers)], route: plan.route, drawings: plan.drawings, notes: plan.notes };
+  return `/raid-planner/p/${await createAccountPlanLocally(library, content)}`;
+}

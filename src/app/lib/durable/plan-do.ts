@@ -195,12 +195,12 @@ export class PlanDO extends DurableObject<Env> {
    * reconnects for a fresh snapshot (4009), a new owner is told, and everyone gets the member list.
    */
   protected async membersChanged(change: { removed?: string; roleChanged?: string; owner?: string }) {
-    if (change.removed) for (const socket of this.ctx.getWebSockets(`user:${change.removed}`)) socket.close(4003, "You were removed from this plan.");
-    if (change.roleChanged) for (const socket of this.ctx.getWebSockets(`user:${change.roleChanged}`)) socket.close(4009, "Your role changed.");
+    if (change.removed) for (const socket of this.ctx.getWebSockets(`user:${change.removed}`)) this.end(socket, 4003, "You were removed from this plan.");
+    if (change.roleChanged) for (const socket of this.ctx.getWebSockets(`user:${change.roleChanged}`)) this.end(socket, 4009, "Your role changed.");
     if (change.owner) {
       const notice = JSON.stringify({ type: "notice", kind: "ownership", message: `You now own ${this.store.summary().name}.` });
       for (const socket of this.ctx.getWebSockets(`user:${change.owner}`)) this.sendRaw(socket, notice);
-      for (const socket of this.ctx.getWebSockets(`user:${change.owner}`)) socket.close(4009, "Your role changed.");
+      for (const socket of this.ctx.getWebSockets(`user:${change.owner}`)) this.end(socket, 4009, "Your role changed.");
     }
     if (!this.store.exists()) return;
     for (const socket of this.ctx.getWebSockets()) {
@@ -223,7 +223,7 @@ export class PlanDO extends DurableObject<Env> {
   }
 
   protected async closeAll(code: number, reason: string) {
-    for (const socket of this.ctx.getWebSockets()) socket.close(code, reason);
+    for (const socket of this.ctx.getWebSockets()) this.end(socket, code, reason);
   }
 
   exportFor(userId: string): Outcome<{ content: PlanContent; name: string }> {
@@ -258,7 +258,7 @@ export class PlanDO extends DurableObject<Env> {
 
   /** Anonymous sockets opened through a revoked, expired or paused view link close at once (§7.5). */
   protected async linkClosed(code: string) {
-    for (const socket of this.ctx.getWebSockets(`link:${code}`)) socket.close(4010, "This link no longer works.");
+    for (const socket of this.ctx.getWebSockets(`link:${code}`)) this.end(socket, 4010, "This link no longer works.");
     this.broadcastPresence();
   }
 
@@ -292,7 +292,7 @@ export class PlanDO extends DurableObject<Env> {
     const owner = this.store.ownerId();
     for (const socket of this.ctx.getWebSockets()) {
       const info = this.info(socket);
-      if (info?.userId !== owner) socket.close(info?.userId ? 4003 : 4010, "This plan was removed after review.");
+      if (info?.userId !== owner) this.end(socket, info?.userId ? 4003 : 4010, "This plan was removed after review.");
     }
   }
 
@@ -313,6 +313,15 @@ export class PlanDO extends DurableObject<Env> {
     } catch {
       return null;
     }
+  }
+
+  /**
+   * Ends a session: a last "closing" message with the code, then the close. Clients act on the
+   * message at once; the close event itself can lag behind on some proxies.
+   */
+  private end(socket: WebSocket, code: number, reason: string) {
+    this.sendRaw(socket, JSON.stringify({ type: "closing", code, reason }));
+    socket.close(code, reason);
   }
 
   private sendRaw(socket: WebSocket, message: string) {
@@ -350,7 +359,7 @@ export class PlanDO extends DurableObject<Env> {
         .getWebSockets(`user:${actorId}`)
         .map((socket) => ({ socket, info: this.info(socket) }))
         .sort((a, b) => (a.info?.connectedAt ?? 0) - (b.info?.connectedAt ?? 0));
-      for (const { socket } of mine.slice(0, Math.max(0, mine.length - PLAN_LIMITS.socketsPerMember + 1))) socket.close(4008, "Opened somewhere else.");
+      for (const { socket } of mine.slice(0, Math.max(0, mine.length - PLAN_LIMITS.socketsPerMember + 1))) this.end(socket, 4008, "Opened somewhere else.");
       info = { connId: crypto.randomUUID(), userId: actorId, key: memberKey(this.planId, actorId), role, link: null, name: this.store.memberName(actorId), editing: null, floor: null, connectedAt: now, ...buckets };
     } else if (linkCode) {
       try {
@@ -491,7 +500,7 @@ export class PlanDO extends DurableObject<Env> {
     if (!this.take(info, parsed.type === "ops" ? "batches" : "previews")) {
       info.strikes += 1;
       socket.serializeAttachment(info);
-      if (info.strikes > 20) socket.close(4008, "Too many changes too quickly.");
+      if (info.strikes > 20) this.end(socket, 4008, "Too many changes too quickly.");
       else if (parsed.type === "ops") this.send(socket, { type: "reject", opId, code: "rate_limited", message: "Too many changes too quickly." });
       return;
     }

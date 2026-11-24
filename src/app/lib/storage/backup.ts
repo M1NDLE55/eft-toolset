@@ -10,7 +10,10 @@ import { HOME_LAYOUT_STORE } from "@/app/lib/settings/store";
 import { CONTENT_SCALE_STORE } from "@/app/lib/settings/content-scale";
 import { ITEM_VIEWS_STORE } from "@/app/lib/item-views/store";
 import { QUEST_PROGRESS_STORE } from "@/app/lib/quests/progress-store";
-import { BACKUP_FORMAT, BACKUP_VERSION } from "./store-keys";
+import { BACKUP_FORMAT, BACKUP_VERSION, STORE_KEYS } from "./store-keys";
+import type { AccountLibrary } from "@/app/lib/account-sync/account-library";
+import { readAllPlans } from "@/app/lib/account-sync/plan-cache";
+import { contentOf } from "@/app/lib/sharing/plan-doc";
 
 export const MAX_BACKUP_BYTES = 10 * 1024 * 1024;
 
@@ -125,4 +128,66 @@ export function applyRestore(plan: RestorePlan, mode: "merge" | "replace") {
     return [{ definition: store.definition, value }];
   });
   writeStores(prepared);
+}
+
+/** The builds, item groups and raid plans: kept in the account when signed in, not in this browser. */
+export const LIBRARY_STORE_KEYS: readonly string[] = [STORE_KEYS.itemGroups, STORE_KEYS.gunBuilds, STORE_KEYS.raidPlans];
+
+/**
+ * A backup while signed in: the account's builds, item groups, and the plans cached here that the
+ * user may export (owned, or copies allowed), with this browser's settings.
+ */
+export async function createAccountBackup(library: AccountLibrary, now = new Date()): Promise<BackupFile & { skippedPlans: number }> {
+  const backup = createBackup(now);
+  const view = library.view();
+  const timestamps = (record: { createdAt: number; updatedAt: number }) => ({ createdAt: record.createdAt, updatedAt: record.updatedAt });
+  backup.stores[STORE_KEYS.gunBuilds] = view.builds.map((build) => ({ id: build.id, name: build.name, weaponId: build.weaponId, root: build.root, ...(build.ammoId ? { ammoId: build.ammoId } : {}), ...timestamps(build) }));
+  backup.stores[STORE_KEYS.itemGroups] = view.itemGroups.map((group) => ({ name: group.name, items: group.items }));
+  const plans = await readAllPlans(library.database);
+  const exportable = plans.filter((plan) => plan.state && (plan.state.role === "owner" || plan.state.allowCopy));
+  backup.stores[STORE_KEYS.raidPlans] = exportable.map((plan) => ({ id: plan.planId, createdAt: plan.state!.createdAt, updatedAt: plan.state!.updatedAt, ...contentOf(plan.state!.doc) }));
+  return { ...backup, skippedPlans: view.plans.length - exportable.length };
+}
+
+export interface AccountRestoreReport {
+  created: number;
+  duplicates: number;
+  failed: string[];
+}
+
+/**
+ * Restoring while signed in (§7.6): builds, item groups and plans go to the account, subject to its
+ * limits (exact duplicates are skipped); settings restore into this browser as before.
+ */
+export async function restoreToAccount(plan: RestorePlan, library: AccountLibrary, mode: "merge" | "replace"): Promise<AccountRestoreReport> {
+  const items: { type: "build" | "item_group" | "plan"; value: unknown; label: string }[] = [];
+  for (const entry of plan.entries) {
+    if (!LIBRARY_STORE_KEYS.includes(entry.key) || !Array.isArray(entry.incoming)) continue;
+    const type = entry.key === STORE_KEYS.gunBuilds ? "build" : entry.key === STORE_KEYS.itemGroups ? "item_group" : "plan";
+    for (const value of entry.incoming as Record<string, unknown>[]) {
+      const content =
+        type === "build"
+          ? { name: value.name, weaponId: value.weaponId, root: value.root, ...(value.ammoId ? { ammoId: value.ammoId } : {}) }
+          : type === "item_group"
+            ? { name: value.name, items: value.items }
+            : { name: value.name, mapKey: value.mapKey, enabledLayers: value.enabledLayers, route: value.route, drawings: value.drawings, notes: value.notes };
+      items.push({ type, value: content, label: String(value.name ?? "") });
+    }
+  }
+  const report: AccountRestoreReport = { created: 0, duplicates: 0, failed: [] };
+  for (let start = 0; start < items.length; start += 50) {
+    const batch = items.slice(start, start + 50);
+    const response = await library.request("/api/library/import", { method: "POST", body: JSON.stringify({ origin: "restore", items: batch.map(({ type, value }) => ({ type, value })) }) });
+    const body = (await response.json()) as { results?: { index: number; status: string; message?: string }[]; error?: { message: string } };
+    if (!response.ok || !body.results) throw new Error(body.error?.message ?? "Restoring stopped partway. Try again: nothing is added twice.");
+    for (const result of body.results) {
+      if (result.status === "created") report.created += 1;
+      else if (result.status === "duplicate") report.duplicates += 1;
+      else report.failed.push(`${batch[result.index]?.label || "An item"}: ${result.message ?? result.status}`);
+    }
+  }
+  const settings = { ...plan, entries: plan.entries.filter((entry) => !LIBRARY_STORE_KEYS.includes(entry.key)) };
+  if (settings.entries.length > 0) applyRestore(settings, mode);
+  await library.catchUp();
+  return report;
 }
