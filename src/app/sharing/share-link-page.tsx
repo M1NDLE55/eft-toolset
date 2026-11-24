@@ -14,6 +14,7 @@ import type { PlanContent } from "@/app/lib/sharing/plan-content";
 import type { SharePreview } from "./share.server";
 import { importPlan } from "@/app/lib/raid-planner/store";
 import { SharedPlanView } from "./shared-plan-view";
+import { ReportButton } from "./report-button";
 
 /** Why a link didn't open, or why saving a copy after sign-in failed (?error=…). */
 const ERROR_MESSAGES: Record<string, string> = {
@@ -65,6 +66,7 @@ export function ShareLinkPage({ preview, code }: { preview: SharePreview; code: 
   const footer = (
     <div className="flex items-center justify-between gap-2 text-xs text-[#777]">
       <span>Shared by {share.ownerDisplayName}</span>
+      <ReportButton subject={{ link: code }} />
     </div>
   );
 

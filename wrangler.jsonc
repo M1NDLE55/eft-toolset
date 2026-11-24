@@ -36,13 +36,14 @@
     "bindings": [
       { "name": "USER", "class_name": "UserDO" },
       { "name": "PLAN", "class_name": "PlanDO" },
-      { "name": "LINK", "class_name": "LinkDO" }
+      { "name": "LINK", "class_name": "LinkDO" },
+      { "name": "MODERATION", "class_name": "ModerationDO" }
     ]
   },
   "migrations": [
     { "tag": "v1", "new_sqlite_classes": ["UserDO", "PlanDO"] },
-    // Sharing: link-code routes.
-    { "tag": "v2", "new_sqlite_classes": ["LinkDO"] }
+    // Sharing: link-code routes and the report queue.
+    { "tag": "v2", "new_sqlite_classes": ["LinkDO", "ModerationDO"] }
   ],
   "ratelimits": [
     {

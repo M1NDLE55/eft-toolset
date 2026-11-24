@@ -1,4 +1,5 @@
 import { planLive, shareLive } from "./live-routes";
+import { getAdminReports, postAdminDecision, postReport } from "./report-routes";
 import { deleteLink, getLinks, getShare, postLink, postShareCopy } from "./link-routes";
 import {
   deletePlanMember,
@@ -51,6 +52,9 @@ const ROUTES: RouteDef[] = [
   { pattern: new RegExp(`^/api/plans/${SEGMENT}/transfer$`), methods: { POST: postPlanTransfer } },
   { pattern: /^\/api\/invites\/preview$/, methods: { POST: postInvitePreview } },
   { pattern: /^\/api\/invites\/accept$/, methods: { POST: postInviteAccept } },
+  { pattern: /^\/api\/reports$/, methods: { POST: postReport } },
+  { pattern: /^\/admin\/reports$/, methods: { GET: getAdminReports } },
+  { pattern: /^\/admin\/reports\/((?:link|plan)(?::|%3A)[A-Za-z0-9_-]{1,64})$/, methods: { POST: postAdminDecision } },
 ];
 
 /** WebSocket upgrade routes: served before the page cache, which can't carry a socket. */

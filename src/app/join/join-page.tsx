@@ -7,6 +7,7 @@ import Link from "@/app/lib/navigation/link";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { useAccountMode } from "@/app/lib/account-sync/account-session";
 import { Button } from "@/components/ui/button";
+import { ReportButton } from "@/app/sharing/report-button";
 
 interface InvitePreview {
   name: string;
@@ -102,7 +103,10 @@ export function JoinPage() {
             <p className="text-sm text-[#999]">
               {getMapConfig(preview.mapKey)?.name ?? preview.mapKey} · {preview.inviter} invited you as {preview.role === "editor" ? "an editor" : "a viewer"}
             </p>
-            {preview.expiresAt && <p className="text-xs text-[#777]">Invite expires {new Date(preview.expiresAt).toLocaleString()}.</p>}
+            <div className="flex items-center justify-between gap-2">
+              {preview.expiresAt ? <p className="text-xs text-[#777]">Invite expires {new Date(preview.expiresAt).toLocaleString()}.</p> : <span />}
+              <ReportButton subject={{ invite: code }} />
+            </div>
             <Button onClick={() => void join()} disabled={busy} className="mt-2">
               {busy ? <LoaderCircle className="animate-spin" /> : mode === "account" ? <Users /> : <LogIn />}
               {mode === "account" ? `Join as ${preview.role}` : `Sign in to join as ${preview.role}`}

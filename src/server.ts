@@ -13,6 +13,7 @@ import { sharingSocketEndpoint } from "@/app/lib/sharing/server/router";
 export { UserDO } from "@/app/lib/durable/user-do";
 export { PlanDO } from "@/app/lib/durable/plan-do";
 export { LinkDO } from "@/app/lib/durable/link-do";
+export { ModerationDO } from "@/app/lib/durable/moderation-do";
 
 installWorkerPlatform(env);
 

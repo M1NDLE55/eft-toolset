@@ -2,6 +2,8 @@ import { sqlite } from "./sqlite";
 import { UserDO } from "@/app/lib/durable/user-do";
 import { PlanDO } from "@/app/lib/durable/plan-do";
 import { LinkDO } from "@/app/lib/durable/link-do";
+import { ModerationDO } from "@/app/lib/durable/moderation-do";
+import type { DurableBindings } from "@/app/lib/durable/access";
 
 /**
  * The Worker's Durable Object namespaces, in memory: one real object per name, each with its own
@@ -163,17 +165,19 @@ export function durableEnv() {
   const USER = new Namespace(UserDO as unknown as Ctor<UserDO>, get);
   const PLAN = new Namespace(PlanDO as unknown as Ctor<PlanDO>, get);
   const LINK = new Namespace(LinkDO as unknown as Ctor<LinkDO>, get);
-  Object.assign(env, { USER, PLAN, LINK });
+  const MODERATION = new Namespace(ModerationDO as unknown as Ctor<ModerationDO>, get);
+  Object.assign(env, { USER, PLAN, LINK, MODERATION });
   return {
-    env: env as unknown as { USER: DurableObjectNamespace<UserDO>; PLAN: DurableObjectNamespace<PlanDO>; LINK: DurableObjectNamespace<LinkDO> },
+    env: env as unknown as DurableBindings,
     USER,
     PLAN,
     LINK,
+    MODERATION,
     /** Runs every due alarm until none are left (or a round limit). */
     async runAlarms(now = Date.now()) {
       for (let round = 0; round < 10; round += 1) {
         let ran = false;
-        for (const namespace of [USER, PLAN, LINK] as Namespace<object>[]) {
+        for (const namespace of [USER, PLAN, LINK, MODERATION] as Namespace<object>[]) {
           for (const { object, state } of namespace.objects.values()) {
             if (state.alarm !== null && state.alarm <= now && "alarm" in object) {
               state.alarm = null;

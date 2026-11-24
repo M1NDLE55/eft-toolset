@@ -1,4 +1,5 @@
 import type { LinkDO } from "./link-do";
+import type { ModerationDO } from "./moderation-do";
 import type { PlanDO } from "./plan-do";
 import type { UserDO } from "./user-do";
 
@@ -13,6 +14,12 @@ export interface DurableBindings {
   USER: DurableObjectNamespace<UserDO>;
   PLAN: DurableObjectNamespace<PlanDO>;
   LINK: DurableObjectNamespace<LinkDO>;
+  MODERATION: DurableObjectNamespace<ModerationDO>;
+}
+
+/** The report queue: one object for the whole site. */
+export function moderationObject(env: Pick<DurableBindings, "MODERATION">) {
+  return env.MODERATION.getByName("moderation") as unknown as Remote<ModerationDO>;
 }
 
 /**

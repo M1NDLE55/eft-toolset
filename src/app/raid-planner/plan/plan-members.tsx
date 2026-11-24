@@ -11,6 +11,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { ConfirmDialog } from "@/components/confirm-dialog";
 import { LinksPanel } from "@/app/components/sharing/links-panel";
 import { iconButton } from "@/app/components/raid-planner/ui";
+import { ReportButton } from "@/app/sharing/report-button";
 
 const ROLE_LABEL = { owner: "Owner", editor: "Editor", viewer: "Viewer" } as const;
 
@@ -180,6 +181,7 @@ export function PlanMembersButton({ session, view, onLeft }: { session: PlanSess
               })
             }
           />
+          {!owner && <ReportButton subject={{ plan: planId }} compact={false} />}
           {owner && (
             <ConfirmDialog
               trigger={
