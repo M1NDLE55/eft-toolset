@@ -433,6 +433,26 @@ describe("the admin dashboard gate", () => {
     expect((await getAdminStats(statsRequest("/api/admin/stats?days=31", session))).status).toBe(400);
   });
 
+  it("counts a signed-in browser's beacons as its account, without storing the id", async () => {
+    const session = await sessionFor(USER_ID);
+    await flush();
+    written.length = 0;
+    const beacon = (cookie: string) =>
+      postUsage(
+        new Request(`${ORIGIN}/api/usage`, {
+          method: "POST",
+          headers: { "Sec-Fetch-Site": "same-origin", "CF-Connecting-IP": IP, "User-Agent": USER_AGENT, cookie },
+          body: JSON.stringify({ event: "group.create" }),
+        })
+      );
+    expect((await beacon(`${SESSION_COOKIE}=${session}`)).status).toBe(204);
+    expect((await beacon(`${SESSION_COOKIE}=not-a-sealed-session`)).status).toBe(204);
+    await flush();
+    expect(written.map((point) => point.blobs[13])).toEqual(["1", "0"]);
+    expect(written[0].blobs[11]).toBe((await anonymousIds({ userId: USER_ID })).day);
+    expectAnonymous(written);
+  });
+
   it("records sign-ins anonymously", async () => {
     await sessionFor(USER_ID);
     await flush();
