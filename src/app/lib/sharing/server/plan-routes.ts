@@ -17,6 +17,7 @@ import {
 } from "./plan-service";
 import { libraryUrl } from "./link-routes";
 import { requireUser, withSession } from "./session";
+import { recordRequestUsage } from "@/app/lib/usage/record";
 
 /** Plan routes (§10.2) and invites (§10.3). Non-members get 404, never 403, so ids reveal nothing. */
 
@@ -30,6 +31,7 @@ export function postPlan(request: Request) {
     const body = await readJson<{ content?: PlanContent; id?: string; offlineCopy?: boolean }>(request, MAX_PLAN_BODY);
     if (!body.content || typeof body.content !== "object") fail("invalid", "Send the plan's content.");
     const created = await createAccountPlan(bindings(), session.userId, body.content, { kind: body.offlineCopy ? "offline-copy" : "create", id: body.id });
+    recordRequestUsage(request, { name: "plan.host", subject: { kind: "map", id: created.summary.mapKey } }, session.userId);
     return withSession(json({ planId: created.planId, summary: created.summary, url: `/raid-planner/p/${created.planId}` }, 201), session);
   });
 }
@@ -164,6 +166,7 @@ export function postInviteAccept(request: Request) {
     const session = await requireUser(request);
     const body = await readJson<{ code?: string }>(request);
     const joined = await acceptInvite(bindings(), session.userId, String(body.code ?? ""));
+    if (joined.joined) recordRequestUsage(request, { name: "link.join" }, session.userId);
     return withSession(json({ ...joined, url: `/raid-planner/p/${joined.planId}` }), session);
   }, NOINDEX);
 }

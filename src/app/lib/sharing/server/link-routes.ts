@@ -9,6 +9,7 @@ import { appOrigin } from "@/app/lib/account/server";
 import { bindings, errorResponse, fail, json, limitIp, NOINDEX, readJson, requireSameOrigin, route, RouteError, unwrapOutcome } from "./http";
 import { linkKeys, sharingConfigured } from "./secrets";
 import { callerSession, requireUser, withSession } from "./session";
+import { recordRequestUsage } from "@/app/lib/usage/record";
 
 /**
  * Links (§7, §10.3). View and copy links are /s/<code>; invites are /join#<code> (plans only).
@@ -75,6 +76,7 @@ export function postLink(request: Request) {
     const session = await requireUser(request);
     const body = await readJson<CreateLinkBody>(request);
     const link = await createLink(bindings(), session.userId, body, request);
+    recordRequestUsage(request, { name: "link.create" }, session.userId);
     return withSession(json(link, 201, NOINDEX), session);
   });
 }
@@ -219,6 +221,7 @@ export function postShareCopy(request: Request, code: string) {
     const session = await requireUser(request);
     const body = await readJson<{ name?: string }>(request).catch(() => ({}) as { name?: string });
     const copied = await copyFromLink(bindings(), session.userId, code, typeof body.name === "string" ? body.name : undefined);
+    recordRequestUsage(request, { name: "link.copy" }, session.userId);
     return withSession(json({ ...copied, url: libraryUrl(copied) }, 201), session);
   });
 }

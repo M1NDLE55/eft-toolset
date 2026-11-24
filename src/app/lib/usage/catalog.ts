@@ -40,6 +40,14 @@ export const USAGE_EVENTS = {
   "account.sign_in": { feature: "account", source: "server", outcome: true },
   "account.delete": { feature: "account", source: "server", outcome: true },
 
+  // Sharing, recorded by the server when a website request succeeds. The same actions over MCP are
+  // counted as mcp.tool_call under the tool's name instead, so they aren't counted twice.
+  "link.create": { feature: "sharing", source: "server" },
+  "link.copy": { feature: "sharing", source: "server" },
+  "link.join": { feature: "sharing", source: "server" },
+  "plan.host": { feature: "sharing", source: "server", subject: "map" },
+  "report.file": { feature: "sharing", source: "server" },
+
   // Website actions, sent by the browser as a beacon.
   "page.view": { feature: "site", source: "web", route: true },
   "page.error": { feature: "site", source: "web", route: true },

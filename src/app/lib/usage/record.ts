@@ -1,6 +1,7 @@
 import { mapConfigs } from "@/app/lib/raid-planner/maps-config";
 import { MCP_TOOL_NAMES } from "@/app/lib/mcp/catalog";
 import { platform } from "@/app/lib/server/platform";
+import { clientIp } from "@/app/lib/api/rate-limit";
 import { anonymousIds, NO_IDS, type AnonymousIds, type UsageIdentity } from "./identity";
 import {
   DURATION_BUCKETS,
@@ -101,6 +102,11 @@ export function requestCountry(request: Request | undefined): string | undefined
 /** Who made a request, for the anonymous ids only: the trusted client IP and the user agent. */
 export function requestIdentity(request: Request, ip: string | null, userId?: string): UsageIdentity {
   return { userId, ip, userAgent: request.headers.get("user-agent") };
+}
+
+/** recordUsage for an event a request caused: its country and anonymous ids come from the request. */
+export function recordRequestUsage(request: Request, event: UsageEvent, userId?: string) {
+  recordUsage({ ...event, country: requestCountry(request) }, requestIdentity(request, clientIp(request), userId));
 }
 
 /**

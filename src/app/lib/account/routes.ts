@@ -20,8 +20,7 @@ import { readCookie, setCookie } from "@/app/lib/server/cookies";
 import { accountCacheKey, linkKeys } from "@/app/lib/sharing/server/secrets";
 import { DEV_USER_COOKIE, devAuthEnabled, devUserId } from "@/app/lib/sharing/server/session";
 import { SIGNED_IN_COOKIE } from "./cookies";
-import { clientIp } from "@/app/lib/api/rate-limit";
-import { recordUsage, requestCountry, requestIdentity } from "@/app/lib/usage/record";
+import { recordRequestUsage } from "@/app/lib/usage/record";
 
 // The website account routes. Only these touch sessions, so every page stays cacheable and never
 // reads cookies. See DATA_ARCHITECTURE.md ("Website accounts").
@@ -121,7 +120,7 @@ export async function signInWithIntent(request: Request) {
 async function landing(request: Request, userId: string, state: SignInState): Promise<URL> {
   const origin = appOrigin(request);
   if (state.intent) {
-    const destination = await finishIntent(userId, state.intent);
+    const destination = await finishIntent(request, userId, state.intent);
     return new URL(destination, origin);
   }
   if (state.returnPath && state.returnPath !== DEFAULT_RETURN_PATH) return new URL(state.returnPath, origin);
@@ -141,7 +140,7 @@ export async function authCallback(request: Request) {
   };
   // Anonymous: whether sign-in worked, under the day's hashed id, never who signed in.
   const record = (outcome: "ok" | "error", userId?: string) =>
-    recordUsage({ name: "account.sign_in", outcome, country: requestCountry(request) }, requestIdentity(request, clientIp(request), userId));
+    recordRequestUsage(request, { name: "account.sign_in", outcome }, userId);
   const done = (outcome: "error" | "busy") => {
     if (outcome === "error") record("error");
     return clear(redirect(new URL(`/settings?account=${outcome}#account`, origin)));
@@ -224,7 +223,7 @@ export async function deleteAccount(request: Request) {
   const subject = userId;
   // Anonymous: whether the deletion went through, never whose account it was.
   const recordDeletion = (outcome: "ok" | "error") =>
-    recordUsage({ name: "account.delete", outcome, country: requestCountry(request) }, requestIdentity(request, clientIp(request), subject));
+    recordRequestUsage(request, { name: "account.delete", outcome }, subject);
   const env = platform().durable;
   try {
     if (env) {

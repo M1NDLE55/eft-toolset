@@ -6,6 +6,7 @@ import { bindings, fail, json, NOINDEX, readJson, requireSameOrigin, route, unwr
 import { resolveCode } from "./link-routes";
 import { hashedIp } from "./secrets";
 import { callerSession, withSession } from "./session";
+import { recordRequestUsage } from "@/app/lib/usage/record";
 
 /**
  * The "Report" button (§16.6). Anyone who can see the content can report it: /s/ visitors signed in
@@ -118,6 +119,7 @@ export function postReport(request: Request) {
     const session = await callerSession(request);
     const reporter = session.kind === "user" ? { userId: session.userId } : { ip: clientIp(request) };
     const result = await fileReport(bindings(), reporter, { ...body, reason: String(body.reason ?? "") });
+    recordRequestUsage(request, { name: "report.file" }, session.kind === "user" ? session.userId : undefined);
     return withSession(json(result, 200, NOINDEX), session.kind === "user" ? session : null);
   }, NOINDEX);
 }

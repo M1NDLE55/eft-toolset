@@ -51,6 +51,11 @@ The source of truth is `USAGE_EVENTS` in `src/app/lib/usage/catalog.ts`.
 | `mcp.tool_call` | mcp | mcp | tool, weapon/item/map id, game mode, outcome, duration | Every MCP tool call (`runTool`) |
 | `account.sign_in` | server | account | outcome | Website sign-in finishes or fails |
 | `account.delete` | server | account | outcome | An account is deleted |
+| `link.create` | server | sharing | | A view, copy or invite link is made on the website |
+| `link.copy` | server | sharing | | Something is copied into an account from a link (also after signing in to copy) |
+| `link.join` | server | sharing | | An invite adds a new member to a raid plan (not a repeat accept) |
+| `plan.host` | server | sharing | map id | A raid plan is created in an account, hosted live |
+| `report.file` | server | sharing | | Shared content is reported (never the reason's text) |
 | `page.view` | web | site | route pattern | Each page navigation |
 | `page.error` | web | site | route pattern | A page shows the error screen |
 | `build.create` | web | gun-builder | weapon id, game mode | A build is created from the weapon picker |
@@ -69,6 +74,9 @@ The source of truth is `USAGE_EVENTS` in `src/app/lib/usage/catalog.ts`.
 | `data.import` | web | data | outcome | A backup is restored |
 | `mode.switch` | web | game-mode | game mode | The PVP/PVE switch is used |
 | `mcp.setup_copy` | web | mcp | | An MCP setup snippet is copied |
+
+The sharing events count website requests only; the same actions over MCP (`share_link`,
+`copy_from_link`, `join_raid_plan`, `report_content`) are counted once, as `mcp.tool_call`.
 
 Field values: game mode `regular` or `pve`; outcome `ok`, `error`, `cancelled`, `input_error`,
 `upstream_error`, `timeout`, `crash` or `refused` (an MCP call the account's library or plan turned
