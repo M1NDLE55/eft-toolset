@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useEffectEvent, useMemo, useState } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { ArrowLeft, Pencil } from "lucide-react";
 import type { MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
@@ -43,6 +44,10 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
   const toolbarPrefs = useToolbarPrefs();
 
   const plan = draft ?? storedPlan;
+
+  useEffect(() => {
+    trackUsage("plan.open", { subject: config.key });
+  }, [storedPlan.id, config.key]);
   const layerGroups = useMemo(() => (details ? getLayerGroups(details, config) : null), [details, config]);
   const enabledSet = useMemo(() => new Set(plan.enabledLayers), [plan.enabledLayers]);
   const selectedNote = plan.notes.find((note) => note.id === selectedNoteId) ?? null;

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "@/app/lib/navigation/image";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { useParams, useRouter } from "@/app/lib/navigation/hooks";
 import { useEffect, useState } from "react";
@@ -231,6 +232,7 @@ export function GroupPage() {
               onClick={() =>
                 void copyText(formatGroupPriceList(group.name, rows, total)).then(
                   () => {
+                    trackUsage("group.copy_list", { gameMode });
                     setCopied(true);
                     window.setTimeout(() => setCopied(false), 1800);
                   },

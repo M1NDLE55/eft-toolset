@@ -25,6 +25,11 @@ www.eft-toolset.com from Vercel. DATA_ARCHITECTURE.md ("Platform") describes wha
   Check under Images in the dashboard that the account can use the Images binding. If a conversion
   fails, share images fall back to each icon's JPEG copy, so the site works without it.
 - **Cron trigger**: `* * * * *`, from `wrangler.jsonc`; nothing to set up.
+- **Workers Analytics Engine**: the binding `USAGE` writes to the dataset `eft_toolset_usage`, which
+  Cloudflare creates on the first write; nothing to set up. Included in Workers Paid up to a monthly
+  allowance of rows written and queries read, then billed per million (see USAGE_STATS.md).
+- **Durable Object `USAGE_SALT`** (class `UsageSaltDO`), created by the `usage-v1` migration on the
+  next deploy; one instance holds the usage-stats keys.
 - **Observability**: Workers Logs are on (`observability.enabled`); the logs are the JSON lines the
   app writes (`mcp_tool_call`, `scheduled_refresh`, `tarkov_data_evicted`).
 
@@ -47,6 +52,17 @@ Secrets, set with `wrangler secret put <name>` (never in the config):
 | --- | --- |
 | `WORKOS_API_KEY` | The WorkOS API key, as set on Vercel today |
 | `WORKOS_COOKIE_PASSWORD` | A 32+ character cookie password. The Worker's is new, not Vercel's, so everyone signed in on the website signs in again once after the cutover |
+
+Usage stats (all optional; each part stays off until its secrets exist; see USAGE_STATS.md):
+
+| Secret | Value |
+| --- | --- |
+| `STATS_ADMIN_USER_IDS` | WorkOS user ids (`user_…`) allowed to open `/admin/stats`, comma separated |
+| `STATS_CF_ACCOUNT_ID` | The Cloudflare account id the dataset is in |
+| `STATS_CF_API_TOKEN` | An API token with only **Account › Account Analytics › Read**, for this account |
+| `STATS_READ_TOKEN` | A random string of 32+ characters for `GET /api/admin/stats/daily` (bearer token) |
+
+They're secrets rather than `vars` so no ids or tokens sit in the repository.
 
 `MCP_USER_RATE_BURST` and `MCP_USER_RATE_PER_SECOND` are optional (`vars`). Upstash, `CLIENT_IP_HEADER`,
 `WARM_TARKOV_CACHE` and the Vercel variables are no longer used.

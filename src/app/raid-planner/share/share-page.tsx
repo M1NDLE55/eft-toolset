@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, Download, MapPin, MoveUpRight, Route, StickyNote } from "lucide-react";
@@ -79,6 +80,7 @@ export function SharedPlanPage() {
     setImportError("");
     try {
       const plan = importPlan(shared);
+      trackUsage("plan.create", { subject: plan.mapKey });
       router.replace(`/raid-planner/${plan.id}`);
     } catch (reason) {
       setImporting(false);

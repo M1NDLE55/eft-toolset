@@ -5,6 +5,7 @@ import { Check, Copy, Download, LoaderCircle, Share2 } from "lucide-react";
 import type { RaidPlan } from "@/app/lib/raid-planner/types";
 import { encodePlanSharePayload, slugifyPlanName } from "@/app/lib/raid-planner/share";
 import { copyText } from "@/app/lib/browser/clipboard";
+import { trackUsage } from "@/app/lib/usage/track";
 import { downloadPlanFile } from "@/app/lib/raid-planner/plan-file";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -77,6 +78,7 @@ export function SharePlan({ plan }: { plan: RaidPlan }) {
     if (!url) return;
     try {
       await copyText(url);
+      trackUsage("plan.share", { subject: plan.mapKey });
       setCopied(true);
       setActionError("");
     } catch (reason) {
@@ -89,6 +91,7 @@ export function SharePlan({ plan }: { plan: RaidPlan }) {
     setSharing(true);
     try {
       await navigator.share({ title: plan.name, url });
+      trackUsage("plan.share", { subject: plan.mapKey });
     } catch (reason) {
       if (!(reason instanceof DOMException && reason.name === "AbortError")) {
         setActionError(reason instanceof Error ? reason.message : "Could not share the link.");

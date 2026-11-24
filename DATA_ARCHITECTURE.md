@@ -854,7 +854,10 @@ The site is a TanStack Start app on one Cloudflare Worker (`src/server.ts`, `wra
 - **Static assets** (`ASSETS`): the client build, the prerendered pages, the data snapshot under
   `/_data` (refused to the public through `run_worker_first`), and `_headers`.
 - **KV** (`TARKOV_DATA`): shared tarkov.dev copies and the price feed.
-- **Durable Objects** (`USER`, `PLAN`): see above.
+- **Durable Objects** (`USER`, `PLAN`): see above. `USAGE_SALT` (one instance) holds the rotating
+  keys behind the anonymous usage-stats ids.
+- **Analytics Engine** (`USAGE`, dataset `eft_toolset_usage`): anonymous usage events, read by the
+  admin dashboard through the SQL API. See USAGE_STATS.md.
 - **Rate limiting** (`MCP_IP_LIMITER`, `WEB_IP_LIMITER`): 600 requests a minute per IP each.
 - **Images** (`IMAGES`): converts tarkov.dev's WebP icons to PNG for the quest share images, which
   are drawn with `@cf-wasm/og` (Satori and resvg). Without it, the icon's JPEG copy is used.

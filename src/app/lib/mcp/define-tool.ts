@@ -1,7 +1,7 @@
 import type { McpServer, ToolAnnotations } from "@modelcontextprotocol/server";
 import { z } from "zod";
 import { toolInfo, type McpToolName } from "./catalog";
-import { runTool, type GameMode, type Read, type ToolContext } from "./context";
+import { runTool, type GameMode, type NoteSubject, type Read, type ToolContext } from "./context";
 import { toolResultKey } from "./result-cache";
 import { listTool } from "./tool-list";
 
@@ -14,7 +14,7 @@ export type DefineTool = <Args extends z.ZodRawShape, Out extends z.ZodObject>(
     /** Reuse results on this instance while the data they were built from is unchanged. */
     cacheResults?: boolean;
   },
-  body: (args: z.output<z.ZodObject<Args>>, call: { read: Read }) => Promise<z.input<Out>>
+  body: (args: z.output<z.ZodObject<Args>>, call: { read: Read; noteSubject: NoteSubject }) => Promise<z.input<Out>>
 ) => void;
 
 /**
@@ -35,7 +35,7 @@ export function toolDefiner(server: McpServer, context: ToolContext): DefineTool
           gameMode: (args as { gameMode?: GameMode }).gameMode,
           cacheKey: config.cacheResults ? toolResultKey(name, context.origin, args) : undefined,
         },
-        (read) => body(args, { read })
+        (read, noteSubject) => body(args, { read, noteSubject })
       );
     const info = toolInfo(name);
     const annotations = { readOnlyHint: true, idempotentHint: true, openWorldHint: true, ...config.annotations };

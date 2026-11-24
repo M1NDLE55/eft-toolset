@@ -23,6 +23,7 @@ import type { RequestBudget } from "@/app/lib/api/rate-limit";
 import { chargeMcpBudget, type Payer } from "./budget";
 import type { ToolContext } from "./context";
 import { createEftMcpServer } from "./server";
+import { requestCountry, requestIdentity } from "@/app/lib/usage/record";
 
 export interface McpHttpLimits {
   /** Two maximum-length share links (compare_builds) fit with room to spare. */
@@ -174,6 +175,10 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
     signal: AbortSignal.any([request.signal, AbortSignal.timeout(limits.toolDeadlineMs)]),
     requestId,
     userId: payer.kind === "user" ? payer.subject : undefined,
+    usage: {
+      country: requestCountry(request),
+      identity: requestIdentity(request, clientIp(request), payer.kind === "user" ? payer.subject : undefined),
+    },
   };
   const authInfo: AuthInfo = {
     token: "",

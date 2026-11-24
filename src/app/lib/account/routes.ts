@@ -11,6 +11,8 @@ import {
   workosClient,
 } from "./server";
 import { readCookie, setCookie } from "@/app/lib/server/cookies";
+import { clientIp } from "@/app/lib/api/rate-limit";
+import { recordUsage, requestCountry, requestIdentity } from "@/app/lib/usage/record";
 
 // The website account routes. Only these touch sessions, so every page stays cacheable and never
 // reads cookies. See DATA_ARCHITECTURE.md ("Website accounts").
@@ -57,7 +59,14 @@ export async function signIn(request: Request) {
 export async function authCallback(request: Request) {
   const config = accountConfig();
   const origin = appOrigin(request);
-  const done = (outcome: "signed-in" | "error" | "busy") => {
+  const done = (outcome: "signed-in" | "error" | "busy", userId?: string) => {
+    // Anonymous: whether sign-in worked, under the day's hashed id, never who signed in.
+    if (outcome !== "busy") {
+      recordUsage(
+        { name: "account.sign_in", outcome: outcome === "signed-in" ? "ok" : "error", country: requestCountry(request) },
+        requestIdentity(request, clientIp(request), userId)
+      );
+    }
     const response = redirect(new URL(`/settings?account=${outcome}#account`, origin));
     setCookie(response.headers, STATE_COOKIE, "", { path: "/auth/callback", maxAge: 0 });
     return response;
@@ -78,7 +87,7 @@ export async function authCallback(request: Request) {
       session: { sealSession: true, cookiePassword: config.cookiePassword },
     });
     if (!auth.sealedSession) throw new Error("WorkOS returned no sealed session.");
-    return setSessionCookies(done("signed-in"), auth.sealedSession);
+    return setSessionCookies(done("signed-in", auth.user.id), auth.sealedSession);
   } catch (error) {
     console.error("Sign-in could not be completed", error);
     return done("error");
@@ -114,8 +123,10 @@ export async function deleteAccount(request: Request) {
     await workosClient(config).userManagement.deleteUser(session.userId);
   } catch (error) {
     console.error("Account could not be deleted", error);
+    recordUsage({ name: "account.delete", outcome: "error", country: requestCountry(request) }, requestIdentity(request, clientIp(request), session.userId));
     return json({ error: "Your account couldn't be deleted. Try again." }, 502);
   }
+  recordUsage({ name: "account.delete", outcome: "ok", country: requestCountry(request) }, requestIdentity(request, clientIp(request), session.userId));
   return setSessionCookies(json({ deleted: true }), null);
 }
 

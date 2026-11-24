@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "@/app/lib/navigation/link";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { ArrowLeft, Plus } from "lucide-react";
@@ -11,6 +11,7 @@ import { useStoredLayers, writeStoredLayers } from "@/app/lib/raid-planner/layer
 import { MAX_LAYERS } from "@/app/lib/raid-planner/limits";
 import { useMapDetails } from "@/app/lib/cache/raidPlanner";
 import { cn } from "@/lib/utils";
+import { trackUsage } from "@/app/lib/usage/track";
 import { defaultFloor, FloorSwitcher } from "./floor-switcher";
 import { LayerPanel } from "./layer-panel";
 import { LazyMapCanvas } from "./lazy-canvas";
@@ -31,6 +32,10 @@ export function MapViewer({ mapKey, withGuide = false }: { mapKey: string; withG
   );
   const enabledSet = useMemo(() => new Set(enabledLayers), [enabledLayers]);
   const layerGroups = useMemo(() => (details ? getLayerGroups(details, config) : null), [details, config]);
+
+  useEffect(() => {
+    trackUsage("map.view", { subject: config.key });
+  }, [config.key]);
 
   function changeLayers(ids: string[], checked: boolean) {
     const next = new Set(enabledLayers);
@@ -53,6 +58,7 @@ export function MapViewer({ mapKey, withGuide = false }: { mapKey: string; withG
   function startPlan() {
     try {
       const plan = createPlan(`${config.name} raid`, config.key, enabledLayers);
+      trackUsage("plan.create", { subject: config.key });
       router.push(`/raid-planner/${plan.id}`);
     } catch (reason) {
       setActionError(reason instanceof Error ? reason.message : "Could not create this plan.");

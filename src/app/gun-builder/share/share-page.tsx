@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "@/app/lib/navigation/image";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { useRouter } from "@/app/lib/navigation/hooks";
@@ -120,6 +121,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
     setImportError("");
     try {
       const created = createBuild(name, build.weaponId, build.root, build.ammoId);
+      trackUsage("build.import", { subject: build.weaponId });
       router.replace(`/gun-builder/${created.id}`);
     } catch (reason) {
       setImporting(false);

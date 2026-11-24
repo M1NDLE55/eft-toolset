@@ -178,10 +178,11 @@ export function registerItemTools(server: McpServer, context: ToolContext) {
           .describe('Relations to list in full; the rest are returned as counts. Add "barters" or "crafts" to list them.'),
       },
     },
-    async ({ item, gameMode, include }, { read }) => {
+    async ({ item, gameMode, include }, { read, noteSubject }) => {
       const index = await loadCatalogIndex(read, gameMode);
       const match = matchItemReference(index, item);
       if (match.status !== "found") throw new InputError(unmatchedMessage(item, match));
+      noteSubject({ kind: "item", id: match.item.id });
       const slug = match.item.normalizedName;
       const detail = await read(() =>
         getItemDetail(gameMode, slug ? { slug } : { name: match.item.name })

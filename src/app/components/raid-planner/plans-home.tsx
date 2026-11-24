@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "@/app/lib/navigation/link";
+import { trackUsage } from "@/app/lib/usage/track";
 import { useRef, useState, type DragEvent } from "react";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { Copy, Download, FileUp, Map as MapIcon, Plus, Trash2 } from "lucide-react";
@@ -93,6 +94,7 @@ export function PlansHome() {
         config.key,
         getDefaultLayers(config, null)
       );
+      trackUsage("plan.create", { subject: config.key });
       setCreateOpen(false);
       router.push(`/raid-planner/${plan.id}`);
     }, "Could not create this plan.");

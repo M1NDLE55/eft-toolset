@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import { X } from "lucide-react";
 import {
   AlertDialog,
@@ -67,6 +68,7 @@ export function useQuestActions(gameMode: GameMode, graph: QuestGraph | null, pr
     }
     run(() => {
       const added = completeQuest(gameMode, graph ?? NO_QUESTS, id);
+      trackUsage("quest.complete");
       const earlier = added.filter((entry) => entry !== id);
       if (!graph) {
         // Without this mode's quest list there's no telling which quests came first.

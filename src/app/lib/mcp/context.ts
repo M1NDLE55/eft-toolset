@@ -10,6 +10,9 @@ import {
 import { InputError } from "@/app/lib/input-error";
 import type { GameMode } from "@/components/game-mode/mode";
 import { readToolResult, storeToolResult } from "./result-cache";
+import { durationBucket, type UsageSubject } from "@/app/lib/usage/catalog";
+import { isValidSubject, recordUsage } from "@/app/lib/usage/record";
+import type { UsageIdentity } from "@/app/lib/usage/identity";
 
 export interface ToolContext {
   /** Origin used for links back into the app. */
@@ -23,10 +26,22 @@ export interface ToolContext {
    * only when sign-in is off, which production doesn't allow.
    */
   userId?: string;
+  /**
+   * For the anonymous usage stats only: the caller's country (request.cf) and what identity.ts
+   * hashes into the daily and weekly ids. Never written as it is.
+   */
+  usage?: { country?: string; identity?: UsageIdentity };
 }
 
 /** Reads tarkov.dev data with the tool's cancellation and freshness tracking. */
 export type Read = <T>(work: () => Promise<T>) => Promise<T>;
+
+/**
+ * Names the weapon, item or map a tool call was about, once the tool has resolved it to an id, for
+ * the anonymous usage stats. Never the caller's own words: ids that aren't tarkov.dev ids or map
+ * keys are dropped.
+ */
+export type NoteSubject = (subject: UsageSubject) => void;
 
 type ToolOutcome = "ok" | "input_error" | "upstream_error" | "timeout" | "crash";
 
@@ -57,14 +72,20 @@ export const ERROR_META_KEY = "eft-toolset/error";
  * has when tarkov.dev can't be reached or is slow, and say how old it is, rather than failing.
  * Errors become tool errors the model can act on: a sentence, then the error object (code,
  * retryable, retryAfterSeconds) as JSON, also in _meta. Not in structuredContent: clients check
- * that against the tool's output schema even on errors. Logs one structured line per call.
+ * that against the tool's output schema even on errors. Logs one structured line per call and
+ * records one anonymous usage event (no user id, no arguments).
  */
 export async function runTool(
   context: ToolContext,
   call: { tool: string; gameMode?: GameMode; cacheKey?: string },
-  body: (read: Read) => Promise<object>
+  body: (read: Read, noteSubject: NoteSubject) => Promise<object>
 ): Promise<CallToolResult> {
   const startedAt = performance.now();
+  let subject: UsageSubject | undefined;
+  const noteSubject: NoteSubject = (next) => {
+    // Anything that isn't a real id is dropped here, so the call is still counted without it.
+    if (!subject && isValidSubject(next.kind, next.id)) subject = { kind: next.kind, id: next.id };
+  };
   let stale = false;
   let staleSource: DataSource = "tarkov.dev";
   let cached = false;
@@ -97,7 +118,7 @@ export async function runTool(
       cached = true;
       return toolResult(hit);
     }
-    const result = await body(read);
+    const result = await body(read, noteSubject);
     const payload: Record<string, unknown> = { ...result };
     if (dataAgeMs !== null) payload.dataAsOf = new Date(Date.now() - dataAgeMs).toISOString();
     if (stale) payload.dataNotice = staleNotice(dataAgeMs, staleSource);
@@ -134,6 +155,19 @@ export async function runTool(
       _meta: { [ERROR_META_KEY]: details },
     };
   } finally {
+    const durationMs = performance.now() - startedAt;
+    recordUsage(
+      {
+        name: "mcp.tool_call",
+        tool: call.tool,
+        subject,
+        gameMode: call.gameMode,
+        outcome,
+        duration: durationBucket(durationMs),
+        country: context.usage?.country,
+      },
+      context.usage?.identity
+    );
     console.info(
       JSON.stringify({
         event: "mcp_tool_call",
@@ -142,7 +176,7 @@ export async function runTool(
         signedIn: context.userId !== undefined,
         gameMode: call.gameMode ?? null,
         outcome,
-        durationMs: Math.round(performance.now() - startedAt),
+        durationMs: Math.round(durationMs),
         stale,
         dataAgeSeconds: dataAgeMs === null ? null : Math.round(dataAgeMs / 1000),
         cached,

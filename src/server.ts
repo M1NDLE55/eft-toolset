@@ -11,6 +11,7 @@ import { PVE_ROUTE_PREFIX } from "@/app/lib/game-mode-routes";
 
 export { UserDO } from "@/app/lib/durable/user-do";
 export { PlanDO } from "@/app/lib/durable/plan-do";
+export { UsageSaltDO } from "@/app/lib/usage/salt-do";
 
 installWorkerPlatform(env);
 

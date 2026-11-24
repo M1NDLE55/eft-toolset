@@ -5,6 +5,7 @@ import globalStyles from "@/app/globals.css?url";
 import { GameModeProvider } from "@/components/game-mode/context";
 import { ItemRundownProvider } from "@/app/components/item/rundown/rundown-link";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
+import { UsagePageViews } from "@/app/components/global/usage-page-views";
 import { Header } from "@/app/components/global/header";
 import { SiteFooter } from "@/app/components/global/site-footer";
 import { ServiceWorker } from "@/app/components/global/service-worker";
@@ -66,6 +67,7 @@ function RootDocument({ children }: { children: ReactNode }) {
         <ServiceWorker />
         <ContentScaleSync />
         <CloudflareAnalytics />
+        <UsagePageViews />
         <Scripts />
       </body>
     </html>

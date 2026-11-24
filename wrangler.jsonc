@@ -35,10 +35,15 @@
   "durable_objects": {
     "bindings": [
       { "name": "USER", "class_name": "UserDO" },
-      { "name": "PLAN", "class_name": "PlanDO" }
+      { "name": "PLAN", "class_name": "PlanDO" },
+      // One instance: the rotating keys behind the anonymous usage ids (src/app/lib/usage/salt-store.ts).
+      { "name": "USAGE_SALT", "class_name": "UsageSaltDO" }
     ]
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["UserDO", "PlanDO"] }],
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["UserDO", "PlanDO"] },
+    { "tag": "usage-v1", "new_sqlite_classes": ["UsageSaltDO"] }
+  ],
   "ratelimits": [
     {
       // 600 requests a minute per client IP on /api/mcp (the Vercel firewall rule).
@@ -54,6 +59,14 @@
     }
   ],
   "images": { "binding": "IMAGES" },
+  "analytics_engine_datasets": [
+    {
+      // Anonymous usage stats (src/app/lib/usage, USAGE_STATS.md). The dataset is created on the
+      // first write; the admin dashboard reads it through the SQL API.
+      "binding": "USAGE",
+      "dataset": "eft_toolset_usage"
+    }
+  ],
   "triggers": {
     // Every minute: the price feed; the other datasets refresh when their freshness runs out.
     "crons": ["* * * * *"]

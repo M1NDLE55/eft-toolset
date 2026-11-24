@@ -21,6 +21,7 @@ import { Route as McpRouteImport } from './routes/mcp'
 import { Route as QuestsRouteRouteImport } from './routes/quests/route'
 import { Route as RaidPlannerRouteRouteImport } from './routes/raid-planner/route'
 import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as AdminStatsRouteImport } from './routes/admin/stats'
 import { Route as AmmoIndexRouteImport } from './routes/ammo/index'
 import { Route as AmmoCaliberRouteImport } from './routes/ammo/$caliber'
 import { Route as FleaMarketPveRouteImport } from './routes/flea-market/pve'
@@ -105,6 +106,11 @@ const RaidPlannerRouteRoute = RaidPlannerRouteRouteImport.update({
 const SettingsRoute = SettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminStatsRoute = AdminStatsRouteImport.update({
+  id: '/admin/stats',
+  path: '/admin/stats',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AmmoIndexRoute = AmmoIndexRouteImport.update({
@@ -247,6 +253,7 @@ export interface FileRoutesByFullPath {
   '/data': typeof DataRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
+  '/admin/stats': typeof AdminStatsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
   '/flea-market/pve': typeof FleaMarketPveRoute
   '/gun-builder/compare': typeof GunBuilderCompareRoute
@@ -279,6 +286,7 @@ export interface FileRoutesByTo {
   '/data': typeof DataRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
+  '/admin/stats': typeof AdminStatsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
   '/flea-market/pve': typeof FleaMarketPveRoute
   '/gun-builder/compare': typeof GunBuilderCompareRoute
@@ -319,6 +327,7 @@ export interface FileRoutesById {
   '/data': typeof DataRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
+  '/admin/stats': typeof AdminStatsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
   '/flea-market/pve': typeof FleaMarketPveRoute
   '/gun-builder/compare': typeof GunBuilderCompareRoute
@@ -360,6 +369,7 @@ export interface FileRouteTypes {
     | '/data'
     | '/mcp'
     | '/settings'
+    | '/admin/stats'
     | '/ammo/$caliber'
     | '/flea-market/pve'
     | '/gun-builder/compare'
@@ -392,6 +402,7 @@ export interface FileRouteTypes {
     | '/data'
     | '/mcp'
     | '/settings'
+    | '/admin/stats'
     | '/ammo/$caliber'
     | '/flea-market/pve'
     | '/gun-builder/compare'
@@ -431,6 +442,7 @@ export interface FileRouteTypes {
     | '/data'
     | '/mcp'
     | '/settings'
+    | '/admin/stats'
     | '/ammo/$caliber'
     | '/flea-market/pve'
     | '/gun-builder/compare'
@@ -471,6 +483,7 @@ export interface RootRouteChildren {
   DataRoute: typeof DataRoute
   McpRoute: typeof McpRoute
   SettingsRoute: typeof SettingsRoute
+  AdminStatsRoute: typeof AdminStatsRoute
   FleaMarketPveRoute: typeof FleaMarketPveRoute
   PoliciesDisclaimerAndUsePolicyRoute: typeof PoliciesDisclaimerAndUsePolicyRoute
 }
@@ -559,6 +572,13 @@ declare module '@tanstack/react-router' {
       path: '/settings'
       fullPath: '/settings'
       preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/stats': {
+      id: '/admin/stats'
+      path: '/admin/stats'
+      fullPath: '/admin/stats'
+      preLoaderRoute: typeof AdminStatsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ammo/': {
@@ -867,6 +887,7 @@ const rootRouteChildren: RootRouteChildren = {
   DataRoute: DataRoute,
   McpRoute: McpRoute,
   SettingsRoute: SettingsRoute,
+  AdminStatsRoute: AdminStatsRoute,
   FleaMarketPveRoute: FleaMarketPveRoute,
   PoliciesDisclaimerAndUsePolicyRoute: PoliciesDisclaimerAndUsePolicyRoute,
 }

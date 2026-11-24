@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "@/app/lib/navigation/image";
+import { trackUsage } from "@/app/lib/usage/track";
 import { useRef, useState, type ReactNode } from "react";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, LoaderCircle, Search } from "lucide-react";
@@ -78,6 +79,7 @@ function WeaponPicker() {
         ensureGunItems([gun.id], gameMode, "full"),
       ]);
       const build = createBuild(name.trim() || gun.name.slice(0, MAX_BUILD_NAME_LENGTH), gun.id, root ?? undefined);
+      trackUsage("build.create", { subject: gun.id, gameMode });
       router.push(`/gun-builder/${build.id}`);
     } catch (reason) {
       setCreateError(reason instanceof Error ? reason.message : "Could not create this build.");

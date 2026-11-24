@@ -21,5 +21,15 @@ MCP_USER_RATE_PER_SECOND=
 
 CLOUDFLARE_WEB_ANALYTICS_TOKEN=
 
+# Usage stats (USAGE_STATS.md). The admin dashboard's WorkOS user ids, the SQL API account and
+# token (Account Analytics Read), and the daily summary's bearer token (32+ characters).
+STATS_ADMIN_USER_IDS=
+STATS_CF_ACCOUNT_ID=
+STATS_CF_API_TOKEN=
+STATS_READ_TOKEN=
+# Development only: log each usage row, and read stats from scripts/usage-sql-mock.mjs (localhost only).
+USAGE_LOG_EVENTS=
+USAGE_SQL_API_URL=
+
 # A stand-in for json.tarkov.dev (scripts/mcp-load.mjs --serve-only); never set in production.
 TARKOV_UPSTREAM_URL=

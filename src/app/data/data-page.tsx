@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore, type ChangeEvent } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import { Download, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ConfirmDialog } from "@/components/confirm-dialog";
@@ -92,6 +93,7 @@ export function DataPage() {
     const backup = createBackup();
     download(JSON.stringify(backup, null, 2), `eft-toolset-backup-${backup.exportedAt.slice(0, 10)}.json`);
     setMessage({ tone: "ok", text: "Backup downloaded." });
+    trackUsage("data.export");
   };
 
   const onFile = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -115,8 +117,10 @@ export function DataPage() {
       setPlan(null);
       if (importPayload) clearImportHash();
       setMessage({ tone: "ok", text: mode === "merge" ? "Backup merged into your data." : "Your data was replaced with the backup." });
+      trackUsage("data.import", { outcome: "ok" });
     } catch (reason) {
       setMessage({ tone: "error", text: reason instanceof Error ? reason.message : "Could not restore this backup." });
+      trackUsage("data.import", { outcome: "error" });
     }
   };
 
