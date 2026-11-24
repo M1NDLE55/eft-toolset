@@ -6,6 +6,8 @@ import { createId } from "@/app/lib/id";
 import { STORE_KEYS } from "@/app/lib/storage/store-keys";
 import { MAX_LAYERS, MAX_PLAN_NAME_LENGTH, MAX_PLANS } from "./limits";
 import { isPlan, isPlanList } from "./plan-validation";
+import { activeLibrary } from "@/app/lib/account-sync/account-session";
+import { createAccountPlanLocally } from "@/app/lib/account-sync/plan-session";
 
 export const PLAN_STORE: StoreDefinition<RaidPlan[]> = {
   key: STORE_KEYS.raidPlans,
@@ -123,4 +125,15 @@ export function duplicatePlan(id: string): RaidPlan | undefined {
 
 export function deletePlan(id: string) {
   writeStore(PLAN_STORE, readPlans().filter((plan) => plan.id !== id));
+}
+
+/**
+ * Starts a plan where the user's library is: in the account (cached at once, saved to the server
+ * when online) when signed in, otherwise in this browser. Returns the plan's page.
+ */
+export async function startPlan(name: string, mapKey: string, enabledLayers: readonly string[] = []): Promise<string> {
+  const library = activeLibrary();
+  if (!library) return `/raid-planner/${createPlan(name, mapKey, enabledLayers).id}`;
+  const content = { name: normalizeName(name, "Untitled raid"), mapKey, enabledLayers: [...new Set(enabledLayers)].slice(0, MAX_LAYERS), route: [], drawings: [], notes: [] };
+  return `/raid-planner/p/${await createAccountPlanLocally(library, content)}`;
 }

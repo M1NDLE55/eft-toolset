@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useEffectEvent, useMemo, useState } from "react";
+import { useEffect, useEffectEvent, useMemo, useState, type ReactNode } from "react";
 import Link from "@/app/lib/navigation/link";
 import { ArrowLeft, Pencil } from "lucide-react";
 import type { MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
@@ -28,7 +28,30 @@ import { iconButton, overlayPanel } from "./ui";
 
 type PlanUpdater = (plan: RaidPlan) => RaidPlan;
 
-export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; config: MapConfig }) {
+/**
+ * How the editor saves an account plan: each change becomes a batch of ops (src/app/lib/account-sync/
+ * plan-session.ts) and undo sends this user's inverse ops, so nobody else's edits are overwritten.
+ * Without a session the plan is a browser plan, saved whole with snapshot undo as before.
+ */
+export interface EditorSession {
+  plan: RaidPlan;
+  readOnly: boolean;
+  /** Saves the editor's next plan; returns a message when it was refused (a cap, no permission). */
+  apply: (next: RaidPlan, options: { undoable?: boolean }) => string | null;
+  undo: () => void;
+  redo: () => void;
+  canUndo: boolean;
+  canRedo: boolean;
+  /** Replaces the share button (members, links, invites). */
+  share?: ReactNode;
+  /** Shown under the header: sync state, the "Couldn't apply" list, presence. */
+  banner?: ReactNode;
+  /** Item ids others are editing, outlined on the map (live presence). */
+  editing?: ReactNode;
+  onSelect?: (target: string | null) => void;
+}
+
+export function PlanEditor({ storedPlan, config, session }: { storedPlan: RaidPlan; config: MapConfig; session?: EditorSession }) {
   const [draft, setDraft] = useState<RaidPlan | null>(null);
   const [history, setHistory] = useState<PlanHistory>(EMPTY_HISTORY);
   const [saveError, setSaveError] = useState("");
@@ -42,7 +65,8 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
   const { details, loading, error: detailsError, retry } = useMapDetails(config.key);
   const toolbarPrefs = useToolbarPrefs();
 
-  const plan = draft ?? storedPlan;
+  const plan = session?.plan ?? draft ?? storedPlan;
+  const readOnly = session?.readOnly ?? false;
   const layerGroups = useMemo(() => (details ? getLayerGroups(details, config) : null), [details, config]);
   const enabledSet = useMemo(() => new Set(plan.enabledLayers), [plan.enabledLayers]);
   const selectedNote = plan.notes.find((note) => note.id === selectedNoteId) ?? null;
@@ -63,6 +87,13 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
   }
 
   function updatePlan(updater: PlanUpdater, options: { undoable?: boolean } = {}) {
+    if (session) {
+      const next = updater(session.plan);
+      if (next === session.plan) return;
+      const refused = session.apply(next, options);
+      if (refused) setNotice(refused);
+      return;
+    }
     const base = latestPlan();
     const next = updater(base);
     if (next === base) return;
@@ -77,8 +108,8 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
     persist(result.plan);
   }
 
-  const undo = () => step(undoStep);
-  const redo = () => step(redoStep);
+  const undo = () => (session ? session.undo() : step(undoStep));
+  const redo = () => (session ? session.redo() : step(redoStep));
 
   function changeLayers(ids: string[], checked: boolean) {
     const next = new Set(plan.enabledLayers);
@@ -156,11 +187,14 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
         details={details}
         enabledLayers={plan.enabledLayers}
         plan={plan}
-        tool={tool}
+        tool={readOnly ? "select" : tool}
         color={color}
-        interactive
+        interactive={!readOnly}
         onPlanChange={updatePlan}
-        onSelectNote={setSelectedNoteId}
+        onSelectNote={(id) => {
+          setSelectedNoteId(id);
+          session?.onSelect?.(id ? `note:${id}` : null);
+        }}
         onLimitError={setNotice}
       />
 
@@ -181,19 +215,21 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
               {details?.players ? ` · ${details.players} players` : ""}
             </p>
           </div>
-          <button
-            type="button"
-            title="Rename plan"
-            onClick={() => {
-              setRenameValue(plan.name);
-              setRenameOpen(true);
-            }}
-            className={iconButton}
-          >
-            <Pencil className="h-4 w-4" aria-hidden />
-            <span className="sr-only">Rename plan</span>
-          </button>
-          <SharePlan plan={plan} />
+          {!readOnly && (
+            <button
+              type="button"
+              title="Rename plan"
+              onClick={() => {
+                setRenameValue(plan.name);
+                setRenameOpen(true);
+              }}
+              className={iconButton}
+            >
+              <Pencil className="h-4 w-4" aria-hidden />
+              <span className="sr-only">Rename plan</span>
+            </button>
+          )}
+          {session ? session.share : <SharePlan plan={plan} />}
         </div>
 
         <div className="pointer-events-auto ml-auto">
@@ -207,6 +243,12 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
           />
         </div>
       </div>
+
+      {session?.banner && (
+        <div className="pointer-events-none absolute inset-x-0 top-16 z-1001 flex justify-center px-2">
+          <div className="pointer-events-auto w-full max-w-lg">{session.banner}</div>
+        </div>
+      )}
 
       {status && (
         <div
@@ -236,14 +278,14 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
           toolbarPrefs.side === "right" ? "max-sm:right-2" : "max-sm:left-2"
         )}
       >
-        <div className="pointer-events-auto">
+        <div className={cn("pointer-events-auto", readOnly && "hidden")}>
           <Toolbar
             tool={tool}
             onToolChange={setTool}
             color={color}
             onColorChange={setColor}
-            canUndo={history.past.length > 0}
-            canRedo={history.future.length > 0}
+            canUndo={session ? session.canUndo : history.past.length > 0}
+            canRedo={session ? session.canRedo : history.future.length > 0}
             onUndo={undo}
             onRedo={redo}
             prefs={toolbarPrefs}
@@ -252,7 +294,19 @@ export function PlanEditor({ storedPlan, config }: { storedPlan: RaidPlan; confi
         </div>
       </div>
 
-      {selectedNote && (
+      {selectedNote && readOnly && (
+        <div className="pointer-events-none absolute z-1001 max-sm:inset-x-2 max-sm:top-16 sm:bottom-12 sm:left-16">
+          <div className={cn(overlayPanel, "pointer-events-auto max-w-sm p-3 text-sm")}>
+            <p className="font-bold text-[#e6d9b8]">{selectedNote.title || "Note"}</p>
+            <p className="mt-1 whitespace-pre-wrap text-[#ccc]">{selectedNote.body}</p>
+            <button type="button" className="mt-2 text-3xs uppercase tracking-widest text-[#888] hover:text-[#ddd]" onClick={() => setSelectedNoteId(null)}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      {selectedNote && !readOnly && (
         <div className="pointer-events-none absolute z-1001 max-sm:inset-x-2 max-sm:top-16 sm:bottom-12 sm:left-16">
           <div className="pointer-events-auto">
             <NoteEditor

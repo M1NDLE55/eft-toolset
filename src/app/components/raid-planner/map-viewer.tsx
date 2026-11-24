@@ -5,7 +5,7 @@ import Link from "@/app/lib/navigation/link";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { ArrowLeft, Plus } from "lucide-react";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
-import { createPlan } from "@/app/lib/raid-planner/store";
+import { startPlan as startPlanIn } from "@/app/lib/raid-planner/store";
 import { getDefaultLayers, getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { useStoredLayers, writeStoredLayers } from "@/app/lib/raid-planner/layer-store";
 import { MAX_LAYERS } from "@/app/lib/raid-planner/limits";
@@ -51,12 +51,9 @@ export function MapViewer({ mapKey, withGuide = false }: { mapKey: string; withG
   }
 
   function startPlan() {
-    try {
-      const plan = createPlan(`${config.name} raid`, config.key, enabledLayers);
-      router.push(`/raid-planner/${plan.id}`);
-    } catch (reason) {
-      setActionError(reason instanceof Error ? reason.message : "Could not create this plan.");
-    }
+    startPlanIn(`${config.name} raid`, config.key, enabledLayers)
+      .then((url) => router.push(url))
+      .catch((reason: unknown) => setActionError(reason instanceof Error ? reason.message : "Could not create this plan."));
   }
 
   return (

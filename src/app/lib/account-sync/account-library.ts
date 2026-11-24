@@ -15,6 +15,7 @@ import type {
   Usage,
 } from "@/app/lib/sharing/types";
 import { openAccountDb, readAll, readMeta, transact } from "./idb";
+import { readAllPlans, type CachedPlan } from "./plan-cache";
 import {
   actionFor,
   applyMutationLocally,
@@ -82,6 +83,8 @@ export class AccountLibrary {
   private queueCount = 0;
   private version = 0;
   private snapshotCache: { version: number; value: LibraryView } | null = null;
+  private cachedPlans: CachedPlanSummary[] = [];
+  private planSyncing = false;
   status: SyncStatus = { online: true, queued: 0, syncing: false, lastSyncedAt: null, conflicts: 0, problems: 0 };
   usage: Usage | null = null;
   limits: Usage | null = null;
@@ -90,6 +93,12 @@ export class AccountLibrary {
   ready = false;
 
   constructor(readonly cacheKey: string) {}
+
+  /** The open account cache. */
+  get database(): IDBDatabase {
+    if (!this.db) throw new Error("Your account library is still loading.");
+    return this.db;
+  }
 
   // Lifecycle
 
@@ -142,6 +151,7 @@ export class AccountLibrary {
     await this.catchUp();
     this.connectFeed();
     void this.drain();
+    void this.syncPlans();
   }
 
   private onOnline = () => {
@@ -150,6 +160,7 @@ export class AccountLibrary {
     if (this.leader) {
       this.connectFeed();
       void this.drain();
+      void this.syncPlans();
     }
   };
 
@@ -215,6 +226,7 @@ export class AccountLibrary {
       itemGroups: live.flatMap((record) => (record.local?.kind === "item_group" ? [record.local] : [])),
       settings: new Map(live.flatMap((record) => (record.local?.kind === "setting" ? [[record.id, record.local] as const] : []))),
       plans: [...this.planIndex.values()],
+      cachedPlans: this.cachedPlans,
       issues: live.filter((record) => record.conflict || record.problem),
       status: this.status,
       usage: this.usage,
@@ -247,7 +259,66 @@ export class AccountLibrary {
       this.notices = meta.notices;
     }
     this.planIndex = new Map(plans.flatMap((plan) => (plan.index ? [[plan.planId, plan.index] as const] : [])));
+    this.cachedPlans = summarizePlans(plans);
     this.notify();
+  }
+
+  /** Re-reads the cached plans (after a plan session wrote one). */
+  async reloadPlans() {
+    if (!this.db) return;
+    this.cachedPlans = summarizePlans(await readAllPlans(this.db));
+    this.notify();
+    this.post({ type: "plans", planIds: [] });
+  }
+
+  private openSessions = new Set<string>();
+
+  /** Plan pages register their plan, so background sync leaves it to them. */
+  planOpened(planId: string) {
+    this.openSessions.add(planId);
+    return () => {
+      this.openSessions.delete(planId);
+    };
+  }
+
+  /**
+   * Keeps every plan in the index cached and replays queued edits (§12.8): plans not cached yet, or
+   * behind the index's rev, are fetched; plans with queued batches or a pending create replay.
+   * Two at a time, in the background; plans open in this tab are left to their page.
+   */
+  async syncPlans(only?: string[]) {
+    if (!this.db || !this.leader || this.planSyncing) return;
+    this.planSyncing = true;
+    try {
+      const cached = new Map((await readAllPlans(this.db)).map((plan) => [plan.planId, plan]));
+      const due = new Set<string>();
+      for (const [planId, entry] of this.planIndex) {
+        if (only && !only.includes(planId)) continue;
+        const plan = cached.get(planId);
+        if (entry.status !== "active") continue;
+        if (!plan?.state || (entry.rev ?? 0) > plan.state.rev) due.add(planId);
+      }
+      for (const plan of cached.values()) if ((plan.queued ?? 0) > 0 || plan.pendingCreate) due.add(plan.planId);
+      const { PlanSession } = await import("./plan-session");
+      const work = [...due].filter((planId) => !this.openSessions.has(planId));
+      const run = async () => {
+        for (let planId = work.shift(); planId; planId = work.shift()) {
+          const session = new PlanSession(this, planId);
+          try {
+            await session.open({ poll: false });
+            await session.flush();
+          } catch {
+            // Offline or refused: tried again on the next sync.
+          } finally {
+            session.close();
+          }
+        }
+      };
+      await Promise.all([run(), run()]);
+      await this.reloadPlans();
+    } finally {
+      this.planSyncing = false;
+    }
   }
 
   // Writing
@@ -594,6 +665,8 @@ export class AccountLibrary {
     if (planChanges.length || planRemovals.length) {
       this.post({ type: "plans", planIds: [...planChanges.map((plan) => plan.id), ...planRemovals] });
       for (const listener of this.planListeners) listener([...planChanges.map((plan) => plan.id), ...planRemovals]);
+      await this.reloadPlans();
+      if (this.leader) void this.syncPlans(planChanges.map((plan) => plan.id));
     }
     this.notify();
     this.post({ type: "records", keys: [...changed.map((record) => record.key), ...removed] });
@@ -761,12 +834,62 @@ export class AccountLibrary {
   }
 }
 
+/** A plan as the plans list shows it: from the index, a pending create, or an offline copy. */
+export interface CachedPlanSummary {
+  planId: string;
+  name: string;
+  mapKey: string;
+  role: "owner" | "editor" | "viewer";
+  relation: "owned" | "shared";
+  kind: "synced" | "pending-create" | "offline-copy";
+  queued: number;
+  updatedAt: number;
+  counts: { route: number; drawings: number; notes: number } | null;
+}
+
+function summarizePlans(plans: CachedPlan[]): CachedPlanSummary[] {
+  return plans.flatMap((plan): CachedPlanSummary[] => {
+    if (plan.offlineCopy) {
+      const doc = plan.offlineCopy.doc;
+      return [
+        {
+          planId: plan.planId,
+          name: plan.offlineCopy.name,
+          mapKey: doc.mapKey,
+          role: "owner",
+          relation: "owned",
+          kind: "offline-copy",
+          queued: 0,
+          updatedAt: plan.offlineCopy.createdAt,
+          counts: { route: Object.keys(doc.waypoints).length, drawings: Object.keys(doc.drawings).length, notes: Object.keys(doc.notes).length },
+        },
+      ];
+    }
+    const doc = plan.state?.doc;
+    if (!plan.index && !plan.pendingCreate && !plan.state) return [];
+    return [
+      {
+        planId: plan.planId,
+        name: doc?.name ?? plan.index?.name ?? "Untitled raid",
+        mapKey: doc?.mapKey ?? plan.index?.mapKey ?? "",
+        role: plan.index?.role ?? plan.state?.role ?? "owner",
+        relation: plan.index?.relation ?? "owned",
+        kind: plan.pendingCreate ? "pending-create" : "synced",
+        queued: plan.queued ?? 0,
+        updatedAt: Math.max(plan.index?.updatedAt ?? 0, plan.state?.updatedAt ?? 0),
+        counts: doc ? { route: Object.keys(doc.waypoints).length, drawings: Object.keys(doc.drawings).length, notes: Object.keys(doc.notes).length } : null,
+      },
+    ];
+  });
+}
+
 export interface LibraryView {
   ready: boolean;
   builds: Extract<LibraryRecord, { kind: "build" }>[];
   itemGroups: Extract<LibraryRecord, { kind: "item_group" }>[];
   settings: Map<string, Extract<LibraryRecord, { kind: "setting" }>>;
   plans: PlanIndexRecord[];
+  cachedPlans: CachedPlanSummary[];
   issues: CachedRecord[];
   status: SyncStatus;
   usage: Usage | null;

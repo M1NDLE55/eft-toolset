@@ -1,4 +1,19 @@
 import { deleteLink, getLinks, getShare, postLink, postShareCopy } from "./link-routes";
+import {
+  deletePlanMember,
+  deletePlanRoute,
+  getPlan,
+  getPlanMembers,
+  patchPlanMember,
+  patchPlanSettings,
+  postInviteAccept,
+  postInvitePreview,
+  postPlan,
+  postPlanCopy,
+  postPlanLeave,
+  postPlanOps,
+  postPlanTransfer,
+} from "./plan-routes";
 import { getLibrary, getLibraryChanges, libraryLive, patchItemSettings, patchProfile, postImport, postMutations, postNoticesRead } from "./library-routes";
 
 type Handler = (request: Request, ...params: string[]) => Response | Promise<Response>;
@@ -24,6 +39,17 @@ const ROUTES: RouteDef[] = [
   { pattern: new RegExp(`^/api/links/${CODE}$`), methods: { DELETE: deleteLink } },
   { pattern: new RegExp(`^/api/s/${CODE}$`), methods: { GET: getShare } },
   { pattern: new RegExp(`^/api/s/${CODE}/copy$`), methods: { POST: postShareCopy } },
+  { pattern: /^\/api\/plans$/, methods: { POST: postPlan } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}$`), methods: { GET: getPlan, DELETE: deletePlanRoute } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}/ops$`), methods: { POST: postPlanOps } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}/settings$`), methods: { PATCH: patchPlanSettings } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}/copy$`), methods: { POST: postPlanCopy } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}/members$`), methods: { GET: getPlanMembers } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}/members/([0-9a-f]{16})$`), methods: { PATCH: patchPlanMember, DELETE: deletePlanMember } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}/leave$`), methods: { POST: postPlanLeave } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}/transfer$`), methods: { POST: postPlanTransfer } },
+  { pattern: /^\/api\/invites\/preview$/, methods: { POST: postInvitePreview } },
+  { pattern: /^\/api\/invites\/accept$/, methods: { POST: postInviteAccept } },
 ];
 
 /** WebSocket upgrade routes: served before the page cache, which can't carry a socket. */

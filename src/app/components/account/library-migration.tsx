@@ -17,7 +17,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
  * when the signed-out library holds anything; Settings → Data in this browser opens it again.
  * What moved (or was already in the account) is removed from the browser; the rest stays.
  */
-export const MOVABLE_TYPES: readonly MigrationType[] = ["build", "item_group"];
+export const MOVABLE_TYPES: readonly MigrationType[] = ["build", "item_group", "plan"];
 
 const TYPE_LABEL: Record<MigrationType, string> = { build: "Builds", item_group: "Item groups", plan: "Raid plans" };
 const DISMISSED_PREFIX = "eft-toolset:migration-offered:";

@@ -396,7 +396,7 @@ export class UserStore {
   constructor(
     private readonly sql: Sql,
     private readonly transaction: (work: () => void) => void,
-    private readonly now: () => number = Date.now
+    private readonly now: () => number = () => Date.now()
   ) {}
 
   migrate() {

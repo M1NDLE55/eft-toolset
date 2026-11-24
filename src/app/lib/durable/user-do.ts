@@ -305,6 +305,8 @@ export class UserDO extends DurableObject<Env> {
   async wipe() {
     for (const socket of this.ctx.getWebSockets()) socket.close(4003, "Account deleted.");
     await this.ctx.storage.deleteAll();
+    // An empty schema, so a stray message finds no data rather than a missing table.
+    this.store.migrate();
   }
 
   // Change feed

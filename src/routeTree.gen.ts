@@ -46,6 +46,7 @@ import { Route as GunBuilderGunsmithIndexRouteImport } from './routes/gun-builde
 import { Route as GunBuilderGunsmithTaskRouteImport } from './routes/gun-builder/gunsmith/$task'
 import { Route as GunBuilderShareSlugRouteImport } from './routes/gun-builder/share/$slug'
 import { Route as RaidPlannerMapMapRouteImport } from './routes/raid-planner/map/$map'
+import { Route as RaidPlannerPPlanIdRouteImport } from './routes/raid-planner/p/$planId'
 import { Route as RaidPlannerShareSlugRouteImport } from './routes/raid-planner/share/$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -234,6 +235,11 @@ const RaidPlannerMapMapRoute = RaidPlannerMapMapRouteImport.update({
   path: '/map/$map',
   getParentRoute: () => RaidPlannerRouteRoute,
 } as any)
+const RaidPlannerPPlanIdRoute = RaidPlannerPPlanIdRouteImport.update({
+  id: '/p/$planId',
+  path: '/p/$planId',
+  getParentRoute: () => RaidPlannerRouteRoute,
+} as any)
 const RaidPlannerShareSlugRoute = RaidPlannerShareSlugRouteImport.update({
   id: '/share/$slug',
   path: '/share/$slug',
@@ -275,6 +281,7 @@ export interface FileRoutesByFullPath {
   '/gun-builder/gunsmith/$task': typeof GunBuilderGunsmithTaskRoute
   '/gun-builder/share/$slug': typeof GunBuilderShareSlugRoute
   '/raid-planner/map/$map': typeof RaidPlannerMapMapRoute
+  '/raid-planner/p/$planId': typeof RaidPlannerPPlanIdRoute
   '/raid-planner/share/$slug': typeof RaidPlannerShareSlugRoute
   '/gun-builder/$build/': typeof GunBuilderBuildIndexRoute
   '/gun-builder/best/': typeof GunBuilderBestIndexRoute
@@ -308,6 +315,7 @@ export interface FileRoutesByTo {
   '/gun-builder/gunsmith/$task': typeof GunBuilderGunsmithTaskRoute
   '/gun-builder/share/$slug': typeof GunBuilderShareSlugRoute
   '/raid-planner/map/$map': typeof RaidPlannerMapMapRoute
+  '/raid-planner/p/$planId': typeof RaidPlannerPPlanIdRoute
   '/raid-planner/share/$slug': typeof RaidPlannerShareSlugRoute
   '/gun-builder/$build': typeof GunBuilderBuildIndexRoute
   '/gun-builder/best': typeof GunBuilderBestIndexRoute
@@ -349,6 +357,7 @@ export interface FileRoutesById {
   '/gun-builder/gunsmith/$task': typeof GunBuilderGunsmithTaskRoute
   '/gun-builder/share/$slug': typeof GunBuilderShareSlugRoute
   '/raid-planner/map/$map': typeof RaidPlannerMapMapRoute
+  '/raid-planner/p/$planId': typeof RaidPlannerPPlanIdRoute
   '/raid-planner/share/$slug': typeof RaidPlannerShareSlugRoute
   '/gun-builder/$build/': typeof GunBuilderBuildIndexRoute
   '/gun-builder/best/': typeof GunBuilderBestIndexRoute
@@ -391,6 +400,7 @@ export interface FileRouteTypes {
     | '/gun-builder/gunsmith/$task'
     | '/gun-builder/share/$slug'
     | '/raid-planner/map/$map'
+    | '/raid-planner/p/$planId'
     | '/raid-planner/share/$slug'
     | '/gun-builder/$build/'
     | '/gun-builder/best/'
@@ -424,6 +434,7 @@ export interface FileRouteTypes {
     | '/gun-builder/gunsmith/$task'
     | '/gun-builder/share/$slug'
     | '/raid-planner/map/$map'
+    | '/raid-planner/p/$planId'
     | '/raid-planner/share/$slug'
     | '/gun-builder/$build'
     | '/gun-builder/best'
@@ -464,6 +475,7 @@ export interface FileRouteTypes {
     | '/gun-builder/gunsmith/$task'
     | '/gun-builder/share/$slug'
     | '/raid-planner/map/$map'
+    | '/raid-planner/p/$planId'
     | '/raid-planner/share/$slug'
     | '/gun-builder/$build/'
     | '/gun-builder/best/'
@@ -749,6 +761,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RaidPlannerMapMapRouteImport
       parentRoute: typeof RaidPlannerRouteRoute
     }
+    '/raid-planner/p/$planId': {
+      id: '/raid-planner/p/$planId'
+      path: '/p/$planId'
+      fullPath: '/raid-planner/p/$planId'
+      preLoaderRoute: typeof RaidPlannerPPlanIdRouteImport
+      parentRoute: typeof RaidPlannerRouteRoute
+    }
     '/raid-planner/share/$slug': {
       id: '/raid-planner/share/$slug'
       path: '/share/$slug'
@@ -861,6 +880,7 @@ interface RaidPlannerRouteRouteChildren {
   RaidPlannerPlanRoute: typeof RaidPlannerPlanRoute
   RaidPlannerIndexRoute: typeof RaidPlannerIndexRoute
   RaidPlannerMapMapRoute: typeof RaidPlannerMapMapRoute
+  RaidPlannerPPlanIdRoute: typeof RaidPlannerPPlanIdRoute
   RaidPlannerShareSlugRoute: typeof RaidPlannerShareSlugRoute
 }
 
@@ -868,6 +888,7 @@ const RaidPlannerRouteRouteChildren: RaidPlannerRouteRouteChildren = {
   RaidPlannerPlanRoute: RaidPlannerPlanRoute,
   RaidPlannerIndexRoute: RaidPlannerIndexRoute,
   RaidPlannerMapMapRoute: RaidPlannerMapMapRoute,
+  RaidPlannerPPlanIdRoute: RaidPlannerPPlanIdRoute,
   RaidPlannerShareSlugRoute: RaidPlannerShareSlugRoute,
 }
 
