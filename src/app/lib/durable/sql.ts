@@ -1,3 +1,5 @@
+import type { ErrorCode } from "@/app/lib/sharing/types";
+
 /**
  * The part of a Durable Object's SQLite API (ctx.storage.sql) the stores use, so they can run
  * against Node's built-in SQLite in tests.
@@ -39,21 +41,24 @@ export function migrate(sql: Sql, migrations: readonly Migration[], transaction:
   return version;
 }
 
-/** A limit was reached; the message says what to do, and is safe to show the user. */
-export class LimitError extends Error {
+/**
+ * A refused request: the code says why (the sharing routes' error codes), the message is safe to
+ * show the user, and details carry what a client can act on (the limit and usage, the current
+ * version). Durable Objects return it as a value over RPC (see outcome.ts), since errors don't keep
+ * their class across RPC.
+ */
+export class DomainError extends Error {
   constructor(
-    readonly code: "owned_plans" | "shared_plans" | "builds" | "item_groups" | "plan_rate" | "plan_size" | "plan_content" | "entry_size",
-    message: string
+    readonly code: ErrorCode,
+    message: string,
+    readonly details?: Record<string, unknown>
   ) {
     super(message);
-    this.name = "LimitError";
+    this.name = "DomainError";
   }
 }
 
-/** A request that names something that isn't there, or that the user may not touch. */
-export class AccessError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "AccessError";
-  }
-}
+export const limitError = (message: string, details?: Record<string, unknown>) => new DomainError("limit", message, details);
+export const notFound = (message = "That doesn't exist, or isn't shared with you.") => new DomainError("not_found", message);
+export const forbidden = (message: string) => new DomainError("forbidden", message);
+export const invalid = (message: string, details?: Record<string, unknown>) => new DomainError("invalid", message, details);

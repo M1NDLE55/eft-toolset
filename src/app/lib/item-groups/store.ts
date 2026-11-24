@@ -8,6 +8,9 @@ import {
 } from "./limits";
 import { isGroupList, type Group } from "./validation";
 import { STORE_KEYS } from "@/app/lib/storage/store-keys";
+import { activeLibrary, useAccountView } from "@/app/lib/account-sync/account-session";
+import type { LibraryView } from "@/app/lib/account-sync/account-library";
+import { USER_LIMITS } from "@/app/lib/durable/limits";
 
 const DEFAULT_GROUPS: Group[] = [
   {
@@ -48,8 +51,40 @@ export const GROUP_STORE: StoreDefinition<Group[]> = {
   recover: recoverGroups,
 };
 
+/*
+ * Signed in, the groups come from the account library (src/app/lib/account-sync) and every change
+ * below becomes a mutation; signed out, they stay in this browser's localStorage as before. Groups
+ * are still addressed by name, which is unique per user either way.
+ */
+const accountGroupLists = new WeakMap<LibraryView["itemGroups"], Group[]>();
+
+function accountGroups(view: LibraryView): Group[] {
+  let list = accountGroupLists.get(view.itemGroups);
+  if (!list) {
+    list = view.itemGroups.map((group) => ({ name: group.name, items: group.items })).sort((a, b) => a.name.localeCompare(b.name));
+    accountGroupLists.set(view.itemGroups, list);
+  }
+  return list;
+}
+
 export function useGroups() {
-  return useStore(GROUP_STORE);
+  const local = useStore(GROUP_STORE);
+  const account = useAccountView();
+  return account ? accountGroups(account) : local;
+}
+
+function readGroups(): Group[] {
+  const library = activeLibrary();
+  return library ? accountGroups(library.view()) : readStore(GROUP_STORE);
+}
+
+function accountGroup(name: string) {
+  const library = activeLibrary();
+  if (!library) return null;
+  const needle = name.toLowerCase();
+  const record = library.view().itemGroups.find((group) => group.name.toLowerCase() === needle);
+  if (!record) throw new Error("This group no longer exists.");
+  return { library, record };
 }
 
 export function findGroup(groups: Group[], name: string) {
@@ -69,16 +104,27 @@ function validName(name: string, groups: Group[], current?: string) {
 }
 
 export function createGroup(name: string) {
-  const groups = readStore(GROUP_STORE);
-  if (groups.length >= MAX_GROUPS) throw new Error(`You can save at most ${MAX_GROUPS} groups.`);
+  const groups = readGroups();
+  const library = activeLibrary();
+  const limit = library ? USER_LIMITS.itemGroups : MAX_GROUPS;
+  if (groups.length >= limit) throw new Error(`You can save at most ${limit} groups.`);
   const trimmed = validName(name, groups);
+  if (library) {
+    library.createGroup({ name: trimmed, items: [] });
+    return trimmed;
+  }
   writeStore(GROUP_STORE, [...groups, { name: trimmed, items: [] }]);
   return trimmed;
 }
 
 export function renameGroup(current: string, name: string) {
-  const groups = readStore(GROUP_STORE);
+  const groups = readGroups();
   const trimmed = validName(name, groups, current);
+  const account = accountGroup(current);
+  if (account) {
+    account.library.update("item_group", account.record.id, { ...account.record, name: trimmed });
+    return trimmed;
+  }
   writeStore(
     GROUP_STORE,
     groups.map((group) => (group.name === current ? { ...group, name: trimmed } : group))
@@ -87,6 +133,11 @@ export function renameGroup(current: string, name: string) {
 }
 
 export function deleteGroup(name: string) {
+  const account = accountGroup(name);
+  if (account) {
+    account.library.remove("item_group", account.record.id);
+    return;
+  }
   writeStore(
     GROUP_STORE,
     readStore(GROUP_STORE).filter((group) => group.name !== name)
@@ -94,12 +145,17 @@ export function deleteGroup(name: string) {
 }
 
 export function addGroupItem(groupName: string, itemName: string) {
-  const groups = readStore(GROUP_STORE);
+  const groups = readGroups();
   const group = groups.find((candidate) => candidate.name === groupName);
   if (!group) throw new Error("This group no longer exists.");
   if (group.items.includes(itemName)) return;
   if (group.items.length >= MAX_GROUP_ITEMS) {
     throw new Error(`A group can contain at most ${MAX_GROUP_ITEMS} items.`);
+  }
+  const account = accountGroup(groupName);
+  if (account) {
+    account.library.update("item_group", account.record.id, { ...account.record, items: [...account.record.items, itemName] });
+    return;
   }
   writeStore(
     GROUP_STORE,
@@ -110,6 +166,11 @@ export function addGroupItem(groupName: string, itemName: string) {
 }
 
 export function removeGroupItem(groupName: string, itemName: string) {
+  const account = accountGroup(groupName);
+  if (account) {
+    account.library.update("item_group", account.record.id, { ...account.record, items: account.record.items.filter((name) => name !== itemName) });
+    return;
+  }
   writeStore(
     GROUP_STORE,
     readStore(GROUP_STORE).map((group) =>

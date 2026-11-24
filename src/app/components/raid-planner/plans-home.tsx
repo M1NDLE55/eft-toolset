@@ -1,18 +1,21 @@
 "use client";
 
 import Link from "@/app/lib/navigation/link";
+import { trackUsage } from "@/app/lib/usage/track";
 import { useRef, useState, type DragEvent } from "react";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { Copy, Download, FileUp, Map as MapIcon, Plus, Trash2 } from "lucide-react";
 import type { MapConfig, RaidPlan } from "@/app/lib/raid-planner/types";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
-import { createPlan, deletePlan, duplicatePlan, importPlans, usePlans } from "@/app/lib/raid-planner/store";
+import { deletePlan, duplicatePlan, importPlans, startPlan, usePlans } from "@/app/lib/raid-planner/store";
+import { activeLibrary, useAccountView } from "@/app/lib/account-sync/account-session";
+import { AccountPlanRows } from "./account-plans";
 import { downloadPlanFile, readPlanFile } from "@/app/lib/raid-planner/plan-file";
 import { formatDistance, routeLength } from "@/app/lib/raid-planner/route-distance";
 import { prefetchMap } from "@/app/lib/raid-planner/prefetch";
 import { MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
 import { getDefaultLayers } from "@/app/lib/raid-planner/layer-options";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 import { useGameMode } from "@/components/game-mode/context";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -49,6 +52,7 @@ export function PlansHome() {
   const router = useRouter();
   const hydrated = useHydrated();
   const plans = usePlans();
+  const account = useAccountView();
   const [createOpen, setCreateOpen] = useState(false);
   const [createName, setCreateName] = useState("");
   const [actionError, setActionError] = useState("");
@@ -72,7 +76,25 @@ export function PlansHome() {
     setImporting(true);
     setNotice("");
     try {
-      const imported = importPlans(await readPlanFile(file));
+      const read = await readPlanFile(file);
+      const library = activeLibrary();
+      if (library) {
+        // Signed in, a plan file restores to the account, subject to its limits (§7.6).
+        const response = await library.request("/api/library/import", {
+          method: "POST",
+          body: JSON.stringify({ origin: "restore", items: read.slice(0, 50).map((plan) => ({ type: "plan", value: plan })) }),
+        });
+        const body = (await response.json()) as { results?: { status: string; message?: string }[]; error?: { message: string } };
+        if (!response.ok || !body.results) throw new Error(body.error?.message ?? "Could not import this file.");
+        const created = body.results.filter((result) => result.status === "created").length;
+        const skipped = body.results.filter((result) => result.status === "duplicate").length;
+        const failed = body.results.filter((result) => result.status !== "created" && result.status !== "duplicate");
+        await library.catchUp();
+        setActionError(failed.length ? `${failed.length} couldn't be imported: ${failed[0].message ?? failed[0].status}` : "");
+        setNotice(`Imported ${plural(created, "plan")} from ${file.name}${skipped ? ` (${skipped} already in your account)` : ""}.`);
+        return;
+      }
+      const imported = importPlans(read);
       setActionError("");
       setNotice(`Imported ${plural(imported.length, "plan")} from ${file.name}.`);
     } catch (reason) {
@@ -87,15 +109,15 @@ export function PlansHome() {
   }
 
   function handleCreate(config: MapConfig) {
-    run(() => {
-      const plan = createPlan(
-        createName.trim() || `${config.name} raid`,
-        config.key,
-        getDefaultLayers(config, null)
-      );
-      setCreateOpen(false);
-      router.push(`/raid-planner/${plan.id}`);
-    }, "Could not create this plan.");
+    setNotice("");
+    startPlan(createName.trim() || `${config.name} raid`, config.key, getDefaultLayers(config, null))
+      .then((url) => {
+        trackUsage("plan.create", { subject: config.key });
+        setCreateOpen(false);
+        setActionError("");
+        router.push(url);
+      })
+      .catch((reason: unknown) => setActionError(reason instanceof Error ? reason.message : "Could not create this plan."));
   }
 
   const createDialog = (
@@ -201,7 +223,7 @@ export function PlansHome() {
             <Button
               variant="outline"
               onClick={() => run(() => downloadPlanFile(plans), "Could not export your plans.")}
-              disabled={!hydrated || plans.length === 0}
+              disabled={!hydrated || plans.length === 0 || Boolean(account)}
               title="Download every plan as a .json file"
               className="max-sm:flex-1"
             >
@@ -225,9 +247,12 @@ export function PlansHome() {
 
         <section aria-labelledby="plans-heading" className="flex flex-col gap-3">
           <h2 id="plans-heading" className={eyebrow}>
-            Your plans{hydrated && plans.length > 0 ? ` · ${plans.length}` : ""}
+            Your plans
+            {account ? ` · ${account.cachedPlans.length}` : hydrated && plans.length > 0 ? ` · ${plans.length}` : ""}
           </h2>
-          {!hydrated ? (
+          {account ? (
+            <AccountPlanRows view={account} onError={setActionError} />
+          ) : !hydrated ? (
             <div className="flex flex-col gap-2" aria-busy="true">
               {[0, 1].map((index) => (
                 <div key={index} className="h-16.5 animate-pulse border border-[#1d1d1d] bg-[#0c0c0c]" />

@@ -73,6 +73,9 @@ const BUILD_ID = process.env.EFT_BUILD_ID ?? `${Date.now().toString(36)}`;
 export default defineConfig({
   define: {
     "import.meta.env.EFT_BUILD_ID": JSON.stringify(BUILD_ID),
+    // Local end-to-end runs of a built bundle under `wrangler dev` (EFT_LOCAL_E2E=1 at build time):
+    // keeps the development sign-in, which still needs DEV_AUTH=1 at runtime. Never set for deploys.
+    "import.meta.env.EFT_LOCAL_E2E": JSON.stringify(process.env.EFT_LOCAL_E2E === "1"),
   },
   resolve: {
     alias: { "@": resolve(root, "src") },

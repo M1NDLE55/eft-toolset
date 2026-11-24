@@ -10,6 +10,11 @@ import {
 import { InputError } from "@/app/lib/input-error";
 import type { GameMode } from "@/components/game-mode/mode";
 import { readToolResult, storeToolResult } from "./result-cache";
+import { DomainError } from "@/app/lib/durable/sql";
+import { RouteError } from "@/app/lib/sharing/server/http";
+import { durationBucket, type UsageSubject } from "@/app/lib/usage/catalog";
+import { isValidSubject, recordUsage } from "@/app/lib/usage/record";
+import type { UsageIdentity } from "@/app/lib/usage/identity";
 
 export interface ToolContext {
   /** Origin used for links back into the app. */
@@ -23,21 +28,35 @@ export interface ToolContext {
    * only when sign-in is off, which production doesn't allow.
    */
   userId?: string;
+  /** The MCP client's name (for attribution, "via AI"), when known. */
+  client?: string;
+  /**
+   * For the anonymous usage stats only: the caller's country (request.cf) and what identity.ts
+   * hashes into the daily and weekly ids. Never written as it is.
+   */
+  usage?: { country?: string; identity?: UsageIdentity };
 }
 
 /** Reads tarkov.dev data with the tool's cancellation and freshness tracking. */
 export type Read = <T>(work: () => Promise<T>) => Promise<T>;
 
-type ToolOutcome = "ok" | "input_error" | "upstream_error" | "timeout" | "crash";
+/**
+ * Names the weapon, item or map a tool call was about, once the tool has resolved it to an id, for
+ * the anonymous usage stats. Never the caller's own words: ids that aren't tarkov.dev ids or map
+ * keys are dropped.
+ */
+export type NoteSubject = (subject: UsageSubject) => void;
 
-const ERROR_MESSAGES: Record<Exclude<ToolOutcome, "ok" | "input_error">, string> = {
+type ToolOutcome = "ok" | "input_error" | "upstream_error" | "timeout" | "crash" | "refused";
+
+const ERROR_MESSAGES: Record<Exclude<ToolOutcome, "ok" | "input_error" | "refused">, string> = {
   upstream_error: "Tarkov.dev data is temporarily unavailable and this server has no copy of it yet.",
   timeout: "The request took too long and was stopped. Try a narrower request.",
   crash: "The tool failed unexpectedly.",
 };
 
 /** The error codes in a failed result's error object, for clients that branch on them. */
-const ERROR_CODES: Record<Exclude<ToolOutcome, "ok">, string> = {
+const ERROR_CODES: Record<Exclude<ToolOutcome, "ok" | "refused">, string> = {
   input_error: "invalid_input",
   upstream_error: "upstream_unavailable",
   timeout: "timeout",
@@ -57,14 +76,20 @@ export const ERROR_META_KEY = "eft-toolset/error";
  * has when tarkov.dev can't be reached or is slow, and say how old it is, rather than failing.
  * Errors become tool errors the model can act on: a sentence, then the error object (code,
  * retryable, retryAfterSeconds) as JSON, also in _meta. Not in structuredContent: clients check
- * that against the tool's output schema even on errors. Logs one structured line per call.
+ * that against the tool's output schema even on errors. Logs one structured line per call and
+ * records one anonymous usage event (no user id, no arguments).
  */
 export async function runTool(
   context: ToolContext,
   call: { tool: string; gameMode?: GameMode; cacheKey?: string },
-  body: (read: Read) => Promise<object>
+  body: (read: Read, noteSubject: NoteSubject) => Promise<object>
 ): Promise<CallToolResult> {
   const startedAt = performance.now();
+  let subject: UsageSubject | undefined;
+  const noteSubject: NoteSubject = (next) => {
+    // Anything that isn't a real id is dropped here, so the call is still counted without it.
+    if (!subject && isValidSubject(next.kind, next.id)) subject = { kind: next.kind, id: next.id };
+  };
   let stale = false;
   let staleSource: DataSource = "tarkov.dev";
   let cached = false;
@@ -97,7 +122,7 @@ export async function runTool(
       cached = true;
       return toolResult(hit);
     }
-    const result = await body(read);
+    const result = await body(read, noteSubject);
     const payload: Record<string, unknown> = { ...result };
     if (dataAgeMs !== null) payload.dataAsOf = new Date(Date.now() - dataAgeMs).toISOString();
     if (stale) payload.dataNotice = staleNotice(dataAgeMs, staleSource);
@@ -107,6 +132,7 @@ export async function runTool(
   } catch (error) {
     outcome = classifyError(error, context);
     if (outcome === "crash") console.error(`MCP ${call.tool} failed (request ${context.requestId})`, error);
+    if (outcome === "refused") return refusedResult(error as DomainError | RouteError);
     const retryAfterSeconds =
       outcome === "upstream_error"
         ? Math.max(1, Math.ceil(((error as TarkovUpstreamError).retryAfterMs ?? DEFAULT_RETRY_AFTER_SECONDS * 1000) / 1000))
@@ -134,6 +160,19 @@ export async function runTool(
       _meta: { [ERROR_META_KEY]: details },
     };
   } finally {
+    const durationMs = performance.now() - startedAt;
+    recordUsage(
+      {
+        name: "mcp.tool_call",
+        tool: call.tool,
+        subject,
+        gameMode: call.gameMode,
+        outcome,
+        duration: durationBucket(durationMs),
+        country: context.usage?.country,
+      },
+      context.usage?.identity
+    );
     console.info(
       JSON.stringify({
         event: "mcp_tool_call",
@@ -142,7 +181,7 @@ export async function runTool(
         signedIn: context.userId !== undefined,
         gameMode: call.gameMode ?? null,
         outcome,
-        durationMs: Math.round(performance.now() - startedAt),
+        durationMs: Math.round(durationMs),
         stale,
         dataAgeSeconds: dataAgeMs === null ? null : Math.round(dataAgeMs / 1000),
         cached,
@@ -180,8 +219,35 @@ function staleNotice(dataAgeMs: number | null, source: DataSource) {
   return `Fresh tarkov.dev data couldn't be fetched in time, so this uses ${copy}${age}. Prices may have changed.`;
 }
 
+/**
+ * A request the library or a plan refused (§13): forbidden, limit (with details.limit and used),
+ * conflict (with fields, yours and theirs), rate_limited (retryable, with retryAfterSeconds), and
+ * not found, gone or invalid as invalid_input.
+ */
+function refusedResult(error: DomainError | RouteError): CallToolResult {
+  const code = error instanceof DomainError ? error.code : (error.code ?? "invalid");
+  const details = error.details;
+  const mapped = code === "forbidden" || code === "unauthenticated" ? "forbidden" : code === "limit" || code === "conflict" || code === "rate_limited" ? code : "invalid_input";
+  const retryAfterSeconds = typeof details?.retryAfterSeconds === "number" ? details.retryAfterSeconds : null;
+  const object = {
+    code: mapped,
+    retryable: mapped === "rate_limited",
+    ...(retryAfterSeconds !== null ? { retryAfterSeconds } : {}),
+    ...(details && mapped !== "rate_limited" ? { details } : {}),
+  };
+  return {
+    isError: true,
+    content: [
+      { type: "text", text: error.message },
+      { type: "text", text: JSON.stringify({ error: object }) },
+    ],
+    _meta: { [ERROR_META_KEY]: object },
+  };
+}
+
 function classifyError(error: unknown, context: ToolContext): Exclude<ToolOutcome, "ok"> {
   if (error instanceof InputError) return "input_error";
+  if (error instanceof DomainError || (error instanceof RouteError && error.code)) return "refused";
   if (error instanceof TarkovUpstreamError) return "upstream_error";
   const aborted = error instanceof Error && (error.name === "TimeoutError" || error.name === "AbortError");
   if (context.signal.aborted || aborted) return "timeout";

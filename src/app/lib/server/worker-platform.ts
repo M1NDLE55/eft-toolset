@@ -46,10 +46,30 @@ export function installWorkerPlatform(env: Env, ctx?: ExecutionContext, request?
       const result = await env.IMAGES.input(stream).transform({ width, height, fit: "scale-down" }).output({ format });
       return new Uint8Array(await result.response().arrayBuffer());
     },
+    // Absent until the analytics_engine_datasets binding is in the config; writes are fire-and-forget.
+    // USAGE_LOG_EVENTS=1 (development) also logs each row, which is already anonymous, for
+    // scripts/usage-sql-mock.mjs; Analytics Engine can't be queried locally.
+    writeUsage: env.USAGE
+      ? (point) => {
+          if (import.meta.env.DEV || process.env.USAGE_LOG_EVENTS === "1") {
+            console.info(JSON.stringify({ event: "usage_event", ...point }));
+          }
+          env.USAGE.writeDataPoint(point);
+        }
+      : undefined,
+    usageSecret: (kind) => env.USAGE_SALT.get(env.USAGE_SALT.idFromName("usage-salts")).secret(kind),
     async limitClientIp(pool, ip) {
-      const limiter = pool === "mcp" ? env.MCP_IP_LIMITER : env.WEB_IP_LIMITER;
+      const limiter = {
+        mcp: env.MCP_IP_LIMITER,
+        web: env.WEB_IP_LIMITER,
+        share: env.SHARE_IP_LIMITER,
+        invite: env.INVITE_IP_LIMITER,
+        socket: env.SOCKET_IP_LIMITER,
+        link: env.LINK_IP_LIMITER,
+      }[pool];
       return (await limiter.limit({ key: ip })).success;
     },
+    durable: env,
     waitUntil(promise) {
       const guarded = promise.catch((error: unknown) => console.error("Background work failed", error));
       if (currentContext) currentContext.waitUntil(guarded);

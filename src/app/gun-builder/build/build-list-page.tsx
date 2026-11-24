@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 import { useParams } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, ArrowLeft, Check, ClipboardCopy, Lock, Printer } from "lucide-react";
 import type { GunBuild } from "@/app/lib/types/gunBuilder";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 import { findBuild, setPriceSources, useBuilds, usePriceSources } from "@/app/lib/builds/store";
 import { collectItemIds } from "@/app/lib/builds/tree";
 import { buildShoppingList, formatShoppingList } from "@/app/lib/builds/shopping";

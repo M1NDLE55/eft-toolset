@@ -563,8 +563,12 @@ Only these routes touch sessions, so every other page stays static and never rea
 - `POST /api/account/sign-out` clears the cookies and returns AuthKit's logout URL, which
   ends the WorkOS session too. It answers with JSON for the page to follow, because the
   `form-action 'self'` policy blocks a form that redirects to another origin.
-- `DELETE /api/account` deletes the user in WorkOS. Their assistants' tokens stop working
-  once they expire, since refreshing needs the user.
+- `DELETE /api/account` deletes the account: its library and links, its plans (each passes to the
+  next member, or is deleted), its memberships, and the user in WorkOS. Each step is recorded and
+  resumed by the account's alarm. Their assistants' tokens stop working once they expire.
+- `GET /auth/sign-in?return=<path>` returns to an allowlisted page afterwards; `POST /auth/sign-in`
+  with `{ intent: "copy" | "join", code }` (from the site's own pages) completes that action on the
+  way back.
 
 Requests that change the account must come from the site's own pages (`Sec-Fetch-Site:
 same-origin`, or a matching `Origin` where browsers don't send it). Account routes share the
@@ -812,40 +816,74 @@ string.
 
 ## Durable Objects
 
-Per-user and per-plan state lives in SQLite-backed Durable Objects (`src/app/lib/durable/`), named
-by the WorkOS user id (the MCP token's `sub`, the website session's user) and the plan id, so state
-survives reconnects and is the same for every MCP client and the website. No user-facing feature
-uses them yet apart from the MCP budget; the schema, migrations and access helpers are in place.
+Accounts, sharing and live raid plans live in SQLite-backed Durable Objects (`src/app/lib/durable/`).
+The Worker authenticates every caller (the session cookie, or the MCP token's `sub`) and passes the
+verified user id; objects are reached only through bindings and trust only what the Worker passes.
+Each store is a plain class over the SQL API, migrated in `blockConcurrencyWhile`, and tested against
+Node's SQLite; the tests also run the real object classes against an in-memory state
+(`tests/helpers/durable-env.ts`).
 
-- **UserDO**: profile, saved builds and item groups, the index of raid plans the user owns or that
-  are shared with them, plan-creation history, and the MCP budget (`user-store.ts`).
-- **PlanDO**: one raid plan's content, its members and their roles (owner, editor, viewer), and live
-  connections through hibernatable WebSockets, accepted for members but not yet acted on
-  (`plan-store.ts`, `plan-do.ts`).
-- `access.ts` keeps a plan and its members' indexes in step (create, update, share, unshare, hand
-  over, delete), checking limits before anything is written.
+- **UserDO** (per WorkOS user id, `user-store.ts`): profile and display name (generated, never the
+  real name), builds and item groups with versions and per-field versions, synced settings, a
+  compacted change log (one row per record with the seq of its last change; tombstones kept 30 days),
+  idempotent mutations, the index of plans the user owns or belongs to, links to builds and groups,
+  per-user token buckets (library writes, link creation, accepts and copies, imports, reports, MCP),
+  notices, an outbox and account-deletion steps. Each device's change feed is a hibernatable
+  WebSocket here.
+- **PlanDO** (per plan id, `plan-store.ts`, `plan-do.ts`): one row per waypoint, drawing and note,
+  members and roles, links and invites, the recent op log for catch-up, and the live session
+  (hibernatable WebSockets, presence, per-socket rates). Ops (`src/app/lib/sharing/plan-doc.ts`)
+  apply one batch at a time: last writer wins per field, a delete beats a later update, note text is
+  compare-and-set, the route uses fractional order keys, and every cap is checked atomically.
+- **LinkDO** (per link code): the immutable route from a code to the object that owns the link.
+- **ModerationDO** (one, `moderation`): reports and the review queue.
 
-Each store runs its migrations (`migrate` in `sql.ts`, versioned in a `schema_meta` table) inside
-`blockConcurrencyWhile`, so no request sees a half-migrated schema. The stores are plain classes
-over the SQL API, tested against Node's SQLite (`tests/durable-stores.test.ts`).
+There are no transactions across objects: a plan is created by reserving a slot in the user's
+index, initialising the plan, then confirming (or releasing); PlanDO is the authority on
+membership; side effects on other objects go through outboxes drained by alarms
+(`src/app/lib/sharing/server/plan-service.ts`). The HTTP routes (`src/app/lib/sharing/server/`) and
+the MCP account tools call the same methods, so agents have exactly their user's permissions.
 
 Limits, exact because each object serves one request at a time (`limits.ts`):
 
 | Limit | Value |
 | --- | --- |
-| Raid plans owned | 100 |
-| Raid plans shared with you | 100 |
-| Saved builds | 200 |
-| Saved item groups | 50 |
-| New raid plans | 20 an hour |
-| One raid plan | 256 KB as JSON, with the planner's own caps: 500 route points, 500 notes (titles up to 120 and bodies up to 2,000 characters), 500 drawings and 20,000 drawing points |
+| Raid plans owned / shared with you | 100 / 100 |
+| Saved builds / item groups | 200 / 50 |
+| New raid plans | 20 an hour (imports draw on a daily import bucket instead) |
+| One raid plan | 256 KB as JSON; 300 route points, 200 drawings of up to 2,000 points and 5,000 in all, 100 notes (titles up to 120 and bodies up to 1,000 characters), 200 layers |
 | One saved build or item group | 64 KB as JSON |
-| People on one plan | 50 |
+| People on one plan / active links on one plan / on one build or group | 50 / 20 / 5 |
 
-Handing a plan over may take the new owner past their limit: it is allowed, and they can't create
-plans until they are back under it. Every limit has a message saying what to do
-(`LIMIT_MESSAGES`), and Durable Object methods return refusals as values (`outcome.ts`), since errors
-lose their class over RPC.
+Handing a plan over, or an offline edit that restores a deleted item, may take someone past a limit:
+it is allowed, and only adding more is refused until they are back under it.
+
+### Links and sharing
+
+View and copy links are `/s/<code>`; invites are `/join#<code>`, with the code in the fragment so it
+never reaches logs. A code is a version character and base64url(96 random bits ‖ a 24-bit MAC), so
+forged and mistyped codes are refused before any Durable Object is called (`link-code.ts`, keys in
+`LINK_KEYS`). Routes are cached per data centre; public snapshots for 10 seconds. The sign-in state
+cookie is sealed (AES-GCM) and can carry a copy or join intent, or an allowlisted return path
+(`return-path.ts`), which the callback completes.
+
+### The browser's account cache
+
+Signed out, builds, groups and plans stay in `localStorage` as before. Signed in, the app reads an
+IndexedDB cache per account (`src/app/lib/account-sync/`), written optimistically with a queue of
+mutations replayed to `POST /api/library/mutations`; one tab per account (Web Locks) holds the change
+feed and drains the queue, and other tabs hear about changes on a BroadcastChannel. Every plan in the
+user's index is cached and editable offline as queued op batches, replayed under the live rules. The
+browser stores (`builds/store.ts`, `item-groups/store.ts`, `raid-planner/store.ts`) choose the
+account or the browser, so pages didn't change. Settings and quest progress sync is ready on the
+server (newest change wins; quest progress reports clashes) but no settings store writes to it yet.
+
+### Development sign-in
+
+With `DEV_AUTH=1` in `.dev.vars`, `/auth/dev-sign-in?user=<name>` signs a browser in as a local test
+user and `Authorization: Bearer dev:<name>` does the same for an MCP client, without WorkOS. It is
+compiled out of production builds (`import.meta.env.DEV`); a bundle built with `EFT_LOCAL_E2E=1` keeps
+it for local `wrangler dev` runs.
 
 ## Platform
 
@@ -854,8 +892,13 @@ The site is a TanStack Start app on one Cloudflare Worker (`src/server.ts`, `wra
 - **Static assets** (`ASSETS`): the client build, the prerendered pages, the data snapshot under
   `/_data` (refused to the public through `run_worker_first`), and `_headers`.
 - **KV** (`TARKOV_DATA`): shared tarkov.dev copies and the price feed.
-- **Durable Objects** (`USER`, `PLAN`): see above.
-- **Rate limiting** (`MCP_IP_LIMITER`, `WEB_IP_LIMITER`): 600 requests a minute per IP each.
+- **Durable Objects** (`USER`, `PLAN`, `LINK`, `MODERATION`): see above. `USAGE_SALT` (one
+  instance) holds the rotating keys behind the anonymous usage-stats ids.
+- **Analytics Engine** (`USAGE`, dataset `eft_toolset_usage`): anonymous usage events, read by the
+  admin dashboard through the SQL API. See USAGE_STATS.md.
+- **Rate limiting** (`MCP_IP_LIMITER`, `WEB_IP_LIMITER`: 600 requests a minute per IP each;
+  `SHARE_IP_LIMITER`: 120 a minute for /s/ opens; `INVITE_IP_LIMITER`, `SOCKET_IP_LIMITER` and
+  `LINK_IP_LIMITER`: 30 a minute for invites, live connections and link creation).
 - **Images** (`IMAGES`): converts tarkov.dev's WebP icons to PNG for the quest share images, which
   are drawn with `@cf-wasm/og` (Satori and resvg). Without it, the icon's JPEG copy is used.
 - **Cron** (every minute, `src/app/lib/api/scheduled.ts`): the price feed and the shared datasets.

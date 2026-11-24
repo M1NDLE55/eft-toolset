@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "@/app/lib/navigation/image";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
-import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, Download, LoaderCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -91,7 +92,8 @@ function ShareError({ message }: { message: string }) {
   );
 }
 
-function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
+/** A shared build's summary. `actions` replaces the "Save to my builds" buttons (the /s/ page has its own). */
+export function SharedBuildPreview({ build, actions, label = "Shared build" }: { build: DecodedSharedBuild; actions?: ReactNode; label?: string }) {
   const router = useRouter();
   const ids = useMemo(() => collectItemIds(build.root), [build.root]);
   const { items, loading, error, retry } = useGunItems(ids, "full");
@@ -120,6 +122,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
     setImportError("");
     try {
       const created = createBuild(name, build.weaponId, build.root, build.ammoId);
+      trackUsage("build.import", { subject: build.weaponId });
       router.replace(`/gun-builder/${created.id}`);
     } catch (reason) {
       setImporting(false);
@@ -137,7 +140,7 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
 
   return (
     <div className="flex w-full max-w-xl flex-col gap-4">
-      <p className="text-2xs font-bold uppercase tracking-widest text-[#9a8866]">Shared build</p>
+      <p className="text-2xs font-bold uppercase tracking-widest text-[#9a8866]">{label}</p>
 
       <div className="flex items-center gap-4 border border-[#1a1a1a] bg-[#0c0c0c] p-3">
         <span className="flex h-16 w-24 shrink-0 items-center justify-center bg-[#080808]">
@@ -184,15 +187,17 @@ function SharedBuildPreview({ build }: { build: DecodedSharedBuild }) {
         </p>
       )}
 
-      <div className="flex flex-col gap-2 sm:flex-row">
-        <Button onClick={handleImport} disabled={importing} className="sm:flex-1">
-          {importing ? <LoaderCircle className="animate-spin" /> : <Download />}
-          Save to my builds
-        </Button>
-        <Button asChild variant="outline">
-          <Link href="/gun-builder">Cancel</Link>
-        </Button>
-      </div>
+      {actions ?? (
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <Button onClick={handleImport} disabled={importing} className="sm:flex-1">
+            {importing ? <LoaderCircle className="animate-spin" /> : <Download />}
+            Save to my builds
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/gun-builder">Cancel</Link>
+          </Button>
+        </div>
+      )}
       {(importError || error) && (
         <div role="alert" className="flex items-center justify-between gap-2 border border-red-900/60 bg-red-950/30 px-3 py-2 text-sm text-red-200">
           <span>{importError || "Part details could not be loaded. You can still save the build."}</span>

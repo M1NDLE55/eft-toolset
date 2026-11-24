@@ -6,6 +6,10 @@ import { MAX_BUILD_NAME_LENGTH, MAX_BUILDS } from "./limits";
 import { cloneTree, isValidBuildId } from "./tree";
 import { isBuildList, isGunBuild } from "./validation";
 import { STORE_KEYS } from "@/app/lib/storage/store-keys";
+import { activeLibrary, useAccountView } from "@/app/lib/account-sync/account-session";
+import type { LibraryView } from "@/app/lib/account-sync/account-library";
+import type { BuildRecord } from "@/app/lib/sharing/types";
+import { USER_LIMITS } from "@/app/lib/durable/limits";
 
 export const BUILD_STORE: StoreDefinition<GunBuild[]> = {
   key: STORE_KEYS.gunBuilds,
@@ -47,8 +51,43 @@ export function setHideEmptySlots(hideEmpty: boolean) {
   writeStore(VIEW_STORE, { hideEmpty });
 }
 
+/*
+ * Signed in, builds come from the account library (src/app/lib/account-sync): reads are its
+ * optimistic local copy, and every change below becomes a mutation that syncs. Signed out, they stay
+ * in this browser's localStorage as before.
+ */
+export function toGunBuild(record: BuildRecord): GunBuild {
+  return {
+    id: record.id,
+    name: record.name,
+    weaponId: record.weaponId,
+    root: record.root,
+    ...(record.ammoId ? { ammoId: record.ammoId } : {}),
+    createdAt: record.createdAt,
+    updatedAt: record.updatedAt,
+  };
+}
+
+const accountBuildLists = new WeakMap<LibraryView["builds"], GunBuild[]>();
+
+function accountBuilds(view: LibraryView): GunBuild[] {
+  let list = accountBuildLists.get(view.builds);
+  if (!list) {
+    list = view.builds.map(toGunBuild);
+    accountBuildLists.set(view.builds, list);
+  }
+  return list;
+}
+
+function readBuilds(): GunBuild[] {
+  const library = activeLibrary();
+  return library ? accountBuilds(library.view()) : readStore(BUILD_STORE);
+}
+
 export function useBuilds() {
-  return useStore(BUILD_STORE);
+  const local = useStore(BUILD_STORE);
+  const account = useAccountView();
+  return account ? accountBuilds(account) : local;
 }
 
 export function usePriceSources() {
@@ -77,9 +116,15 @@ export function validBuildName(name: string) {
 }
 
 function insert(build: GunBuild) {
-  const builds = readStore(BUILD_STORE);
-  if (builds.length >= MAX_BUILDS) {
-    throw new Error(`You can save at most ${MAX_BUILDS} builds. Delete one to make room.`);
+  const builds = readBuilds();
+  const library = activeLibrary();
+  const limit = library ? USER_LIMITS.builds : MAX_BUILDS;
+  if (builds.length >= limit) {
+    throw new Error(`You can save at most ${limit} builds. Delete one to make room.`);
+  }
+  if (library) {
+    const id = library.createBuild({ name: build.name, weaponId: build.weaponId, root: build.root, ...(build.ammoId ? { ammoId: build.ammoId } : {}) });
+    return { ...build, id };
   }
   writeStore(BUILD_STORE, [...builds, build]);
   return build;
@@ -114,10 +159,18 @@ export function setBuildAmmo(id: string, ammoId: string | null) {
 }
 
 export function updateBuild(id: string, update: (build: GunBuild) => GunBuild): GunBuild {
-  const builds = readStore(BUILD_STORE);
+  const library = activeLibrary();
+  const builds = readBuilds();
   const current = findBuild(builds, id);
-  if (!current) throw new Error("This build no longer exists in browser storage.");
+  if (!current) throw new Error(library ? "This build no longer exists in your library." : "This build no longer exists in browser storage.");
   const next: GunBuild = { ...update(current), id, updatedAt: Date.now() };
+  if (library) {
+    const record = library.get("build", id) as BuildRecord;
+    const { ammoId: _ammo, ...rest } = record;
+    void _ammo;
+    library.update("build", id, { ...rest, name: next.name, root: next.root, ...(next.ammoId ? { ammoId: next.ammoId } : {}) });
+    return next;
+  }
   writeStore(
     BUILD_STORE,
     builds.map((build) => (build.id === id ? next : build))
@@ -135,8 +188,8 @@ export function renameBuild(id: string, name: string) {
 }
 
 export function duplicateBuild(id: string): GunBuild {
-  const build = findBuild(readStore(BUILD_STORE), id);
-  if (!build) throw new Error("This build no longer exists in browser storage.");
+  const build = findBuild(readBuilds(), id);
+  if (!build) throw new Error("This build no longer exists.");
   const timestamp = Date.now();
   return insert({
     ...build,
@@ -149,6 +202,11 @@ export function duplicateBuild(id: string): GunBuild {
 }
 
 export function deleteBuild(id: string) {
+  const library = activeLibrary();
+  if (library) {
+    library.remove("build", id);
+    return;
+  }
   writeStore(
     BUILD_STORE,
     readStore(BUILD_STORE).filter((build) => build.id !== id)

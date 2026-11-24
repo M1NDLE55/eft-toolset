@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "@/app/lib/navigation/image";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { ChevronRight, Plus } from "lucide-react";
@@ -9,13 +10,15 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { NameDialog } from "@/components/name-dialog";
 import { customEncodeURI } from "@/app/lib/URIEncoding";
 import { createGroup, useGroups } from "@/app/lib/item-groups/store";
+import { useAccountView } from "@/app/lib/account-sync/account-session";
 import { MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
 import { useCatalog } from "@/app/lib/cache/hooks";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 
 export function ItemGroupsPage() {
   const router = useRouter();
   const groups = useGroups();
+  const account = useAccountView();
   const hydrated = useHydrated();
   const { itemsByName } = useCatalog();
 
@@ -24,7 +27,7 @@ export function ItemGroupsPage() {
       <div className="flex items-end justify-between gap-4">
         <div>
           <h1 className="text-2xl font-black uppercase tracking-widest text-[#e6d9b8]">Item groups</h1>
-          <p className="mt-1 text-sm text-[#888]">Watchlists with live prices, saved in this browser.</p>
+          <p className="mt-1 text-sm text-[#888]">Watchlists with live prices, saved {account ? "to your account" : "in this browser"}.</p>
         </div>
         <NameDialog
           trigger={
@@ -36,7 +39,11 @@ export function ItemGroupsPage() {
           description="Name your new item group."
           submitLabel="Create"
           maxLength={MAX_GROUP_NAME_LENGTH}
-          onSubmit={(name) => router.push(`/item-groups/${customEncodeURI(createGroup(name))}`)}
+          onSubmit={(name) => {
+            const created = createGroup(name);
+            trackUsage("group.create");
+            router.push(`/item-groups/${customEncodeURI(created)}`);
+          }}
         />
       </div>
 

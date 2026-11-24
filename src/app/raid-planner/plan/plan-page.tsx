@@ -3,7 +3,7 @@
 import { useParams } from "@/app/lib/navigation/hooks";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
 import { usePlans } from "@/app/lib/raid-planner/store";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 import { LocalMissing } from "@/components/local-missing";
 import { MapStageSkeleton } from "@/app/components/raid-planner/map-chrome";
 import { PlanEditor } from "@/app/components/raid-planner/plan-editor";

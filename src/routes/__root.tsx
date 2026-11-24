@@ -5,10 +5,13 @@ import globalStyles from "@/app/globals.css?url";
 import { GameModeProvider } from "@/components/game-mode/context";
 import { ItemRundownProvider } from "@/app/components/item/rundown/rundown-link";
 import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
+import { UsagePageViews } from "@/app/components/global/usage-page-views";
 import { Header } from "@/app/components/global/header";
 import { SiteFooter } from "@/app/components/global/site-footer";
 import { ServiceWorker } from "@/app/components/global/service-worker";
 import { ContentScaleSync } from "@/app/components/global/content-scale";
+import { SyncStatus } from "@/app/components/account/sync-status";
+import { LibraryMigration } from "@/app/components/account/library-migration";
 import { contentScaleScript } from "@/app/lib/settings/content-scale";
 import { pageHead } from "@/app/lib/seo/metadata";
 
@@ -65,7 +68,10 @@ function RootDocument({ children }: { children: ReactNode }) {
         <SiteFooter />
         <ServiceWorker />
         <ContentScaleSync />
+        <SyncStatus />
+        <LibraryMigration />
         <CloudflareAnalytics />
+        <UsagePageViews />
         <Scripts />
       </body>
     </html>

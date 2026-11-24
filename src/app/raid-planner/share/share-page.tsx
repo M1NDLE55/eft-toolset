@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, Download, MapPin, MoveUpRight, Route, StickyNote } from "lucide-react";
 import type { RaidPlan } from "@/app/lib/raid-planner/types";
 import { getMapConfig } from "@/app/lib/raid-planner/maps-config";
-import { importPlan } from "@/app/lib/raid-planner/store";
+import { savePlanCopy } from "@/app/lib/raid-planner/store";
 import { decodePlanSharePayload, type DecodedSharedPlan } from "@/app/lib/raid-planner/share";
 import { Button } from "@/components/ui/button";
 import { SharedPreview } from "@/app/components/raid-planner/shared-preview";
@@ -77,13 +78,15 @@ export function SharedPlanPage() {
     if (!shared) return;
     setImporting(true);
     setImportError("");
-    try {
-      const plan = importPlan(shared);
-      router.replace(`/raid-planner/${plan.id}`);
-    } catch (reason) {
-      setImporting(false);
-      setImportError(reason instanceof Error ? reason.message : "Could not import this plan.");
-    }
+    savePlanCopy(shared)
+      .then((url) => {
+        trackUsage("plan.create", { subject: shared.mapKey });
+        router.replace(url);
+      })
+      .catch((reason: unknown) => {
+        setImporting(false);
+        setImportError(reason instanceof Error ? reason.message : "Could not import this plan.");
+      });
   }
 
   if (error) {
@@ -167,7 +170,7 @@ export function SharedPlanPage() {
           <div className="h-[min(60dvh,40rem)] min-h-72 w-full animate-pulse border border-[#2a2a2a] bg-[#050505]" />
         )}
         <p className="text-xs text-[#888]">
-          Saving keeps a private copy in this browser. You can edit it freely without changing the original.
+          Saving keeps a private copy of your own (in your account when signed in). You can edit it freely without changing the original.
         </p>
       </div>
     </div>

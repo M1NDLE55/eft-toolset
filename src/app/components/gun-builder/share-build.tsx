@@ -6,8 +6,11 @@ import type { GunBuild } from "@/app/lib/types/gunBuilder";
 import { encodeBuildSharePayload, slugifyBuildName } from "@/app/lib/builds/share";
 import { countParts } from "@/app/lib/builds/tree";
 import { copyText } from "@/app/lib/browser/clipboard";
+import { trackUsage } from "@/app/lib/usage/track";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useAccountView } from "@/app/lib/account-sync/account-session";
+import { AccountItemLinks } from "@/app/components/sharing/account-item-links";
 import {
   Dialog,
   DialogContent,
@@ -60,6 +63,7 @@ export function ShareBuild({ build }: { build: GunBuild }) {
     if (!url) return;
     try {
       await copyText(url);
+      trackUsage("build.share", { subject: build.weaponId });
       setCopied(true);
       setNotice("Link copied to clipboard.");
       window.setTimeout(() => setCopied(false), 2000);
@@ -72,6 +76,7 @@ export function ShareBuild({ build }: { build: GunBuild }) {
     if (!url) return;
     try {
       await navigator.share({ title: build.name, url });
+      trackUsage("build.share", { subject: build.weaponId });
     } catch (reason) {
       if (!(reason instanceof DOMException && reason.name === "AbortError")) {
         setNotice(reason instanceof Error ? reason.message : "Could not share the link.");
@@ -80,6 +85,8 @@ export function ShareBuild({ build }: { build: GunBuild }) {
   }
 
   const parts = countParts(build.root);
+  const account = useAccountView();
+  const record = account?.builds.find((candidate) => candidate.id === build.id);
 
   return (
     <Dialog
@@ -101,7 +108,9 @@ export function ShareBuild({ build }: { build: GunBuild }) {
             Share build
           </DialogTitle>
           <DialogDescription>
-            The whole build is stored in the link, so anyone who opens it can save their own copy. Nothing is uploaded.
+            {record
+              ? "Share a link to the build in your account: it always shows the latest version, and you can revoke it."
+              : "The whole build is stored in the link, so anyone who opens it can save their own copy. Nothing is uploaded."}
           </DialogDescription>
         </DialogHeader>
         <div className="border border-[#1a1a1a] bg-[#080808] px-3 py-2">
@@ -110,6 +119,8 @@ export function ShareBuild({ build }: { build: GunBuild }) {
             {parts} part{parts === 1 ? "" : "s"}
           </p>
         </div>
+        {record && <AccountItemLinks target={{ type: "build", id: build.id }} allowCopy={record.allowCopy} online={account!.status.online} />}
+        {record && <p className="text-3xs font-bold uppercase tracking-widest text-[#888]">Or a link with the build inside</p>}
         {link.status === "error" ? (
           <p role="alert" className="border border-red-900/60 bg-red-950/30 p-3 text-sm text-red-200">
             {link.message}

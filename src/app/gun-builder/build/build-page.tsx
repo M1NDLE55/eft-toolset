@@ -6,7 +6,7 @@ import { useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, ArrowLeft, Copy, GitCompareArrows, ListChecks, LoaderCircle, Pencil, Trash2 } from "lucide-react";
 import type { BuildNode, GunBuild } from "@/app/lib/types/gunBuilder";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 import {
   deleteBuild,
   duplicateBuild,

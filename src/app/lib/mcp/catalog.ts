@@ -138,14 +138,14 @@ export const MCP_TOOL_GROUPS = [
         title: "Create raid plan",
         summary: "Draw routes, arrows, and notes, using named places, and get a share link.",
         description:
-          "Draws a plan on a map (a route of waypoints, pen and arrow drawings, note pins, and the layers to show) and returns a shareLink that opens it in the app to view, edit, and save. Points are coordinates or place names: extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, keys (for their locks), or landmarks like Big Red; case, punctuation, and small typos are ignored. resolvedPlaces shows what each name became; when approximate, call the place by its resolved name. Every problem is reported at once; unknown colours and layers only warn.",
+          "Draws a plan on a map (a route of waypoints, pen and arrow drawings, note pins, and the layers to show) and returns a shareLink that opens it in the app to view, edit, and save. Points are coordinates or place names: extracts, transits, areas, spawn zones, switches, hazards, stationary weapons, keys (for their locks), or landmarks like Big Red; case, punctuation, and small typos are ignored. resolvedPlaces shows what each name became; when approximate, call the place by its resolved name. Every problem is reported at once; unknown colours and layers only warn. save: true also saves it to the user's account as a live plan.",
       },
       {
         name: "read_raid_plan",
-        title: "Read raid plan link",
-        summary: "Describe a plan from its share link.",
+        title: "Read raid plan",
+        summary: "Describe a plan from its share link, /s/ link, or account plan id.",
         description:
-          "Describes a raid plan share link: the map, route waypoints with their nearest named places (and level, off the ground floor) and straight-line distance, drawings, notes, and layers.",
+          "Describes a raid plan from a share link, an /s/ link, or an account plan's id or URL: the map, route waypoints with their nearest named places (and level, off the ground floor) and straight-line distance, drawings, notes, and layers. Account plans add ids, rev, note textRev, your role, and members, for edit_raid_plan.",
       },
     ],
   },
@@ -170,6 +170,97 @@ export const MCP_TOOL_GROUPS = [
     ],
   },
   {
+    tool: "Your library and shared plans",
+    href: "/settings",
+    tools: [
+      {
+        name: "list_library",
+        title: "List your library",
+        summary: "Your saved builds, item groups, and raid plans, owned and shared, with usage and limits.",
+        description:
+          "The signed-in user's saved builds, item groups, and raid plans (owned, and shared with them with their role), with each record's version, links, and how much of each limit is used.",
+      },
+      {
+        name: "save_to_library",
+        title: "Save to your library",
+        summary: "Save a build or item group to your account, or update one.",
+        description:
+          "Saves a build (any gun-builder build input) or an item group (items matched as in create_import_link) to the user's account, or updates one by id with the baseVersion you last saw. Edits merge with other devices' changes to other fields; a clash on the same field returns conflict with both versions. requestId makes retries safe.",
+      },
+      {
+        name: "delete_from_library",
+        title: "Delete from your library",
+        summary: "Delete a saved build or item group, or delete or leave a raid plan.",
+        description:
+          "Deletes a saved build or item group (baseVersion required: a stale one returns conflict), or a raid plan: deleted for everyone if the user owns it, otherwise the user leaves it.",
+      },
+      {
+        name: "share_link",
+        title: "Make a link",
+        summary: "A view or copy link to a build, group, or plan, or an invite to a plan.",
+        description:
+          "Makes a link: view (anyone can see it), copy (anyone can also save a copy, if copies are allowed), or invite (joins a raid plan as editor or viewer; editors can only invite viewers). Links show the latest version and can be revoked.",
+      },
+      {
+        name: "list_links",
+        title: "List links",
+        summary: "The links to an item, with status, opens, copies, and uses.",
+        description: "Lists the links to a build, item group, or raid plan with their status, opens, copies, and invite uses: all for the owner, their own invites for an editor.",
+      },
+      {
+        name: "revoke_link",
+        title: "Revoke a link",
+        summary: "Stop a link working.",
+        description: "Revokes an /s/ link or invite at once. Members who joined through an invite stay members.",
+      },
+      {
+        name: "open_link",
+        title: "Open a link",
+        summary: "What any site link points at, and what you can do with it.",
+        description:
+          "Reads any link the site makes (/s/, /join#, a plan URL, or a share link): what it points at, its content, and what the user may do (view, copy, edit, join) with which role.",
+      },
+      {
+        name: "copy_from_link",
+        title: "Save a copy from a link",
+        summary: "Save a copy of a linked build, group, or plan to your library.",
+        description: "Saves a copy from an /s/ copy link (when the owner allows copies) or a share link to the user's library, as a new item of their own.",
+      },
+      {
+        name: "join_raid_plan",
+        title: "Join a raid plan",
+        summary: "Accept an invite to a raid plan.",
+        description: "Accepts a raid plan invite: the user becomes a member with the invite's role. Returns the plan id and URL.",
+      },
+      {
+        name: "edit_raid_plan",
+        title: "Edit a raid plan live",
+        summary: "Add, move, and delete waypoints, drawings, and notes on a shared plan; everyone sees it at once.",
+        description:
+          "Edits an account raid plan the user can edit, live for everyone in it, as one atomic batch of up to 50 ops. Points are coordinates or place names (as create_raid_plan); targets are ids from read_raid_plan or {nearest: place}; waypoints go after insertAfter. set_note_text with expectRev fails with conflict if someone changed the note since. Edits show as the user, via AI.",
+      },
+      {
+        name: "manage_raid_plan",
+        title: "Manage a raid plan",
+        summary: "Rename, allow copies, change roles, remove members, hand over, leave, or delete.",
+        description:
+          "Administers a raid plan with the user's role: rename (editors too), and for the owner set_allow_copy, set_role, remove_member, transfer (the owner becomes an editor) and delete; anyone can leave (an owner's plan passes to the next member).",
+      },
+      {
+        name: "list_raid_plan_members",
+        title: "List plan members",
+        summary: "Who is in a raid plan, their roles, and who is online.",
+        description: "Lists a raid plan's members with roles and keys (for manage_raid_plan), who is online now (and via AI), and how many people are watching through a view link.",
+      },
+      {
+        name: "report_content",
+        title: "Report content",
+        summary: "Report a shared link or plan, as the Report button does.",
+        description: "Reports a shared link, invite, or plan the user can see, with a reason (offensive, spam, personal_info, other) and optional detail, for review. The owner isn't told who reported it.",
+      },
+    ],
+  },
+  {
     tool: "Backup and restore",
     href: "/data",
     tools: [
@@ -178,7 +269,7 @@ export const MCP_TOOL_GROUPS = [
         title: "Create import link",
         summary: "Bundle item groups, builds, and plans into one import link for the app.",
         description:
-          "Bundles item groups, gun builds, and raid plans into an import link that opens the app's Backup & restore page (/data) with them ready to review and merge. Give the link to the user. Use it to hand over several things at once, or for item groups, which have no share links. itemMatches says which item each item-group input became.",
+          "Bundles item groups, gun builds, and raid plans into an import link that opens the app's Backup & restore page (/data) with them ready to review and merge. Give the link to the user. itemMatches says which item each item-group input became. For a signed-in user, save_to_library saves straight to their account.",
       },
     ],
   },

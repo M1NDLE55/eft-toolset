@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import { writeStore } from "@/app/lib/storage/versioned-store";
 import { useHydrated, useStore } from "@/app/lib/storage/use-store";
 
@@ -37,6 +38,7 @@ export function GameModeProvider({ children }: { children: ReactNode }) {
   const setGameMode = (mode: GameMode) => {
     try {
       writeStore(GAME_MODE_STORE, mode);
+      trackUsage("mode.switch", { gameMode: mode });
       setFallbackMode(null);
       setStorageError("");
     } catch (reason) {

@@ -16,11 +16,13 @@ import { Route as DataRouteImport } from './routes/data'
 import { Route as GunBuilderRouteRouteImport } from './routes/gun-builder/route'
 import { Route as ItemRouteRouteImport } from './routes/item/route'
 import { Route as ItemGroupsRouteRouteImport } from './routes/item-groups/route'
+import { Route as JoinRouteImport } from './routes/join'
 import { Route as KeysRouteRouteImport } from './routes/keys/route'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as QuestsRouteRouteImport } from './routes/quests/route'
 import { Route as RaidPlannerRouteRouteImport } from './routes/raid-planner/route'
 import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as AdminStatsRouteImport } from './routes/admin/stats'
 import { Route as AmmoIndexRouteImport } from './routes/ammo/index'
 import { Route as AmmoCaliberRouteImport } from './routes/ammo/$caliber'
 import { Route as FleaMarketPveRouteImport } from './routes/flea-market/pve'
@@ -37,6 +39,7 @@ import { Route as QuestsIndexRouteImport } from './routes/quests/index'
 import { Route as QuestsSlugRouteImport } from './routes/quests/$slug'
 import { Route as RaidPlannerIndexRouteImport } from './routes/raid-planner/index'
 import { Route as RaidPlannerPlanRouteImport } from './routes/raid-planner/$plan'
+import { Route as SCodeRouteImport } from './routes/s/$code'
 import { Route as GunBuilderBuildIndexRouteImport } from './routes/gun-builder/$build/index'
 import { Route as GunBuilderBuildListRouteImport } from './routes/gun-builder/$build/list'
 import { Route as GunBuilderBestIndexRouteImport } from './routes/gun-builder/best/index'
@@ -45,6 +48,7 @@ import { Route as GunBuilderGunsmithIndexRouteImport } from './routes/gun-builde
 import { Route as GunBuilderGunsmithTaskRouteImport } from './routes/gun-builder/gunsmith/$task'
 import { Route as GunBuilderShareSlugRouteImport } from './routes/gun-builder/share/$slug'
 import { Route as RaidPlannerMapMapRouteImport } from './routes/raid-planner/map/$map'
+import { Route as RaidPlannerPPlanIdRouteImport } from './routes/raid-planner/p/$planId'
 import { Route as RaidPlannerShareSlugRouteImport } from './routes/raid-planner/share/$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -82,6 +86,11 @@ const ItemGroupsRouteRoute = ItemGroupsRouteRouteImport.update({
   path: '/item-groups',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JoinRoute = JoinRouteImport.update({
+  id: '/join',
+  path: '/join',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KeysRouteRoute = KeysRouteRouteImport.update({
   id: '/keys',
   path: '/keys',
@@ -105,6 +114,11 @@ const RaidPlannerRouteRoute = RaidPlannerRouteRouteImport.update({
 const SettingsRoute = SettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminStatsRoute = AdminStatsRouteImport.update({
+  id: '/admin/stats',
+  path: '/admin/stats',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AmmoIndexRoute = AmmoIndexRouteImport.update({
@@ -188,6 +202,11 @@ const RaidPlannerPlanRoute = RaidPlannerPlanRouteImport.update({
   path: '/$plan',
   getParentRoute: () => RaidPlannerRouteRoute,
 } as any)
+const SCodeRoute = SCodeRouteImport.update({
+  id: '/s/$code',
+  path: '/s/$code',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GunBuilderBuildIndexRoute = GunBuilderBuildIndexRouteImport.update({
   id: '/$build/',
   path: '/$build/',
@@ -228,6 +247,11 @@ const RaidPlannerMapMapRoute = RaidPlannerMapMapRouteImport.update({
   path: '/map/$map',
   getParentRoute: () => RaidPlannerRouteRoute,
 } as any)
+const RaidPlannerPPlanIdRoute = RaidPlannerPPlanIdRouteImport.update({
+  id: '/p/$planId',
+  path: '/p/$planId',
+  getParentRoute: () => RaidPlannerRouteRoute,
+} as any)
 const RaidPlannerShareSlugRoute = RaidPlannerShareSlugRouteImport.update({
   id: '/share/$slug',
   path: '/share/$slug',
@@ -245,8 +269,10 @@ export interface FileRoutesByFullPath {
   '/raid-planner': typeof RaidPlannerRouteRouteWithChildren
   '/credits': typeof CreditsRoute
   '/data': typeof DataRoute
+  '/join': typeof JoinRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
+  '/admin/stats': typeof AdminStatsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
   '/flea-market/pve': typeof FleaMarketPveRoute
   '/gun-builder/compare': typeof GunBuilderCompareRoute
@@ -256,6 +282,7 @@ export interface FileRoutesByFullPath {
   '/policies/disclaimer-and-use-policy': typeof PoliciesDisclaimerAndUsePolicyRoute
   '/quests/$slug': typeof QuestsSlugRoute
   '/raid-planner/$plan': typeof RaidPlannerPlanRoute
+  '/s/$code': typeof SCodeRoute
   '/ammo/': typeof AmmoIndexRoute
   '/gun-builder/': typeof GunBuilderIndexRoute
   '/item-groups/': typeof ItemGroupsIndexRoute
@@ -268,6 +295,7 @@ export interface FileRoutesByFullPath {
   '/gun-builder/gunsmith/$task': typeof GunBuilderGunsmithTaskRoute
   '/gun-builder/share/$slug': typeof GunBuilderShareSlugRoute
   '/raid-planner/map/$map': typeof RaidPlannerMapMapRoute
+  '/raid-planner/p/$planId': typeof RaidPlannerPPlanIdRoute
   '/raid-planner/share/$slug': typeof RaidPlannerShareSlugRoute
   '/gun-builder/$build/': typeof GunBuilderBuildIndexRoute
   '/gun-builder/best/': typeof GunBuilderBestIndexRoute
@@ -277,8 +305,10 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/credits': typeof CreditsRoute
   '/data': typeof DataRoute
+  '/join': typeof JoinRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
+  '/admin/stats': typeof AdminStatsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
   '/flea-market/pve': typeof FleaMarketPveRoute
   '/gun-builder/compare': typeof GunBuilderCompareRoute
@@ -288,6 +318,7 @@ export interface FileRoutesByTo {
   '/policies/disclaimer-and-use-policy': typeof PoliciesDisclaimerAndUsePolicyRoute
   '/quests/$slug': typeof QuestsSlugRoute
   '/raid-planner/$plan': typeof RaidPlannerPlanRoute
+  '/s/$code': typeof SCodeRoute
   '/ammo': typeof AmmoIndexRoute
   '/gun-builder': typeof GunBuilderIndexRoute
   '/item-groups': typeof ItemGroupsIndexRoute
@@ -300,6 +331,7 @@ export interface FileRoutesByTo {
   '/gun-builder/gunsmith/$task': typeof GunBuilderGunsmithTaskRoute
   '/gun-builder/share/$slug': typeof GunBuilderShareSlugRoute
   '/raid-planner/map/$map': typeof RaidPlannerMapMapRoute
+  '/raid-planner/p/$planId': typeof RaidPlannerPPlanIdRoute
   '/raid-planner/share/$slug': typeof RaidPlannerShareSlugRoute
   '/gun-builder/$build': typeof GunBuilderBuildIndexRoute
   '/gun-builder/best': typeof GunBuilderBestIndexRoute
@@ -317,8 +349,10 @@ export interface FileRoutesById {
   '/raid-planner': typeof RaidPlannerRouteRouteWithChildren
   '/credits': typeof CreditsRoute
   '/data': typeof DataRoute
+  '/join': typeof JoinRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
+  '/admin/stats': typeof AdminStatsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
   '/flea-market/pve': typeof FleaMarketPveRoute
   '/gun-builder/compare': typeof GunBuilderCompareRoute
@@ -328,6 +362,7 @@ export interface FileRoutesById {
   '/policies/disclaimer-and-use-policy': typeof PoliciesDisclaimerAndUsePolicyRoute
   '/quests/$slug': typeof QuestsSlugRoute
   '/raid-planner/$plan': typeof RaidPlannerPlanRoute
+  '/s/$code': typeof SCodeRoute
   '/ammo/': typeof AmmoIndexRoute
   '/gun-builder/': typeof GunBuilderIndexRoute
   '/item-groups/': typeof ItemGroupsIndexRoute
@@ -340,6 +375,7 @@ export interface FileRoutesById {
   '/gun-builder/gunsmith/$task': typeof GunBuilderGunsmithTaskRoute
   '/gun-builder/share/$slug': typeof GunBuilderShareSlugRoute
   '/raid-planner/map/$map': typeof RaidPlannerMapMapRoute
+  '/raid-planner/p/$planId': typeof RaidPlannerPPlanIdRoute
   '/raid-planner/share/$slug': typeof RaidPlannerShareSlugRoute
   '/gun-builder/$build/': typeof GunBuilderBuildIndexRoute
   '/gun-builder/best/': typeof GunBuilderBestIndexRoute
@@ -358,8 +394,10 @@ export interface FileRouteTypes {
     | '/raid-planner'
     | '/credits'
     | '/data'
+    | '/join'
     | '/mcp'
     | '/settings'
+    | '/admin/stats'
     | '/ammo/$caliber'
     | '/flea-market/pve'
     | '/gun-builder/compare'
@@ -369,6 +407,7 @@ export interface FileRouteTypes {
     | '/policies/disclaimer-and-use-policy'
     | '/quests/$slug'
     | '/raid-planner/$plan'
+    | '/s/$code'
     | '/ammo/'
     | '/gun-builder/'
     | '/item-groups/'
@@ -381,6 +420,7 @@ export interface FileRouteTypes {
     | '/gun-builder/gunsmith/$task'
     | '/gun-builder/share/$slug'
     | '/raid-planner/map/$map'
+    | '/raid-planner/p/$planId'
     | '/raid-planner/share/$slug'
     | '/gun-builder/$build/'
     | '/gun-builder/best/'
@@ -390,8 +430,10 @@ export interface FileRouteTypes {
     | '/'
     | '/credits'
     | '/data'
+    | '/join'
     | '/mcp'
     | '/settings'
+    | '/admin/stats'
     | '/ammo/$caliber'
     | '/flea-market/pve'
     | '/gun-builder/compare'
@@ -401,6 +443,7 @@ export interface FileRouteTypes {
     | '/policies/disclaimer-and-use-policy'
     | '/quests/$slug'
     | '/raid-planner/$plan'
+    | '/s/$code'
     | '/ammo'
     | '/gun-builder'
     | '/item-groups'
@@ -413,6 +456,7 @@ export interface FileRouteTypes {
     | '/gun-builder/gunsmith/$task'
     | '/gun-builder/share/$slug'
     | '/raid-planner/map/$map'
+    | '/raid-planner/p/$planId'
     | '/raid-planner/share/$slug'
     | '/gun-builder/$build'
     | '/gun-builder/best'
@@ -429,8 +473,10 @@ export interface FileRouteTypes {
     | '/raid-planner'
     | '/credits'
     | '/data'
+    | '/join'
     | '/mcp'
     | '/settings'
+    | '/admin/stats'
     | '/ammo/$caliber'
     | '/flea-market/pve'
     | '/gun-builder/compare'
@@ -440,6 +486,7 @@ export interface FileRouteTypes {
     | '/policies/disclaimer-and-use-policy'
     | '/quests/$slug'
     | '/raid-planner/$plan'
+    | '/s/$code'
     | '/ammo/'
     | '/gun-builder/'
     | '/item-groups/'
@@ -452,6 +499,7 @@ export interface FileRouteTypes {
     | '/gun-builder/gunsmith/$task'
     | '/gun-builder/share/$slug'
     | '/raid-planner/map/$map'
+    | '/raid-planner/p/$planId'
     | '/raid-planner/share/$slug'
     | '/gun-builder/$build/'
     | '/gun-builder/best/'
@@ -469,10 +517,13 @@ export interface RootRouteChildren {
   RaidPlannerRouteRoute: typeof RaidPlannerRouteRouteWithChildren
   CreditsRoute: typeof CreditsRoute
   DataRoute: typeof DataRoute
+  JoinRoute: typeof JoinRoute
   McpRoute: typeof McpRoute
   SettingsRoute: typeof SettingsRoute
+  AdminStatsRoute: typeof AdminStatsRoute
   FleaMarketPveRoute: typeof FleaMarketPveRoute
   PoliciesDisclaimerAndUsePolicyRoute: typeof PoliciesDisclaimerAndUsePolicyRoute
+  SCodeRoute: typeof SCodeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -526,6 +577,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ItemGroupsRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/join': {
+      id: '/join'
+      path: '/join'
+      fullPath: '/join'
+      preLoaderRoute: typeof JoinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/keys': {
       id: '/keys'
       path: '/keys'
@@ -559,6 +617,13 @@ declare module '@tanstack/react-router' {
       path: '/settings'
       fullPath: '/settings'
       preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/stats': {
+      id: '/admin/stats'
+      path: '/admin/stats'
+      fullPath: '/admin/stats'
+      preLoaderRoute: typeof AdminStatsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ammo/': {
@@ -673,6 +738,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RaidPlannerPlanRouteImport
       parentRoute: typeof RaidPlannerRouteRoute
     }
+    '/s/$code': {
+      id: '/s/$code'
+      path: '/s/$code'
+      fullPath: '/s/$code'
+      preLoaderRoute: typeof SCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gun-builder/$build/': {
       id: '/gun-builder/$build/'
       path: '/$build'
@@ -727,6 +799,13 @@ declare module '@tanstack/react-router' {
       path: '/map/$map'
       fullPath: '/raid-planner/map/$map'
       preLoaderRoute: typeof RaidPlannerMapMapRouteImport
+      parentRoute: typeof RaidPlannerRouteRoute
+    }
+    '/raid-planner/p/$planId': {
+      id: '/raid-planner/p/$planId'
+      path: '/p/$planId'
+      fullPath: '/raid-planner/p/$planId'
+      preLoaderRoute: typeof RaidPlannerPPlanIdRouteImport
       parentRoute: typeof RaidPlannerRouteRoute
     }
     '/raid-planner/share/$slug': {
@@ -841,6 +920,7 @@ interface RaidPlannerRouteRouteChildren {
   RaidPlannerPlanRoute: typeof RaidPlannerPlanRoute
   RaidPlannerIndexRoute: typeof RaidPlannerIndexRoute
   RaidPlannerMapMapRoute: typeof RaidPlannerMapMapRoute
+  RaidPlannerPPlanIdRoute: typeof RaidPlannerPPlanIdRoute
   RaidPlannerShareSlugRoute: typeof RaidPlannerShareSlugRoute
 }
 
@@ -848,6 +928,7 @@ const RaidPlannerRouteRouteChildren: RaidPlannerRouteRouteChildren = {
   RaidPlannerPlanRoute: RaidPlannerPlanRoute,
   RaidPlannerIndexRoute: RaidPlannerIndexRoute,
   RaidPlannerMapMapRoute: RaidPlannerMapMapRoute,
+  RaidPlannerPPlanIdRoute: RaidPlannerPPlanIdRoute,
   RaidPlannerShareSlugRoute: RaidPlannerShareSlugRoute,
 }
 
@@ -865,10 +946,13 @@ const rootRouteChildren: RootRouteChildren = {
   RaidPlannerRouteRoute: RaidPlannerRouteRouteWithChildren,
   CreditsRoute: CreditsRoute,
   DataRoute: DataRoute,
+  JoinRoute: JoinRoute,
   McpRoute: McpRoute,
   SettingsRoute: SettingsRoute,
+  AdminStatsRoute: AdminStatsRoute,
   FleaMarketPveRoute: FleaMarketPveRoute,
   PoliciesDisclaimerAndUsePolicyRoute: PoliciesDisclaimerAndUsePolicyRoute,
+  SCodeRoute: SCodeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
