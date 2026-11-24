@@ -912,8 +912,24 @@ export class PlanStore {
     return dead;
   }
 
+  /** Links whose expiry has passed (and aren't revoked): their open viewers are closed by the alarm. */
+  expiredLinkCodes(): string[] {
+    if (!this.exists()) return [];
+    return this.sql
+      .exec<{ code: string }>("SELECT code FROM links WHERE revoked_at IS NULL AND expires_at IS NOT NULL AND expires_at <= ?", this.now())
+      .toArray()
+      .map((row) => row.code);
+  }
+
   nextDue(): number | null {
     const times: number[] = [];
+    if (this.exists()) {
+      // The next view or copy link to expire, so its open viewers are closed on time.
+      const expiring = this.sql
+        .exec<{ t: number | null }>("SELECT MIN(expires_at) AS t FROM links WHERE revoked_at IS NULL AND access <> 'invite' AND expires_at > ?", this.now())
+        .one().t;
+      if (expiring !== null) times.push(expiring);
+    }
     const outbox = this.sql.exec<{ t: number | null }>("SELECT MIN(next_at) AS t FROM outbox").one().t;
     if (outbox !== null) times.push(outbox);
     if (this.exists() && this.meta("summary_dirty") === 1) times.push(this.meta("summary_pushed_at") + SUMMARY_INTERVAL_MS);

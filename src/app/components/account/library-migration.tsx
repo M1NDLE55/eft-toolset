@@ -7,7 +7,7 @@ import { BUILD_STORE } from "@/app/lib/builds/store";
 import { GROUP_STORE } from "@/app/lib/item-groups/store";
 import { PLAN_STORE } from "@/app/lib/raid-planner/store";
 import { activeLibrary, useAccountView } from "@/app/lib/account-sync/account-session";
-import { chunk, migrationCandidates, preselect, selectionKey, type MigrationCandidate, type MigrationType } from "@/app/lib/account-sync/migration";
+import { chunkForImport, jsonBytes, migrationCandidates, preselect, selectionKey, type MigrationCandidate, type MigrationType } from "@/app/lib/account-sync/migration";
 import type { LibrarySnapshot } from "@/app/lib/sharing/types";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -135,7 +135,7 @@ export function LibraryMigration() {
     let skipped = 0;
     const failures: string[] = [];
     try {
-      for (const batch of chunk(chosen, 50)) {
+      for (const batch of chunkForImport(chosen, (candidate) => jsonBytes(candidate.value))) {
         const response = await library.request("/api/library/import", {
           method: "POST",
           body: JSON.stringify({ origin: "migration", items: batch.map((candidate) => ({ type: candidate.type, value: candidate.value })) }),

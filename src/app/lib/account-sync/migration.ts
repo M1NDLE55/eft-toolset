@@ -93,3 +93,29 @@ export function chunk<T>(items: T[], size: number): T[][] {
   for (let index = 0; index < items.length; index += size) chunks.push(items.slice(index, index + size));
   return chunks;
 }
+
+/**
+ * Import batches: at most 50 items and under the route's 1 MiB body, so a few large plans (up to
+ * 256 KiB each) never make a batch that can't be sent.
+ */
+export function chunkForImport<T>(items: T[], size: (item: T) => number, maxItems = 50, maxBytes = 900 * 1024): T[][] {
+  const chunks: T[][] = [];
+  let current: T[] = [];
+  let bytes = 0;
+  for (const item of items) {
+    const itemBytes = size(item);
+    if (current.length > 0 && (current.length >= maxItems || bytes + itemBytes > maxBytes)) {
+      chunks.push(current);
+      current = [];
+      bytes = 0;
+    }
+    current.push(item);
+    bytes += itemBytes;
+  }
+  if (current.length > 0) chunks.push(current);
+  return chunks;
+}
+
+export function jsonBytes(value: unknown) {
+  return new TextEncoder().encode(JSON.stringify(value)).byteLength;
+}

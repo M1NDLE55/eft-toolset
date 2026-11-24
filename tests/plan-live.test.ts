@@ -114,6 +114,12 @@ describe("editing live", () => {
     expect(editor.last("ack")).toEqual({ type: "ack", opId: "op-aaaaaaaa", rev: 1 });
     expect(editor.messages<{ type: string }>().filter((message) => message.type === "ops")).toHaveLength(0);
     for (const socket of [owner, anon]) expect(socket.last("ops")).toMatchObject({ rev: 1, opId: "op-aaaaaaaa", actor: { via: "web" }, ops: [{ t: "wp.move", id: "w1" }] });
+    // Anonymous viewers see what changed, never who changed it.
+    expect(owner.last<{ actor: { name: string } }>("ops")!.actor.name).toMatch(/^Scav-/);
+    expect(anon.last<{ actor: unknown }>("ops")!.actor).toEqual({ id: null, name: "", via: "web" });
+    await send(planId, editor, { type: "preview", ops: [{ t: "wp.move", id: "w1", at: { x: 1, z: 1 } }] });
+    expect(owner.last("preview")).toBeTruthy();
+    expect(anon.last("preview")).toBeUndefined();
     // A re-sent op id is acknowledged without applying it again.
     await send(planId, editor, { type: "ops", opId: "op-aaaaaaaa", ops: [{ t: "wp.move", id: "w1", at: { x: 9, z: 9 } }] });
     expect(editor.last("ack")).toEqual({ type: "ack", opId: "op-aaaaaaaa", rev: 1 });
@@ -193,6 +199,23 @@ describe("closing", () => {
     const owner = (await connect(planId, { actor: "user_owner" })).socket!;
     await destroyPlan(durable.env, "user_owner", planId);
     expect(owner.closed?.code).toBe(4004);
+  });
+});
+
+describe("expiry", () => {
+  it("closes anonymous viewers when their view link expires", async () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    try {
+      const planId = await plan();
+      const link = await createLink(durable.env, "user_owner", { target: { type: "plan", id: planId }, access: "view", expiresIn: 1 }, new Request(ORIGIN));
+      const anon = (await connect(planId, { link: link.code })).socket!;
+      expect(durable.PLAN.state(planId)?.alarm).not.toBeNull();
+      vi.setSystemTime(Date.now() + 24 * 60 * 60_000 + 1_000);
+      await durable.runAlarms(Date.now());
+      expect(anon.closed?.code).toBe(4010);
+    } finally {
+      vi.useRealTimers();
+    }
   });
 });
 

@@ -14,6 +14,7 @@ import { BACKUP_FORMAT, BACKUP_VERSION, STORE_KEYS } from "./store-keys";
 import type { AccountLibrary } from "@/app/lib/account-sync/account-library";
 import { readAllPlans } from "@/app/lib/account-sync/plan-cache";
 import { contentOf } from "@/app/lib/sharing/plan-doc";
+import { chunkForImport, jsonBytes } from "@/app/lib/account-sync/migration";
 
 export const MAX_BACKUP_BYTES = 10 * 1024 * 1024;
 
@@ -175,8 +176,7 @@ export async function restoreToAccount(plan: RestorePlan, library: AccountLibrar
     }
   }
   const report: AccountRestoreReport = { created: 0, duplicates: 0, failed: [] };
-  for (let start = 0; start < items.length; start += 50) {
-    const batch = items.slice(start, start + 50);
+  for (const batch of chunkForImport(items, (item) => jsonBytes(item.value))) {
     const response = await library.request("/api/library/import", { method: "POST", body: JSON.stringify({ origin: "restore", items: batch.map(({ type, value }) => ({ type, value })) }) });
     const body = (await response.json()) as { results?: { index: number; status: string; message?: string }[]; error?: { message: string } };
     if (!response.ok || !body.results) throw new Error(body.error?.message ?? "Restoring stopped partway. Try again: nothing is added twice.");

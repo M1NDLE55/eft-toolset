@@ -85,6 +85,7 @@ export class AccountLibrary {
   private snapshotCache: { version: number; value: LibraryView } | null = null;
   private cachedPlans: CachedPlanSummary[] = [];
   private planSyncing = false;
+  private feed: Promise<void> = Promise.resolve();
   status: SyncStatus = { online: true, queued: 0, syncing: false, lastSyncedAt: null, conflicts: 0, problems: 0 };
   usage: Usage | null = null;
   limits: Usage | null = null;
@@ -599,7 +600,17 @@ export class AccountLibrary {
     );
   }
 
-  private async applyServerChanges(seq: number, records: LibraryRecord[], tombstones: { kind: string; id: string; version: number }[], ownMutationIds: string[]) {
+  /**
+   * Server changes apply one batch at a time, in the order they arrived (feed messages, catch-ups and
+   * resyncs alike), so a later batch never lands before an earlier one.
+   */
+  private applyServerChanges(seq: number, records: LibraryRecord[], tombstones: { kind: string; id: string; version: number }[], ownMutationIds: string[]) {
+    const next = this.feed.then(() => this.applyServerChangesNow(seq, records, tombstones, ownMutationIds));
+    this.feed = next.catch(() => undefined);
+    return next;
+  }
+
+  private async applyServerChangesNow(seq: number, records: LibraryRecord[], tombstones: { kind: string; id: string; version: number }[], ownMutationIds: string[]) {
     if (!this.db) return;
     void ownMutationIds;
     const queue = await readAll<StoredQueueEntry>(this.db, "queue");
@@ -637,12 +648,14 @@ export class AccountLibrary {
         removed.push(key);
       }
     }
-    this.seq = seq;
+    // The cursor only moves forward.
+    this.seq = Math.max(this.seq, seq);
+    const cursor = this.seq;
     await transact(this.db, ["records", "meta", "plans"], "readwrite", (tx) => {
       const store = tx.objectStore("records");
       for (const record of changed) store.put(record);
       for (const key of removed) store.delete(key);
-      tx.objectStore("meta").put(seq, "seq");
+      tx.objectStore("meta").put(cursor, "seq");
       const plans = tx.objectStore("plans");
       for (const plan of planChanges) {
         const request = plans.get(plan.id);
@@ -697,7 +710,7 @@ export class AccountLibrary {
       }
       if (message.type === "resync") void this.resync().catch(() => undefined);
       else if (message.type === "notice") this.emitNotice(message.notice);
-      else void this.applyServerChanges(message.seq, message.records, message.tombstones, message.originMutationIds);
+      else void this.applyServerChanges(message.seq, message.records, message.tombstones, message.originMutationIds).catch(() => undefined);
     };
     socket.onopen = () => {
       this.backoff = 1_000;

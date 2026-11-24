@@ -21,3 +21,15 @@ export function CloudflareBeacon({ pathname = "/" }: { pathname?: string }) {
     />
   );
 }
+
+/**
+ * The beacon tracks client-side navigations (spa: true), so leaving it out of a page isn't enough
+ * once it has loaded elsewhere. Routes whose paths carry link codes call this before they load:
+ * a client-side navigation there becomes a full page load, which has no beacon.
+ */
+export function loadWithoutBeacon(href: string): Promise<void> | void {
+  if (typeof document === "undefined") return;
+  if (!document.querySelector(`script[src="${CLOUDFLARE_BEACON_SRC}"]`)) return;
+  window.location.assign(href);
+  return new Promise<void>(() => undefined);
+}

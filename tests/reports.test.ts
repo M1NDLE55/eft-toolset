@@ -134,6 +134,10 @@ describe("admin review", () => {
     const response = await admin(`/admin/reports/${encodeURIComponent(`link:${code}`)}`, { method: "POST", token: ADMIN, body: { decision: "dismiss" } });
     expect(response.status).toBe(200);
     expect((await openShare(env(), code, null)).access).toBe("copy");
+    // A dismissal sticks: one new report doesn't pause it again on the strength of the old ones.
+    await fileReport(env(), { userId: "user_d" }, { link: code, reason: "spam" });
+    expect((await openShare(env(), code, null)).access).toBe("copy");
+    expect(await moderationObject(env()).caseRow(`link:${code}`)).toMatchObject({ status: "open" });
   });
 
   it("disables a link, or the item itself, for everyone but its owner", async () => {

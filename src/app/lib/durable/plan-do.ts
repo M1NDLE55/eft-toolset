@@ -13,6 +13,7 @@ import { memberKey, PlanStore, type Actor, type Batch, type Member, type PlanLin
 export const PLAN_ACTOR_HEADER = "X-EFT-Actor";
 export const PLAN_LINK_HEADER = "X-EFT-Link";
 const AGENT_PRESENCE_MS = 60_000;
+const ANONYMOUS_ACTOR = { id: null, name: "", via: "web" } as const;
 import type { Sql } from "./sql";
 
 export type CatchUp = { batches: Batch[] } | { snapshot: PlanSnapshot };
@@ -48,6 +49,10 @@ export class PlanDO extends DurableObject<Env> {
 
   async alarm() {
     this.store.queueSummary(false);
+    // View links that expired since: their anonymous viewers stop at once, as on revoke (§7.5).
+    for (const code of this.store.expiredLinkCodes()) {
+      if (this.ctx.getWebSockets(`link:${code}`).length > 0) await this.linkClosed(code);
+    }
     this.store.sweepLinks();
     await drainOutbox(this.env, this.store);
     await this.schedule();
@@ -81,10 +86,10 @@ export class PlanDO extends DurableObject<Env> {
     return outcome(() => this.catchUp(userId, since));
   }
 
-  protected catchUp(userId: string | null, since: number, asLink = false): CatchUp {
-    const snapshot = asLink ? null : this.store.snapshot(userId);
+  protected catchUp(userId: string | null, since: number): CatchUp {
+    this.store.requireMember(userId ?? "");
     const batches = this.store.opsSince(since);
-    return batches ? { batches } : { snapshot: snapshot ?? this.store.snapshot(userId, { asLink: true }) };
+    return batches ? { batches } : { snapshot: this.store.snapshot(userId) };
   }
 
   /**
@@ -114,7 +119,11 @@ export class PlanDO extends DurableObject<Env> {
       this.agents.set(key, { key, name: this.store.memberName(actor.id), role: this.store.role(actor.id) ?? "editor", via: "mcp", client: actor.client, editing: target, floor: null, expiresAt: Date.now() + AGENT_PRESENCE_MS });
     }
     const message = JSON.stringify({ type: "ops", rev: result.rev, opId, actor: { id: key, name: this.store.memberName(actor.id), via: actor.via, ...(actor.client ? { client: actor.client } : {}) }, ops: result.ops });
-    for (const socket of this.ctx.getWebSockets()) if (socket !== sender) this.sendRaw(socket, message);
+    // Anonymous viewers learn what changed, never who changed it (§8.1).
+    const anonymous = JSON.stringify({ type: "ops", rev: result.rev, opId, actor: ANONYMOUS_ACTOR, ops: result.ops });
+    for (const socket of this.ctx.getWebSockets()) {
+      if (socket !== sender) this.sendRaw(socket, this.info(socket)?.userId ? message : anonymous);
+    }
     if (result.renamed) this.broadcastSettings();
     if (actor.via === "mcp") this.broadcastPresence();
     this.store.queueSummary(result.renamed);
@@ -236,8 +245,11 @@ export class PlanDO extends DurableObject<Env> {
 
   // Links and invites
 
-  createLink(userId: string, code: string, options: { access: "view" | "copy" | "invite"; role?: "editor" | "viewer"; expiresIn?: number | null; maxUses?: number }): Outcome<PlanLink> {
-    return outcome(() => this.store.createLink(userId, code, options));
+  async createLink(userId: string, code: string, options: { access: "view" | "copy" | "invite"; role?: "editor" | "viewer"; expiresIn?: number | null; maxUses?: number }): Promise<Outcome<PlanLink>> {
+    const result = outcome(() => this.store.createLink(userId, code, options));
+    // An expiring view link needs the alarm, to close its viewers when it expires.
+    if (result.ok) await this.schedule();
+    return result;
   }
 
   listLinks(userId: string): Outcome<PlanLink[]> {
@@ -387,7 +399,7 @@ export class PlanDO extends DurableObject<Env> {
   private sendFirst(socket: WebSocket, info: SocketInfo, since: number) {
     const batches = since >= 0 ? this.store.opsSince(since) : null;
     if (batches) {
-      for (const batch of batches) this.send(socket, { type: "ops", rev: batch.rev, opId: batch.opId, actor: batch.actor, ops: batch.ops });
+      for (const batch of batches) this.send(socket, { type: "ops", rev: batch.rev, opId: batch.opId, actor: info.userId ? batch.actor : ANONYMOUS_ACTOR, ops: batch.ops });
       this.send(socket, { type: "caught-up", rev: this.store.summary().rev });
       if (info.userId) this.send(socket, { type: "members", members: this.store.publicMembers(info.userId) });
       return;
@@ -511,7 +523,8 @@ export class PlanDO extends DurableObject<Env> {
       const ops = parsed.ops.filter((op) => op && (op.t === "wp.move" || op.t === "note.move"));
       if (ops.length === 0) return;
       const text = JSON.stringify({ type: "preview", actor: { id: info.key, name: info.name, via: "web" }, ops });
-      for (const other of this.ctx.getWebSockets()) if (other !== socket) this.sendRaw(other, text);
+      // Members only: anonymous viewers see the result when it is applied, without who is dragging.
+      for (const other of this.ctx.getWebSockets()) if (other !== socket && this.info(other)?.userId) this.sendRaw(other, text);
       return;
     }
     const actor = { id: info.userId!, name: info.name, via: "web" as const };

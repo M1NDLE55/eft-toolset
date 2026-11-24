@@ -33,7 +33,8 @@ export const MODERATION_MIGRATIONS: readonly Migration[] = [
         item TEXT,
         opened_at INTEGER NOT NULL,
         decided_at INTEGER,
-        decision TEXT
+        decision TEXT,
+        cleared_at INTEGER
       )`,
       `CREATE TABLE buckets (name TEXT PRIMARY KEY, tokens REAL NOT NULL, updated_at INTEGER NOT NULL)`,
     ],
@@ -128,8 +129,10 @@ export class ModerationStore {
         input.reporter,
         now
       );
-      const current = this.sql.exec<{ status: string }>("SELECT status FROM cases WHERE subject = ?", input.subject).toArray()[0];
-      const recent = this.sql.exec<{ n: number }>("SELECT COUNT(DISTINCT reporter) AS n FROM reports WHERE subject = ? AND created_at > ?", input.subject, now - PAUSE_WINDOW_MS).one().n;
+      const current = this.sql.exec<{ status: string; cleared_at: number | null }>("SELECT status, cleared_at FROM cases WHERE subject = ?", input.subject).toArray()[0];
+      // Reports an admin already dismissed don't count toward pausing it again.
+      const since = Math.max(now - PAUSE_WINDOW_MS, current?.cleared_at ?? 0);
+      const recent = this.sql.exec<{ n: number }>("SELECT COUNT(DISTINCT reporter) AS n FROM reports WHERE subject = ? AND created_at > ?", input.subject, since).one().n;
       const total = this.sql.exec<{ n: number }>("SELECT COUNT(DISTINCT reporter) AS n FROM reports WHERE subject = ?", input.subject).one().n;
       if (!current || current.status === "dismissed" || current.status === "actioned") {
         this.sql.exec(
@@ -201,7 +204,16 @@ export class ModerationStore {
     const row = this.caseRow(subject);
     if (!row) throw notFound("No case for that subject.");
     if (decision === "disable_link" && !subject.startsWith("link:")) throw invalid("Only a link can be disabled on its own.");
-    this.sql.exec("UPDATE cases SET status = ?, decision = ?, decided_at = ? WHERE subject = ?", decision === "dismiss" ? "dismissed" : "actioned", decision, this.now(), subject);
+    const now = this.now();
+    this.sql.exec(
+      "UPDATE cases SET status = ?, decision = ?, decided_at = ?, cleared_at = CASE WHEN ? = 'dismiss' THEN ? ELSE cleared_at END WHERE subject = ?",
+      decision === "dismiss" ? "dismissed" : "actioned",
+      decision,
+      now,
+      decision,
+      now,
+      subject
+    );
     return this.caseRow(subject)!;
   }
 

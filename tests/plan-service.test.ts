@@ -147,6 +147,13 @@ describe("roles and permissions", () => {
     await revokeLink(env(), "user_owner", editorInvite);
   });
 
+  it("doesn't spend the hourly link bucket on links the plan refuses", async () => {
+    const planId = await plan();
+    await join(planId, "user_editor", "editor");
+    for (let index = 0; index < 25; index += 1) await expect(invite(planId, "user_editor", "editor")).rejects.toThrow(/viewers only/);
+    expect(await invite(planId, "user_editor", "viewer")).toMatch(/^[1-9A-Za-z]/);
+  });
+
   it("revokes an editor's unused invites when they are demoted or removed", async () => {
     const planId = await plan();
     await join(planId, "user_editor", "editor");

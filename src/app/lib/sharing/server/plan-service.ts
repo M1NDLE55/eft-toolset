@@ -107,10 +107,15 @@ export async function copyPlanAsMember(env: DurableBindings, userId: string, pla
 export async function copyPlanFromLink(env: DurableBindings, userId: string, planId: string, code: string, name?: string) {
   const user = userObject(env, userId);
   unwrapOutcome(await user.charge("acceptsAndCopies"));
-  const exported = unwrapOutcome(await planObject(env, planId).exportForLink(code));
-  const content = { ...exported.content, name: (name ?? exported.name).slice(0, 120) };
-  const created = await createAccountPlan(env, userId, content, { kind: "copy", copiedFrom: exported.name });
-  return { type: "plan" as const, id: created.planId, name: content.name };
+  try {
+    const exported = unwrapOutcome(await planObject(env, planId).exportForLink(code));
+    const content = { ...exported.content, name: (name ?? exported.name).slice(0, 120) };
+    const created = await createAccountPlan(env, userId, content, { kind: "copy", copiedFrom: exported.name });
+    return { type: "plan" as const, id: created.planId, name: content.name };
+  } catch (error) {
+    await user.refund("acceptsAndCopies");
+    throw error;
+  }
 }
 
 // Links (called from link-routes)
@@ -118,16 +123,17 @@ export async function copyPlanFromLink(env: DurableBindings, userId: string, pla
 export async function createPlanLink(env: DurableBindings, userId: string, planId: string, code: string, body: { access?: string; role?: string; expiresIn?: number | null; maxUses?: number }, request: Request) {
   const { linkObject } = await import("@/app/lib/durable/access");
   const { inviteUrl, shareUrl } = await import("./link-routes");
-  // The creator's hourly link bucket, editors' invites included (§7.5).
-  unwrapOutcome(await userObject(env, userId).charge("linkCreation"));
-  const created = unwrapOutcome(
-    await planObject(env, planId).createLink(userId, code, {
-      access: body.access as "view" | "copy" | "invite",
-      role: body.role === "editor" || body.role === "viewer" ? body.role : undefined,
-      expiresIn: body.expiresIn,
-      maxUses: body.maxUses,
-    })
-  );
+  // The creator's hourly link bucket, editors' invites included (§7.5); refunded if the plan refuses.
+  const user = userObject(env, userId);
+  unwrapOutcome(await user.charge("linkCreation"));
+  const result = await planObject(env, planId).createLink(userId, code, {
+    access: body.access as "view" | "copy" | "invite",
+    role: body.role === "editor" || body.role === "viewer" ? body.role : undefined,
+    expiresIn: body.expiresIn,
+    maxUses: body.maxUses,
+  });
+  if (!result.ok) await user.refund("linkCreation");
+  const created = unwrapOutcome(result);
   if (!(await linkObject(env, code).init({ targetKind: "plan", targetName: planId }))) {
     await planObject(env, planId).revokeLink(userId, code);
     fail("conflict", "That link couldn't be made. Try again.");
@@ -170,12 +176,14 @@ export async function acceptInvite(env: DurableBindings, userId: string, code: s
   const existing = await plan.memberRole(userId);
   if (existing === "owner") return { planId, role: "owner", joined: false };
   unwrapOutcome(await user.charge("acceptsAndCopies"));
-  const reserved = existing ? null : unwrapOutcome(await reserveWithReconcile(() => user.reserveShared(planId), () => reconcile(env, userId, "shared")));
+  let reserved: { status: "reserved" | "member" } | null = null;
   let accepted;
   try {
+    reserved = existing ? null : unwrapOutcome(await reserveWithReconcile(() => user.reserveShared(planId), () => reconcile(env, userId, "shared")));
     accepted = unwrapOutcome(await plan.acceptInvite(code, { id: userId, name: await user.displayName() }));
   } catch (error) {
     if (reserved?.status === "reserved") await user.releasePlan(planId);
+    await user.refund("acceptsAndCopies");
     throw error;
   }
   await user.setPlanEntry(planId, { role: accepted.role, summary: accepted.summary });
@@ -256,10 +264,17 @@ export async function destroyPlan(env: DurableBindings, ownerId: string | null, 
   const { members, codes, name } = unwrapOutcome(await plan.prepareDestroy(ownerId));
   await plan.destroy();
   const { linkObject } = await import("@/app/lib/durable/access");
+  const actor = ownerId ?? departingId ?? null;
   await Promise.all([
-    ...members.map((member) =>
-      userObject(env, member).forgetPlan(planId, member === ownerId || member === departingId ? undefined : `${name} was deleted by its owner.`).catch(() => undefined)
-    ),
+    ...members.map(async (member) => {
+      const notice = member === ownerId || member === departingId ? undefined : `${name} was deleted by its owner.`;
+      try {
+        await userObject(env, member).forgetPlan(planId, notice);
+      } catch {
+        // The plan is gone, so its own outbox is too: the deleting user's outbox retries (§5.1).
+        if (actor && actor !== member) await userObject(env, actor).enqueue(`user:${member}`, "forgetPlan", [planId, notice]).catch(() => undefined);
+      }
+    }),
     ...codes.map((code) => linkObject(env, code).destroy().catch(() => undefined)),
   ]);
 }

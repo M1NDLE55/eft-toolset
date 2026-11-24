@@ -108,6 +108,11 @@ export class UserDO extends DurableObject<Env> {
     });
   }
 
+  /** Gives back a token when the request it paid for was refused for another reason. */
+  refund(rate: UserRate, cost = 1) {
+    this.store.refund(rate, cost);
+  }
+
   // Profile and snapshot
 
   profile() {
@@ -173,9 +178,12 @@ export class UserDO extends DurableObject<Env> {
 
   // Links to builds and item groups
 
-  createLink(code: string, target: { type: "build" | "item_group"; id: string }, access: "view" | "copy", expiresInDays: number | null): Outcome<LinkRow> {
+  async createLink(code: string, target: { type: "build" | "item_group"; id: string }, access: "view" | "copy", expiresInDays: number | null): Promise<Outcome<LinkRow>> {
     this.ensure();
-    return outcome(() => this.store.createLink(code, target, access, expiresInDays));
+    const result = outcome(() => this.store.createLink(code, target, access, expiresInDays));
+    // Expired and revoked links are cleaned up by the alarm after 30 days.
+    if (result.ok) await this.schedule();
+    return result;
   }
 
   listLinks(type: "build" | "item_group", id: string): LinkRow[] {
@@ -184,6 +192,7 @@ export class UserDO extends DurableObject<Env> {
 
   async revokeLink(code: string, admin = false): Promise<Outcome<LinkRow>> {
     const result = outcome(() => this.store.revokeLink(code, admin));
+    if (result.ok) await this.schedule();
     return result;
   }
 

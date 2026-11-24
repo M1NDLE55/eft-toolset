@@ -153,6 +153,7 @@ export class PlanSession {
   private freshSnapshot = false;
   private lastPreview = 0;
   private selected: string | null = null;
+  private pingTimer: ReturnType<typeof setInterval> | null = null;
   transport: PlanTransport;
 
   constructor(
@@ -231,9 +232,11 @@ export class PlanSession {
       shouldReconnectOnClose: (event) => !FINAL_CLOSE_CODES.has(event.code),
     });
     this.socket = socket;
+    if (this.pingTimer) clearInterval(this.pingTimer);
     const ping = setInterval(() => {
       if (socket.readyState === 1) socket.send("ping");
     }, 30_000);
+    this.pingTimer = ping;
     socket.addEventListener("message", (event) => {
       if (event.data === "pong") return;
       let message: ServerMessage;
@@ -366,6 +369,8 @@ export class PlanSession {
     this.closed = true;
     if (this.pollTimer) clearInterval(this.pollTimer);
     if (this.retryTimer) clearTimeout(this.retryTimer);
+    if (this.pingTimer) clearInterval(this.pingTimer);
+    this.pingTimer = null;
     this.socket?.close(1000);
     this.socket = null;
     this.transport.close();

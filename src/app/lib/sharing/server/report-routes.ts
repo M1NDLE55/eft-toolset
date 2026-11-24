@@ -67,6 +67,9 @@ export async function fileReport(
   const resolved = await resolveSubject(env, input, viewerId);
   const moderation = moderationObject(env);
   let reporterKey: string;
+  const refund = async () => {
+    if ("userId" in reporter) await userObject(env, reporter.userId).refund("reports");
+  };
   if ("userId" in reporter) {
     unwrapOutcome(await userObject(env, reporter.userId).charge("reports"));
     reporterKey = `user:${reporter.userId}`;
@@ -75,9 +78,9 @@ export async function fileReport(
     unwrapOutcome(await moderation.chargeAnonymous(reporterKey));
   }
   const detail = typeof input.detail === "string" && input.detail.trim() ? input.detail.trim().slice(0, 500) : null;
-  const result = unwrapOutcome(
-    await moderation.report({ subject: resolved.subject, targetKind: resolved.targetKind, targetName: resolved.targetName, item: resolved.item, reason: input.reason as ReportReason, detail, reporter: reporterKey })
-  );
+  const outcome = await moderation.report({ subject: resolved.subject, targetKind: resolved.targetKind, targetName: resolved.targetName, item: resolved.item, reason: input.reason as ReportReason, detail, reporter: reporterKey });
+  if (!outcome.ok) await refund();
+  const result = unwrapOutcome(outcome);
   if (result.pause && resolved.code) await pauseLink(env, resolved, true);
   if (!result.duplicate) await alert(resolved.subject, input.reason);
   console.info(JSON.stringify({ event: "report", subject: await logCode(resolved.subject), reason: input.reason, paused: result.pause }));

@@ -8,7 +8,7 @@ import {
   remoteChangedFields,
   type QueueEntry,
 } from "@/app/lib/account-sync/library-cache";
-import { migrationCandidates, preselect } from "@/app/lib/account-sync/migration";
+import { chunkForImport, migrationCandidates, preselect } from "@/app/lib/account-sync/migration";
 import { buildHash } from "@/app/lib/sharing/content-hash";
 import type { BuildRecord, GroupRecord, Mutation } from "@/app/lib/sharing/types";
 import type { RaidPlan } from "@/app/lib/raid-planner/types";
@@ -119,5 +119,16 @@ describe("migration selection", () => {
     expect(candidates.map((candidate) => candidate.key)).toEqual(["b2", "b3", "small", "huge"]);
     expect(candidates.find((candidate) => candidate.key === "huge")?.blocked).toMatch(/more than 100 notes/);
     expect([...preselect(candidates, { build: 1, item_group: 0, plan: 5 })]).toEqual(["build:b3", "plan:small"]);
+  });
+});
+
+describe("import batches", () => {
+  it("hold at most 50 items and stay under the request size, however large the items", () => {
+    const small = Array.from({ length: 120 }, () => 1_000);
+    expect(chunkForImport(small, (size) => size).map((batch) => batch.length)).toEqual([50, 50, 20]);
+    const plans = Array.from({ length: 7 }, () => 250 * 1024);
+    const batches = chunkForImport(plans, (size) => size);
+    expect(batches.map((batch) => batch.length)).toEqual([3, 3, 1]);
+    expect(batches.every((batch) => batch.reduce((total, size) => total + size, 0) < 1024 * 1024)).toBe(true);
   });
 });

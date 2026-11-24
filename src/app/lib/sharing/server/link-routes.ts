@@ -200,6 +200,7 @@ export async function copyFromLink(env: DurableBindings, userId: string, code: s
   if (target.targetKind === "plan") return copyPlanFromLink(env, userId, target.targetName, code, name);
   const exported = unwrapOutcome(await userObject(env, target.targetName).exportForLink(code));
   const value = { ...(exported.snapshot as { name: string }), ...(name ? { name: name.slice(0, 120) } : {}) };
+  // createCopy charges the copier's accepts-and-copies bucket in the same transaction as the copy.
   const created = unwrapOutcome(await userObject(env, userId).createCopy(exported.targetType, newRecordId(), value, (exported.snapshot as { name: string }).name));
   return { type: exported.targetType, id: created.id, name: created.name };
 }
