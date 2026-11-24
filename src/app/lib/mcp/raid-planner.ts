@@ -41,6 +41,13 @@ import { createId } from "@/app/lib/id";
 import { findLandmark, landmarkNames, landmarkPlaces } from "@/app/lib/glossary/glossary";
 import type { MapConfig } from "@/app/lib/raid-planner/types";
 import { betweenItems, InputError, round, type ToolContext } from "./context";
+import { env as accountEnv, parseLink, userOf } from "./account-access";
+import { planObject } from "@/app/lib/durable/access";
+import { DomainError } from "@/app/lib/durable/sql";
+import { contentOf } from "@/app/lib/sharing/plan-doc";
+import type { PlanContent } from "@/app/lib/sharing/plan-content";
+import { openShare } from "@/app/lib/sharing/server/link-routes";
+import { createAccountPlan } from "@/app/lib/sharing/server/plan-service";
 import { createRaidPlanOutput, getMapDetailsOutput, listMapsOutput, readRaidPlanOutput } from "./output-schemas";
 import { toolDefiner } from "./define-tool";
 import { gameModeSchema, offsetSchema } from "./schemas";
@@ -104,6 +111,111 @@ const MAX_LISTED_PROBLEMS = 20;
 const PLACE_TYPO_BUDGET = 20;
 /** Points resolved between yields to other requests. */
 const POINTS_PER_TURN = 500;
+
+/**
+ * Turns points given as coordinates or place names into game coordinates for one map, collecting
+ * every problem (so one reply can fix them all), what each name resolved to, and warnings for
+ * approximate matches. Shared by create_raid_plan and edit_raid_plan.
+ */
+export function createPlaceResolver(config: MapConfig, details: MapDetails | null, warnings: string[]) {
+  const places = details ? placesOf(details) : [];
+  const area = planArea(config, details);
+  const problems: string[] = [];
+  const state = { placeProblem: false, typosSkipped: false };
+  const resolvedPlaces: ResolvedPlace[] = [];
+  const resolved = new Map<string, GamePoint | null>();
+  let typoBudget = PLACE_TYPO_BUDGET;
+  const toPoint = (entry: PointInput, where: string): GamePoint => {
+    if (!("place" in entry)) {
+      if (!isInArea(area, entry)) {
+        problems.push(
+          `${where}: x ${entry.x}, z ${entry.z} is outside ${config.name} (x ${area.minX} to ${area.maxX}, z ${area.minZ} to ${area.maxZ}).`
+        );
+      }
+      return { x: entry.x, z: entry.z };
+    }
+    const known = resolved.get(entry.place);
+    if (known !== undefined) return known ?? { x: 0, z: 0 };
+    let result: PlaceMatch = matchPlace(places, entry.place, { typos: false });
+    if ("error" in result || result.match !== "exact") {
+      const landmark = details ? findLandmark(config.key, entry.place) : null;
+      if (landmark) {
+        result = { place: landmark, match: "exact", others: [] };
+      } else {
+        result = matchPlace(details ? withLandmarks(details, config) : places, entry.place, { typos: typoBudget > 0 });
+        if ("error" in result || result.match === "typo") typoBudget -= 1;
+      }
+    }
+    if ("error" in result) {
+      if (typoBudget < 0) state.typosSkipped = true;
+      problems.push(`${where}: ${result.error}`);
+      state.placeProblem = true;
+      resolved.set(entry.place, null);
+      return { x: 0, z: 0 };
+    }
+    const { place } = result;
+    const approximate = result.match !== "exact" || Boolean(place.derived);
+    resolvedPlaces.push({
+      input: entry.place,
+      resolved: `${place.name} (${place.kind})`,
+      match: result.match,
+      ...(approximate ? { approximate } : {}),
+      level: typeof place.position.y === "number" ? floorAt(config, place.position).name : null,
+      ...(place.derived ? { note: `Approximate position: ${place.derived}.` } : {}),
+      ...(result.others.length ? { alsoNamed: result.others.slice(0, 3).map((other) => `${other.name} (${other.kind})`) } : {}),
+    });
+    if (approximate) {
+      warnings.push(
+        `"${entry.place}" was placed at ${place.name} (${place.kind})${
+          place.derived ? `, the ${place.derived}` : `, a ${result.match} match`
+        }. Describe it by that name, or give coordinates.`
+      );
+    }
+    const point = { x: round(place.position.x, 1)!, z: round(place.position.z, 1)! };
+    resolved.set(entry.place, point);
+    return point;
+  };
+  const colorOf = (value: string | undefined, fallback: (typeof PLAN_COLORS)[number]) => {
+    const { color, warning } = matchColor(value, fallback);
+    if (warning && !warnings.includes(warning)) warnings.push(warning);
+    return color;
+  };
+  return { toPoint, colorOf, resolvedPlaces, problems, state, places };
+}
+
+export { pointSchema, type PointInput, type ResolvedPlace };
+
+/**
+ * The plan behind any link read_raid_plan takes: a share link (the plan is in it), an /s/ view or
+ * copy link, or an account plan the user is a member of (with its ids, rev, and members).
+ */
+async function readablePlan(context: ToolContext, link: string) {
+  const trimmed = link.trim();
+  const accountLink = /\/s\/[1-9A-Za-z][A-Za-z0-9_-]{20}|\/raid-planner\/p\/|^[A-Za-z0-9_-]{22}$/.test(trimmed);
+  if (!accountLink) return { plan: await decodePlanLink(link), account: null };
+  const parsed = parseLink(trimmed);
+  if (parsed.kind === "share") {
+    const shared = await openShare(accountEnv(), parsed.code, context.userId ?? null);
+    if (shared.targetType !== "plan") throw new InputError("That link is to something other than a raid plan.");
+    return { plan: shared.snapshot as PlanContent, account: null };
+  }
+  if (parsed.kind !== "plan") throw new InputError("That isn't a raid plan link.");
+  const snapshot = await planObject(accountEnv(), parsed.planId).snapshot(userOf(context));
+  if (!snapshot.ok) throw new DomainError(snapshot.error.code, snapshot.error.message, snapshot.error.details);
+  const { doc } = snapshot.value;
+  return {
+    plan: contentOf(doc),
+    account: {
+      planId: parsed.planId,
+      rev: snapshot.value.rev,
+      role: snapshot.value.role,
+      allowCopy: snapshot.value.allowCopy,
+      members: (snapshot.value.members ?? []).map((member) => ({ key: member.key, name: member.displayName, role: member.role, you: member.you })),
+      // Note text is compare-and-set: edit_raid_plan's expectRev is this.
+      textRevs: Object.fromEntries(Object.values(doc.notes).map((note) => [note.id, Math.max(note.titleRev, note.bodyRev)])),
+    },
+  };
+}
 
 export function registerRaidPlannerTools(server: McpServer, context: ToolContext) {
   const define = toolDefiner(server, context);
@@ -190,10 +302,11 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
           .max(MAX_LAYERS)
           .optional()
           .describe('Layer ids from get_map_details, such as "extracts:pmc" or "spawns:boss". Default: PMC and shared extracts and transits.'),
+        save: z.boolean().default(false).describe("Also save it to the signed-in user's account as a live plan."),
         gameMode: gameModeSchema,
       },
     },
-    async ({ map, name, route, drawings, notes, layers, gameMode }, { read }) => {
+    async ({ map, name, route, drawings, notes, layers, save, gameMode }, { read }) => {
       const config = resolveMap(map);
       // Checked before any names are resolved, so an oversized plan costs nothing to refuse.
       const drawingPoints = drawings.reduce((total, drawing) => total + drawing.points.length, 0);
@@ -214,72 +327,7 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         if (needsPlaces || !(error instanceof TarkovUpstreamError || error instanceof InputError)) throw error;
         warnings.push("Map data is unavailable, so layer ids were not checked.");
       }
-      const places = details ? placesOf(details) : [];
-      const area = planArea(config, details);
-      // Every problem is collected, so one reply can fix them all.
-      const problems: string[] = [];
-      let placeProblem = false;
-      const resolvedPlaces: ResolvedPlace[] = [];
-      const resolved = new Map<string, GamePoint | null>();
-      let typoBudget = PLACE_TYPO_BUDGET;
-      let typosSkipped = false;
-      const toPoint = (entry: PointInput, where: string): GamePoint => {
-        if (!("place" in entry)) {
-          if (!isInArea(area, entry)) {
-            problems.push(
-              `${where}: x ${entry.x}, z ${entry.z} is outside ${config.name} (x ${area.minX} to ${area.maxX}, z ${area.minZ} to ${area.maxZ}).`
-            );
-          }
-          return { x: entry.x, z: entry.z };
-        }
-        const known = resolved.get(entry.place);
-        if (known !== undefined) return known ?? { x: 0, z: 0 };
-        let result: PlaceMatch = matchPlace(places, entry.place, { typos: false });
-        if ("error" in result || result.match !== "exact") {
-          const landmark = details ? findLandmark(config.key, entry.place) : null;
-          if (landmark) {
-            result = { place: landmark, match: "exact", others: [] };
-          } else {
-            result = matchPlace(details ? withLandmarks(details, config) : places, entry.place, { typos: typoBudget > 0 });
-            if ("error" in result || result.match === "typo") typoBudget -= 1;
-          }
-        }
-        if ("error" in result) {
-          if (typoBudget < 0) typosSkipped = true;
-          problems.push(`${where}: ${result.error}`);
-          placeProblem = true;
-          resolved.set(entry.place, null);
-          return { x: 0, z: 0 };
-        }
-        const { place } = result;
-        const approximate = result.match !== "exact" || Boolean(place.derived);
-        resolvedPlaces.push({
-          input: entry.place,
-          resolved: `${place.name} (${place.kind})`,
-          match: result.match,
-          ...(approximate ? { approximate } : {}),
-          level: typeof place.position.y === "number" ? floorAt(config, place.position).name : null,
-          ...(place.derived ? { note: `Approximate position: ${place.derived}.` } : {}),
-          ...(result.others.length
-            ? { alsoNamed: result.others.slice(0, 3).map((other) => `${other.name} (${other.kind})`) }
-            : {}),
-        });
-        if (approximate) {
-          warnings.push(
-            `"${entry.place}" was placed at ${place.name} (${place.kind})${
-              place.derived ? `, the ${place.derived}` : `, a ${result.match} match`
-            }. Describe it by that name, or give coordinates.`
-          );
-        }
-        const point = { x: round(place.position.x, 1)!, z: round(place.position.z, 1)! };
-        resolved.set(entry.place, point);
-        return point;
-      };
-      const colorOf = (value: string | undefined, fallback: (typeof PLAN_COLORS)[number]) => {
-        const { color, warning } = matchColor(value, fallback);
-        if (warning && !warnings.includes(warning)) warnings.push(warning);
-        return color;
-      };
+      const { toPoint, colorOf, resolvedPlaces, problems, state } = createPlaceResolver(config, details, warnings);
       const available = details ? new Set(getLayerGroups(details).flatMap((group) => group.options.map((option) => option.id))) : null;
       const enabledLayers =
         layers ?? ["extracts:pmc", "extracts:shared", "transits"].filter((id) => !available || available.has(id));
@@ -319,8 +367,8 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         throw new InputError(
           `The plan was not created. Fix ${problems.length === 1 ? "this" : `these ${problems.length} problems`}:\n- ${listed.join("\n- ")}${
             more > 0 ? `\n- and ${more} more.` : ""
-          }${typosSkipped ? `\nClose spellings are only suggested for the first ${PLACE_TYPO_BUDGET} unknown names.` : ""}${
-            placeProblem ? `\n${PLACE_HELP}` : ""
+          }${state.typosSkipped ? `\nClose spellings are only suggested for the first ${PLACE_TYPO_BUDGET} unknown names.` : ""}${
+            state.placeProblem ? `\n${PLACE_HELP}` : ""
           }`
         );
       }
@@ -349,7 +397,14 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         warnings.push(`Left out layer ids this map does not have: ${listed}${more > 0 ? `, and ${more} more` : ""}.`);
       }
       const distance = routeLength(plan.route);
+      let saved: { planId: string; planUrl: string } | null = null;
+      if (save) {
+        // The account's caps are tighter than a share link's (§9.3); its limits and hourly rate apply.
+        const created = await createAccountPlan(accountEnv(), userOf(context), plan, { kind: "create" });
+        saved = { planId: created.planId, planUrl: `${context.origin}/raid-planner/p/${created.planId}` };
+      }
       return {
+        ...(saved ?? {}),
         shareLink: `${context.origin}/raid-planner/share/${slugifyPlanName(plan.name)}#p=${payload}`,
         map: config.name,
         name: plan.name,
@@ -370,12 +425,14 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
     {
       outputSchema: readRaidPlanOutput,
       inputSchema: {
-        link: z.string().min(1).max(MAX_SHARE_LINK_LENGTH).describe("The share link or its payload."),
+        link: z.string().min(1).max(MAX_SHARE_LINK_LENGTH).describe("A share link or its payload, an /s/ link, or an account plan's id or URL."),
         gameMode: gameModeSchema,
       },
     },
     async ({ link, gameMode }, { read }) => {
-      const plan = await decodePlanLink(link);
+      const source = await readablePlan(context, link);
+      const plan = source.plan;
+      const account = source.account;
       const config = mapConfigs.find((candidate) => candidate.key === plan.mapKey);
       let details: MapDetails | null = null;
       if (config) {
@@ -405,13 +462,18 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         map: config ? { key: config.key, name: config.name } : { key: plan.mapKey, name: "Unknown map" },
         routeDistanceMeters: Math.round(distance),
         routeDistance: formatDistance(distance),
+        ...(account
+          ? { planId: account.planId, url: `${context.origin}/raid-planner/p/${account.planId}`, rev: account.rev, role: account.role, allowCopy: account.allowCopy, members: account.members }
+          : {}),
         route: plan.route.map((waypoint, index) => ({
+          ...(account ? { id: waypoint.id } : {}),
           step: index + 1,
           x: waypoint.position.x,
           z: waypoint.position.z,
           near: near(waypoint.position),
         })),
         drawings: plan.drawings.map((drawing) => ({
+          ...(account ? { id: drawing.id } : {}),
           kind: drawing.kind,
           color: colorName(drawing.color),
           points: drawing.points.length,
@@ -419,6 +481,7 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
           to: near(drawing.points[drawing.points.length - 1]),
         })),
         notes: plan.notes.map((note) => ({
+          ...(account ? { id: note.id, textRev: account.textRevs[note.id] ?? 0 } : {}),
           title: note.title,
           body: note.body,
           x: note.position.x,

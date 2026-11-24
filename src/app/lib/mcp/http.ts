@@ -174,6 +174,7 @@ export async function handleMcpPost(request: Request, limits: McpHttpLimits = DE
     signal: AbortSignal.any([request.signal, AbortSignal.timeout(limits.toolDeadlineMs)]),
     requestId,
     userId: payer.kind === "user" ? payer.subject : undefined,
+    client: clientName(request, message),
   };
   const authInfo: AuthInfo = {
     token: "",
@@ -363,4 +364,16 @@ function isAllowedOrigin(origin: string) {
  */
 function linkOrigin(request: Request) {
   return process.env.NODE_ENV === "production" ? SITE_ORIGIN : new URL(request.url).origin;
+}
+
+/**
+ * The client's name, for "Knight · via AI" attribution (§13). Stateless requests don't carry the
+ * MCP clientInfo (it is only sent on initialize), so this reads a clientInfo the caller passes in
+ * _meta, or else the first product in its User-Agent. Display text only: never trusted for access.
+ */
+function clientName(request: Request, message: JsonRpcMessage): string | undefined {
+  const meta = message.params?._meta as { clientInfo?: { name?: unknown } } | undefined;
+  const raw = typeof meta?.clientInfo?.name === "string" ? meta.clientInfo.name : (request.headers.get("user-agent") ?? "").split(/[\s/]/)[0];
+  const name = raw.replace(/[^A-Za-z0-9 ._-]/g, "").trim().slice(0, 40);
+  return name || undefined;
 }

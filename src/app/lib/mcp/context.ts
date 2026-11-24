@@ -10,6 +10,8 @@ import {
 import { InputError } from "@/app/lib/input-error";
 import type { GameMode } from "@/components/game-mode/mode";
 import { readToolResult, storeToolResult } from "./result-cache";
+import { DomainError } from "@/app/lib/durable/sql";
+import { RouteError } from "@/app/lib/sharing/server/http";
 
 export interface ToolContext {
   /** Origin used for links back into the app. */
@@ -23,21 +25,23 @@ export interface ToolContext {
    * only when sign-in is off, which production doesn't allow.
    */
   userId?: string;
+  /** The MCP client's name (for attribution, "via AI"), when known. */
+  client?: string;
 }
 
 /** Reads tarkov.dev data with the tool's cancellation and freshness tracking. */
 export type Read = <T>(work: () => Promise<T>) => Promise<T>;
 
-type ToolOutcome = "ok" | "input_error" | "upstream_error" | "timeout" | "crash";
+type ToolOutcome = "ok" | "input_error" | "upstream_error" | "timeout" | "crash" | "refused";
 
-const ERROR_MESSAGES: Record<Exclude<ToolOutcome, "ok" | "input_error">, string> = {
+const ERROR_MESSAGES: Record<Exclude<ToolOutcome, "ok" | "input_error" | "refused">, string> = {
   upstream_error: "Tarkov.dev data is temporarily unavailable and this server has no copy of it yet.",
   timeout: "The request took too long and was stopped. Try a narrower request.",
   crash: "The tool failed unexpectedly.",
 };
 
 /** The error codes in a failed result's error object, for clients that branch on them. */
-const ERROR_CODES: Record<Exclude<ToolOutcome, "ok">, string> = {
+const ERROR_CODES: Record<Exclude<ToolOutcome, "ok" | "refused">, string> = {
   input_error: "invalid_input",
   upstream_error: "upstream_unavailable",
   timeout: "timeout",
@@ -107,6 +111,7 @@ export async function runTool(
   } catch (error) {
     outcome = classifyError(error, context);
     if (outcome === "crash") console.error(`MCP ${call.tool} failed (request ${context.requestId})`, error);
+    if (outcome === "refused") return refusedResult(error as DomainError | RouteError);
     const retryAfterSeconds =
       outcome === "upstream_error"
         ? Math.max(1, Math.ceil(((error as TarkovUpstreamError).retryAfterMs ?? DEFAULT_RETRY_AFTER_SECONDS * 1000) / 1000))
@@ -180,8 +185,35 @@ function staleNotice(dataAgeMs: number | null, source: DataSource) {
   return `Fresh tarkov.dev data couldn't be fetched in time, so this uses ${copy}${age}. Prices may have changed.`;
 }
 
+/**
+ * A request the library or a plan refused (§13): forbidden, limit (with details.limit and used),
+ * conflict (with fields, yours and theirs), rate_limited (retryable, with retryAfterSeconds), and
+ * not found, gone or invalid as invalid_input.
+ */
+function refusedResult(error: DomainError | RouteError): CallToolResult {
+  const code = error instanceof DomainError ? error.code : (error.code ?? "invalid");
+  const details = error.details;
+  const mapped = code === "forbidden" || code === "unauthenticated" ? "forbidden" : code === "limit" || code === "conflict" || code === "rate_limited" ? code : "invalid_input";
+  const retryAfterSeconds = typeof details?.retryAfterSeconds === "number" ? details.retryAfterSeconds : null;
+  const object = {
+    code: mapped,
+    retryable: mapped === "rate_limited",
+    ...(retryAfterSeconds !== null ? { retryAfterSeconds } : {}),
+    ...(details && mapped !== "rate_limited" ? { details } : {}),
+  };
+  return {
+    isError: true,
+    content: [
+      { type: "text", text: error.message },
+      { type: "text", text: JSON.stringify({ error: object }) },
+    ],
+    _meta: { [ERROR_META_KEY]: object },
+  };
+}
+
 function classifyError(error: unknown, context: ToolContext): Exclude<ToolOutcome, "ok"> {
   if (error instanceof InputError) return "input_error";
+  if (error instanceof DomainError || (error instanceof RouteError && error.code)) return "refused";
   if (error instanceof TarkovUpstreamError) return "upstream_error";
   const aborted = error instanceof Error && (error.name === "TimeoutError" || error.name === "AbortError");
   if (context.signal.aborted || aborted) return "timeout";

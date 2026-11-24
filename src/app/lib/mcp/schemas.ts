@@ -34,7 +34,7 @@ export const slotPathSchema = slotPathEntries.describe(
 );
 
 const BUILD_SHAPE =
-  'A build is {"shareLink": ...} or {"weapon": ..., "preset"?: ..., "parts"?: [{"slotPath": [...], "item": ...}]}, each with optional "ammo" and "name".';
+  'A build is {"shareLink": ...} (also an /s/ link), {"savedBuildId": ...}, or {"weapon": ..., "preset"?: ..., "parts"?: [{"slotPath": [...], "item": ...}]}, each with optional "ammo" and "name".';
 
 /**
  * A build: a share link, or a weapon with an optional preset and parts. One object with a
@@ -44,7 +44,8 @@ const BUILD_SHAPE =
 export const buildInputSchema = z
   .strictObject(
     {
-      shareLink: z.string().min(1).max(MAX_SHARE_LINK_LENGTH).optional().describe("A build share link; or give weapon."),
+      shareLink: z.string().min(1).max(MAX_SHARE_LINK_LENGTH).optional().describe("A build share link or /s/ link; or give weapon."),
+      savedBuildId: z.string().min(1).max(64).optional().describe("From list_library."),
       weapon: z.string().min(1).max(200).optional().describe("Weapon id or name."),
       preset: z.string().min(1).max(200).optional().describe('"default", or a preset id or name.'),
       parts: z
@@ -58,11 +59,18 @@ export const buildInputSchema = z
     { error: BUILD_SHAPE }
   )
   .superRefine((build, context) => {
-    const fromLink = build.shareLink !== undefined;
-    if (fromLink === (build.weapon !== undefined) || (fromLink && (build.preset !== undefined || build.parts !== undefined))) {
+    const sources = [build.shareLink, build.savedBuildId, build.weapon].filter((value) => value !== undefined).length;
+    const fromWhole = build.shareLink !== undefined || build.savedBuildId !== undefined;
+    if (sources !== 1 || (fromWhole && (build.preset !== undefined || build.parts !== undefined))) {
       context.addIssue({ code: "custom", message: BUILD_SHAPE });
     }
   });
+
+/** Writes a build tool's result back to a saved build (owner only), as a patch that merges with other devices' edits. */
+export const saveToSchema = z
+  .object({ id: z.string().min(1).max(64), baseVersion: z.number().int().min(0).optional(), requestId: z.string().max(64).optional() })
+  // The server instructions explain saveTo once, rather than in each build tool's schema.
+  .optional();
 
 export const offsetSchema = z.number().int().min(0).max(10_000).default(0).describe("Skip this many results; use nextOffset.");
 

@@ -108,9 +108,11 @@ describe("MCP endpoint", () => {
       (tool) => tool.name
     );
     expect(names.toSorted()).toEqual(MCP_TOOL_NAMES.toSorted());
+    // The account tools that change something; every other tool only reads.
+    const writes = ["save_to_library", "delete_from_library", "share_link", "revoke_link", "copy_from_link", "join_raid_plan", "edit_raid_plan", "manage_raid_plan", "report_content"];
     for (const tool of body.result.tools) {
-      expect(tool.annotations?.readOnlyHint).toBe(true);
-      expect(tool.annotations?.idempotentHint).toBe(!tool.name.startsWith("create_"));
+      expect(tool.annotations?.readOnlyHint, tool.name).toBe(!writes.includes(tool.name));
+      if (!writes.includes(tool.name)) expect(tool.annotations?.idempotentHint, tool.name).toBe(!tool.name.startsWith("create_"));
       expect(tool.outputSchema?.type).toBe("object");
     }
 

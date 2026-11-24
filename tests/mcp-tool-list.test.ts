@@ -6,7 +6,8 @@ import { mcpPost as POST } from "./mcp-post";
 // is a cost every conversation pays. Raise these only for a new tool or a field a caller
 // can't do without, and look for something to trim first.
 // 43 KB with get_data_status (under 1 KB); the shared dataAsOf and dataNotice fields are left out of each tool.
-const TOOL_LIST_BUDGET_BYTES = 43_000;
+// 58 KB with the thirteen account tools (library, links, live plans, reports; about 15 KB together).
+const TOOL_LIST_BUDGET_BYTES = 58_500;
 const TOOL_BUDGET_BYTES = 4_500;
 
 async function listTools() {

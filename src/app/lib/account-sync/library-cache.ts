@@ -12,7 +12,6 @@ import { applyGroupPatch, diffGroup, foldGroupPatches, omitGroupFields, type Gro
 import type {
   BuildRecord,
   BuildValue,
-  GroupRecord,
   GroupValue,
   LibraryRecord,
   Mutation,

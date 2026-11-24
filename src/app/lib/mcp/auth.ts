@@ -1,5 +1,6 @@
 import { createRemoteJWKSet, errors, jwtVerify } from "jose";
 import { SITE_ORIGIN } from "@/app/lib/site";
+import { devAuthEnabled } from "@/app/lib/sharing/server/session";
 
 export interface McpAuthConfig {
   issuer: string;
@@ -105,6 +106,10 @@ export async function verifyAccessToken(token: string, config: McpAuthConfig): P
 }
 
 export async function identifyCaller(request: Request, config: McpAuthConfig | null): Promise<Caller> {
+  // Development only (DEV_AUTH=1, never in a production build): "Bearer dev:<name>" is that test
+  // user, so an MCP client can edit the same plans as local browser sessions.
+  const dev = /^Bearer\s+dev:([a-z0-9-]{1,32})$/i.exec(request.headers.get("authorization")?.trim() ?? "");
+  if (dev && devAuthEnabled()) return { kind: "user", subject: `user_dev_${dev[1].toLowerCase()}` };
   if (!config) return { kind: "anonymous" };
   const match = /^Bearer(?:\s+(.*))?$/i.exec(request.headers.get("authorization")?.trim() ?? "");
   if (!match) return { kind: "anonymous" };

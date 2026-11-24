@@ -416,6 +416,11 @@ export class PlanDO extends DurableObject<Env> {
     return [...byKey.values()];
   }
 
+  /** Who is here now, for list_raid_plan_members. */
+  presenceNow(): { presence: Presence[]; anonymous: number } {
+    return { presence: this.presence(), anonymous: this.ctx.getWebSockets("anon").length };
+  }
+
   private presenceFor(info: SocketInfo) {
     const anonymous = this.ctx.getWebSockets("anon").length;
     if (info.userId) return { presence: this.presence(), anonymous };

@@ -443,6 +443,8 @@ export const getMapDetailsOutput = result({
 });
 
 export const createRaidPlanOutput = result({
+  planId: text.optional().describe("With save: the account plan."),
+  planUrl: text.optional(),
   shareLink: text,
   map: text,
   name: text,
@@ -467,6 +469,12 @@ export const createRaidPlanOutput = result({
 });
 
 export const readRaidPlanOutput = result({
+  planId: text.optional().describe("Account plans: these ids, rev, and note textRev are what edit_raid_plan takes."),
+  url: text.optional(),
+  rev: num.optional(),
+  role: text.optional(),
+  allowCopy: bool.optional(),
+  members: list(object({ key: text, name: text, role: text, you: bool })).optional(),
   name: text,
   map: object({ key: text, name: text }),
   routeDistanceMeters: num,

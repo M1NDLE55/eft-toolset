@@ -36,14 +36,15 @@ export class RouteError extends Error {
   constructor(
     readonly response: Response,
     message = "Route answered early.",
-    readonly code?: ErrorCode
+    readonly code?: ErrorCode,
+    readonly details?: Record<string, unknown>
   ) {
     super(message);
   }
 }
 
 export function fail(code: ErrorCode, message: string, details?: Record<string, unknown>): never {
-  throw new RouteError(errorResponse(code, message, details), message, code);
+  throw new RouteError(errorResponse(code, message, details), message, code, details);
 }
 
 export function unwrapOutcome<T>(result: Outcome<T>): T {

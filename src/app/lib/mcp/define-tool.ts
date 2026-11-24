@@ -33,7 +33,8 @@ export function toolDefiner(server: McpServer, context: ToolContext): DefineTool
         {
           tool: name,
           gameMode: (args as { gameMode?: GameMode }).gameMode,
-          cacheKey: config.cacheResults ? toolResultKey(name, context.origin, args) : undefined,
+          // Never for a user's own data: results are shared by everyone on this instance.
+          cacheKey: config.cacheResults && !usesAccountData(args) ? toolResultKey(name, context.origin, args) : undefined,
         },
         (read) => body(args, { read })
       );
@@ -55,4 +56,10 @@ export function toolDefiner(server: McpServer, context: ToolContext): DefineTool
       run: (args) => handler(args as z.output<typeof inputSchema>),
     });
   };
+}
+
+/** Whether a call reads or writes a user's account (a saved build, an /s/ link, saveTo). */
+export function usesAccountData(args: unknown): boolean {
+  const text = JSON.stringify(args);
+  return /"savedBuildId"|"saveTo"|\/s\/[1-9A-Za-z][A-Za-z0-9_-]{20}/.test(text);
 }
