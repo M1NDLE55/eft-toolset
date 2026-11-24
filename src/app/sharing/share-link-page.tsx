@@ -13,6 +13,7 @@ import type { BuildValue, GroupValue } from "@/app/lib/sharing/types";
 import type { PlanContent } from "@/app/lib/sharing/plan-content";
 import type { SharePreview } from "./share.server";
 import { importPlan } from "@/app/lib/raid-planner/store";
+import { SharedPlanView } from "./shared-plan-view";
 
 /** Why a link didn't open, or why saving a copy after sign-in failed (?error=…). */
 const ERROR_MESSAGES: Record<string, string> = {
@@ -66,35 +67,22 @@ export function ShareLinkPage({ preview, code }: { preview: SharePreview; code: 
       <span>Shared by {share.ownerDisplayName}</span>
     </div>
   );
+
+  if (share.targetType === "plan") {
+    return <SharedPlanView code={code} share={share} plan={share.snapshot as PlanContent} actions={actions} banner={banner} footer={footer} />;
+  }
   return (
     <main className="flex min-w-0 flex-1 justify-center p-4 pb-10">
       <div className="flex w-full max-w-xl flex-col gap-4">
         {banner}
         {share.targetType === "build" ? (
           <SharedBuildPreview build={{ ...(share.snapshot as BuildValue), ammoId: (share.snapshot as BuildValue).ammoId ?? null }} actions={actions} />
-        ) : share.targetType === "item_group" ? (
-          <SharedGroup group={share.snapshot as GroupValue} actions={actions} />
         ) : (
-          <SharedPlanSummary plan={share.snapshot as PlanContent} actions={actions} />
+          <SharedGroup group={share.snapshot as GroupValue} actions={actions} />
         )}
         {footer}
       </div>
     </main>
-  );
-}
-
-function SharedPlanSummary({ plan, actions }: { plan: PlanContent; actions: ReactNode }) {
-  return (
-    <>
-      <p className="text-2xs font-bold uppercase tracking-widest text-[#9a8866]">Shared raid plan</p>
-      <div className="border border-[#1a1a1a] bg-[#0c0c0c] p-3">
-        <h1 className="truncate text-xl font-black uppercase tracking-widest text-[#e6d9b8]">{plan.name}</h1>
-        <p className="text-sm text-[#888]">
-          {plan.route.length} route points · {plan.drawings.length} drawings · {plan.notes.length} notes
-        </p>
-      </div>
-      {actions}
-    </>
   );
 }
 

@@ -16,6 +16,7 @@ import { Route as DataRouteImport } from './routes/data'
 import { Route as GunBuilderRouteRouteImport } from './routes/gun-builder/route'
 import { Route as ItemRouteRouteImport } from './routes/item/route'
 import { Route as ItemGroupsRouteRouteImport } from './routes/item-groups/route'
+import { Route as JoinRouteImport } from './routes/join'
 import { Route as KeysRouteRouteImport } from './routes/keys/route'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as QuestsRouteRouteImport } from './routes/quests/route'
@@ -82,6 +83,11 @@ const ItemRouteRoute = ItemRouteRouteImport.update({
 const ItemGroupsRouteRoute = ItemGroupsRouteRouteImport.update({
   id: '/item-groups',
   path: '/item-groups',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JoinRoute = JoinRouteImport.update({
+  id: '/join',
+  path: '/join',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KeysRouteRoute = KeysRouteRouteImport.update({
@@ -257,6 +263,7 @@ export interface FileRoutesByFullPath {
   '/raid-planner': typeof RaidPlannerRouteRouteWithChildren
   '/credits': typeof CreditsRoute
   '/data': typeof DataRoute
+  '/join': typeof JoinRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
@@ -291,6 +298,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/credits': typeof CreditsRoute
   '/data': typeof DataRoute
+  '/join': typeof JoinRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
@@ -333,6 +341,7 @@ export interface FileRoutesById {
   '/raid-planner': typeof RaidPlannerRouteRouteWithChildren
   '/credits': typeof CreditsRoute
   '/data': typeof DataRoute
+  '/join': typeof JoinRoute
   '/mcp': typeof McpRoute
   '/settings': typeof SettingsRoute
   '/ammo/$caliber': typeof AmmoCaliberRoute
@@ -376,6 +385,7 @@ export interface FileRouteTypes {
     | '/raid-planner'
     | '/credits'
     | '/data'
+    | '/join'
     | '/mcp'
     | '/settings'
     | '/ammo/$caliber'
@@ -410,6 +420,7 @@ export interface FileRouteTypes {
     | '/'
     | '/credits'
     | '/data'
+    | '/join'
     | '/mcp'
     | '/settings'
     | '/ammo/$caliber'
@@ -451,6 +462,7 @@ export interface FileRouteTypes {
     | '/raid-planner'
     | '/credits'
     | '/data'
+    | '/join'
     | '/mcp'
     | '/settings'
     | '/ammo/$caliber'
@@ -493,6 +505,7 @@ export interface RootRouteChildren {
   RaidPlannerRouteRoute: typeof RaidPlannerRouteRouteWithChildren
   CreditsRoute: typeof CreditsRoute
   DataRoute: typeof DataRoute
+  JoinRoute: typeof JoinRoute
   McpRoute: typeof McpRoute
   SettingsRoute: typeof SettingsRoute
   FleaMarketPveRoute: typeof FleaMarketPveRoute
@@ -549,6 +562,13 @@ declare module '@tanstack/react-router' {
       path: '/item-groups'
       fullPath: '/item-groups'
       preLoaderRoute: typeof ItemGroupsRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/join': {
+      id: '/join'
+      path: '/join'
+      fullPath: '/join'
+      preLoaderRoute: typeof JoinRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/keys': {
@@ -906,6 +926,7 @@ const rootRouteChildren: RootRouteChildren = {
   RaidPlannerRouteRoute: RaidPlannerRouteRouteWithChildren,
   CreditsRoute: CreditsRoute,
   DataRoute: DataRoute,
+  JoinRoute: JoinRoute,
   McpRoute: McpRoute,
   SettingsRoute: SettingsRoute,
   FleaMarketPveRoute: FleaMarketPveRoute,

@@ -45,6 +45,33 @@ globals.WebSocketRequestResponsePair ??= class {
   ) {}
 };
 
+/** The server ends of sockets made by the latest WebSocketPair, so tests can find them. */
+export const acceptedSockets: FakeSocket[] = [];
+globals.WebSocketPair = class {
+  0: FakeSocket;
+  1: FakeSocket;
+  constructor() {
+    this[0] = new FakeSocket();
+    this[1] = new FakeSocket();
+    acceptedSockets.push(this[1]);
+  }
+};
+
+// Node's Response refuses status 101; a Worker returns it for WebSocket upgrades.
+const NodeResponse = globalThis.Response;
+class UpgradeResponse extends NodeResponse {
+  constructor(body?: BodyInit | null, init?: ResponseInit & { webSocket?: unknown }) {
+    if (init?.status === 101) {
+      super(null, { status: 200 });
+      Object.defineProperty(this, "status", { value: 101 });
+      Object.defineProperty(this, "webSocket", { value: init.webSocket });
+    } else {
+      super(body, init);
+    }
+  }
+}
+globals.Response = UpgradeResponse;
+
 class FakeState {
   readonly storage;
   readonly sockets: FakeSocket[] = [];

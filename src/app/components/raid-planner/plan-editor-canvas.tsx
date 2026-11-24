@@ -37,6 +37,8 @@ interface PlanOverlayProps {
   onPlanChange?: (updater: PlanUpdater) => void;
   onSelectNote?: (id: string | null) => void;
   onLimitError?: (message: string) => void;
+  onDrag?: (target: string, position: GamePoint) => void;
+  highlights?: ReadonlyMap<string, string>;
 }
 
 interface PlanEditorCanvasProps extends PlanOverlayProps {
@@ -75,7 +77,10 @@ function PlanOverlay({
   onPlanChange,
   onSelectNote,
   onLimitError,
+  onDrag,
+  highlights,
 }: PlanOverlayProps & { map: L.Map }) {
+  const drag = useEffectEvent((target: string, position: GamePoint) => onDrag?.(target, position));
   const measureRef = useRef<Measurement>({ start: null, line: null, label: null });
 
   const current = useEffectEvent(() => ({ tool, color, plan }));
@@ -291,11 +296,13 @@ function PlanOverlay({
           notes: latest.notes.map((note) => (note.id === id ? { ...note, position } : note)),
         }));
       },
+      onDrag: interactive ? (target, position) => drag(target, position) : undefined,
+      highlights,
     }).addTo(map);
     return () => {
       group.remove();
     };
-  }, [map, plan, interactive]);
+  }, [map, plan, interactive, highlights]);
 
   return null;
 }

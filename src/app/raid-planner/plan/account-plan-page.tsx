@@ -19,7 +19,7 @@ import { overlayPanel } from "@/app/components/raid-planner/ui";
 import { cn } from "@/lib/utils";
 import { createLiveSession } from "./live-session";
 import { PlanMembersButton } from "./plan-members";
-import { PresenceBar } from "./presence";
+import { highlightsOf, PresenceBar } from "./presence";
 
 /**
  * /raid-planner/p/<planId>: an account plan, for its members (§7.3). It opens from the account cache
@@ -72,6 +72,7 @@ function useSession(library: AccountLibrary, planId: string) {
 function PlanSessionView({ library, planId }: { library: AccountLibrary; planId: string }) {
   const router = useRouter();
   const { session, view } = useSession(library, planId);
+  const highlights = useMemo(() => highlightsOf(view.presence, view.myKey), [view.presence, view.myKey]);
 
   if (view.offlineCopy) return <OfflineCopyView session={session} view={view} />;
   if (!view.ready) return <MapStageSkeleton>Loading plan</MapStageSkeleton>;
@@ -91,7 +92,12 @@ function PlanSessionView({ library, planId }: { library: AccountLibrary; planId:
     canRedo: view.canRedo,
     share: <PlanMembersButton session={session} view={view} onLeft={() => router.push("/raid-planner")} />,
     banner: <PlanBanner session={session} view={view} />,
-    onSelect: (target) => session.select?.(target),
+    onSelect: (target) => session.select(target),
+    onDrag: (target, position) => {
+      const id = target.slice(target.indexOf(":") + 1);
+      session.preview([target.startsWith("wp:") ? { t: "wp.move", id, at: position } : { t: "note.move", id, at: position }]);
+    },
+    highlights,
   };
   return (
     <>

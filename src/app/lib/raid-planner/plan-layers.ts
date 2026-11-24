@@ -25,6 +25,15 @@ export interface PlanLayerHandlers {
   onNoteClick: (id: string) => void;
   onWaypointMove: (id: string, position: GamePoint) => void;
   onNoteMove: (id: string, position: GamePoint) => void;
+  /** A drag in progress (live plans show it to others). */
+  onDrag?: (target: string, position: GamePoint) => void;
+  /** Items others are editing, by "wp:<id>" or "note:<id>", with the colour to outline them in. */
+  highlights?: ReadonlyMap<string, string>;
+}
+
+function outline(handlers: PlanLayerHandlers, target: string) {
+  const color = handlers.highlights?.get(target);
+  return color ? ` style="box-shadow:0 0 0 3px ${color}"` : "";
 }
 
 export function buildPlanLayers(
@@ -45,7 +54,7 @@ export function buildPlanLayers(
       draggable: handlers.editable,
       icon: L.divIcon({
         className: "rp-glyph-wrap",
-        html: `<div class="rp-waypoint">${index + 1}</div>`,
+        html: `<div class="rp-waypoint"${outline(handlers, `wp:${waypoint.id}`)}>${index + 1}</div>`,
         iconSize: [20, 20],
         iconAnchor: [10, 10],
       }),
@@ -57,6 +66,7 @@ export function buildPlanLayers(
     marker.on("dragend", () =>
       handlers.onWaypointMove(waypoint.id, latLngToGame(marker.getLatLng()))
     );
+    if (handlers.onDrag) marker.on("drag", () => handlers.onDrag?.(`wp:${waypoint.id}`, latLngToGame(marker.getLatLng())));
     marker.addTo(group);
   });
 
@@ -90,7 +100,7 @@ export function buildPlanLayers(
   }
 
   for (const note of plan.notes) {
-    const marker = buildNoteMarker(note, handlers.editable);
+    const marker = buildNoteMarker(note, handlers.editable, handlers.highlights?.get(`note:${note.id}`));
     marker.on("click", (event) => {
       L.DomEvent.stopPropagation(event);
       handlers.onNoteClick(note.id);
@@ -101,19 +111,21 @@ export function buildPlanLayers(
     marker.on("dragend", () =>
       handlers.onNoteMove(note.id, latLngToGame(marker.getLatLng()))
     );
+    if (handlers.onDrag) marker.on("drag", () => handlers.onDrag?.(`note:${note.id}`, latLngToGame(marker.getLatLng())));
     marker.addTo(group);
   }
 
   return group;
 }
 
-function buildNoteMarker(note: NotePin, draggable: boolean): L.Marker {
+function buildNoteMarker(note: NotePin, draggable: boolean, highlight?: string): L.Marker {
   const displayColor = getPlanDisplayColor(note.color);
+  const ring = highlight ? `;box-shadow:0 0 0 3px ${highlight}` : "";
   const marker = L.marker(gameToLatLng(note.position), {
     draggable,
     icon: L.divIcon({
       className: "rp-glyph-wrap",
-      html: `<div class="rp-note-pin" style="--glyph:${displayColor}"></div>`,
+      html: `<div class="rp-note-pin" style="--glyph:${displayColor}${ring}"></div>`,
       iconSize: [16, 16],
       iconAnchor: [8, 16],
     }),

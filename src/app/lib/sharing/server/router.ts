@@ -1,3 +1,4 @@
+import { planLive, shareLive } from "./live-routes";
 import { deleteLink, getLinks, getShare, postLink, postShareCopy } from "./link-routes";
 import {
   deletePlanMember,
@@ -53,7 +54,11 @@ const ROUTES: RouteDef[] = [
 ];
 
 /** WebSocket upgrade routes: served before the page cache, which can't carry a socket. */
-const SOCKET_ROUTES: RouteDef[] = [{ pattern: /^\/api\/library\/live$/, methods: { GET: libraryLive } }];
+const SOCKET_ROUTES: RouteDef[] = [
+  { pattern: /^\/api\/library\/live$/, methods: { GET: libraryLive } },
+  { pattern: new RegExp(`^/api/plans/${SEGMENT}/live$`), methods: { GET: planLive } },
+  { pattern: new RegExp(`^/api/s/${CODE}/live$`), methods: { GET: shareLive } },
+];
 
 function match(routes: RouteDef[], request: Request): Handler | undefined {
   const { pathname } = new URL(request.url);

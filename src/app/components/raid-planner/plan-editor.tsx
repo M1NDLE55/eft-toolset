@@ -3,7 +3,7 @@
 import { useEffect, useEffectEvent, useMemo, useState, type ReactNode } from "react";
 import Link from "@/app/lib/navigation/link";
 import { ArrowLeft, Pencil } from "lucide-react";
-import type { MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
+import type { GamePoint, MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
 import { PLAN_COLORS } from "@/app/lib/raid-planner/types";
 import { getLayerGroups } from "@/app/lib/raid-planner/layer-options";
 import { getPlan, savePlan } from "@/app/lib/raid-planner/store";
@@ -46,9 +46,11 @@ export interface EditorSession {
   share?: ReactNode;
   /** Shown under the header: sync state, the "Couldn't apply" list, presence. */
   banner?: ReactNode;
-  /** Item ids others are editing, outlined on the map (live presence). */
-  editing?: ReactNode;
+  /** Items others are editing ("note:<id>", "wp:<id>"), outlined on the map in their colour (§11.6). */
+  highlights?: ReadonlyMap<string, string>;
   onSelect?: (target: string | null) => void;
+  /** A drag in progress, previewed to others. */
+  onDrag?: (target: string, position: GamePoint) => void;
 }
 
 export function PlanEditor({ storedPlan, config, session }: { storedPlan: RaidPlan; config: MapConfig; session?: EditorSession }) {
@@ -195,6 +197,8 @@ export function PlanEditor({ storedPlan, config, session }: { storedPlan: RaidPl
           setSelectedNoteId(id);
           session?.onSelect?.(id ? `note:${id}` : null);
         }}
+        onDrag={session?.onDrag}
+        highlights={session?.highlights}
         onLimitError={setNotice}
       />
 
@@ -246,7 +250,7 @@ export function PlanEditor({ storedPlan, config, session }: { storedPlan: RaidPl
 
       {session?.banner && (
         <div className="pointer-events-none absolute inset-x-0 top-16 z-1001 flex justify-center px-2">
-          <div className="pointer-events-auto w-full max-w-lg">{session.banner}</div>
+          <div className="pointer-events-auto flex max-w-lg flex-col items-center">{session.banner}</div>
         </div>
       )}
 

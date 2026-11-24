@@ -1,10 +1,18 @@
 import { DurableObject } from "cloudflare:workers";
 import type { PlanContent } from "@/app/lib/sharing/plan-content";
-import type { PlanOp } from "@/app/lib/sharing/plan-doc";
+import { opTarget, type PlanOp } from "@/app/lib/sharing/plan-doc";
+import { PLAN_LIMITS, PLAN_SOCKET_RATES } from "./limits";
+import type { ClientMessage, Presence, RejectCode, ServerMessage, SocketInfo } from "./live-protocol";
+import { MAX_SOCKET_MESSAGE } from "./live-protocol";
 import type { Role } from "@/app/lib/sharing/types";
 import { outcome, type Outcome } from "./outcome";
 import { drainOutbox } from "./outbox";
-import { PlanStore, type Actor, type Batch, type Member, type PlanLink, type PlanSnapshot, type PlanSummary, type PublicMember } from "./plan-store";
+import { memberKey, PlanStore, type Actor, type Batch, type Member, type PlanLink, type PlanSnapshot, type PlanSummary, type PublicMember } from "./plan-store";
+
+/** Headers the Worker sets on a live upgrade after checking the caller; any copy the client sent is removed. */
+export const PLAN_ACTOR_HEADER = "X-EFT-Actor";
+export const PLAN_LINK_HEADER = "X-EFT-Link";
+const AGENT_PRESENCE_MS = 60_000;
 import type { Sql } from "./sql";
 
 export type CatchUp = { batches: Batch[] } | { snapshot: PlanSnapshot };
@@ -97,8 +105,18 @@ export class PlanDO extends DurableObject<Env> {
   }
 
   /** After a batch: members' indexes get the new name at once on a rename, otherwise at most every 10 minutes. */
-  protected async afterApply(result: { rev: number; ops: PlanOp[]; duplicate: boolean; renamed: boolean }, _actor: Actor, _opId: string) {
+  protected async afterApply(result: { rev: number; ops: PlanOp[]; duplicate: boolean; renamed: boolean }, actor: Actor & { id: string }, opId: string, sender?: WebSocket) {
     if (result.duplicate) return;
+    const key = memberKey(this.planId, actor.id);
+    if (actor.via === "mcp") {
+      // Agents have no socket: they show in presence for a minute after each edit (§11.2).
+      const target = result.ops.map((op) => opTarget(op)).find(Boolean) ?? null;
+      this.agents.set(key, { key, name: this.store.memberName(actor.id), role: this.store.role(actor.id) ?? "editor", via: "mcp", client: actor.client, editing: target, floor: null, expiresAt: Date.now() + AGENT_PRESENCE_MS });
+    }
+    const message = JSON.stringify({ type: "ops", rev: result.rev, opId, actor: { id: key, name: this.store.memberName(actor.id), via: actor.via, ...(actor.client ? { client: actor.client } : {}) }, ops: result.ops });
+    for (const socket of this.ctx.getWebSockets()) if (socket !== sender) this.sendRaw(socket, message);
+    if (result.renamed) this.broadcastSettings();
+    if (actor.via === "mcp") this.broadcastPresence();
     this.store.queueSummary(result.renamed);
     await this.schedule();
   }
@@ -106,7 +124,9 @@ export class PlanDO extends DurableObject<Env> {
   // Settings and members
 
   async setAllowCopy(userId: string, allowCopy: boolean): Promise<Outcome<{ allowCopy: boolean; name: string }>> {
-    return outcome(() => this.store.setAllowCopy(userId, allowCopy));
+    const result = outcome(() => this.store.setAllowCopy(userId, allowCopy));
+    if (result.ok) this.broadcastSettings();
+    return result;
   }
 
   members(userId: string): Outcome<PublicMember[]> {
@@ -170,8 +190,25 @@ export class PlanDO extends DurableObject<Env> {
     return this.store.exists() ? this.store.ownerId() : null;
   }
 
-  /** Hook for live sessions (sockets) to react to membership changes; live sessions use it. */
-  protected async membersChanged(_change: { removed?: string; roleChanged?: string; owner?: string }) {}
+  /**
+   * After a membership change: a removed member's sockets close (4003), a member whose role changed
+   * reconnects for a fresh snapshot (4009), a new owner is told, and everyone gets the member list.
+   */
+  protected async membersChanged(change: { removed?: string; roleChanged?: string; owner?: string }) {
+    if (change.removed) for (const socket of this.ctx.getWebSockets(`user:${change.removed}`)) socket.close(4003, "You were removed from this plan.");
+    if (change.roleChanged) for (const socket of this.ctx.getWebSockets(`user:${change.roleChanged}`)) socket.close(4009, "Your role changed.");
+    if (change.owner) {
+      const notice = JSON.stringify({ type: "notice", kind: "ownership", message: `You now own ${this.store.summary().name}.` });
+      for (const socket of this.ctx.getWebSockets(`user:${change.owner}`)) this.sendRaw(socket, notice);
+      for (const socket of this.ctx.getWebSockets(`user:${change.owner}`)) socket.close(4009, "Your role changed.");
+    }
+    if (!this.store.exists()) return;
+    for (const socket of this.ctx.getWebSockets()) {
+      const info = this.info(socket);
+      if (info?.userId) this.sendRaw(socket, JSON.stringify({ type: "members", members: this.store.publicMembers(info.userId) }));
+    }
+    this.broadcastPresence();
+  }
 
   prepareDestroy(ownerId: string | null): Outcome<{ members: string[]; codes: string[]; name: string }> {
     return outcome(() => this.store.prepareDestroy(ownerId));
@@ -185,7 +222,9 @@ export class PlanDO extends DurableObject<Env> {
     this.store.reset();
   }
 
-  protected async closeAll(_code: number, _reason: string) {}
+  protected async closeAll(code: number, reason: string) {
+    for (const socket of this.ctx.getWebSockets()) socket.close(code, reason);
+  }
 
   exportFor(userId: string): Outcome<{ content: PlanContent; name: string }> {
     return outcome(() => this.store.exportFor(userId));
@@ -217,8 +256,11 @@ export class PlanDO extends DurableObject<Env> {
     return link;
   }
 
-  /** Closes anonymous sockets opened through a link (live sessions, below). */
-  protected async linkClosed(_code: string) {}
+  /** Anonymous sockets opened through a revoked, expired or paused view link close at once (§7.5). */
+  protected async linkClosed(code: string) {
+    for (const socket of this.ctx.getWebSockets(`link:${code}`)) socket.close(4010, "This link no longer works.");
+    this.broadcastPresence();
+  }
 
   openLink(code: string, viewerId: string | null) {
     return outcome(() => this.store.openLink(code, viewerId));
@@ -245,7 +287,14 @@ export class PlanDO extends DurableObject<Env> {
     if (state === "disabled") await this.disabled();
   }
 
-  protected async disabled() {}
+  /** Moderation: only the owner keeps their sockets. */
+  protected async disabled() {
+    const owner = this.store.ownerId();
+    for (const socket of this.ctx.getWebSockets()) {
+      const info = this.info(socket);
+      if (info?.userId !== owner) socket.close(info?.userId ? 4003 : 4010, "This plan was removed after review.");
+    }
+  }
 
   /** For the moderation queue: what was reported, without needing a link. */
   reviewSnapshot() {
@@ -253,4 +302,226 @@ export class PlanDO extends DurableObject<Env> {
     const snapshot = this.store.snapshot(null, { asLink: true });
     return { name: snapshot.doc.name, mapKey: snapshot.doc.mapKey, ownerId: this.store.ownerId(), notes: Object.values(snapshot.doc.notes).map((note) => ({ title: note.title, body: note.body })) };
   }
+  // Live sessions (§11): hibernatable WebSockets. Nothing live is kept in memory that can't be rebuilt
+  // from the sockets' attachments, except agent presence, which is lost on hibernation by design.
+
+  private agents = new Map<string, Presence & { expiresAt: number }>();
+
+  private info(socket: WebSocket): SocketInfo | null {
+    try {
+      return socket.deserializeAttachment() as SocketInfo | null;
+    } catch {
+      return null;
+    }
+  }
+
+  private sendRaw(socket: WebSocket, message: string) {
+    try {
+      socket.send(message);
+    } catch {
+      // Closing; webSocketClose cleans up.
+    }
+  }
+
+  private send(socket: WebSocket, message: ServerMessage) {
+    this.sendRaw(socket, JSON.stringify(message));
+  }
+
+  /**
+   * Upgrades a live connection. The Worker has checked the session or link code's MAC and the
+   * Origin, and passes who it is in a header; this checks membership (or the link's state) and the
+   * socket caps, then sends a snapshot or the ops since `since`.
+   */
+  async fetch(request: Request): Promise<Response> {
+    if (request.headers.get("Upgrade")?.toLowerCase() !== "websocket") return new Response("Expected a WebSocket.", { status: 426 });
+    if (!this.store.exists()) return new Response("Not found", { status: 404 });
+    const actorId = request.headers.get(PLAN_ACTOR_HEADER);
+    const linkCode = request.headers.get(PLAN_LINK_HEADER);
+    const since = Number(new URL(request.url).searchParams.get("since") ?? "-1");
+    let info: SocketInfo;
+    const now = Date.now();
+    const buckets = { batches: { tokens: PLAN_SOCKET_RATES.batches.burst, at: now }, previews: { tokens: PLAN_SOCKET_RATES.previews.burst, at: now }, strikes: 0 };
+    if (actorId) {
+      const role = this.store.role(actorId);
+      if (!role) return new Response("Not found", { status: 404 });
+      if (this.store.state() === "disabled" && role !== "owner") return new Response("Gone", { status: 410 });
+      // At most 5 sockets per member: the oldest closes.
+      const mine = this.ctx
+        .getWebSockets(`user:${actorId}`)
+        .map((socket) => ({ socket, info: this.info(socket) }))
+        .sort((a, b) => (a.info?.connectedAt ?? 0) - (b.info?.connectedAt ?? 0));
+      for (const { socket } of mine.slice(0, Math.max(0, mine.length - PLAN_LIMITS.socketsPerMember + 1))) socket.close(4008, "Opened somewhere else.");
+      info = { connId: crypto.randomUUID(), userId: actorId, key: memberKey(this.planId, actorId), role, link: null, name: this.store.memberName(actorId), editing: null, floor: null, connectedAt: now, ...buckets };
+    } else if (linkCode) {
+      try {
+        this.store.checkViewLink(linkCode, null);
+      } catch (error) {
+        const code = (error as { code?: string }).code;
+        return new Response(error instanceof Error ? error.message : "Not found", { status: code === "gone" ? 410 : code === "forbidden" ? 403 : 404 });
+      }
+      // Past 200 anonymous viewers, more fall back to polling the cached snapshot (§9.3).
+      if (this.ctx.getWebSockets("anon").length >= PLAN_LIMITS.anonymousSockets) return new Response("Busy", { status: 429, headers: { "Retry-After": "15" } });
+      info = { connId: crypto.randomUUID(), userId: null, key: null, role: "anonymous", link: linkCode, name: "", editing: null, floor: null, connectedAt: now, ...buckets };
+    } else {
+      return new Response("Unauthenticated", { status: 401 });
+    }
+    const [client, server] = Object.values(new WebSocketPair());
+    const tags = info.userId ? [`user:${info.userId}`, `role:${info.role}`] : ["anon", `link:${info.link}`];
+    this.ctx.acceptWebSocket(server, tags);
+    server.serializeAttachment(info);
+    this.sendFirst(server, info, since);
+    this.broadcastPresence();
+    return new Response(null, { status: 101, webSocket: client });
+  }
+
+  /** The first message: the ops after `since` if the log still has them, otherwise a snapshot. */
+  private sendFirst(socket: WebSocket, info: SocketInfo, since: number) {
+    const batches = since >= 0 ? this.store.opsSince(since) : null;
+    if (batches) {
+      for (const batch of batches) this.send(socket, { type: "ops", rev: batch.rev, opId: batch.opId, actor: batch.actor, ops: batch.ops });
+      this.send(socket, { type: "caught-up", rev: this.store.summary().rev });
+      if (info.userId) this.send(socket, { type: "members", members: this.store.publicMembers(info.userId) });
+      return;
+    }
+    const snapshot = this.store.snapshot(info.userId, { asLink: !info.userId });
+    const doc = info.userId ? snapshot.doc : anonymousDoc(snapshot.doc);
+    this.send(socket, {
+      type: "snapshot",
+      rev: snapshot.rev,
+      doc,
+      you: { role: info.role, key: info.key },
+      settings: { allowCopy: snapshot.allowCopy, name: snapshot.doc.name },
+      createdAt: snapshot.createdAt,
+      updatedAt: snapshot.updatedAt,
+      ...(info.userId ? { members: snapshot.members } : {}),
+      ...this.presenceFor(info),
+    });
+  }
+
+  private presence(): Presence[] {
+    const now = Date.now();
+    const byKey = new Map<string, Presence>();
+    for (const socket of this.ctx.getWebSockets()) {
+      const info = this.info(socket);
+      if (!info?.key) continue;
+      const existing = byKey.get(info.key);
+      if (!existing || (info.editing && !existing.editing)) {
+        byKey.set(info.key, { key: info.key, name: info.name, role: info.role as Role, via: "web", editing: info.editing, floor: info.floor });
+      }
+    }
+    for (const [key, agent] of this.agents) {
+      if (agent.expiresAt < now) this.agents.delete(key);
+      else if (!byKey.has(`${key}:mcp`)) byKey.set(`${key}:mcp`, { key: agent.key, name: agent.name, role: agent.role, via: "mcp", client: agent.client, editing: agent.editing, floor: null });
+    }
+    return [...byKey.values()];
+  }
+
+  private presenceFor(info: SocketInfo) {
+    const anonymous = this.ctx.getWebSockets("anon").length;
+    if (info.userId) return { presence: this.presence(), anonymous };
+    // Anonymous viewers see only how many people are here (§8.1).
+    return { presence: [] as Presence[], anonymous, online: new Set(this.presence().map((entry) => entry.key)).size };
+  }
+
+  private broadcastPresence() {
+    let members: string | null = null;
+    for (const socket of this.ctx.getWebSockets()) {
+      const info = this.info(socket);
+      if (!info) continue;
+      if (info.userId) {
+        members ??= JSON.stringify({ type: "presence", ...this.presenceFor(info) });
+        this.sendRaw(socket, members);
+      } else {
+        this.send(socket, { type: "presence", ...this.presenceFor(info) });
+      }
+    }
+  }
+
+  private broadcastSettings() {
+    if (!this.store.exists()) return;
+    const snapshot = this.store.snapshot(null, { asLink: true });
+    const message = JSON.stringify({ type: "settings", allowCopy: snapshot.allowCopy, name: snapshot.doc.name });
+    for (const socket of this.ctx.getWebSockets()) this.sendRaw(socket, message);
+  }
+
+  /** Token bucket per socket, kept in its attachment so it survives hibernation. */
+  private take(info: SocketInfo, bucket: "batches" | "previews"): boolean {
+    const limit = PLAN_SOCKET_RATES[bucket];
+    const now = Date.now();
+    const state = info[bucket];
+    state.tokens = Math.min(limit.burst, state.tokens + ((now - state.at) / 1000) * limit.refillPerSecond);
+    state.at = now;
+    if (state.tokens < 1) return false;
+    state.tokens -= 1;
+    return true;
+  }
+
+  async webSocketMessage(socket: WebSocket, message: string | ArrayBuffer) {
+    const info = this.info(socket);
+    if (!info || typeof message !== "string") return;
+    if (message.length > MAX_SOCKET_MESSAGE) {
+      socket.close(1009, "Message too large.");
+      return;
+    }
+    let parsed: ClientMessage;
+    try {
+      parsed = JSON.parse(message) as ClientMessage;
+    } catch {
+      return;
+    }
+    if (parsed.type === "presence") {
+      info.editing = typeof parsed.editing === "string" ? parsed.editing.slice(0, 80) : null;
+      info.floor = typeof parsed.floor === "string" ? parsed.floor.slice(0, 80) : null;
+      socket.serializeAttachment(info);
+      this.broadcastPresence();
+      return;
+    }
+    if (parsed.type !== "ops" && parsed.type !== "preview") return;
+    const role = info.userId ? this.store.role(info.userId) : null;
+    const opId = parsed.type === "ops" ? String(parsed.opId ?? "") : "";
+    if (role !== "owner" && role !== "editor") {
+      if (parsed.type === "ops") this.send(socket, { type: "reject", opId, code: "forbidden", message: role === "viewer" ? "Viewers can't change this plan." : "You can't change this plan." });
+      return;
+    }
+    if (!this.take(info, parsed.type === "ops" ? "batches" : "previews")) {
+      info.strikes += 1;
+      socket.serializeAttachment(info);
+      if (info.strikes > 20) socket.close(4008, "Too many changes too quickly.");
+      else if (parsed.type === "ops") this.send(socket, { type: "reject", opId, code: "rate_limited", message: "Too many changes too quickly." });
+      return;
+    }
+    socket.serializeAttachment(info);
+    if (parsed.type === "preview") {
+      // A drag in progress: shown to others, never stored. Moves only.
+      if (!Array.isArray(parsed.ops) || parsed.ops.length > 5) return;
+      const ops = parsed.ops.filter((op) => op && (op.t === "wp.move" || op.t === "note.move"));
+      if (ops.length === 0) return;
+      const text = JSON.stringify({ type: "preview", actor: { id: info.key, name: info.name, via: "web" }, ops });
+      for (const other of this.ctx.getWebSockets()) if (other !== socket) this.sendRaw(other, text);
+      return;
+    }
+    const actor = { id: info.userId!, name: info.name, via: "web" as const };
+    const result = outcome(() => this.applyBatch(actor, opId, Array.isArray(parsed.ops) ? parsed.ops : []));
+    if (!result.ok) {
+      this.send(socket, { type: "reject", opId, code: result.error.code as RejectCode, message: result.error.message, details: result.error.details });
+      return;
+    }
+    this.send(socket, { type: "ack", opId, rev: result.value.rev });
+    await this.afterApply(result.value, actor, opId, socket);
+  }
+
+  async webSocketClose() {
+    // The runtime answers the close frame itself (compatibility date 2026-04-07 or later).
+    this.broadcastPresence();
+  }
+
+  async webSocketError() {
+    this.broadcastPresence();
+  }
+}
+
+/** Anonymous viewers don't learn who changed what. */
+function anonymousDoc(doc: PlanSnapshot["doc"]): PlanSnapshot["doc"] {
+  const strip = <T extends { by: string | null }>(rows: Record<string, T>) => Object.fromEntries(Object.entries(rows).map(([id, row]) => [id, { ...row, by: null }]));
+  return { ...doc, waypoints: strip(doc.waypoints), drawings: strip(doc.drawings), notes: strip(doc.notes) };
 }

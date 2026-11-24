@@ -18,6 +18,8 @@ import {
 import type { PlanContent } from "@/app/lib/sharing/plan-content";
 import type { Role } from "@/app/lib/sharing/types";
 import type { PublicMember } from "@/app/lib/durable/plan-store";
+import type { Presence, ServerMessage } from "@/app/lib/durable/live-protocol";
+import ReconnectingWebSocket from "partysocket/ws";
 import { PLAN_LIMITS } from "@/app/lib/durable/limits";
 import type { AccountLibrary } from "./account-library";
 import {
@@ -107,9 +109,18 @@ export interface SessionView {
   canUndo: boolean;
   canRedo: boolean;
   error: string | null;
+  /** Live: who is here (members and agents), and how many anonymous viewers. */
+  live: boolean;
+  presence: Presence[];
+  anonymous: number;
+  myKey: string | null;
 }
 
 const POLL_MS = 10_000;
+const PREVIEW_TTL_MS = 2_000;
+const ACK_TIMEOUT_MS = 15_000;
+/** Close codes after which reconnecting can't help (§11.3). */
+const FINAL_CLOSE_CODES = new Set([4001, 4003, 4004, 4010]);
 const MAX_BACKOFF_MS = 60_000;
 
 export class PlanSession {
@@ -134,6 +145,14 @@ export class PlanSession {
   private viewCache: { version: number; value: SessionView } | null = null;
   private version = 0;
   private seq = 0;
+  private presence: Presence[] = [];
+  private anonymous = 0;
+  private previews = new Map<string, { ops: PlanOp[]; at: number }>();
+  private socket: ReconnectingWebSocket | null = null;
+  private pendingAcks = new Map<string, (result: SendResult) => void>();
+  private freshSnapshot = false;
+  private lastPreview = 0;
+  private selected: string | null = null;
   transport: PlanTransport;
 
   constructor(
@@ -168,18 +187,171 @@ export class PlanSession {
     void this.flush();
     if (poll && !this.closed) {
       this.pollTimer = setInterval(() => {
-        if (typeof document === "undefined" || document.visibilityState === "visible") void this.refresh();
+        // While the live socket is open it brings every change; HTTP catch-up is the fallback.
+        if (this.socket?.readyState === 1) return;
+        if (typeof document === "undefined" || document.visibilityState === "visible") void this.refresh().then(() => this.flush());
       }, POLL_MS);
     }
   }
 
-  /** What this user is editing, for presence (live sessions send it; otherwise nothing to do). */
-  select(_target: string | null) {}
+  /** What this user is editing (a selected note or waypoint), shown to others as an outline (§11.6). */
+  select(target: string | null) {
+    this.selected = target;
+    this.sendLive({ type: "presence", editing: target, floor: null });
+  }
+
+  /** A drag in progress, shown to others at most 10 times a second and never stored. */
+  preview(ops: PlanOp[]) {
+    const now = Date.now();
+    if (now - this.lastPreview < 100) return;
+    this.lastPreview = now;
+    this.sendLive({ type: "preview", ops });
+  }
+
+  private sendLive(message: unknown) {
+    if (this.socket?.readyState === 1) this.socket.send(JSON.stringify(message));
+  }
+
+  /**
+   * Opens the plan's live socket (§11.1): partysocket reconnects with backoff and passes the last rev,
+   * so a reconnect gets the ops it missed, or a snapshot. While it is open, batches go over it and
+   * nothing polls; while it is closed, the session falls back to HTTP.
+   */
+  connectLive() {
+    if (typeof window === "undefined" || this.socket) return;
+    const scheme = location.protocol === "https:" ? "wss:" : "ws:";
+    const url = () => {
+      const since = this.freshSnapshot || !this.confirmed ? -1 : this.confirmed.rev;
+      this.freshSnapshot = false;
+      return `${scheme}//${location.host}/api/plans/${this.planId}/live?since=${since}`;
+    };
+    const socket = new ReconnectingWebSocket(url, [], {
+      maxEnqueuedMessages: 0,
+      maxReconnectionDelay: MAX_BACKOFF_MS,
+      shouldReconnectOnClose: (event) => !FINAL_CLOSE_CODES.has(event.code),
+    });
+    this.socket = socket;
+    const ping = setInterval(() => {
+      if (socket.readyState === 1) socket.send("ping");
+    }, 30_000);
+    socket.addEventListener("message", (event) => {
+      if (event.data === "pong") return;
+      let message: ServerMessage;
+      try {
+        message = JSON.parse(String(event.data)) as ServerMessage;
+      } catch {
+        return;
+      }
+      void this.onLive(message);
+    });
+    socket.addEventListener("open", () => {
+      this.setOnline(true);
+      if (this.selected) this.sendLive({ type: "presence", editing: this.selected, floor: null });
+      this.notify();
+    });
+    socket.addEventListener("close", (event) => {
+      for (const resolve of this.pendingAcks.values()) resolve({ kind: "offline" });
+      this.pendingAcks.clear();
+      this.presence = [];
+      this.notify();
+      if (event.code === 4009) this.freshSnapshot = true;
+      if (event.code === 4003 || event.code === 4004 || event.code === 4001) {
+        clearInterval(ping);
+        void this.loseAccess(event.code === 4004 ? "The plan was deleted." : "You no longer have access to this plan.");
+      } else if (event.code === 4010) {
+        clearInterval(ping);
+      }
+    });
+  }
+
+  private async onLive(message: ServerMessage) {
+    switch (message.type) {
+      case "snapshot":
+        if (message.you.role === "anonymous") return;
+        this.presence = message.presence;
+        this.anonymous = message.anonymous;
+        await this.applyCatchUp({
+          snapshot: {
+            planId: this.planId,
+            rev: message.rev,
+            doc: message.doc,
+            role: message.you.role,
+            allowCopy: message.settings.allowCopy,
+            state: "active",
+            createdAt: message.createdAt,
+            updatedAt: message.updatedAt,
+            members: message.members,
+          },
+        });
+        void this.flush();
+        return;
+      case "ops":
+        this.previews.delete(message.actor.id ?? "");
+        await this.receive({ rev: message.rev, opId: message.opId, actor: message.actor, ops: message.ops });
+        return;
+      case "caught-up":
+        void this.flush();
+        return;
+      case "ack":
+        this.pendingAcks.get(message.opId)?.({ kind: "ack", rev: message.rev, catchUp: null });
+        this.pendingAcks.delete(message.opId);
+        return;
+      case "reject":
+        this.pendingAcks.get(message.opId)?.({ kind: "reject", code: message.code, message: message.message, details: message.details as Record<string, unknown> | undefined });
+        this.pendingAcks.delete(message.opId);
+        return;
+      case "preview":
+        if (message.actor.id) this.previews.set(message.actor.id, { ops: message.ops, at: Date.now() });
+        this.notify();
+        return;
+      case "presence":
+        this.presence = message.presence;
+        this.anonymous = message.anonymous;
+        this.notify();
+        return;
+      case "members":
+        if (this.confirmed) {
+          this.confirmed = { ...this.confirmed, members: message.members };
+          await this.persistConfirmed();
+        }
+        this.notify();
+        return;
+      case "settings":
+        if (this.confirmed) {
+          this.confirmed = { ...this.confirmed, allowCopy: message.allowCopy };
+          await this.persistConfirmed();
+        }
+        this.notify();
+        return;
+      case "notice":
+        this.notice(message.message);
+        return;
+    }
+  }
+
+  /** Over the socket when it is open (the reply is the ack or reject for this op id), otherwise HTTP. */
+  private sendBatch(batch: QueuedBatch, knownRev: number): Promise<SendResult> {
+    const socket = this.socket;
+    if (!socket || socket.readyState !== 1) return this.transport.send(batch, knownRev);
+    return new Promise((resolve) => {
+      const timer = setTimeout(() => {
+        this.pendingAcks.delete(batch.opId);
+        resolve({ kind: "offline" });
+      }, ACK_TIMEOUT_MS);
+      this.pendingAcks.set(batch.opId, (result) => {
+        clearTimeout(timer);
+        resolve(result);
+      });
+      socket.send(JSON.stringify({ type: "ops", opId: batch.opId, ops: batch.ops }));
+    });
+  }
 
   close() {
     this.closed = true;
     if (this.pollTimer) clearInterval(this.pollTimer);
     if (this.retryTimer) clearTimeout(this.retryTimer);
+    this.socket?.close(1000);
+    this.socket = null;
     this.transport.close();
   }
 
@@ -219,6 +391,19 @@ export class PlanSession {
         // It will come back refused, and be listed then.
       }
     }
+    // Others' drags in progress (live previews), shown but never stored.
+    const now = Date.now();
+    for (const [key, preview] of this.previews) {
+      if (now - preview.at > PREVIEW_TTL_MS) {
+        this.previews.delete(key);
+        continue;
+      }
+      try {
+        doc = applyOps(doc, preview.ops, { rev, by: key }).doc;
+      } catch {
+        this.previews.delete(key);
+      }
+    }
     return doc;
   }
 
@@ -254,6 +439,10 @@ export class PlanSession {
       canUndo: this.undoStack.length > 0,
       canRedo: this.redoStack.length > 0,
       error: this.error,
+      live: this.socket?.readyState === 1,
+      presence: this.presence,
+      anonymous: this.anonymous,
+      myKey: this.myKey(),
     };
     this.viewCache = { version: this.version, value };
     return value;
@@ -423,7 +612,7 @@ export class PlanSession {
     }
   }
 
-  private setOnline(online: boolean) {
+  protected setOnline(online: boolean) {
     if (this.online === online) return;
     this.online = online;
     this.notify();
@@ -467,7 +656,7 @@ export class PlanSession {
     this.notify();
   }
 
-  private async persistConfirmed() {
+  protected async persistConfirmed() {
     if (!this.confirmed) return;
     this.cached = { ...(this.cached ?? { planId: this.planId }), state: this.confirmed, lostAccess: false };
     await writePlan(this.db, this.cached);
@@ -501,7 +690,7 @@ export class PlanSession {
       while (this.queue.length > 0 && !this.closed && !this.conflict && this.confirmed) {
         const batch = this.queue[0];
         if (batch.madeAtRev < this.confirmed.rev) this.reportOverwrites(batch);
-        const result = await this.transport.send(batch, this.confirmed.rev);
+        const result = await this.sendBatch(batch, this.confirmed.rev);
         if (result.kind === "offline") {
           this.setOnline(false);
           this.scheduleRetry();
