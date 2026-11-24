@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "@/app/lib/navigation/image";
+import { trackUsage } from "@/app/lib/usage/track";
 import { useRef, useState } from "react";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, Download, Link2, LoaderCircle } from "lucide-react";
@@ -91,6 +92,7 @@ function ImportForm() {
     try {
       const fallback = gun.name.slice(0, MAX_BUILD_NAME_LENGTH);
       const created = createBuild(name.trim() || fallback, build.weaponId, build.root, build.ammoId);
+      trackUsage("build.import", { subject: build.weaponId });
       router.push(`/gun-builder/${created.id}`);
     } catch (reason) {
       setSaveError(reason instanceof Error ? reason.message : "Could not save this build.");

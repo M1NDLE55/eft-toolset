@@ -261,7 +261,8 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         gameMode: gameModeSchema,
       },
     },
-    async (query, { read }) => {
+    async (query, { read, noteSubject }) => {
+      noteSubject({ kind: "map", id: resolveMap(query.map).key });
       return describeMap(context, read, query);
     }
   );
@@ -306,8 +307,9 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         gameMode: gameModeSchema,
       },
     },
-    async ({ map, name, route, drawings, notes, layers, save, gameMode }, { read }) => {
+    async ({ map, name, route, drawings, notes, layers, save, gameMode }, { read, noteSubject }) => {
       const config = resolveMap(map);
+      noteSubject({ kind: "map", id: config.key });
       // Checked before any names are resolved, so an oversized plan costs nothing to refuse.
       const drawingPoints = drawings.reduce((total, drawing) => total + drawing.points.length, 0);
       if (drawingPoints > MAX_TOTAL_DRAWING_POINTS) {
@@ -429,10 +431,11 @@ export function registerRaidPlannerTools(server: McpServer, context: ToolContext
         gameMode: gameModeSchema,
       },
     },
-    async ({ link, gameMode }, { read }) => {
+    async ({ link, gameMode }, { read, noteSubject }) => {
       const source = await readablePlan(context, link);
       const plan = source.plan;
       const account = source.account;
+      noteSubject({ kind: "map", id: plan.mapKey });
       const config = mapConfigs.find((candidate) => candidate.key === plan.mapKey);
       let details: MapDetails | null = null;
       if (config) {

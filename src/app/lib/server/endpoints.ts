@@ -4,6 +4,8 @@ import { PROTECTED_RESOURCE_PATH, protectedResourceGet, protectedResourceOptions
 import sitemap, { sitemapXml } from "@/app/lib/seo/sitemap";
 import { robotsTxt } from "@/app/lib/seo/robots";
 import { questOgImage } from "@/app/quests/quest-og-image";
+import { postUsage } from "@/app/lib/usage/endpoint";
+import { getAdminStats, getDailyStats } from "@/app/lib/usage/admin";
 import { EDGE_TTL, EDGE_TTL_HEADER } from "./edge-cache";
 import { sharingEndpoint } from "@/app/lib/sharing/server/router";
 
@@ -19,6 +21,9 @@ const ROUTES: Record<string, Partial<Record<string, Handler>>> = {
   "/auth/sign-in": { GET: signIn, POST: signInWithIntent },
   "/auth/callback": { GET: authCallback },
   "/auth/dev-sign-in": { GET: devSignIn },
+  "/api/usage": { POST: postUsage },
+  "/api/admin/stats": { GET: getAdminStats },
+  "/api/admin/stats/daily": { GET: getDailyStats },
   "/sitemap.xml": {
     GET: async () =>
       new Response(sitemapXml(await sitemap()), {

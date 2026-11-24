@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useEffectEvent, useMemo, useState, type ReactNode } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { ArrowLeft, Pencil } from "lucide-react";
 import type { GamePoint, MapConfig, PlanTool, RaidPlan } from "@/app/lib/raid-planner/types";
@@ -69,6 +70,11 @@ export function PlanEditor({ storedPlan, config, session }: { storedPlan: RaidPl
 
   const plan = session?.plan ?? draft ?? storedPlan;
   const readOnly = session?.readOnly ?? false;
+
+  useEffect(() => {
+    trackUsage("plan.open", { subject: config.key });
+  }, [storedPlan.id, config.key]);
+
   const layerGroups = useMemo(() => (details ? getLayerGroups(details, config) : null), [details, config]);
   const enabledSet = useMemo(() => new Set(plan.enabledLayers), [plan.enabledLayers]);
   const selectedNote = plan.notes.find((note) => note.id === selectedNoteId) ?? null;

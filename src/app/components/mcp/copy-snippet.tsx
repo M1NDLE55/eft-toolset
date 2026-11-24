@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import { Check, ClipboardCopy } from "lucide-react";
 import { copyText } from "@/app/lib/browser/clipboard";
 import { MCP_PATH } from "@/app/lib/mcp/catalog";
@@ -34,7 +35,10 @@ export function CopySnippet({ template, label }: { template: string; label: stri
         type="button"
         onClick={() =>
           void copyText(text).then(
-            () => setStatus("copied"),
+            () => {
+              setStatus("copied");
+              trackUsage("mcp.setup_copy");
+            },
             () => setStatus("failed")
           )
         }

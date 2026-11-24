@@ -192,10 +192,11 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ weapon: reference, gameMode, priceSources: prices }, { read }) => {
+    async ({ weapon: reference, gameMode, priceSources: prices }, { read, noteSubject }) => {
       const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const notes: string[] = [];
       const weapon = resolveWeapon(data, reference, notes);
+      noteSubject({ kind: "weapon", id: weapon.id });
       let defaultPreset = null;
       if (weapon.defaultPresetId) {
         const contents = await read(() => getPreset(gameMode, weapon.defaultPresetId!));
@@ -260,9 +261,10 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, slotPath, query, sortBy, buyableOnly, limit, offset, gameMode, priceSources: prices }, { read }) => {
+    async ({ build: input, slotPath, query, sortBy, buyableOnly, limit, offset, gameMode, priceSources: prices }, { read, noteSubject }) => {
       const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const build = await resolveBuild(data, await expandBuildInput(context, input));
+      noteSubject({ kind: "weapon", id: build.weaponId });
       const target = resolveSlotPath(build.root, data.lookup, slotPath);
       const installed = installedOutside(build.root, target.current);
       let candidates = Array.from(new Set(target.slot.allowedItemIds)).flatMap((id) => {
@@ -327,9 +329,10 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, sortBy, buyableOnly, limit, offset, gameMode, priceSources: prices }, { read }) => {
+    async ({ build: input, sortBy, buyableOnly, limit, offset, gameMode, priceSources: prices }, { read, noteSubject }) => {
       const { data, sources: priceSources, limits } = await loadBuildPricing(read, gameMode, prices);
       const build = await resolveBuild(data, await expandBuildInput(context, input));
+      noteSubject({ kind: "weapon", id: build.weaponId });
       const options = ammoOptions(build.root, data.lookup);
       const ammoIds = build.ammoId && !options.ids.includes(build.ammoId) ? [...options.ids, build.ammoId] : options.ids;
       const loaded = await data.loadAmmo(ammoIds);
@@ -375,10 +378,11 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, includeShoppingList, includeDiscordText, saveTo, gameMode, priceSources: prices }, { read }) => {
+    async ({ build: input, includeShoppingList, includeDiscordText, saveTo, gameMode, priceSources: prices }, { read, noteSubject }) => {
       const pricing = await loadBuildPricing(read, gameMode, prices);
       const { data, sources: priceSources, limits } = pricing;
       const build = await resolveBuild(data, await expandBuildInput(context, input));
+      noteSubject({ kind: "weapon", id: build.weaponId });
       const description = await describeBuild(context, pricing, build);
       const saved = saveTo ? await saveBuildTo(context, saveTo, build) : null;
       const list =
@@ -446,10 +450,11 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ build: input, changes, saveTo, gameMode, priceSources: prices }, { read }) => {
+    async ({ build: input, changes, saveTo, gameMode, priceSources: prices }, { read, noteSubject }) => {
       const pricing = await loadBuildPricing(read, gameMode, prices);
       const { data, sources: priceSources } = pricing;
       const build = await resolveBuild(data, await expandBuildInput(context, input));
+      noteSubject({ kind: "weapon", id: build.weaponId });
       const bought = await purchaseContext(pricing, build.weaponId);
       const applied: string[] = [];
       let root = build.root;
@@ -564,11 +569,12 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         gameMode,
         priceSources: prices,
       },
-      { read }
+      { read, noteSubject }
     ) => {
       const pricing = await loadBuildPricing(read, gameMode, prices);
       const { data, sources: priceSources } = pricing;
       const build = await resolveBuild(data, await expandBuildInput(context, input));
+      noteSubject({ kind: "weapon", id: build.weaponId });
       const target = slotPath ? resolveSlotPath(build.root, data.lookup, slotPath) : null;
       const bought = await purchaseContext(pricing, build.weaponId);
       const result = await runOptimizer(
@@ -646,13 +652,14 @@ export function registerGunBuilderTools(server: McpServer, context: ToolContext)
         priceSources: priceSourcesSchema,
       },
     },
-    async ({ left: leftInput, right: rightInput, includeUnchangedSlots, gameMode, priceSources: prices }, { read }) => {
+    async ({ left: leftInput, right: rightInput, includeUnchangedSlots, gameMode, priceSources: prices }, { read, noteSubject }) => {
       const pricing = await loadBuildPricing(read, gameMode, prices);
       const { data, sources: priceSources } = pricing;
       const [left, right] = await Promise.all([
         resolveBuild(data, await expandBuildInput(context, leftInput)),
         resolveBuild(data, await expandBuildInput(context, rightInput)),
       ]);
+      noteSubject({ kind: "weapon", id: left.weaponId });
       const [leftBought, rightBought] = await Promise.all([
         purchaseContext(pricing, left.weaponId),
         purchaseContext(pricing, right.weaponId),

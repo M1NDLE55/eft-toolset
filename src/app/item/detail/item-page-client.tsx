@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import LoadingSkeleton from "@/app/components/item/loading-skeleton";
 import SimpleError from "@/app/components/global/error/simple-error";
 import { primeItem, useItem } from "@/app/lib/cache/hooks";
@@ -47,6 +48,11 @@ export function ItemPageClient({
   useEffect(() => {
     if (liveItem && livePrice !== null) void recordPrices(gameMode, [{ name: liveItem.name, price: livePrice }]);
   }, [gameMode, liveItem, livePrice]);
+
+  const itemId = item?.id;
+  useEffect(() => {
+    if (itemId) trackUsage("item.view", { subject: itemId, gameMode });
+  }, [itemId, gameMode]);
 
   useEffect(() => {
     if (!item) return;

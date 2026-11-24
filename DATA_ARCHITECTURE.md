@@ -892,7 +892,10 @@ The site is a TanStack Start app on one Cloudflare Worker (`src/server.ts`, `wra
 - **Static assets** (`ASSETS`): the client build, the prerendered pages, the data snapshot under
   `/_data` (refused to the public through `run_worker_first`), and `_headers`.
 - **KV** (`TARKOV_DATA`): shared tarkov.dev copies and the price feed.
-- **Durable Objects** (`USER`, `PLAN`, `LINK`, `MODERATION`): see above.
+- **Durable Objects** (`USER`, `PLAN`, `LINK`, `MODERATION`): see above. `USAGE_SALT` (one
+  instance) holds the rotating keys behind the anonymous usage-stats ids.
+- **Analytics Engine** (`USAGE`, dataset `eft_toolset_usage`): anonymous usage events, read by the
+  admin dashboard through the SQL API. See USAGE_STATS.md.
 - **Rate limiting** (`MCP_IP_LIMITER`, `WEB_IP_LIMITER`: 600 requests a minute per IP each;
   `SHARE_IP_LIMITER`: 120 a minute for /s/ opens; `INVITE_IP_LIMITER`, `SOCKET_IP_LIMITER` and
   `LINK_IP_LIMITER`: 30 a minute for invites, live connections and link creation).

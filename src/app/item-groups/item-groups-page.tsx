@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "@/app/lib/navigation/image";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { ChevronRight, Plus } from "lucide-react";
@@ -38,7 +39,11 @@ export function ItemGroupsPage() {
           description="Name your new item group."
           submitLabel="Create"
           maxLength={MAX_GROUP_NAME_LENGTH}
-          onSubmit={(name) => router.push(`/item-groups/${customEncodeURI(createGroup(name))}`)}
+          onSubmit={(name) => {
+            const created = createGroup(name);
+            trackUsage("group.create");
+            router.push(`/item-groups/${customEncodeURI(created)}`);
+          }}
         />
       </div>
 

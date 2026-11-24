@@ -20,6 +20,8 @@ import { readCookie, setCookie } from "@/app/lib/server/cookies";
 import { accountCacheKey, linkKeys } from "@/app/lib/sharing/server/secrets";
 import { DEV_USER_COOKIE, devAuthEnabled, devUserId } from "@/app/lib/sharing/server/session";
 import { SIGNED_IN_COOKIE } from "./cookies";
+import { clientIp } from "@/app/lib/api/rate-limit";
+import { recordUsage, requestCountry, requestIdentity } from "@/app/lib/usage/record";
 
 // The website account routes. Only these touch sessions, so every page stays cacheable and never
 // reads cookies. See DATA_ARCHITECTURE.md ("Website accounts").
@@ -137,7 +139,13 @@ export async function authCallback(request: Request) {
     setCookie(response.headers, STATE_COOKIE, "", { path: "/auth/callback", maxAge: 0 });
     return response;
   };
-  const done = (outcome: "signed-in" | "error" | "busy") => clear(redirect(new URL(`/settings?account=${outcome}#account`, origin)));
+  // Anonymous: whether sign-in worked, under the day's hashed id, never who signed in.
+  const record = (outcome: "ok" | "error", userId?: string) =>
+    recordUsage({ name: "account.sign_in", outcome, country: requestCountry(request) }, requestIdentity(request, clientIp(request), userId));
+  const done = (outcome: "error" | "busy") => {
+    if (outcome === "error") record("error");
+    return clear(redirect(new URL(`/settings?account=${outcome}#account`, origin)));
+  };
   const password = statePassword();
   if ((!config && !devAuthEnabled()) || !password) return done("error");
   if ((await accountRateLimited(request)) !== null) return done("busy");
@@ -149,6 +157,7 @@ export async function authCallback(request: Request) {
 
   const devUser = devUserId(params.get("dev_user"));
   if (devUser) {
+    record("ok", devUser);
     const response = clear(redirect(await landing(request, devUser, expected)));
     setCookie(response.headers, DEV_USER_COOKIE, devUser.slice("user_dev_".length), { path: "/", sameSite: "lax", httpOnly: true, maxAge: 86_400 });
     setCookie(response.headers, SIGNED_IN_COOKIE, "1", { path: "/", sameSite: "lax", maxAge: 86_400 });
@@ -168,6 +177,7 @@ export async function authCallback(request: Request) {
     console.error("Sign-in could not be completed", error);
     return done("error");
   }
+  record("ok", auth.user.id);
   return setSessionCookies(clear(redirect(await landing(request, auth.user.id, expected))), auth.sealedSession);
 }
 
@@ -211,10 +221,15 @@ export async function deleteAccount(request: Request) {
     if (session.kind === "signed_out") return setSessionCookies(json({ error: "You're not signed in." }, 401), null);
     userId = session.userId;
   }
+  const subject = userId;
+  // Anonymous: whether the deletion went through, never whose account it was.
+  const recordDeletion = (outcome: "ok" | "error") =>
+    recordUsage({ name: "account.delete", outcome, country: requestCountry(request) }, requestIdentity(request, clientIp(request), subject));
   const env = platform().durable;
   try {
     if (env) {
       const result = await runAccountDeletion(env, userId);
+      recordDeletion("ok");
       const response = setSessionCookies(json({ deleted: result === "done", pending: result === "pending" }, 202), null);
       if (devUser) setCookie(response.headers, DEV_USER_COOKIE, "", { path: "/", maxAge: 0 });
       return response;
@@ -223,8 +238,10 @@ export async function deleteAccount(request: Request) {
     await workosClient(config!).userManagement.deleteUser(userId);
   } catch (error) {
     console.error("Account could not be deleted", error);
+    recordDeletion("error");
     return json({ error: "Your account couldn't be deleted. Try again." }, 502);
   }
+  recordDeletion("ok");
   return setSessionCookies(json({ deleted: true }), null);
 }
 

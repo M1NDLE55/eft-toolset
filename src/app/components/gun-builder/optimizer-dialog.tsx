@@ -22,6 +22,8 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { formatRub } from "./format";
+import { durationBucket } from "@/app/lib/usage/catalog";
+import { trackUsage } from "@/app/lib/usage/track";
 import { StatDeltaTable } from "./stat-deltas";
 import { DiffList } from "./diff-list";
 
@@ -147,6 +149,14 @@ export function OptimizerDialog({
     controller.current = active;
     const base = build.root;
     setPhase({ status: "loading", loaded: 0 });
+    const startedAt = performance.now();
+    const track = (outcome: "ok" | "error") =>
+      trackUsage("build.optimize", {
+        subject: build.weaponId,
+        gameMode,
+        outcome,
+        duration: durationBucket(performance.now() - startedAt),
+      });
     try {
       const graph = await loadCompatibilityGraph(collectItemIds(base), gameMode, {
         signal: active.signal,
@@ -193,8 +203,10 @@ export function OptimizerDialog({
         truncated: graph.truncated,
         goal,
       });
+      track("ok");
     } catch (reason) {
       if (active.signal.aborted) return;
+      track("error");
       setPhase({
         status: "error",
         message: reason instanceof Error ? reason.message : "The optimiser could not finish.",

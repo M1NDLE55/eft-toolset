@@ -26,6 +26,10 @@ export interface Platform {
   trustedClientIpHeader?: string;
   /** Converts an image, scaled to fit the box and never enlarged (Cloudflare Images in the Worker). */
   convertImage?: (bytes: Uint8Array, options: { width: number; height: number; format: "image/png" }) => Promise<Uint8Array | null>;
+  /** Writes one anonymous usage-stats row (Workers Analytics Engine in the Worker); absent elsewhere. */
+  writeUsage?: (point: { indexes: [string]; blobs: string[] }) => void;
+  /** The current day's or week's key for the anonymous usage ids (UsageSaltDO); absent elsewhere. */
+  usageSecret?: (kind: "day" | "week") => Promise<{ period: string; secret: string; expiresAt: number }>;
 }
 
 /**

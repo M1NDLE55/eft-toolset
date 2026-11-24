@@ -6,6 +6,7 @@ import type { GunBuild } from "@/app/lib/types/gunBuilder";
 import { encodeBuildSharePayload, slugifyBuildName } from "@/app/lib/builds/share";
 import { countParts } from "@/app/lib/builds/tree";
 import { copyText } from "@/app/lib/browser/clipboard";
+import { trackUsage } from "@/app/lib/usage/track";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useAccountView } from "@/app/lib/account-sync/account-session";
@@ -62,6 +63,7 @@ export function ShareBuild({ build }: { build: GunBuild }) {
     if (!url) return;
     try {
       await copyText(url);
+      trackUsage("build.share", { subject: build.weaponId });
       setCopied(true);
       setNotice("Link copied to clipboard.");
       window.setTimeout(() => setCopied(false), 2000);
@@ -74,6 +76,7 @@ export function ShareBuild({ build }: { build: GunBuild }) {
     if (!url) return;
     try {
       await navigator.share({ title: build.name, url });
+      trackUsage("build.share", { subject: build.weaponId });
     } catch (reason) {
       if (!(reason instanceof DOMException && reason.name === "AbortError")) {
         setNotice(reason instanceof Error ? reason.message : "Could not share the link.");

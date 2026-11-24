@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useRouter as useTanStackRouter, type ErrorComponentProps } from "@tanstack/react-router";
 import Link from "@/app/lib/navigation/link";
+import { usageRoute } from "@/app/lib/usage/catalog";
+import { trackUsage } from "@/app/lib/usage/track";
 
 /** The page for an unknown URL or a missing item, quest, map or build (HTTP 404). */
 export function NotFoundPage() {
@@ -32,7 +34,10 @@ export function RouteErrorPage({ error, reset }: ErrorComponentProps) {
   const router = useTanStackRouter();
   useEffect(() => {
     console.error(error);
-  }, [error]);
+    // Only which page failed (its route pattern); the error itself stays in the console.
+    const matches = router.state.matches;
+    trackUsage("page.error", { route: usageRoute(matches[matches.length - 1]?.routeId ?? "other") });
+  }, [error, router]);
 
   return (
     <main className="flex justify-center flex-col gap-6 items-center p-4 flex-1">

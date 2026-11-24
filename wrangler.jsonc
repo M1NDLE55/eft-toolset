@@ -37,13 +37,17 @@
       { "name": "USER", "class_name": "UserDO" },
       { "name": "PLAN", "class_name": "PlanDO" },
       { "name": "LINK", "class_name": "LinkDO" },
-      { "name": "MODERATION", "class_name": "ModerationDO" }
+      { "name": "MODERATION", "class_name": "ModerationDO" },
+      // One instance: the rotating keys behind the anonymous usage ids (src/app/lib/usage/salt-store.ts).
+      { "name": "USAGE_SALT", "class_name": "UsageSaltDO" }
     ]
   },
   "migrations": [
     { "tag": "v1", "new_sqlite_classes": ["UserDO", "PlanDO"] },
     // Sharing: link-code routes and the report queue.
-    { "tag": "v2", "new_sqlite_classes": ["LinkDO", "ModerationDO"] }
+    { "tag": "v2", "new_sqlite_classes": ["LinkDO", "ModerationDO"] },
+    // Usage stats: the rotating salt behind the anonymous usage ids.
+    { "tag": "usage-v1", "new_sqlite_classes": ["UsageSaltDO"] }
   ],
   "ratelimits": [
     {
@@ -84,6 +88,14 @@
     }
   ],
   "images": { "binding": "IMAGES" },
+  "analytics_engine_datasets": [
+    {
+      // Anonymous usage stats (src/app/lib/usage, USAGE_STATS.md). The dataset is created on the
+      // first write; the admin dashboard reads it through the SQL API.
+      "binding": "USAGE",
+      "dataset": "eft_toolset_usage"
+    }
+  ],
   "triggers": {
     // Every minute: the price feed; the other datasets refresh when their freshness runs out.
     "crons": ["* * * * *"]

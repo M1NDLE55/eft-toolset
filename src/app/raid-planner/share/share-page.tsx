@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { trackUsage } from "@/app/lib/usage/track";
 import Link from "@/app/lib/navigation/link";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { AlertTriangle, Download, MapPin, MoveUpRight, Route, StickyNote } from "lucide-react";
@@ -78,7 +79,10 @@ export function SharedPlanPage() {
     setImporting(true);
     setImportError("");
     savePlanCopy(shared)
-      .then((url) => router.replace(url))
+      .then((url) => {
+        trackUsage("plan.create", { subject: shared.mapKey });
+        router.replace(url);
+      })
       .catch((reason: unknown) => {
         setImporting(false);
         setImportError(reason instanceof Error ? reason.message : "Could not import this plan.");

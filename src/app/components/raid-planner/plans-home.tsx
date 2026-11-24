@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "@/app/lib/navigation/link";
+import { trackUsage } from "@/app/lib/usage/track";
 import { useRef, useState, type DragEvent } from "react";
 import { useRouter } from "@/app/lib/navigation/hooks";
 import { Copy, Download, FileUp, Map as MapIcon, Plus, Trash2 } from "lucide-react";
@@ -111,6 +112,7 @@ export function PlansHome() {
     setNotice("");
     startPlan(createName.trim() || `${config.name} raid`, config.key, getDefaultLayers(config, null))
       .then((url) => {
+        trackUsage("plan.create", { subject: config.key });
         setCreateOpen(false);
         setActionError("");
         router.push(url);

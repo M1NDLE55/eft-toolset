@@ -33,6 +33,11 @@ export function DisclaimerPage() {
         ),
       },
       {
+        heading: "Anonymous Usage Stats",
+        content:
+          "To learn which tools, weapons, maps and items people use, the website and our AI assistant (MCP) tools record anonymous events: what was done (such as running the optimiser or opening a map), which tool, weapon, map or item it was about, PVP or PVE, whether it worked, roughly how long it took, the kind of page (never its full address), and your country. We never record your name, email, account id, IP address or anything you type, and we set no tracking cookies. To count unique visitors, each event carries an ID made by scrambling your account id, or your IP address and browser when you're signed out, with a secret key that is replaced and deleted every day (and a weekly one that works the same way), so the ID can't be traced back to you. If your browser sends Global Privacy Control or Do Not Track, the website sends no events. Events are kept for three months. Page views are also counted by Cloudflare Web Analytics, which uses no cookies.",
+      },
+      {
         heading: "No Affiliation with Battlestate Games",
         content:
           "EFT Toolset is an unofficial, fan-made website and is not endorsed, supported, or affiliated with Battlestate Games, the developers of Escape From Tarkov. Any trademarks, logos, or brand names mentioned on this site are the property of their respective owners and are used for identification purposes only.",
