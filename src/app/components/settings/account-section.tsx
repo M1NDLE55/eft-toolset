@@ -109,6 +109,7 @@ export function AccountSection() {
       const body = (await response.json()) as { error?: string };
       announceAccountChange();
       if (!response.ok) throw new Error(body.error ?? "Your account couldn't be deleted. Try again.");
+      await signOutOfAccountCache();
       setState({ kind: "signed_out" });
       setNotice({ tone: "ok", text: "Your account was deleted." });
     } catch (reason) {
@@ -190,7 +191,9 @@ export function AccountSection() {
           <BrowserData />
           <div className="flex flex-col gap-2 border-t border-[#1a1a1a] pt-4">
             <p className="text-xs text-[#888]">
-              Deleting your account signs you out everywhere and ends your AI assistants&apos; access. Your data in this browser is kept.
+              Deleting your account signs you out everywhere, ends your AI assistants&apos; access, and deletes your account&apos;s builds, item
+              groups and links. Plans you own pass to their next member, or are deleted if no one else is in them. Data in this browser is
+              kept.
             </p>
             <ConfirmDialog
               trigger={
@@ -199,7 +202,7 @@ export function AccountSection() {
                 </Button>
               }
               title="Delete your account?"
-              description="Your EFT Toolset account is deleted and your AI assistants lose access. Groups, builds and plans in this browser are kept. This cannot be undone."
+              description="Your EFT Toolset account, its builds, item groups and links are deleted, and your AI assistants lose access. Plans you own pass to their next member or are deleted. Data in this browser is kept. Deleted data may stay recoverable for up to 30 days. This cannot be undone."
               confirmLabel="Delete account"
               onConfirm={() => void deleteAccount()}
             />

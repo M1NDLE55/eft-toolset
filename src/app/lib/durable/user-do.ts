@@ -79,9 +79,20 @@ export class UserDO extends DurableObject<Env> {
   }
 
   async alarm() {
+    if (this.store.isDeleting()) {
+      // Resume an account deletion that failed partway (§14.4).
+      const { runAccountDeletion } = await import("@/app/lib/sharing/server/account-deletion");
+      await runAccountDeletion(this.env as never, this.userId);
+      return;
+    }
     this.store.sweep();
     await drainOutbox(this.env, this.store);
     await this.schedule();
+  }
+
+  /** A deletion step failed: try again in a minute, with the alarm. */
+  async retryDeletionLater() {
+    await this.ctx.storage.setAlarm(Date.now() + 60_000);
   }
 
   // Budgets (MCP) and rates

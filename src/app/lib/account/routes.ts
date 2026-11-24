@@ -3,6 +3,8 @@ import { DEFAULT_RETURN_PATH, safeReturnPath } from "@/app/lib/sharing/return-pa
 import { sealState, unsealState, type SignInIntent, type SignInState } from "./sealed-state";
 import { verifyLinkCode } from "@/app/lib/sharing/link-code";
 import { finishIntent } from "@/app/lib/sharing/server/intents";
+import { runAccountDeletion } from "@/app/lib/sharing/server/account-deletion";
+import { platform } from "@/app/lib/server/platform";
 import {
   accountConfig,
   accountRateLimited,
@@ -188,19 +190,37 @@ export async function getAccount(request: Request) {
   return session.sealedSession ? setSessionCookies(response, session.sealedSession) : response;
 }
 
-/** DELETE /api/account: deletes the signed-in user from WorkOS, which also ends their AI assistants' access. */
+/**
+ * DELETE /api/account: deletes the signed-in account (§14.4): its library and links, its plans (each
+ * passes to its next member, or is deleted), its memberships, and the WorkOS user, which also ends
+ * its AI assistants' access. Answers 202 once the account is marked; a step that fails is retried by
+ * the account's alarm.
+ */
 export async function deleteAccount(request: Request) {
-  const config = accountConfig();
-  if (!config) return json({ error: "Accounts are off." }, 404);
   if (!isSameOriginRequest(request)) return json({ error: "Forbidden." }, 403);
+  const devUser = devUserId(readCookie(request, DEV_USER_COOKIE));
+  const config = accountConfig();
+  if (!config && !devUser) return json({ error: "Accounts are off." }, 404);
   const retryAfter = await accountRateLimited(request);
   if (retryAfter !== null) return json({ error: "Too many requests." }, 429, { "Retry-After": String(retryAfter) });
 
-  const session = await readSession(readCookie(request, SESSION_COOKIE), config);
-  if (session.kind === "unavailable") return json({ error: "Your account can't be checked right now." }, 503);
-  if (session.kind === "signed_out") return setSessionCookies(json({ error: "You're not signed in." }, 401), null);
+  let userId = devUser;
+  if (!userId) {
+    const session = await readSession(readCookie(request, SESSION_COOKIE), config!);
+    if (session.kind === "unavailable") return json({ error: "Your account can't be checked right now." }, 503);
+    if (session.kind === "signed_out") return setSessionCookies(json({ error: "You're not signed in." }, 401), null);
+    userId = session.userId;
+  }
+  const env = platform().durable;
   try {
-    await workosClient(config).userManagement.deleteUser(session.userId);
+    if (env) {
+      const result = await runAccountDeletion(env, userId);
+      const response = setSessionCookies(json({ deleted: result === "done", pending: result === "pending" }, 202), null);
+      if (devUser) setCookie(response.headers, DEV_USER_COOKIE, "", { path: "/", maxAge: 0 });
+      return response;
+    }
+    // No Durable Objects here (tests, scripts): only the WorkOS user exists.
+    await workosClient(config!).userManagement.deleteUser(userId);
   } catch (error) {
     console.error("Account could not be deleted", error);
     return json({ error: "Your account couldn't be deleted. Try again." }, 502);
