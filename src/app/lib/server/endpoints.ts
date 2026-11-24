@@ -1,5 +1,5 @@
 import { GET as tarkovGet, POST as tarkovPost } from "@/app/lib/api/tarkov-route";
-import { authCallback, deleteAccount, devSignIn, getAccount, signIn, signOut } from "@/app/lib/account/routes";
+import { authCallback, deleteAccount, devSignIn, getAccount, signIn, signInWithIntent, signOut } from "@/app/lib/account/routes";
 import { PROTECTED_RESOURCE_PATH, protectedResourceGet, protectedResourceOptions } from "@/app/lib/mcp/protected-resource";
 import sitemap, { sitemapXml } from "@/app/lib/seo/sitemap";
 import { robotsTxt } from "@/app/lib/seo/robots";
@@ -16,7 +16,7 @@ const ROUTES: Record<string, Partial<Record<string, Handler>>> = {
   "/api/tarkov": { GET: tarkovGet, POST: tarkovPost },
   "/api/account": { GET: getAccount, DELETE: deleteAccount },
   "/api/account/sign-out": { POST: signOut },
-  "/auth/sign-in": { GET: signIn },
+  "/auth/sign-in": { GET: signIn, POST: signInWithIntent },
   "/auth/callback": { GET: authCallback },
   "/auth/dev-sign-in": { GET: devSignIn },
   "/sitemap.xml": {

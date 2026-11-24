@@ -33,6 +33,8 @@ import {
 import { MAX_GROUP_ITEMS, MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
 import { cn } from "@/lib/utils";
 import { ItemRundownLink } from "@/app/components/item/rundown/rundown-link";
+import { ShareGroup } from "@/app/components/sharing/share-group";
+import { useAccountView } from "@/app/lib/account-sync/account-session";
 
 type SortKey = "order" | "name" | "price" | "slot";
 
@@ -85,6 +87,7 @@ export function GroupPage() {
   const router = useRouter();
   const routeName = customDecodeURI(useParams<{ group: string }>().group);
   const groups = useGroups();
+  const account = useAccountView();
   const hydrated = useHydrated();
   const group = findGroup(groups, routeName);
   const names = group?.items ?? [];
@@ -167,6 +170,8 @@ export function GroupPage() {
             onSubmit={(name) => router.replace(`/item-groups/${customEncodeURI(renameGroup(group.name, name))}`)}
           />
         </div>
+        <div className="flex gap-2">
+        <ShareGroup name={group.name} />
         <ConfirmDialog
           trigger={
             <Button variant="outline" className="text-red-300 hover:text-red-200">
@@ -174,7 +179,7 @@ export function GroupPage() {
             </Button>
           }
           title={`Delete “${group.name}”?`}
-          description="This permanently removes the group from this browser."
+          description={account ? "This removes the group from your account on every device." : "This permanently removes the group from this browser."}
           confirmLabel="Delete group"
           onConfirm={() =>
             run(() => {
@@ -183,6 +188,7 @@ export function GroupPage() {
             })
           }
         />
+        </div>
       </div>
 
       <ItemSearch

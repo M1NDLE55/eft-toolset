@@ -4,6 +4,7 @@ import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vite
 import { authCallback as callback, deleteAccount, getAccount, signIn, signOut } from "@/app/lib/account/routes";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
 import { SESSION_COOKIE, SIGNED_IN_COOKIE, STATE_COOKIE } from "@/app/lib/account/cookies";
+import { unsealState } from "@/app/lib/account/sealed-state";
 
 const CLIENT_ID = "client_test";
 const API = "https://api.workos.com";
@@ -106,11 +107,15 @@ function setCookies(response: Response) {
   return { get: (name: string) => parsed.get(name) };
 }
 
+/** The AuthKit state from a sign-in redirect, and the sealed cookie that carries it. */
+function started(response: Response) {
+  return { state: new URL(response.headers.get("location")!).searchParams.get("state")!, cookie: setCookies(response).get(STATE_COOKIE)!.value };
+}
+
 /** Signs in through the routes and returns the session cookie value. */
 async function signedInSession() {
-  const started = await signIn(request("/auth/sign-in"));
-  const state = setCookies(started).get(STATE_COOKIE)!.value;
-  const finished = await callback(request(`/auth/callback?code=code_01&state=${state}`, { cookies: { [STATE_COOKIE]: state } }));
+  const { state, cookie } = started(await signIn(request("/auth/sign-in")));
+  const finished = await callback(request(`/auth/callback?code=code_01&state=${state}`, { cookies: { [STATE_COOKIE]: cookie } }));
   return setCookies(finished).get(SESSION_COOKIE)!.value;
 }
 
@@ -158,8 +163,10 @@ describe("accounts on", () => {
     expect(location.searchParams.get("redirect_uri")).toBe("http://localhost:3000/auth/callback");
     expect(location.searchParams.get("screen_hint")).toBe("sign-up");
     const state = setCookies(response).get(STATE_COOKIE)!;
-    expect(location.searchParams.get("state")).toBe(state.value);
-    expect(state).toMatchObject({ httpOnly: true, path: "/auth/callback", sameSite: "lax" });
+    // The cookie is sealed: it carries the state (and any return path or intent) unreadably.
+    expect(state.value).not.toContain(location.searchParams.get("state"));
+    expect((await unsealState(state.value, COOKIE_PASSWORD))?.state).toBe(location.searchParams.get("state"));
+    expect(state).toMatchObject({ httpOnly: true, path: "/auth/callback", sameSite: "lax", maxAge: 600 });
   });
 
   it("returns production sign-ins to the canonical site, or to APP_ORIGIN when a deployment sets it", async () => {
@@ -176,6 +183,26 @@ describe("accounts on", () => {
     expect(await redirectUri("http://localhost:5173/auth/sign-in")).toBe("http://localhost:5173/auth/callback");
   });
 
+  it("returns to an allowlisted page after sign-in, and to Settings for anything else", async () => {
+    const landing = async (path: string) => {
+      const { state, cookie } = started(await signIn(request(`/auth/sign-in?return=${encodeURIComponent(path)}`)));
+      return (await callback(request(`/auth/callback?code=code_01&state=${state}`, { cookies: { [STATE_COOKIE]: cookie } }))).headers.get("location");
+    };
+    expect(await landing("/gun-builder/abc?tab=parts#frag")).toBe("http://localhost:3000/gun-builder/abc?tab=parts");
+    expect(await landing("//evil.example/steal")).toBe("http://localhost:3000/settings?account=signed-in#account");
+    expect(await landing("https://evil.example")).toBe("http://localhost:3000/settings?account=signed-in#account");
+    expect(await landing("/admin/reports")).toBe("http://localhost:3000/settings?account=signed-in#account");
+  });
+
+  it("refuses a callback whose state cookie was altered or replayed with another state", async () => {
+    const { state, cookie } = started(await signIn(request("/auth/sign-in")));
+    const altered = cookie.slice(0, -2) + (cookie.endsWith("AA") ? "BB" : "AA");
+    for (const [param, value] of [[state, altered], ["other", cookie]]) {
+      const response = await callback(request(`/auth/callback?code=code_01&state=${param}`, { cookies: { [STATE_COOKIE]: value } }));
+      expect(response.headers.get("location")).toBe("http://localhost:3000/settings?account=error#account");
+    }
+  });
+
   it("refuses a callback whose state doesn't match the cookie", async () => {
     for (const cookies of [{}, { [STATE_COOKIE]: "other" }] as Record<string, string>[]) {
       const response = await callback(request("/auth/callback?code=code_01&state=mine", { cookies }));
@@ -186,9 +213,8 @@ describe("accounts on", () => {
   });
 
   it("signs in: seals the session in an httpOnly cookie, sets the readable hint, and shows the account", async () => {
-    const started = await signIn(request("/auth/sign-in"));
-    const state = setCookies(started).get(STATE_COOKIE)!.value;
-    const finished = await callback(request(`/auth/callback?code=code_01&state=${state}`, { cookies: { [STATE_COOKIE]: state } }));
+    const { state, cookie } = started(await signIn(request("/auth/sign-in")));
+    const finished = await callback(request(`/auth/callback?code=code_01&state=${state}`, { cookies: { [STATE_COOKIE]: cookie } }));
     expect(finished.headers.get("location")).toBe("http://localhost:3000/settings?account=signed-in#account");
     const session = setCookies(finished).get(SESSION_COOKIE)!;
     expect(session).toMatchObject({ httpOnly: true, sameSite: "lax", path: "/" });

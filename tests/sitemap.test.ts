@@ -117,7 +117,8 @@ describe("robots.txt", () => {
     const groupFor = (agent: string) => groups.find((group) => [group.userAgent].flat().includes(agent));
     for (const agent of ["Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Claude-SearchBot", "*"]) {
       expect(groupFor(agent)?.allow, agent).toBe("/");
-      expect(groupFor(agent)?.disallow, agent).toBeUndefined();
+      // Shared links, invites and members' plans are unlisted (§16.1).
+      expect(groupFor(agent)?.disallow, agent).toEqual(["/s/", "/join", "/raid-planner/p/"]);
     }
     for (const agent of ["GPTBot", "CCBot", "Bytespider", "ClaudeBot", "Google-Extended", "AhrefsBot", "SemrushBot", "MJ12bot", "DotBot"]) {
       expect(groupFor(agent)?.disallow, agent).toBe("/");

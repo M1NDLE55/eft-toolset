@@ -1,3 +1,4 @@
+import { deleteLink, getLinks, getShare, postLink, postShareCopy } from "./link-routes";
 import { getLibrary, getLibraryChanges, libraryLive, patchItemSettings, patchProfile, postImport, postMutations, postNoticesRead } from "./library-routes";
 
 type Handler = (request: Request, ...params: string[]) => Response | Promise<Response>;
@@ -8,6 +9,7 @@ interface RouteDef {
 }
 
 const SEGMENT = "([A-Za-z0-9_-]{1,64})";
+const CODE = "([1-9A-Za-z][A-Za-z0-9_-]{20})";
 
 /** The sharing, sync and hosting routes (§10), by path pattern. */
 const ROUTES: RouteDef[] = [
@@ -18,6 +20,10 @@ const ROUTES: RouteDef[] = [
   { pattern: new RegExp(`^/api/library/(builds|item-groups)/${SEGMENT}/settings$`), methods: { PATCH: patchItemSettings } },
   { pattern: /^\/api\/profile$/, methods: { PATCH: patchProfile } },
   { pattern: /^\/api\/notices\/read$/, methods: { POST: postNoticesRead } },
+  { pattern: /^\/api\/links$/, methods: { GET: getLinks, POST: postLink } },
+  { pattern: new RegExp(`^/api/links/${CODE}$`), methods: { DELETE: deleteLink } },
+  { pattern: new RegExp(`^/api/s/${CODE}$`), methods: { GET: getShare } },
+  { pattern: new RegExp(`^/api/s/${CODE}/copy$`), methods: { POST: postShareCopy } },
 ];
 
 /** WebSocket upgrade routes: served before the page cache, which can't carry a socket. */

@@ -35,13 +35,15 @@ export function errorResponse(code: ErrorCode, message: string, details?: Record
 export class RouteError extends Error {
   constructor(
     readonly response: Response,
+    message = "Route answered early.",
+    readonly code?: ErrorCode
   ) {
-    super("Route answered early.");
+    super(message);
   }
 }
 
 export function fail(code: ErrorCode, message: string, details?: Record<string, unknown>): never {
-  throw new RouteError(errorResponse(code, message, details));
+  throw new RouteError(errorResponse(code, message, details), message, code);
 }
 
 export function unwrapOutcome<T>(result: Outcome<T>): T {
@@ -50,15 +52,22 @@ export function unwrapOutcome<T>(result: Outcome<T>): T {
 }
 
 /** Runs a route body, turning refusals into error responses. Unknown errors are 500s with a log line. */
-export async function route(work: () => Promise<Response>): Promise<Response> {
+export async function route(work: () => Promise<Response>, headers: Record<string, string> = {}): Promise<Response> {
+  let response: Response;
   try {
-    return await work();
+    response = await work();
   } catch (error) {
-    if (error instanceof RouteError) return error.response;
-    if (error instanceof DomainError) return errorResponse(error.code, error.message, error.details);
-    console.error("Sharing route failed", error);
-    return json({ error: { code: "internal", message: "Something went wrong. Try again." } }, 500);
+    if (error instanceof RouteError) response = error.response;
+    else if (error instanceof DomainError) response = errorResponse(error.code, error.message, error.details);
+    else {
+      console.error("Sharing route failed", error);
+      response = json({ error: { code: "internal", message: "Something went wrong. Try again." } }, 500);
+    }
   }
+  if (Object.keys(headers).length === 0 || response.status === 101) return response;
+  const merged = new Headers(response.headers);
+  for (const [key, value] of Object.entries(headers)) merged.set(key, value);
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers: merged });
 }
 
 /** The Durable Object bindings, or a 503 where there are none (tests without a platform, scripts). */

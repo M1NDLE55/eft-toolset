@@ -37,6 +37,7 @@ import { Route as QuestsIndexRouteImport } from './routes/quests/index'
 import { Route as QuestsSlugRouteImport } from './routes/quests/$slug'
 import { Route as RaidPlannerIndexRouteImport } from './routes/raid-planner/index'
 import { Route as RaidPlannerPlanRouteImport } from './routes/raid-planner/$plan'
+import { Route as SCodeRouteImport } from './routes/s/$code'
 import { Route as GunBuilderBuildIndexRouteImport } from './routes/gun-builder/$build/index'
 import { Route as GunBuilderBuildListRouteImport } from './routes/gun-builder/$build/list'
 import { Route as GunBuilderBestIndexRouteImport } from './routes/gun-builder/best/index'
@@ -188,6 +189,11 @@ const RaidPlannerPlanRoute = RaidPlannerPlanRouteImport.update({
   path: '/$plan',
   getParentRoute: () => RaidPlannerRouteRoute,
 } as any)
+const SCodeRoute = SCodeRouteImport.update({
+  id: '/s/$code',
+  path: '/s/$code',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GunBuilderBuildIndexRoute = GunBuilderBuildIndexRouteImport.update({
   id: '/$build/',
   path: '/$build/',
@@ -256,6 +262,7 @@ export interface FileRoutesByFullPath {
   '/policies/disclaimer-and-use-policy': typeof PoliciesDisclaimerAndUsePolicyRoute
   '/quests/$slug': typeof QuestsSlugRoute
   '/raid-planner/$plan': typeof RaidPlannerPlanRoute
+  '/s/$code': typeof SCodeRoute
   '/ammo/': typeof AmmoIndexRoute
   '/gun-builder/': typeof GunBuilderIndexRoute
   '/item-groups/': typeof ItemGroupsIndexRoute
@@ -288,6 +295,7 @@ export interface FileRoutesByTo {
   '/policies/disclaimer-and-use-policy': typeof PoliciesDisclaimerAndUsePolicyRoute
   '/quests/$slug': typeof QuestsSlugRoute
   '/raid-planner/$plan': typeof RaidPlannerPlanRoute
+  '/s/$code': typeof SCodeRoute
   '/ammo': typeof AmmoIndexRoute
   '/gun-builder': typeof GunBuilderIndexRoute
   '/item-groups': typeof ItemGroupsIndexRoute
@@ -328,6 +336,7 @@ export interface FileRoutesById {
   '/policies/disclaimer-and-use-policy': typeof PoliciesDisclaimerAndUsePolicyRoute
   '/quests/$slug': typeof QuestsSlugRoute
   '/raid-planner/$plan': typeof RaidPlannerPlanRoute
+  '/s/$code': typeof SCodeRoute
   '/ammo/': typeof AmmoIndexRoute
   '/gun-builder/': typeof GunBuilderIndexRoute
   '/item-groups/': typeof ItemGroupsIndexRoute
@@ -369,6 +378,7 @@ export interface FileRouteTypes {
     | '/policies/disclaimer-and-use-policy'
     | '/quests/$slug'
     | '/raid-planner/$plan'
+    | '/s/$code'
     | '/ammo/'
     | '/gun-builder/'
     | '/item-groups/'
@@ -401,6 +411,7 @@ export interface FileRouteTypes {
     | '/policies/disclaimer-and-use-policy'
     | '/quests/$slug'
     | '/raid-planner/$plan'
+    | '/s/$code'
     | '/ammo'
     | '/gun-builder'
     | '/item-groups'
@@ -440,6 +451,7 @@ export interface FileRouteTypes {
     | '/policies/disclaimer-and-use-policy'
     | '/quests/$slug'
     | '/raid-planner/$plan'
+    | '/s/$code'
     | '/ammo/'
     | '/gun-builder/'
     | '/item-groups/'
@@ -473,6 +485,7 @@ export interface RootRouteChildren {
   SettingsRoute: typeof SettingsRoute
   FleaMarketPveRoute: typeof FleaMarketPveRoute
   PoliciesDisclaimerAndUsePolicyRoute: typeof PoliciesDisclaimerAndUsePolicyRoute
+  SCodeRoute: typeof SCodeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -673,6 +686,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RaidPlannerPlanRouteImport
       parentRoute: typeof RaidPlannerRouteRoute
     }
+    '/s/$code': {
+      id: '/s/$code'
+      path: '/s/$code'
+      fullPath: '/s/$code'
+      preLoaderRoute: typeof SCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gun-builder/$build/': {
       id: '/gun-builder/$build/'
       path: '/$build'
@@ -869,6 +889,7 @@ const rootRouteChildren: RootRouteChildren = {
   SettingsRoute: SettingsRoute,
   FleaMarketPveRoute: FleaMarketPveRoute,
   PoliciesDisclaimerAndUsePolicyRoute: PoliciesDisclaimerAndUsePolicyRoute,
+  SCodeRoute: SCodeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

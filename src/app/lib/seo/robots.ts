@@ -7,16 +7,19 @@ export const ALLOWED_BOTS = ["Googlebot", "Bingbot", "OAI-SearchBot", "ChatGPT-U
 export const BLOCKED_BOTS = ["GPTBot", "CCBot", "Bytespider", "ClaudeBot", "Google-Extended", "AhrefsBot", "SemrushBot", "MJ12bot", "DotBot"];
 
 export interface RobotsRules {
-  rules: { userAgent: string | string[]; allow?: string; disallow?: string }[];
+  rules: { userAgent: string | string[]; allow?: string; disallow?: string | string[] }[];
   sitemap: string;
 }
+
+/** Shared links, invites and members' plan pages: unlisted, never indexed (§16.1). */
+export const PRIVATE_PATHS = ["/s/", "/join", "/raid-planner/p/"];
 
 export default function robots(): RobotsRules {
   return {
     rules: [
-      { userAgent: ALLOWED_BOTS, allow: "/" },
+      { userAgent: ALLOWED_BOTS, allow: "/", disallow: PRIVATE_PATHS },
       { userAgent: BLOCKED_BOTS, disallow: "/" },
-      { userAgent: "*", allow: "/" },
+      { userAgent: "*", allow: "/", disallow: PRIVATE_PATHS },
     ],
     sitemap: `${SITE_ORIGIN}/sitemap.xml`,
   };
@@ -28,7 +31,7 @@ export function robotsTxt(rules: RobotsRules = robots()) {
     [
       ...[rule.userAgent].flat().map((agent) => `User-Agent: ${agent}`),
       ...(rule.allow ? [`Allow: ${rule.allow}`] : []),
-      ...(rule.disallow ? [`Disallow: ${rule.disallow}`] : []),
+      ...[rule.disallow ?? []].flat().map((path) => `Disallow: ${path}`),
     ].join("\n")
   );
   return `${groups.join("\n\n")}\n\nSitemap: ${rules.sitemap}\n`;

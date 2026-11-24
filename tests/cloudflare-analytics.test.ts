@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
-import { CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
+import { CloudflareBeacon as CloudflareAnalytics } from "@/app/components/global/cloudflare-analytics";
 import { cloudflareBeaconAttribute } from "@/app/lib/analytics/cloudflare";
 
 describe("Cloudflare Web Analytics beacon", () => {
@@ -29,6 +29,18 @@ describe("Cloudflare Web Analytics beacon", () => {
       expect(html).toContain(
         'data-cf-beacon="{&quot;token&quot;:&quot;0123456789abcdef0123&quot;,&quot;spa&quot;:true}"'
       );
+    } finally {
+      vi.unstubAllEnvs();
+    }
+  });
+
+  it("leaves the beacon off pages whose paths carry link codes", () => {
+    vi.stubEnv("CLOUDFLARE_WEB_ANALYTICS_TOKEN", "0123456789abcdef0123");
+    try {
+      for (const pathname of ["/s/1abcdefghijklmnopqrst", "/join", "/raid-planner/p/abc"]) {
+        expect(renderToStaticMarkup(createElement(CloudflareAnalytics, { pathname }))).toBe("");
+      }
+      expect(renderToStaticMarkup(createElement(CloudflareAnalytics, { pathname: "/raid-planner/abc" }))).toContain("beacon.min.js");
     } finally {
       vi.unstubAllEnvs();
     }
