@@ -1,10 +1,11 @@
 import { GET as tarkovGet, POST as tarkovPost } from "@/app/lib/api/tarkov-route";
-import { authCallback, deleteAccount, getAccount, signIn, signOut } from "@/app/lib/account/routes";
+import { authCallback, deleteAccount, devSignIn, getAccount, signIn, signOut } from "@/app/lib/account/routes";
 import { PROTECTED_RESOURCE_PATH, protectedResourceGet, protectedResourceOptions } from "@/app/lib/mcp/protected-resource";
 import sitemap, { sitemapXml } from "@/app/lib/seo/sitemap";
 import { robotsTxt } from "@/app/lib/seo/robots";
 import { questOgImage } from "@/app/quests/quest-og-image";
 import { EDGE_TTL, EDGE_TTL_HEADER } from "./edge-cache";
+import { sharingEndpoint } from "@/app/lib/sharing/server/router";
 
 type Handler = (request: Request) => Response | Promise<Response>;
 
@@ -17,6 +18,7 @@ const ROUTES: Record<string, Partial<Record<string, Handler>>> = {
   "/api/account/sign-out": { POST: signOut },
   "/auth/sign-in": { GET: signIn },
   "/auth/callback": { GET: authCallback },
+  "/auth/dev-sign-in": { GET: devSignIn },
   "/sitemap.xml": {
     GET: async () =>
       new Response(sitemapXml(await sitemap()), {
@@ -46,6 +48,8 @@ export function endpointFor(request: Request): Handler | undefined {
   const { pathname } = new URL(request.url);
   const routes = ROUTES[pathname];
   if (routes) return routes[request.method] ?? (() => methodNotAllowed(Object.keys(routes)));
+  const sharing = sharingEndpoint(request);
+  if (sharing) return sharing;
 
   if (pathname === PROTECTED_RESOURCE_PATH || pathname.startsWith(`${PROTECTED_RESOURCE_PATH}/`)) {
     if (request.method === "GET") return protectedResourceGet;

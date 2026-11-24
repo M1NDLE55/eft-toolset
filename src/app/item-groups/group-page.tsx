@@ -18,7 +18,7 @@ import { useCatalog, useItemsInGroup } from "@/app/lib/cache/hooks";
 import type { CachedItem, CatalogItem } from "@/app/lib/cache/types";
 import { Rubles } from "@/app/lib/currency";
 import { bestSell } from "@/app/lib/item-price";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 import { recordPrices, usePriceHistories } from "@/app/lib/price-history";
 import { ChangeBadge } from "@/app/components/item/price-trend";
 import { useGameMode } from "@/components/game-mode/context";

@@ -12,7 +12,7 @@ import { formatDistance, routeLength } from "@/app/lib/raid-planner/route-distan
 import { prefetchMap } from "@/app/lib/raid-planner/prefetch";
 import { MAX_PLAN_NAME_LENGTH } from "@/app/lib/raid-planner/limits";
 import { getDefaultLayers } from "@/app/lib/raid-planner/layer-options";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 import { useGameMode } from "@/components/game-mode/context";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

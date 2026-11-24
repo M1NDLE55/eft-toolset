@@ -8,9 +8,11 @@ import { handleMcpRequest } from "@/app/lib/mcp/http";
 import { runScheduledRefresh } from "@/app/lib/api/scheduled";
 import { DATA_ASSET_PREFIX } from "@/app/lib/server/data-asset-prefix";
 import { PVE_ROUTE_PREFIX } from "@/app/lib/game-mode-routes";
+import { sharingSocketEndpoint } from "@/app/lib/sharing/server/router";
 
 export { UserDO } from "@/app/lib/durable/user-do";
 export { PlanDO } from "@/app/lib/durable/plan-do";
+export { LinkDO } from "@/app/lib/durable/link-do";
 
 installWorkerPlatform(env);
 
@@ -38,6 +40,10 @@ async function fetchHandler(request: Request, _env: Env, ctx: ExecutionContext):
   }
 
   if (url.pathname === MCP_PATH) return handleMcpRequest(request);
+
+  // Live sockets (plans, the library change feed) go straight to their Durable Object.
+  const socket = sharingSocketEndpoint(request);
+  if (socket) return socket(request);
 
   const response = await servePage(request, ctx, async (pageRequest) => {
     const endpoint = endpointFor(pageRequest);

@@ -1,4 +1,5 @@
 import { SESSION_COOKIE, STATE_COOKIE } from "./cookies";
+import { safeReturnPath } from "@/app/lib/sharing/return-path";
 import {
   accountConfig,
   accountRateLimited,
@@ -11,6 +12,9 @@ import {
   workosClient,
 } from "./server";
 import { readCookie, setCookie } from "@/app/lib/server/cookies";
+import { accountCacheKey } from "@/app/lib/sharing/server/secrets";
+import { DEV_USER_COOKIE, devAuthEnabled, devUserId } from "@/app/lib/sharing/server/session";
+import { SIGNED_IN_COOKIE } from "./cookies";
 
 // The website account routes. Only these touch sessions, so every page stays cacheable and never
 // reads cookies. See DATA_ARCHITECTURE.md ("Website accounts").
@@ -87,6 +91,11 @@ export async function authCallback(request: Request) {
 
 /** GET /api/account: the signed-in user, or null. configured is false when accounts are off on this server. */
 export async function getAccount(request: Request) {
+  const devUser = devUserId(readCookie(request, DEV_USER_COOKIE));
+  if (devUser) {
+    const name = devUser.slice("user_dev_".length);
+    return json({ configured: true, user: { email: `${name}@dev.local`, name, createdAt: new Date(0).toISOString() }, cacheKey: await accountCacheKey(devUser) });
+  }
   const config = accountConfig();
   if (!config) return json({ configured: false, user: null });
   const retryAfter = await accountRateLimited(request);
@@ -95,7 +104,7 @@ export async function getAccount(request: Request) {
   const session = await readSession(readCookie(request, SESSION_COOKIE), config);
   if (session.kind === "unavailable") return json({ error: "Your account can't be checked right now." }, 503);
   if (session.kind === "signed_out") return setSessionCookies(json({ configured: true, user: null }), null);
-  const response = json({ configured: true, user: accountUser(session.user) });
+  const response = json({ configured: true, user: accountUser(session.user), cacheKey: await accountCacheKey(session.userId) });
   return session.sealedSession ? setSessionCookies(response, session.sealedSession) : response;
 }
 
@@ -139,4 +148,20 @@ export async function signOut(request: Request) {
     url = workosClient(config).userManagement.getLogoutUrl({ sessionId: session.sessionId, returnTo: settings });
   }
   return setSessionCookies(json({ url }), null);
+}
+
+/**
+ * GET /auth/dev-sign-in?user=<name>&return=<path>: development only (DEV_AUTH=1 in .dev.vars, and
+ * never in a production build). Signs this browser in as a local test user, so live hosting can be
+ * tried with two browsers without WorkOS. ?user= with no name signs out.
+ */
+export async function devSignIn(request: Request) {
+  if (!devAuthEnabled()) return new Response("Not found", { status: 404 });
+  const url = new URL(request.url);
+  const name = url.searchParams.get("user") ?? "";
+  const response = redirect(new URL(safeReturnPath(url.searchParams.get("return")), url.origin));
+  const valid = devUserId(name) !== null;
+  setCookie(response.headers, DEV_USER_COOKIE, valid ? name : "", { path: "/", sameSite: "lax", httpOnly: true, maxAge: valid ? 86_400 : 0 });
+  setCookie(response.headers, SIGNED_IN_COOKIE, valid ? "1" : "", { path: "/", sameSite: "lax", maxAge: valid ? 86_400 : 0 });
+  return response;
 }

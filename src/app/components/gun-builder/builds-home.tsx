@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ConfirmDialog } from "@/components/confirm-dialog";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 import { deleteBuild, duplicateBuild, sortBuilds, useBuilds } from "@/app/lib/builds/store";
 import { collectItemIds, countParts } from "@/app/lib/builds/tree";
 import { prefetchBuildItems } from "@/app/lib/cache/gunBuilder";

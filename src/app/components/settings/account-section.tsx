@@ -5,6 +5,13 @@ import { LogIn, LogOut, UserPlus, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ConfirmDialog } from "@/components/confirm-dialog";
 import { announceAccountChange } from "@/app/lib/account/signed-in";
+import { activeLibrary, signOutOfAccountCache, useAccountView } from "@/app/lib/account-sync/account-session";
+import { openLibraryMigration, readBrowserLibrary } from "@/app/components/account/library-migration";
+import { Input } from "@/components/ui/input";
+import { useStore } from "@/app/lib/storage/use-store";
+import { BUILD_STORE } from "@/app/lib/builds/store";
+import { GROUP_STORE } from "@/app/lib/item-groups/store";
+import { PLAN_STORE } from "@/app/lib/raid-planner/store";
 import { cn } from "@/lib/utils";
 
 interface AccountUser {
@@ -70,9 +77,20 @@ export function AccountSection() {
     };
   }, []);
 
+  const [unsynced, setUnsynced] = useState<number | null>(null);
+
+  /** Warns first when this browser holds changes that haven't reached the server (§12.7). */
+  const requestSignOut = async () => {
+    const count = (await activeLibrary()?.unsyncedCount()) ?? 0;
+    if (count > 0) setUnsynced(count);
+    else await signOut();
+  };
+
   const signOut = async () => {
     setPending(true);
+    setUnsynced(null);
     try {
+      await signOutOfAccountCache();
       const response = await fetch("/api/account/sign-out", { method: "POST" });
       const body = (await response.json()) as { url?: string; error?: string };
       announceAccountChange();
@@ -149,10 +167,27 @@ export function AccountSection() {
             </div>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Button variant="outline" onClick={() => void signOut()} disabled={pending}>
+            <Button variant="outline" onClick={() => void requestSignOut()} disabled={pending}>
               <LogOut /> Sign out
             </Button>
           </div>
+          {unsynced !== null && (
+            <div role="alert" className="flex flex-col gap-2 border border-[#5a4a26] bg-[#16130b] p-3 text-sm text-[#e2c98a]">
+              <span>
+                {unsynced} change{unsynced === 1 ? " hasn't" : "s haven't"} synced yet. Signing out will discard {unsynced === 1 ? "it" : "them"}.
+              </span>
+              <div className="flex flex-wrap gap-2">
+                <Button size="sm" onClick={() => setUnsynced(null)}>
+                  Stay signed in
+                </Button>
+                <Button size="sm" variant="outline" onClick={() => void signOut()}>
+                  Sign out anyway
+                </Button>
+              </div>
+            </div>
+          )}
+          <DisplayNameField />
+          <BrowserData />
           <div className="flex flex-col gap-2 border-t border-[#1a1a1a] pt-4">
             <p className="text-xs text-[#888]">
               Deleting your account signs you out everywhere and ends your AI assistants&apos; access. Your data in this browser is kept.
@@ -183,6 +218,74 @@ export function AccountSection() {
           {notice.text}
         </p>
       )}
+    </div>
+  );
+}
+
+/** The name co-members see on shared plans (§16.3). Generated at first, never the real name. */
+function DisplayNameField() {
+  const view = useAccountView();
+  const [value, setValue] = useState<string | null>(null);
+  const [message, setMessage] = useState<string | null>(null);
+  if (!view?.ready) return null;
+  const current = value ?? view.displayName;
+  const save = async () => {
+    const library = activeLibrary();
+    if (!library) return;
+    const response = await library.request("/api/profile", { method: "PATCH", body: JSON.stringify({ displayName: current }) });
+    const body = (await response.json()) as { displayName?: string; error?: { message: string } };
+    setMessage(response.ok ? "Saved." : (body.error?.message ?? "Couldn't save."));
+    if (response.ok) {
+      setValue(null);
+      await library.resync().catch(() => undefined);
+    }
+  };
+  return (
+    <form
+      className="flex flex-col gap-2 border-t border-[#1a1a1a] pt-4"
+      onSubmit={(event) => {
+        event.preventDefault();
+        void save();
+      }}
+    >
+      <label htmlFor="display-name" className="text-xs text-[#888]">
+        Display name, shown to people on plans you share. Your email is never shown.
+      </label>
+      <div className="flex gap-2">
+        <Input id="display-name" value={current} maxLength={32} onChange={(event) => setValue(event.target.value)} className="max-w-xs" />
+        <Button type="submit" variant="outline" disabled={current.trim().length < 2 || current === view.displayName}>
+          Save
+        </Button>
+      </div>
+      {message && <p className="text-xs text-[#999]">{message}</p>}
+    </form>
+  );
+}
+
+/** Settings → Data in this browser: what the signed-out library still holds while signed in (§14.5). */
+function BrowserData() {
+  const view = useAccountView();
+  // Re-read when the signed-out stores change (a move removes what it moved).
+  useStore(BUILD_STORE);
+  useStore(GROUP_STORE);
+  useStore(PLAN_STORE);
+  if (!view?.ready) return null;
+  const library = readBrowserLibrary();
+  const counts = { builds: library.builds.length, groups: library.groups.length, plans: library.plans.length };
+  if (counts.builds + counts.groups + counts.plans === 0) return null;
+  return (
+    <div className="flex flex-col gap-2 border-t border-[#1a1a1a] pt-4">
+      <p className="text-xs text-[#888]">
+        Data in this browser: {counts.builds} builds, {counts.groups} item groups and {counts.plans} raid plans that aren&apos;t in your account.
+      </p>
+      <div className="flex flex-wrap gap-2">
+        <Button size="sm" variant="outline" onClick={openLibraryMigration}>
+          Move to account
+        </Button>
+        <Button size="sm" variant="outline" asChild>
+          <a href="/data">Download backup</a>
+        </Button>
+      </div>
     </div>
   );
 }

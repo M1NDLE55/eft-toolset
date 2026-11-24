@@ -11,7 +11,7 @@ import { customEncodeURI } from "@/app/lib/URIEncoding";
 import { createGroup, useGroups } from "@/app/lib/item-groups/store";
 import { MAX_GROUP_NAME_LENGTH } from "@/app/lib/item-groups/limits";
 import { useCatalog } from "@/app/lib/cache/hooks";
-import { useHydrated } from "@/app/lib/storage/use-store";
+import { useLibraryHydrated as useHydrated } from "@/app/lib/account-sync/account-session";
 
 export function ItemGroupsPage() {
   const router = useRouter();

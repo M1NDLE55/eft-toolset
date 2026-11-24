@@ -35,10 +35,15 @@
   "durable_objects": {
     "bindings": [
       { "name": "USER", "class_name": "UserDO" },
-      { "name": "PLAN", "class_name": "PlanDO" }
+      { "name": "PLAN", "class_name": "PlanDO" },
+      { "name": "LINK", "class_name": "LinkDO" }
     ]
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["UserDO", "PlanDO"] }],
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["UserDO", "PlanDO"] },
+    // Sharing: link-code routes.
+    { "tag": "v2", "new_sqlite_classes": ["LinkDO"] }
+  ],
   "ratelimits": [
     {
       // 600 requests a minute per client IP on /api/mcp (the Vercel firewall rule).
@@ -51,6 +56,30 @@
       "name": "WEB_IP_LIMITER",
       "namespace_id": "1002",
       "simple": { "limit": 600, "period": 60 }
+    },
+    {
+      // Opens of /s/ view and copy links, per client IP.
+      "name": "SHARE_IP_LIMITER",
+      "namespace_id": "1003",
+      "simple": { "limit": 120, "period": 60 }
+    },
+    {
+      // Invite previews and accepts, per client IP.
+      "name": "INVITE_IP_LIMITER",
+      "namespace_id": "1004",
+      "simple": { "limit": 30, "period": 60 }
+    },
+    {
+      // Live WebSocket connects (plans and the library change feed), per client IP.
+      "name": "SOCKET_IP_LIMITER",
+      "namespace_id": "1005",
+      "simple": { "limit": 30, "period": 60 }
+    },
+    {
+      // Link creation, per client IP (each user also has an hourly bucket).
+      "name": "LINK_IP_LIMITER",
+      "namespace_id": "1006",
+      "simple": { "limit": 30, "period": 60 }
     }
   ],
   "images": { "binding": "IMAGES" },

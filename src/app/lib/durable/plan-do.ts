@@ -2,7 +2,7 @@ import { DurableObject } from "cloudflare:workers";
 import { outcome, type Outcome } from "./outcome";
 import { PlanStore, type PlanMember, type StoredPlan } from "./plan-store";
 import type { Sql } from "./sql";
-import type { PlanRole } from "./user-store";
+import type { Role as PlanRole } from "@/app/lib/sharing/types";
 
 /** Who a live connection belongs to; kept with the socket so it survives hibernation. */
 interface SocketAttachment {

@@ -208,6 +208,8 @@ describe("accounts on", () => {
     expect(await account.json()).toEqual({
       configured: true,
       user: { email: "player@example.com", name: "Tarkov Player", createdAt: "2026-01-02T03:04:05.000Z" },
+      // Names the browser's account cache without revealing the WorkOS user id.
+      cacheKey: expect.stringMatching(/^[A-Za-z0-9_-]{16}$/),
     });
   });
 

@@ -47,9 +47,17 @@ export function installWorkerPlatform(env: Env, ctx?: ExecutionContext, request?
       return new Uint8Array(await result.response().arrayBuffer());
     },
     async limitClientIp(pool, ip) {
-      const limiter = pool === "mcp" ? env.MCP_IP_LIMITER : env.WEB_IP_LIMITER;
+      const limiter = {
+        mcp: env.MCP_IP_LIMITER,
+        web: env.WEB_IP_LIMITER,
+        share: env.SHARE_IP_LIMITER,
+        invite: env.INVITE_IP_LIMITER,
+        socket: env.SOCKET_IP_LIMITER,
+        link: env.LINK_IP_LIMITER,
+      }[pool];
       return (await limiter.limit({ key: ip })).success;
     },
+    durable: env,
     waitUntil(promise) {
       const guarded = promise.catch((error: unknown) => console.error("Background work failed", error));
       if (currentContext) currentContext.waitUntil(guarded);

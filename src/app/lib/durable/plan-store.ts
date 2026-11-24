@@ -1,8 +1,19 @@
 import { describePlanProblem, pickPlanFields } from "@/app/lib/raid-planner/plan-validation";
 import type { RaidPlan } from "@/app/lib/raid-planner/types";
 import { LIMIT_MESSAGES, PLAN_LIMITS } from "./limits";
-import { AccessError, LimitError, migrate, type Migration, type Sql } from "./sql";
-import type { PlanRole } from "./user-store";
+import { DomainError, migrate, type Migration, type Sql } from "./sql";
+import type { Role as PlanRole } from "@/app/lib/sharing/types";
+
+const AccessError = class extends DomainError {
+  constructor(message: string) {
+    super("forbidden", message);
+  }
+};
+const LimitError = class extends DomainError {
+  constructor(_code: string, message: string) {
+    super("limit", message);
+  }
+};
 
 /**
  * One raid plan: its content, its members and their roles. It runs inside the plan's Durable Object

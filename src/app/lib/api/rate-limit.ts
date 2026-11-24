@@ -8,6 +8,7 @@ import {
 import { platform } from "@/app/lib/server/platform";
 
 export type { BucketLimit, RequestBudget };
+import type { IpPool } from "@/app/lib/server/platform";
 
 export const CLIENT_LIMIT: BucketLimit = { burst: 120, refillPerSecond: 2 };
 
@@ -71,7 +72,7 @@ export function resetRequestBudgets() {
  * The website's limit for one client across every isolate (the Workers rate-limit binding), checked
  * beside the per-isolate buckets above. Null when the request is within it.
  */
-export async function crossIsolateLimit(request: Request, pool: BudgetPool): Promise<RequestBudget | null> {
+export async function crossIsolateLimit(request: Request, pool: BudgetPool | IpPool): Promise<RequestBudget | null> {
   const ip = clientIp(request);
   const limit = platform().limitClientIp;
   if (ip === null || !limit) return null;

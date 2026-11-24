@@ -1,3 +1,5 @@
+import type { DurableBindings } from "@/app/lib/durable/access";
+
 /**
  * What the server code needs from where it runs. The Worker entry (src/server.ts) installs the
  * Cloudflare implementation at startup: static assets for the bundled snapshots, KV for data shared
@@ -17,12 +19,20 @@ export interface Platform {
    * Counts a request against a client IP's limit shared by every isolate (the Workers rate-limit
    * binding); true when it is within the limit. Absent elsewhere, where only in-memory limits apply.
    */
-  limitClientIp?: (pool: "mcp" | "web", ip: string) => Promise<boolean>;
+  limitClientIp?: (pool: IpPool, ip: string) => Promise<boolean>;
+  /** The Durable Object namespaces for accounts, plans, links and reports; absent outside the Worker. */
+  durable?: DurableBindings;
   /** The request header that carries the client's real IP, set by the platform itself (never forgeable). */
   trustedClientIpHeader?: string;
   /** Converts an image, scaled to fit the box and never enlarged (Cloudflare Images in the Worker). */
   convertImage?: (bytes: Uint8Array, options: { width: number; height: number; format: "image/png" }) => Promise<Uint8Array | null>;
 }
+
+/**
+ * Per-IP pools at the edge: the site's API (web), MCP, and the sharing routes' own limits (§16.1):
+ * /s/ opens, invite previews and accepts, WebSocket connects and link creation.
+ */
+export type IpPool = "mcp" | "web" | "share" | "invite" | "socket" | "link";
 
 /** A token bucket's size and refill rate. */
 export interface BucketLimit {
