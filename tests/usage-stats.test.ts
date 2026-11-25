@@ -76,6 +76,7 @@ describe("event validation", () => {
     expect(checkedEvent({ name: "map.view", subject: { kind: "map", id: "customs" } })).not.toBeNull();
     expect(checkedEvent({ name: "mcp.tool_call", tool: "get_item", subject: { kind: "item", id: WEAPON }, outcome: "crash" })).not.toBeNull();
     expect(checkedEvent({ name: "page.view", route: "/item/$itemName" })).not.toBeNull();
+    expect(checkedEvent({ name: "page.error", route: "/item/$itemName", errorKind: "unavailable" })).not.toBeNull();
   });
 
   it("refuses unknown events, fields an event doesn't take, and values outside the closed lists", () => {
@@ -89,6 +90,9 @@ describe("event validation", () => {
     expect(checkedEvent({ name: "build.optimize", outcome: "fine" as never })).toBeNull();
     expect(checkedEvent({ name: "build.optimize", duration: "3s" as never })).toBeNull();
     expect(checkedEvent({ name: "page.view", route: "/item/red-rebel-ice-pick" as never })).toBeNull();
+    // Only page.error has a kind, and only from the closed list: never the error's own words.
+    expect(checkedEvent({ name: "page.error", errorKind: "TypeError: x is not a function" as never })).toBeNull();
+    expect(checkedEvent({ name: "page.view", errorKind: "crash" })).toBeNull();
     expect(checkedEvent({ name: "group.create", userId: USER_ID } as never)).toBeNull();
     expect(checkedEvent({ name: "map.view", subject: { kind: "map", id: "customs", note: "x" } as never })).toBeNull();
   });
@@ -129,6 +133,9 @@ describe("beacons", () => {
     expect(beaconEvent({ event: "group.create", country: "GB" })).toBeNull();
     expect(beaconEvent({ event: "build.share", subject: { kind: "weapon", id: WEAPON } })).toBeNull();
     expect(beaconEvent({ event: "page.view", route: "x".repeat(65) })).toBeNull();
+    expect(beaconEvent({ event: "page.error", route: "/item/$itemName", errorKind: "chunk_load" })).toMatchObject({ errorKind: "chunk_load" });
+    expect(beaconEvent({ event: "page.error", errorKind: "Failed to fetch dynamically imported module" })).toBeNull();
+    expect(beaconEvent({ event: "map.view", subject: "customs", errorKind: "crash" })).toBeNull();
     expect(beaconEvent([{ event: "group.create" }])).toBeNull();
     expect(beaconEvent("group.create")).toBeNull();
   });
@@ -309,9 +316,11 @@ describe("server-side events", () => {
     });
     await flush();
     expect(written).toHaveLength(2);
-    expect(written[0].blobs.slice(0, 10)).toEqual(["mcp.tool_call", "mcp", "mcp", "get_weapon", "weapon", WEAPON, "pve", "ok", "<100ms", "DE"]);
+    // The two rows are written in the background, in whichever order their ids are ready.
+    const row = (tool: string) => written.find((point) => point.blobs[3] === tool)!.blobs;
+    expect(row("get_weapon").slice(0, 10)).toEqual(["mcp.tool_call", "mcp", "mcp", "get_weapon", "weapon", WEAPON, "pve", "ok", "<100ms", "DE"]);
     // Text that isn't a tarkov.dev id is dropped; the call itself is still counted.
-    expect(written[1].blobs.slice(0, 8)).toEqual(["mcp.tool_call", "mcp", "mcp", "get_item", "", "", "", "crash"]);
+    expect(row("get_item").slice(0, 8)).toEqual(["mcp.tool_call", "mcp", "mcp", "get_item", "", "", "", "crash"]);
     expectAnonymous(written);
     expect(JSON.stringify(written)).not.toContain("secret search");
   });
@@ -325,6 +334,8 @@ const COOKIE_PASSWORD = "a-test-cookie-password-of-at-least-32-chars";
 let signingKey: CryptoKey;
 let publicJwk: JWK;
 let sqlQueries: string[];
+/** What the fake SQL API answers each query with: nothing, unless a test says otherwise. */
+let sqlRows: (query: string) => Record<string, unknown>[];
 
 beforeAll(async () => {
   const pair = await generateKeyPair("RS256");
@@ -342,6 +353,7 @@ function workosUser(id: string, createdAt = "2026-11-20T10:00:00.000Z") {
 
 function fakeApis(signedInAs: string) {
   sqlQueries = [];
+  sqlRows = () => [];
   vi.spyOn(globalThis, "fetch").mockImplementation(async (input, init) => {
     const url = String(input instanceof Request ? input.url : input);
     const method = init?.method ?? "GET";
@@ -360,7 +372,8 @@ function fakeApis(signedInAs: string) {
     }
     if (url.includes("/analytics_engine/sql")) {
       sqlQueries.push(String(init?.body));
-      return Response.json({ meta: [], data: [], rows: 0 });
+      const data = sqlRows(String(init?.body));
+      return Response.json({ meta: [], data, rows: data.length });
     }
     return new Response("unexpected", { status: 500 });
   });
@@ -424,11 +437,17 @@ describe("the admin dashboard gate", () => {
   it("lets a listed admin read the stats, which queries the SQL API server-side", async () => {
     vi.stubEnv("STATS_ADMIN_USER_IDS", USER_ID);
     const session = await sessionFor(USER_ID);
+    sqlRows = (query) => (query.includes("blob16 AS kind") ? [{ kind: "chunk_load", n: "3" }, { kind: "", n: "1" }] : []);
     const response = await getAdminStats(statsRequest("/api/admin/stats?days=30", session));
     expect(response.status).toBe(200);
     expect(response.headers.get("cache-control")).toBe("no-store");
     const body = await response.json();
     expect(body).toMatchObject({ range: 30, totals: { events: 0 }, accounts: { total: 2 } });
+    // Page errors by kind; rows from before kinds were recorded are "unknown".
+    expect(body.pageErrorKinds).toEqual([
+      { key: "chunk_load", label: "chunk_load", count: 3 },
+      { key: "", label: "unknown", count: 1 },
+    ]);
     expect(sqlQueries.length).toBeGreaterThan(5);
     expect(sqlQueries.every((query) => query.includes("FROM eft_toolset_usage") && query.endsWith("FORMAT JSON"))).toBe(true);
     expect(sqlQueries.some((query) => query.includes("INTERVAL '30' DAY"))).toBe(true);
@@ -495,9 +514,11 @@ describe("the daily summary", () => {
     expect(denied.headers.get("www-authenticate")).toContain("Bearer");
 
     const date = new Date(Date.now() - DAY).toISOString().slice(0, 10);
+    sqlRows = (query) => (query.includes("blob16 AS kind") ? [{ kind: "unavailable", n: "2" }] : []);
     const response = await getDailyStats(statsRequest(`/api/admin/stats/daily?date=${date}`, undefined, { Authorization: `Bearer ${TOKEN}` }));
     expect(response.status).toBe(200);
     const body = await response.json();
+    expect(body.errors.byKind).toEqual([{ key: "unavailable", label: "unavailable", count: 2 }]);
     expect(body).toMatchObject({ date, visitors: { total: 0 }, pageViews: 0, accounts: { total: 2 }, spikes: { events: { spike: false } } });
     expect(Object.keys(body.spikes).sort()).toEqual(["errors", "events", "mcpCalls", "pageViews", "visitors"]);
     expect(sqlQueries.some((query) => query.includes(`toDateTime('${date} 00:00:00')`))).toBe(true);
@@ -543,7 +564,10 @@ describe("the catalogue", () => {
     const columns = Object.fromEntries(Object.entries(USAGE_COLUMNS).map(([name, column]) => [name, point.blobs[Number(column.slice(4)) - 1]]));
     expect(columns).toEqual({
       event: "page.view", source: "web", feature: "site", tool: "", subjectKind: "", subject: "", gameMode: "", outcome: "",
-      duration: "", country: "GB", version: "1", anonDay: "a".repeat(16), anonWeek: "b".repeat(16), signedIn: "0", route: "/mcp",
+      duration: "", country: "GB", version: "2", anonDay: "a".repeat(16), anonWeek: "b".repeat(16), signedIn: "0", route: "/mcp",
+      errorKind: "",
     });
+    const error = usageDataPoint({ name: "page.error", route: "/item/$itemName", errorKind: "unavailable" });
+    expect(error.blobs[Number(USAGE_COLUMNS.errorKind.slice(4)) - 1]).toBe("unavailable");
   });
 });

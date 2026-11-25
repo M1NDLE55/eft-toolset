@@ -77,6 +77,17 @@ export function platform(): Platform {
   return current;
 }
 
+/**
+ * For a promise other requests may await (a shared in-flight load, a cached result): keeps the request
+ * that started it running until it settles. The Workers runtime settles a promise only while the
+ * request that created it is alive, so one whose request had already answered, given up or lost its
+ * visitor would fail every other request waiting on it.
+ */
+export function sharedAcrossRequests<T>(promise: Promise<T>): Promise<T> {
+  current.waitUntil(promise.then(() => undefined, () => undefined));
+  return promise;
+}
+
 /** Installs the runtime's implementation; with no argument, restores the Node defaults (tests). */
 export function setPlatform(next?: Partial<Platform>) {
   current = next ? { ...nodePlatform, ...next } : nodePlatform;

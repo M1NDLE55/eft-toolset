@@ -14,7 +14,7 @@ summary endpoint. The code is in `src/app/lib/usage/`; the tests are in `tests/u
 This is enforced by construction, not by care at each call site:
 
 - An event is a name from the catalogue below plus a few fields, each from a closed list (game
-  mode, outcome, duration bucket, MCP tool name, route pattern) or a game id checked against its
+  mode, outcome, duration bucket, MCP tool name, route pattern, page error kind) or a game id checked against its
   format (a 24-character tarkov.dev id, or a map key from the map list). `checkedEvent` in
   `record.ts` refuses anything else, including any extra field.
 - Rows are built column by column from those fields (`usageDataPoint`); there is no column for
@@ -57,7 +57,7 @@ The source of truth is `USAGE_EVENTS` in `src/app/lib/usage/catalog.ts`.
 | `plan.host` | server | sharing | map id | A raid plan is created in an account, hosted live |
 | `report.file` | server | sharing | | Shared content is reported (never the reason's text) |
 | `page.view` | web | site | route pattern | Each page navigation |
-| `page.error` | web | site | route pattern | A page shows the error screen |
+| `page.error` | web | site | route pattern, error kind | A page fails: its error screen shows, or it first tries once by itself to recover |
 | `build.create` | web | gun-builder | weapon id, game mode | A build is created from the weapon picker |
 | `build.optimize` | web | gun-builder | weapon id, game mode, outcome, duration | The optimiser finishes or fails |
 | `build.share` | web | gun-builder | weapon id | A build's share link is copied or shared |
@@ -80,7 +80,11 @@ The sharing events count website requests only; the same actions over MCP (`shar
 
 Field values: game mode `regular` or `pve`; outcome `ok`, `error`, `cancelled`, `input_error`,
 `upstream_error`, `timeout`, `crash` or `refused` (an MCP call the account's library or plan turned
-down: not allowed, over a limit, or an edit conflict); duration `<100ms`, `100ms-1s`, `1-5s`, `5-20s` or `20s+`.
+down: not allowed, over a limit, or an edit conflict); duration `<100ms`, `100ms-1s`, `1-5s`, `5-20s` or `20s+`;
+error kind `unavailable` (the server couldn't load or work out the page's data in time), `chunk_load`
+(a piece of the site's code didn't download), `network` (a request to the server got no answer) or
+`crash` (anything else). The kind is worked out in the browser from the error's type
+(`page-error.ts`); the error's message is never sent.
 
 Adding an event: add it to `USAGE_EVENTS` with the fields it may carry, call `trackUsage` (browser)
 or `recordUsage` (server), and add a row here. A new page route also needs adding to `USAGE_ROUTES`;
@@ -102,10 +106,11 @@ samples per index value, so a low-cardinality index keeps rare events while comm
 | `blob8` | outcome |
 | `blob9` | duration bucket |
 | `blob10` | country |
-| `blob11` | layout version (`1`) |
+| `blob11` | layout version: `2`, or `1` for rows from before `blob16` was added |
 | `blob12`, `blob13` | anonymous daily and weekly ids |
 | `blob14` | signed in: `1`, `0`, or empty when unknown |
 | `blob15` | route pattern |
+| `blob16` | page error kind (empty on rows from layout version `1`) |
 
 Counts use `SUM(_sample_interval)`, which stays right under sampling. Unique counts use
 `count(DISTINCT blob12)`, which is exact while nothing is sampled and slightly low if Analytics
@@ -125,7 +130,7 @@ months (https://developers.cloudflare.com/analytics/analytics-engine/limits/).
   scripts. Needs `Authorization: Bearer <STATS_READ_TOKEN>`, compared in constant time (401
   otherwise, 404 when the token isn't set). Returns visitors (signed in and out), page views, active
   accounts, new and total accounts, events, the web/MCP/server split, top features, pages, MCP tools,
-  weapons, maps and items, errors by MCP tool and by page, and a spike check (value, seven-day
+  weapons, maps and items, errors by MCP tool, by page and by kind, and a spike check (value, seven-day
   average, ratio, flag) for visitors, page views, events, MCP calls and errors. A spike is at least
   twice the average and at least 20 more.
 
@@ -145,7 +150,7 @@ WorkOS's user list (creation dates only, counted at most hourly) and are never j
 
 Pricing for Analytics Engine writes and SQL API reads is at
 https://developers.cloudflare.com/analytics/analytics-engine/pricing/. Each event is one row; a
-dashboard load is nine queries and a daily summary five, each cached for five minutes.
+dashboard load is ten queries and a daily summary six, each cached for five minutes.
 
 ## Local development
 

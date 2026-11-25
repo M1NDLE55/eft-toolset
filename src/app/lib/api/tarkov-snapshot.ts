@@ -1,6 +1,6 @@
 import { promisify } from "node:util";
 import { brotliDecompress } from "node:zlib";
-import { readDataText, platform } from "@/app/lib/server/platform";
+import { readDataText, platform, sharedAcrossRequests } from "@/app/lib/server/platform";
 
 // The tarkov.dev copy bundled with the deployment by scripts/build-tarkov-snapshot.mjs. The adapter
 // starts from it on a fresh instance and falls back to it when tarkov.dev can't be reached.
@@ -41,7 +41,7 @@ export function setTarkovSnapshotDirForTests(dir: string | null) {
 }
 
 function readManifest(): Promise<Manifest | null> {
-  manifest ??= (async () => {
+  manifest ??= sharedAcrossRequests((async () => {
     if (!directory) return null;
     try {
       const text = await readSnapshotText(directory, "manifest.json");
@@ -51,7 +51,7 @@ function readManifest(): Promise<Manifest | null> {
     } catch {
       return null;
     }
-  })();
+  })());
   return manifest;
 }
 

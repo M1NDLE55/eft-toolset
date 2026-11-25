@@ -1,4 +1,5 @@
 import type { CatalogEntry } from "@/app/lib/cache/types";
+import { sharedAcrossRequests } from "@/app/lib/server/platform";
 import { buildItemIndex, isItemIndex, type IndexCategory, type ItemIndex } from "../../../../scripts/item-index.mjs";
 import type { ItemFacet, ItemFacets } from "./tarkov-server";
 import { readSnapshot } from "./tarkov-snapshot";
@@ -113,7 +114,7 @@ export function clearItemIndexCache() {
 function readBundledIndex(gameMode: string): Promise<BundledIndex | null> {
   let bundled = state.bundled.get(gameMode);
   if (!bundled) {
-    bundled = readSnapshot(gameMode, "item-index").then((copy) => {
+    bundled = sharedAcrossRequests(readSnapshot(gameMode, "item-index").then((copy) => {
       const value = copy?.value as (ItemIndex & { source?: { items?: SourceStamp; items_en?: SourceStamp } }) | undefined;
       if (!copy || !isItemIndex(value) || !value.source?.items || !value.source.items_en) return null;
       return {
@@ -122,7 +123,7 @@ function readBundledIndex(gameMode: string): Promise<BundledIndex | null> {
         items: value.source.items,
         translations: value.source.items_en,
       };
-    });
+    }));
     state.bundled.set(gameMode, bundled);
   }
   return bundled;

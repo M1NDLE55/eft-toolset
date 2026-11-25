@@ -6,6 +6,7 @@ import { anonymousIds, NO_IDS, type AnonymousIds, type UsageIdentity } from "./i
 import {
   DURATION_BUCKETS,
   GAME_MODES,
+  PAGE_ERROR_KINDS,
   USAGE_EVENTS,
   USAGE_OUTCOMES,
   USAGE_ROUTES,
@@ -46,6 +47,7 @@ export function checkedEvent(event: UsageEvent): UsageEvent | null {
   if (spec.outcome) allowed.add("outcome");
   if (spec.duration) allowed.add("duration");
   if (spec.route) allowed.add("route");
+  if (spec.errorKind) allowed.add("errorKind");
   for (const [key, value] of Object.entries(event)) {
     if (value !== undefined && !allowed.has(key)) return null;
   }
@@ -60,6 +62,7 @@ export function checkedEvent(event: UsageEvent): UsageEvent | null {
   if (event.outcome !== undefined && !USAGE_OUTCOMES.includes(event.outcome)) return null;
   if (event.duration !== undefined && !DURATION_BUCKETS.includes(event.duration)) return null;
   if (event.route !== undefined && event.route !== "other" && !(USAGE_ROUTES as readonly string[]).includes(event.route)) return null;
+  if (event.errorKind !== undefined && !PAGE_ERROR_KINDS.includes(event.errorKind)) return null;
   // An unrecognised country is dropped rather than refusing the event: it comes from Cloudflare.
   const country = event.country !== undefined && event.country !== "XX" && COUNTRY.test(event.country) ? event.country : undefined;
   return { ...event, country };
@@ -89,6 +92,7 @@ export function usageDataPoint(event: UsageEvent, ids: AnonymousIds = NO_IDS): U
       ids.week,
       ids.signedIn,
       event.route ?? "",
+      event.errorKind ?? "",
     ],
   };
 }

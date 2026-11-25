@@ -1,5 +1,5 @@
 import type { GameMode } from "@/components/game-mode/context";
-import { platform } from "@/app/lib/server/platform";
+import { platform, sharedAcrossRequests } from "@/app/lib/server/platform";
 import { canonicalJson, TARKOV_OPERATIONS } from "./operations";
 import { USER_AGENT } from "./user-agent";
 
@@ -357,7 +357,7 @@ function refreshPriceFeed(origin: string, gameMode: GameMode, state: FeedState):
       state.inFlight = undefined;
       state.slowRefresh = undefined;
     });
-  state.inFlight = inFlight;
+  state.inFlight = sharedAcrossRequests(inFlight);
   return inFlight;
 }
 

@@ -1,6 +1,6 @@
 import { env } from "cloudflare:workers";
 import handler from "@tanstack/react-start/server-entry";
-import { installWorkerPlatform } from "@/app/lib/server/worker-platform";
+import { installWorkerPlatform, withExecutionContext } from "@/app/lib/server/worker-platform";
 import { withSecurityHeaders } from "@/app/lib/security/apply";
 import { servePage } from "@/app/lib/server/page-cache";
 import { endpointFor } from "@/app/lib/server/endpoints";
@@ -27,7 +27,7 @@ const MCP_PATH = "/api/mcp";
  * security headers.
  */
 async function fetchHandler(request: Request, _env: Env, ctx: ExecutionContext): Promise<Response> {
-  installWorkerPlatform(env, ctx, request);
+  installWorkerPlatform(env, request);
   const url = new URL(request.url);
 
   if (url.pathname === DATA_ASSET_PREFIX || url.pathname.startsWith(`${DATA_ASSET_PREFIX}/`)) {
@@ -55,9 +55,10 @@ async function fetchHandler(request: Request, _env: Env, ctx: ExecutionContext):
 }
 
 export default {
-  fetch: fetchHandler,
-  async scheduled(controller: ScheduledController, _env: Env, ctx: ExecutionContext) {
-    installWorkerPlatform(env, ctx);
-    await runScheduledRefresh(controller.scheduledTime);
-  },
+  fetch: (request, workerEnv, ctx) => withExecutionContext(ctx, () => fetchHandler(request, workerEnv, ctx)),
+  scheduled: (controller, _env, ctx) =>
+    withExecutionContext(ctx, async () => {
+      installWorkerPlatform(env);
+      await runScheduledRefresh(controller.scheduledTime);
+    }),
 } satisfies ExportedHandler<Env>;

@@ -10,6 +10,9 @@ import { heading } from "@/app/components/quests/quest-bits";
 import { ITEM_HUB_NAME } from "@/app/lib/seo/site-copy";
 import { ItemQuestLinks } from "@/app/components/item/item-quests";
 import type { GameMode } from "@/components/game-mode/mode";
+import type { RenderDataUnavailableError } from "@/app/lib/render-errors";
+import { itemReference } from "@/app/lib/item-links";
+import { NotFoundPage, useReportPageError } from "@/app/components/global/route-status";
 
 /** What the item page renders, read on the server for the visitor's game mode (item-page.server.ts). */
 export interface ItemPageData {
@@ -52,4 +55,16 @@ export function ItemPage({ data }: { data: ItemPageData }) {
       {usedBy && <ItemQuestLinks quests={usedBy} />}
     </>
   );
+}
+
+/**
+ * The item page when the server couldn't load the item in time. The response stays a server error,
+ * so crawlers retry and the edge cache keeps its copy, but the visitor's browser loads the item
+ * itself rather than showing the error page.
+ */
+export function ItemPageFallback({ segment, error }: { segment: string; error: RenderDataUnavailableError }) {
+  useReportPageError(error);
+  const reference = itemReference(segment);
+  if (!reference) return <NotFoundPage />;
+  return <ItemPageClient reference={reference} initial={null} wiki={null} />;
 }

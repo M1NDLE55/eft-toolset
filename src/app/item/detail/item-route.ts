@@ -1,6 +1,6 @@
 import { cache } from "react";
 import { customDecodeURI } from "@/app/lib/URIEncoding";
-import { isItemSlug } from "@/app/lib/item-links";
+import { isItemSlug, itemReference } from "@/app/lib/item-links";
 import { executeTarkovOperation, getItemPageIndex, releaseRenderSlot, waitForRenderSlot } from "@/app/lib/api/tarkov-server";
 import type { ItemIndexing } from "@/app/lib/seo/item-index";
 import { RENDER_TIMEOUT_MS } from "@/app/lib/api/server-render";
@@ -9,31 +9,30 @@ import type { GameMode } from "@/components/game-mode/mode";
 import type { ComposedItem } from "@/app/lib/cache/types";
 
 /**
- * Thrown when the item couldn't be loaded in time, so the render fails: a background render keeps
- * the cached page, and a first render answers with a server error (crawlers retry later) instead
- * of caching an empty page.
+ * Notes why an item page rendered without what it needed, as fields Workers Logs can filter on:
+ * the page, the step (the render slot, the item or the index) and whether it ran out of time.
  */
-export class ItemTemporarilyUnavailableError extends Error {
-  constructor() {
-    super("Item data is temporarily unavailable.");
-    this.name = "ItemTemporarilyUnavailableError";
-  }
+function warnItemPage(segment: string, step: "render slot" | "item" | "item index", error?: unknown) {
+  const fields = { page: `/item/${segment}`.slice(0, 240), step };
+  if (error === undefined) console.warn("Item page timed out", fields);
+  else console.warn("Item page data failed", { ...fields, error: error instanceof Error ? error.message : String(error) });
 }
 
+/** The item for the page: null when there's no such item, undefined when it couldn't be loaded in time. */
 export const loadItem = cache(async (segment: string, gameMode: GameMode): Promise<ComposedItem | null | undefined> => {
-  const reference = isItemSlug(segment) ? { slug: segment } : { name: customDecodeURI(segment) };
-  if ("name" in reference && !reference.name) return null;
+  const reference = itemReference(segment);
+  if (!reference) return null;
   const signal = AbortSignal.timeout(RENDER_TIMEOUT_MS);
   try {
     await waitForRenderSlot(signal);
   } catch {
-    console.warn("Item page rendered without its item: the server is busy.");
+    warnItemPage(segment, "render slot");
     return undefined;
   }
   try {
     return (await executeTarkovOperation(TARKOV_OPERATIONS.itemDetail, { gameMode, ...reference }, { signal })) as ComposedItem | null;
   } catch (error) {
-    console.warn("Item page rendered without its item:", error instanceof Error ? error.message : error);
+    warnItemPage(segment, "item", signal.aborted ? undefined : error);
     return undefined;
   } finally {
     releaseRenderSlot();
@@ -56,18 +55,21 @@ export async function resolveItemRoute(gameMode: GameMode, segment: string) {
  * read in time.
  */
 export async function loadItemIndexing(slug: string): Promise<ItemIndexing | undefined> {
-  const timeout = RENDER_TIMEOUT_MS;
   let timer: ReturnType<typeof setTimeout> | undefined;
   try {
     const index = await Promise.race([
       getItemPageIndex("regular"),
-      new Promise<undefined>((resolve) => {
-        timer = setTimeout(() => resolve(undefined), timeout);
+      new Promise<"timed out">((resolve) => {
+        timer = setTimeout(() => resolve("timed out"), RENDER_TIMEOUT_MS);
       }),
     ]);
-    return index?.pages.get(slug)?.indexing;
+    if (index === "timed out") {
+      warnItemPage(slug, "item index");
+      return undefined;
+    }
+    return index.pages.get(slug)?.indexing;
   } catch (error) {
-    console.warn("Item page rendered without its index:", error instanceof Error ? error.message : error);
+    warnItemPage(slug, "item index", error);
     return undefined;
   } finally {
     clearTimeout(timer);
