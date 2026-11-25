@@ -3,7 +3,7 @@
  * laid out in Workers Analytics Engine. USAGE_STATS.md describes each event for people.
  *
  * Anonymous by construction: an event is a name plus a few fields from closed lists (game mode,
- * outcome, duration bucket, MCP tool name, route pattern) and at most one game id (a weapon, item or
+ * outcome, duration bucket, MCP tool name, route pattern, page error kind) and at most one game id (a weapon, item or
  * map). There is no field for a user id, IP address, cookie, free text or a raw URL, so none can be
  * recorded. The server adds a daily and a weekly anonymous id (identity.ts): a keyed hash whose key
  * is deleted when the day or week ends, so it can't be traced back to anyone afterwards.
@@ -30,6 +30,8 @@ export interface UsageEventSpec {
   tool?: boolean;
   /** Whether it carries the page's route pattern (USAGE_ROUTES), never the URL. */
   route?: boolean;
+  /** Only page.error: what kind of failure it was (PAGE_ERROR_KINDS), never the error's text. */
+  errorKind?: boolean;
 }
 
 export const USAGE_EVENTS = {
@@ -50,7 +52,7 @@ export const USAGE_EVENTS = {
 
   // Website actions, sent by the browser as a beacon.
   "page.view": { feature: "site", source: "web", route: true },
-  "page.error": { feature: "site", source: "web", route: true },
+  "page.error": { feature: "site", source: "web", route: true, errorKind: true },
   "build.create": { feature: "gun-builder", source: "web", subject: "weapon", gameMode: true },
   "build.optimize": { feature: "gun-builder", source: "web", subject: "weapon", gameMode: true, outcome: true, duration: true },
   "build.share": { feature: "gun-builder", source: "web", subject: "weapon" },
@@ -78,6 +80,14 @@ export const USAGE_OUTCOMES = ["ok", "error", "cancelled", "input_error", "upstr
 export type UsageOutcome = (typeof USAGE_OUTCOMES)[number];
 
 export const GAME_MODES = ["regular", "pve"] as const;
+
+/**
+ * Why a page failed (page-error.ts): its data wasn't ready on the server (a render that ran out of
+ * time or found the server busy), a piece of the site's code didn't download, a request to the
+ * server failed, or anything else (a bug).
+ */
+export const PAGE_ERROR_KINDS = ["unavailable", "chunk_load", "network", "crash"] as const;
+export type PageErrorKind = (typeof PAGE_ERROR_KINDS)[number];
 
 /** Durations are kept only as one of these buckets. */
 export const DURATION_BUCKETS = ["<100ms", "100ms-1s", "1-5s", "5-20s", "20s+"] as const;
@@ -127,6 +137,7 @@ export interface UsageEvent {
   outcome?: UsageOutcome;
   duration?: DurationBucket;
   route?: UsageRoute;
+  errorKind?: PageErrorKind;
   /** Two-letter country from Cloudflare's request.cf, never from the client. */
   country?: string;
 }
@@ -139,7 +150,7 @@ export function isUsageEventName(value: unknown): value is UsageEventName {
 export const USAGE_DATASET = "eft_toolset_usage";
 
 /** Bumped if the column layout below ever changes, so old and new rows can be told apart. */
-export const USAGE_SCHEMA_VERSION = "1";
+export const USAGE_SCHEMA_VERSION = "2";
 
 /**
  * Analytics Engine columns, by position. index1 is the event name: a low-cardinality sampling key,
@@ -163,4 +174,6 @@ export const USAGE_COLUMNS = {
   /** "1" for a signed-in account, "0" for a visitor, "" when the server can't tell. */
   signedIn: "blob14",
   route: "blob15",
+  /** Added in layout version 2; empty before. */
+  errorKind: "blob16",
 } as const;

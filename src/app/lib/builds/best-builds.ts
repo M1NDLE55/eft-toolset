@@ -1,10 +1,11 @@
 import { getGunList, getGunPartLookup, getItemFacets, getPreset } from "@/app/lib/api/tarkov-server";
+import { sharedAcrossRequests } from "@/app/lib/server/platform";
 import { WEAPON_CLASSES, type WeaponClass } from "./weapon-classes";
 import type { GameMode } from "@/components/game-mode/mode";
 import type { BuildNode, PriceSources } from "@/app/lib/types/gunBuilder";
 import type { PriceSource } from "./price";
 import { optimizeBuild, type OptimizeGoal } from "./optimizer";
-import { releaseOptimizerSlot, tryAcquireOptimizerSlot } from "./optimizer-slots";
+import { releaseOptimizerSlot, waitForOptimizerSlot } from "./optimizer-slots";
 import { reconstructPresetTree } from "./presets";
 import { presetParts } from "./purchase";
 import { computeStats } from "./stats";
@@ -189,13 +190,6 @@ export async function describeBuild(
   };
 }
 
-export class OptimizerBusyError extends Error {
-  constructor() {
-    super("The optimiser is busy.");
-    this.name = "OptimizerBusyError";
-  }
-}
-
 async function computeBestBuilds(gameMode: GameMode, weapon: BestBuildWeapon, signal?: AbortSignal): Promise<WeaponBestBuilds> {
   const lookup = await getGunPartLookup(gameMode);
   const presetId = lookup.get(weapon.id)?.defaultPresetId;
@@ -206,7 +200,7 @@ async function computeBestBuilds(gameMode: GameMode, weapon: BestBuildWeapon, si
   const builds: BestBuild[] = [];
   if (contents) builds.push(await describe("preset", weapon, start, lookup, pricing));
   for (const goal of ["recoil", "ergonomics"] as const) {
-    if (!tryAcquireOptimizerSlot()) throw new OptimizerBusyError();
+    await waitForOptimizerSlot();
     try {
       const result = await optimizeBuild(
         start,
@@ -241,7 +235,7 @@ export async function getWeaponBestBuilds(
   const key = `${gameMode}/${slug}`;
   const cached = cache.get(key);
   if (cached && cached.lookup === lookup && Date.now() - cached.at < CACHE_TTL_MS) return cached.value;
-  const value = computeBestBuilds(gameMode, weapon, signal);
+  const value = sharedAcrossRequests(computeBestBuilds(gameMode, weapon, signal));
   cache.set(key, { at: Date.now(), lookup, value });
   value.catch(() => {
     if (cache.get(key)?.value === value) cache.delete(key);

@@ -159,6 +159,9 @@ function Body({ state }: { state: State }) {
         <Panel title="Page errors">
           <RankedBars rows={stats.pageErrors} />
         </Panel>
+        <Panel title="Page errors by kind">
+          <RankedBars rows={stats.pageErrorKinds} />
+        </Panel>
         <Panel title="Countries">
           <RankedBars rows={stats.countries} />
         </Panel>

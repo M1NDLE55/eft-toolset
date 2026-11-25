@@ -92,6 +92,7 @@ import {
 import { readSnapshot } from "./tarkov-snapshot";
 import { USER_AGENT } from "./user-agent";
 import { AsyncLocalStorage } from "node:async_hooks";
+import { sharedAcrossRequests } from "@/app/lib/server/platform";
 
 // TARKOV_UPSTREAM_URL points a local build at a stand-in upstream (scripts/mcp-load.mjs); production never sets it.
 const UPSTREAM_BASE_URL = process.env.TARKOV_UPSTREAM_URL?.replace(/\/+$/, "") || "https://json.tarkov.dev";
@@ -2384,7 +2385,7 @@ function settledWithin<T>(promise: Promise<T>, ms: number): Promise<T | undefine
 
 /** Starts an empty entry from the deployment's snapshot, once. Leaves it empty without one. */
 function seedFromSnapshot(gameMode: GameMode, resource: Resource, entry: ResourceCacheEntry) {
-  entry.seed ??= readSnapshot(gameMode, resource)
+  entry.seed ??= sharedAcrossRequests(readSnapshot(gameMode, resource)
     .then((copy) => {
       if (!copy || entry.value) return;
       const value = copy.value;
@@ -2396,7 +2397,7 @@ function seedFromSnapshot(gameMode: GameMode, resource: Resource, entry: Resourc
       entry.sizeChars = copy.chars;
       entry.source = "deployment";
     })
-    .catch(() => undefined);
+    .catch(() => undefined));
   return entry.seed;
 }
 
@@ -2491,7 +2492,7 @@ function refreshResource(gameMode: GameMode, resource: Resource, entry: Resource
       entry.inFlight = undefined;
       entry.slowRefresh = undefined;
     });
-  entry.inFlight = inFlight;
+  entry.inFlight = sharedAcrossRequests(inFlight);
   return inFlight;
 }
 

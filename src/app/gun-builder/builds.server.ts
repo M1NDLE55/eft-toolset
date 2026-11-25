@@ -1,5 +1,5 @@
 import { notFound } from "@tanstack/react-router";
-import { RenderDataUnavailableError } from "@/app/lib/api/server-render";
+import { RenderDataUnavailableError } from "@/app/lib/render-errors";
 import { isItemSlug } from "@/app/lib/item-links";
 import { bestBuildDescription, bestBuildTitle } from "@/app/lib/seo/builds";
 import { gunsmithDescription, gunsmithTitle } from "@/app/lib/seo/gunsmith";
@@ -8,14 +8,6 @@ import { loadBestBuildWeapons, loadWeaponBestBuilds } from "./best/load";
 import { loadGunsmithTask, loadGunsmithTasks } from "./gunsmith/load";
 import type { BestBuildsPageData } from "./best/best-builds-page";
 import type { GunsmithPageData } from "./gunsmith/gunsmith-page";
-
-/** Thrown when the builds couldn't be worked out in time, so the render fails rather than caching a page without them. */
-class BuildsUnavailableError extends Error {
-  constructor(what: string) {
-    super(`${what} are temporarily unavailable.`);
-    this.name = "BuildsUnavailableError";
-  }
-}
 
 /** Every weapon with a best-build page; fails the render rather than cache an empty list. */
 export async function loadBestBuildsHub() {
@@ -29,7 +21,7 @@ export async function loadBestBuildsPage(gameMode: GameMode, slug: string): Prom
   if (!isItemSlug(slug)) throw notFound();
   const result = await loadWeaponBestBuilds(gameMode, slug);
   if (result === null) throw notFound();
-  if (result === undefined) throw new BuildsUnavailableError("Best builds");
+  if (result === undefined) throw new RenderDataUnavailableError("Best builds page");
   const weapons = (await loadBestBuildWeapons()) ?? [];
   const sameCaliber = weapons
     .filter((weapon) => weapon.caliber && weapon.caliber === result.weapon.caliber && weapon.slug !== slug)
@@ -75,7 +67,7 @@ export async function loadGunsmithPage(gameMode: GameMode, slug: string): Promis
   if (!isItemSlug(slug)) throw notFound();
   const view = await loadGunsmithTask(gameMode, slug);
   if (view === null) throw notFound();
-  if (view === undefined) throw new BuildsUnavailableError("Gunsmith builds");
+  if (view === undefined) throw new RenderDataUnavailableError("Gunsmith page");
   const tasks = (await loadGunsmithTasks()) ?? [];
   const index = tasks.findIndex((entry) => entry.slug === slug);
   const neighbours = [tasks[index - 1], tasks[index + 1]].filter((entry) => entry && index >= 0);

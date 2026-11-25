@@ -1,3 +1,4 @@
+import { RenderDataUnavailableError } from "@/app/lib/render-errors";
 import { runTarkovRead, waitForRenderSlot, releaseRenderSlot } from "./tarkov-server";
 
 /**
@@ -8,14 +9,6 @@ import { runTarkovRead, waitForRenderSlot, releaseRenderSlot } from "./tarkov-se
  * isn't cached, instead of caching an empty page.
  */
 export const RENDER_TIMEOUT_MS = 15_000;
-
-/** Thrown when a page's main data couldn't be loaded, so the render fails rather than caching a page without it. */
-export class RenderDataUnavailableError extends Error {
-  constructor(label: string) {
-    super(`${label}: data is temporarily unavailable.`);
-    this.name = "RenderDataUnavailableError";
-  }
-}
 
 /**
  * Runs a tarkov-server read while rendering a page. Returns undefined when the read fails or takes

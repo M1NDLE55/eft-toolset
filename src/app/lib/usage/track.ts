@@ -1,4 +1,4 @@
-import { type DurationBucket, type UsageOutcome, type UsageRoute, type WebEventName } from "./catalog";
+import { type DurationBucket, type PageErrorKind, type UsageOutcome, type UsageRoute, type WebEventName } from "./catalog";
 
 /**
  * Sends one anonymous usage event from the browser to /api/usage with navigator.sendBeacon: no
@@ -13,6 +13,7 @@ export interface TrackFields {
   outcome?: UsageOutcome;
   duration?: DurationBucket;
   route?: UsageRoute;
+  errorKind?: PageErrorKind;
 }
 
 export const USAGE_ENDPOINT = "/api/usage";

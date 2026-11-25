@@ -8,9 +8,10 @@ import {
 } from "@/app/lib/api/tarkov-server";
 import type { GameMode } from "@/components/game-mode/mode";
 import { isItemSlug } from "@/app/lib/item-links";
-import { BEST_BUILD_PRICES, OptimizerBusyError, describeBuild, type DescribedBuild } from "./best-builds";
+import { sharedAcrossRequests } from "@/app/lib/server/platform";
+import { BEST_BUILD_PRICES, describeBuild, type DescribedBuild } from "./best-builds";
 import { solveGunsmith, type GunsmithContext, type RequirementCheck } from "./gunsmith";
-import { releaseOptimizerSlot, tryAcquireOptimizerSlot } from "./optimizer-slots";
+import { releaseOptimizerSlot, waitForOptimizerSlot } from "./optimizer-slots";
 import { reconstructPresetTree } from "./presets";
 import { presetParts } from "./purchase";
 import type { PartLookup } from "./resolve";
@@ -105,7 +106,7 @@ async function computeTask(gameMode: GameMode, task: WeaponBuildTask): Promise<G
     const preset = presetParts(weapon.id, contents, lookup);
     const context: GunsmithContext = { lookup, sources: BEST_BUILD_PRICES, inCategory, preset };
     const presetRoot = contents ? reconstructPresetTree(weapon.id, contents, lookup) : null;
-    if (!tryAcquireOptimizerSlot()) throw new OptimizerBusyError();
+    await waitForOptimizerSlot();
     let solution;
     try {
       solution = await solveGunsmith(objective, presetRoot, context);
@@ -140,7 +141,7 @@ export async function getGunsmithTask(gameMode: GameMode, slug: string): Promise
   const key = `${gameMode}/${slug}`;
   const cached = cache.get(key);
   if (cached && cached.lookup === lookup && Date.now() - cached.at < CACHE_TTL_MS) return cached.value;
-  const value = computeTask(gameMode, task);
+  const value = sharedAcrossRequests(computeTask(gameMode, task));
   cache.set(key, { at: Date.now(), lookup, value });
   value.catch(() => {
     if (cache.get(key)?.value === value) cache.delete(key);

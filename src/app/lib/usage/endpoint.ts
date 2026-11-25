@@ -18,7 +18,7 @@ const clients = new MemoryBuckets();
 const isolate = { tokens: ISOLATE_LIMIT.burst, updatedAt: Date.now() };
 
 /** The fields a beacon may send. Anything else, or a field the event doesn't take, refuses it. */
-const BEACON_FIELDS = new Set(["event", "subject", "gameMode", "outcome", "duration", "route"]);
+const BEACON_FIELDS = new Set(["event", "subject", "gameMode", "outcome", "duration", "route", "errorKind"]);
 
 const NO_STORE = { "Cache-Control": "no-store" };
 
@@ -53,6 +53,7 @@ export function beaconEvent(body: unknown): UsageEvent | null {
     outcome: fields.outcome,
     duration: fields.duration,
     route: fields.route,
+    errorKind: fields.errorKind,
   } as UsageEvent;
   return checkedEvent(event);
 }
