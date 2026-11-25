@@ -63,7 +63,7 @@ export function sameNameHints(graph: QuestGraph, maps: Readonly<Record<string, Q
           const other = graph.byId.get(entry.id);
           return other ? [questName(other)] : [];
         });
-        return names.length > 0 ? `after ${names.toSorted().join(", ")}` : "";
+        return names.length > 0 ? `after ${names.slice().sort().join(", ")}` : "";
       },
       (quest: (typeof group)[number]) => (quest.maps[0] ? `on ${maps[quest.maps[0]]?.name ?? quest.maps[0]}` : ""),
       (quest: (typeof group)[number]) => (quest.minPlayerLevel > 1 ? `level ${quest.minPlayerLevel}` : ""),

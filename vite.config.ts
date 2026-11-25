@@ -7,6 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { defineConfig, type Plugin } from "vite";
+import { CLIENT_BUILD_TARGET, findTooNewApis } from "./scripts/browser-support.mjs";
 import { DATA_ASSET_PREFIX } from "./src/app/lib/server/data-asset-prefix.ts";
 import { PRERENDERED_PAGES } from "./src/app/lib/seo/prerendered-pages.ts";
 import { staticAssetHeaders } from "./src/app/lib/security/static-headers.ts";
@@ -67,6 +68,33 @@ function staticHeaders(): Plugin {
   };
 }
 
+/**
+ * Fails the client build when browser code calls a built-in that Chrome 109 lacks (see
+ * scripts/browser-support.mjs). The build target lowers syntax only, so a call like
+ * `array.toSorted()` from our code or a dependency would otherwise throw on older browsers.
+ */
+function browserSupportCheck(): Plugin {
+  return {
+    name: "eft:browser-support-check",
+    apply: "build",
+    applyToEnvironment: (environment) => environment.name === "client",
+    generateBundle(_options, bundle) {
+      const problems: string[] = [];
+      for (const output of Object.values(bundle)) {
+        if (output.type !== "chunk") continue;
+        for (const [id, module] of Object.entries(output.modules)) {
+          for (const found of findTooNewApis(module.code ?? "", id)) {
+            problems.push(`${id}: ${found.api} needs Chrome ${found.chrome}; use ${found.instead}`);
+          }
+        }
+      }
+      if (problems.length > 0) {
+        this.error(`Browser code uses built-ins newer than Chrome 109:\n${problems.map((line) => `  ${line}`).join("\n")}`);
+      }
+    },
+  };
+}
+
 /** Names this build, so the edge page cache never mixes two deployments' pages. */
 const BUILD_ID = process.env.EFT_BUILD_ID ?? `${Date.now().toString(36)}`;
 
@@ -81,9 +109,16 @@ export default defineConfig({
     alias: { "@": resolve(root, "src") },
   },
   server: { port: 3000 },
+  environments: {
+    // Vite's default browser target (Baseline widely available) starts at Chrome 111. Chrome 109 is the
+    // last release for Windows 7 and 8.1, so the browser bundle's syntax is lowered for it too.
+    // Built-in methods are not polyfilled: browserSupportCheck() keeps the too-new ones out.
+    client: { build: { target: CLIENT_BUILD_TARGET } },
+  },
   plugins: [
     dataSnapshotAssets(),
     staticHeaders(),
+    browserSupportCheck(),
     cloudflare({ viteEnvironment: { name: "ssr" } }),
     tailwindcss(),
     tanstackStart({

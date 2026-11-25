@@ -103,7 +103,7 @@ export function findBuild(builds: GunBuild[], id: string) {
 }
 
 export function sortBuilds(builds: GunBuild[]) {
-  return builds.toSorted((a, b) => b.updatedAt - a.updatedAt);
+  return builds.slice().sort((a, b) => b.updatedAt - a.updatedAt);
 }
 
 export function validBuildName(name: string) {

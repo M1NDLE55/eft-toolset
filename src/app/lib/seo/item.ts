@@ -124,7 +124,7 @@ function about(value: number) {
 
 /** The cheapest trader offer, with the loyalty level and task it needs. */
 function cheapestTrader(item: ComposedItem) {
-  return item.buyFor.filter((offer) => offer.vendor.name !== FLEA_MARKET).toSorted((a, b) => a.priceRUB - b.priceRUB)[0] ?? null;
+  return item.buyFor.filter((offer) => offer.vendor.name !== FLEA_MARKET).slice().sort((a, b) => a.priceRUB - b.priceRUB)[0] ?? null;
 }
 
 

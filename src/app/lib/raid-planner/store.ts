@@ -106,7 +106,7 @@ export function savePlan(plan: RaidPlan): RaidPlan {
   const plans = readPlans();
   const index = plans.findIndex((candidate) => candidate.id === plan.id);
   if (index === -1) throw new Error("This plan no longer exists in browser storage.");
-  writeStore(PLAN_STORE, plans.with(index, updated));
+  writeStore(PLAN_STORE, plans.map((candidate, at) => (at === index ? updated : candidate)));
   return updated;
 }
 

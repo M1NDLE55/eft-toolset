@@ -22,7 +22,7 @@ export function orderTraders(traders: readonly string[]): string[] {
   const unique = Array.from(new Set(traders));
   const position = new Map(unique.map((name, index) => [name, index]));
   const rank = (name: string) => RANK.get(name) ?? TRADER_ORDER.length + position.get(name)!;
-  return unique.toSorted((a, b) => rank(a) - rank(b));
+  return unique.slice().sort((a, b) => rank(a) - rank(b));
 }
 
 interface Orderable {
@@ -55,7 +55,7 @@ export function orderQuests<T extends Orderable>(quests: readonly T[], traders: 
   const groups = new Map<string | null, T[]>();
   for (const quest of quests) groups.set(quest.trader, [...(groups.get(quest.trader) ?? []), quest]);
   const rank = new Map(traders.map((name, index) => [name, index]));
-  const order = Array.from(groups.keys()).toSorted((a, b) => {
+  const order = Array.from(groups.keys()).slice().sort((a, b) => {
     const rankA = a === null ? Infinity : (rank.get(a) ?? traders.length);
     const rankB = b === null ? Infinity : (rank.get(b) ?? traders.length);
     return rankA - rankB || (a ?? "").localeCompare(b ?? "");
@@ -68,7 +68,7 @@ function byProgression<T extends Orderable>(quests: readonly T[]): T[] {
   const waitingOn = new Map(
     quests.map((quest) => [quest.id, new Set(quest.requires.map((entry) => entry.id).filter((id) => ids.has(id) && id !== quest.id))])
   );
-  const left = quests.toSorted(byLevelThenAge);
+  const left = quests.slice().sort(byLevelThenAge);
   const result: T[] = [];
   while (left.length > 0) {
     let index = left.findIndex((quest) => waitingOn.get(quest.id)!.size === 0);

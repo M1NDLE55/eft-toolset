@@ -55,7 +55,7 @@ export function itemIndexing(items: readonly IndexableItem[]): Map<string, ItemI
   for (const group of byName.values()) {
     if (group.length < 2) continue;
     // Shortest first: "foo" before "foo-3", "foo-3" before "foo-15", and "foo-545" before "foo-545-1".
-    const representative = group.toSorted((a, b) => a.slug.length - b.slug.length || a.slug.localeCompare(b.slug))[0];
+    const representative = group.slice().sort((a, b) => a.slug.length - b.slug.length || a.slug.localeCompare(b.slug))[0];
     for (const item of group) {
       const distinct = item.tradeable && item.basePrice !== null && item.basePrice !== representative.basePrice;
       if (item !== representative && !distinct) result.set(item.slug, { kind: "canonical", slug: representative.slug, reason: "same-name" });

@@ -189,7 +189,7 @@ export function lookupTerm(text: string, filter: LookupFilter = {}): LookupResul
   const suggestions = NAMES.filter((name) => accepts(name.entry, filter))
     .map((name) => ({ name, distance: editDistance(compact, name.compact, limit) }))
     .filter((candidate) => candidate.distance <= limit)
-    .toSorted((a, b) => a.distance - b.distance)
+    .slice().sort((a, b) => a.distance - b.distance)
     .map(({ name }) => describeName(name))
     .filter((label, index, labels) => labels.indexOf(label) === index)
     .slice(0, 5);
