@@ -95,7 +95,7 @@ export function keyChoices(detail: Pick<QuestDetail, "quest" | "objectives" | "i
   const seen = new Set<string>();
   const add = (map: string | null, ids: string[]) => {
     const known = Array.from(new Set(ids)).filter((id) => detail.items[id]);
-    const key = known.toSorted().join(",");
+    const key = known.slice().sort().join(",");
     if (known.length === 0 || seen.has(key)) return;
     seen.add(key);
     choices.push({ map, ids: known });
@@ -157,7 +157,7 @@ export function mainRewards(detail: Pick<QuestDetail, "items" | "rewards">): { u
           : null;
   const value = (entry: { id: string; count: number }) => (detail.items[entry.id].buy?.price ?? detail.items[entry.id].sell?.price ?? 0) * entry.count;
   const best = rewards.items
-    .filter((entry) => !moneyLabel(entry.id, entry.count) && detail.items[entry.id] && (!offer || name(entry.id) !== name(offer.id))).toSorted((a, b) => value(b) - value(a))[0];
+    .filter((entry) => !moneyLabel(entry.id, entry.count) && detail.items[entry.id] && (!offer || name(entry.id) !== name(offer.id))).slice().sort((a, b) => value(b) - value(a))[0];
   const money = rewards.items.find((entry) => moneyLabel(entry.id, entry.count));
   const goods = [
     money ? moneyLabel(money.id, money.count)! : null,
@@ -228,7 +228,7 @@ function fit(clauses: { order: number; variants: (string | null)[] }[], max: num
     length += 1 + text.length;
   }
   return chosen
-    .toSorted(([a], [b]) => a - b)
+    .slice().sort(([a], [b]) => a - b)
     .map(([, text]) => text)
     .join(" ");
 }
@@ -362,7 +362,7 @@ export function questSummary(detail: QuestDetail, options: { buildPage?: boolean
   // Any of the maps will do only when every objective with a map takes the same choice of maps.
   const objectiveLabels = detail.objectives.flatMap((objective) => {
     const names = mapLabels(objective.maps, detail.maps);
-    return names.length > 0 ? [names.toSorted().join("\u0000")] : [];
+    return names.length > 0 ? [names.slice().sort().join("\u0000")] : [];
   });
   const either = objectiveLabels.length > 0 && new Set(objectiveLabels).size === 1;
   const where =

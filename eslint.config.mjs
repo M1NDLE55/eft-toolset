@@ -4,6 +4,7 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import tseslint from "typescript-eslint";
+import { TOO_NEW_APIS } from "./scripts/browser-support.mjs";
 
 // The rules the site has always been linted with (React, the hooks and React Compiler rules, and
 // the accessibility checks), without the Next.js plugin.
@@ -49,6 +50,22 @@ export default defineConfig([
             },
           ],
         },
+      ],
+    },
+  },
+  {
+    // Built-ins newer than Chrome 109 (scripts/browser-support.mjs) in code that can run in the browser.
+    // The client build checks the bundle too; this flags them while editing. Server-only code may use them.
+    files: ["src/**/*.{ts,tsx}"],
+    ignores: ["src/app/lib/mcp/**", "src/app/lib/server/**", "src/**/*-server.ts", "src/server.ts"],
+    rules: {
+      "no-restricted-properties": [
+        "error",
+        ...TOO_NEW_APIS.map((api) => ({
+          ...(api.object ? { object: api.object } : {}),
+          property: api.name,
+          message: `Needs Chrome ${api.chrome} and the site supports 109; use ${api.instead}.`,
+        })),
       ],
     },
   },

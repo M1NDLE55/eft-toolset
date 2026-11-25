@@ -122,7 +122,7 @@ export function traderChain(graph: QuestGraph, trader: string): TraderChain {
   // The list is in play order (see order.ts): keep it within a column.
   const position = new Map(graph.quests.map((quest, index) => [quest.id, index]));
   const laidOut = Array.from(columns, (column) =>
-    (column ?? []).toSorted((a, b) => position.get(a.id)! - position.get(b.id)!).map((quest) => quest.id)
+    (column ?? []).slice().sort((a, b) => position.get(a.id)! - position.get(b.id)!).map((quest) => quest.id)
   ).filter(
     (column) => column.length > 0
   );

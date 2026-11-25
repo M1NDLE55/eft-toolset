@@ -77,7 +77,7 @@ function handleTreeKeys(event: React.KeyboardEvent<HTMLElement>, nodes: Position
       order = nodes;
       break;
     case "End":
-      order = nodes.toReversed();
+      order = nodes.slice().reverse();
       break;
     default:
       return;

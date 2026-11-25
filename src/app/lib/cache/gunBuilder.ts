@@ -63,7 +63,7 @@ export const gunListQuery: QueryDefinition<ModeVariables, GunListItem[]> = {
   fetch: async ({ gameMode }, signal) => {
     const guns = await apiFetch<unknown>(TARKOV_OPERATIONS.gunList, { gameMode }, { signal });
     if (!isGunList(guns)) throw new Error("The weapon list response was invalid.");
-    return guns.toSorted((a, b) => a.name.localeCompare(b.name));
+    return guns.slice().sort((a, b) => a.name.localeCompare(b.name));
   },
 };
 

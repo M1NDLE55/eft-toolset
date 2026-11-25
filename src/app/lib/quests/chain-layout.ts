@@ -90,7 +90,7 @@ export function layoutChain(graph: QuestGraph, chain: TraderChain): ChainLayout 
         group.push(next);
       }
     }
-    groups.push(group.toSorted((a, b) => position.get(a)! - position.get(b)!));
+    groups.push(group.slice().sort((a, b) => position.get(a)! - position.get(b)!));
   }
   const firstLevel = (group: string[]) => Math.min(...group.map((id) => graph.byId.get(id)?.minPlayerLevel ?? 0));
   groups.sort((a, b) => b.length - a.length || firstLevel(a) - firstLevel(b) || position.get(a[0])! - position.get(b[0])!);

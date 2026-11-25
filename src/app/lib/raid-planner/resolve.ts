@@ -110,7 +110,7 @@ export function placesOf(details: MapDetails): Place[] {
 }
 
 function collectPlaces(details: MapDetails): Place[] {
-  const extracts = details.extracts.toSorted((a, b) => EXTRACT_ORDER[a.faction] - EXTRACT_ORDER[b.faction]);
+  const extracts = details.extracts.slice().sort((a, b) => EXTRACT_ORDER[a.faction] - EXTRACT_ORDER[b.faction]);
   return [
     ...extracts.map((extract) => ({ kind: `${extract.faction} extract`, name: extract.name, position: extract.position })),
     ...details.transits.map((transit) => ({ kind: "transit", name: transit.description, position: transit.position })),
@@ -392,7 +392,7 @@ export function matchPlace(places: readonly Place[], reference: string, options:
                 (compact.length >= 2 && entry.compact.includes(compact))
             )
           )
-          .toSorted((a, b) => {
+          .slice().sort((a, b) => {
             // Names that start with the words given come first, then shorter names.
             const starts = (group: IndexedPlace[]) => (group[0].compact.startsWith(compact) ? 0 : 1);
             return starts(a) - starts(b) || a[0].place.name.length - b[0].place.name.length;
@@ -421,7 +421,7 @@ export function matchPlace(places: readonly Place[], reference: string, options:
       return { group: group.map((entry) => entry.place), whole, score: wordHit ? Math.min(whole, limit) : whole };
     })
     .filter((entry) => entry.score <= limit)
-    .toSorted((a, b) => a.score - b.score || a.whole - b.whole);
+    .slice().sort((a, b) => a.score - b.score || a.whole - b.whole);
   const [best] = scored;
   const second = best && scored.find((entry) => canonical(entry.group[0]) !== canonical(best.group[0]));
   if (best && best.whole <= typoAllowance(compact.length) && (!second || second.whole > best.whole)) {

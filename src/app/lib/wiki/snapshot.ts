@@ -246,7 +246,7 @@ export async function searchWiki(text: string): Promise<WikiSearchResult[]> {
   for (const [title, target] of Object.entries(loaded.redirects)) score(title, target.split("#")[0]);
   return [...scores]
     .filter(([title]) => loaded.byTitle.has(title))
-    .toSorted(([titleA, a], [titleB, b]) => b - a || titleA.localeCompare(titleB))
+    .slice().sort(([titleA, a], [titleB, b]) => b - a || titleA.localeCompare(titleB))
     .slice(0, SEARCH_LIMIT)
     .map(([title]) => ({ title, url: wikiPageUrl(title), lastEdited: loaded.byTitle.get(title)!.lastEdited }));
 }
