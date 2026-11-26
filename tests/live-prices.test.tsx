@@ -14,7 +14,7 @@ class FakeWebSocket {
   sent: string[] = [];
   onopen: (() => void) | null = null;
   onmessage: ((event: { data: string }) => void) | null = null;
-  onclose: (() => void) | null = null;
+  onclose: ((event: { code: number }) => void) | null = null;
   constructor(readonly url: string) {
     FakeWebSocket.instances.push(this);
   }
@@ -29,12 +29,12 @@ class FakeWebSocket {
     this.onopen?.();
   }
   push(update: Partial<PriceUpdate>) {
-    const message: PriceUpdate = { type: "prices", version: 1, publishedAt: null, confirmedAt: null, checking: false, stale: false, ...update };
+    const message: PriceUpdate = { type: "prices", version: 1, publishedAt: null, confirmedAt: null, checking: false, stale: false, liveForMs: 30 * 60_000, ...update };
     act(() => this.onmessage?.({ data: JSON.stringify(message) }));
   }
-  drop() {
+  drop(code = 1006) {
     this.readyState = 3;
-    this.onclose?.();
+    act(() => this.onclose?.({ code }));
   }
 }
 
@@ -160,11 +160,107 @@ describe("live prices", () => {
   });
 });
 
+describe("live prices pause after 30 minutes", () => {
+  const MINUTE = 60_000;
+
+  it("pause when the refresher's time is up: the socket closes, the notice shows, and nothing reconnects", () => {
+    const update = vi.fn(async () => undefined);
+    renderHook(() => live.useLivePrices("regular", 1, update));
+    const socket = FakeWebSocket.instances[0];
+    socket.open();
+    socket.push({ version: 1, liveForMs: 30 * MINUTE });
+    vi.advanceTimersByTime(30 * MINUTE - 1);
+    expect(live.isLivePricesPaused()).toBe(false);
+    vi.advanceTimersByTime(1);
+    expect(live.isLivePricesPaused()).toBe(true);
+    expect(socket.readyState).toBe(3);
+    vi.advanceTimersByTime(60 * MINUTE);
+    expect(FakeWebSocket.instances).toHaveLength(1);
+  });
+
+  it("pause when the refresher closes the socket for idleness, without reconnecting", () => {
+    renderHook(() => live.useLivePrices("regular", 1, async () => undefined));
+    FakeWebSocket.instances[0].open();
+    FakeWebSocket.instances[0].push({ version: 1 });
+    FakeWebSocket.instances[0].drop(4000);
+    expect(live.isLivePricesPaused()).toBe(true);
+    vi.advanceTimersByTime(10 * MINUTE);
+    expect(FakeWebSocket.instances).toHaveLength(1);
+  });
+
+  it("continue: a new socket, fresh prices once, and another 30 minutes", () => {
+    const update = vi.fn(async () => undefined);
+    renderHook(() => live.useLivePrices("regular", 1, update));
+    FakeWebSocket.instances[0].open();
+    FakeWebSocket.instances[0].push({ version: 1 });
+    vi.advanceTimersByTime(30 * MINUTE);
+    expect(live.isLivePricesPaused()).toBe(true);
+
+    act(() => live.continueLivePrices());
+    expect(live.isLivePricesPaused()).toBe(false);
+    expect(FakeWebSocket.instances).toHaveLength(2);
+    const renewed = FakeWebSocket.instances[1];
+    renewed.open();
+    renewed.push({ version: 4 });
+    expect(update.mock.calls).toEqual([[4]]);
+    vi.advanceTimersByTime(30 * MINUTE - 1);
+    expect(live.isLivePricesPaused()).toBe(false);
+    vi.advanceTimersByTime(1);
+    expect(live.isLivePricesPaused()).toBe(true);
+  });
+
+  it("don't extend the 30 minutes by reconnecting after a dropped connection", () => {
+    renderHook(() => live.useLivePrices("regular", 1, async () => undefined));
+    FakeWebSocket.instances[0].open();
+    FakeWebSocket.instances[0].push({ version: 1 });
+    vi.advanceTimersByTime(20 * MINUTE);
+    FakeWebSocket.instances[0].drop();
+    vi.advanceTimersByTime(3_000);
+    expect(FakeWebSocket.instances).toHaveLength(2);
+    FakeWebSocket.instances[1].open();
+    // The refresher gives the new socket 30 minutes of its own, but the page keeps its period.
+    FakeWebSocket.instances[1].push({ version: 1, liveForMs: 30 * MINUTE });
+    vi.advanceTimersByTime(10 * MINUTE);
+    expect(live.isLivePricesPaused()).toBe(true);
+  });
+
+  it("start another 30 minutes on navigation: reopening a socket that's a few minutes old, or resuming", () => {
+    renderHook(() => live.useLivePrices("regular", 1, async () => undefined));
+    FakeWebSocket.instances[0].open();
+    FakeWebSocket.instances[0].push({ version: 1 });
+    vi.advanceTimersByTime(MINUTE);
+    live.renewLivePricesOnNavigation();
+    expect(FakeWebSocket.instances).toHaveLength(1);
+    vi.advanceTimersByTime(20 * MINUTE);
+    live.renewLivePricesOnNavigation();
+    expect(FakeWebSocket.instances).toHaveLength(2);
+    FakeWebSocket.instances[1].open();
+    FakeWebSocket.instances[1].push({ version: 1 });
+    vi.advanceTimersByTime(29 * MINUTE);
+    expect(live.isLivePricesPaused()).toBe(false);
+    vi.advanceTimersByTime(MINUTE);
+    expect(live.isLivePricesPaused()).toBe(true);
+    act(() => live.renewLivePricesOnNavigation());
+    expect(live.isLivePricesPaused()).toBe(false);
+    expect(FakeWebSocket.instances).toHaveLength(3);
+  });
+
+  it("say nothing is paused when nothing on the page follows live prices", () => {
+    const view = renderHook(() => live.useLivePrices("regular", 1, async () => undefined));
+    FakeWebSocket.instances[0].open();
+    FakeWebSocket.instances[0].push({ version: 1 });
+    vi.advanceTimersByTime(30 * MINUTE);
+    expect(live.isLivePricesPaused()).toBe(true);
+    view.unmount();
+    expect(live.isLivePricesPaused()).toBe(false);
+  });
+});
+
 describe("parsePriceUpdate", () => {
   it("reads the refresher's message and refuses anything else", () => {
-    expect(parsePriceUpdate(JSON.stringify({ type: "prices", version: 3, publishedAt: null, confirmedAt: null, checking: true, stale: false }))).toMatchObject({ version: 3, checking: true });
+    expect(parsePriceUpdate(JSON.stringify({ type: "prices", version: 3, publishedAt: null, confirmedAt: null, checking: true, stale: false, liveForMs: 1_000 }))).toMatchObject({ version: 3, checking: true });
     expect(parsePriceUpdate("pong")).toBeNull();
-    expect(parsePriceUpdate(JSON.stringify({ type: "prices", version: -1, publishedAt: null, confirmedAt: null, checking: false, stale: false }))).toBeNull();
+    expect(parsePriceUpdate(JSON.stringify({ type: "prices", version: -1, publishedAt: null, confirmedAt: null, checking: false, stale: false, liveForMs: 1_000 }))).toBeNull();
     expect(parsePriceUpdate(JSON.stringify({ type: "other" }))).toBeNull();
     expect(parsePriceUpdate("x".repeat(3_000))).toBeNull();
   });

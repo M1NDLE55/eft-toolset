@@ -810,10 +810,14 @@ KV under its version (`tarkov:1:<mode>/<dataset>:body:<version>`); a 304 writes 
 that finds a body missing (expired after a week unchanged) asks it to write it again (at most every 5
 minutes).
 
-**Zero traffic means zero requests.** Nothing runs on a timer. The only alarm is for open pages: while
-a price socket is connected, the alarm wakes the refresher at the predicted change so open pages get
-it without anyone making a request; with no sockets it sets none. A hidden tab closes its socket
-after a minute.
+**Zero traffic means zero requests.** Nothing runs on a timer. The only alarm is for live pages: while
+a price socket is live, the alarm wakes the refresher at the predicted change so open pages get it
+without anyone making a request. A socket is live for 30 minutes from when it opened (see
+[Live prices](#live-prices)); the refresher keeps that time itself, in the socket's attachment, and
+closes it when it runs out, so a forgotten tab, or a page that ignores its own timer, stops counting
+as demand. An expired socket gets no pushes and keeps no alarm. With no live sockets the refresher
+sets no alarm: it checks only when a request finds prices due. A hidden tab closes its socket after a
+minute.
 
 Each check logs one JSON line (`{"event":"refresher_check"}`): mode, dataset, outcome (`changed`,
 `unchanged`, `older`, `failed`), whether it wrote KV, the requests it served since the last check, the
@@ -843,6 +847,18 @@ it shares one render per data centre. A read that couldn't get the version is ca
 The pages that follow it: the item prices hub, the PVE flea market, ammo, map keys, item pages, item
 groups and the home page's market board. Builds, Gunsmith and quests show prices too but refresh them
 on their next load.
+
+**Live prices last 30 minutes** (about the next three updates). Each socket's first message says how
+long it has (`liveForMs`), and the refresher closes it then (code 4000) whatever the page does. The
+page pauses at the same time: it closes its sockets and shows "Live prices paused because the page has
+been idle", with how old its prices are and a "Continue live prices" button
+(`src/app/components/global/live-prices-paused.tsx`). Continuing opens a new socket for another 30
+minutes, whose first message brings the current version, so the page refetches once if it is behind.
+Not continuing keeps the last prices; dismissed, the notice shrinks to their age and a resume button.
+A reload or a navigation starts another 30 minutes too (a navigation reopens sockets more than five
+minutes old, so the refresher's time restarts with the page's). Reconnecting after a dropped
+connection or a hidden tab stays within the current 30 minutes. This applies to every page that
+follows live prices, the home page's market board included.
 
 Meanwhile the header says "Updating prices": while a refetch runs, and while a check has run for more
 than 600 ms (so a quick 304 never flickers). If the socket can't open (an old browser, a blocked

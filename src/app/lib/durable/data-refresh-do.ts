@@ -12,7 +12,7 @@ import {
   type ScheduleState,
 } from "@/app/lib/api/refresh-schedule";
 import { fetchPriceRows, fetchSharedDataset, isSharedResource, SHARED_REFRESH_MS, type SharedResource } from "@/app/lib/api/tarkov-server";
-import type { PriceUpdate } from "@/app/lib/prices/live-protocol";
+import { PRICE_SOCKET_EXPIRED, type PriceUpdate } from "@/app/lib/prices/live-protocol";
 
 /** Open price sockets one refresher takes; past it, pages keep the prices they have. */
 export const PRICE_SOCKET_LIMIT = 10_000;
@@ -21,6 +21,12 @@ const SCALE = devTimeScale();
 const SCHEDULE = scaledScheduleConfig(SCALE);
 /** A shared dataset is checked with tarkov.dev at most this often. */
 const DATASET_REFRESH_MS = SHARED_REFRESH_MS;
+/**
+ * How long a price socket counts as demand: 30 minutes (about the next three updates) from when it
+ * opened. Then it is closed here, whatever the page does, and a page left open stops making the
+ * refresher check; the page asks its visitor whether to continue, which opens a new one.
+ */
+export const PRICE_SOCKET_TTL_MS = (30 * 60_000) / SCALE;
 /** After a failed dataset check, it isn't checked again for this long, doubling. */
 const DATASET_RETRY_BASE_MS = 10_000 / SCALE;
 const DATASET_RETRY_MAX_MS = (10 * 60_000) / SCALE;
@@ -159,17 +165,25 @@ export class DataRefreshDO extends DurableObject<Env> {
     if (this.ctx.getWebSockets().length >= PRICE_SOCKET_LIMIT) return new Response("Busy", { status: 429, headers: { "Retry-After": "60" } });
     const [client, server] = Object.values(new WebSocketPair());
     this.ctx.acceptWebSocket(server);
-    this.send(server, this.update(this.pricesCheck !== null));
+    const expiresAt = Date.now() + PRICE_SOCKET_TTL_MS;
+    server.serializeAttachment({ expiresAt } satisfies SocketInfo);
+    this.sendText(server, JSON.stringify(this.update(this.pricesCheck !== null, expiresAt)));
     // An open page is demand: check now if a check is due (an edge-cached page never asked), and
-    // keep the alarm set for the next one while pages stay open.
+    // keep the alarm set for the next one while it stays open.
     if (isCheckDue(this.priceState.schedule, Date.now())) this.background(this.checkPrices());
     else await this.scheduleAlarm();
     return new Response(null, { status: 101, webSocket: client });
   }
 
-  /** While pages are open, checks when the next change is due, so they get it without a request. */
+  /**
+   * While pages are live, checks when the next change is due, so they get it without a request, and
+   * closes sockets whose time has run out. With none left it sets no other alarm.
+   */
   async alarm() {
-    if (this.ctx.getWebSockets().length === 0 || !this.gameMode) return;
+    if (this.liveSockets().length === 0 || !this.gameMode) {
+      await this.ctx.storage.deleteAlarm();
+      return;
+    }
     if (isCheckDue(this.priceState.schedule, Date.now())) await this.checkPrices();
     else await this.scheduleAlarm();
   }
@@ -205,7 +219,7 @@ export class DataRefreshDO extends DurableObject<Env> {
     if (this.pricesCheck) return this.pricesCheck;
     const gameMode = this.gameMode!;
     const check = (async () => {
-      this.broadcast(this.update(true));
+      this.broadcast(true);
       const record = this.priceState;
       let started = Date.now();
       const validators = !fresh && record.version !== null ? { etag: record.etag ?? undefined, lastModified: record.lastModified ?? undefined } : undefined;
@@ -266,7 +280,7 @@ export class DataRefreshDO extends DurableObject<Env> {
         // How long after tarkov.dev published it the newest change was seen.
         ...(outcome === "changed" && schedule.changes.length ? { lagSeconds: Math.round((Date.now() - schedule.changes[schedule.changes.length - 1]) / 100) / 10 } : {}),
       });
-      this.broadcast(this.update(false));
+      this.broadcast(false);
       await this.scheduleAlarm();
     })().finally(() => {
       this.pricesCheck = null;
@@ -331,19 +345,46 @@ export class DataRefreshDO extends DurableObject<Env> {
 
   /** One line per check, as fields Workers Logs can filter on: what was checked, what came of it, and the demand it served. */
   private logCheck(dataset: string, outcome: string, wroteKv: boolean, extra: Record<string, unknown>) {
-    console.info(JSON.stringify({ event: "refresher_check", gameMode: this.gameMode, dataset, outcome, wroteKv, calls: this.calls, sockets: this.ctx.getWebSockets().length, ...extra }));
+    console.info(JSON.stringify({ event: "refresher_check", gameMode: this.gameMode, dataset, outcome, wroteKv, calls: this.calls, sockets: this.liveSockets().length, ...extra }));
     this.calls = 0;
   }
 
+  /**
+   * Price sockets still within their time, the only ones that count as demand. Those past it are
+   * closed now: a page that ignored its own timer (or never had one) doesn't keep the refresher busy.
+   */
+  private liveSockets(now = Date.now()): { socket: WebSocket; expiresAt: number }[] {
+    const live: { socket: WebSocket; expiresAt: number }[] = [];
+    for (const socket of this.ctx.getWebSockets()) {
+      const expiresAt = socketExpiry(socket);
+      if (expiresAt > now) {
+        live.push({ socket, expiresAt });
+        continue;
+      }
+      try {
+        socket.close(PRICE_SOCKET_EXPIRED, "Live prices paused: the page has been idle.");
+      } catch {
+        // Already closing.
+      }
+    }
+    return live;
+  }
+
+  /** Wakes for the next predicted change or the next socket to expire, while any socket is live; otherwise not at all. */
   private async scheduleAlarm() {
-    if (this.ctx.getWebSockets().length === 0) return;
     const now = Date.now();
-    const at = Math.max(this.priceState.schedule.nextCheckAt, now + 1_000);
+    const live = this.liveSockets(now);
+    if (live.length === 0) {
+      await this.ctx.storage.deleteAlarm();
+      return;
+    }
+    const firstExpiry = Math.min(...live.map((entry) => entry.expiresAt));
+    const at = Math.max(Math.min(this.priceState.schedule.nextCheckAt, firstExpiry), now + 1_000);
     const current = await this.ctx.storage.getAlarm();
     if (current === null || current > at || current < now) await this.ctx.storage.setAlarm(at);
   }
 
-  private update(checking: boolean): PriceUpdate {
+  private update(checking: boolean, expiresAt: number): PriceUpdate {
     const { version, lastModified, confirmedAt, stale } = this.priceState;
     const publishedAt = httpTime(lastModified);
     return {
@@ -353,16 +394,13 @@ export class DataRefreshDO extends DurableObject<Env> {
       confirmedAt: confirmedAt ? new Date(confirmedAt).toISOString() : null,
       checking,
       stale,
+      liveForMs: Math.max(0, expiresAt - Date.now()),
     };
   }
 
-  private broadcast(message: PriceUpdate) {
-    const text = JSON.stringify(message);
-    for (const socket of this.ctx.getWebSockets()) this.sendText(socket, text);
-  }
-
-  private send(socket: WebSocket, message: PriceUpdate) {
-    this.sendText(socket, JSON.stringify(message));
+  /** Sends the state to every live socket, each with its own time left. */
+  private broadcast(checking: boolean) {
+    for (const { socket, expiresAt } of this.liveSockets()) this.sendText(socket, JSON.stringify(this.update(checking, expiresAt)));
   }
 
   private sendText(socket: WebSocket, text: string) {
@@ -380,6 +418,20 @@ export class DataRefreshDO extends DurableObject<Env> {
 
   private save(key: string, value: unknown) {
     this.ctx.storage.sql.exec("INSERT OR REPLACE INTO refresher_state (key, value) VALUES (?, ?)", key, JSON.stringify(value));
+  }
+}
+
+interface SocketInfo {
+  expiresAt: number;
+}
+
+/** When a price socket's time runs out; a socket without one (never expected) counts as expired. */
+function socketExpiry(socket: WebSocket): number {
+  try {
+    const info = socket.deserializeAttachment() as Partial<SocketInfo> | null;
+    return typeof info?.expiresAt === "number" ? info.expiresAt : 0;
+  } catch {
+    return 0;
   }
 }
 

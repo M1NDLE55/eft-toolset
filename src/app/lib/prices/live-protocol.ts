@@ -20,7 +20,12 @@ export interface PriceUpdate {
   checking: boolean;
   /** The last check failed. */
   stale: boolean;
+  /** How long this socket stays live (from 30 minutes when it opened); then the refresher closes it. */
+  liveForMs: number;
 }
+
+/** The close code the refresher uses when a socket's time has run out. */
+export const PRICE_SOCKET_EXPIRED = 4000;
 
 /** A frame from the socket, checked; null for anything else. */
 export function parsePriceUpdate(text: unknown): PriceUpdate | null {
@@ -38,6 +43,8 @@ export function parsePriceUpdate(text: unknown): PriceUpdate | null {
   if (version !== null && !(typeof version === "number" && Number.isSafeInteger(version) && version > 0)) return null;
   const time = (field: unknown) => field === null || (typeof field === "string" && field.length <= 40);
   if (!time(message.publishedAt) || !time(message.confirmedAt)) return null;
+  const liveForMs = message.liveForMs;
+  if (typeof liveForMs !== "number" || !Number.isFinite(liveForMs) || liveForMs < 0 || liveForMs > 24 * 60 * 60_000) return null;
   return {
     type: "prices",
     version: version as number | null,
@@ -45,5 +52,6 @@ export function parsePriceUpdate(text: unknown): PriceUpdate | null {
     confirmedAt: message.confirmedAt as string | null,
     checking: message.checking,
     stale: message.stale,
+    liveForMs,
   };
 }

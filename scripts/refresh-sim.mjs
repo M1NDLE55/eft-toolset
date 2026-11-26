@@ -3,16 +3,17 @@
 // publishing schedule this script controls, under `wrangler dev`, with its clocks sped up.
 //
 //   npm run build                       # once: the Worker bundle and the data snapshot it serves
-//   node scripts/refresh-sim.mjs        # about 17 minutes at the default --scale 30
+//   node scripts/refresh-sim.mjs        # about 23 minutes at the default --scale 30
 //
 // The stand-in serves the build's snapshot (data/tarkov) with real validators, so instances' snapshot
 // copies revalidate with a 304, and publishes a new items file per game mode on a schedule: every 10
-// simulated minutes at :00:23 (PVE :00:43), then moved to :01:23, then drifting to a 10.5-minute
-// period. Each new file changes the Graphics card's flea price, so a page can be watched updating
-// (`--serve-only` keeps the stand-in and wrangler running for that). The driver sends concurrent
-// bursts of uncached API reads (POST /api/tarkov) through each phase, then nothing for a simulated
-// hour, and reports per simulated hour: tarkov.dev requests, KV writes and requests to the
-// refresher, read from its `refresher_check` log lines, and how far behind tarkov.dev prices were.
+// simulated minutes, then a minute later in the hour, then drifting to a 10.5-minute period. Each new
+// file changes the Graphics card's flea price, so a page can be watched updating (`--serve-only`
+// keeps the stand-in and wrangler running for that). The driver sends uncached API reads (POST
+// /api/tarkov) through each phase, with concurrent bursts just as each check falls due; then nothing
+// for a simulated hour; then traffic again; then only a tab left open that ignores the 30-minute
+// limit. It reports per simulated hour: tarkov.dev requests, KV writes and requests to the refresher,
+// read from its `refresher_check` log lines, and how far behind tarkov.dev prices were.
 //
 // Options: --scale <n> (REFRESH_TIME_SCALE, default 30), --port <worker port, default 8787>,
 // --upstream-port <default 8791>, --serve-only.
@@ -246,6 +247,24 @@ for (const mode of MODES) {
 await phase("drifting, 10.5-minute period", 2 * HOUR, traffic);
 await phase("no traffic", HOUR, (ms) => sleep(ms));
 await phase("traffic again", HOUR, traffic);
+
+/**
+ * A tab left open with nobody else on the site. This client ignores the 30-minute limit and keeps
+ * its socket alive with pings, as a buggy or modified page might: the refresher must stop checking
+ * for it after 30 minutes and close it itself.
+ */
+let tab = null;
+await phase("a tab left open, nothing else", 3 * HOUR, async (ms) => {
+  const opened = Date.now();
+  const socket = new WebSocket(`ws://127.0.0.1:${PORT}/api/prices/live?mode=regular`, { headers: { Origin: origin, "CF-Connecting-IP": clientIp() } });
+  tab = { opened, closedAt: null, code: null, messages: 0 };
+  socket.onmessage = () => (tab.messages += 1);
+  socket.onclose = (event) => Object.assign(tab, { closedAt: Date.now(), code: event.code });
+  const pings = setInterval(() => socket.readyState === 1 && socket.send("ping"), 30_000 / SCALE);
+  await sleep(ms);
+  clearInterval(pings);
+  socket.close();
+});
 await sleep(2_000);
 stop();
 
@@ -276,6 +295,15 @@ for (const { name, from, to } of phases) {
 }
 
 console.log(`${refused} requests refused by the rate limit.`);
+if (tab) {
+  const tabPhase = phases.find((entry) => entry.name.startsWith("a tab left open"));
+  const checks = upstream.filter((entry) => entry.path === "/regular/items" && entry.at >= tabPhase.from && entry.at < tabPhase.to);
+  const within = checks.filter((entry) => entry.at < tab.opened + 30 * MINUTE).length;
+  console.log(
+    `Tab left open: closed by the refresher after ${tab.closedAt ? ((tab.closedAt - tab.opened) / MINUTE).toFixed(1) : "never"} simulated minutes ` +
+      `(code ${tab.code}), ${tab.messages} messages; items checks in its first 30 minutes: ${within}, in the ${((tabPhase.to - tabPhase.from) / MINUTE - 30).toFixed(0)} minutes after: ${checks.length - within}.`
+  );
+}
 // One download per new items file, however many requests were waiting on it.
 for (const mode of MODES) {
   const downloads = upstream.filter((entry) => entry.path === `/${mode}/items` && entry.status === 200).length;

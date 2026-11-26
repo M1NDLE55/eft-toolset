@@ -13,7 +13,8 @@ import {
   settleTarkovRefreshes,
   type PriceSourceInfo,
 } from "@/app/lib/api/tarkov-server";
-import type { PriceUpdate } from "@/app/lib/prices/live-protocol";
+import { PRICE_SOCKET_EXPIRED, type PriceUpdate } from "@/app/lib/prices/live-protocol";
+import { PRICE_SOCKET_TTL_MS } from "@/app/lib/durable/data-refresh-do";
 import { createTarkovFixtures } from "./fixtures/tarkov";
 import { writeTarkovSnapshot } from "./fixtures/tarkov-snapshot";
 import { setTarkovSnapshotDirForTests } from "@/app/lib/api/tarkov-snapshot";
@@ -353,6 +354,59 @@ describe("the live price push", () => {
     await durable.runAlarms(state.alarm!);
     expect(itemsChecks()).toHaveLength(2);
     expect(state.alarm).toBeNull();
+  });
+});
+
+describe("live price sockets expire", () => {
+  it("after 30 minutes the refresher closes a socket itself and stops counting it as demand", async () => {
+    const first = await service().prices("regular", null);
+    const socket = await openSocket();
+    expect(socket.last<PriceUpdate>()!.liveForMs).toBe(PRICE_SOCKET_TTL_MS);
+    const state = durable.DATA_REFRESH.state("regular")!;
+
+    // A client that ignores its own timer: the alarms keep checking for it only until its time is up.
+    let now = first.nextCheckAt;
+    while (state.alarm !== null && now < Date.now() + 3 * HOUR) {
+      now = state.alarm;
+      vi.setSystemTime(now);
+      publishItems();
+      await durable.runAlarms(now);
+    }
+    const opened = Date.UTC(2026, 10, 26, 8, 0, 30);
+    expect(socket.closed).toEqual({ code: PRICE_SOCKET_EXPIRED, reason: expect.stringContaining("idle") });
+    expect(state.alarm).toBeNull();
+    // Every check the alarm made fell within the socket's 30 minutes; then none.
+    const checksAfter = upstream.filter((request) => request.path === "/regular/items").length;
+    vi.setSystemTime(Date.now() + 3 * HOUR);
+    await durable.runAlarms();
+    expect(upstream.filter((request) => request.path === "/regular/items")).toHaveLength(checksAfter);
+    expect(checksAfter).toBeLessThanOrEqual(1 + Math.ceil(PRICE_SOCKET_TTL_MS / (10 * MINUTE)));
+    expect(now - opened).toBeLessThanOrEqual(PRICE_SOCKET_TTL_MS + 1_000);
+  });
+
+  it("don't count once expired, even before the alarm closes them: no pushes, no alarm", async () => {
+    const first = await service().prices("regular", null);
+    const socket = await openSocket();
+    vi.setSystemTime(Date.now() + PRICE_SOCKET_TTL_MS + 1);
+    publishItems();
+    const sent = socket.sent.length;
+    // A request still checks on demand, but the expired page isn't told, and no alarm is kept for it.
+    await service().prices("regular", first.version);
+    expect(socket.sent).toHaveLength(sent);
+    expect(socket.closed?.code).toBe(PRICE_SOCKET_EXPIRED);
+    expect(durable.DATA_REFRESH.state("regular")!.alarm).toBeNull();
+  });
+
+  it("start a new 30 minutes when the page opens another socket", async () => {
+    await service().prices("regular", null);
+    const first = await openSocket();
+    vi.setSystemTime(Date.now() + 20 * MINUTE);
+    const second = await openSocket();
+    vi.setSystemTime(Date.now() + 15 * MINUTE);
+    await durable.runAlarms();
+    expect(first.closed?.code).toBe(PRICE_SOCKET_EXPIRED);
+    expect(second.closed).toBeNull();
+    expect(durable.DATA_REFRESH.state("regular")!.alarm).not.toBeNull();
   });
 });
 
