@@ -101,6 +101,11 @@
       "dataset": "eft_toolset_usage"
     }
   ],
+  "triggers": {
+    // No cron: the refresher (DATA_REFRESH) replaced it. The empty list is needed: a deploy leaves
+    // existing cron triggers in place unless `crons` is set, and only [] removes them.
+    "crons": []
+  },
   // Settings that aren't secret. Prerendered pages are built with them too, so set them here rather
   // than in the dashboard. Secrets (WORKOS_API_KEY, WORKOS_COOKIE_PASSWORD) are set with
   // `wrangler secret put`; see DEPLOYMENT.md.

@@ -30,8 +30,9 @@ www.eft-toolset.com from Vercel. DATA_ARCHITECTURE.md ("Platform") describes wha
   Check under Images in the dashboard that the account can use the Images binding. If a conversion
   fails, share images fall back to each icon's JPEG copy, so the site works without it.
 - **No cron trigger.** The site used to refresh tarkov.dev data every minute from a cron; the
-  refresher below replaced it, and nothing else used the cron. Deploying this config removes the
-  trigger.
+  refresher below replaced it, and nothing else used the cron. `wrangler.jsonc` sets
+  `"triggers": { "crons": [] }`: a deploy keeps existing cron triggers unless `crons` is set, so
+  leaving the key out would keep the old one running, and only the empty list removes it.
 - **Durable Object `DATA_REFRESH`** (class `DataRefreshDO`), created by the `refresh-v1` migration
   on the next deploy: one instance per game mode (`regular`, `pve`), the only caller of tarkov.dev for
   prices and the shared datasets, and the live price sockets. Nothing to set up.

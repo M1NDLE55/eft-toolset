@@ -1018,7 +1018,8 @@ The site is a TanStack Start app on one Cloudflare Worker (`src/server.ts`, `wra
 - **Images** (`IMAGES`): converts tarkov.dev's WebP icons to PNG for the quest share images, which
   are drawn with `@cf-wasm/og` (Satori and resvg). Without it, the icon's JPEG copy is used.
 - **No cron.** Data is refreshed on demand by the refresher; its alarm runs only while price sockets
-  are open.
+  are live. `wrangler.jsonc` sets `"crons": []`, because a deploy that leaves the key out keeps any
+  existing cron trigger.
 
 Server code reaches these through `platform()` (`src/app/lib/server/platform.ts`), which the
 Worker installs at startup; tests and scripts get disk-backed defaults. `npm run dev` runs the
