@@ -9,7 +9,7 @@ www.eft-toolset.com from Vercel. DATA_ARCHITECTURE.md ("Platform") describes wha
 - **Workers Paid plan.** It allows the CPU limit set in `wrangler.jsonc` (the optimiser and cold
   data loads need far more than the free plan's 10 ms), the static-asset file count (more than the
   free plan allows), and Durable Objects with SQLite storage.
-- **CPU limit per invocation**: `limits.cpu_ms` is 40 seconds, for requests and cron runs alike. It
+- **CPU limit per invocation**: `limits.cpu_ms` is 40 seconds, for requests and alarms alike. It
   equals the MCP tool deadline, so legitimate calls end at the app's own time limits with a clear
   error first; only runaway work reaches it, which Cloudflare stops with error 1102 ("Worker
   exceeded resource limits", outcome `exceededCpu` in the logs). It is a second guard beside the
@@ -29,14 +29,19 @@ www.eft-toolset.com from Vercel. DATA_ARCHITECTURE.md ("Platform") describes wha
   per unique transformation; each icon is converted once per isolate and kept, so usage stays small.
   Check under Images in the dashboard that the account can use the Images binding. If a conversion
   fails, share images fall back to each icon's JPEG copy, so the site works without it.
-- **Cron trigger**: `* * * * *`, from `wrangler.jsonc`; nothing to set up.
+- **No cron trigger.** The site used to refresh tarkov.dev data every minute from a cron; the
+  refresher below replaced it, and nothing else used the cron. Deploying this config removes the
+  trigger.
+- **Durable Object `DATA_REFRESH`** (class `DataRefreshDO`), created by the `refresh-v1` migration
+  on the next deploy: one instance per game mode (`regular`, `pve`), the only caller of tarkov.dev for
+  prices and the shared datasets, and the live price sockets. Nothing to set up.
 - **Workers Analytics Engine**: the binding `USAGE` writes to the dataset `eft_toolset_usage`, which
   Cloudflare creates on the first write; nothing to set up. Included in Workers Paid up to a monthly
   allowance of rows written and queries read, then billed per million (see USAGE_STATS.md).
 - **Durable Object `USAGE_SALT`** (class `UsageSaltDO`), created by the `usage-v1` migration on the
   next deploy; one instance holds the usage-stats keys.
 - **Observability**: Workers Logs are on (`observability.enabled`); the logs are the JSON lines the
-  app writes (`mcp_tool_call`, `scheduled_refresh`, `tarkov_data_evicted`).
+  app writes (`mcp_tool_call`, `refresher_check`, `tarkov_data_evicted`).
 
 ## Settings
 
@@ -107,9 +112,8 @@ Run `wrangler deploy` without `--config wrangler.jsonc`: the Vite plugin writes 
 into the build output. To test sign-in on the `workers.dev` hostname before the cutover, deploy with
 `npx wrangler deploy --var APP_ORIGIN:https://<worker>.<subdomain>.workers.dev`; the next plain
 `wrangler deploy` drops it again, which is what production needs. The build needs network access to json.tarkov.dev for the snapshot (it never
-fails the build without it). After the first deploy, trigger the cron once from the dashboard (or
-wait a minute) so the price feed is in KV before traffic arrives; until then, reads use the items
-file as before.
+fails the build without it). Nothing needs warming after a deploy: the first request for prices
+makes the refresher check tarkov.dev, and reads use the deployment snapshot meanwhile.
 
 ## Cutover from Vercel
 
@@ -133,7 +137,7 @@ an SPF TXT record. A Worker custom domain needs the zone on Cloudflare.
    add a Single Redirect rule: requests to `eft-toolset.com/*` → `https://www.eft-toolset.com/${1}`,
    308, keeping the query string. (Vercel did the same redirect.)
 6. Check: the home page, an item page, `/api/mcp` with your connector, `/sitemap.xml`, sign-in at
-   `/settings`, and the Worker's logs (`scheduled_refresh` every minute).
+   `/settings`, and the Worker's logs (`refresher_check` while the site is in use).
 7. When traffic has moved, remove the Vercel project's domains, then pause or delete the project.
    Remove the Upstash database if nothing else uses it.
 

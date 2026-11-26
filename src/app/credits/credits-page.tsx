@@ -38,8 +38,9 @@ const sections: { heading: string; content: ReactNode }[] = [
         <p>
           It&apos;s a free service, so we try to be a good guest. Your browser asks our server for data instead of
           calling the tarkov.dev API, and our server keeps a copy of each dataset in memory. Each dataset is refreshed
-          only as often as tarkov.dev changes it: prices every five minutes, maps and quests every half hour, and
-          everything else every two hours. A refresh asks only whether the data changed, so an unchanged dataset
+          only as often as tarkov.dev changes it, and only while someone is using the site: prices when tarkov.dev is
+          due to publish new ones (about every ten minutes), and everything else at most once an hour. One of our
+          servers does the checking for all of them. A refresh asks only whether the data changed, so an unchanged dataset
           isn&apos;t downloaded again. Only one refresh of a dataset runs at a time, and each server makes at most
           four requests to tarkov.dev at once, so busy periods on our site don&apos;t become extra requests. Small
           datasets that rarely change are shared between our servers, so a new server doesn&apos;t download them

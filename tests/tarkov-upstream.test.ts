@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
-import { setRegionalCacheForTests, type SharedCache } from "@/app/lib/api/shared-cache";
+import { setRegionalCacheForTests } from "@/app/lib/api/shared-cache";
 import {
   canReuseSnapshot,
   clearTarkovResourceCache,
@@ -28,20 +28,6 @@ function requests() {
 
 function requestsFor(resource: string) {
   return requests().filter((request) => request.resource === resource);
-}
-
-function memoryCache() {
-  const store = new Map<string, unknown>();
-  const cache: SharedCache = {
-    maxChars: 12_000_000,
-    async get(key) {
-      return store.has(key) ? structuredClone(store.get(key)) : null;
-    },
-    async set(key, value) {
-      store.set(key, structuredClone(value));
-    },
-  };
-  return { cache, store };
 }
 
 beforeEach(() => {
@@ -176,46 +162,3 @@ describe("tarkov.dev requests", () => {
   });
 });
 
-describe("the regional cache", () => {
-  it("lets another instance reuse every dataset but the items file without asking tarkov.dev", async () => {
-    const { cache, store } = memoryCache();
-    setRegionalCacheForTests(cache);
-    await detail();
-    expect(requestsFor("crafts")).toHaveLength(1);
-    // The items file stays per isolate (its prices come from the price feed); its names are shared.
-    expect([...store.keys()].some((key) => key.includes("/items:"))).toBe(false);
-    expect([...store.keys()].some((key) => key.includes("/items_en:body:"))).toBe(true);
-    expect([...store.keys()].some((key) => key.includes("/crafts:body:"))).toBe(true);
-
-    clearTarkovResourceCache();
-    const second = (await detail()) as { name: string };
-    expect(second.name).toBe("Test Rifle");
-    expect(requestsFor("crafts")).toHaveLength(1);
-    expect(requestsFor("barters")).toHaveLength(1);
-    expect(requestsFor("items")).toHaveLength(2);
-  });
-
-  it("checks with tarkov.dev once the shared copy is due, and records the check for everyone", async () => {
-    vi.useFakeTimers({ toFake: ["Date"] });
-    const { cache, store } = memoryCache();
-    setRegionalCacheForTests(cache);
-    const checkedAt = () => (store.get("tarkov:1:regular/crafts:meta") as { checkedAt: number }).checkedAt;
-    await detail();
-    const firstCheck = checkedAt();
-    vi.setSystemTime(Date.now() + 3 * 60 * 60_000);
-    await detail();
-    await vi.waitFor(() => expect(requestsFor("crafts")).toHaveLength(2));
-    expect(requestsFor("crafts")[1].headers["If-None-Match"]).toBe('"crafts-1"');
-    await vi.waitFor(() => expect(checkedAt()).toBeGreaterThanOrEqual(firstCheck + 3 * 60 * 60_000));
-  });
-
-  it("ignores a shared copy that fails validation", async () => {
-    const { cache, store } = memoryCache();
-    setRegionalCacheForTests(cache);
-    await detail();
-    for (const key of store.keys()) if (key.includes("/crafts:body:")) store.set(key, { data: "not crafts" });
-    clearTarkovResourceCache();
-    await detail();
-    expect(requestsFor("crafts")).toHaveLength(2);
-  });
-});

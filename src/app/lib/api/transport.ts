@@ -36,14 +36,25 @@ export class ApiTransportError extends Error {
   }
 }
 
+/**
+ * The price versions of a fetch (see live-prices.ts): the version to ask for at least (`p`), and the
+ * oldest version the responses came from, filled in as they arrive.
+ */
+export interface PriceVersions {
+  min?: number;
+  received?: number;
+}
+
 export interface ApiRequestOptions {
   signal?: AbortSignal;
   timeoutMs?: number;
   retries?: number;
+  prices?: PriceVersions;
 }
 
 interface ApiResponse<T> {
   data?: T;
+  pricesVersion?: unknown;
   error?: {
     message?: unknown;
     code?: unknown;
@@ -52,11 +63,13 @@ interface ApiResponse<T> {
 
 export function apiRequestInit(
   operation: TarkovOperation,
-  variables: Record<string, unknown>
+  variables: Record<string, unknown>,
+  minPricesVersion?: number
 ): { url: string; init: RequestInit } {
   const encoded = canonicalJson(variables);
   if (CACHEABLE_OPERATIONS.has(operation) && encoded.length <= MAX_GET_VARIABLES_LENGTH) {
     const query = new URLSearchParams({ op: operation, v: encoded });
+    if (minPricesVersion !== undefined) query.set("p", String(minPricesVersion));
     return {
       url: `${API_URL}?${query.toString()}`,
       init: { method: "GET", headers: { Accept: "application/json" } },
@@ -67,7 +80,7 @@ export function apiRequestInit(
     init: {
       method: "POST",
       headers: { Accept: "application/json", "Content-Type": "application/json" },
-      body: JSON.stringify({ operation, variables }),
+      body: JSON.stringify(minPricesVersion === undefined ? { operation, variables } : { operation, variables, p: minPricesVersion }),
       cache: "no-store",
     },
   };
@@ -107,7 +120,7 @@ async function requestOnce<T>(
   options.signal?.addEventListener("abort", abortFromCaller, { once: true });
 
   try {
-    const { url, init } = apiRequestInit(operation, variables);
+    const { url, init } = apiRequestInit(operation, variables, options.prices?.min);
     const response = await fetch(url, { ...init, signal: controller.signal });
 
     let json: ApiResponse<T>;
@@ -151,6 +164,10 @@ async function requestOnce<T>(
     }
 
     setUpstreamStale(response.headers.get("x-eft-data-stale") === "true");
+    const version = json.pricesVersion;
+    if (options.prices && typeof version === "number" && Number.isSafeInteger(version) && version > 0) {
+      options.prices.received = Math.min(options.prices.received ?? version, version);
+    }
     return json.data;
   } catch (error) {
     if (controller.signal.aborted && controller.signal.reason instanceof ApiTransportError) {

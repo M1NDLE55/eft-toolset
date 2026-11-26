@@ -8,8 +8,10 @@ export const EDGE_TTL_HEADER = "X-EFT-Edge-TTL";
  * site's ISR `revalidate` values. See DATA_ARCHITECTURE.md ("Page caching").
  */
 export const EDGE_TTL = {
-  /** Prices are the content: item prices, PVE flea market, ammo, map keys. */
+  /** Prices are the content: item prices, PVE flea market, ammo, map keys. Open pages get newer prices pushed (live-prices.ts). */
   prices: 300,
+  /** A priced page asked for a price version it couldn't be rendered from yet: kept only until it can. */
+  behind: 15,
   /** Item pages (prices also refresh in the browser), best and Gunsmith builds. */
   builds: 21_600,
   /** Quests, the keys hub, raid-planner maps, the sitemap. */

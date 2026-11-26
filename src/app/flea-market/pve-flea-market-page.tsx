@@ -26,7 +26,7 @@ const FAQ = [
   {
     question: "How often do PVE prices update?",
     answer:
-      "Prices come from tarkov.dev, which updates them every few minutes. EFT Toolset fetches fresh prices whenever its copy is more than five minutes old.",
+      "Prices come from tarkov.dev, which updates them about every ten minutes. EFT Toolset fetches them as soon as tarkov.dev publishes, and an open page updates by itself.",
   },
   {
     question: "What should I sell in PVE?",

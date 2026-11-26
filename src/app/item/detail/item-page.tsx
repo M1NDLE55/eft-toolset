@@ -29,10 +29,12 @@ export interface ItemPageData {
   /** The quests that use the item, when the quest list was read in time. */
   usedBy: ItemQuests | null;
   metadata: Metadata;
+  /** The price version the item was rendered from, for the live price push (live-prices.ts). */
+  pricesVersion?: number | null;
 }
 
 export function ItemPage({ data }: { data: ItemPageData }) {
-  const { item, reference, canonical, renderedAt, gameMode, wiki, usedBy } = data;
+  const { item, reference, canonical, renderedAt, gameMode, wiki, usedBy, pricesVersion } = data;
   return (
     <>
       {canonical && (
@@ -44,7 +46,7 @@ export function ItemPage({ data }: { data: ItemPageData }) {
           ])}
         />
       )}
-      <ItemPageClient reference={reference} initial={{ gameMode, item, renderedAt }} wiki={wiki} />
+      <ItemPageClient reference={reference} initial={{ gameMode, item, renderedAt, pricesVersion: pricesVersion ?? undefined }} wiki={wiki} />
       <section aria-labelledby="item-summary" className="flex flex-col gap-2 pt-2">
         <h2 id="item-summary" className={heading}>
           About {item.name}

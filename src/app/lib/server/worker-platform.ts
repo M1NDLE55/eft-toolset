@@ -2,12 +2,13 @@ import { AsyncLocalStorage } from "node:async_hooks";
 import { setPlatform, type SharedStore } from "./platform";
 import { DATA_ASSET_PREFIX } from "./data-asset-prefix";
 import { userObject } from "@/app/lib/durable/access";
+import type { DataRefresher } from "@/app/lib/api/refresher";
 
 /** How long an isolate may keep a KV read before asking again (KV's minimum is 30 seconds). */
 const KV_CACHE_TTL_SECONDS = 30;
 
 let installed: Env | undefined;
-// The request (or cron run) whose code is running: an isolate serves many at once, so the one that
+// The request whose code is running: an isolate serves many at once, so the one that
 // started last isn't necessarily the one asking. waitUntil extends this one, or failing that (code the
 // runtime calls back outside the handler's async context) the one that started last, as it used to.
 const executionContext = new AsyncLocalStorage<ExecutionContext>();
@@ -15,7 +16,7 @@ let latestContext: ExecutionContext | undefined;
 /** In `vite dev` only: the dev server, which serves data/ at /_data (see vite.config.ts). */
 let devOrigin: string | undefined;
 
-/** Runs a request's or cron run's handler, so work it starts is kept alive with its own waitUntil. */
+/** Runs a request's handler, so work it starts is kept alive with its own waitUntil. */
 export function withExecutionContext<T>(ctx: ExecutionContext, run: () => T): T {
   latestContext = ctx;
   return executionContext.run(ctx, run);
@@ -24,7 +25,7 @@ export function withExecutionContext<T>(ctx: ExecutionContext, run: () => T): T 
 /**
  * Installs the Cloudflare platform: the data snapshot from static assets, KV as the shared store,
  * and waitUntil from the request being served (withExecutionContext). Called at startup and for
- * each request or cron run.
+ * each request.
  */
 export function installWorkerPlatform(env: Env, request?: Request) {
   if (import.meta.env.DEV && request) devOrigin = new URL(request.url).origin;
@@ -69,6 +70,7 @@ export function installWorkerPlatform(env: Env, request?: Request) {
         }
       : undefined,
     usageSecret: (kind) => env.USAGE_SALT.get(env.USAGE_SALT.idFromName("usage-salts")).secret(kind),
+    refresher: (gameMode) => env.DATA_REFRESH.getByName(gameMode) as unknown as DataRefresher,
     async limitClientIp(pool, ip) {
       const limiter = {
         mcp: env.MCP_IP_LIMITER,

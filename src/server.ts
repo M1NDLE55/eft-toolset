@@ -5,16 +5,17 @@ import { withSecurityHeaders } from "@/app/lib/security/apply";
 import { servePage } from "@/app/lib/server/page-cache";
 import { endpointFor } from "@/app/lib/server/endpoints";
 import { handleMcpRequest } from "@/app/lib/mcp/http";
-import { runScheduledRefresh } from "@/app/lib/api/scheduled";
 import { DATA_ASSET_PREFIX } from "@/app/lib/server/data-asset-prefix";
 import { PVE_ROUTE_PREFIX } from "@/app/lib/game-mode-routes";
 import { sharingSocketEndpoint } from "@/app/lib/sharing/server/router";
+import { priceSocketEndpoint } from "@/app/lib/prices/live-route";
 
 export { UserDO } from "@/app/lib/durable/user-do";
 export { PlanDO } from "@/app/lib/durable/plan-do";
 export { LinkDO } from "@/app/lib/durable/link-do";
 export { ModerationDO } from "@/app/lib/durable/moderation-do";
 export { UsageSaltDO } from "@/app/lib/usage/salt-do";
+export { DataRefreshDO } from "@/app/lib/durable/data-refresh-do";
 
 installWorkerPlatform(env);
 
@@ -43,8 +44,8 @@ async function fetchHandler(request: Request, _env: Env, ctx: ExecutionContext):
 
   if (url.pathname === MCP_PATH) return handleMcpRequest(request);
 
-  // Live sockets (plans, the library change feed) go straight to their Durable Object.
-  const socket = sharingSocketEndpoint(request);
+  // Live sockets (plans, the library change feed, prices) go straight to their Durable Object.
+  const socket = sharingSocketEndpoint(request) ?? priceSocketEndpoint(request);
   if (socket) return socket(request);
 
   const response = await servePage(request, ctx, async (pageRequest) => {
@@ -56,9 +57,4 @@ async function fetchHandler(request: Request, _env: Env, ctx: ExecutionContext):
 
 export default {
   fetch: (request, workerEnv, ctx) => withExecutionContext(ctx, () => fetchHandler(request, workerEnv, ctx)),
-  scheduled: (controller, _env, ctx) =>
-    withExecutionContext(ctx, async () => {
-      installWorkerPlatform(env);
-      await runScheduledRefresh(controller.scheduledTime);
-    }),
 } satisfies ExportedHandler<Env>;

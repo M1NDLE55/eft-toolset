@@ -1,20 +1,24 @@
 import type { GameMode } from "@/components/game-mode/context";
 import { platform, sharedAcrossRequests } from "@/app/lib/server/platform";
 import { canonicalJson, TARKOV_OPERATIONS } from "./operations";
+import { isPriceVersion } from "@/app/lib/prices/live-input";
+import { devTimeScale, priceFeedStoreKey, refresher } from "./refresher";
 import { USER_AGENT } from "./user-agent";
 
 // The price feed: the part of tarkov.dev's items file that changes every few minutes (flea and trader
-// prices). In the Worker, the cron builds it once a minute per game mode and publishes it to KV
-// (publishPriceFeed); isolates refresh prices from there, a small read, instead of each downloading
-// the whole items file from json.tarkov.dev. Locally, PRICE_FEED_ORIGIN can name an origin serving
-// the `price.feed` GET instead. See DATA_ARCHITECTURE.md ("Price feed").
+// prices). In the Worker, the refresher (data-refresh-do.ts, one per game mode) builds it when
+// tarkov.dev publishes new prices and hands it to the instances that ask, so no isolate downloads the
+// whole items file for prices; a cold isolate starts from the copy in KV. Locally, PRICE_FEED_ORIGIN
+// can name an origin serving the `price.feed` GET instead. See DATA_ARCHITECTURE.md ("Price feed").
 
 /** Bumped when the wire format changes; a copy in another format is refused, and reads use the items file. */
-export const PRICE_FEED_FORMAT = 1;
-/** An instance's copy is current this long after it last got the feed from our origin. */
+export const PRICE_FEED_FORMAT = 2;
+/** From an origin that doesn't predict tarkov.dev's next change (PRICE_FEED_ORIGIN), a copy is current this long. */
 export const FEED_FRESH_MS = 60_000;
-/** Until this age a copy is served at once while it refreshes; after it, callers wait (up to their stale wait). */
-const FEED_REVALIDATE_MS = 2 * 60_000;
+/** An instance asks the refresher at most this often when it predicts, and for a newer version (`p`) at most this often. */
+const MIN_ASK_INTERVAL_MS = 5_000 / devTimeScale();
+/** A read that needs a newer version than the copy (a page refetching after a push) waits this long for it at most. */
+const NEWER_VERSION_WAIT_MS = 5_000;
 // A CDN miss can wait on the origin revalidating the items file (up to PRICE_FEED_ORIGIN_WAIT_MS), then building the feed.
 const FEED_TIMEOUT_MS = 10_000;
 // The feed is about 1.3 MB of JSON.
@@ -73,6 +77,10 @@ export type FeedSource = "tarkov.dev" | "deployment";
 /** What the origin knew about the items copy it built the feed from. */
 export interface PriceFeedHeader {
   gameMode: GameMode;
+  /** Rises each time tarkov.dev publishes new prices: what live pages compare (see live-prices.ts). */
+  version: number;
+  /** When the refresher next expects tarkov.dev to have newer prices; null from an origin that doesn't predict. */
+  nextCheckAt: number | null;
   /** When the origin last confirmed its items copy with tarkov.dev (or the build fetched it). */
   fetchedAt: number;
   source: FeedSource;
@@ -153,7 +161,9 @@ export function projectPriceRows(items: Iterable<PricedItem>): PriceFeedRows {
 /** The feed in a response, checked strictly; null when anything about it is off. */
 export function parsePriceFeed(value: unknown, gameMode: GameMode): PriceFeed | null {
   if (!isRecord(value) || value.format !== PRICE_FEED_FORMAT || value.gameMode !== gameMode) return null;
-  const { fetchedAt, source, stale, etag, lastModified, traders, items } = value;
+  const { version, nextCheckAt, fetchedAt, source, stale, etag, lastModified, traders, items } = value;
+  if (!isPriceVersion(version)) return null;
+  if (nextCheckAt !== null && (typeof nextCheckAt !== "number" || !Number.isFinite(nextCheckAt))) return null;
   if (typeof fetchedAt !== "number" || !Number.isFinite(fetchedAt) || fetchedAt <= 0) return null;
   if ((source !== "tarkov.dev" && source !== "deployment") || typeof stale !== "boolean") return null;
   if (!nullableText(etag, 200) || !nullableText(lastModified, 100)) return null;
@@ -205,6 +215,8 @@ export function parsePriceFeed(value: unknown, gameMode: GameMode): PriceFeed | 
   }
   return {
     gameMode,
+    version: version as number,
+    nextCheckAt: nextCheckAt as number | null,
     fetchedAt,
     source,
     stale,
@@ -227,20 +239,23 @@ export const NO_PRICES: ItemPrices = Object.freeze({
   buyFromTrader: [],
 });
 
-/** Stands for the shared store (KV) as the feed's origin. */
-export const SHARED_STORE_FEED_ORIGIN = "shared-store:";
+export { isPriceVersion };
 
-/** The shared store's key for one mode's published feed: the `price.feed` response body. */
-export function priceFeedStoreKey(gameMode: GameMode) {
-  return `price-feed:${PRICE_FEED_FORMAT}:${gameMode}`;
+/** The version of a feed from an origin without a refresher: tarkov.dev's Last-Modified, else when it was fetched. */
+export function priceVersionOf(lastModified: string | null | undefined, fetchedAt: number) {
+  const time = lastModified ? Date.parse(lastModified) : Number.NaN;
+  return Math.max(1, Math.floor(Number.isFinite(time) ? time : fetchedAt));
 }
 
+/** Stands for the refresher as the feed's origin. */
+export const REFRESHER_FEED_ORIGIN = "refresher:";
+
 /**
- * Where instances get the feed: the shared store (KV) in the Worker, where the cron publishes it, or
- * PRICE_FEED_ORIGIN locally. Off anywhere else; reads then use the items file.
+ * Where instances get the feed: the refresher in the Worker, or PRICE_FEED_ORIGIN locally. Off
+ * anywhere else; reads then use the items file.
  */
 export function priceFeedOrigin(): string | null {
-  if (platform().sharedStore) return SHARED_STORE_FEED_ORIGIN;
+  if (platform().refresher) return REFRESHER_FEED_ORIGIN;
   const local = process.env.PRICE_FEED_ORIGIN?.trim();
   if (!local) return null;
   try {
@@ -261,6 +276,12 @@ interface FeedState {
   feed?: PriceFeed;
   /** When this instance last got the feed from our origin. */
   checkedAt: number;
+  /** Until then the copy is current: the origin doesn't expect newer prices before it. */
+  nextAskAt: number;
+  /** When a read last asked because it needed a newer version than the copy. */
+  newerAskedAt: number;
+  /** A cold instance's read of the copy in KV, once. */
+  storedRead?: Promise<void>;
   inFlight?: Promise<void>;
   /** A caller gave up waiting for the refresh in flight, so later ones don't wait for it either. */
   slowRefresh?: boolean;
@@ -276,7 +297,7 @@ const feedStates = ((globalThis as typeof globalThis & { [STATE_KEY]?: Map<GameM
 
 function stateOf(gameMode: GameMode) {
   let state = feedStates.get(gameMode);
-  if (!state) feedStates.set(gameMode, (state = { checkedAt: 0, failures: 0 }));
+  if (!state) feedStates.set(gameMode, (state = { checkedAt: 0, nextAskAt: 0, newerAskedAt: 0, failures: 0 }));
   return state;
 }
 
@@ -290,22 +311,34 @@ export interface PriceFeedRead {
 }
 
 /**
- * This instance's feed copy for the mode, refreshing it as the windows above say. Waits for a due
- * refresh up to waitMs (not at all while the feed is failing, or once a caller has given up on the
- * refresh in flight). Null when the feed is off here.
+ * This instance's feed copy for the mode. A copy is served at once, never waiting for a refresh: once
+ * the origin's predicted change is due, it is asked in the background, and pages that are open learn
+ * of new prices from the refresher's push (live-prices.ts). Only a read with no copy at all waits, up
+ * to waitMs; one that needs at least `minVersion` (a page refetching after a push) waits up to a few
+ * seconds for it. Null when the feed is off here.
  */
-export async function readPriceFeed(gameMode: GameMode, waitMs: number): Promise<PriceFeedRead | null> {
+export async function readPriceFeed(gameMode: GameMode, waitMs: number, minVersion?: number): Promise<PriceFeedRead | null> {
   const origin = priceFeedOrigin();
   if (!origin) return null;
   const state = stateOf(gameMode);
-  const age = Date.now() - state.checkedAt;
-  if (state.feed && age < FEED_FRESH_MS) return { feed: state.feed, stale: false, failing: false };
+  if (!state.feed && origin === REFRESHER_FEED_ORIGIN) await readStoredFeed(gameMode, state);
+  const now = Date.now();
+  const behind = () => minVersion !== undefined && (!state.feed || state.feed.version < minVersion);
+  const wantsNewer = behind();
+  const due = now >= state.nextAskAt;
+  if (state.feed && !due && !wantsNewer) return { feed: state.feed, stale: false, failing: false };
+  if (!due && wantsNewer && state.feed && !state.inFlight) {
+    // A version newer than any the origin knows (a made-up `p`) mustn't make every read ask again.
+    if (now - state.newerAskedAt < MIN_ASK_INTERVAL_MS) return { feed: state.feed, stale: true, failing: false };
+    state.newerAskedAt = now;
+  }
   const refresh = refreshPriceFeed(origin, gameMode, state);
   refresh.catch(() => undefined);
   if (state.failures > 0) return { feed: state.feed, stale: true, failing: true };
-  if (state.feed && age < FEED_REVALIDATE_MS) return { feed: state.feed, stale: false, failing: false };
-  const wait = state.slowRefresh && Number.isFinite(waitMs) ? 0 : waitMs;
-  if (wait > 0 && (await settled(refresh, wait))) return { feed: state.feed, stale: false, failing: false };
+  if (state.feed && !wantsNewer) return { feed: state.feed, stale: false, failing: false };
+  const limit = state.feed ? Math.min(waitMs, NEWER_VERSION_WAIT_MS) : waitMs;
+  const wait = state.slowRefresh && Number.isFinite(limit) ? 0 : limit;
+  if (wait > 0 && (await settled(refresh, wait))) return { feed: state.feed, stale: behind(), failing: false };
   if (state.failures > 0) return { feed: state.feed, stale: true, failing: true };
   if (wait > 0 && state.inFlight) state.slowRefresh = true;
   return { feed: state.feed, stale: true, failing: false };
@@ -316,10 +349,25 @@ export function isCurrentPriceFeed(gameMode: GameMode, feed: unknown) {
   const state = feedStates.get(gameMode);
   const origin = priceFeedOrigin();
   if (!origin || !state || state.feed !== feed || state.failures > 0) return false;
-  const age = Date.now() - state.checkedAt;
-  if (age >= FEED_REVALIDATE_MS) return false;
-  if (age >= FEED_FRESH_MS) refreshPriceFeed(origin, gameMode, state).catch(() => undefined);
+  if (Date.now() >= state.nextAskAt) refreshPriceFeed(origin, gameMode, state).catch(() => undefined);
   return true;
+}
+
+/** A cold instance's first copy: the one the refresher last wrote to KV, read once. A miss leaves it to the refresher. */
+function readStoredFeed(gameMode: GameMode, state: FeedState) {
+  state.storedRead ??= sharedAcrossRequests(
+    (async () => {
+      const store = platform().sharedStore;
+      const body = store ? await store.get(priceFeedStoreKey(gameMode, PRICE_FEED_FORMAT)).catch(() => null) : null;
+      if (body === null || body.length > FEED_MAX_BYTES || state.feed) return;
+      const feed = parseFeedBody(body, gameMode);
+      if (!feed) return;
+      state.feed = feed;
+      // Its prediction may have passed long ago; then the first read asks the refresher.
+      state.nextAskAt = feed.nextCheckAt ?? 0;
+    })().catch(() => undefined)
+  );
+  return state.storedRead;
 }
 
 /** Refreshes the copy, sharing one request among callers; rejects at once while waiting out a failure. */
@@ -328,19 +376,22 @@ function refreshPriceFeed(origin: string, gameMode: GameMode, state: FeedState):
   if (state.retryAt !== undefined && state.retryAt > Date.now()) {
     return Promise.reject(new PriceFeedError("The price feed will be retried shortly."));
   }
-  const inFlight = fetchPriceFeed(origin, gameMode)
+  const inFlight = fetchPriceFeed(origin, gameMode, state.feed)
     .then((feed) => {
       const held = state.feed;
-      if (held && feed.etag !== null && feed.etag === held.etag && feed.lastModified === held.lastModified) {
-        // The same items file: keep the held copy, so everything built from its prices stays valid,
-        // and note when it was confirmed.
+      if (held && feed.version === held.version && feed.etag === held.etag && feed.lastModified === held.lastModified) {
+        // The same prices: keep the held copy, so everything built from it stays valid, and note
+        // when it was confirmed.
         held.fetchedAt = feed.fetchedAt;
         held.source = feed.source;
         held.stale = feed.stale;
-      } else {
+        held.nextCheckAt = feed.nextCheckAt;
+      } else if (!held || feed.version >= held.version) {
         state.feed = feed;
       }
-      state.checkedAt = Date.now();
+      const now = Date.now();
+      state.checkedAt = now;
+      state.nextAskAt = Math.max(feed.nextCheckAt ?? now + FEED_FRESH_MS, now + MIN_ASK_INTERVAL_MS);
       state.failures = 0;
       state.failedAt = state.retryAt = state.lastError = undefined;
     })
@@ -375,45 +426,43 @@ function retryDelay(failures: number, error: unknown) {
   return Math.max(jittered, Math.min(requested, RETRY_AFTER_MAX_MS));
 }
 
-/** Publishes the feed body (`{"data": …}`, as `price.feed` answers) for the instances to read. */
-export async function publishPriceFeed(gameMode: GameMode, body: string) {
-  const store = platform().sharedStore;
-  if (!store) return;
-  // Kept well past a minute, so an outage of the cron leaves the last prices for isolates to mark stale.
-  await store.put(priceFeedStoreKey(gameMode), body, { expirationTtl: 24 * 60 * 60 });
-}
-
-/** The published feed's wire form, when it is there and valid; for the cron to revalidate from. */
-export async function readPublishedFeedWire(gameMode: GameMode): Promise<PriceFeedWire | null> {
-  const store = platform().sharedStore;
-  const body = store ? await store.get(priceFeedStoreKey(gameMode)).catch(() => null) : null;
-  if (body === null) return null;
+/** A feed body (`{"data": …}`, as `price.feed` answers and the refresher writes), checked; null when anything is off. */
+export function parseFeedBody(body: string, gameMode: GameMode): PriceFeed | null {
   try {
-    const wire = (JSON.parse(body) as { data?: unknown }).data;
-    return parsePriceFeed(wire, gameMode) ? (wire as PriceFeedWire) : null;
+    const parsed = JSON.parse(body) as unknown;
+    return parsePriceFeed(isRecord(parsed) ? parsed.data : undefined, gameMode);
   } catch {
     return null;
   }
 }
 
-async function readPublishedFeed(gameMode: GameMode): Promise<PriceFeed> {
-  const store = platform().sharedStore;
-  const body = store ? await store.get(priceFeedStoreKey(gameMode)) : null;
-  if (body === null) throw new PriceFeedError("The price feed hasn't been published yet.");
-  if (body.length > FEED_MAX_BYTES) throw new PriceFeedError("The price feed is oversized.");
-  let parsed: unknown;
+/** The current feed from the refresher, which checks tarkov.dev first if a check is due. */
+async function askRefresher(gameMode: GameMode, held: PriceFeed | undefined): Promise<PriceFeed> {
+  const service = refresher(gameMode);
+  if (!service) throw new PriceFeedError("The refresher isn't available.");
+  let answer;
   try {
-    parsed = JSON.parse(body);
-  } catch {
-    throw new PriceFeedError("The price feed is invalid JSON.");
+    answer = await service.prices(gameMode, held?.version ?? null);
+  } catch (error) {
+    throw new PriceFeedError(`The refresher couldn't be reached: ${error instanceof Error ? error.message : String(error)}`);
   }
-  const feed = parsePriceFeed(isRecord(parsed) ? parsed.data : undefined, gameMode);
-  if (!feed) throw new PriceFeedError("The price feed has data in an unexpected shape.");
-  return feed;
+  if (answer.version === null) throw new PriceFeedError("The price feed hasn't been published yet.");
+  let feed: PriceFeed | null;
+  if (answer.body !== undefined) {
+    if (answer.body.length > FEED_MAX_BYTES) throw new PriceFeedError("The price feed is oversized.");
+    feed = parseFeedBody(answer.body, gameMode);
+    if (!feed) throw new PriceFeedError("The price feed has data in an unexpected shape.");
+  } else if (held && held.version === answer.version) {
+    feed = { ...held };
+  } else {
+    throw new PriceFeedError("The refresher sent no feed.");
+  }
+  // The body was written when the prices changed: its confirmation and prediction are the answer's.
+  return { ...feed, fetchedAt: answer.confirmedAt, nextCheckAt: answer.nextCheckAt, stale: answer.stale };
 }
 
-async function fetchPriceFeed(origin: string, gameMode: GameMode): Promise<PriceFeed> {
-  if (origin === SHARED_STORE_FEED_ORIGIN) return readPublishedFeed(gameMode);
+async function fetchPriceFeed(origin: string, gameMode: GameMode, held: PriceFeed | undefined): Promise<PriceFeed> {
+  if (origin === REFRESHER_FEED_ORIGIN) return askRefresher(gameMode, held);
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), FEED_TIMEOUT_MS);
   const headers: Record<string, string> = {
@@ -531,7 +580,7 @@ export function priceFeedStatus(gameModes: readonly GameMode[] = ["regular", "pv
             ? "refreshing"
             : !feed
               ? "not loaded"
-              : now - state!.checkedAt < FEED_FRESH_MS
+              : now < state!.nextAskAt
                 ? "fresh"
                 : "due",
       lastError: state?.lastError ?? null,

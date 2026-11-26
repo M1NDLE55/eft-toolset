@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
 import { useGameMode, type GameMode } from "@/components/game-mode/context";
 import { useDataQuery } from "@/app/lib/api/useDataQuery";
-import { primeQuery } from "@/app/lib/api/queryClient";
+import { ensureQuery, primeQuery } from "@/app/lib/api/queryClient";
+import { useLivePrices } from "@/app/lib/prices/live-prices";
 import { groupItemsQuery, itemCatalogQuery, itemDetailQuery, marketBoardQuery, type ItemReference } from "./fetcher";
 import type { CachedItem, CatalogItem, ComposedItem } from "./types";
 
@@ -36,6 +37,7 @@ export function useMarketBoard() {
   const { gameMode, hydrated } = useGameMode();
   const variables = useMemo(() => ({ gameMode }), [gameMode]);
   const query = useDataQuery(marketBoardQuery, variables, { enabled: hydrated });
+  useLivePrices(gameMode, query.pricesVersion, (version) => ensureQuery(marketBoardQuery, variables, { force: true, minPricesVersion: version }), hydrated);
   return {
     board: query.data ?? null,
     loading: !query.data && query.status !== "error",
@@ -45,8 +47,8 @@ export function useMarketBoard() {
   };
 }
 
-export function primeItem(reference: ItemReference, gameMode: GameMode, item: ComposedItem, updatedAt: number) {
-  primeQuery(itemDetailQuery, { ...reference, gameMode } as ItemReference & { gameMode: GameMode }, item, updatedAt);
+export function primeItem(reference: ItemReference, gameMode: GameMode, item: ComposedItem, updatedAt: number, pricesVersion?: number) {
+  primeQuery(itemDetailQuery, { ...reference, gameMode } as ItemReference & { gameMode: GameMode }, item, updatedAt, pricesVersion);
 }
 
 export function useItem(reference: ItemReference): {
@@ -59,6 +61,7 @@ export function useItem(reference: ItemReference): {
   const { gameMode, hydrated } = useGameMode();
   const variables = { ...reference, gameMode } as ItemReference & { gameMode: GameMode };
   const query = useDataQuery(itemDetailQuery, variables, { enabled: hydrated });
+  useLivePrices(gameMode, query.pricesVersion, (version) => ensureQuery(itemDetailQuery, variables, { force: true, minPricesVersion: version }), hydrated);
 
   return {
     item: query.data ?? null,
@@ -79,9 +82,9 @@ export function useItemsInGroup(names: string[]): {
   const { gameMode, hydrated } = useGameMode();
   const stableNames = useMemo(() => Array.from(new Set(names)).sort(), [names]);
   const variables = useMemo(() => ({ names: stableNames, gameMode }), [gameMode, stableNames]);
-  const query = useDataQuery(groupItemsQuery, variables, {
-    enabled: hydrated && stableNames.length > 0,
-  });
+  const enabled = hydrated && stableNames.length > 0;
+  const query = useDataQuery(groupItemsQuery, variables, { enabled });
+  useLivePrices(gameMode, query.pricesVersion, (version) => ensureQuery(groupItemsQuery, variables, { force: true, minPricesVersion: version }), enabled);
   const [previous, setPrevious] = useState<{ gameMode: GameMode; data: CachedItem[] } | null>(null);
   if (query.data && query.data !== previous?.data) setPrevious({ gameMode, data: query.data });
   const data = query.data ?? (previous?.gameMode === gameMode ? previous.data : undefined);

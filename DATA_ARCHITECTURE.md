@@ -81,8 +81,9 @@ request apart from the game mode cookie, so there is no per-request CSP nonce.
 
 | Pages | Edge TTL |
 | --- | --- |
-| `/item`, `/flea-market/pve`, `/ammo`, `/ammo/<calibre>`, `/keys/<map>` (prices are the content) | 5 minutes |
-| `/item/<slug>` (prices also refresh in the browser) | 6 hours |
+| `/item`, `/flea-market/pve`, `/ammo`, `/ammo/<calibre>`, `/keys/<map>` (prices are the content; open pages get new prices pushed, see [Live prices](#live-prices)) | 5 minutes |
+| `/item/<slug>` (prices are pushed to the open page) | 6 hours |
+| A priced page or API read for a price version it couldn't get yet (see [Live prices](#live-prices)) | 15 seconds |
 | `/gun-builder/best`, `/gun-builder/best/<weapon>`, `/gun-builder/gunsmith`, `/gun-builder/gunsmith/<task>` | 6 hours |
 | `/quests`, `/quests/<slug>`, `/keys`, `/raid-planner/map/<map>`, `/sitemap.xml` | 24 hours |
 | Pages about one saved build, plan or group (a shell the browser fills from its own storage) | until the next deployment |
@@ -105,8 +106,9 @@ were internal copies of these pages, redirect to the page (308).
 
 Item pages live at `/item/<normalizedName>` and are rendered on the server with the
 adapter's data for their game mode (see Page caching). The client query cache is seeded with
-the same data and refetches it once it is older than five minutes, so a cached page still
-shows live prices. Older name-based links redirect permanently and unknown slugs return 404.
+the same data and the price version it came from, and the page follows the live price socket, so
+a page cached for hours still swaps in current prices as soon as it opens (see
+[Live prices](#live-prices)). Older name-based links redirect permanently and unknown slugs return 404.
 An item render (the item, the item index for its canonical URL, and the quest list) waits at most
 2.5 seconds (`ITEM_RENDER_STALE_WAIT_MS`) for a dataset that is due a refresh before using the copy it holds, if that copy is within `RESOURCE_MAX_STALE_MS`: a cold
 instance whose snapshot has aged past a dataset's revalidation would otherwise wait on tarkov.dev for
@@ -315,9 +317,9 @@ call logs one JSON line (`event: "mcp_tool_call"`) with a request id, the tool, 
 outcome, duration, whether the data was stale, and whether the result came from the cache. Unexpected failures return the request
 id as a reference.
 
-Results with item prices also carry `priceSource`: `kind` is `live` (from a copy whose refresh
-didn't fail, at most 5 minutes old, the length of tarkov.dev's update cycle), `cached` (older, or
-its refresh failed) or `snapshot` (the copy bundled with the deployment), with `ageSeconds` since
+Results with item prices also carry `priceSource`: `kind` is `live` (confirmed by a check that
+didn't fail within the last 12 minutes: tarkov.dev's cycle of about 10 minutes, plus the refresher's
+margin), `cached` (older, or its check failed) or `snapshot` (the copy bundled with the deployment), with `ageSeconds` since
 tarkov.dev confirmed the prices. Like `dataAsOf` and `dataNotice` it is described once in the server
 instructions rather than in each tool's published output schema. `get_data_status` also lists the
 price feed per game mode (on or off, its age, state, and any retry wait); with the feed on, the
@@ -620,18 +622,19 @@ The adapter asks for brotli (Node's `fetch` asks only for gzip unless told), so 
 downloads about 1.8 MB (1.9 MB gzipped), not 17 MB. Parsing it
 takes about 100 ms and holds about 40 MB of heap per game mode.
 
-**Freshness targets.** Prices about 2 minutes behind tarkov.dev with the [price feed](#price-feed) (5 minutes from `items` without it); tasks and maps about 30 minutes; trader,
-barter, craft and hideout data and the English names 2 hours; the catalog itself (names, ids,
-slots, stats) changes only with game patches. A copy older than its target is refreshed on its
-next use, and served meanwhile up to the revalidate age in `RESOURCE_POLICIES`.
+**Freshness targets.** Prices about a minute behind tarkov.dev, which publishes about every 10
+minutes (see [Refresher](#refresher)); every other dataset at most an hour; the catalog itself
+(names, ids, slots, stats) changes only with game patches. All of it only while the site is in use:
+with no traffic nothing is checked. A copy older than its target is served at once while it is
+refreshed in the background, up to the revalidate age in `RESOURCE_POLICIES` (six hours).
 
 tarkov.dev asks only that clients use common sense, so the adapter keeps its requests few
 and identifiable:
 
 - Every request sends `User-Agent: EFT-Toolset/1.0 (+https://www.eft-toolset.com; …/issues)`
   (`src/app/lib/api/user-agent.ts`).
-- Each dataset has its own freshness in `RESOURCE_POLICIES`, set from how often tarkov.dev
-  changes it: items (prices) 5 minutes, maps and tasks 30 minutes, everything else 2 hours.
+- Prices are checked only when tarkov.dev is due to publish, and every other dataset at most hourly,
+  by one [refresher](#refresher) per game mode for every instance, and only when asked for.
 - Refreshes send the `ETag` and `Last-Modified` the dataset came with, so an unchanged
   dataset is answered with a 304 and no body.
 - Callers share a refresh in progress, and an instance has at most 4 tarkov.dev requests in
@@ -658,22 +661,19 @@ and identifiable:
   `no-store`). A copy's age and source are recorded when a read takes it, so a refresh landing
   later in the read doesn't make its data look newer.
 
-With the price feed, items requests don't grow with isolates or traffic: only the cron reads the
-items file for prices, once a minute per game mode, with the validators of the feed it last
-published, so tarkov.dev answers 304 until it publishes new prices (about 12 downloads an hour per
-mode, the rest 304s). How many distinct items are asked for makes no difference. Each isolate reads
-the feed from KV at most once a minute per mode, a game patch costs one items download per isolate
-that needs the static data, and while the feed is failing the numbers below apply.
+With the refresher, requests to tarkov.dev don't grow with isolates or traffic. Per game mode, with
+the site in use: one items check per tarkov.dev cycle (a download when it published, about 6 an hour,
+and a few 304s when it is late), and at most one check an hour for each of the other 11 datasets,
+mostly 304s; with no traffic, none at all. How many distinct items are asked for makes no difference.
+A game patch costs one items download per isolate that needs the static data. While the refresher
+can't be reached, instances ask tarkov.dev themselves, as below.
 
-Without the feed, the worst case for one isolate, with every dataset in use in both game modes: items 24, maps
-and tasks 8, `items_en` 1 request an hour, 33 an hour; maps, tasks and `items_en` are mostly
-304s. With the cron keeping the shared copies in KV fresh, isolates seldom ask for anything but the
-items file: the cron's checks are about 8 requests an hour per mode in all, mostly 304s, however
-many isolates run. A new
-instance revalidates the deployment snapshot instead of downloading it: datasets unchanged since
-the build cost a 304, and only the ones that changed (in practice `items`, and `maps` or `tasks`
-on some days) are downloaded, in the background when the caller already has the snapshot's copy.
-While tarkov.dev is down, at most 3 requests per dataset per backoff interval.
+Without the refresher (outside the Worker, or while it can't be reached), the worst case for one
+isolate, with every dataset in use in both game modes: items 24, the other datasets 22 requests an
+hour, mostly 304s. A new instance revalidates the deployment snapshot instead of downloading it:
+datasets unchanged since the build cost a 304, and only the ones that changed (in practice `items`,
+and `maps` or `tasks` on some days) are downloaded, in the background when the caller already has
+the snapshot's copy. While tarkov.dev is down, at most 3 requests per dataset per backoff interval.
 
 ### Deployment snapshot
 
@@ -722,45 +722,150 @@ usual edge cache however old the deployment is.
 ### Price feed
 
 tarkov.dev's items file mixes data that changes with game patches (names, stats, slots: most of its
-17 MB) with prices, which its jobs rebuild every 5 minutes, so its ETag changes every few minutes.
-Isolates don't download it for prices. The two parts travel apart:
+17 MB) with prices, which it republishes about every 10 minutes. Isolates don't download it for
+prices. The two parts travel apart:
 
 - **Prices** come from the price feed: every item's `lastLowPrice`, `avg24hPrice`, `low24hPrice`,
   `high24hPrice`, `lastOfferCount`, `changeLast48hPercent`, `updated`, and its trader buy and sell
-  offers (`src/app/lib/api/price-feed.ts`), about 0.72 MB of JSON per mode. The cron publishes it to
-  KV once a minute per game mode (`publishPriceFeedFromUpstream` in `tarkov-server.ts`): it asks
-  tarkov.dev for the items file with the validators of the feed it last published; a 304 republishes
-  the same rows with the new confirmation time, and a new file is projected to rows and published.
-  The cron reads the file and drops it; it never keeps it in its isolate's cache.
+  offers (`src/app/lib/api/price-feed.ts`), about 0.72 MB of JSON per mode. The
+  [refresher](#refresher) builds it when tarkov.dev publishes a new items file, as a new feed
+  version: it projects the file to rows and drops it (`fetchPriceRows` in `tarkov-server.ts`), keeps
+  the feed in memory, and writes it to KV (`price-feed:2:<mode>`) for cold isolates. An unchanged file
+  (a 304) writes nothing.
 - **Static data** comes from the items copy the isolate already has, the deployment snapshot or a
   newer copy, which is not refreshed for its prices. `loadItems` lays the feed's prices over it,
   once per pair of copies (about 10 ms and 3 MB), so every projection (MCP tools, pages,
   `/api/tarkov`, the gun builder's part lookup) gets the feed's prices unchanged.
 
-Each isolate keeps its own copy of the feed per game mode, read from KV: fresh for 60 seconds, served
-while it refreshes for up to 2 minutes, and after that read with the caller's usual wait (MCP tools
-2.5 s, then the copy marked stale). Callers share one refresh in flight. A failed read (including a
-feed not published yet) isn't retried for 10 seconds, doubling to 10 minutes with jitter; meanwhile
-reads use the items file at once. The feed is validated (format version, sizes, every field). Locally,
-without KV, the feed is off unless `PRICE_FEED_ORIGIN` names an origin serving the `price.feed` GET.
+Each isolate keeps its own copy of the feed per game mode. A cold isolate starts from the copy in KV.
+The feed carries the refresher's prediction of tarkov.dev's next change (`nextCheckAt`): until then
+the copy is current and nothing is asked. After it, the next read is served the copy at once, never
+waiting, and asks the refresher in the background, with the version it holds; the refresher answers
+after its check (shared with every other caller) with the confirmation time, its next prediction,
+and the feed itself only if the version changed. So the refresher is asked about once per tarkov.dev
+cycle per isolate, and KV's propagation delay doesn't matter: an isolate that asks gets the new feed
+from the refresher, not from KV. Only a read with no copy at all waits (MCP tools 2.5 s, then the
+copy marked stale). A failed ask isn't retried for 10 seconds, doubling to 10 minutes with jitter;
+meanwhile reads use the items file at once. The feed is validated (format version, sizes, every
+field). Locally, without the refresher, the feed is off unless `PRICE_FEED_ORIGIN` names an origin
+serving the `price.feed` GET (its copies are current for a minute).
 
-Fallbacks, in order: the isolate's copy of the feed; a fresh read from KV; then, while the feed is
-failing, the items file read exactly as before (the copy in memory, a revalidation with
-json.tarkov.dev, or the deployment snapshot), with the feed's last prices laid over it if they are
-newer. A read never fails while any copy exists. A feed that brings the same items file (the same
-ETag) keeps the isolate's copy and only notes when it was confirmed, so projections and cached tool
-results built from it stay valid until tarkov.dev publishes new prices. `price.feed` is still served
-over GET by `/api/tarkov`, for local use.
+Fallbacks, in order: the isolate's copy of the feed; the copy in KV; the refresher; then, while the
+refresher can't be reached, the items file read exactly as before (the copy in memory, a
+revalidation with json.tarkov.dev, or the deployment snapshot), with the feed's last prices laid over
+it if they are newer. A read never fails while any copy exists. A feed of the same version keeps the
+isolate's copy and only notes when it was confirmed, so projections and cached tool results built
+from it stay valid until tarkov.dev publishes new prices.
 
 The feed lists every item tarkov.dev has, so items the static copy lacks mean a game patch: the
 isolate then loads the items file once, in the background, and the item index follows it.
 
-How far prices lag tarkov.dev's file: the cron's check up to 60 s, an isolate's copy up to 120 s; at
-most about 3 minutes. `dataAsOf` is the cron's confirmation time, so it includes every hop.
+How far prices lag tarkov.dev's file: the refresher's margin (a minute) after the predicted change,
+or a retry later when tarkov.dev is late. An isolate serves the previous version until its
+background ask returns (a second or two), and open pages get the new version pushed.
+
+`dataAsOf` (and `priceSource.ageSeconds`) is when the refresher last confirmed the prices with
+tarkov.dev. Checks happen only on demand, so after a quiet spell the first read reports how old the
+copy is, and starts the check; the reads after it are current.
 
 **Why one feed for every item.** tarkov.dev only offers whole JSON files: there is no per-item
 current-price endpoint (`/{mode}/prices/{id}` is the price history). One feed carries every price, so
 the number of distinct items asked for doesn't change the upstream cost.
+
+### Refresher
+
+`DataRefreshDO` (`src/app/lib/durable/data-refresh-do.ts`, binding `DATA_REFRESH`), one per game mode
+(named `regular` and `pve`), is the only caller of tarkov.dev for prices and the shared datasets.
+Instances reach it over RPC (`prices`, `dataset`); it serves one request at a time between awaits, so
+every caller that finds a check due joins the one check in flight: one upstream request per due
+window per mode, however many isolates ask. It keeps a few small records in SQLite (the schedule, the
+current versions and validators) and the feed in memory, reloading it from KV after eviction.
+
+**When it checks prices** (`src/app/lib/api/refresh-schedule.ts`, pure functions tested against
+simulated schedules). tarkov.dev's flea-price job runs every 10 minutes, and its items file is
+republished a couple of minutes later (`Last-Modified` at, say, :00:23, :10:23, :20:23; PVE some
+seconds apart). The refresher records each new file's `Last-Modified`, moved onto its own clock by
+tarkov.dev's `Date` header (the median of recent offsets, ignored past 15 minutes), and predicts the
+next change a period after the last one on the schedule's phase. Before that time plus a margin
+(1 minute) it doesn't ask: callers get the copy it has. After it, one conditional request:
+
+- A new file is the next version; the phase re-anchors on it, so a schedule that drifts (:11/:21
+  instead of :10/:20) is followed from the next cycle on, never stuck nine minutes behind.
+- A 304 at the predicted time (tarkov.dev late, or a missed cycle) is asked again after 1 minute,
+  doubling, capped at the period and never later than the next predicted change: a few requests a
+  cycle, not one per caller.
+- The period is learned from the gaps between recent changes (each divided by the whole number of
+  cycles it most likely spans, so a missed cycle or two sparse checks still count), kept between 5
+  and 30 minutes, 10 until it has two gaps to go on.
+- A change off the phase (an extra publish between two regular ones) doesn't move the phase unless
+  the predicted change had already failed to come, or a second change confirms the new phase.
+- A file older than the one held (a lagging cache upstream) is ignored.
+- A failed check keeps the old prices, marked stale, and backs off the same way.
+
+PVP and PVE are separate objects with separate schedules.
+
+**When it checks other datasets.** At most hourly per dataset, when an instance asks for one whose
+copy is over an hour old, with the shared copy's validators. A new copy is validated and written to
+KV under its version (`tarkov:1:<mode>/<dataset>:body:<version>`); a 304 writes nothing. An instance
+that finds a body missing (expired after a week unchanged) asks it to write it again (at most every 5
+minutes).
+
+**Zero traffic means zero requests.** Nothing runs on a timer. The only alarm is for live pages: while
+a price socket is live, the alarm wakes the refresher at the predicted change so open pages get it
+without anyone making a request. A socket is live for 30 minutes from when it opened (see
+[Live prices](#live-prices)); the refresher keeps that time itself, in the socket's attachment, and
+closes it when it runs out, so a forgotten tab, or a page that ignores its own timer, stops counting
+as demand. An expired socket gets no pushes and keeps no alarm. With no live sockets the refresher
+sets no alarm: it checks only when a request finds prices due. A hidden tab closes its socket after a
+minute.
+
+Each check logs one JSON line (`{"event":"refresher_check"}`): mode, dataset, outcome (`changed`,
+`unchanged`, `older`, `failed`), whether it wrote KV, the requests it served since the last check, the
+open sockets, and for prices the next check, learned period, retries and how long after publication
+the new file was seen. `node scripts/refresh-sim.mjs` (after a build) runs the refresher under
+`wrangler dev` against a stand-in tarkov.dev with a schedule it controls, its clocks sped up with
+`REFRESH_TIME_SCALE` (honoured only with `TARKOV_UPSTREAM_URL`, so never in production), and reports
+requests, KV writes and lag per simulated hour.
+
+### Live prices
+
+Pages showing prices follow the game mode's price socket (`/api/prices/live?mode=<mode>`, held by
+the refresher with the hibernation API, so idle connections cost nothing; counted against
+`SOCKET_IP_LIMITER`; at most 10,000 per mode). The refresher sends one kind of message
+(`src/app/lib/prices/live-protocol.ts`): the current price version, when tarkov.dev published it and
+when it was confirmed, and whether a check is under way. It is sent on connect (which also starts a
+check if one is due, so a page served from the edge cache, which asked nothing, still triggers it),
+when a check starts, and when it ends.
+
+Each priced response says which feed version it came from: `pricesVersion` in `/api/tarkov` answers
+and in the loader data of the price pages (`renderLivePrices` in `server-render.ts`). When the socket's
+version is newer, the page refetches only its own data with that version as `p`
+(`src/app/lib/prices/live-prices.ts`): `/api/tarkov?...&p=<version>`, or the route's server function
+with `{ p }`. A read with `p` takes at least that version, asking the refresher if its copy is older
+(waiting up to 5 seconds); each version is its own edge cache entry, so every open page asking for
+it shares one render per data centre. A read that couldn't get the version is cached only briefly.
+The pages that follow it: the item prices hub, the PVE flea market, ammo, map keys, item pages, item
+groups and the home page's market board. Builds, Gunsmith and quests show prices too but refresh them
+on their next load.
+
+**Live prices last 30 minutes** (about the next three updates). Each socket's first message says how
+long it has (`liveForMs`), and the refresher closes it then (code 4000) whatever the page does. The
+page pauses at the same time: it closes its sockets and shows "Live prices paused because the page has
+been idle", with how old its prices are and a "Continue live prices" button
+(`src/app/components/global/live-prices-paused.tsx`). Continuing opens a new socket for another 30
+minutes, whose first message brings the current version, so the page refetches once if it is behind.
+Not continuing keeps the last prices; dismissed, the notice shrinks to their age and a resume button.
+A reload or a navigation starts another 30 minutes too (a navigation reopens sockets more than five
+minutes old, so the refresher's time restarts with the page's). Reconnecting after a dropped
+connection or a hidden tab stays within the current 30 minutes. This applies to every page that
+follows live prices, the home page's market board included.
+
+Meanwhile the header says "Updating prices": while a refetch runs, and while a check has run for more
+than 600 ms (so a quick 304 never flickers). If the socket can't open (an old browser, a blocked
+connection, the limit reached) or drops, the page keeps the prices it has and reconnects with a
+backoff; nothing else changes. MCP tools don't use the push: they serve the current copy and trigger
+the refresh like any read.
+
 ### Data paths by tool
 
 | Tool or page | Item index | Price feed | Static items copy | Bulk datasets |
@@ -774,24 +879,24 @@ the number of distinct items asked for doesn't change the upstream cost.
 | Market board, item prices page, ammo | | yes | yes | traders, tasks |
 | `get_data_status`, `get_wiki_page`, `lookup_term` | | | | |
 
-Only the cron downloads the items file on a timer; everything else reads
-the copy it has for static data. "Bulk datasets" are the other tarkov.dev files, unchanged.
+Only the refresher downloads the items file for prices; everything else reads the copy it has for
+static data. "Bulk datasets" are the other tarkov.dev files, checked by the refresher at most hourly.
 
 ## Cache ownership
 
 - The resource cache in each isolate amortizes large upstream downloads and JSON parsing. With the
   price feed on, the items copy is read only for its static data and isn't refreshed on a timer (see
-  [Price feed](#price-feed)). Each other resource is fresh for its policy's time, then revalidated in the background without
-  blocking requests (items for up to 30 minutes, maps and tasks 2 hours, the rest 4 hours),
-  and served stale (flagged with `X-EFT-Data-Stale`) when a refresh fails. It starts from the
-  deployment snapshot (see above).
+  [Price feed](#price-feed)). Each other resource is fresh for an hour, then revalidated through the
+  refresher in the background without blocking requests (for up to six hours), and served stale
+  (flagged with `X-EFT-Data-Stale`) when a refresh fails. It starts from the deployment snapshot
+  (see above).
 - Every dataset but the items file is also kept in Workers KV (`src/app/lib/api/shared-cache.ts`),
-  which every isolate shares: maps (9 MB), tasks (2 MB), item names (1.7 MB) and the small ones. A body
-  is written only when it changes, under its version, and a small record says when tarkov.dev last
-  confirmed it; an isolate reuses the shared copy while that check is within the dataset's
-  freshness. The cron keeps these records fresh (`refreshSharedDataset`), revalidating with the
-  shared copy's validators, so isolates rarely ask tarkov.dev themselves. The shared cache is best
-  effort: failures and slow reads read as misses, and it is off outside the Worker.
+  which every isolate shares: maps (9 MB), tasks (2 MB), item names (1.7 MB) and the small ones. Only
+  the [refresher](#refresher) writes it, a body per version, only when it changes; the refresher
+  says which version is current and when it was confirmed, so there is no metadata record to keep
+  fresh. An instance whose copy is the current version keeps it; otherwise it reads the body. Reads
+  are best effort: failures and slow reads read as misses, and the instance then asks tarkov.dev
+  itself. It is off outside the Worker.
 - **Memory guard.** A Worker isolate has 128 MB. One game mode's large datasets (items, maps, tasks,
   item names) parse to about 65 MB, so an isolate can't hold both modes'. Before a large dataset is
   loaded, if what's resident plus it would pass the budget (32 million characters of JSON), the other
@@ -800,7 +905,7 @@ the copy it has for static data. "Bulk datasets" are the other tarkov.dev files,
   `{"event":"tarkov_data_evicted"}`.
 - Projections and indexes are memoized on the identity of their source resources, so they
   are rebuilt only when upstream data changes.
-- KV holds one copy of each mode's price feed, written by the cron once a minute.
+- KV holds one copy of each mode's price feed, written by the refresher when the prices change.
 - The edge cache holds rendered pages, server-function reads and public `/api/tarkov` GETs (see
   [Page caching](#page-caching)).
 - The client query layer deduplicates concurrent requests and controls stale/max ages.
@@ -844,6 +949,8 @@ Node's SQLite; the tests also run the real object classes against an in-memory s
   compare-and-set, the route uses fractional order keys, and every cap is checked atomically.
 - **LinkDO** (per link code): the immutable route from a code to the object that owns the link.
 - **ModerationDO** (one, `moderation`): reports and the review queue.
+- **DataRefreshDO** (one per game mode, `data-refresh-do.ts`): the tarkov.dev refresher and the live
+  price sockets; see [Refresher](#refresher).
 
 There are no transactions across objects: a plan is created by reserving a slot in the user's
 index, initialising the plan, then confirming (or releasing); PlanDO is the authority on
@@ -898,17 +1005,20 @@ The site is a TanStack Start app on one Cloudflare Worker (`src/server.ts`, `wra
 
 - **Static assets** (`ASSETS`): the client build, the prerendered pages, the data snapshot under
   `/_data` (refused to the public through `run_worker_first`), and `_headers`.
-- **KV** (`TARKOV_DATA`): shared tarkov.dev copies and the price feed.
+- **KV** (`TARKOV_DATA`): shared tarkov.dev copies and the price feed, written by the refresher.
 - **Durable Objects** (`USER`, `PLAN`, `LINK`, `MODERATION`): see above. `USAGE_SALT` (one
-  instance) holds the rotating keys behind the anonymous usage-stats ids.
+  instance) holds the rotating keys behind the anonymous usage-stats ids. `DATA_REFRESH` (one per
+  game mode) is the [refresher](#refresher).
 - **Analytics Engine** (`USAGE`, dataset `eft_toolset_usage`): anonymous usage events, read by the
   admin dashboard through the SQL API. See USAGE_STATS.md.
 - **Rate limiting** (`MCP_IP_LIMITER`, `WEB_IP_LIMITER`: 600 requests a minute per IP each;
   `SHARE_IP_LIMITER`: 120 a minute for /s/ opens; `INVITE_IP_LIMITER`, `SOCKET_IP_LIMITER` and
-  `LINK_IP_LIMITER`: 30 a minute for invites, live connections and link creation).
+  `LINK_IP_LIMITER`: 30 a minute for invites, live connections (plans, the library feed and live
+  prices) and link creation).
 - **Images** (`IMAGES`): converts tarkov.dev's WebP icons to PNG for the quest share images, which
   are drawn with `@cf-wasm/og` (Satori and resvg). Without it, the icon's JPEG copy is used.
-- **Cron** (every minute, `src/app/lib/api/scheduled.ts`): the price feed and the shared datasets.
+- **No cron.** Data is refreshed on demand by the refresher; its alarm runs only while price sockets
+  are open.
 
 Server code reaches these through `platform()` (`src/app/lib/server/platform.ts`), which the
 Worker installs at startup; tests and scripts get disk-backed defaults. `npm run dev` runs the

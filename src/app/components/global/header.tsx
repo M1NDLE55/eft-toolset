@@ -17,6 +17,7 @@ import {
 import { GameModeToggle } from "@/components/game-mode/toggle";
 import { usePublicPathname } from "@/components/game-mode/use-public-pathname";
 import { STALE_UPSTREAM_EVENT, isUpstreamStale } from "@/app/lib/api/transport";
+import { isUpdatingPrices, subscribeUpdatingPrices } from "@/app/lib/prices/live-prices";
 
 function subscribeStale(listener: () => void) {
   window.addEventListener(STALE_UPSTREAM_EVENT, listener);
@@ -30,6 +31,7 @@ function isActive(pathname: string, href: string) {
 export function Header() {
   const pathname = usePublicPathname() ?? "/";
   const staleUpstream = useSyncExternalStore(subscribeStale, isUpstreamStale, () => false);
+  const updatingPrices = useSyncExternalStore(subscribeUpdatingPrices, isUpdatingPrices, () => false);
   const signedIn = useSignedInHint();
   const accountLabel = signedIn ? "Account" : "Sign in";
 
@@ -61,6 +63,10 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-2">
+          {/* The prices on the page are being replaced by newer ones the refresher pushed (live-prices.ts). */}
+          <span role="status" aria-live="polite" className={cn("text-3xs uppercase tracking-widest text-[#9a8866]", !updatingPrices && "sr-only")}>
+            {updatingPrices ? "Updating prices" : ""}
+          </span>
           {staleUpstream && (
             <span
               role="status"
