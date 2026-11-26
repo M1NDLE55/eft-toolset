@@ -2595,13 +2595,16 @@ async function loadCurrent(
   const policy = RESOURCE_POLICIES[resource];
   const sharedKey = `tarkov:${SHARED_KEY_VERSION}:${gameMode}/${resource}`;
   if (policy.shared) {
-    const shared = await readShared(sharedKey, resource, entry, policy);
+    const started = performance.now();
+    const shared = await timedStep(gameMode, resource, "shared cache", () => readShared(sharedKey, resource, entry, policy));
     if (shared) return shared;
+    // A miss (the cron's copy is older than the dataset's freshness) is worth knowing when it was slow.
+    logSlowStep(gameMode, resource, "shared cache", performance.now() - started, "miss");
   }
   const previous = entry.value
     ? { value: entry.value, etag: entry.etag, lastModified: entry.lastModified }
     : undefined;
-  const fetched = await fetchWithRetries(gameMode, resource, attempts, previous);
+  const fetched = await timedStep(gameMode, resource, "tarkov.dev", () => fetchWithRetries(gameMode, resource, attempts, previous));
   const checkedAt = Date.now();
   if (fetched.notModified) {
     // fetchResource only accepts a 304 when it sent validators, which needs a previous copy.
@@ -2614,6 +2617,31 @@ async function loadCurrent(
     await writeShared(sharedKey, refreshed, policy, true);
   }
   return refreshed;
+}
+
+/** A refresh step slower than this is logged with its time (see timedStep). */
+const SLOW_REFRESH_STEP_MS = 2_000;
+
+/**
+ * Runs one step of a dataset refresh (the shared cache read or the tarkov.dev request) and logs it
+ * when it was slow or failed, as fields Workers Logs can filter on: which dataset, which step, how
+ * long, and the outcome. Fast steps aren't logged.
+ */
+async function timedStep<T>(gameMode: GameMode, resource: Resource, step: "shared cache" | "tarkov.dev", work: () => Promise<T>): Promise<T> {
+  const started = performance.now();
+  try {
+    const result = await work();
+    if (result !== null) logSlowStep(gameMode, resource, step, performance.now() - started, "ok");
+    return result;
+  } catch (error) {
+    logSlowStep(gameMode, resource, step, performance.now() - started, error instanceof Error ? error.message : String(error), true);
+    throw error;
+  }
+}
+
+function logSlowStep(gameMode: GameMode, resource: Resource, step: string, ms: number, outcome: string, failed = false) {
+  if (!failed && ms < SLOW_REFRESH_STEP_MS) return;
+  console.warn("Dataset refresh step", { dataset: `${gameMode}/${resource}`, step, ms: Math.round(ms), outcome: outcome.slice(0, 200) });
 }
 
 async function readShared(

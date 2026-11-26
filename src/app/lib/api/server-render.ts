@@ -12,9 +12,10 @@ export const RENDER_TIMEOUT_MS = 15_000;
 
 /**
  * Runs a tarkov-server read while rendering a page. Returns undefined when the read fails or takes
- * too long, for data the page can go without.
+ * too long, for data the page can go without. `staleWaitMs` limits how long it waits for a due
+ * refresh before using the copy it holds (see TarkovReadOptions); by default it waits.
  */
-export async function readForRender<T>(label: string, work: () => Promise<T>): Promise<T | undefined> {
+export async function readForRender<T>(label: string, work: () => Promise<T>, staleWaitMs?: number): Promise<T | undefined> {
   const signal = AbortSignal.timeout(RENDER_TIMEOUT_MS);
   try {
     await waitForRenderSlot(signal);
@@ -23,7 +24,7 @@ export async function readForRender<T>(label: string, work: () => Promise<T>): P
     return undefined;
   }
   try {
-    return await runTarkovRead(work, { signal });
+    return await runTarkovRead(work, { signal, staleWaitMs });
   } catch (error) {
     console.warn(`${label} rendered without its data:`, error instanceof Error ? error.message : error);
     return undefined;
