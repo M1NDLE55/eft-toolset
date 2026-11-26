@@ -19,5 +19,8 @@ export const fetchItemPage = createServerFn({ method: "GET" })
   .validator((input: { itemName: string }) => ({ itemName: String(input.itemName) }))
   .handler(async ({ data }) => {
     cacheAtEdge(EDGE_TTL.builds);
-    return loadItemPage(requestGameMode(), data.itemName);
+    const page = await loadItemPage(requestGameMode(), data.itemName);
+    // Built from stale copies: kept briefly, so a fresh render replaces it soon.
+    if (page.stale) cacheAtEdge(EDGE_TTL.prices);
+    return page;
   });

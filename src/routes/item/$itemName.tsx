@@ -12,7 +12,8 @@ export const Route = createFileRoute("/item/$itemName")({
   loader: ({ params }) => fetchItemPage({ data: { itemName: params.itemName } }),
   staticData: { pageHead: true },
   head: ({ loaderData }) => pageHead({ layouts: [ITEM_LAYOUT_METADATA], page: loaderData?.metadata }),
-  headers: () => edgeCacheHeaders(EDGE_TTL.builds),
+  // A page built from stale copies is kept only briefly, so a fresh render replaces it soon.
+  headers: ({ loaderData }) => edgeCacheHeaders(loaderData?.stale ? EDGE_TTL.prices : EDGE_TTL.builds),
   pendingComponent: LoadingSkeleton,
   errorComponent: function ItemRouteError(props) {
     const { itemName } = Route.useParams();

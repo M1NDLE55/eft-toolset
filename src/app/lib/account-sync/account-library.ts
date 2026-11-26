@@ -103,12 +103,26 @@ export class AccountLibrary {
 
   // Lifecycle
 
+  /**
+   * Opens the account cache. The library can be closed while this runs (the account check finds the
+   * session over and signs the tab out): it then stops quietly at its next step and leaves nothing
+   * open, rather than reading from a closing database or keeping a connection, listeners and the
+   * sync lock for a library no one holds.
+   */
   async open() {
-    this.db = await openAccountDb(this.cacheKey);
-    this.deviceId = (await readMeta<string>(this.db, "deviceId")) ?? newOperationId();
-    this.seq = (await readMeta<number>(this.db, "seq")) ?? -1;
-    await transact(this.db, ["meta"], "readwrite", (tx) => tx.objectStore("meta").put(this.deviceId, "deviceId"));
-    await this.reload();
+    const db = await openAccountDb(this.cacheKey);
+    if (this.closed) return db.close();
+    this.db = db;
+    try {
+      this.deviceId = (await readMeta<string>(db, "deviceId")) ?? newOperationId();
+      this.seq = (await readMeta<number>(db, "seq")) ?? -1;
+      await transact(db, ["meta"], "readwrite", (tx) => tx.objectStore("meta").put(this.deviceId, "deviceId"));
+      await this.reload();
+    } catch (error) {
+      if (this.closed) return;
+      throw error;
+    }
+    if (this.closed) return;
     this.ready = true;
     this.notify();
     if (typeof BroadcastChannel !== "undefined") {
@@ -150,6 +164,7 @@ export class AccountLibrary {
   private async lead() {
     this.leader = true;
     await this.catchUp();
+    if (this.closed) return;
     this.connectFeed();
     void this.drain();
     void this.syncPlans();
@@ -288,7 +303,7 @@ export class AccountLibrary {
    * Two at a time, in the background; plans open in this tab are left to their page.
    */
   async syncPlans(only?: string[]) {
-    if (!this.db || !this.leader || this.planSyncing) return;
+    if (!this.db || !this.leader || this.planSyncing || this.closed) return;
     this.planSyncing = true;
     try {
       const cached = new Map((await readAllPlans(this.db)).map((plan) => [plan.planId, plan]));
@@ -317,6 +332,9 @@ export class AccountLibrary {
       };
       await Promise.all([run(), run()]);
       await this.reloadPlans();
+    } catch (error) {
+      // Closed meanwhile (signed out): its database is closing, and nothing is left to sync.
+      if (!this.closed) throw error;
     } finally {
       this.planSyncing = false;
     }

@@ -33,7 +33,8 @@ vi.mock("@/app/lib/navigation/link", () => ({
   ),
 }));
 
-const { RouteErrorPage } = await import("@/app/components/global/route-status");
+const { RouteErrorPage, resetReportedPageErrors } = await import("@/app/components/global/route-status");
+const { browserOnly } = await import("@/app/components/raid-planner/lazy-canvas");
 const { Route: ItemRoute } = await import("@/routes/item/$itemName");
 const { GameModeProvider } = await import("@/components/game-mode/context");
 
@@ -43,6 +44,7 @@ let root: Root;
 beforeEach(() => {
   (globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
   beacons.length = 0;
+  resetReportedPageErrors();
   sessionStorage.clear();
   vi.spyOn(console, "error").mockImplementation(() => undefined);
   host = document.createElement("div");
@@ -64,13 +66,18 @@ async function settle() {
 }
 
 /** One page at `path`, loaded by `loader`, inside a real router; the app's error page unless given another. */
-async function renderPage(path: string, loader: () => unknown, errorComponent?: (props: ErrorComponentProps) => React.ReactNode) {
+async function renderPage(
+  path: string,
+  loader: () => unknown,
+  errorComponent?: (props: ErrorComponentProps) => React.ReactNode,
+  component: () => React.ReactNode = () => <p>Page loaded</p>
+) {
   const rootRoute = createRootRoute({ component: Outlet });
   const page = createRoute({
     getParentRoute: () => rootRoute,
     path: "/page/$name",
     loader,
-    component: () => <p>Page loaded</p>,
+    component,
     ...(errorComponent ? { errorComponent } : {}),
   });
   const router = createRouter({
@@ -100,7 +107,8 @@ describe("a page that fails to load", () => {
     await renderPage("/page/still-slow", loader);
     expect(loader).toHaveBeenCalledTimes(2);
     expect(text()).toContain("Something went wrong");
-    expect(errorKinds()).toEqual(["unavailable", "unavailable"]);
+    // One failure of the page, recorded once though it showed twice.
+    expect(errorKinds()).toEqual(["unavailable"]);
 
     loader.mockImplementation(() => Promise.resolve(null));
     await act(async () => host.querySelector("button")!.click());
@@ -140,11 +148,84 @@ describe("a page that fails to load", () => {
     expect(text()).not.toContain("Something went wrong");
     expect(errorKinds()).toEqual(["chunk_load"]);
 
-    // After that reload (same tab, so the mark is still there), a second failure shows the error.
+    // After that reload (same tab, so the mark is still there; a new page load, so a new count), a
+    // second failure says the page couldn't load, and Try Again loads the page afresh.
     act(() => root.unmount());
     root = createRoot(host);
+    resetReportedPageErrors();
+    const reload = vi.fn();
+    vi.stubGlobal("location", { ...window.location, reload });
     await renderPage("/page/missing-chunk", vi.fn().mockRejectedValue(chunkError()));
+    expect(text()).toContain("Couldn\u2019t load this page. Check your connection and try again.");
+    expect(text()).not.toContain("Something went wrong");
+    expect(errorKinds()).toEqual(["chunk_load", "chunk_load"]);
+    await act(async () => host.querySelector("button")!.click());
+    expect(reload).toHaveBeenCalledTimes(1);
+  });
+
+  it("records a page's failure once per page load, however often Try Again fails", async () => {
+    const loader = vi.fn((): Promise<null> => Promise.reject(new TypeError("e.buyFor is undefined")));
+    await renderPage("/page/still-broken", loader);
+    for (let index = 0; index < 3; index += 1) {
+      await act(async () => host.querySelector("button")!.click());
+      await settle();
+    }
+    expect(loader).toHaveBeenCalledTimes(4);
+    expect(errorKinds()).toEqual(["crash"]);
+  });
+});
+
+describe("a lazily loaded map whose code didn't download", () => {
+  // A page in a real router, with the map canvas in it.
+  async function renderMap(load: () => Promise<{ Canvas: () => React.ReactNode }>) {
+    const Map = browserOnly(load, (module) => module.Canvas);
+    return renderPage("/page/factory", () => null, undefined, () => (
+      <div>
+        <h1>Factory</h1>
+        <Map />
+      </div>
+    ));
+  }
+
+  it("says so in the map's place, records it once, and Retry loads it", async () => {
+    // The import and its automatic second try both fail (no script URL, so the second try is the import again).
+    const load = vi.fn().mockRejectedValue(new TypeError("Importing a module script failed."));
+    await renderMap(load);
+    expect(load).toHaveBeenCalledTimes(2);
+    expect(text()).toContain("Factory");
+    expect(text()).toContain("Couldn't load the map");
+    expect(text()).toContain("Check your connection and try again.");
+    expect(text()).not.toContain("Something went wrong");
+    expect(beacons.filter((beacon) => beacon.event === "page.error")).toEqual([{ event: "page.error", route: "other", errorKind: "chunk_load" }]);
+
+    // Retry fails too: still the notice, still one event.
+    const retry = () => [...host.querySelectorAll("button")].find((button) => button.textContent === "Retry")!;
+    await act(async () => retry().click());
+    await settle();
+    expect(load).toHaveBeenCalledTimes(3);
+    expect(text()).toContain("Couldn't load the map");
+    expect(errorKinds()).toEqual(["chunk_load"]);
+
+    load.mockResolvedValue({ Canvas: () => <p>Map canvas</p> });
+    await act(async () => retry().click());
+    await settle();
+    expect(text()).toContain("Map canvas");
+    expect(text()).toContain("Factory");
+    expect(sessionStorage.length).toBe(0);
+  });
+
+  it("recovers by itself when the second try works, without recording anything", async () => {
+    const load = vi.fn().mockRejectedValueOnce(new TypeError("Importing a module script failed.")).mockResolvedValue({ Canvas: () => <p>Map canvas</p> });
+    await renderMap(load);
+    expect(load).toHaveBeenCalledTimes(2);
+    expect(text()).toContain("Map canvas");
+    expect(errorKinds()).toEqual([]);
+  });
+
+  it("leaves any other error to the page's error boundary", async () => {
+    await renderMap(() => Promise.reject(new TypeError("L.map is not a function")));
     expect(text()).toContain("Something went wrong");
+    expect(errorKinds()).toEqual(["crash"]);
   });
 });
 

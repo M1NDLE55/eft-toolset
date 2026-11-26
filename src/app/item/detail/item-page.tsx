@@ -20,7 +20,10 @@ export interface ItemPageData {
   reference: ItemReference;
   item: ComposedItem;
   canonical: string | null;
+  /** When the item's data is from: the render, or its oldest copy when that was stale. */
   renderedAt: number;
+  /** Built from copies whose refresh didn't finish in time: the page is cached briefly. */
+  stale?: boolean;
   /** The item's wiki page, the same in every game mode; null without one. */
   wiki: ItemWiki | null;
   /** The quests that use the item, when the quest list was read in time. */

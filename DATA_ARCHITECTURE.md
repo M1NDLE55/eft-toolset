@@ -107,6 +107,13 @@ Item pages live at `/item/<normalizedName>` and are rendered on the server with 
 adapter's data for their game mode (see Page caching). The client query cache is seeded with
 the same data and refetches it once it is older than five minutes, so a cached page still
 shows live prices. Older name-based links redirect permanently and unknown slugs return 404.
+An item render (the item, the item index for its canonical URL, and the quest list) waits at most
+2.5 seconds (`ITEM_RENDER_STALE_WAIT_MS`) for a dataset that is due a refresh before using the copy it holds, if that copy is within `RESOURCE_MAX_STALE_MS`: a cold
+instance whose snapshot has aged past a dataset's revalidation would otherwise wait on tarkov.dev for
+each one, four requests at a time, and a slow tarkov.dev ran the render past its 15-second budget.
+A page built that way is marked stale: it is kept at the edge only as long as a prices page, and the
+item is dated by its oldest copy, so the browser loads it afresh as soon as the page is up. Only an
+item with no usable copy in time fails the render (and is then loaded by the browser, as before).
 Every item slug is listed in the sitemap.
 
 An item page is a grid of cards (`src/app/components/item/cards.tsx`), laid out by a view:

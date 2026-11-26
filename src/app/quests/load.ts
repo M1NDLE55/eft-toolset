@@ -4,9 +4,12 @@ import { readForRender } from "@/app/lib/api/server-render";
 import { findQuestDetail } from "@/app/lib/quests/detail-lookup";
 import type { GameMode } from "@/components/game-mode/mode";
 
-/** The game mode's quest list, to render and to seed the client cache; undefined when it couldn't be read in time. */
-export const loadQuestList = cache(async (gameMode: GameMode) => {
-  const list = await readForRender("Quest list", () => getQuestList(gameMode));
+/**
+ * The game mode's quest list, to render and to seed the client cache; undefined when it couldn't be
+ * read in time. A page that can go without it passes how long to wait for a due refresh.
+ */
+export const loadQuestList = cache(async (gameMode: GameMode, staleWaitMs?: number) => {
+  const list = await readForRender("Quest list", () => getQuestList(gameMode), staleWaitMs);
   return list && { gameMode, list, renderedAt: Date.now() };
 });
 

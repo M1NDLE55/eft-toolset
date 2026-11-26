@@ -2,7 +2,7 @@ import { notFound, redirect } from "@tanstack/react-router";
 import type { Metadata } from "@/app/lib/seo/metadata";
 import { readItemWiki } from "@/app/lib/wiki/item-wiki";
 import { RenderDataUnavailableError } from "@/app/lib/render-errors";
-import { loadItemIndexing, resolveItemRoute } from "./item-route";
+import { ITEM_RENDER_STALE_WAIT_MS, loadItemIndexing, resolveItemRoute } from "./item-route";
 import { itemPageDescription, itemPageTitle } from "@/app/lib/seo/item";
 import { questsUsingItem } from "@/app/lib/quests/item-quests";
 import { loadQuestList } from "@/app/quests/load";
@@ -13,10 +13,13 @@ import type { ItemPageData } from "./item-page";
  * The item page for one game mode. A near-duplicate or old name link redirects permanently to the
  * item's page, an unknown item is a 404, and an item that couldn't be loaded in time fails the
  * render, so the edge cache keeps its previous copy (and a first render answers with a 500, while
- * the browser loads the item itself: the route's errorComponent).
+ * the browser loads the item itself: the route's errorComponent). An item built from older copies,
+ * because tarkov.dev was slow (see ITEM_RENDER_STALE_WAIT_MS), renders as usual but is marked stale,
+ * so it's cached only as long as a prices page, and is dated by its oldest copy, so the browser
+ * loads it afresh as soon as the page is up.
  */
 export async function loadItemPage(gameMode: GameMode, segment: string): Promise<ItemPageData> {
-  const { item, canonical, reference, renderedAt } = await resolveItemRoute(gameMode, segment);
+  const { item, canonical, reference, renderedAt, staleSince } = await resolveItemRoute(gameMode, segment);
   if (canonical && canonical !== segment) throw redirect({ href: `/item/${canonical}`, statusCode: 308 });
   if (!reference || item === null) throw notFound();
   if (item === undefined) throw new RenderDataUnavailableError("Item page");
@@ -24,7 +27,7 @@ export async function loadItemPage(gameMode: GameMode, segment: string): Promise
   // The quest list is optional: without it in time, the page just goes without its quest links.
   const [wiki, quests, indexing] = await Promise.all([
     readItemWiki(item.id),
-    loadQuestList(gameMode),
+    loadQuestList(gameMode, ITEM_RENDER_STALE_WAIT_MS),
     canonical ? loadItemIndexing(canonical) : undefined,
   ]);
   // The canonical URL and robots tag are cached with the page: without the index, fail the render
@@ -46,5 +49,6 @@ export async function loadItemPage(gameMode: GameMode, segment: string): Promise
     openGraph: { title: `${title} | EFT Toolset`, description, type: "article", url, images },
     twitter: { card: "summary", title: `${title} | EFT Toolset`, description, images: images.map((image) => image.url) },
   };
-  return { gameMode, reference, item, canonical, renderedAt, wiki, usedBy, metadata };
+  const stale = staleSince !== undefined;
+  return { gameMode, reference, item, canonical, renderedAt: staleSince ?? renderedAt, stale, wiki, usedBy, metadata };
 }

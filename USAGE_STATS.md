@@ -57,7 +57,7 @@ The source of truth is `USAGE_EVENTS` in `src/app/lib/usage/catalog.ts`.
 | `plan.host` | server | sharing | map id | A raid plan is created in an account, hosted live |
 | `report.file` | server | sharing | | Shared content is reported (never the reason's text) |
 | `page.view` | web | site | route pattern | Each page navigation |
-| `page.error` | web | site | route pattern, error kind | A page fails: its error screen shows, or it first tries once by itself to recover |
+| `page.error` | web | site | route pattern, error kind | A page fails: its error screen shows, it first tries once by itself to recover, or a part of it (the map) can't load. Once per page load per URL and kind |
 | `build.create` | web | gun-builder | weapon id, game mode | A build is created from the weapon picker |
 | `build.optimize` | web | gun-builder | weapon id, game mode, outcome, duration | The optimiser finishes or fails |
 | `build.share` | web | gun-builder | weapon id | A build's share link is copied or shared |
@@ -83,8 +83,12 @@ Field values: game mode `regular` or `pve`; outcome `ok`, `error`, `cancelled`, 
 down: not allowed, over a limit, or an edit conflict); duration `<100ms`, `100ms-1s`, `1-5s`, `5-20s` or `20s+`;
 error kind `unavailable` (the server couldn't load or work out the page's data in time), `chunk_load`
 (a piece of the site's code didn't download), `network` (a request to the server got no answer) or
-`crash` (anything else). The kind is worked out in the browser from the error's type
-(`page-error.ts`); the error's message is never sent.
+`crash` (anything else, including anything thrown that isn't an error). The kind is worked out in
+the browser from the error's type and name (`page-error.ts`); the error's message is never sent.
+Every page built since kinds were added sends one, so a `page.error` row with layout version `2`
+and no kind came from a page still running code from before then (an open tab, or a page the
+service worker served from its cache), and the dashboard shows it as `unknown`. A code chunk that
+doesn't download is first fetched again by itself; only a failure after that is recorded.
 
 Adding an event: add it to `USAGE_EVENTS` with the fields it may carry, call `trackUsage` (browser)
 or `recordUsage` (server), and add a row here. A new page route also needs adding to `USAGE_ROUTES`;

@@ -16,6 +16,8 @@ import {
   type TarkovReadOptions,
 } from "@/app/lib/api/tarkov-server";
 import { readSnapshot, setTarkovSnapshotDirForTests } from "@/app/lib/api/tarkov-snapshot";
+import { RENDER_TIMEOUT_MS } from "@/app/lib/api/server-render";
+import { ITEM_RENDER_STALE_WAIT_MS } from "@/app/item/detail/item-route";
 import { createTarkovFixtures } from "./fixtures/tarkov";
 import { SNAPSHOT_RESOURCES, writeTarkovSnapshot } from "./fixtures/tarkov-snapshot";
 
@@ -229,6 +231,20 @@ describe("refreshes", () => {
     expect(onStale).not.toHaveBeenCalled();
     expect(tarkovDataStatus(["regular"]).find((status) => status.dataset === "items")).toMatchObject({ state: "fresh", ageSeconds: 0 });
   }, 10_000);
+
+  it("let an item render take its copies after a short wait, when the snapshot is past revalidation and tarkov.dev hangs", async () => {
+    // A cold instance hours after its deployment: every dataset is due, none is fresh in the shared cache.
+    await writeSnapshot(4.5 * 60 * 60_000);
+    mode = "hang";
+    const onStale = vi.fn();
+    const started = performance.now();
+    const item = await detail({ signal: AbortSignal.timeout(RENDER_TIMEOUT_MS), staleWaitMs: ITEM_RENDER_STALE_WAIT_MS, onStale });
+    const waited = performance.now() - started;
+    expect(item).toMatchObject({ name: "Test Rifle" });
+    expect(onStale).toHaveBeenCalledWith({ source: "deployment" });
+    // Well inside the render's budget, where waiting for every refresh ran it out.
+    expect(waited).toBeLessThan(RENDER_TIMEOUT_MS / 2);
+  }, 20_000);
 
   it("date a result by the copy it used, even when a refresh lands during the read", async () => {
     await writeSnapshot(3 * 60 * 60_000);
