@@ -3,7 +3,7 @@ import { customDecodeURI } from "@/app/lib/URIEncoding";
 import { isItemSlug, itemReference } from "@/app/lib/item-links";
 import { executeTarkovOperation, getItemPageIndex, releaseRenderSlot, runTarkovRead, waitForRenderSlot } from "@/app/lib/api/tarkov-server";
 import type { ItemIndexing } from "@/app/lib/seo/item-index";
-import { RENDER_TIMEOUT_MS } from "@/app/lib/api/server-render";
+import { livePriceReadOptions, RENDER_TIMEOUT_MS } from "@/app/lib/api/server-render";
 import { TARKOV_OPERATIONS } from "@/app/lib/api/operations";
 import type { GameMode } from "@/components/game-mode/mode";
 import type { ComposedItem } from "@/app/lib/cache/types";
@@ -65,6 +65,7 @@ export const loadItem = cache(async (segment: string, gameMode: GameMode): Promi
       {
         signal,
         staleWaitMs: ITEM_RENDER_STALE_WAIT_MS,
+        ...livePriceReadOptions(),
         onStale: () => void (stale = true),
         onDataAge: (ageMs) => void (dataAgeMs = ageMs),
       }

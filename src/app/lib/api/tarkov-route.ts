@@ -16,6 +16,8 @@ import {
   TarkovUpstreamError,
 } from "@/app/lib/api/tarkov-server";
 import { consumeRequestBudget, crossIsolateLimit } from "@/app/lib/api/rate-limit";
+import { isPriceVersion } from "@/app/lib/api/price-feed";
+import { isGameMode, type GameMode } from "@/components/game-mode/mode";
 import {
   RequestBodyBusyError,
   RequestBodyTooLargeError,
@@ -25,7 +27,14 @@ import {
 const MAX_REQUEST_BYTES = 64 * 1024;
 const MAX_URL_LENGTH = 2_048;
 
-/** GET /api/tarkov?op=…&v=<canonical JSON>: single public reads, cached at the edge. */
+/** A page's price version, as a query parameter: a positive whole number of up to 16 digits. */
+const PRICE_VERSION_PARAM = /^[1-9]\d{0,15}$/;
+
+/**
+ * GET /api/tarkov?op=…&v=<canonical JSON>[&p=<price version>]: single public reads, cached at the
+ * edge. `p` is the price version a page refetching after the refresher's push needs (live-prices.ts):
+ * the read takes at least that version, and each version is its own cache entry.
+ */
 export async function GET(request: Request) {
   const rateLimited = await rateLimitResponse(request);
   if (rateLimited) return rateLimited;
@@ -37,14 +46,16 @@ export async function GET(request: Request) {
   const keys = Array.from(url.searchParams.keys());
   const operation = url.searchParams.get("op");
   const encoded = url.searchParams.get("v");
+  const pricesVersion = url.searchParams.get("p");
   if (
-    keys.length !== 2 ||
+    keys.length !== (pricesVersion === null ? 2 : 3) ||
     operation === null ||
     encoded === null ||
     url.searchParams.getAll("op").length !== 1 ||
-    url.searchParams.getAll("v").length !== 1
+    url.searchParams.getAll("v").length !== 1 ||
+    (pricesVersion !== null && (url.searchParams.getAll("p").length !== 1 || !PRICE_VERSION_PARAM.test(pricesVersion)))
   ) {
-    return errorResponse("Expected exactly the op and v query parameters.", "INVALID_REQUEST", 400);
+    return errorResponse("Expected the op and v query parameters, and at most a price version p.", "INVALID_REQUEST", 400);
   }
   if (!isTarkovOperation(operation) || !CACHEABLE_OPERATIONS.has(operation)) {
     return errorResponse("Unknown query operation.", "INVALID_OPERATION", 400);
@@ -63,10 +74,10 @@ export async function GET(request: Request) {
     return errorResponse("Query variables must be canonical JSON.", "INVALID_REQUEST", 400);
   }
 
-  return withSlot(() => execute(request, operation, variables, true));
+  return withSlot(() => execute(request, operation, variables, true, pricesVersion === null ? undefined : Number(pricesVersion)));
 }
 
-/** POST /api/tarkov: batch reads, never cached. */
+/** POST /api/tarkov: batch reads, never cached. `p` in the body as for GET. */
 export async function POST(request: Request) {
   const rateLimited = await rateLimitResponse(request);
   if (rateLimited) return rateLimited;
@@ -101,7 +112,10 @@ export async function POST(request: Request) {
   if (!body || typeof body !== "object" || Array.isArray(body)) {
     return errorResponse("Request body must be an object.", "INVALID_REQUEST", 400);
   }
-  const { operation, variables } = body as Record<string, unknown>;
+  const { operation, variables, p } = body as Record<string, unknown>;
+  if (p !== undefined && !isPriceVersion(p)) {
+    return errorResponse("p must be a price version.", "INVALID_REQUEST", 400);
+  }
   if (!isTarkovOperation(operation)) {
     return errorResponse("Unknown query operation.", "INVALID_OPERATION", 400);
   }
@@ -110,7 +124,7 @@ export async function POST(request: Request) {
     return errorResponse("price.feed is served over GET only.", "INVALID_OPERATION", 400);
   }
 
-  return withSlot(() => execute(request, operation, variables, false));
+  return withSlot(() => execute(request, operation, variables, false, p));
 }
 
 async function withSlot(handler: () => Promise<Response>) {
@@ -130,14 +144,21 @@ async function execute(
   request: Request,
   operation: TarkovOperation,
   variables: unknown,
-  cacheable: boolean
+  cacheable: boolean,
+  minPricesVersion?: number
 ) {
   try {
     let stale = false;
     let dataAgeMs = 0;
+    let pricesVersion: number | null = null;
     const priceFeed = operation === TARKOV_OPERATIONS.priceFeed;
+    const gameMode = gameModeOf(variables);
     request.signal.throwIfAborted();
     const data = await executeTarkovOperation(operation, variables, {
+      ...(minPricesVersion !== undefined && gameMode ? { minPricesVersion: { gameMode, version: minPricesVersion } } : {}),
+      onPriceSource: (info) => {
+        if (info.gameMode === gameMode) pricesVersion = info.version;
+      },
       signal: request.signal,
       // Any copy beats an error; past the stale limit publicCacheControl sends it no-store.
       maxStaleMs: Number.POSITIVE_INFINITY,
@@ -151,8 +172,9 @@ async function execute(
       },
     });
     request.signal.throwIfAborted();
+    // The version the prices came from, for live pages to compare with the refresher's push.
     return Response.json(
-      { data },
+      pricesVersion === null ? { data } : { data, pricesVersion },
       {
         headers: {
           "Cache-Control": !cacheable
@@ -191,6 +213,11 @@ async function rateLimitResponse(request: Request) {
   return errorResponse("Too many requests.", "RATE_LIMITED", 429, {
     "Retry-After": String(rateLimit.retryAfterSeconds),
   });
+}
+
+function gameModeOf(variables: unknown): GameMode | undefined {
+  const gameMode = variables && typeof variables === "object" ? (variables as Record<string, unknown>).gameMode : undefined;
+  return isGameMode(gameMode) ? gameMode : undefined;
 }
 
 function errorResponse(

@@ -82,17 +82,18 @@ import {
   PRICE_FEED_FORMAT,
   priceFeedOrigin,
   priceFeedRefreshes,
+  priceVersionOf,
   projectPriceRows,
-  publishPriceFeed,
-  readPublishedFeedWire,
   readPriceFeed,
   type PriceFeed,
+  type PriceFeedRows,
   type PriceFeedWire,
 } from "./price-feed";
+import { devTimeScale, refresher } from "./refresher";
 import { readSnapshot } from "./tarkov-snapshot";
 import { USER_AGENT } from "./user-agent";
 import { AsyncLocalStorage } from "node:async_hooks";
-import { sharedAcrossRequests } from "@/app/lib/server/platform";
+import { sharedAcrossRequests, type SharedStore } from "@/app/lib/server/platform";
 
 // TARKOV_UPSTREAM_URL points a local build at a stand-in upstream (scripts/mcp-load.mjs); production never sets it.
 const UPSTREAM_BASE_URL = process.env.TARKOV_UPSTREAM_URL?.replace(/\/+$/, "") || "https://json.tarkov.dev";
@@ -126,7 +127,10 @@ export const PRICE_FEED_ORIGIN_WAIT_MS = 5_000;
 const MINUTE_MS = 60_000;
 const HOUR_MS = 60 * MINUTE_MS;
 const SHARED_KEY_VERSION = 1;
-// A 304 renews the shared record, not the body; a body that expires is fetched and written again.
+/** KV takes values up to 25 MiB; leave room for multi-byte characters (as shared-cache.ts). */
+const SHARED_MAX_CHARS = 12_000_000;
+// Bodies are written once per version. One that expires while still current is written again by
+// the refresher when an instance finds it missing.
 const SHARED_BODY_TTL_SECONDS = 7 * 24 * 60 * 60;
 const MAX_RESOURCE_RECORDS = 100_000;
 const MAX_NESTED_ENTRIES = 20_000;
@@ -159,24 +163,28 @@ interface ResourcePolicy {
   shared: boolean;
 }
 
+/** How often a shared dataset is checked with tarkov.dev, at most: hourly (faster only in local simulations). */
+const SHARED_FRESH_MS = HOUR_MS / devTimeScale();
+
 const RESOURCE_POLICIES: Record<Resource, ResourcePolicy> = {
-  // Prices change every 5 to 10 minutes. 17 MB. Instances read prices from the price feed and the
-  // rest from the deployment snapshot, so the items file stays per isolate.
+  // The largest file. Its prices change about every 10 minutes, but instances read prices from the
+  // price feed (price-feed.ts) and the rest from the copy they hold, so this freshness only applies
+  // while the feed can't be read. The file stays per isolate.
   items: { freshMs: 5 * MINUTE_MS, revalidateMs: 30 * MINUTE_MS, shared: false },
-  // 9 MB and 2 MB: within KV's value limit, so isolates share the copy the cron keeps fresh.
-  maps: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: true },
-  tasks: { freshMs: 30 * MINUTE_MS, revalidateMs: 2 * HOUR_MS, shared: true },
-  // 1.7 MB.
-  items_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  // Under 300 KB each; barters change every two hours, the rest with patches.
-  barters: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  crafts: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  hideout: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  hideout_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  maps_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  tasks_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  traders: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
-  traders_en: { freshMs: 2 * HOUR_MS, revalidateMs: 4 * HOUR_MS, shared: true },
+  // Everything else is shared: the refresher (data-refresh-do.ts) checks it with tarkov.dev at most
+  // hourly, only while it is asked for, and writes changed copies to KV for every instance. A copy
+  // past the hour is served while the instance asks the refresher in the background.
+  maps: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  tasks: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  items_en: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  barters: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  crafts: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  hideout: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  hideout_en: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  maps_en: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  tasks_en: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  traders: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
+  traders_en: { freshMs: SHARED_FRESH_MS, revalidateMs: RESOURCE_MAX_STALE_MS, shared: true },
 };
 
 type Dictionary<T> = Record<string, T>;
@@ -517,12 +525,6 @@ interface Refreshed {
   chars?: number;
 }
 
-interface SharedMeta {
-  etag?: string;
-  lastModified?: string;
-  checkedAt: number;
-}
-
 interface ItemsContext {
   items: RawItem[];
   byId: Map<string, RawItem>;
@@ -641,6 +643,7 @@ const operationContext = new AsyncLocalStorage<{
   used: Map<string, UsedCopy>;
   maxStaleMs: number;
   staleWaitMs: number;
+  minPricesVersion?: { gameMode: GameMode; version: number };
   signal?: AbortSignal;
 }>();
 /** Stands in for a dataset a read saw two different copies of, so its snapshot never matches. */
@@ -731,6 +734,11 @@ export interface TarkovReadOptions {
    * tools wait MCP_STALE_WAIT_MS and say the data is stale.
    */
   staleWaitMs?: number;
+  /**
+   * The price feed version the read must have at least (a page refetching after the refresher's push,
+   * see live-prices.ts): an older copy is refreshed first, waiting a few seconds at most.
+   */
+  minPricesVersion?: { gameMode: GameMode; version: number };
   /** Called when the result was built from a copy whose refresh failed or didn't finish in time. */
   onStale?: (info: { source: DataSource }) => void;
   onDataAge?: (ageMs: number) => void;
@@ -740,11 +748,14 @@ export interface TarkovReadOptions {
 }
 
 export interface PriceSourceInfo {
+  gameMode: GameMode;
   /** Our price feed, tarkov.dev's items file loaded by this instance, or the copy bundled with the deployment. */
   source: "feed" | "items-file" | "snapshot";
   /** Since the prices were last confirmed with tarkov.dev. */
   ageMs: number;
   stale: boolean;
+  /** The feed's version, which live pages compare with the refresher's; null for prices from the items file. */
+  version: number | null;
 }
 
 export type DataSnapshot = ReadonlyArray<readonly [key: string, entry: object, value: unknown]>;
@@ -792,6 +803,7 @@ export async function runTarkovRead<T>(
     used: new Map<string, UsedCopy>(),
     maxStaleMs: options.maxStaleMs ?? RESOURCE_MAX_STALE_MS,
     staleWaitMs: options.staleWaitMs ?? Number.POSITIVE_INFINITY,
+    minPricesVersion: options.minPricesVersion,
     signal: options.signal,
   };
   return operationContext.run(context, async () => {
@@ -814,9 +826,11 @@ export async function runTarkovRead<T>(
     if (prices) {
       const [key, copy] = prices;
       options.onPriceSource?.({
+        gameMode: key.slice(0, key.indexOf("/")) as GameMode,
         source: copy.source === "deployment" ? "snapshot" : key.endsWith(PRICES_SUFFIX) ? "feed" : "items-file",
         ageMs: Math.max(0, Date.now() - copy.fetchedAt),
         stale: isStale(copy),
+        version: key.endsWith(PRICES_SUFFIX) && copy.value !== MIXED_COPIES ? (copy.value as unknown as PriceFeed).version : null,
       });
     }
     options.onSnapshot?.(
@@ -1507,7 +1521,8 @@ async function loadItems(gameMode: GameMode): Promise<ItemsContext> {
  */
 async function loadPricedItems(gameMode: GameMode): Promise<UpstreamEnvelope<ItemsData>> {
   const context = operationContext.getStore();
-  const read = await readPriceFeed(gameMode, context?.staleWaitMs ?? Number.POSITIVE_INFINITY);
+  const minVersion = context?.minPricesVersion?.gameMode === gameMode ? context.minPricesVersion.version : undefined;
+  const read = await readPriceFeed(gameMode, context?.staleWaitMs ?? Number.POSITIVE_INFINITY, minVersion);
   if (!read) return loadResource<ItemsData>(gameMode, "items");
   const key = `${gameMode}/items`;
   const entry = await peekResource(gameMode, "items");
@@ -2593,30 +2608,18 @@ async function loadCurrent(
   attempts: number
 ): Promise<Refreshed> {
   const policy = RESOURCE_POLICIES[resource];
-  const sharedKey = `tarkov:${SHARED_KEY_VERSION}:${gameMode}/${resource}`;
   if (policy.shared) {
-    const started = performance.now();
-    const shared = await timedStep(gameMode, resource, "shared cache", () => readShared(sharedKey, resource, entry, policy));
+    const shared = await timedStep(gameMode, resource, "refresher", () => readFromRefresher(gameMode, resource, entry));
     if (shared) return shared;
-    // A miss (the cron's copy is older than the dataset's freshness) is worth knowing when it was slow.
-    logSlowStep(gameMode, resource, "shared cache", performance.now() - started, "miss");
   }
   const previous = entry.value
     ? { value: entry.value, etag: entry.etag, lastModified: entry.lastModified }
     : undefined;
   const fetched = await timedStep(gameMode, resource, "tarkov.dev", () => fetchWithRetries(gameMode, resource, attempts, previous));
   const checkedAt = Date.now();
-  if (fetched.notModified) {
-    // fetchResource only accepts a 304 when it sent validators, which needs a previous copy.
-    const refreshed = { ...previous!, checkedAt };
-    if (policy.shared) await writeShared(sharedKey, refreshed, policy, false);
-    return refreshed;
-  }
-  const refreshed = { value: fetched.value, etag: fetched.etag, lastModified: fetched.lastModified, checkedAt, chars: fetched.chars };
-  if (policy.shared && fetched.chars <= regionalCache().maxChars) {
-    await writeShared(sharedKey, refreshed, policy, true);
-  }
-  return refreshed;
+  // fetchResource only accepts a 304 when it sent validators, which needs a previous copy.
+  if (fetched.notModified) return { ...previous!, checkedAt };
+  return { value: fetched.value, etag: fetched.etag, lastModified: fetched.lastModified, checkedAt, chars: fetched.chars };
 }
 
 /** A refresh step slower than this is logged with its time (see timedStep). */
@@ -2627,7 +2630,7 @@ const SLOW_REFRESH_STEP_MS = 2_000;
  * when it was slow or failed, as fields Workers Logs can filter on: which dataset, which step, how
  * long, and the outcome. Fast steps aren't logged.
  */
-async function timedStep<T>(gameMode: GameMode, resource: Resource, step: "shared cache" | "tarkov.dev", work: () => Promise<T>): Promise<T> {
+async function timedStep<T>(gameMode: GameMode, resource: Resource, step: "refresher" | "tarkov.dev", work: () => Promise<T>): Promise<T> {
   const started = performance.now();
   try {
     const result = await work();
@@ -2644,47 +2647,56 @@ function logSlowStep(gameMode: GameMode, resource: Resource, step: string, ms: n
   console.warn("Dataset refresh step", { dataset: `${gameMode}/${resource}`, step, ms: Math.round(ms), outcome: outcome.slice(0, 200) });
 }
 
-async function readShared(
-  key: string,
-  resource: Resource,
-  entry: ResourceCacheEntry,
-  policy: ResourcePolicy
-): Promise<Refreshed | null> {
-  const cache = regionalCache();
-  const meta = readSharedMeta(await cache.get(`${key}:meta`));
-  const now = Date.now();
-  // Allow for another instance's clock running slightly ahead.
-  if (!meta || now - meta.checkedAt >= policy.freshMs || meta.checkedAt - now > MINUTE_MS) return null;
-  const checkedAt = Math.min(meta.checkedAt, now);
-  const version = meta.etag ?? meta.lastModified;
-  if (entry.value && version === (entry.etag ?? entry.lastModified)) {
-    return { value: entry.value, etag: entry.etag, lastModified: entry.lastModified, checkedAt };
+/**
+ * A shared dataset from the refresher: it says which version is current (checking tarkov.dev first if
+ * its copy is over an hour old), and the body is read from the shared store under that version. Null
+ * when there is no refresher, it can't be reached, or it has no copy: the caller then asks tarkov.dev
+ * itself. While the refresher's checks fail, rejects like a failed request, so this instance backs off.
+ */
+async function readFromRefresher(gameMode: GameMode, resource: Resource, entry: ResourceCacheEntry): Promise<Refreshed | null> {
+  const service = refresher(gameMode);
+  if (!service) return null;
+  const held = entry.value ? (entry.etag ?? entry.lastModified ?? null) : null;
+  const ask = async (missing?: boolean) => {
+    try {
+      return await service.dataset(gameMode, resource, held, missing);
+    } catch (error) {
+      console.warn(`The refresher couldn't be reached for ${gameMode}/${resource}; asking tarkov.dev.`, error instanceof Error ? error.message : error);
+      return null;
+    }
+  };
+  let answer = await ask();
+  if (!answer?.version) return null;
+  const sameCopy = (version: string | null) => entry.value !== undefined && version === held;
+  if (answer.stale && sameCopy(answer.version)) {
+    throw new TarkovUpstreamError(`Tarkov.dev is unavailable; the refresher couldn't check ${resource}.`);
   }
-  const body = await cache.get(`${key}:body:${version}`);
-  if (!isRecord(body) || !("data" in body) || !validateResourceData(resource, body.data)) return null;
+  const confirmed = (checkedAt: number) => Math.min(checkedAt, Date.now());
+  if (sameCopy(answer.version)) return { value: entry.value!, etag: entry.etag, lastModified: entry.lastModified, checkedAt: confirmed(answer.checkedAt) };
+  let body = await readSharedBody(gameMode, resource, answer.version);
+  if (!body) {
+    // Expired, or not visible here yet: the refresher writes it again (once), and it's read again.
+    answer = await ask(true);
+    if (!answer?.version) return null;
+    if (sameCopy(answer.version)) return { value: entry.value!, etag: entry.etag, lastModified: entry.lastModified, checkedAt: confirmed(answer.checkedAt) };
+    body = await readSharedBody(gameMode, resource, answer.version);
+    if (!body) return null;
+  }
   return {
-    value: body as unknown as UpstreamEnvelope<unknown>,
-    etag: meta.etag,
-    lastModified: meta.lastModified,
-    checkedAt,
+    value: body,
+    etag: answer.etag ?? undefined,
+    lastModified: answer.lastModified ?? undefined,
+    checkedAt: confirmed(answer.checkedAt),
   };
 }
 
-function readSharedMeta(value: unknown): SharedMeta | null {
-  if (!isRecord(value) || typeof value.checkedAt !== "number" || !Number.isFinite(value.checkedAt)) return null;
-  const etag = typeof value.etag === "string" ? value.etag : undefined;
-  const lastModified = typeof value.lastModified === "string" ? value.lastModified : undefined;
-  return etag || lastModified ? { etag, lastModified, checkedAt: value.checkedAt } : null;
+function sharedKey(gameMode: GameMode, resource: Resource) {
+  return `tarkov:${SHARED_KEY_VERSION}:${gameMode}/${resource}`;
 }
 
-// Share only versioned bodies; update metadata separately to avoid rewriting unchanged data.
-async function writeShared(key: string, refreshed: Refreshed, policy: ResourcePolicy, withBody: boolean) {
-  const version = refreshed.etag ?? refreshed.lastModified;
-  if (!version) return;
-  const cache = regionalCache();
-  if (withBody) await cache.set(`${key}:body:${version}`, refreshed.value, SHARED_BODY_TTL_SECONDS);
-  const meta: SharedMeta = { etag: refreshed.etag, lastModified: refreshed.lastModified, checkedAt: refreshed.checkedAt };
-  await cache.set(`${key}:meta`, meta, Math.ceil(policy.revalidateMs / 1000));
+async function readSharedBody(gameMode: GameMode, resource: Resource, version: string): Promise<UpstreamEnvelope<unknown> | null> {
+  const body = await regionalCache().get(`${sharedKey(gameMode, resource)}:body:${version}`);
+  return isRecord(body) && "data" in body && validateResourceData(resource, body.data) ? (body as unknown as UpstreamEnvelope<unknown>) : null;
 }
 
 // Shared like the resource cache, so the limit holds per instance, not per bundled copy of this module.
@@ -2740,13 +2752,15 @@ function indexRelation<T>(
 }
 
 type Fetched =
-  | { notModified: true }
+  | { notModified: true; date: number | null }
   | {
       notModified: false;
       value: UpstreamEnvelope<unknown>;
       etag?: string;
       lastModified?: string;
       chars: number;
+      /** tarkov.dev's clock (the Date header), for the refresher's schedule. */
+      date: number | null;
     };
 
 async function fetchResource(
@@ -2774,7 +2788,7 @@ async function fetchResource(
     if (response.status === 304 && conditional) {
       // Not awaited: a cancel can wait on a reader that never comes.
       void response.body?.cancel().catch(() => undefined);
-      return { notModified: true };
+      return { notModified: true, date: httpDate(response.headers.get("date")) };
     }
     if (!response.ok) {
       void response.body?.cancel().catch(() => undefined);
@@ -2798,6 +2812,7 @@ async function fetchResource(
       etag: response.headers.get("etag") ?? undefined,
       lastModified: response.headers.get("last-modified") ?? undefined,
       chars,
+      date: httpDate(response.headers.get("date")),
     };
   } catch (error) {
     // Checked first: a timeout while reading the body surfaces as unreadable JSON.
@@ -2813,6 +2828,11 @@ async function fetchResource(
   } finally {
     clearTimeout(timeout);
   }
+}
+
+function httpDate(value: string | null): number | null {
+  const time = value ? Date.parse(value) : Number.NaN;
+  return Number.isFinite(time) ? time : null;
 }
 
 function parseRetryAfter(value: string | null): number | undefined {
@@ -4208,10 +4228,13 @@ async function getPriceFeed(gameMode: GameMode): Promise<PriceFeedWire> {
   const copy = operationContext.getStore()?.used.get(key);
   const current = entry.value === envelope;
   const rows = memo(`${gameMode}/price-rows`, [envelope], () => projectPriceRows(Object.values(envelope.data.items ?? {})));
+  const fetchedAt = copy?.fetchedAt ?? entry.fetchedAt;
   return {
     format: PRICE_FEED_FORMAT,
     gameMode,
-    fetchedAt: copy?.fetchedAt ?? entry.fetchedAt,
+    version: priceVersionOf(current ? entry.lastModified : null, fetchedAt),
+    nextCheckAt: null,
+    fetchedAt,
     source: copy?.source ?? entry.source ?? "tarkov.dev",
     stale: (copy?.stale ?? false) || entry.failedAt !== undefined,
     etag: (current && entry.etag) || null,
@@ -4228,58 +4251,68 @@ function isoTime(value: string | null | undefined) {
 }
 
 
-/**
- * The cron's half of the price feed (see src/server.ts): asks tarkov.dev for the mode's items file
- * with the validators of the last published feed. A new file is projected to price rows and
- * published; an unchanged one republishes the same rows with the time it was confirmed. The items
- * file is read and dropped, never kept in this isolate's cache.
- */
-export async function publishPriceFeedFromUpstream(gameMode: GameMode): Promise<"published" | "confirmed"> {
-  const previous = await readPublishedFeedWire(gameMode);
-  const validators = previous ? { etag: previous.etag ?? undefined, lastModified: previous.lastModified ?? undefined } : undefined;
-  const fetched = await fetchWithRetries(gameMode, "items", UPSTREAM_ATTEMPTS, validators?.etag || validators?.lastModified ? validators : undefined);
-  const header = { format: PRICE_FEED_FORMAT, gameMode, fetchedAt: Date.now(), source: "tarkov.dev" as const, stale: false };
-  if (fetched.notModified) {
-    await publishPriceFeed(gameMode, JSON.stringify({ data: { ...previous!, ...header } }));
-    return "confirmed";
-  }
-  const envelope = fetched.value as UpstreamEnvelope<ItemsData>;
-  const wire: PriceFeedWire = {
-    ...header,
-    etag: fetched.etag ?? null,
-    lastModified: fetched.lastModified ?? null,
-    ...projectPriceRows(Object.values(envelope.data.items ?? {})),
-  };
-  await publishPriceFeed(gameMode, JSON.stringify({ data: wire }));
-  return "published";
+/** Validators for a conditional request: the ETag and Last-Modified of the copy held. */
+export interface Validators {
+  etag?: string;
+  lastModified?: string;
 }
 
-/** Datasets kept in the shared cache, which the cron keeps fresh for every isolate. */
-export const SHARED_RESOURCES = (Object.keys(RESOURCE_POLICIES) as Resource[]).filter((resource) => RESOURCE_POLICIES[resource].shared);
+export type PriceRowsCheck =
+  | { notModified: true; date: number | null }
+  | { notModified: false; date: number | null; etag: string | null; lastModified: string | null; rows: PriceFeedRows };
 
 /**
- * The cron's half of the shared cache: when the shared copy of a dataset is older than its freshness,
- * revalidates it with tarkov.dev using the shared copy's validators. A 304 only renews the record;
- * a new copy is validated and written. Never touches this isolate's resource cache.
+ * The refresher's price check (data-refresh-do.ts): asks tarkov.dev for the mode's items file with
+ * the validators of the feed it holds. A new file is projected to price rows and dropped; the items
+ * file is never kept.
  */
-export async function refreshSharedDataset(gameMode: GameMode, resource: Resource): Promise<"fresh" | "confirmed" | "updated"> {
-  const policy = RESOURCE_POLICIES[resource];
-  const key = `tarkov:${SHARED_KEY_VERSION}:${gameMode}/${resource}`;
-  const cache = regionalCache();
-  const meta = readSharedMeta(await cache.get(`${key}:meta`));
-  const now = Date.now();
-  if (meta && now - meta.checkedAt < policy.freshMs) return "fresh";
-  const fetched = await fetchWithRetries(gameMode, resource, UPSTREAM_ATTEMPTS, meta ?? undefined);
-  const checkedAt = Date.now();
-  if (fetched.notModified) {
-    await writeShared(key, { value: { data: null }, etag: meta!.etag, lastModified: meta!.lastModified, checkedAt }, policy, false);
-    return "confirmed";
-  }
-  await writeShared(
-    key,
-    { value: fetched.value, etag: fetched.etag, lastModified: fetched.lastModified, checkedAt },
-    policy,
-    fetched.chars <= cache.maxChars
-  );
-  return "updated";
+export async function fetchPriceRows(gameMode: GameMode, validators?: Validators): Promise<PriceRowsCheck> {
+  const conditional = validators?.etag || validators?.lastModified ? validators : undefined;
+  const fetched = await fetchWithRetries(gameMode, "items", UPSTREAM_ATTEMPTS, conditional);
+  if (fetched.notModified) return { notModified: true, date: fetched.date };
+  const envelope = fetched.value as UpstreamEnvelope<ItemsData>;
+  return {
+    notModified: false,
+    date: fetched.date,
+    etag: fetched.etag ?? null,
+    lastModified: fetched.lastModified ?? null,
+    rows: projectPriceRows(Object.values(envelope.data.items ?? {})),
+  };
+}
+
+/** Datasets kept in the shared store, which the refresher keeps fresh for every instance. */
+export const SHARED_RESOURCES = (Object.keys(RESOURCE_POLICIES) as Resource[]).filter((resource) => RESOURCE_POLICIES[resource].shared);
+export type SharedResource = (typeof SHARED_RESOURCES)[number];
+
+export function isSharedResource(value: unknown): value is SharedResource {
+  return typeof value === "string" && (SHARED_RESOURCES as string[]).includes(value);
+}
+
+/** How often the refresher checks a shared dataset with tarkov.dev, at most, while it is asked for. */
+export const SHARED_REFRESH_MS = RESOURCE_POLICIES.maps.freshMs;
+
+export type SharedDatasetCheck =
+  | { notModified: true; date: number | null }
+  | { notModified: false; date: number | null; etag: string | null; lastModified: string | null; version: string };
+
+/**
+ * The refresher's dataset check: asks tarkov.dev for the dataset with the validators of the shared
+ * copy. A new copy is validated and written to the shared store under its version; a 304 writes
+ * nothing.
+ */
+export async function fetchSharedDataset(
+  gameMode: GameMode,
+  resource: SharedResource,
+  validators: Validators | undefined,
+  store: Pick<SharedStore, "put">
+): Promise<SharedDatasetCheck> {
+  const conditional = validators?.etag || validators?.lastModified ? validators : undefined;
+  const fetched = await fetchWithRetries(gameMode, resource, UPSTREAM_ATTEMPTS, conditional);
+  if (fetched.notModified) return { notModified: true, date: fetched.date };
+  const version = fetched.etag ?? fetched.lastModified;
+  if (!version) throw new TarkovUpstreamError(`Tarkov.dev sent ${resource} without an ETag or Last-Modified.`, undefined, undefined, true);
+  const text = JSON.stringify(fetched.value);
+  if (text.length > SHARED_MAX_CHARS) throw new TarkovUpstreamError(`${resource} is too large for the shared store.`, undefined, undefined, true);
+  await store.put(`${sharedKey(gameMode, resource)}:body:${version}`, text, { expirationTtl: SHARED_BODY_TTL_SECONDS });
+  return { notModified: false, date: fetched.date, etag: fetched.etag ?? null, lastModified: fetched.lastModified ?? null, version };
 }

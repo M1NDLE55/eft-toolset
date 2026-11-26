@@ -3,6 +3,7 @@ import { UserDO } from "@/app/lib/durable/user-do";
 import { PlanDO } from "@/app/lib/durable/plan-do";
 import { LinkDO } from "@/app/lib/durable/link-do";
 import { ModerationDO } from "@/app/lib/durable/moderation-do";
+import { DataRefreshDO } from "@/app/lib/durable/data-refresh-do";
 import type { DurableBindings } from "@/app/lib/durable/access";
 
 /**
@@ -153,6 +154,11 @@ class Namespace<T extends object> {
   state(name: string) {
     return this.objects.get(name)?.state;
   }
+  /** Builds the object again over the same storage and sockets, as the runtime does after evicting it. */
+  restart(name: string) {
+    const entry = this.objects.get(name);
+    if (entry) entry.object = new this.ctor(entry.state as unknown as DurableObjectState, this.env() as never);
+  }
   raw(name: string) {
     this.getByName(name);
     return this.objects.get(name)!.object;
@@ -166,18 +172,32 @@ export function durableEnv() {
   const PLAN = new Namespace(PlanDO as unknown as Ctor<PlanDO>, get);
   const LINK = new Namespace(LinkDO as unknown as Ctor<LinkDO>, get);
   const MODERATION = new Namespace(ModerationDO as unknown as Ctor<ModerationDO>, get);
-  Object.assign(env, { USER, PLAN, LINK, MODERATION });
+  const DATA_REFRESH = new Namespace(DataRefreshDO as unknown as Ctor<DataRefreshDO>, get);
+  /** The TARKOV_DATA KV namespace, in memory, with every put recorded. */
+  const kv = { values: new Map<string, string>(), puts: [] as string[] };
+  const TARKOV_DATA = {
+    async get(key: string) {
+      return kv.values.get(key) ?? null;
+    },
+    async put(key: string, value: string) {
+      kv.puts.push(key);
+      kv.values.set(key, value);
+    },
+  };
+  Object.assign(env, { USER, PLAN, LINK, MODERATION, DATA_REFRESH, TARKOV_DATA });
   return {
     env: env as unknown as DurableBindings,
     USER,
     PLAN,
     LINK,
     MODERATION,
+    DATA_REFRESH,
+    kv,
     /** Runs every due alarm until none are left (or a round limit). */
     async runAlarms(now = Date.now()) {
       for (let round = 0; round < 10; round += 1) {
         let ran = false;
-        for (const namespace of [USER, PLAN, LINK, MODERATION] as Namespace<object>[]) {
+        for (const namespace of [USER, PLAN, LINK, MODERATION, DATA_REFRESH] as Namespace<object>[]) {
           for (const { object, state } of namespace.objects.values()) {
             if (state.alarm !== null && state.alarm <= now && "alarm" in object) {
               state.alarm = null;

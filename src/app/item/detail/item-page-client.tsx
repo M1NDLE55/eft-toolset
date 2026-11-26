@@ -23,12 +23,12 @@ export function ItemPageClient({
   wiki,
 }: {
   reference: ItemReference;
-  initial: { gameMode: GameMode; item: ComposedItem; renderedAt: number } | null;
+  initial: { gameMode: GameMode; item: ComposedItem; renderedAt: number; pricesVersion?: number } | null;
   /** The item's wiki page, the same in every game mode; null without one. */
   wiki: ItemWiki | null;
 }) {
   useState(() => {
-    if (initial && typeof window !== "undefined") primeItem(reference, initial.gameMode, initial.item, initial.renderedAt);
+    if (initial && typeof window !== "undefined") primeItem(reference, initial.gameMode, initial.item, initial.renderedAt, initial.pricesVersion);
     return null;
   });
   const query = useItem(reference);

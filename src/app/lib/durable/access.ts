@@ -2,6 +2,7 @@ import type { LinkDO } from "./link-do";
 import type { ModerationDO } from "./moderation-do";
 import type { PlanDO } from "./plan-do";
 import type { UserDO } from "./user-do";
+import type { DataRefreshDO } from "./data-refresh-do";
 
 /**
  * How the rest of the Worker reaches per-user, per-plan and per-link state. Users are named by
@@ -15,6 +16,8 @@ export interface DurableBindings {
   PLAN: DurableObjectNamespace<PlanDO>;
   LINK: DurableObjectNamespace<LinkDO>;
   MODERATION: DurableObjectNamespace<ModerationDO>;
+  /** The refreshers, one per game mode (data-refresh-do.ts). */
+  DATA_REFRESH: DurableObjectNamespace<DataRefreshDO>;
 }
 
 /** The report queue: one object for the whole site. */

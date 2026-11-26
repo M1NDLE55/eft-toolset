@@ -9,13 +9,13 @@ import {
   parsePriceFeed,
   PRICE_FEED_FORMAT,
   priceFeedOrigin,
-  priceFeedStoreKey,
   priceFeedUrl,
-  SHARED_STORE_FEED_ORIGIN,
+  REFRESHER_FEED_ORIGIN,
   projectPriceRows,
   type PricedItem,
 } from "@/app/lib/api/price-feed";
 import { resetRequestBudgets } from "@/app/lib/api/rate-limit";
+import { priceFeedStoreKey, type DataRefresher, type PricesAnswer } from "@/app/lib/api/refresher";
 import { setPlatform, type SharedStore } from "@/app/lib/server/platform";
 import {
   canReuseSnapshot,
@@ -54,6 +54,8 @@ function feedWire(items: Fixtures, overrides: Record<string, unknown> = {}) {
   return {
     format: PRICE_FEED_FORMAT,
     gameMode: "regular",
+    version: 2,
+    nextCheckAt: null,
     fetchedAt: Date.now() - feedAgeMs,
     source: "tarkov.dev",
     stale: feedStale,
@@ -115,6 +117,26 @@ function memoryStore(): SharedStore {
   };
 }
 const later = (ms: number) => vi.setSystemTime(Date.now() + ms);
+
+/** A refresher that answers as told and records the version each caller held. */
+function fakeRefresher() {
+  const fake = {
+    asked: [] as (number | null)[],
+    answer: { version: 2 } as Partial<PricesAnswer> | Error,
+    service: {
+      prices: async (_gameMode: string, have: number | null): Promise<PricesAnswer> => {
+        fake.asked.push(have);
+        await new Promise((resolve) => setTimeout(resolve, 1));
+        if (fake.answer instanceof Error) throw fake.answer;
+        return { version: 2, confirmedAt: Date.now(), nextCheckAt: Date.now() + 10 * 60_000, stale: false, ...fake.answer };
+      },
+      dataset: async () => {
+        throw new Error("not used");
+      },
+    } satisfies DataRefresher,
+  };
+  return fake;
+}
 
 beforeEach(() => {
   clearTarkovResourceCache();
@@ -257,17 +279,47 @@ describe("prices from the feed", () => {
     expect((await read(rifle)).price!.ageMs).toBeLessThan(35_000);
   });
 
-  it("past two minutes, wait only staleWaitMs for the feed, then take the copy marked stale", async () => {
+  it("however long the copy has been due, serve it at once and never wait for the refresh", async () => {
     await oldSnapshot();
     await read(rifle);
     vi.useFakeTimers({ toFake: ["Date"] });
-    later(3 * 60_000);
+    later(3 * HOUR);
     hangFeed();
-    const result = await read(rifle, { staleWaitMs: 50 });
-    expect(result.stale).toBe(true);
-    expect(result.price).toMatchObject({ source: "feed", stale: true });
+    const started = performance.now();
+    const result = await read(rifle);
+    expect(performance.now() - started).toBeLessThan(1_000);
+    expect(result.stale).toBe(false);
+    expect(result.price).toMatchObject({ source: "feed", stale: false });
+    expect(result.price!.ageMs).toBeGreaterThanOrEqual(3 * HOUR);
     expect(result.data.sellFor.at(-1)?.priceRUB).toBe(50_000);
+    expect(feedRequests()).toHaveLength(2);
     expect(upstreamRequests("items")).toHaveLength(0);
+    await vi.waitFor(() => expect(hanging).toHaveLength(1));
+  });
+
+  it("wait a few seconds at most for a newer version a page asks for, then take the copy marked stale", async () => {
+    await oldSnapshot();
+    await read(rifle);
+    hangFeed();
+    const result = await read(rifle, { minPricesVersion: { gameMode: "regular", version: 3 }, staleWaitMs: 50 });
+    expect(result.stale).toBe(true);
+    expect(result.price).toMatchObject({ source: "feed", version: 2 });
+    expect(feedRequests()).toHaveLength(2);
+    await vi.waitFor(() => expect(hanging).toHaveLength(1));
+  });
+
+  it("refresh for a newer version a page asks for, and use it", async () => {
+    await oldSnapshot();
+    await read(rifle);
+    feedResponse = () => Response.json({ data: feedWire(withOldPrices(feedFixtures).items, { version: 3, etag: '"items-3"' }) });
+    const result = await read(rifle, { minPricesVersion: { gameMode: "regular", version: 3 } });
+    expect(result.stale).toBe(false);
+    expect(result.price).toMatchObject({ source: "feed", version: 3 });
+    expect(result.data.sellFor.at(-1)?.priceRUB).toBe(25_000);
+    // A version newer than any the origin has doesn't make every read ask again.
+    await read(rifle, { minPricesVersion: { gameMode: "regular", version: 99 }, staleWaitMs: 50 });
+    await read(rifle, { minPricesVersion: { gameMode: "regular", version: 99 }, staleWaitMs: 50 });
+    expect(feedRequests()).toHaveLength(2);
   });
 
   it("on a cold instance with a slow feed, use the static copy's own prices, marked stale", async () => {
@@ -306,6 +358,37 @@ describe("prices from the feed", () => {
   });
 });
 
+describe("the API and live pages", () => {
+  const detail = (p?: number) =>
+    GET(
+      new Request(
+        `http://localhost/api/tarkov?op=item.detail&v=${encodeURIComponent('{"gameMode":"regular","name":"Test Rifle"}')}${p ? `&p=${p}` : ""}`,
+        { headers: { "CF-Connecting-IP": "198.51.100.9" } }
+      )
+    );
+
+  it("say which price version a response came from", async () => {
+    await oldSnapshot();
+    const response = await detail();
+    expect(((await response.json()) as { pricesVersion: number }).pricesVersion).toBe(2);
+  });
+
+  it("take at least the version a page asks for, and cache a response that couldn't get it only briefly", async () => {
+    await oldSnapshot();
+    await detail();
+    feedResponse = () => Response.json({ data: feedWire(feedFixtures.items, { version: 3, etag: '"items-3"' }) });
+    const current = await detail(3);
+    expect(((await current.json()) as { pricesVersion: number }).pricesVersion).toBe(3);
+    expect(current.headers.get("cache-control")).toMatch(/s-maxage=300/);
+
+    // A version the origin doesn't have (asked for again within seconds, so not asked at all).
+    const behind = await detail(9);
+    expect(((await behind.json()) as { pricesVersion: number }).pricesVersion).toBe(3);
+    expect(behind.headers.get("cache-control")).toMatch(/s-maxage=30\b/);
+    expect(feedRequests()).toHaveLength(2);
+  });
+});
+
 describe("when the feed fails", () => {
   it("when the static copy is past the read's stale limit, use the feed's last prices rather than wait on the items file", async () => {
     await oldSnapshot();
@@ -314,6 +397,9 @@ describe("when the feed fails", () => {
     upstreamDown = true;
     later(2 * 60_000 + 1);
     vi.useFakeTimers({ toFake: ["Date"] });
+    // The due copy is served at once while the refresh fails in the background.
+    await read(rifle);
+    await settleTarkovRefreshes();
     // The first read refreshed every other dataset; only the static items copy is past a page render's six hours.
     const result = await read(() => getGroupItems("regular", ["Test Rifle"]).then(([item]) => item), { maxStaleMs: 6 * HOUR });
     expect(result.data.sellFor.at(-1)?.priceRUB).toBe(50_000);
@@ -372,6 +458,8 @@ describe("when the feed fails", () => {
     later(3 * 60_000);
     feedResponse = () => new Response("bad gateway", { status: 502 });
     upstreamDown = true;
+    await read(rifle);
+    await settleTarkovRefreshes();
     const result = await read(rifle);
     // The feed copy is 3.5 minutes old, the snapshot 26 hours: the feed's prices, marked stale.
     expect(result.data.sellFor.at(-1)?.priceRUB).toBe(50_000);
@@ -496,7 +584,10 @@ describe("parsePriceFeed", () => {
   });
 
   it.each([
-    ["another format", (feed: any) => (feed.format = 2)],
+    ["another format", (feed: any) => (feed.format = PRICE_FEED_FORMAT + 1)],
+    ["no version", (feed: any) => delete feed.version],
+    ["a version that isn't a whole number", (feed: any) => (feed.version = 1.5)],
+    ["a prediction that isn't a time", (feed: any) => (feed.nextCheckAt = "soon")],
     ["another game mode", (feed: any) => (feed.gameMode = "pve")],
     ["no fetchedAt", (feed: any) => delete feed.fetchedAt],
     ["an unknown source", (feed: any) => (feed.source = "elsewhere")],
@@ -515,32 +606,60 @@ describe("parsePriceFeed", () => {
 });
 
 describe("priceFeedOrigin", () => {
-  it("is the shared store in the Worker, PRICE_FEED_ORIGIN locally, and off otherwise", () => {
+  it("is the refresher in the Worker, PRICE_FEED_ORIGIN locally, and off otherwise", () => {
     expect(priceFeedOrigin()).toBe(FEED_ORIGIN);
     vi.stubEnv("PRICE_FEED_ORIGIN", "");
     expect(priceFeedOrigin()).toBeNull();
     vi.stubEnv("PRICE_FEED_ORIGIN", "not a url");
     expect(priceFeedOrigin()).toBeNull();
-    setPlatform({ sharedStore: memoryStore() });
-    expect(priceFeedOrigin()).toBe(SHARED_STORE_FEED_ORIGIN);
+    setPlatform({ refresher: () => fakeRefresher().service });
+    expect(priceFeedOrigin()).toBe(REFRESHER_FEED_ORIGIN);
   });
 
-  it("reads the feed the cron publishes to the shared store, without a request", async () => {
+  it("starts a cold instance from the feed in KV, and asks the refresher only once its prediction is due", async () => {
     await oldSnapshot();
     const store = memoryStore();
-    setPlatform({ sharedStore: store });
-    await store.put(priceFeedStoreKey("regular"), JSON.stringify({ data: feedWire(feedFixtures.items) }));
+    const refresher = fakeRefresher();
+    setPlatform({ sharedStore: store, refresher: () => refresher.service });
+    const nextCheckAt = Date.now() + 5 * 60_000;
+    await store.put(priceFeedStoreKey("regular", PRICE_FEED_FORMAT), JSON.stringify({ data: feedWire(feedFixtures.items, { nextCheckAt }) }));
     const result = await read(rifle);
+    expect(result.price).toMatchObject({ source: "feed", version: 2 });
+    await read(rifle);
+    expect(refresher.asked).toEqual([]);
     expect(feedRequests()).toHaveLength(0);
-    expect(result.price).toMatchObject({ source: "feed" });
+
+    vi.useFakeTimers({ toFake: ["Date"] });
+    later(5 * 60_000);
+    await Promise.all([read(rifle), read(rifle), read(rifle)]);
+    await settleTarkovRefreshes();
+    // One ask for every read, with the version held, so no body comes back.
+    expect(refresher.asked).toEqual([2]);
+    await read(rifle);
+    expect(refresher.asked).toEqual([2]);
   });
 
-  it("uses the items file while nothing is published yet", async () => {
-    setPlatform({ sharedStore: memoryStore() });
+  it("takes a new version from the refresher, with its confirmation time and prediction", async () => {
+    await oldSnapshot();
+    const refresher = fakeRefresher();
+    setPlatform({ sharedStore: memoryStore(), refresher: () => refresher.service });
+    refresher.answer = { version: 5, body: JSON.stringify({ data: feedWire(feedFixtures.items, { version: 5 }) }) };
+    const first = await read(rifle);
+    expect(first.price).toMatchObject({ source: "feed", version: 5, stale: false });
+    expect(first.price!.ageMs).toBeLessThan(1_000);
+    expect(refresher.asked).toEqual([null]);
+  });
+
+  it("uses the items file while the refresher has nothing yet, or can't be reached", async () => {
+    const refresher = fakeRefresher();
+    setPlatform({ sharedStore: memoryStore(), refresher: () => refresher.service });
+    refresher.answer = { version: null };
     const result = await read(rifle);
-    expect(feedRequests()).toHaveLength(0);
     expect(result.data.sellFor.at(-1)?.priceRUB).toBe(50_000);
     expect(result.price).toMatchObject({ source: "items-file" });
+    clearTarkovResourceCache();
+    refresher.answer = new Error("unreachable");
+    expect((await read(rifle)).price).toMatchObject({ source: "items-file" });
   });
 
   it("leaves reads exactly as before when off", async () => {

@@ -84,7 +84,7 @@ export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
   maxAge: DAY,
   persist: true,
   validate: isCachedItems,
-  fetch: async ({ names, gameMode }, signal) => {
+  fetch: async ({ names, gameMode }, signal, prices) => {
     const uniqueNames = Array.from(new Set(names.filter(Boolean))).sort();
     if (uniqueNames.length === 0) return [];
     if (uniqueNames.length > MAX_GROUP_ITEMS) {
@@ -98,7 +98,7 @@ export const groupItemsQuery: QueryDefinition<GroupVariables, CachedItem[]> = {
           apiFetch<CachedItem[]>(
             TARKOV_OPERATIONS.groupItems,
             { names: batch, gameMode },
-            { signal }
+            { signal, prices }
           )
         )
       );
@@ -115,11 +115,11 @@ export const itemDetailQuery: QueryDefinition<DetailVariables, ComposedItem | nu
   maxAge: DAY,
   persist: true,
   validate: (value): value is ComposedItem | null => value === null || isComposedItem(value),
-  fetch: async ({ gameMode, name, slug }, signal) =>
+  fetch: async ({ gameMode, name, slug }, signal, prices) =>
     apiFetch<ComposedItem | null>(
       TARKOV_OPERATIONS.itemDetail,
       slug ? { gameMode, slug } : { gameMode, name },
-      { signal }
+      { signal, prices }
     ),
 };
 
@@ -130,8 +130,8 @@ export const marketBoardQuery: QueryDefinition<ModeVariables, MarketBoard> = {
   maxAge: DAY,
   persist: true,
   validate: isMarketBoard,
-  fetch: async ({ gameMode }, signal) =>
-    apiFetch<MarketBoard>(TARKOV_OPERATIONS.marketBoard, { gameMode }, { signal }),
+  fetch: async ({ gameMode }, signal, prices) =>
+    apiFetch<MarketBoard>(TARKOV_OPERATIONS.marketBoard, { gameMode }, { signal, prices }),
 };
 
 function isMarketBoard(value: unknown): value is MarketBoard {

@@ -42,6 +42,25 @@ describe("Tarkov query route", () => {
     expect(invalid.headers.get("cache-control")).toBe("no-store");
   });
 
+  it("accepts one price version p, a positive whole number, and nothing else beside op and v", async () => {
+    const get = (query: string) =>
+      GET(new Request(`http://localhost/api/tarkov?${query}`, { headers: { "CF-Connecting-IP": "198.51.100.8" } }));
+    const v = encodeURIComponent('{"gameMode":"regular","name":"x"}');
+    for (const p of ["0", "-1", "1.5", "abc", "1".repeat(17), ""]) expect((await get(`op=item.detail&v=${v}&p=${p}`)).status).toBe(400);
+    expect((await get(`op=item.detail&v=${v}&p=1&p=2`)).status).toBe(400);
+    expect((await get(`op=item.detail&v=${v}&p=1&extra=1`)).status).toBe(400);
+    const post = (p: unknown) =>
+      POST(
+        new Request("http://localhost/api/tarkov", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "CF-Connecting-IP": "198.51.100.8" },
+          body: JSON.stringify({ operation: "item.group", variables: { gameMode: "regular", names: [] }, p }),
+        })
+      );
+    expect((await post("5")).status).toBe(400);
+    expect((await post(0)).status).toBe(400);
+  });
+
   it("enforces the body limit even without a content-length header", async () => {
     const response = await POST(
       new Request("http://localhost/api/tarkov", {

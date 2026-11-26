@@ -27,7 +27,7 @@
   },
   "kv_namespaces": [
     {
-      // Shared tarkov.dev copies and the price feed, written by the cron and by isolates.
+      // Shared tarkov.dev copies and the price feed, written by the refresher (DATA_REFRESH).
       "binding": "TARKOV_DATA",
       "id": "483768ea683c4c3cbb451c2cc0e778ea"
     }
@@ -39,7 +39,10 @@
       { "name": "LINK", "class_name": "LinkDO" },
       { "name": "MODERATION", "class_name": "ModerationDO" },
       // One instance: the rotating keys behind the anonymous usage ids (src/app/lib/usage/salt-store.ts).
-      { "name": "USAGE_SALT", "class_name": "UsageSaltDO" }
+      { "name": "USAGE_SALT", "class_name": "UsageSaltDO" },
+      // One per game mode: the only caller of tarkov.dev for prices and the shared datasets, and the
+      // live price push (src/app/lib/durable/data-refresh-do.ts).
+      { "name": "DATA_REFRESH", "class_name": "DataRefreshDO" }
     ]
   },
   "migrations": [
@@ -47,7 +50,9 @@
     // Sharing: link-code routes and the report queue.
     { "tag": "v2", "new_sqlite_classes": ["LinkDO", "ModerationDO"] },
     // Usage stats: the rotating salt behind the anonymous usage ids.
-    { "tag": "usage-v1", "new_sqlite_classes": ["UsageSaltDO"] }
+    { "tag": "usage-v1", "new_sqlite_classes": ["UsageSaltDO"] },
+    // On-demand tarkov.dev refreshes and the live price push.
+    { "tag": "refresh-v1", "new_sqlite_classes": ["DataRefreshDO"] }
   ],
   "ratelimits": [
     {
@@ -75,7 +80,7 @@
       "simple": { "limit": 30, "period": 60 }
     },
     {
-      // Live WebSocket connects (plans and the library change feed), per client IP.
+      // Live WebSocket connects (plans, the library change feed and live prices), per client IP.
       "name": "SOCKET_IP_LIMITER",
       "namespace_id": "1005",
       "simple": { "limit": 30, "period": 60 }
@@ -96,10 +101,6 @@
       "dataset": "eft_toolset_usage"
     }
   ],
-  "triggers": {
-    // Every minute: the price feed; the other datasets refresh when their freshness runs out.
-    "crons": ["* * * * *"]
-  },
   // Settings that aren't secret. Prerendered pages are built with them too, so set them here rather
   // than in the dashboard. Secrets (WORKOS_API_KEY, WORKOS_COOKIE_PASSWORD) are set with
   // `wrangler secret put`; see DEPLOYMENT.md.

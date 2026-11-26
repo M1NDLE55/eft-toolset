@@ -18,7 +18,7 @@ const FAQ = [
   {
     question: "How often do Tarkov flea market prices update?",
     answer:
-      "Prices come from tarkov.dev, which updates flea market prices every few minutes. EFT Toolset fetches fresh prices whenever its copy is more than five minutes old, so item pages track what players are listing at.",
+      "Prices come from tarkov.dev, which updates flea market prices about every ten minutes. EFT Toolset fetches them as soon as tarkov.dev publishes, and open pages update by themselves, so item pages track what players are listing at.",
   },
   {
     question: "What is the best price to sell an item for?",

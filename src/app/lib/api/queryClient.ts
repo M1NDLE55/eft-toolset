@@ -7,6 +7,7 @@ import {
   cacheSet,
 } from "@/app/lib/cache/store";
 import { canonicalJson } from "./operations";
+import type { PriceVersions } from "./transport";
 
 export interface QueryDefinition<Variables, Data> {
   id: string;
@@ -14,7 +15,8 @@ export interface QueryDefinition<Variables, Data> {
   staleTime: number;
   maxAge: number;
   persist?: boolean;
-  fetch: (variables: Variables, signal: AbortSignal) => Promise<Data>;
+  /** `prices`: pass to apiFetch, so a query with prices asks for and records the price version (live-prices.ts). */
+  fetch: (variables: Variables, signal: AbortSignal, prices: PriceVersions) => Promise<Data>;
   validate?: (value: unknown) => value is Data;
 }
 
@@ -25,6 +27,8 @@ export interface QuerySnapshot<Data> {
   isFetching: boolean;
   updatedAt?: number;
   stale: boolean;
+  /** The price version the data came from, for data with prices. */
+  pricesVersion?: number;
 }
 
 interface CacheEnvelope<Data> {
@@ -32,6 +36,7 @@ interface CacheEnvelope<Data> {
   updatedAt: number;
   expiresAt?: number;
   data: Data;
+  pricesVersion?: number;
 }
 
 interface InFlight<Data> {
@@ -85,7 +90,8 @@ export function subscribeQuery(key: string, listener: () => void) {
 export async function ensureQuery<Variables, Data>(
   definition: QueryDefinition<Variables, Data>,
   variables: Variables,
-  options: { force?: boolean } = {}
+  /** `minPricesVersion`: refetch for at least this price version (after the refresher's push). */
+  options: { force?: boolean; minPricesVersion?: number } = {}
 ): Promise<Data> {
   const key = queryKey(definition, variables);
   const requestedGeneration = generations.get(key) ?? 0;
@@ -103,6 +109,7 @@ export async function ensureQuery<Variables, Data>(
       isFetching: false,
       updatedAt: cached.updatedAt,
       stale: false,
+      pricesVersion: cached.pricesVersion,
     });
     return cached.data;
   }
@@ -114,19 +121,21 @@ export async function ensureQuery<Variables, Data>(
       isFetching: true,
       updatedAt: cached.updatedAt,
       stale: true,
+      pricesVersion: cached.pricesVersion,
     });
     void revalidate(definition, variables, key).catch(() => undefined);
     return cached.data;
   }
 
-  return revalidate(definition, variables, key);
+  return revalidate(definition, variables, key, options.minPricesVersion);
 }
 
 export function primeQuery<Variables, Data>(
   definition: QueryDefinition<Variables, Data>,
   variables: Variables,
   data: Data,
-  updatedAt = Date.now()
+  updatedAt = Date.now(),
+  pricesVersion?: number
 ) {
   const key = queryKey(definition, variables);
   const existing = memory.get(key);
@@ -136,13 +145,14 @@ export function primeQuery<Variables, Data>(
     updatedAt,
     expiresAt: updatedAt + definition.maxAge,
     data,
+    pricesVersion,
   };
   memory.set(key, entry);
   evictMemoryEntries();
   // Primed data is what the server rendered, which (from a cached page) can be older than staleTime.
   // Report it as the server did, not stale, so hydration matches; the first fetch after the page
   // mounts sees its age, marks it stale and refreshes it.
-  snapshots.set(key, { data, status: "success", isFetching: false, updatedAt, stale: false });
+  snapshots.set(key, { data, status: "success", isFetching: false, updatedAt, stale: false, pricesVersion });
   queueMicrotask(() => notify(key));
   if (definition.persist) void cacheSet(persistenceKey(key), entry).catch(() => undefined);
 }
@@ -200,7 +210,8 @@ async function hydrate<Variables, Data>(definition: QueryDefinition<Variables, D
 async function revalidate<Variables, Data>(
   definition: QueryDefinition<Variables, Data>,
   variables: Variables,
-  key: string
+  key: string,
+  minPricesVersion?: number
 ): Promise<Data> {
   const existing = inFlight.get(key) as InFlight<Data> | undefined;
   if (existing) return existing.promise;
@@ -214,12 +225,14 @@ async function revalidate<Variables, Data>(
     isFetching: true,
     updatedAt: previous?.updatedAt,
     stale: Boolean(previous),
+    pricesVersion: previous?.pricesVersion,
   });
 
   const controller = new AbortController();
+  const prices: PriceVersions = { min: minPricesVersion };
   let promise: Promise<Data>;
   promise = definition
-    .fetch(variables, controller.signal)
+    .fetch(variables, controller.signal, prices)
     .then((data) => {
       if (controller.signal.aborted || (generations.get(key) ?? 0) !== generation) {
         throw controller.signal.reason ?? new DOMException("Stale query result", "AbortError");
@@ -233,6 +246,7 @@ async function revalidate<Variables, Data>(
         updatedAt: Date.now(),
         expiresAt: Date.now() + definition.maxAge,
         data,
+        pricesVersion: prices.received,
       };
       memory.set(key, entry);
       evictMemoryEntries();
@@ -242,6 +256,7 @@ async function revalidate<Variables, Data>(
         isFetching: false,
         updatedAt: entry.updatedAt,
         stale: false,
+        pricesVersion: prices.received,
       });
 
       if (definition.persist) {
@@ -262,6 +277,7 @@ async function revalidate<Variables, Data>(
           isFetching: false,
           updatedAt: previous?.updatedAt,
           stale: Boolean(previous),
+          pricesVersion: previous?.pricesVersion,
         });
       }
       throw normalized;

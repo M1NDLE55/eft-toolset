@@ -1,4 +1,6 @@
 import type { DurableBindings } from "@/app/lib/durable/access";
+import type { DataRefresher } from "@/app/lib/api/refresher";
+import type { GameMode } from "@/components/game-mode/mode";
 
 /**
  * What the server code needs from where it runs. The Worker entry (src/server.ts) installs the
@@ -20,6 +22,11 @@ export interface Platform {
    * binding); true when it is within the limit. Absent elsewhere, where only in-memory limits apply.
    */
   limitClientIp?: (pool: IpPool, ip: string) => Promise<boolean>;
+  /**
+   * The refresher for a game mode (DataRefreshDO), the one caller of tarkov.dev for prices and the
+   * shared datasets; absent outside the Worker, where instances ask tarkov.dev themselves.
+   */
+  refresher?: (gameMode: GameMode) => DataRefresher;
   /** The Durable Object namespaces for accounts, plans, links and reports; absent outside the Worker. */
   durable?: DurableBindings;
   /** The request header that carries the client's real IP, set by the platform itself (never forgeable). */

@@ -44,7 +44,7 @@ The app uses tarkov.dev's JSON API through a server-side adapter that accepts on
 
 The MCP endpoint reuses the same adapter and the app's own gun-builder and raid-planner logic, so assistants and the app always agree.
 
-Built with [TanStack Start](https://tanstack.com/start) on [Cloudflare Workers](https://developers.cloudflare.com/workers/), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, Cloudflare's Agents SDK and the MCP TypeScript SDK, and Vitest. Pages are cached at the edge, per-user state lives in Durable Objects, and a cron keeps the shared tarkov.dev data in KV fresh. [`DEPLOYMENT.md`](DEPLOYMENT.md) covers the Cloudflare setup.
+Built with [TanStack Start](https://tanstack.com/start) on [Cloudflare Workers](https://developers.cloudflare.com/workers/), React 19 with the React Compiler, Tailwind CSS 4, Leaflet, Cloudflare's Agents SDK and the MCP TypeScript SDK, and Vitest. Pages are cached at the edge, per-user state lives in Durable Objects, and a Durable Object refreshes the shared tarkov.dev data on demand and pushes new prices to open pages. [`DEPLOYMENT.md`](DEPLOYMENT.md) covers the Cloudflare setup.
 
 ## Development
 
@@ -61,7 +61,8 @@ npm run dev
 | --- | --- |
 | `npm run dev` | Start the development server on http://localhost:3000, running the Worker in workerd with local bindings |
 | `npm run build` | Fetch the tarkov.dev snapshot, then build the client, the Worker and the prerendered pages into `dist/` |
-| `npx wrangler dev --config dist/server/wrangler.json` | Serve the production build locally (crons run with `curl "http://localhost:8787/cdn-cgi/local/scheduled?cron=*+*+*+*+*"`) |
+| `npx wrangler dev --config dist/server/wrangler.json` | Serve the production build locally |
+| `node scripts/refresh-sim.mjs` | After a build: watch the refresher against a stand-in tarkov.dev on a schedule you control, with sped-up clocks |
 | `npm run lint` | Run ESLint, including the React Compiler rules |
 | `npm run typecheck` | Generate the Worker's binding types and type-check everything |
 | `npm test` | Run the Vitest suite |

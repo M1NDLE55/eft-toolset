@@ -30,9 +30,11 @@ export function registerStatusTools(server: McpServer, context: ToolContext) {
         status: failing ? ("degraded" as const) : ("ok" as const),
         deploymentSnapshotAsOf: builtAt === null ? null : new Date(builtAt).toISOString(),
         freshnessTargets: {
-          prices: feedOn ? "about 2 minutes behind tarkov.dev, which updates every 5 minutes" : "5 minutes",
-          tasksAndMaps: "30 minutes",
-          catalog: "2 hours (changes with game patches)",
+          prices: feedOn
+            ? "about a minute behind tarkov.dev, which publishes about every 10 minutes; checked only when it is due to publish and the site is in use"
+            : "5 minutes",
+          tasksAndMaps: "1 hour",
+          catalog: "1 hour (changes with game patches)",
         },
         // With the price feed on, items is only read for what changes with patches, so it isn't refreshed on a timer.
         datasets: datasets.map((dataset) => ({ ...dataset })),

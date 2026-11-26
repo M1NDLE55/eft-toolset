@@ -194,8 +194,11 @@ function toolResult(payload: Record<string, unknown>): CallToolResult {
   return { content: [{ type: "text", text: JSON.stringify(payload) }], structuredContent: payload };
 }
 
-/** Prices newer than this, from a copy whose refresh didn't fail, count as live: tarkov.dev rebuilds them every 5 minutes. */
-const LIVE_PRICE_AGE_MS = 5 * 60_000;
+/**
+ * Prices confirmed within this, by a check that didn't fail, count as live: tarkov.dev publishes about
+ * every 10 minutes, and the refresher confirms them about a minute after each (refresh-schedule.ts).
+ */
+const LIVE_PRICE_AGE_MS = 12 * 60_000;
 
 /** Where a result's prices came from: live, a cached copy, or the copy bundled with the server, and how old they are. */
 function priceSource({ source, ageMs, stale }: PriceSourceInfo) {
