@@ -527,6 +527,27 @@ describe("the daily summary", () => {
     expect(bad.status).toBe(400);
   });
 
+  it("lists old-version reloads by kind but doesn't count them as errors visitors saw", async () => {
+    vi.stubEnv("STATS_READ_TOKEN", TOKEN);
+    const date = new Date(Date.now() - DAY).toISOString().slice(0, 10);
+    sqlRows = (query) => {
+      if (query.includes("blob16 AS kind")) return [{ kind: "stale_build", n: "3" }, { kind: "chunk_load", n: "2" }];
+      // The day's page.error rows: five in all, two of them seen (the rest reloaded by themselves).
+      if (query.includes("AS page_errors")) return [{ day: `${date} 00:00:00`, event: "page.error", source: "web", feature: "site", n: "5", errors: "0", page_errors: "2" }];
+      return [];
+    };
+    const response = await getDailyStats(statsRequest(`/api/admin/stats/daily?date=${date}`, undefined, { Authorization: `Bearer ${TOKEN}` }));
+    const body = await response.json();
+    expect(body.errors.total).toBe(2);
+    expect(body.errors.byKind).toEqual([
+      { key: "stale_build", label: "stale_build (reloaded, not seen)", count: 3 },
+      { key: "chunk_load", label: "chunk_load", count: 2 },
+    ]);
+    // Errors by page leave them out too.
+    const byRoute = sqlQueries.find((query) => query.includes("blob15 AS route"))!;
+    expect(byRoute).toContain("blob16 != 'stale_build'");
+  });
+
   it("rate-limits readers", async () => {
     vi.stubEnv("STATS_READ_TOKEN", TOKEN);
     const statuses: number[] = [];

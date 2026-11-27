@@ -51,6 +51,7 @@ export function browserOnly<M, P extends object>(load: () => Promise<M>, pick: (
           <ChunkErrorNotice
             error={error}
             what="map"
+            loading={<CanvasFallback />}
             onRetry={() => {
               Lazy = make(error);
               setAttempt((value) => value + 1);

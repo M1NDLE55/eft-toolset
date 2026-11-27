@@ -57,7 +57,7 @@ The source of truth is `USAGE_EVENTS` in `src/app/lib/usage/catalog.ts`.
 | `plan.host` | server | sharing | map id | A raid plan is created in an account, hosted live |
 | `report.file` | server | sharing | | Shared content is reported (never the reason's text) |
 | `page.view` | web | site | route pattern | Each page navigation |
-| `page.error` | web | site | route pattern, error kind | A page fails: its error screen shows, it first tries once by itself to recover, or a part of it (the map) can't load. Once per page load per URL and kind |
+| `page.error` | web | site | route pattern, error kind | A page fails: its error screen shows, it first tries once by itself to recover, or a part of it (the map) can't load. Or (kind `stale_build`) a page from an earlier deploy reloads onto the current one. Once per page load per URL and kind |
 | `build.create` | web | gun-builder | weapon id, game mode | A build is created from the weapon picker |
 | `build.optimize` | web | gun-builder | weapon id, game mode, outcome, duration | The optimiser finishes or fails |
 | `build.share` | web | gun-builder | weapon id | A build's share link is copied or shared |
@@ -82,8 +82,14 @@ Field values: game mode `regular` or `pve`; outcome `ok`, `error`, `cancelled`, 
 `upstream_error`, `timeout`, `crash` or `refused` (an MCP call the account's library or plan turned
 down: not allowed, over a limit, or an edit conflict); duration `<100ms`, `100ms-1s`, `1-5s`, `5-20s` or `20s+`;
 error kind `unavailable` (the server couldn't load or work out the page's data in time), `chunk_load`
-(a piece of the site's code didn't download), `network` (a request to the server got no answer) or
-`crash` (anything else, including anything thrown that isn't an error). The kind is worked out in
+(a piece of the site's code didn't download), `network` (a request to the server got no answer),
+`crash` (anything else, including anything thrown that isn't an error) or `stale_build`. A
+`stale_build` page was running an earlier deploy's code, its chunk was gone from the site, and it
+reloaded onto the current version by itself, so the visitor saw no error (see "New deploys and open
+pages" in DATA_ARCHITECTURE.md). Such a page records no `chunk_load` as well. If it is still the
+same build after the reload, that failure shows and is recorded as `chunk_load`. The dashboard and
+the daily summary list `stale_build` with the other kinds, labelled as not seen, and leave it out of
+errors by page, the daily error total and the error spike check. The kind is worked out in
 the browser from the error's type and name (`page-error.ts`); the error's message is never sent.
 Every page built since kinds were added sends one, so a `page.error` row with layout version `2`
 and no kind came from a page still running code from before then (an open tab, or a page the
@@ -134,7 +140,8 @@ months (https://developers.cloudflare.com/analytics/analytics-engine/limits/).
   scripts. Needs `Authorization: Bearer <STATS_READ_TOKEN>`, compared in constant time (401
   otherwise, 404 when the token isn't set). Returns visitors (signed in and out), page views, active
   accounts, new and total accounts, events, the web/MCP/server split, top features, pages, MCP tools,
-  weapons, maps and items, errors by MCP tool, by page and by kind, and a spike check (value, seven-day
+  weapons, maps and items, errors by MCP tool, by page and by kind (`stale_build`, an old version's page that
+  reloaded by itself, is listed by kind only, not in the total), and a spike check (value, seven-day
   average, ratio, flag) for visitors, page views, events, MCP calls and errors. A spike is at least
   twice the average and at least 20 more.
 

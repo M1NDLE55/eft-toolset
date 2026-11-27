@@ -69,6 +69,32 @@ function staticHeaders(): Plugin {
 }
 
 /**
+ * Writes the build's name into the service worker (public/sw.js, copied to the output before this
+ * runs), so each deploy that changes the code changes the worker file: browsers install the new
+ * worker, which drops the previous version's kept pages. The name is the browser entry script's,
+ * which Vite derives from the code, so building the same code twice gives the same worker.
+ */
+function serviceWorkerBuild(): Plugin {
+  let build = "";
+  return {
+    name: "eft:service-worker-build",
+    apply: "build",
+    applyToEnvironment: (environment) => environment.name === "client",
+    generateBundle(_options, bundle) {
+      const entries = Object.values(bundle).filter((output) => output.type === "chunk" && output.isEntry);
+      build = entries.map((output) => output.fileName.replace(/^.*\//, "").replace(/\.js$/, "")).sort().join("+");
+    },
+    async writeBundle(options) {
+      if (!options.dir || !build) return;
+      const file = join(options.dir, "sw.js");
+      const source = await readFile(file, "utf8");
+      if (!source.includes("__EFT_BUILD__")) this.error("public/sw.js has no __EFT_BUILD__ placeholder");
+      await writeFile(file, source.replace("__EFT_BUILD__", build));
+    },
+  };
+}
+
+/**
  * Fails the client build when browser code calls a built-in that Chrome 109 lacks (see
  * scripts/browser-support.mjs). The build target lowers syntax only, so a call like
  * `array.toSorted()` from our code or a dependency would otherwise throw on older browsers.
@@ -118,6 +144,7 @@ export default defineConfig({
   plugins: [
     dataSnapshotAssets(),
     staticHeaders(),
+    serviceWorkerBuild(),
     browserSupportCheck(),
     cloudflare({ viteEnvironment: { name: "ssr" } }),
     tailwindcss(),

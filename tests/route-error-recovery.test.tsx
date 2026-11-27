@@ -5,6 +5,7 @@ import {
   createRootRoute,
   createRoute,
   createRouter,
+  lazyRouteComponent,
   Outlet,
   RouterProvider,
   type ErrorComponentProps,
@@ -35,6 +36,7 @@ vi.mock("@/app/lib/navigation/link", () => ({
 
 const { RouteErrorPage, resetReportedPageErrors } = await import("@/app/components/global/route-status");
 const { browserOnly } = await import("@/app/components/raid-planner/lazy-canvas");
+const { handOverChunkErrors, resetStaleBuildReloads } = await import("@/app/lib/stale-build");
 const { Route: ItemRoute } = await import("@/routes/item/$itemName");
 const { GameModeProvider } = await import("@/components/game-mode/context");
 
@@ -172,6 +174,88 @@ describe("a page that fails to load", () => {
     }
     expect(loader).toHaveBeenCalledTimes(4);
     expect(errorKinds()).toEqual(["crash"]);
+  });
+});
+
+describe("a page from an earlier deploy whose code is gone", () => {
+  // The page came from build A; the site now serves build B, so A's chunks answer 404.
+  const GONE = "/assets/routes-B5NDp1i5.js";
+  const goneError = () => new TypeError(`Failed to fetch dynamically imported module: ${location.origin}${GONE}`);
+  let entry: HTMLScriptElement;
+  let reload: ReturnType<typeof vi.fn>;
+
+  beforeEach(() => {
+    entry = Object.assign(document.createElement("script"), { type: "module", src: "/assets/index-AAAAaaaa.js" });
+    document.head.append(entry);
+    reload = vi.fn();
+    vi.stubGlobal("location", { ...window.location, origin: window.location.origin, href: window.location.href, reload });
+    vi.stubGlobal("fetch", vi.fn((input: string) => Promise.resolve(new Response(null, { status: new URL(input, location.href).pathname === GONE ? 404 : 200 }))));
+  });
+
+  afterEach(() => {
+    entry.remove();
+    resetStaleBuildReloads();
+  });
+
+  it("reloads onto the current version instead of showing the error, recorded as stale_build only", async () => {
+    await renderPage("/page/old-tab", vi.fn().mockRejectedValue(goneError()));
+    expect(reload).toHaveBeenCalledTimes(1);
+    expect(text()).toContain("Loading");
+    expect(text()).not.toContain("ERROR");
+    expect(errorKinds()).toEqual(["stale_build"]);
+    // Not the plain once-per-URL reload's mark: this one is per build.
+    expect(sessionStorage.getItem("eft:reloaded-for-chunk:/page/old-tab")).toBeNull();
+  });
+
+  it("takes over the router's own reload for a route chunk that's gone", async () => {
+    handOverChunkErrors();
+    // As Vite's import wrapper does: report the failure, then reject with it.
+    const importer = (): Promise<{ default: () => React.ReactNode }> => {
+      const error = goneError();
+      window.dispatchEvent(Object.assign(new Event("vite:preloadError", { cancelable: true }), { payload: error }));
+      return Promise.reject(error);
+    };
+    await renderPage("/page/old-tab", () => null, undefined, lazyRouteComponent(importer) as () => React.ReactNode);
+    // One reload, the page's own (onto the new version), recorded as stale_build.
+    expect(reload).toHaveBeenCalledTimes(1);
+    expect(errorKinds()).toEqual(["stale_build"]);
+    expect(text()).not.toContain("ERROR");
+  });
+
+  it("shows the error, without another reload, when the reloaded page is still that version", async () => {
+    await renderPage("/page/old-tab", vi.fn().mockRejectedValue(goneError()));
+    // The reload brought back the same build (a deploy that is itself broken): a new page load in the same tab.
+    act(() => root.unmount());
+    root = createRoot(host);
+    resetReportedPageErrors();
+    beacons.length = 0;
+    await renderPage("/page/old-tab", vi.fn().mockRejectedValue(goneError()));
+    expect(reload).toHaveBeenCalledTimes(1);
+    expect(text()).toContain("Couldn\u2019t load this page");
+    expect(errorKinds()).toEqual(["chunk_load"]);
+  });
+
+  // Safari doesn't name the script (so the second try is the import again): the page's entry is asked for.
+  const safariError = () => new TypeError("Importing a module script failed.");
+
+  it("swaps the map for the current version too, without the notice", async () => {
+    vi.stubGlobal("fetch", vi.fn((input: string) => Promise.resolve(new Response(null, { status: input === entry.getAttribute("src") ? 404 : 200 }))));
+    const load = vi.fn().mockRejectedValue(safariError());
+    const Map = browserOnly(load, (module: { Canvas: () => React.ReactNode }) => module.Canvas);
+    await renderPage("/page/factory", () => null, undefined, () => <Map />);
+    expect(reload).toHaveBeenCalledTimes(1);
+    expect(text()).toContain("Loading map");
+    expect(text()).not.toContain("Couldn't load the map");
+    expect(errorKinds()).toEqual(["stale_build"]);
+  });
+
+  it("keeps the connection notice when the map's code is still on the site", async () => {
+    vi.stubGlobal("fetch", vi.fn(() => Promise.resolve(new Response(null, { status: 200 }))));
+    const Map = browserOnly(() => Promise.reject(safariError()), (module: { Canvas: () => React.ReactNode }) => module.Canvas);
+    await renderPage("/page/factory", () => null, undefined, () => <Map />);
+    expect(reload).not.toHaveBeenCalled();
+    expect(text()).toContain("Couldn't load the map");
+    expect(errorKinds()).toEqual(["chunk_load"]);
   });
 });
 

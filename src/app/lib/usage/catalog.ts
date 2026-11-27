@@ -84,9 +84,11 @@ export const GAME_MODES = ["regular", "pve"] as const;
 /**
  * Why a page failed (page-error.ts): its data wasn't ready on the server (a render that ran out of
  * time or found the server busy), a piece of the site's code didn't download, a request to the
- * server failed, or anything else (a bug).
+ * server failed, or anything else (a bug). `stale_build` is the one that isn't shown: the page ran
+ * an earlier deploy's code whose file is gone, and reloaded onto the current version by itself
+ * (stale-build.ts). The stats count it apart from the errors visitors saw.
  */
-export const PAGE_ERROR_KINDS = ["unavailable", "chunk_load", "network", "crash"] as const;
+export const PAGE_ERROR_KINDS = ["unavailable", "chunk_load", "network", "crash", "stale_build"] as const;
 export type PageErrorKind = (typeof PAGE_ERROR_KINDS)[number];
 
 /** Durations are kept only as one of these buckets. */
