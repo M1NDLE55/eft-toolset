@@ -1,6 +1,10 @@
 import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 import { NotFoundPage, RouteErrorPage } from "@/app/components/global/route-status";
+import { handOverChunkErrors } from "@/app/lib/stale-build";
+
+// Before any route's chunk loads: a chunk that doesn't download goes to RouteErrorPage.
+if (typeof window !== "undefined") handOverChunkErrors();
 
 /** Query strings are kept as plain strings, as URLSearchParams reads them; nothing is JSON-encoded. */
 function parseSearch(search: string): Record<string, string> {

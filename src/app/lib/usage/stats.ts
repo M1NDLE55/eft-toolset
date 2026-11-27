@@ -21,7 +21,13 @@ const DAY = "toStartOfInterval(timestamp, INTERVAL '1' DAY)";
 /** page.error rows by kind; rows from before kinds were recorded count as "unknown". */
 const ERROR_KINDS = (where: string) =>
   `SELECT blob16 AS kind, ${COUNT} AS n FROM ${T} WHERE ${where} AND blob1 = 'page.error' GROUP BY kind ORDER BY n DESC`;
-const kindLabel = (kind: string) => kind || "unknown";
+/**
+ * A page.error a visitor saw: every kind but stale_build, an old version's page that reloaded onto
+ * the current one by itself. Those are listed by kind, and counted nowhere else as errors.
+ */
+const SEEN_PAGE_ERROR = "(blob1 = 'page.error' AND blob16 != 'stale_build')";
+const PAGE_ROWS = `(blob1 = 'page.view' OR ${SEEN_PAGE_ERROR})`;
+const kindLabel = (kind: string) => (kind === "stale_build" ? "stale_build (reloaded, not seen)" : kind || "unknown");
 
 export interface Ranked {
   key: string;
@@ -127,7 +133,7 @@ export async function dashboardStats(config: SqlConfig, range: DashboardRange): 
       sql(`SELECT blob1 AS event, blob3 AS feature, ${COUNT} AS n, ${ERRORS} AS errors FROM ${T} WHERE ${where} GROUP BY event, feature ORDER BY n DESC LIMIT 100`),
       sql(`SELECT blob4 AS tool, ${COUNT} AS n, ${ERRORS} AS errors FROM ${T} WHERE ${where} AND blob1 = 'mcp.tool_call' GROUP BY tool ORDER BY n DESC LIMIT 50`),
       sql(`SELECT blob5 AS kind, blob6 AS id, ${COUNT} AS n FROM ${T} WHERE ${where} AND blob6 != '' GROUP BY kind, id ORDER BY n DESC LIMIT 600`),
-      sql(`SELECT blob1 AS event, blob15 AS route, ${COUNT} AS n FROM ${T} WHERE ${where} AND (blob1 = 'page.view' OR blob1 = 'page.error') GROUP BY event, route ORDER BY n DESC LIMIT 200`),
+      sql(`SELECT blob1 AS event, blob15 AS route, ${COUNT} AS n FROM ${T} WHERE ${where} AND ${PAGE_ROWS} GROUP BY event, route ORDER BY n DESC LIMIT 200`),
       sql(ERROR_KINDS(where)),
       sql(`SELECT blob10 AS country, ${COUNT} AS n FROM ${T} WHERE ${where} AND blob10 != '' GROUP BY country ORDER BY n DESC LIMIT 25`),
       names(),
@@ -258,11 +264,11 @@ export async function dailySummary(config: SqlConfig, date: string): Promise<Dai
   const day = `timestamp >= ${literal(start)} AND timestamp < ${literal(start + DAY_MS)}`;
   const sql = (query: string) => runSql(config, query);
   const [perDay, uniques, tools, subjectRows, pages, errorKinds, lookup, accounts] = await Promise.all([
-    sql(`SELECT ${DAY} AS day, blob1 AS event, blob2 AS source, blob3 AS feature, ${COUNT} AS n, ${ERRORS} AS errors FROM ${T} WHERE ${week} GROUP BY day, event, source, feature`),
+    sql(`SELECT ${DAY} AS day, blob1 AS event, blob2 AS source, blob3 AS feature, ${COUNT} AS n, ${ERRORS} AS errors, sumIf(_sample_interval, ${SEEN_PAGE_ERROR}) AS page_errors FROM ${T} WHERE ${week} GROUP BY day, event, source, feature`),
     sql(`SELECT ${DAY} AS day, blob14 AS signed_in, count(DISTINCT blob12) AS ids FROM ${T} WHERE ${week} AND blob12 != '' GROUP BY day, signed_in`),
     sql(`SELECT blob4 AS tool, ${COUNT} AS n, ${ERRORS} AS errors FROM ${T} WHERE ${day} AND blob1 = 'mcp.tool_call' GROUP BY tool ORDER BY n DESC LIMIT 50`),
     sql(`SELECT blob5 AS kind, blob6 AS id, ${COUNT} AS n FROM ${T} WHERE ${day} AND blob6 != '' GROUP BY kind, id ORDER BY n DESC LIMIT 300`),
-    sql(`SELECT blob1 AS event, blob15 AS route, ${COUNT} AS n FROM ${T} WHERE ${day} AND (blob1 = 'page.view' OR blob1 = 'page.error') GROUP BY event, route ORDER BY n DESC LIMIT 100`),
+    sql(`SELECT blob1 AS event, blob15 AS route, ${COUNT} AS n FROM ${T} WHERE ${day} AND ${PAGE_ROWS} GROUP BY event, route ORDER BY n DESC LIMIT 100`),
     sql(ERROR_KINDS(day)),
     names(),
     accountTotals(),
@@ -280,7 +286,7 @@ export async function dailySummary(config: SqlConfig, date: string): Promise<Dai
   const events = series((row) => num(row.n));
   const pageViews = series((row) => (row.event === "page.view" ? num(row.n) : 0));
   const mcpCalls = series((row) => (row.event === "mcp.tool_call" ? num(row.n) : 0));
-  const errors = series((row) => num(row.errors) + (row.event === "page.error" ? num(row.n) : 0));
+  const errors = series((row) => num(row.errors) + num(row.page_errors));
   const visitorsSeries = days.map((entry) =>
     uniques.filter((row) => dayOf(row.day) === entry).reduce((total, row) => total + num(row.ids), 0)
   );

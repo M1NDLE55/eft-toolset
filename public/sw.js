@@ -1,7 +1,11 @@
 // Bumped when the cached files change shape: v4 is the first TanStack Start build (hashed files in /assets/).
 const VERSION = "v4";
+// The build this worker came with, written in by the build (vite.config.ts, serviceWorkerBuild). It
+// names the page cache, so a deploy (which changes this file, so browsers install it) drops the
+// previous version's pages: their scripts are gone from the site.
+const BUILD = "__EFT_BUILD__";
 const STATIC_CACHE = `eft-static-${VERSION}`;
-const PAGE_CACHE = `eft-pages-${VERSION}`;
+const PAGE_CACHE = `eft-pages-${VERSION}-${BUILD}`;
 const DATA_CACHE = `eft-data-${VERSION}`;
 const CACHES = [STATIC_CACHE, PAGE_CACHE, DATA_CACHE];
 const LIMITS = { [PAGE_CACHE]: 40, [DATA_CACHE]: 200 };
@@ -47,24 +51,37 @@ async function cacheFirst(request) {
   return response;
 }
 
+/**
+ * The network's answer, kept for next time. A kept copy stands in when the network fails, or is
+ * still answering after a few seconds; without a copy a slow answer is waited for, and only a
+ * failed one gets the fallback (the offline page).
+ */
 async function networkFirst(request, cacheName, fallback) {
   const cache = await caches.open(cacheName).catch(() => null);
-  if (!cache) return fetch(request).catch(() => (fallback ? fallback() : Promise.reject(new Error("offline"))));
-  let response;
+  const network = fetch(request);
+  if (!cache) return network.catch((error) => (fallback ? fallback() : Promise.reject(error)));
+  const kept = network.then((response) => keep(cache, cacheName, request, response));
   try {
-    response = await withTimeout(fetch(request), NETWORK_TIMEOUT_MS);
-  } catch (error) {
-    const cached = await cache.match(request);
+    return await withTimeout(kept, NETWORK_TIMEOUT_MS);
+  } catch {
+    const cached = await cache.match(request).catch(() => undefined);
     if (cached && (cacheName !== PAGE_CACHE || isFresh(cached))) return cached;
-    if (fallback) return fallback();
-    throw error;
+    try {
+      return await kept;
+    } catch (error) {
+      if (fallback) return fallback();
+      throw error;
+    }
   }
+}
+
+async function keep(cache, cacheName, request, response) {
   if (response.ok && response.type === "basic") {
     try {
       await cache.put(request, response.clone());
       await trim(cache, LIMITS[cacheName]);
     } catch {
-      return response;
+      // Not kept; the answer still goes to the page.
     }
   }
   return response;

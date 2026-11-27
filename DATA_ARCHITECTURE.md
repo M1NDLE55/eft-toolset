@@ -102,6 +102,30 @@ server-function request on a client navigation, so both modes are cached apart a
 have no cookie, get PVP. When a visitor switches mode, `useServerModeSync` reloads the route's data
 (`router.invalidate()`), which the server reads for the new cookie. The old `/pve/...` URLs, which
 were internal copies of these pages, redirect to the page (308).
+### New deploys and open pages
+
+Workers Static Assets serves only the current deployment's files, so a page loaded from an earlier
+deploy (a tab left open, a restored tab, a page the service worker kept) gets a 404 for any chunk it
+hadn't loaded yet. When a chunk doesn't download, the page asks the site for that file (`HEAD`,
+past the service worker and the HTTP cache), or for its own entry script when the browser didn't
+name the file (Safari). Vite names the entry by its content and it names every other chunk, so it
+stands for the build. A 404 means a newer version replaced the page's: the page lets go of the
+service worker, drops its kept pages and reloads once, straight from the network, onto the current
+version (`src/app/lib/stale-build.ts`). That happens at most once per build in a browser tab
+(marked in sessionStorage, or in the window's name when storage is blocked). A page that is still
+that build after the reload shows the usual connection error and Try Again. A file that is still
+there, or no answer, means the connection, and the page recovers as before. The reload is recorded
+as a `page.error` of kind `stale_build`, which the stats keep apart from the errors visitors saw
+(see USAGE_STATS.md).
+
+The service worker (`public/sw.js`) answers pages from the network. It falls back to a page it kept
+when the network fails, or hasn't answered after four seconds, as long as the copy is under a week
+old. With no kept copy it waits for a slow answer, and shows its offline page only when the request
+fails. The build writes the browser entry's name into the worker (`serviceWorkerBuild` in
+`vite.config.ts`). Pages are kept per build, so every deploy that changes the code changes the
+worker. Browsers then install the new worker, and it drops the previous build's pages, whose
+scripts are gone from the site.
+
 ## Item pages
 
 Item pages live at `/item/<normalizedName>` and are rendered on the server with the
@@ -908,6 +932,9 @@ static data. "Bulk datasets" are the other tarkov.dev files, checked by the refr
 - KV holds one copy of each mode's price feed, written by the refresher when the prices change.
 - The edge cache holds rendered pages, server-function reads and public `/api/tarkov` GETs (see
   [Page caching](#page-caching)).
+- The service worker keeps the hashed `/assets/` files, the pages visited with the current build,
+  and `/api/tarkov` reads, for slow or missing connections (see
+  [New deploys and open pages](#new-deploys-and-open-pages)).
 - The client query layer deduplicates concurrent requests and controls stale/max ages.
 - IndexedDB holds validated query projections for fast reloads and offline-tolerant stale
   data. Query schema-version bumps invalidate incompatible projections.
